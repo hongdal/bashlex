@@ -3,6 +3,10 @@ class node(object):
     This class represents a node in the AST built while parsing command lines.
     It's basically an object container for various attributes, with a slightly
     specialised representation to make it a little easier to debug the parser.
+    
+    object is a built-in type. It has some attributes. 
+    For example, a writable dictionary, named __dict__. 
+
     """
 
     def __init__(self, **kwargs):
