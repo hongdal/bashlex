@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
+import os
 import re
 
 NODE_LIST = [
@@ -45,18 +46,29 @@ class Tree(object):
     def __init__(self, node):
         self.root = node
         self.current = self.root
-        self.push_track_depth = []
+        self.push_track_depth = [self.root]
 
     def push_depth(self, node):
         # change current pointers
-        last = self.current.level
+        last = self.current
+        '''
+        print("current:%d" % (node.data.level), end=",")
+        print("last:%d" % last.data.level, end="->")
+        print("[", end="")
+        for i in self.push_track_depth:
+            print(",%d" % i.data.level, end="")
+        print("]", end="->")
+        print("length:%d" % len(self.push_track_depth))
+        '''
+
         # If last node.level >= new node.level, pop out
-        while not (last.level < node.level): 
-            last = self.push_track_depth.pop()
-        # now the current points to "last"
-        current  = last
+        while not (last.data.level < node.data.level): 
+            self.push_track_depth.pop()
+            last = self.push_track_depth[-1]
         # do insert
-        self.current.add_child(node)
+        last.add_child(node)
+        self.current = node
+        self.push_track_depth.append(node)
         #
         # if ((node.data.kind == "WordNode") or
         #     (node.data.kind == "PipeNode") or 
@@ -66,34 +78,91 @@ class Tree(object):
         #     pass
         # else: 
         #     self.push_track_depth.append(node)
-        
-        self.current = node
 
     def push_width(self, node):
-        self.current.add_child(node)
+        pass 
 
-    def traverse_depth(self, node):
-        pass
-
+    def dump_leaves(self, node):
+        if len(node.children) == 0:
+            print(node.data.label, end=" ")
+        else:
+            for child in node.children:
+                self.dump_leaves(child)
 
 """
 Begin of procedures. 
 
 """
+
+
+
 def parse_none(line, indent):
     pass
 
 
+def parse_WordNode(line):
+    target = r", word=([^,;\n])+"
+    match = re.search(target, line)
+    if None == match:
+        label = ""
+    else:
+        label = re.sub(r"^(, word=')", '', match.group(0))
+        label = re.sub(r"(')$", '', label)
+        label = re.sub(r"('\))$", '', label)
+    return label
+
+def parse_OperatorNode(line):
+    target = r", op='([\\;\&\|])(n)*"
+    match = re.search(target, line)
+    if None == match:
+        label = ""
+    else:
+        label = re.sub(r"^(, op=')", '', match.group(0))
+    if r"\n" == label:
+        label = "\n"    
+    return label
+
+
+def parse_ReservedwordNode(line):
+    target = r", word=([^,;\n])+"
+    match = re.search(target, line)
+    if None == match:
+        label = ""
+    else:
+        label = re.sub(r"^(, word=')", '', match.group(0))
+        label = re.sub(r"(')$", '', label)
+        label = re.sub(r"('\))$", '', label)
+
+    # make it a little bit good looking. 
+    if ("then" == label or "do" == label or "fi" == label or 
+        "done" == label or "else" == label):
+        label = label + "\n"
+
+    return label
+
+
 def parse_node(line, kind, indent):
-    data = NodeData(int(indent)/2, kind, kind)
-    return Node(data)
+    # assign label to each node. 
+    if "WordNode" == kind:
+        label = parse_WordNode(line)
+    elif "OperatorNode" == kind:
+        label = parse_OperatorNode(line)
+    elif "ReservedwordNode" == kind:
+        label = parse_ReservedwordNode(line)
+    elif "ParameterNode" == kind:
+        return None
+    else:
+        label = ""
+
+    data = NodeData(int(indent)/2, kind, label)
+    node = Node(data)
+    return node
 
 
 
 def read_file(fname):
     with open(fname) as fp:
         line = fp.readline()
-        count = 1
         while line:
             # count leading space
             lspace = len(line) - len(line.lstrip())
@@ -107,6 +176,7 @@ def read_file(fname):
 
 
 if __name__ == "__main__": 
+    tree = Tree(Node(NodeData(-1, "Root", "Start")))
     with open("./testcase/2.out") as fp:
         line = fp.readline()
         count = 1
@@ -115,7 +185,12 @@ if __name__ == "__main__":
             lspace = len(line) - len(line.lstrip())
             # Search for the node type. 
             node = re.search(regex, line)
+            # we found a match
             if None != node:
-                #print("%d, %s" % (lspace, node.group(0)))
-                #print(line)
+                new_node = parse_node(line, node.group(0), lspace)
+                if None != new_node:
+                    tree.push_depth(new_node)
+                    #print("%d, %s" % (lspace, node.group(0)))
+                    #print(line)
             line = fp.readline()
+    tree.dump_leaves(tree.root)

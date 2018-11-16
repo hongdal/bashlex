@@ -1,7 +1,7 @@
 digraph {
     A -> B;
     B -> C;
-    C -> A [ label="edge"];
+    C -> A [ label="\\n"];
     A;
     D -> E;
     A [label="good"];
