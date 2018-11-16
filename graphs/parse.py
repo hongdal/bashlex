@@ -82,12 +82,53 @@ class Tree(object):
     def push_width(self, node):
         pass 
 
+
+    '''
+        I assume commands are consist of words. 
+
+        It's important to notice that a WordNode is possible 
+        to be an internal node. In this case, the word is expand
+        through a CommnadSubstitutionNode. 
+
+        I would like to create a separate graph for all the substitution nodes. 
+
+        Another issue is that a command may consist of other kinds of nodes,
+        e.g., redirectNode (see test-parser.py) 
+        I have not considered that yet. 
+
+        Now I assume redirect commnads are consist of words
+
+    '''
+    def make_command(self, node):
+        command = []
+        for child in node.children:
+            if ("WordNode" == child.data.kind):
+                command.append(child.data.label)
+            else:
+                print("Not a WordNode")
+                exit(1)
+        return command
+
+    def get_commands(self, node):
+        commands = []
+        if ("CommandNode" == node.data.kind or 
+            "RedirectNode" == node.data.kind):
+            command = self.make_command(node)
+            return [commnad]
+        else:
+            for child in node.children:
+                commands = commands + self.get_commands(child)
+        return commands
+
+
     def dump_leaves(self, node):
         if len(node.children) == 0:
             print(node.data.label, end=" ")
         else:
             for child in node.children:
                 self.dump_leaves(child)
+
+    def dump_commnads
 
 """
 Begin of procedures. 
