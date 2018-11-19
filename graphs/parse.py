@@ -381,7 +381,7 @@ def read_file(fname):
 
 if __name__ == "__main__": 
     tree = Tree(Node(NodeData(-1, "Root", "Start")))
-    with open("./testcase/2.out") as fp:
+    with open("./testcase/3.out") as fp:
         line = fp.readline()
         count = 1
         while line:

@@ -1,0 +1,14 @@
+digraph {
+0 [label="yum -y install git curl-devel libcurl glib-devel libtool "];
+0 -> 0
+2 [label="git clone https://github.com/hyc/cpuminer-multi "];
+2 -> 2
+4 [label="cd cpuminer-multi "];
+4 -> 4
+6 [label="./autogen.sh "];
+6 -> 6
+8 [label="CFLAGS=-march=native ./configure "];
+8 -> 8
+10 [label="make "];
+10 -> 11 [label="N,"];
+}
