@@ -1,0 +1,5 @@
+cd wget
+wget chmod
+chmod ./
+./ rm
+rm cd

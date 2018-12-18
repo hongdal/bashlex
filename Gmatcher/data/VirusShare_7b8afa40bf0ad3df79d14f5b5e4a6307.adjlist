@@ -1,0 +1,7 @@
+ulimit cp
+cp cd
+cd tftp
+tftp cat
+cat chmod
+chmod ./
+./ cd

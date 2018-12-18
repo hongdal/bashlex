@@ -1,0 +1,7 @@
+ulimit cd
+cd cp wget
+cp wget
+wget cat chmod
+cat chmod
+chmod ./
+./ rm
