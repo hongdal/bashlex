@@ -1,6 +1,0 @@
-cd wget
-wget curl
-curl chmod
-chmod ./
-./ rm
-rm cd
