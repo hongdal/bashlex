@@ -144,29 +144,47 @@ class nodevisitor(object):
 
 def _dump(tree, indent='  '):
     def _format(n, level=0):
+        # if it's a node. 
         if isinstance(n, node):
+            # get the dictionary. 
             d = dict(n.__dict__)
+            # get the type (kind) of the node. 
             kind = d.pop('kind')
+            # If it's a list, and not the root, then make indent. 
             if kind == 'list' and level > 0:
                 level = level + 1
             fields = []
+            # get values
             v = d.pop('s', None)
+            # If there are values. 
             if v:
+                # get the values in the fields. - recursive
                 fields.append(('s', _format(v, level)))
+            # get all items in the dic. 
             for k, v in sorted(d.items()):
+                # if value false, or key is 'parts'
                 if not v or k == 'parts':
                     continue
+                # otherwise record level. 
                 llevel = level
+                # if v is a node. 
                 if isinstance(v, node):
+                    # make indent. 
                     llevel += 1
+                    # print one more line.  
+                    # It looks like key generates parts=[
                     fields.append((k, '\n' + (indent * llevel) + _format(v, llevel)))
+                # Not a node, just key. 
+                # like: v geneartes word='chmod'. 
                 else:
                     fields.append((k, _format(v, level)))
+            # -- start function 
             if kind == 'function':
                 fields = [f for f in fields if f[0] not in ('name', 'body')]
             v = d.pop('parts', None)
             if v:
                 fields.append(('parts', _format(v, level)))
+            # -- end function. 
             return ''.join([
                 '%sNode' % kind.title(),
                 '(',
@@ -181,6 +199,7 @@ def _dump(tree, indent='  '):
             else:
                 lines[-1] += ']'
             return '\n'.join(lines)
+        # else neither node, nor list
         return repr(n)
 
     if not isinstance(tree, node):
