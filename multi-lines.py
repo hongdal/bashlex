@@ -1,6 +1,12 @@
 import bashlex
+import sys 
 
-f = "./graphs/testcase/or.sh"
+
+if len(sys.argv) < 2:
+    print("usage: %s <infile.sh>" % sys.argv[0])
+    exit(0)
+
+f = sys.argv[1]
 cmd = ""
 with open(f) as infile:
     lines = infile.readlines()
