@@ -1,0 +1,1 @@
+file=$(cd /tmp; cd /root)
