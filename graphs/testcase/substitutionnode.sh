@@ -1,1 +1,1 @@
-file=$(cd /tmp; cd /root)
+echo $(ls)$(ls)$1
