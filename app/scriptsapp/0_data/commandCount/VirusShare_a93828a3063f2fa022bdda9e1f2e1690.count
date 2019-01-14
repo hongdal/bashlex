@@ -1,0 +1,15 @@
+     55 cd
+     11 wget
+     11 rm
+     11 curl
+     11 chmod
+      2 fyfa.pcc
+      1 fyfa.x86
+      1 fyfa.spc
+      1 fyfa.sh4
+      1 fyfa.mpsl
+      1 fyfa.mips
+      1 fyfa.m68k
+      1 fyfa.i686
+      1 fyfa.i586
+      1 fyfa.arm

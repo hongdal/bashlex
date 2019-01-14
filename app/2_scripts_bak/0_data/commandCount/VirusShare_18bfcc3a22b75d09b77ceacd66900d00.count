@@ -1,0 +1,13 @@
+     12 echo
+      2 rm
+      2 exit
+      2 cat
+      1 umask
+      1 touch
+      1 test
+      1 mkdir
+      1 mansh
+      1 MANBIN
+      1 ls
+      1 cd
+      1 cc

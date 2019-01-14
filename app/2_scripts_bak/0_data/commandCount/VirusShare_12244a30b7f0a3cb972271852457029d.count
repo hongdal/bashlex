@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 telnetd
+      1 gangwget
+      1 gangtftp
+      1 gangsshd
+      1 gangsh
+      1 gangpftp
+      1 gangopenssh
+      1 gangntpd
+      1 gangftp
+      1 gangcron
+      1 gangbash
+      1 apache2
+      1  

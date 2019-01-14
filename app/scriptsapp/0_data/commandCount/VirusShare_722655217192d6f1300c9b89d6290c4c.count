@@ -1,0 +1,7 @@
+     65 cd
+     23 tftp
+     23 chmod
+     23 cat
+     23 badbox
+      2 cp
+      1 ulimit

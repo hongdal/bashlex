@@ -1,0 +1,43 @@
+CommandNode(lineno=2, pos=(12, 68), parts=[
+  WordNode(lineno=2, pos=(12, 15), word='yum'),
+  WordNode(lineno=2, pos=(16, 18), word='-y'),
+  WordNode(lineno=2, pos=(19, 26), word='install'),
+  WordNode(lineno=2, pos=(27, 30), word='git'),
+  WordNode(lineno=2, pos=(31, 41), word='curl-devel'),
+  WordNode(lineno=2, pos=(42, 49), word='libcurl'),
+  WordNode(lineno=2, pos=(50, 60), word='glib-devel'),
+  WordNode(lineno=2, pos=(61, 68), word='libtool'),
+])
+CommandNode(lineno=3, pos=(69, 116), parts=[
+  WordNode(lineno=3, pos=(69, 72), word='git'),
+  WordNode(lineno=3, pos=(73, 78), word='clone'),
+  WordNode(lineno=3, pos=(79, 116), word='https://github.com/hyc/cpuminer-multi'),
+])
+CommandNode(lineno=4, pos=(117, 134), parts=[
+  WordNode(lineno=4, pos=(117, 119), word='cd'),
+  WordNode(lineno=4, pos=(120, 134), word='cpuminer-multi'),
+])
+CommandNode(lineno=5, pos=(135, 147), parts=[
+  WordNode(lineno=5, pos=(135, 147), word='./autogen.sh'),
+])
+CommandNode(lineno=6, pos=(148, 182), parts=[
+  AssignmentNode(lineno=6, pos=(148, 170), word='CFLAGS=-march=native'),
+  WordNode(lineno=6, pos=(171, 182), word='./configure'),
+])
+CommandNode(lineno=7, pos=(183, 187), parts=[
+  WordNode(lineno=7, pos=(183, 187), word='make'),
+])
+CommandNode(lineno=8, pos=(188, 366), parts=[
+  WordNode(lineno=8, pos=(188, 192), word='sudo'),
+  WordNode(lineno=8, pos=(193, 201), word='./minerd'),
+  WordNode(lineno=8, pos=(202, 204), word='-a'),
+  WordNode(lineno=8, pos=(205, 216), word='cryptonight'),
+  WordNode(lineno=8, pos=(217, 219), word='-o'),
+  WordNode(lineno=8, pos=(220, 257), word='stratum+tcp://pool.democats.org:45600'),
+  WordNode(lineno=8, pos=(258, 260), word='-u'),
+  WordNode(lineno=8, pos=(261, 356), word='CkWxMkcYj6jXsC7MJr5i9u6gdzaRFv5kLEGbNih1nEEnULdUR9tguCs4ucFJBXhQxn5es8XucsXTZHv4VdEn8QWs4dPykX8'),
+  WordNode(lineno=8, pos=(357, 359), word='-p'),
+  WordNode(lineno=8, pos=(360, 361), word='x'),
+  WordNode(lineno=8, pos=(362, 364), word='-t'),
+  WordNode(lineno=8, pos=(365, 366), word='2'),
+])

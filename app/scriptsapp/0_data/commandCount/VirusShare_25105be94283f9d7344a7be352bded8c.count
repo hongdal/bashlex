@@ -1,0 +1,15 @@
+     65 cd
+     14 wget
+     13 rm
+     13 chmod
+      2 ftp
+      1 watchdog
+      1 tftp
+      1 telnetd
+      1 sshd
+      1 sh
+      1 pftp
+      1 openssh
+      1 ntpd
+      1 cron
+      1 bash

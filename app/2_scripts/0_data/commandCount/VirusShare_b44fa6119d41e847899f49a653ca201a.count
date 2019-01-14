@@ -1,0 +1,15 @@
+     55 cd
+     11 wget
+     11 rm
+     11 curl
+     11 chmod
+      2 Clorox.pcc
+      1 Clorox.x86
+      1 Clorox.spc
+      1 Clorox.sh4
+      1 Clorox.mpsl
+      1 Clorox.mips
+      1 Clorox.m68k
+      1 Clorox.i686
+      1 Clorox.i586
+      1 Clorox.arm

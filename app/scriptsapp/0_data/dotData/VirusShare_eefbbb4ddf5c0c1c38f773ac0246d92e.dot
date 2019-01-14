@@ -1,0 +1,10 @@
+digraph {
+0 [label="Set the following environment variables: "];
+0 -> 0
+2 [label="umask 000 "];
+2 -> 2
+4 [label="MALLOCTYPE=debug "];
+4 -> 4
+6 [label="MALLOCDEBUG=report_allocations "];
+6 -> 7 [label="N,"];
+}

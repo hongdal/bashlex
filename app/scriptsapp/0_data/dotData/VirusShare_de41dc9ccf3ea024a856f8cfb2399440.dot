@@ -1,0 +1,12 @@
+digraph {
+0 [label="chown -R root:admin /Library/InputManagers/CTLoader "];
+0 -> 0
+2 [label="chmod -R 755 /Library/InputManagers/CTLoader/ "];
+2 -> 2
+4 [label="/Applications/Toolbars/tmp/ct_install.app/Contents/MacOS/ct_install "];
+4 -> 4
+6 [label="sleep 1 "];
+6 -> 6
+8 [label="open -n -b com.apple.Safari http://CastleAgeToolbar.OurToolbar.com/welcome "];
+8 -> 8
+}

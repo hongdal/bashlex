@@ -1,0 +1,16 @@
+     74 cd
+     23 wget
+     22 chmod
+     13 rm
+      9 dvrHelper
+      2 ftp
+      1 watchdog
+      1 tftp
+      1 telnetd
+      1 sshd
+      1 sh
+      1 pftp
+      1 openssh
+      1 ntpd
+      1 cron
+      1 bash

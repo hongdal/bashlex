@@ -1,0 +1,10 @@
+cd
+wget
+chmod
+udevd
+sed
+echo
+rm
+sudo
+echo
+cat

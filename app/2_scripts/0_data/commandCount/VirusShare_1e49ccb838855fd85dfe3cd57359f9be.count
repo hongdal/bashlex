@@ -1,0 +1,11 @@
+     40 cd
+      8 wget
+      8 chmod
+      1 mirai.x86
+      1 mirai.sh4
+      1 mirai.ppc
+      1 mirai.mpsl
+      1 mirai.mips
+      1 mirai.m68k
+      1 mirai.arm7
+      1 mirai.arm

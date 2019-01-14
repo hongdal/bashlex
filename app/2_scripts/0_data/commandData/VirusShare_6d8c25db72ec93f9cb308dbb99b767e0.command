@@ -1,0 +1,11 @@
+85.255.115.234
+85.255.112.150
+scutil
+grep
+sed
+scutil
+crontab
+grep
+echo
+crontab
+rm

