@@ -1,9 +1,0 @@
-digraph {
-    1 -> 2;
-    2 -> C;
-    C -> A [ label="\\n"];
-    D -> E;
-    1 -> 1;
-    1 [label="\"good]'"];
-    2 [label="bad"];
-}

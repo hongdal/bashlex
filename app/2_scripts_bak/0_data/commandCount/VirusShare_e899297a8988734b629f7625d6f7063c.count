@@ -1,7 +1,0 @@
-     55 cd
-     11 tftp
-     11 chmod
-     11 cat
-     11 badbox
-      1 ulimit
-      1 cp

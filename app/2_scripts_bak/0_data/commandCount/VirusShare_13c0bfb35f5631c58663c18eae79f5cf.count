@@ -1,9 +1,0 @@
-      6 echo
-      5 curl
-      3 grep
-      3 exit
-      1 wc
-      1 unix
-      1 head
-      1 exploit
-      1 cut
