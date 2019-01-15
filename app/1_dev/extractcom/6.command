@@ -1,0 +1,9 @@
+free
+grep
+awk
+free
+grep
+awk
+echo
+echo
+echo

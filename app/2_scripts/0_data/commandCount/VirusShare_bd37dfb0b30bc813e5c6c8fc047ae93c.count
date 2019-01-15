@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 skywget
+      1 skytftp
+      1 skytelnetd
+      1 skysshd
+      1 skysh
+      1 skypftp
+      1 skyopenssh
+      1 skyntpd
+      1 skyftp
+      1 skycron
+      1 skybash
+      1 skyapache2
+      1 sky

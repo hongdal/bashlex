@@ -1,0 +1,16 @@
+     22 busybox
+     18 cd
+     10 rm
+      9 wget
+      9 curl
+      9 chmod
+      1 ulimit
+      1 snx64
+      1 snsparc
+      1 snsh4
+      1 snppc
+      1 snmipsel
+      1 snmips64
+      1 snmips
+      1 sni686
+      1 snarm7

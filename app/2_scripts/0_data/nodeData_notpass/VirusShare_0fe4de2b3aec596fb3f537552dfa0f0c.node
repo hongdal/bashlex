@@ -1,0 +1,10 @@
+CommandNode(lineno=14, pos=(140, 220), parts=[
+  WordNode(lineno=7, pos=(140, 155), word='../../glsl_test'),
+  WordNode(lineno=7, pos=(156, 163), word='optpass'),
+  WordNode(lineno=7, pos=(164, 171), word='--quiet'),
+  WordNode(lineno=7, pos=(172, 182), word='--input-ir'),
+  WordNode(lineno=7, pos=(183, 214), word='do_lower_jumps(0, 0, 1, 0, 0)'),
+  RedirectNode(heredoc=
+    HeredocNode(lineno=13, pos=(221, 473), value='((declare (out) float a) (declare (out) float b)\n (function main\n  (signature void (parameters)\n   ((loop () () () ()\n     ((assign (x) (var_ref a) (constant float (1.000000))) (return)))\n    (assign (x) (var_ref b) (constant float (2.000000)))))))\nEOF'), lineno=7, output=
+    WordNode(lineno=7, pos=(217, 220), word='EOF'), pos=(215, 473), type='<<'),
+])

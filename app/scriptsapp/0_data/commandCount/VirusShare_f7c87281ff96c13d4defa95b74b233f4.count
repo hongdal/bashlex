@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 telnetd
+      1 elfenliedx86
+      1 elfenliedsparc
+      1 elfenliedsh4
+      1 elfenliedppc
+      1 elfenliedmipsel
+      1 elfenliedmips
+      1 elfenliedm68k
+      1 elfenliedi686
+      1 elfenliedi586
+      1 elfenliedarmv6l
+      1 apache2
+      1  

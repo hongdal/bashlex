@@ -1,0 +1,31 @@
+CommandNode(lineno=3, pos=(13, 64), parts=[
+  WordNode(lineno=3, pos=(13, 18), word='chown'),
+  WordNode(lineno=3, pos=(19, 21), word='-R'),
+  WordNode(lineno=3, pos=(22, 32), word='root:admin'),
+  WordNode(lineno=3, pos=(33, 64), word='/Library/InputManagers/CTLoader'),
+])
+CommandNode(lineno=4, pos=(65, 110), parts=[
+  WordNode(lineno=4, pos=(65, 70), word='chmod'),
+  WordNode(lineno=4, pos=(71, 73), word='-R'),
+  WordNode(lineno=4, pos=(74, 77), word='755'),
+  WordNode(lineno=4, pos=(78, 110), word='/Library/InputManagers/CTLoader/'),
+])
+CommandNode(lineno=7, pos=(131, 198), parts=[
+  WordNode(lineno=7, pos=(131, 198), word='/Applications/Toolbars/tmp/ct_install.app/Contents/MacOS/ct_install'),
+])
+CommandNode(lineno=10, pos=(216, 223), parts=[
+  WordNode(lineno=10, pos=(216, 221), word='sleep'),
+  WordNode(lineno=10, pos=(222, 223), word='1'),
+])
+CommandNode(lineno=13, pos=(246, 320), parts=[
+  WordNode(lineno=13, pos=(246, 250), word='open'),
+  WordNode(lineno=13, pos=(251, 253), word='-n'),
+  WordNode(lineno=13, pos=(254, 256), word='-b'),
+  WordNode(lineno=13, pos=(257, 273), word='com.apple.Safari'),
+  WordNode(lineno=13, pos=(274, 320), word='http://CastleAgeToolbar.OurToolbar.com/welcome'),
+])
+CommandNode(lineno=16, pos=(343, 376), parts=[
+  WordNode(lineno=16, pos=(343, 345), word='rm'),
+  WordNode(lineno=16, pos=(346, 349), word='-fR'),
+  WordNode(lineno=16, pos=(350, 376), word='/Applications/Toolbars/tmp'),
+])

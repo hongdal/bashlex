@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 cumfortwget
+      1 cumforttftp
+      1 cumforttelnetd
+      1 cumfortsshd
+      1 cumfortsh
+      1 cumfortpftp
+      1 cumfortopenssh
+      1 cumfortntpd
+      1 cumfortftp
+      1 cumfortcron
+      1 cumfortbash
+      1 cumfortapache2
+      1 cumfort

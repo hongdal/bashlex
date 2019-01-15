@@ -1,0 +1,7 @@
+    126 cd
+     36 chmod
+     21 rm
+     18 tftp
+     18 sshd
+     18 cat
+      1 ulimit

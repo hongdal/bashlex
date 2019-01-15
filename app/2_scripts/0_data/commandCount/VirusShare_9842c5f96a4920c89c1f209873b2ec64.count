@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 nwswget
+      1 nwstftp
+      1 nwstelnetd
+      1 nwssshd
+      1 nwssh
+      1 nwspftp
+      1 nwsopenssh
+      1 nwsntpd
+      1 nwsftp
+      1 nwscron
+      1 nwsbash
+      1 nwsapache2
+      1  

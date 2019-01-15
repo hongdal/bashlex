@@ -1,0 +1,16 @@
+     51 pkill
+     37 grep
+     19 rm
+     17 xargs
+     17 ps
+     15 awk
+     10 chmod
+      8 echo
+      6 nohup
+      5 wget
+      5 curl
+      4 wc
+      4 lsof
+      3 sleep
+      1 kills
+      1 downloadyam

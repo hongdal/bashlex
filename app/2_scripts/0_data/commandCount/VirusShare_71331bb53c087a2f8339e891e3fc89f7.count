@@ -1,0 +1,17 @@
+    130 cd
+     38 busybox
+     15 wget
+     13 rm
+     13 chmod
+      2 tftp
+      2 telnetd
+      2 sshd
+      2 sh
+      2 pftp
+      2 openssh
+      2 ntpd
+      2 ftp
+      2 cron
+      2 bash
+      2 apache2
+      1 busyboxchmod

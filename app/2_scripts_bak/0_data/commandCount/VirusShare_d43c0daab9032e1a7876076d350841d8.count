@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 IoTx86
+      1 IoTsparc
+      1 IoTsh4
+      1 IoTpowerpc
+      1 IoTmipsel
+      1 IoTmips64
+      1 IoTmips
+      1 IoTm86k
+      1 IoTi686
+      1 IoTarmv7
+      1 IoTarmv6
+      1 IoTarmv5
+      1 IoTarmv4

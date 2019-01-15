@@ -1,0 +1,11 @@
+      5 killall
+      3 wget
+      2 userdel
+      2 rm
+      2 perl
+      2 mkdir
+      2 curl
+      2 chmod
+      2 cat
+      1 sshd
+      1 cd

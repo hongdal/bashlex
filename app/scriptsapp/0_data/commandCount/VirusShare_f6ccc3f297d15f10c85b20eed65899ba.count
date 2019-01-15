@@ -1,0 +1,14 @@
+     11 wget
+     11 rm
+     11 chmod
+      1 ket.x86
+      1 ket.spc
+      1 ket.sh4
+      1 ket.ppc
+      1 ket.mpsl
+      1 ket.mips
+      1 ket.m68k
+      1 ket.arm7
+      1 ket.arm6
+      1 ket.arm5
+      1 ket.arm

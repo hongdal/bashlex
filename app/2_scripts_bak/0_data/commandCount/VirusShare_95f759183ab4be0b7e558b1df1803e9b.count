@@ -1,0 +1,17 @@
+     75 cd
+     16 wget
+     15 rm
+     15 chmod
+      1 tftp
+      1 telnetd
+      1 sshd
+      1 sh
+      1 pftp
+      1 openssh
+      1 ntpd
+      1 ftp
+      1 cron
+      1 bash
+      1 b.arm5
+      1 apache2
+      1 a

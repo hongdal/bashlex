@@ -1,0 +1,15 @@
+chmod
+nohup
+echo
+echo
+chattr
+rm
+cp
+chattr
+chattr
+ps
+grep
+wget
+proc
+proc
+sleep

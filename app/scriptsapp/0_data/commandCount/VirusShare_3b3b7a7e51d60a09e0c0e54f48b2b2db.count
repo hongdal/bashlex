@@ -1,0 +1,9 @@
+      2 echo
+      1 wget
+      1 udevd
+      1 sudo
+      1 sed
+      1 rm
+      1 chmod
+      1 cd
+      1 cat

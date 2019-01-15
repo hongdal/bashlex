@@ -1,0 +1,13 @@
+echo
+exit
+\r
+echo
+awk
+echo
+awk
+echo
+sed
+\r
+echo
+echo
+nc

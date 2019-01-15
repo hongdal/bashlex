@@ -1,0 +1,131 @@
+CommandNode(lineno=3, pos=(13, 81), parts=[
+  AssignmentNode(lineno=3, pos=(13, 81), word='MEM_FREE=$(free -m |grep -i mem |awk \'{if($4 < 100){ printf("1")}}\')', parts=[
+    CommandsubstitutionNode(command=
+      PipelineNode(lineno=3, pos=(24, 80), parts=[
+        CommandNode(lineno=3, pos=(24, 31), parts=[
+          WordNode(lineno=3, pos=(24, 28), word='free'),
+          WordNode(lineno=3, pos=(29, 31), word='-m'),
+        ]),
+        PipeNode(lineno=3, pipe='|', pos=(32, 33)),
+        CommandNode(lineno=3, pos=(33, 44), parts=[
+          WordNode(lineno=3, pos=(33, 37), word='grep'),
+          WordNode(lineno=3, pos=(38, 40), word='-i'),
+          WordNode(lineno=3, pos=(41, 44), word='mem'),
+        ]),
+        PipeNode(lineno=3, pipe='|', pos=(45, 46)),
+        CommandNode(lineno=3, pos=(46, 80), parts=[
+          WordNode(lineno=3, pos=(46, 49), word='awk'),
+          WordNode(lineno=3, pos=(50, 80), word='{if($4 < 100){ printf("1")}}'),
+        ]),
+      ]), lineno=3, pos=(22, 81)),
+  ]),
+])
+CommandNode(lineno=4, pos=(82, 155), parts=[
+  AssignmentNode(lineno=4, pos=(82, 155), word='MEM_AVAILABLE=$(free -m |grep -i mem |awk \'{if($7 < 200){ printf("1")}}\')', parts=[
+    CommandsubstitutionNode(command=
+      PipelineNode(lineno=4, pos=(98, 154), parts=[
+        CommandNode(lineno=4, pos=(98, 105), parts=[
+          WordNode(lineno=4, pos=(98, 102), word='free'),
+          WordNode(lineno=4, pos=(103, 105), word='-m'),
+        ]),
+        PipeNode(lineno=4, pipe='|', pos=(106, 107)),
+        CommandNode(lineno=4, pos=(107, 118), parts=[
+          WordNode(lineno=4, pos=(107, 111), word='grep'),
+          WordNode(lineno=4, pos=(112, 114), word='-i'),
+          WordNode(lineno=4, pos=(115, 118), word='mem'),
+        ]),
+        PipeNode(lineno=4, pipe='|', pos=(119, 120)),
+        CommandNode(lineno=4, pos=(120, 154), parts=[
+          WordNode(lineno=4, pos=(120, 123), word='awk'),
+          WordNode(lineno=4, pos=(124, 154), word='{if($7 < 200){ printf("1")}}'),
+        ]),
+      ]), lineno=4, pos=(96, 155)),
+  ]),
+])
+CompoundNode(lineno=13, list=[
+  IfNode(lineno=13, pos=(156, 393), parts=[
+    ReservedwordNode(lineno=5, pos=(156, 158), word='if'),
+    ListNode(lineno=5, pos=(159, 232), parts=[
+        CommandNode(lineno=5, pos=(159, 177), parts=[
+          WordNode(lineno=5, pos=(159, 160), word='['),
+          WordNode(lineno=5, pos=(161, 170), word='$MEM_FREE', parts=[
+            ParameterNode(lineno=5, pos=(161, 170), value='MEM_FREE'),
+          ]),
+          WordNode(lineno=5, pos=(171, 173), word='=='),
+          WordNode(lineno=5, pos=(174, 175), word='1'),
+          WordNode(lineno=5, pos=(176, 177), word=']'),
+        ]),
+        OperatorNode(lineno=5, op='&&', pos=(178, 180)),
+        CommandNode(lineno=5, pos=(181, 204), parts=[
+          WordNode(lineno=5, pos=(181, 182), word='['),
+          WordNode(lineno=5, pos=(183, 197), word='$MEM_AVAILABLE', parts=[
+            ParameterNode(lineno=5, pos=(183, 197), value='MEM_AVAILABLE'),
+          ]),
+          WordNode(lineno=5, pos=(198, 200), word='=='),
+          WordNode(lineno=5, pos=(201, 202), word='1'),
+          WordNode(lineno=5, pos=(203, 204), word=']'),
+        ]),
+        OperatorNode(lineno=5, op='&&', pos=(205, 207)),
+        CommandNode(lineno=5, pos=(208, 231), parts=[
+          WordNode(lineno=5, pos=(208, 209), word='['),
+          WordNode(lineno=5, pos=(210, 224), word='$MEM_AVAILABLE', parts=[
+            ParameterNode(lineno=5, pos=(210, 224), value='MEM_AVAILABLE'),
+          ]),
+          WordNode(lineno=5, pos=(225, 227), word='=='),
+          WordNode(lineno=5, pos=(228, 229), word='2'),
+          WordNode(lineno=5, pos=(230, 231), word=']'),
+        ]),
+        OperatorNode(lineno=5, op=';', pos=(231, 232)),
+      ]),
+    ReservedwordNode(lineno=5, pos=(233, 237), word='then'),
+    ListNode(lineno=13, pos=(240, 391), parts=[
+        CommandNode(lineno=6, pos=(240, 266), parts=[
+          AssignmentNode(lineno=6, pos=(240, 266), word='now=$(date +"%Y-%m-%d-%T")', parts=[
+            CommandsubstitutionNode(command=
+              CommandNode(lineno=5, pos=(246, 265), parts=[
+                WordNode(lineno=5, pos=(246, 250), word='date'),
+                WordNode(lineno=5, pos=(251, 265), word='+%Y-%m-%d-%T'),
+              ]), lineno=5, pos=(244, 266)),
+          ]),
+        ]),
+        OperatorNode(lineno=7, op='\n', pos=(266, 267)),
+        CommandNode(lineno=7, pos=(269, 302), parts=[
+          WordNode(lineno=7, pos=(269, 273), word='echo'),
+          WordNode(lineno=7, pos=(274, 275), word='3'),
+          RedirectNode(lineno=7, output=
+            WordNode(lineno=7, pos=(278, 302), word='/proc/sys/vm/drop_caches'), pos=(276, 302), type='>'),
+        ]),
+        OperatorNode(lineno=8, op='\n', pos=(302, 303)),
+        CompoundNode(lineno=12, list=[
+          IfNode(lineno=12, pos=(305, 390), parts=[
+            ReservedwordNode(lineno=8, pos=(305, 307), word='if'),
+            ListNode(lineno=8, pos=(308, 321), parts=[
+                CommandNode(lineno=8, pos=(308, 320), parts=[
+                  WordNode(lineno=8, pos=(308, 309), word='['),
+                  WordNode(lineno=8, pos=(310, 312), word='$?', parts=[
+                    ParameterNode(lineno=8, pos=(310, 312), value='?'),
+                  ]),
+                  WordNode(lineno=8, pos=(313, 316), word='-eq'),
+                  WordNode(lineno=8, pos=(317, 318), word='0'),
+                  WordNode(lineno=8, pos=(319, 320), word=']'),
+                ]),
+                OperatorNode(lineno=8, op=';', pos=(320, 321)),
+              ]),
+            ReservedwordNode(lineno=8, pos=(321, 325), word='then'),
+            CommandNode(lineno=9, pos=(330, 351), parts=[
+              WordNode(lineno=9, pos=(330, 334), word='echo'),
+              WordNode(lineno=9, pos=(335, 351), word='Release space.'),
+            ]),
+            ReservedwordNode(lineno=10, pos=(354, 358), word='else'),
+            CommandNode(lineno=11, pos=(364, 385), parts=[
+              WordNode(discard=True, lineno=11, pos=(364, 368), word='echo'),
+              WordNode(discard=True, lineno=11, pos=(369, 385), word='Release Error.'),
+            ]),
+            ReservedwordNode(lineno=12, pos=(388, 390), word='fi'),
+          ]),
+        ], pos=(305, 390)),
+        OperatorNode(lineno=13, op='\n', pos=(390, 391)),
+      ]),
+    ReservedwordNode(lineno=13, pos=(391, 393), word='fi'),
+  ]),
+], pos=(156, 393))

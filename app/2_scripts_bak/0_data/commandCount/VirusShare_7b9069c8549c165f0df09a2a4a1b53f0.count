@@ -1,0 +1,17 @@
+     65 cd
+     13 wget
+     13 rm
+     13 chmod
+      1 telnetd
+      1 majorwget
+      1 majortftp
+      1 majorsshd
+      1 majorsh
+      1 majorpftp
+      1 majoropenssh
+      1 majorntpd
+      1 majorftp
+      1 majorcron
+      1 majorbash
+      1  major 
+      1 apache2

