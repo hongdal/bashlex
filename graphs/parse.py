@@ -41,12 +41,12 @@ class NodeData(object):
                         should be included in the tails. 
 
         precursors  :   a list of precursors of this node. When you add a new 
-                        precurosr to this node, if it's a compound node, then 
+                        precursor to this node, if it's a compound node, then 
                         a list of CommandNode will be merged (remove duplications)
                         to this list. 
                         A special case is '&&' and '||'.
                         Commands on the left and right of '&&' ('||')
-                        should be included in the precurosrs.
+                        should be included in the precursor.
 
         simult      :   used to collect the CommandNode right before '&&' and '||'. 
                         If a compoundNode is right before '&&' ('||'), then the 
@@ -61,11 +61,11 @@ class NodeData(object):
             If it's a WhileNode, the tails contains the tails of the last command in condition and body lists. 
             If it's a ForNode, the tails contains the tails of the last command in the body. 
             The last command of a list is defined as follows. 
-            (1) last command of If condition is followed by a ReservedNode('then')
-            (2) last command of If body is followed by a ReservedNode('elif'), 'else', or 'fi'.
-            (3) last command of while condition is followed by a ReservedNode('do) 
-            (4) last command of while body is followed by a ReservedNode('done')
-            (5) last command of for body is followed by a ReservedNode('done')
+            (1) last command of If condition is followed by a ReservedwordNode('then')
+            (2) last command of If body is followed by a ReservedwordNode('elif'), 'else', or 'fi'.
+            (3) last command of while condition is followed by a ReservedwordNode('do) 
+            (4) last command of while body is followed by a ReservedwordNode('done')
+            (5) last command of for body is followed by a ReservedwordNode('done')
             (6) If a command is followed by '&&' or '||', then  it must be considered 
             simultaneously as the one after the '&&' ('||') operator.
 
@@ -92,7 +92,7 @@ class NodeData(object):
 
             The following should not be a command. 
             list-2:
-            (1) ReservedNode
+            (1) ReservedwordNode
             (2) ParameterNode
             (3) OperatorNode
             (4) RedirectNode
@@ -119,10 +119,11 @@ class NodeData(object):
 
 class Node(object):
 
-    def __init__(self, data):
+    def __init__(self, data, uid):
         self.data = data
         self.children = []
         self.parent = None
+        self.uid = uid    # for graph to uniquly identify a node. 
 
     def add_child(self, obj):
         self.children.append(obj)
@@ -145,6 +146,8 @@ class Tree(object):
         self.push_track_depth = [self.root]
         self.commands = []
         self.connectors = []
+        # uniquely identify a node in the tree
+        self.accumulate_uid = 0
 
     def push_depth(self, node):
         # change current pointers
@@ -168,6 +171,8 @@ class Tree(object):
         # do insert
         last.add_child(node)
         node.set_parent(last)
+        self.accumulate_uid += 1
+        node.uid = self.accumulate_uid
         self.current = node
         self.push_track_depth.append(node)
         #
@@ -179,6 +184,8 @@ class Tree(object):
         #     pass
         # else: 
         #     self.push_track_depth.append(node)
+
+    
 
     def push_width(self, node):
         pass 
@@ -469,7 +476,7 @@ def parse_node(line, kind, indent):
         label = ""
 
     data = NodeData(int(indent)/2, kind, label)
-    node = Node(data)
+    node = Node(data, 0)
     return node
 
 
@@ -494,6 +501,9 @@ class TreeVisitor:
         self.if_stack = []
         self.while_stack = []
         self.current_path_to_root = []
+        self.level = -1
+        self.basic_commands = []
+        self.cfg = {}
 
 
     def make_cfg(self):
@@ -516,7 +526,7 @@ class TreeVisitor:
     """
     def recursive_visit(self, node):
         kind = node.data.kind
-        if "ReservedNode" == kind or "ParameterNode" == kind or \
+        if "ReservedwordNode" == kind or "ParameterNode" == kind or \
             "OperatorNode" == kind or "RedirectNode" == kind or \
             "PipeNode" == kind:
             node.data.tails = None
@@ -528,31 +538,31 @@ class TreeVisitor:
             last_command_child = None
             node.data.precursors = []
             for i in range(len(node.children)):
-                if node.children[i].data.kind != "ReservedNode" and \
+                if node.children[i].data.kind != "ReservedwordNode" and \
                     node.children[i].data.kind != "ParameterNode" and \
                     node.children[i].data.kind != "OperatorNode" and \
                     node.children[i].data.kind != "RedirectNode" and \
                     node.children[i].data.kind != "PipeNode": 
+                    # If it's WordNode or AssignmentNode, may continue. 
                     if node.children[i].data.kind == "WordNode" or \
                        node.children[i].data.kind == "AssignmentNode":
-                       # It's expandable, then expand it.
-                        if self.is_expandable(node.children[i]):
-                            # first command node
-                            if True == is_first_command:
-                                is_first_command = False
-                                node.children[i].data.precursors = node.data.precursors
-                            # other command node
-                            else:
-                                node.children[i].data.precursors = last_command_child.data.tails
-                                node.children[i].data.pre = last_command_child
-                            # recursively set tails for this command
-                            # recursively set precursors and tails of its children
-                            self.current_path_to_root.append(node.children[i])
-                            self.recursive_visit(node.children[i])
-                            self.current_path_to_root.pop(node.children[i])
-                            last_command_child = node.children[i]
-                        else:
-                            pass
+                        if not self.is_expandable(node.children[i]):
+                            continue
+                    # first command node
+                    if True == is_first_command:
+                        is_first_command = False
+                        node.children[i].data.precursors = node.data.precursors
+                    # other command node
+                    else:
+                        node.children[i].data.precursors = last_command_child.data.tails
+                        node.children[i].data.pre = last_command_child
+                    # recursively set tails for this command
+                    # recursively set precursors and tails of its children
+                    self.current_path_to_root.append(node.children[i])
+                    self.recursive_visit(node.children[i])
+                    self.current_path_to_root.pop()
+                    last_command_child = node.children[i]
+
             # --- make tails for the node itself 
             if last_command_child == None:
                 print("Node:%s does not have command children\n" % kind)
@@ -562,38 +572,38 @@ class TreeVisitor:
         #
         #   Todo: handle "||" and "&&" operation
         #
-        if "ListNode" == kind or "CompundNode" == kind:
+        elif "ListNode" == kind or "CompoundNode" == kind:
             # set precursors of each command children
             # make tails for each command children
             is_first_command = True
             last_command_child = None
             for i in range(len(node.children)):
                 # It's a command node
-                if node.children[i].data.kind != "ReservedNode" and \
+                if node.children[i].data.kind != "ReservedwordNode" and \
                     node.children[i].data.kind != "ParameterNode" and \
                     node.children[i].data.kind != "OperatorNode" and \
                     node.children[i].data.kind != "RedirectNode" and \
                     node.children[i].data.kind != "PipeNode": 
+                    # If it's WordNode or AssignmentNode, may continue. 
                     if node.children[i].data.kind == "WordNode" or \
                        node.children[i].data.kind == "AssignmentNode":
-                       # It's expandable, then expand it.
-                        if self.is_expandable(node.children[i]):
-                            # first command node
-                            if True == is_first_command:
-                                is_first_command = False
-                                node.children[i].data.precursors = node.data.precursors
-                            # other command node
-                            else:
-                                node.children[i].data.precursors = last_command_child.data.tails
-                                node.children[i].data.pre = last_command_child
-                            # recursively set tails for this command
-                            # recursively set precursors and tails of its children
-                            self.current_path_to_root.append(node.children[i])
-                            self.recursive_visit(node.children[i])
-                            self.current_path_to_root.pop(node.children[i])
-                            last_command_child = node.children[i]
-                        else:
-                            pass
+                        if not self.is_expandable(node.children[i]):
+                            continue
+                    # first command node
+                    if True == is_first_command:
+                        is_first_command = False
+                        node.children[i].data.precursors = node.data.precursors
+                    # other command node
+                    else:
+                        node.children[i].data.precursors = last_command_child.data.tails
+                        node.children[i].data.pre = last_command_child
+                    # recursively set tails for this command
+                    # recursively set precursors and tails of its children
+                    self.current_path_to_root.append(node.children[i])
+                    self.recursive_visit(node.children[i])
+                    self.current_path_to_root.pop()
+                    last_command_child = node.children[i]
+
             # --- make tails for the node itself 
             if last_command_child == None:
                 print("Node:%s does not have command children\n" % kind)
@@ -617,7 +627,7 @@ class TreeVisitor:
                     # recursively set precursors and tails of its children
                     self.current_path_to_root.append(node.children[i])
                     self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop(node.children[i])
+                    self.current_path_to_root.pop()
                     last_command_child = node.children[i]
             # its a leaf, set a safe guard
             if None == last_command_child:
@@ -626,14 +636,23 @@ class TreeVisitor:
                 node.data.tails = last_command_child.data.tails
 
         elif "IfNode" == kind:
+            '''
+                if condition; then 
+                    command
+                elif condition; then
+                    command
+                else
+                    command
+                fi
+            '''
             conditions = []
             bodies = [] 
             for i in range(len(node.children)):
-                if node.children[i].data.kind == "ReservedNode":
+                if node.children[i].data.kind == "ReservedwordNode":
                     if (node.children[i].data.label == "if" or node.children[i].data.label == "elif"):
                         conditions.append(node.children[i+1])
                     if (node.children[i].data.label == "then" or node.children[i].data.label == "else"):
-                        bodies.append(node.children[i])
+                        bodies.append(node.children[i+1])
             if len(conditions) != len(bodies)-1 and len(conditions) != len(bodies):
                 print("If-else condition and body mismatch\n")
                 exit(1)
@@ -647,7 +666,7 @@ class TreeVisitor:
                     conditions[i].data.precursors = conditions[i-1].data.tails
                 self.current_path_to_root.append(conditions[i])
                 self.recursive_visit(conditions[i])
-                self.current_path_to_root.pop(conditions[i])
+                self.current_path_to_root.pop()
 
             # set precursors for all bodies and 
             # make tails for all bodies 
@@ -656,13 +675,13 @@ class TreeVisitor:
                 bodies[i].data.precursors = conditions[i].data.tails 
                 self.current_path_to_root.append(bodies[i])
                 self.recursive_visit(bodies[i])
-                self.current_path_to_root.pop(bodies[i])
+                self.current_path_to_root.pop()
             # One more body, caused by "else"
             if len(bodies) > len(conditions):
-                bodies[-1].data.precurosrs = conditions[-1].data.tails
+                bodies[-1].data.precursors = conditions[-1].data.tails
                 self.current_path_to_root.append(bodies[-1])
                 self.recursive_visit(bodies[-1])
-                self.current_path_to_root.pop(bodies[-1])
+                self.current_path_to_root.pop()
             # make tails for the IfNode
             # all bodies and the last condition. 
             for i in range(len(bodies)):
@@ -670,12 +689,18 @@ class TreeVisitor:
             node.data.tails += conditions[-1].data.tails
 
         elif "WhileNode" == kind:
+            '''
+                while command; do 
+                    command 
+                done
+            '''
             # Match the while node pattern
-            if len(node.children) != 4:
+            # while + condition + do + body + done
+            if len(node.children) != 5:
                 print("Bad WhileNode: lenght=%d\n" % len(node.children))
                 exit(1)
-            elif node.children[0].data.kind != "ReservedNode" or \
-                 node.children[2].data.kind != "ReservedNode":
+            elif node.children[0].data.kind != "ReservedwordNode" or \
+                 node.children[2].data.kind != "ReservedwordNode":
                 print("Bad WhileNode: lenght=%d\n" % len(node.children))
                 exit(1)
             # match the while node condition and body. 
@@ -686,20 +711,20 @@ class TreeVisitor:
             # make tails for condition_command_child
             self.current_path_to_root.append(condition_command_child)
             self.recursive_visit(condition_command_child)
-            self.current_path_to_root.pop(condition_command_child)
+            self.current_path_to_root.pop()
             # set precursors for body
             body_command_child.data.precursors = condition_command_child.data.tails
             # make tails for body
             self.current_path_to_root.append(body_command_child)
             self.recursive_visit(body_command_child)
-            self.current_path_to_root.pop(body_command_child)
-            # update precursors for condition, adding tails of body
-            condition_command_child.data.precurosrs += body_command_child.data.tails
+            self.current_path_to_root.pop()
+            # update precursors for condition, adding tails of body to the condition
+            condition_command_child.data.precursors += body_command_child.data.tails
             # update all children of condition nodes. 
             # Update precursors. Though tails are recomputed, this does not matter.
             self.current_path_to_root.append(condition_command_child)
             self.recursive_visit(condition_command_child)
-            self.current_path_to_root.pop(condition_command_child)
+            self.current_path_to_root.pop()
 
             # make tails for the WhileNode itself. 
             node.data.tails = condition_command_child.data.tails
@@ -717,40 +742,42 @@ class TreeVisitor:
             first_body = None
             for i in range(len(node.children)):
                 # It's a command node
-                if node.children[i].data.kind != "ReservedNode" and \
+                if node.children[i].data.kind != "ReservedwordNode" and \
                     node.children[i].data.kind != "ParameterNode" and \
                     node.children[i].data.kind != "OperatorNode" and \
                     node.children[i].data.kind != "RedirectNode" and \
                     node.children[i].data.kind != "PipeNode": 
+                    # If it's WordNode or AssignmentNode, may continue. 
                     if node.children[i].data.kind == "WordNode" or \
                        node.children[i].data.kind == "AssignmentNode":
-                        if self.is_expandable(node.children[i]):
-                            # first command node
-                            if True == is_first_command:
-                                is_first_command = False
-                                node.children[i].data.precursors = node.data.precursors
-                            # other command node
-                            else:
-                                node.children[i].data.precursors = last_command_child.data.tails
-                                node.children[i].data.pre = last_command_child
-                            # recursively set tails for this command
-                            # recursively set precursors and tails of its children
-                            self.current_path_to_root.append(node.children[i])
-                            self.recursive_visit(node.children[i])
-                            self.current_path_to_root.pop(node.children[i])
-                            last_command_child = node.children[i]
+                        if not self.is_expandable(node.children[i]):
+                            continue
+                    # first command node
+                    if True == is_first_command:
+                        is_first_command = False
+                        node.children[i].data.precursors = node.data.precursors
+                    # other command node
+                    else:
+                        node.children[i].data.precursors = last_command_child.data.tails
+                        node.children[i].data.pre = last_command_child
+                    # recursively set tails for this command
+                    # recursively set precursors and tails of its children
+                    self.current_path_to_root.append(node.children[i])
+                    self.recursive_visit(node.children[i])
+                    self.current_path_to_root.pop()
+                    last_command_child = node.children[i]
                 # set the first command of the body
-                if node.children[i].data.kind == "ReservedNode" and \
+                if node.children[i].data.kind == "ReservedwordNode" and \
                    node.children[i].data.label == "do":
                     first_body = node.children[i+1]
 
             # update precursors for the first command of the body, 
             # adding tails of the body.
             # And update all its children
-            first_body.data.precursors = last_command_child.data.tails
+            first_body.data.precursors += last_command_child.data.tails
             self.current_path_to_root.append(first_body)
             self.recursive_visit(first_body)
-            self.current_path_to_root.pop(first_body)
+            self.current_path_to_root.pop()
 
             # --- make tails for the node itself 
             if last_command_child == None:
@@ -764,28 +791,30 @@ class TreeVisitor:
             last_command_child = None
             for i in range(len(node.children)):
                 # It's a command node
-                if node.children[i].data.kind != "ReservedNode" and \
+                if node.children[i].data.kind != "ReservedwordNode" and \
                     node.children[i].data.kind != "ParameterNode" and \
                     node.children[i].data.kind != "OperatorNode" and \
                     node.children[i].data.kind != "RedirectNode" and \
                     node.children[i].data.kind != "PipeNode": 
+                    # If it's WordNode or AssignmentNode, may continue. 
                     if node.children[i].data.kind == "WordNode" or \
                        node.children[i].data.kind == "AssignmentNode":
-                        if self.is_expandable(node.children[i]):
-                            # first command node
-                            if True == is_first_command:
-                                is_first_command = False
-                                node.children[i].data.precursors = node.data.precursors
-                            # other command node
-                            else:
-                                node.children[i].data.precursors = last_command_child.data.tails
-                                node.children[i].data.pre = last_command_child
-                            # recursively set tails for this command
-                            # recursively set precursors and tails of its children
-                            self.current_path_to_root.append(node.children[i])
-                            self.recursive_visit(node.children[i])
-                            self.current_path_to_root.pop(node.children[i])
-                            last_command_child = node.children[i]
+                        if not self.is_expandable(node.children[i]):
+                            continue
+                    # first command node
+                    if True == is_first_command:
+                        is_first_command = False
+                        node.children[i].data.precursors = node.data.precursors
+                    # other command node
+                    else:
+                        node.children[i].data.precursors = last_command_child.data.tails
+                        node.children[i].data.pre = last_command_child
+                    # recursively set tails for this command
+                    # recursively set precursors and tails of its children
+                    self.current_path_to_root.append(node.children[i])
+                    self.recursive_visit(node.children[i])
+                    self.current_path_to_root.pop()
+                    last_command_child = node.children[i]
 
             # --- make tails for the node itself 
             if last_command_child == None:
@@ -794,7 +823,6 @@ class TreeVisitor:
             else:
                 node.data.tails = last_command_child.data.tails
 
-
         elif "CommandsubstitutionNode" == kind:
             # set precursors of each command children
             # make tails for each command children
@@ -802,29 +830,30 @@ class TreeVisitor:
             last_command_child = None
             for i in range(len(node.children)):
                 # It's a command node
-                if node.children[i].data.kind != "ReservedNode" and \
+                if node.children[i].data.kind != "ReservedwordNode" and \
                     node.children[i].data.kind != "ParameterNode" and \
                     node.children[i].data.kind != "OperatorNode" and \
                     node.children[i].data.kind != "RedirectNode" and \
                     node.children[i].data.kind != "PipeNode": 
-                    # substitution node
+                    # If it's WordNode or AssignmentNode, may continue. 
                     if node.children[i].data.kind == "WordNode" or \
                        node.children[i].data.kind == "AssignmentNode":
-                        if self.is_expandable(node.children[i]):
-                            # first command node
-                            if True == is_first_command:
-                                is_first_command = False
-                                node.children[i].data.precursors = node.data.precursors
-                            # other command node
-                            else:
-                                node.children[i].data.precursors = last_command_child.data.tails
-                                node.children[i].data.pre = last_command_child
-                            # recursively set tails for this command
-                            # recursively set precursors and tails of its children
-                            self.current_path_to_root.append(node.children[i])
-                            self.recursive_visit(node.children[i])
-                            self.current_path_to_root.pop(node.children[i])
-                            last_command_child = node.children[i]
+                        if not self.is_expandable(node.children[i]):
+                            continue
+                    # first command node
+                    if True == is_first_command:
+                        is_first_command = False
+                        node.children[i].data.precursors = node.data.precursors
+                    # other command node
+                    else:
+                        node.children[i].data.precursors = last_command_child.data.tails
+                        node.children[i].data.pre = last_command_child
+                    # recursively set tails for this command
+                    # recursively set precursors and tails of its children
+                    self.current_path_to_root.append(node.children[i])
+                    self.recursive_visit(node.children[i])
+                    self.current_path_to_root.pop()
+                    last_command_child = node.children[i]
                         
             # --- make tails for the node itself 
             if last_command_child == None:
@@ -840,28 +869,30 @@ class TreeVisitor:
             last_command_child = None
             for i in range(len(node.children)):
                 # It's a command node
-                if node.children[i].data.kind != "ReservedNode" and \
+                if node.children[i].data.kind != "ReservedwordNode" and \
                     node.children[i].data.kind != "ParameterNode" and \
                     node.children[i].data.kind != "OperatorNode" and \
                     node.children[i].data.kind != "RedirectNode" and \
                     node.children[i].data.kind != "PipeNode": 
+                    # If it's WordNode or AssignmentNode, may continue. 
                     if node.children[i].data.kind == "WordNode" or \
                        node.children[i].data.kind == "AssignmentNode":
-                        if self.is_expandable(node.children[i]):
-                            # first command node
-                            if True == is_first_command:
-                                is_first_command = False
-                                node.children[i].data.precursors = node.data.precursors
-                            # other command node
-                            else:
-                                node.children[i].data.precursors = last_command_child.data.tails
-                                node.children[i].data.pre = last_command_child
-                            # recursively set tails for this command
-                            # recursively set precursors and tails of its children
-                            self.current_path_to_root.append(node.children[i])
-                            self.recursive_visit(node.children[i])
-                            self.current_path_to_root.pop(node.children[i])
-                            last_command_child = node.children[i]
+                        if not self.is_expandable(node.children[i]):
+                            continue
+                    # first command node
+                    if True == is_first_command:
+                        is_first_command = False
+                        node.children[i].data.precursors = node.data.precursors
+                    # other command node
+                    else:
+                        node.children[i].data.precursors = last_command_child.data.tails
+                        node.children[i].data.pre = last_command_child
+                    # recursively set tails for this command
+                    # recursively set precursors and tails of its children
+                    self.current_path_to_root.append(node.children[i])
+                    self.recursive_visit(node.children[i])
+                    self.current_path_to_root.pop()
+                    last_command_child = node.children[i]
 
             # --- make tails for the node itself 
             if last_command_child == None:
@@ -875,17 +906,90 @@ class TreeVisitor:
             exit(2)
 
 
-    def dump_cfg(self, node):
-        pass
+    def dump_tree(self):
+        self.level = -1
+        self.recursive_dump_node(self.tree.root)
+
+    def recursive_dump_node(self, node):
+        self.level +=  1
+        # dump itself. 
+        #indent = "  " * int(node.data.level+1)
+        indent = "  " * int(self.level)
+        content = node.data.kind + "(" + node.data.label + ")"
+        print(indent + content)
+        for child in node.children:
+            self.recursive_dump_node(child)
+        self.level -= 1
 
 
 
-    def make_last_commands(self, node):
-        if len(node.children) == 1:
-            child = node.children[-1]
-            command = self.get_last_command(child)
-        else: 
-            pass
+    def is_basic_command(self, node):
+        for child in node.children:
+            if "WordNode" == child.data.kind or "AssignmentNode" == child.data.kind:
+                if self.is_expandable(child):
+                    return False
+            elif "ListNode" == child.data.kind or "CompoundNode" == child.data.kind or \
+                "IfNode" == child.data.kind or "WhileNode" == child.data.kind or \
+                "ForNode" == child.data.kind or "CommandNode" == child.data.kind or \
+                "CommandsubstitutionNode" == child.data.kind or "PipelineNode" == child.data.kind:
+                return False
+            else:
+                continue
+        return True
+
+
+    '''
+        node must be a basic command, i.e., not expandable any more
+    '''
+    def label_basic_command(self, node):
+        command = ''
+        for child in node.children:
+            command += " " + child.data.label
+        command = command.replace(r'"', r'\"')
+        command = command.replace(r'[', r'\[')
+        command = command.replace(r']', r'\]')
+        node.data.label = command
+
+
+    def build_basic_commands(self, node):
+        # determine whether it's a basic command. 
+        if node.data.kind == "CommandNode":
+            # Add a new record to the hash table if it's a basic command. 
+            if self.is_basic_command(node):
+                self.basic_commands.append(node)
+                # update the label of node - This must be the basic command
+                self.label_basic_command(node)
+                return
+        for child in node.children:
+            self.build_basic_commands(child)
+                
+
+    def build_cfg(self):
+        self.basic_commands = []
+        self.build_basic_commands(self.tree.root)
+        self.cfg = {}
+        # traverse the basic command list
+        for basic_command in self.basic_commands:
+            for precursor in basic_command.data.precursors:
+                if precursor in self.cfg:
+                    self.cfg[precursor].append(basic_command)
+                else:
+                    self.cfg[precursor] = [basic_command]
+
+
+    def print_cfg(self):
+        print("digraph {")
+        # Print all the nodes that are followed by other nodes. 
+        for key in self.cfg.keys():
+            labeling_node = str(key.uid) + ' [label="' + key.data.label + '"];'
+            print(labeling_node)
+            for node in self.cfg[key]:
+                connection = str(key.uid) + ' -> ' + str(node.uid) + ';'
+                print(connection)
+        print("}")
+
+
+
 
 '''
     The key idea is to parse the .out file line by line. 
@@ -897,61 +1001,61 @@ class TreeVisitor:
             CommandNode('[...]')
             OperatorNode(';')
         )
-        ReservedNode('then')
+        ReservedwordNode('then')
         ListNode(
             CommandNode('...')
             OperatorNode(';)
             CommandNode('...')
             OperatorNode('\n')
         )
-        ReservedNode('elif')
+        ReservedwordNode('elif')
         ListNode(
             CommandNode('...')
             OperatorNode('\n')
             CommandNode('...')
             OperatorNode('\n')
         )
-        ReservedNode('then)
+        ReservedwordNode('then)
         ListNode(
             CommandNode('...')
             OperatorNode('\n')
             CommandNode('...')
             OperatorNode('\n')
         )
-        ReservedNode('else')
+        ReservedwordNode('else')
         ListNode(
             CommandNode('...')
             OperatorNode('\n')
             CommandNode('...')
             OpeartorNode(';')
         )
-        ReservedNode('fi')
+        ReservedwordNode('fi')
     )
 
     To be simple, lets denote it as follows. 
 
     IfNode
-        ReservedNode(if)
+        ReservedwordNode(if)
         ListNode(condition1)
             CommandNode(1)
             CommandNode(2)
-        ReservedNode(then)
+        ReservedwordNode(then)
         ListNode(body1)
             CommandNode(3)
             CommandNode(4)
-        ReservedNode(elif)
+        ReservedwordNode(elif)
         ListNode(condition2)
             CommandNode(5)
             CommandNode(6)
-        ReservedNode(then)
+        ReservedwordNode(then)
         ListNode(body2)
             CommandNode(7)
             CommandNode(8)
-        ReservedNode(else)
+        ReservedwordNode(else)
         ListNode(body3)
             CommandNode(9)
             CommandNode(10)
-        ReservedNode(fi)
+        ReservedwordNode(fi)
 
 
     Then let's consider IfNode as a blackbox, we get this.
@@ -1003,7 +1107,7 @@ class TreeVisitor:
 
     Next, let's discuss them one by one. 
 
-    (1): The command immediate after ReservedNode('if') is the 
+    (1): The command immediate after ReservedwordNode('if') is the 
     first command of IfNode. 
 
     (2): For commands within the same IfNode, the rules are as follows.
@@ -1025,42 +1129,9 @@ class TreeVisitor:
     If this command is a while-do command, it's the union of last command 
     of while condition and its body. 
 
-
-
 '''
 
-'''
-Assumption: 
-    CommandNode is the basic representation of a "command".
-    But there are some exceptions. 
 
-
-
-    def get_last_commands(self, node):
-        last_commands = None
-        if ("CommandNode" == node.data.kind):
-            last_commands = self.make_last_command(node)
-        elif ("IfNode" == node.data.kind):
-            last_commands = self.make_last_if_commands(node)
-        elif ("While" == node.data.kind):
-            pass
-        else: 
-            if len(node.children) > 0:
-                last_commands = self.get_last_commands(node.children[-1])
-        return last_commands
-
-
-    def visit_node(self, node):
-        self.pre_visit(node)
-        if len(node.children) < 1:
-            self.process_node(node)
-        self.post_visit(node)
-        
-    def process_node(self, node):
-        pass
-
-
-'''
 
 if __name__ == "__main__": 
 
@@ -1069,7 +1140,7 @@ if __name__ == "__main__":
         exit(0)
 
     infile = sys.argv[1]
-    tree = Tree(Node(NodeData(-1, "Root", "Start")))
+    tree = Tree(Node(NodeData(-1, "Root", "Start"), 0))
     with open(infile) as fp:
         line = fp.readline()
         count = 1
@@ -1094,6 +1165,9 @@ if __name__ == "__main__":
     #print(tree.commands) 
 
     v = TreeVisitor(tree)
+    # v.dump_tree()
     v.make_cfg()
+    v.build_cfg()
+    v.print_cfg()
 
     
