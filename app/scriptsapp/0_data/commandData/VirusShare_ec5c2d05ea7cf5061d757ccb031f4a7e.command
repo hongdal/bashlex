@@ -1,3 +1,0 @@
-wget
-chmod
-dvrHelper

@@ -1,7 +1,0 @@
-     50 cd
-     10 wget
-     10 kaizenssh
-     10 chmod
-     10 cat
-     10 busybox
-      1 rm
