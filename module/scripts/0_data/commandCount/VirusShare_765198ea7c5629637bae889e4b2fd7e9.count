@@ -1,6 +1,0 @@
-      6 echo
-      2 \r
-      2 awk
-      1 sed
-      1 nc
-      1 exit
