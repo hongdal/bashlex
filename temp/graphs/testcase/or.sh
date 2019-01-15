@@ -1,0 +1,1 @@
+cd /tmp || cd /root || cd /;

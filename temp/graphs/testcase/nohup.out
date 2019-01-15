@@ -1,0 +1,6 @@
+ListNode(pos=(0, 4), parts=[
+  CommandNode(pos=(0, 2), parts=[
+    WordNode(pos=(0, 2), word='ls'),
+  ]),
+  OperatorNode(op='&', pos=(3, 4)),
+])

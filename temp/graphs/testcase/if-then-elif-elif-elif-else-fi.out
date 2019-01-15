@@ -1,0 +1,174 @@
+CompoundNode(list=[
+  IfNode(pos=(0, 272), parts=[
+    ReservedwordNode(pos=(0, 2), word='if'),
+    ListNode(pos=(3, 13), parts=[
+        CommandNode(pos=(3, 12), parts=[
+          WordNode(pos=(3, 4), word='['),
+          WordNode(pos=(5, 7), word='-z'),
+          WordNode(pos=(8, 10), word='$1', parts=[
+            ParameterNode(pos=(8, 10), value='1'),
+          ]),
+          WordNode(pos=(11, 12), word=']'),
+        ]),
+        OperatorNode(op=';', pos=(12, 13)),
+      ]),
+    ReservedwordNode(pos=(14, 18), word='then'),
+    CommandNode(pos=(24, 26), parts=[
+      WordNode(pos=(24, 26), word='ls'),
+    ]),
+    ReservedwordNode(pos=(27, 31), word='elif'),
+    ListNode(pos=(32, 45), parts=[
+        CommandNode(pos=(32, 44), parts=[
+          WordNode(pos=(32, 33), word='['),
+          WordNode(pos=(34, 36), word='$2', parts=[
+            ParameterNode(pos=(34, 36), value='2'),
+          ]),
+          WordNode(pos=(37, 40), word='-gt'),
+          WordNode(pos=(41, 42), word='2'),
+          WordNode(pos=(43, 44), word=']'),
+        ]),
+        OperatorNode(op=';', pos=(44, 45)),
+      ]),
+    ReservedwordNode(pos=(46, 50), word='then'),
+    CommandNode(pos=(56, 69), parts=[
+      AssignmentNode(pos=(56, 69), word='assignment=$1', parts=[
+        ParameterNode(pos=(67, 69), value='1'),
+      ]),
+    ]),
+    ReservedwordNode(pos=(0, 0), word=[
+      ReservedwordNode(pos=(70, 74), word='elif'),
+      ListNode(pos=(75, 88), parts=[
+          CommandNode(pos=(75, 87), parts=[
+            WordNode(pos=(75, 76), word='['),
+            WordNode(pos=(77, 79), word='$3', parts=[
+              ParameterNode(pos=(77, 79), value='3'),
+            ]),
+            WordNode(pos=(80, 83), word='-lt'),
+            WordNode(pos=(84, 85), word='3'),
+            WordNode(pos=(86, 87), word=']'),
+          ]),
+          OperatorNode(op=';', pos=(87, 88)),
+        ]),
+      ReservedwordNode(pos=(89, 93), word='then'),
+      ListNode(pos=(99, 125), parts=[
+          CommandNode(pos=(99, 104), parts=[
+            WordNode(pos=(99, 104), word='$(ls)', parts=[
+              CommandsubstitutionNode(command=
+                CommandNode(pos=(101, 103), parts=[
+                  WordNode(pos=(101, 103), word='ls'),
+                ]), pos=(99, 104)),
+            ]),
+          ]),
+          OperatorNode(op='\n', pos=(104, 105)),
+          CommandNode(pos=(109, 114), parts=[
+            WordNode(pos=(109, 114), word='$(ls)', parts=[
+              CommandsubstitutionNode(command=
+                CommandNode(pos=(111, 113), parts=[
+                  WordNode(pos=(111, 113), word='ls'),
+                ]), pos=(109, 114)),
+            ]),
+          ]),
+          OperatorNode(op='\n', pos=(114, 115)),
+          CommandNode(pos=(119, 124), parts=[
+            WordNode(pos=(119, 124), word='$(ls)', parts=[
+              CommandsubstitutionNode(command=
+                CommandNode(pos=(121, 123), parts=[
+                  WordNode(pos=(121, 123), word='ls'),
+                ]), pos=(119, 124)),
+            ]),
+          ]),
+          OperatorNode(op='\n', pos=(124, 125)),
+        ]),
+      ReservedwordNode(pos=(0, 0), word=[
+        ReservedwordNode(pos=(125, 129), word='elif'),
+        ListNode(pos=(130, 143), parts=[
+            CommandNode(pos=(130, 142), parts=[
+              WordNode(pos=(130, 131), word='['),
+              WordNode(pos=(132, 134), word='$4', parts=[
+                ParameterNode(pos=(132, 134), value='4'),
+              ]),
+              WordNode(pos=(135, 138), word='-ne'),
+              WordNode(pos=(139, 140), word='4'),
+              WordNode(pos=(141, 142), word=']'),
+            ]),
+            OperatorNode(op=';', pos=(142, 143)),
+          ]),
+        ReservedwordNode(pos=(144, 148), word='then'),
+        ListNode(pos=(154, 166), parts=[
+            CommandNode(pos=(154, 156), parts=[
+              WordNode(pos=(154, 156), word='ls'),
+            ]),
+            OperatorNode(op=';', pos=(156, 157)),
+            CommandNode(pos=(158, 160), parts=[
+              WordNode(pos=(158, 160), word='ls'),
+            ]),
+            OperatorNode(op=';', pos=(160, 161)),
+            CommandNode(pos=(162, 164), parts=[
+              WordNode(pos=(162, 164), word='ls'),
+            ]),
+            OperatorNode(op='\n', pos=(165, 166)),
+          ]),
+        ReservedwordNode(pos=(166, 170), word='else'),
+        ListNode(pos=(175, 270), parts=[
+            CompoundNode(list=[
+              WhileNode(pos=(175, 220), parts=[
+                ReservedwordNode(pos=(175, 180), word='while'),
+                ListNode(pos=(181, 187), parts=[
+                    CommandNode(pos=(181, 186), parts=[
+                      WordNode(pos=(181, 182), word='['),
+                      WordNode(pos=(183, 184), word='1'),
+                      WordNode(pos=(185, 186), word=']'),
+                    ]),
+                    OperatorNode(op=';', pos=(186, 187)),
+                  ]),
+                ReservedwordNode(pos=(188, 190), word='do'),
+                ListNode(pos=(200, 211), parts=[
+                    CommandNode(pos=(200, 202), parts=[
+                      WordNode(pos=(200, 202), word='ls'),
+                    ]),
+                    OperatorNode(op=';', pos=(202, 203)),
+                    CommandNode(pos=(204, 206), parts=[
+                      WordNode(pos=(204, 206), word='ls'),
+                    ]),
+                    OperatorNode(op=';', pos=(206, 207)),
+                    CommandNode(pos=(208, 210), parts=[
+                      WordNode(pos=(208, 210), word='ls'),
+                    ]),
+                    OperatorNode(op=';', pos=(210, 211)),
+                  ]),
+                ReservedwordNode(pos=(216, 220), word='done'),
+              ]),
+            ], pos=(175, 220)),
+            OperatorNode(op='\n', pos=(220, 221)),
+            CompoundNode(list=[
+              WhileNode(pos=(225, 268), parts=[
+                ReservedwordNode(pos=(225, 230), word='while'),
+                ListNode(pos=(231, 237), parts=[
+                    CommandNode(pos=(231, 236), parts=[
+                      WordNode(pos=(231, 232), word='['),
+                      WordNode(pos=(233, 234), word='2'),
+                      WordNode(pos=(235, 236), word=']'),
+                    ]),
+                    OperatorNode(op=';', pos=(236, 237)),
+                  ]),
+                ReservedwordNode(pos=(238, 240), word='do'),
+                ListNode(pos=(250, 259), parts=[
+                    CommandNode(pos=(250, 253), parts=[
+                      WordNode(pos=(250, 253), word='cat'),
+                    ]),
+                    OperatorNode(op=';', pos=(253, 254)),
+                    CommandNode(pos=(255, 258), parts=[
+                      WordNode(pos=(255, 258), word='cat'),
+                    ]),
+                    OperatorNode(op=';', pos=(258, 259)),
+                  ]),
+                ReservedwordNode(pos=(264, 268), word='done'),
+              ]),
+            ], pos=(225, 268)),
+            OperatorNode(op='\n', pos=(269, 270)),
+          ]),
+      ]),
+    ]),
+    ReservedwordNode(pos=(270, 272), word='fi'),
+  ]),
+], pos=(0, 272))
