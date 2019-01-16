@@ -5,142 +5,142 @@ import json
 import sqlite3
 import shutil
 import include.model as model
-from include.model import Manager_Paper
+from include.model import Manager_Script
 
-class TestManager_Paper(unittest.TestCase):
+class TestManager_Script(unittest.TestCase):
   def setUp(self):
-    self.paper_manager = model.Manager_Paper()
+    self.script_manager = model.Manager_Script()
     self.base_path = os.path.abspath(os.curdir)
-    self.paper_manager.db_path = os.path.join(self.base_path,
-                                                "test_paper_manager.db")
-    self.paper_manager.user_config_path = os.path.join(self.base_path,
+    self.script_manager.db_path = os.path.join(self.base_path,
+                                                "test_script_manager.db")
+    self.script_manager.user_config_path = os.path.join(self.base_path,
                                                         "test_user_config.json")
-    self.paper_manager.conn = sqlite3.connect(self.paper_manager.db_path)
-    self.paper_manager.cursor = self.paper_manager.conn.cursor()
-    self.paper_path = os.path.join(self.base_path, "test_paper")
-    if not os.path.exists(self.paper_path):
-      os.makedirs(self.paper_path)
+    self.script_manager.conn = sqlite3.connect(self.script_manager.db_path)
+    self.script_manager.cursor = self.script_manager.conn.cursor()
+    self.script_path = os.path.join(self.base_path, "test_script")
+    if not os.path.exists(self.script_path):
+      os.makedirs(self.script_path)
     for i in range(5):
-      paper = self.paper_path+"/"+ str(i) +".pdf"
-      f = open(paper,'w')
+      script = self.script_path+"/"+ str(i) +".pdf"
+      f = open(script,'w')
       f.write("Test")
       f.close()
-    self.test_reps=["Tang",self.paper_path,"pdf"]
-    self.paper_manager.add_repository(self.test_reps)
+    self.test_reps=["Tang",self.script_path,"pdf"]
+    self.script_manager.add_repository(self.test_reps)
     for i in range(3):
-      paper_name = str(i) + ".pdf"
-      self.paper_manager.insert_one(paper_name,i,i,"Network"+str(i),"n")
+      script_name = str(i) + ".pdf"
+      self.script_manager.insert_one(script_name,i,i,"Network"+str(i),"n")
 
   def tearDown(self):
-    self.paper_manager.conn.commit()
-    self.paper_manager.cursor.close()
-    self.paper_manager.conn.close()
-    os.remove(self.paper_manager.db_path)
-    os.remove(self.paper_manager.user_config_path)
-    shutil.rmtree(self.paper_path)
+    self.script_manager.conn.commit()
+    self.script_manager.cursor.close()
+    self.script_manager.conn.close()
+    os.remove(self.script_manager.db_path)
+    os.remove(self.script_manager.user_config_path)
+    shutil.rmtree(self.script_path)
 
   def test_get_user_config(self):
-    if os.path.exists(self.paper_manager.user_config_path):
-      with open(self.paper_manager.user_config_path) as f:
+    if os.path.exists(self.script_manager.user_config_path):
+      with open(self.script_manager.user_config_path) as f:
         expect_config = json.load(f)
     else:
       expect_config={}
-    user_config = self.paper_manager.get_user_config()
+    user_config = self.script_manager.get_user_config()
     self.assertEqual(user_config, expect_config)
 
   def test_get_all_repository(self):
-    self.assertEqual(self.paper_manager.get_all_repository(),
-                    self.paper_manager.user_config)
+    self.assertEqual(self.script_manager.get_all_repository(),
+                    self.script_manager.user_config)
 
   def test_add_repository(self):
-    new_rep = ["New_rep",self.paper_path,"mobi"]
-    self.paper_manager.add_repository(new_rep)
-    self.paper_manager.select_repository("New_rep")
-    self.assertEqual(self.paper_manager.cur_rep.path
-                      ,self.paper_path)
-    self.assertEqual(self.paper_manager.cur_rep.name
+    new_rep = ["New_rep",self.script_path,"mobi"]
+    self.script_manager.add_repository(new_rep)
+    self.script_manager.select_repository("New_rep")
+    self.assertEqual(self.script_manager.cur_rep.path
+                      ,self.script_path)
+    self.assertEqual(self.script_manager.cur_rep.name
                       ,"New_rep")
-    self.assertEqual(self.paper_manager.cur_rep.support_suffix
+    self.assertEqual(self.script_manager.cur_rep.support_suffix
                       ,"mobi")
 
 
   def test_select_repository(self):
-    self.paper_manager.select_repository("Tang")
-    self.assertEqual(self.paper_manager.cur_rep.path
-                      ,self.paper_path)
-    self.assertEqual(self.paper_manager.cur_rep.name
+    self.script_manager.select_repository("Tang")
+    self.assertEqual(self.script_manager.cur_rep.path
+                      ,self.script_path)
+    self.assertEqual(self.script_manager.cur_rep.name
                       ,"Tang")
-    self.assertEqual(self.paper_manager.cur_rep.support_suffix
+    self.assertEqual(self.script_manager.cur_rep.support_suffix
                       ,"pdf")
 
   def test_delete_repository(self):
-    self.paper_manager.select_repository("Tang")
-    self.assertFalse(self.paper_manager.delete_repository("Tang"))
+    self.script_manager.select_repository("Tang")
+    self.assertFalse(self.script_manager.delete_repository("Tang"))
 
-    new_rep = ["New_rep",self.paper_path,"pdf"]
-    self.paper_manager.add_repository(new_rep)
-    self.assertTrue(self.paper_manager.delete_repository("Tang"))
+    new_rep = ["New_rep",self.script_path,"pdf"]
+    self.script_manager.add_repository(new_rep)
+    self.assertTrue(self.script_manager.delete_repository("Tang"))
 
   def test_refresh(self):
-    new_papers = self.paper_manager.refresh()
-    expect_papers=['3.pdf', '4.pdf']
-    self.assertEqual(len(new_papers), len(expect_papers) )
+    new_scripts = self.script_manager.refresh()
+    expect_scripts=['3.pdf', '4.pdf']
+    self.assertEqual(len(new_scripts), len(expect_scripts) )
 
-  def test_get_all_papers(self):
-    all_papers = self.paper_manager.get_all_papers()
-    self.assertEqual(len(all_papers)
+  def test_get_all_scripts(self):
+    all_scripts = self.script_manager.get_all_scripts()
+    self.assertEqual(len(all_scripts)
                       ,3)
-    paper_name = "4.pdf"
-    self.paper_manager.insert_one(paper_name,2,3,"Network","n")
+    script_name = "4.pdf"
+    self.script_manager.insert_one(script_name,2,3,"Network","n")
 
-    all_papers = self.paper_manager.get_all_papers()
-    self.assertEqual(len(all_papers)
+    all_scripts = self.script_manager.get_all_scripts()
+    self.assertEqual(len(all_scripts)
                       ,4)
 
   def test_edit_one_peper(self):
-    paper_name = "4.pdf"
-    self.paper_manager.insert_one(paper_name,2,3,"Test","n")
+    script_name = "4.pdf"
+    self.script_manager.insert_one(script_name,2,3,"Test","n")
 
-    all_papers = self.paper_manager.get_all_papers()
-    index_paper = len(all_papers) - 1
-    index_id = len(all_papers[3]) - 1
+    all_scripts = self.script_manager.get_all_scripts()
+    index_script = len(all_scripts) - 1
+    index_id = len(all_scripts[3]) - 1
     index_tags = 3
-    self.assertEqual(all_papers[index_paper][index_id]
+    self.assertEqual(all_scripts[index_script][index_id]
                       ,4)
-    self.assertEqual(all_papers[index_paper][index_tags]
+    self.assertEqual(all_scripts[index_script][index_tags]
                       ,"Test")
-    paper_id = all_papers[index_paper][index_id]
-    self.paper_manager.edit_one_paper(paper_id, 5, 5, "Update","y")
+    script_id = all_scripts[index_script][index_id]
+    self.script_manager.edit_one_script(script_id, 5, 5, "Update","y")
 
-    all_papers = self.paper_manager.get_all_papers()
-    self.assertEqual(all_papers[index_paper][index_tags]
+    all_scripts = self.script_manager.get_all_scripts()
+    self.assertEqual(all_scripts[index_script][index_tags]
                       ,"Update")
 
-  def test_get_recommend_papers(self):
-    rec_papers = self.paper_manager.get_recommend_papers()
-    index_paper = 0
+  def test_get_recommend_scripts(self):
+    rec_scripts = self.script_manager.get_recommend_scripts()
+    index_script = 0
     index_name = 0
-    self.assertEqual(rec_papers[index_paper][index_name]
+    self.assertEqual(rec_scripts[index_script][index_name]
                       ,"2.pdf")
 
   def test_get_all_tags(self):
-    tags = self.paper_manager.get_all_tags()
+    tags = self.script_manager.get_all_tags()
     expect_tags = ['Network0', 'Network1', 'Network2']
     self.assertEqual(len(tags),len(expect_tags))
 
-  def test_get_paper_path_by_nums(self):
-    all_papers = self.paper_manager.get_all_papers()
-    index_paper = len(all_papers) - 1
-    index_id = len(all_papers[index_paper]) - 1
-    index_name = all_papers[index_paper][0]
-    paper_path = self.paper_manager.get_paper_path_by_nums(all_papers[index_paper][index_id])
-    expect_path = self.paper_path+"/"+ str(index_name)
-    self.assertEqual(paper_path,expect_path)
+  def test_get_script_path_by_nums(self):
+    all_scripts = self.script_manager.get_all_scripts()
+    index_script = len(all_scripts) - 1
+    index_id = len(all_scripts[index_script]) - 1
+    index_name = all_scripts[index_script][0]
+    script_path = self.script_manager.get_script_path_by_nums(all_scripts[index_script][index_id])
+    expect_path = self.script_path+"/"+ str(index_name)
+    self.assertEqual(script_path,expect_path)
 
   def test_query_by_tags(self):
     search_tag = "Network2"
-    res_paper = self.paper_manager.query_by_tags(search_tag)
-    self.assertEqual(len(res_paper),1)
+    res_script = self.script_manager.query_by_tags(search_tag)
+    self.assertEqual(len(res_script),1)
 
 if __name__=="__main__":
   unittest.main()

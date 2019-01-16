@@ -101,9 +101,6 @@ def get_query(script_file_path):
   # print(res_report)
   # Save the res_report
 
-
-
-
 def main():
   if not os.path.isdir( dataDir ):
     print(dataDir, "isn't a directory")
