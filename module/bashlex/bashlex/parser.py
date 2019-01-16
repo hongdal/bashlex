@@ -671,7 +671,6 @@ def parse(s, strictmode=True, expansionlimit=None, convertpos=False):
     p = _parser(s, strictmode=strictmode, expansionlimit=expansionlimit)
     # Call parse function to deal with those part
     parts = [p.parse()]
-    # print "[INFO1] ",parts
 
     # print "[Parse_PART1]",parts
     # print " "
@@ -690,7 +689,6 @@ def parse(s, strictmode=True, expansionlimit=None, convertpos=False):
     while index < len(s):
         
         part = _parser(s[index:], strictmode=strictmode).parse()
-        # print "[INFO1] ",part
         # print "[Parse_PART2]",parts
         # print " "
         if not isinstance(part, ast.node):
@@ -703,10 +701,8 @@ def parse(s, strictmode=True, expansionlimit=None, convertpos=False):
             if parts[-1].parts[-1].discard and part.kind == 'newline':
                 part.lineno = 0
 
-        # print "[INFO1] ",part
-        # Change the positon in the code
         ast.posshifter(index, line_index).visit(part)
-        # print "[INFO2] ",part
+
         # Append each line's output for bash scripts
         parts.append(part)
         ef = _endfinder()
@@ -761,7 +757,6 @@ class _parser(object):
         # state spills over to the next call to parse on it
         # This is just a shallow copy for yyccparser
         theparser = copy.copy(yaccparser)
-        # print yaccparser
         
         # This is parse yycc
         tree = theparser.parse(lexer=self.tok, context=self)

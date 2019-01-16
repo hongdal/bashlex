@@ -10,13 +10,9 @@ class node(object):
     def __init__(self, **kwargs):
         assert 'kind' in kwargs
         self.__dict__.update(kwargs)
-        # print self.__dict__
-        
 
     # The Last part: Add indent for each part
     def dump(self, indent='  '):
-        # TODO:Very Important
-        print self.__dict__
         return _dump(self, indent)
 
     def __repr__(self):
@@ -24,9 +20,8 @@ class node(object):
         d = dict(self.__dict__)
         kind = d.pop('kind')
         for k, v in sorted(d.items()):
-            chunks.append('%s:%r' % (k, v))
-        print "Test: ", '%sNode: %s' % (kind.title(), ' '.join(chunks))
-        return '%sNode: %s' % (kind.title(), ' '.join(chunks))
+            chunks.append('%s=%r' % (k, v))
+        return '%sNode(%s)' % (kind.title(), ' '.join(chunks))
 
     def __eq__(self, other):
         if not isinstance(other, node):
@@ -89,7 +84,6 @@ class nodevisitor(object):
                 for child in n.parts:
                     self.visit(child)
         elif k == 'command':
-            # print "This is the Command Node"
             self.correct_heredoc_lineno(n)
             dochild = self._visitnode(n, n.parts)
             if dochild is None or dochild:
@@ -181,7 +175,6 @@ class nodevisitor(object):
 # Add indent for each part
 # Tree is a list
 def _dump(tree, indent='  '):
-    # print "[INFO] ", tree.__dict__
     def _format(n, level=0):
         if isinstance(n, node):
             d = dict(n.__dict__)
