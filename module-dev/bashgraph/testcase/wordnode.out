@@ -1,0 +1,6 @@
+CommandNode(lineno=1, pos=(0, 11), parts=[
+  WordNode(lineno=1, pos=(0, 4), word='echo'),
+  WordNode(lineno=1, pos=(5, 11), word='a=$1', parts=[
+    ParameterNode(lineno=1, pos=(8, 10), value='1'),
+  ]),
+])

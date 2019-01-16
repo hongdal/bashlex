@@ -1,0 +1,17 @@
+ListNode(lineno=1, pos=(0, 28), parts=[
+  CommandNode(lineno=1, pos=(0, 7), parts=[
+    WordNode(lineno=1, pos=(0, 2), word='cd'),
+    WordNode(lineno=1, pos=(3, 7), word='/tmp'),
+  ]),
+  OperatorNode(lineno=1, op='||', pos=(8, 10)),
+  CommandNode(lineno=1, pos=(11, 19), parts=[
+    WordNode(lineno=1, pos=(11, 13), word='cd'),
+    WordNode(lineno=1, pos=(14, 19), word='/root'),
+  ]),
+  OperatorNode(lineno=1, op='||', pos=(20, 22)),
+  CommandNode(lineno=1, pos=(23, 27), parts=[
+    WordNode(lineno=1, pos=(23, 25), word='cd'),
+    WordNode(lineno=1, pos=(26, 27), word='/'),
+  ]),
+  OperatorNode(lineno=1, op=';', pos=(27, 28)),
+])

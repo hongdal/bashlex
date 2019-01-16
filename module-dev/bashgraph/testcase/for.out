@@ -1,0 +1,47 @@
+CompoundNode(lineno=5, list=[
+  ForNode(lineno=5, pos=(0, 97), parts=[
+    ReservedwordNode(lineno=1, pos=(0, 3), word='for'),
+    WordNode(lineno=1, pos=(4, 8), word='file'),
+    ReservedwordNode(lineno=1, pos=(9, 11), word='in'),
+    WordNode(lineno=1, pos=(12, 19), word='$(ls /)', parts=[
+      CommandsubstitutionNode(command=
+        CommandNode(lineno=1, pos=(14, 18), parts=[
+          WordNode(lineno=1, pos=(14, 16), word='ls'),
+          WordNode(lineno=1, pos=(17, 18), word='/'),
+        ]), lineno=1, pos=(12, 19)),
+    ]),
+    ReservedwordNode(lineno=1, pos=(19, 20), word=';'),
+    ReservedwordNode(lineno=1, pos=(21, 23), word='do'),
+    CompoundNode(lineno=4, list=[
+      IfNode(lineno=4, pos=(28, 91), parts=[
+        ReservedwordNode(lineno=2, pos=(28, 30), word='if'),
+        ListNode(lineno=2, pos=(31, 49), parts=[
+            CommandNode(lineno=2, pos=(31, 48), parts=[
+              WordNode(lineno=2, pos=(31, 32), word='['),
+              WordNode(lineno=2, pos=(33, 40), word='$number', parts=[
+                ParameterNode(lineno=2, pos=(33, 40), value='number'),
+              ]),
+              WordNode(lineno=2, pos=(41, 44), word='-ne'),
+              WordNode(lineno=2, pos=(45, 46), word='0'),
+              WordNode(lineno=2, pos=(47, 48), word=']'),
+            ]),
+            OperatorNode(lineno=2, op=';', pos=(48, 49)),
+          ]),
+        ReservedwordNode(lineno=2, pos=(50, 54), word='then'),
+        CommandNode(lineno=3, pos=(64, 83), parts=[
+          WordNode(discard=True, lineno=3, pos=(64, 68), word='echo'),
+          WordNode(discard=True, lineno=3, pos=(69, 83), word='$number$file', parts=[
+            ParameterNode(lineno=3, pos=(70, 77), value='number'),
+            ParameterNode(lineno=3, pos=(77, 82), value='file'),
+          ]),
+        ]),
+        ReservedwordNode(lineno=4, pos=(89, 91), word='fi'),
+      ]),
+    ], pos=(28, 91)),
+    ReservedwordNode(lineno=5, pos=(93, 97), word='done'),
+  ]),
+], pos=(0, 97))
+CommandNode(lineno=6, pos=(98, 104), parts=[
+  WordNode(lineno=6, pos=(98, 102), word='exit'),
+  WordNode(lineno=6, pos=(103, 104), word='0'),
+])

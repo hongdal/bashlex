@@ -1,8 +1,6 @@
-for ((number=1; number<10; number++)) 
-{ 
-    if (( $number % 5 == 0 )); then 
-        echo "$number is divisible by 5" 
+for file in $(ls /); do
+    if [ $number -ne 0 ]; then 
+        echo "$number$file" 
     fi 
-    
-} 
+done
 exit 0

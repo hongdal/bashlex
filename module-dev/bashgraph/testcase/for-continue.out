@@ -1,0 +1,90 @@
+CommandNode(lineno=1, pos=(0, 12), parts=[
+  AssignmentNode(lineno=1, pos=(0, 12), word='LIST=$(ls)', parts=[
+    CommandsubstitutionNode(command=
+      CommandNode(lineno=1, pos=(8, 10), parts=[
+        WordNode(lineno=1, pos=(8, 10), word='ls'),
+      ]), lineno=1, pos=(6, 11)),
+  ]),
+])
+CompoundNode(lineno=12, list=[
+  ForNode(lineno=12, pos=(13, 222), parts=[
+    ReservedwordNode(lineno=2, pos=(13, 16), word='for'),
+    WordNode(lineno=2, pos=(17, 21), word='name'),
+    ReservedwordNode(lineno=2, pos=(22, 24), word='in'),
+    WordNode(lineno=2, pos=(25, 32), word='$LIST', parts=[
+      ParameterNode(lineno=2, pos=(26, 31), value='LIST'),
+    ]),
+    ReservedwordNode(lineno=2, pos=(32, 33), word=';'),
+    ReservedwordNode(lineno=2, pos=(34, 36), word='do'),
+    ListNode(lineno=12, pos=(41, 218), parts=[
+        CompoundNode(lineno=5, list=[
+          IfNode(lineno=5, pos=(41, 100), parts=[
+            ReservedwordNode(lineno=3, pos=(41, 43), word='if'),
+            ListNode(lineno=3, pos=(44, 71), parts=[
+                CommandNode(lineno=3, pos=(44, 70), parts=[
+                  WordNode(lineno=3, pos=(44, 45), word='['),
+                  WordNode(lineno=3, pos=(46, 53), word='$name', parts=[
+                    ParameterNode(lineno=3, pos=(47, 52), value='name'),
+                  ]),
+                  WordNode(lineno=3, pos=(54, 56), word='!='),
+                  WordNode(lineno=3, pos=(57, 68), word='some-file'),
+                  WordNode(lineno=3, pos=(69, 70), word=']'),
+                ]),
+                OperatorNode(lineno=3, op=';', pos=(70, 71)),
+              ]),
+            ReservedwordNode(lineno=3, pos=(72, 76), word='then'),
+            CommandNode(lineno=4, pos=(85, 93), parts=[
+              WordNode(lineno=4, pos=(85, 93), word='continue'),
+            ]),
+            ReservedwordNode(lineno=5, pos=(98, 100), word='fi'),
+          ]),
+        ], pos=(41, 100)),
+        OperatorNode(lineno=6, op='\n', pos=(100, 101)),
+        CommandNode(lineno=7, pos=(106, 118), parts=[
+          AssignmentNode(lineno=7, pos=(106, 118), word='ORIG=$name', parts=[
+            ParameterNode(lineno=7, pos=(112, 117), value='name'),
+          ]),
+        ]),
+        OperatorNode(lineno=8, op='\n', pos=(118, 119)),
+        CommandNode(lineno=8, pos=(123, 156), parts=[
+          AssignmentNode(lineno=8, pos=(123, 156), word="NEW=`echo $name | tr 'A-Z' 'a-z'`", parts=[
+            CommandsubstitutionNode(command=
+              PipelineNode(lineno=8, pos=(128, 155), parts=[
+                CommandNode(lineno=8, pos=(128, 138), parts=[
+                  WordNode(lineno=8, pos=(128, 132), word='echo'),
+                  WordNode(lineno=8, pos=(133, 138), word='$name', parts=[
+                    ParameterNode(lineno=8, pos=(133, 138), value='name'),
+                  ]),
+                ]),
+                PipeNode(lineno=8, pipe='|', pos=(139, 140)),
+                CommandNode(lineno=8, pos=(141, 155), parts=[
+                  WordNode(lineno=8, pos=(141, 143), word='tr'),
+                  WordNode(lineno=8, pos=(144, 149), word='A-Z'),
+                  WordNode(lineno=8, pos=(150, 155), word='a-z'),
+                ]),
+              ]), lineno=8, pos=(127, 156)),
+          ]),
+        ]),
+        OperatorNode(lineno=9, op='\n', pos=(156, 157)),
+        CommandNode(lineno=10, pos=(162, 179), parts=[
+          WordNode(lineno=10, pos=(162, 164), word='mv'),
+          WordNode(lineno=10, pos=(165, 172), word='$ORIG', parts=[
+            ParameterNode(lineno=10, pos=(166, 171), value='ORIG'),
+          ]),
+          WordNode(lineno=10, pos=(173, 179), word='$NEW', parts=[
+            ParameterNode(lineno=10, pos=(174, 178), value='NEW'),
+          ]),
+        ]),
+        OperatorNode(lineno=11, op='\n', pos=(179, 180)),
+        CommandNode(lineno=11, pos=(184, 217), parts=[
+          WordNode(lineno=11, pos=(184, 188), word='echo'),
+          WordNode(lineno=11, pos=(189, 217), word='new name for $ORIG is $NEW', parts=[
+            ParameterNode(lineno=11, pos=(203, 208), value='ORIG'),
+            ParameterNode(lineno=11, pos=(212, 216), value='NEW'),
+          ]),
+        ]),
+        OperatorNode(lineno=12, op='\n', pos=(217, 218)),
+      ]),
+    ReservedwordNode(lineno=12, pos=(218, 222), word='done'),
+  ]),
+], pos=(13, 222))

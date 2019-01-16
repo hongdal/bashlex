@@ -1,5 +1,5 @@
-from ast import NodeData, Node, Tree
-from visitor import TreeVisitor
+from bash_ast import NodeData, Node, Tree
+from tree_visitor import TreeVisitor
 import re 
 
 regex = r"([a-zA-Z]+)(Node)"

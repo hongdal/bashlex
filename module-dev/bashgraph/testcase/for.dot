@@ -1,0 +1,11 @@
+digraph {
+8 [label=" ls /"];
+8 -> 17;
+26 [label=" echo $number$file"];
+26 -> 17;
+26 -> 33;
+17 [label=" \[ $number -ne 0 \]"];
+17 -> 17;
+17 -> 26;
+17 -> 33;
+}

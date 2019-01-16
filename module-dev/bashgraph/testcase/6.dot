@@ -1,0 +1,27 @@
+digraph {
+5 [label=" free -m"];
+5 -> 9;
+9 [label=" grep -i mem"];
+9 -> 14;
+14 [label=" awk {if($4 < 100){ printf(\"1\")}}"];
+14 -> 21;
+21 [label=" free -m"];
+21 -> 25;
+25 [label=" grep -i mem"];
+25 -> 30;
+30 [label=" awk {if($7 < 200){ printf(\"1\")}}"];
+30 -> 37;
+37 [label=" \[ $MEM_FREE == 1 \]"];
+37 -> 45;
+45 [label=" \[ $MEM_AVAILABLE == 1 \]"];
+45 -> 53;
+53 [label=" \[ $MEM_AVAILABLE == 2 \]"];
+53 -> 66;
+66 [label=" date +%Y-%m-%d-%T"];
+66 -> 70;
+70 [label=" echo 3 "];
+70 -> 80;
+80 [label=" \[ $? -eq 0 \]"];
+80 -> 89;
+80 -> 93;
+}

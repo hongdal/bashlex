@@ -1,0 +1,14 @@
+CommandNode(lineno=1, pos=(0, 17), parts=[
+  WordNode(lineno=1, pos=(0, 4), word='echo'),
+  WordNode(lineno=1, pos=(5, 17), word='$(ls)$(ls)$1', parts=[
+    CommandsubstitutionNode(command=
+      CommandNode(lineno=1, pos=(7, 9), parts=[
+        WordNode(lineno=1, pos=(7, 9), word='ls'),
+      ]), lineno=1, pos=(5, 10)),
+    CommandsubstitutionNode(command=
+      CommandNode(lineno=1, pos=(12, 14), parts=[
+        WordNode(lineno=1, pos=(12, 14), word='ls'),
+      ]), lineno=1, pos=(10, 15)),
+    ParameterNode(lineno=1, pos=(15, 17), value='1'),
+  ]),
+])
