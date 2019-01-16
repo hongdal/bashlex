@@ -667,7 +667,6 @@ def parse(s, strictmode=True, expansionlimit=None, convertpos=False):
     '''
     # s is the input from the bash scripts
     # _parse is a Class: line--709
-    # 传入了所有的文本
     p = _parser(s, strictmode=strictmode, expansionlimit=expansionlimit)
     # Call parse function to deal with those part
     parts = [p.parse()]
@@ -731,7 +730,6 @@ class _parser(object):
     '''
     # class init function
     def __init__(self, s, strictmode=True, expansionlimit=None, tokenizerargs=None):
-        # 判断 expansionlimit为空值
         # Check if the number expansionlimit is an integer:
         assert expansionlimit is None or isinstance(expansionlimit, int)
 
