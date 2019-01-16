@@ -18,7 +18,7 @@ from functools import partial
 from .appdata import AppData
 
 # TODO: display the repo and its path
-# For example: Clemson - /users/Guoze/20_test --Paper Tracker V1.0
+# For example: Clemson - /users/Guoze/20_test --Script Tracker V1.0
 GEOMETRY = '1060x580+200+50'
 WIDTH=50
 HEIGHT=10
@@ -113,14 +113,14 @@ class SelectRepDialog(Dialog):
 class DisplayDetails(Dialog):
   def body(self, master):
 
-    self.paper_info = self.argv
-    self.paper_id = int(self.paper_info[0])
-    paper_name = "Script Name: "+ str(self.paper_info[1])
-    old_importance = int(self.paper_info[2])
-    old_urgency = int(self.paper_info[3])
-    old_tags = str(self.paper_info[4])
-    old_read = str(self.paper_info[5])
-    # paper_name = self.argv
+    self.script_info = self.argv
+    self.script_id = int(self.script_info[0])
+    script_name = "Script Name: "+ str(self.script_info[1])
+    old_importance = int(self.script_info[2])
+    old_urgency = int(self.script_info[3])
+    old_tags = str(self.script_info[4])
+    old_read = str(self.script_info[5])
+    # script_name = self.argv
     self.malware_report = self.argv2
     # self.scan_report = {}
     # if self.malware_report == []:
@@ -149,7 +149,7 @@ class DisplayDetails(Dialog):
     # self.button_frame= tk.Frame(self.func_frame, width=120)
 
     self.file_info.pack(side="top", fill="both",expand=True)
-    # Label(file_info, text=paper_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
+    # Label(file_info, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
     # Label(file_info, text='Importance(1~5): ').grid(row=1,sticky=E)
     # Label(file_info, text='Urgency(1~5): ').grid(row=2,sticky=E)
     # Label(file_info, text='Tags: ').grid(row=3,sticky=E)
@@ -166,7 +166,7 @@ class DisplayDetails(Dialog):
     # self.entryBox = tk.Entry(self.search1_frame, width=60, font=LARGEFONT)
     # self.entryBox.pack(padx=10, pady=10,anchor="s")
 
-    Label(self.file_info, text=paper_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
+    Label(self.file_info, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
     Label(self.file_info, text='Importance(1~5): ').grid(row=1, column=0, sticky=E)
     Label(self.file_info, text='Urgency(1~5): ').grid(row=1,column=2,sticky=E)
     Label(self.file_info, text='Read(y/n): ').grid(row=1,column=4, sticky=E)
@@ -174,7 +174,7 @@ class DisplayDetails(Dialog):
     Label(self.file_info, text='Detection ratio: ').grid(row=2,column=3, sticky=E)
     Label(self.file_info, text= self.detected_number).grid(row=2, column=4, sticky=E)
 
-    paper_info = self.argv
+    script_info = self.argv
     e1 = Entry(self.file_info)
     e2 = Entry(self.file_info)
     e3 = Entry(self.file_info)
@@ -242,21 +242,21 @@ class DisplayDetails(Dialog):
 
     # self.search_frame.pack(side=LEFT, fill="both")
     # self.button_frame.pack(side=RIGHT, fill ="both")
-    self.update_papers_table(self.table_data)
+    self.update_scripts_table(self.table_data)
     self.file_info.grid(row=0,column=0,rowspan=2,columnspan=2,sticky= "ew")
     self.table_frame.grid(row=2,column=0,columnspan=2,sticky= "nsew")
     master.grid_rowconfigure(1, weight=1)
     master.grid_columnconfigure(1, weight=1)
-    self.update_papers_table(self.table_data)
-    # return self.paper_info
+    self.update_scripts_table(self.table_data)
+    # return self.script_info
 
-    # Label(master, text=paper_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
+    # Label(master, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
     # Label(master, text='Importance(1~5): ').grid(row=1,sticky=E)
     # Label(master, text='Urgency(1~5): ').grid(row=2,sticky=E)
     # Label(master, text='Tags: ').grid(row=3,sticky=E)
     # Label(master, text='Read(y/n): ').grid(row=4,sticky=E)
   
-    # self.paper_info = self.argv
+    # self.script_info = self.argv
     # self.e1 = Entry(master)
     # self.e2 = Entry(master)
     # self.e3 = Entry(master)
@@ -284,7 +284,7 @@ class DisplayDetails(Dialog):
   #     if urgency < 1 or urgency >5:
   #       raise ValueError("OutOfRange")
   #     if self.argv2 == 1:
-  #       self.result = [self.paper_id, importance, urgency, tags, read_state]
+  #       self.result = [self.script_id, importance, urgency, tags, read_state]
   #     else:
   #       self.result = [importance, urgency, tags, read_state]
   #     self.res_nums = len(self.result)
@@ -296,7 +296,7 @@ class DisplayDetails(Dialog):
   #     )
   #     return 0
 
-  def update_papers_table(self, recs):
+  def update_scripts_table(self, recs):
     # print("In Update Table",recs)
     def prettify_one(rec):
       one_row = [str(rec[0]),
@@ -309,7 +309,7 @@ class DisplayDetails(Dialog):
     recs_t = [prettify_one(rec) for rec in recs]
     for _ in map(self.tree.delete, self.tree.get_children("")):
       pass
-    self.paper_nums = len(recs_t)
+    self.script_nums = len(recs_t)
     for i in range(len(recs_t)):
       self.tree.insert("", "end", values=(recs_t[i][0],
                                           recs_t[i][1],
@@ -328,24 +328,24 @@ class DisplayDetails(Dialog):
     return False
 
 
-class EditPaperDialog(Dialog):
+class EditScriptDialog(Dialog):
   def body(self, master):
     if self.argv2 == 1:
-      self.paper_info = self.argv
-      self.paper_id = int(self.paper_info[0])
-      paper_name = "Paper: "+ str(self.paper_info[1])
-      old_importance = int(self.paper_info[2])
-      old_urgency = int(self.paper_info[3])
-      old_tags = str(self.paper_info[4])
-      old_read = str(self.paper_info[5])
+      self.script_info = self.argv
+      self.script_id = int(self.script_info[0])
+      script_name = "Script: "+ str(self.script_info[1])
+      old_importance = int(self.script_info[2])
+      old_urgency = int(self.script_info[3])
+      old_tags = str(self.script_info[4])
+      old_read = str(self.script_info[5])
     else:
-      paper_name = self.argv
-    Label(master, text=paper_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
+      script_name = self.argv
+    Label(master, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
     Label(master, text='Importance(1~5): ').grid(row=1,sticky=E)
     Label(master, text='Urgency(1~5): ').grid(row=2,sticky=E)
     Label(master, text='Tags: ').grid(row=3,sticky=E)
     Label(master, text='Read(y/n): ').grid(row=4,sticky=E)
-    self.paper_info = self.argv
+    self.script_info = self.argv
     self.e1 = Entry(master)
     self.e2 = Entry(master)
     self.e3 = Entry(master)
@@ -373,7 +373,7 @@ class EditPaperDialog(Dialog):
       if urgency < 1 or urgency >5:
         raise ValueError("OutOfRange")
       if self.argv2 == 1:
-        self.result = [self.paper_id, importance, urgency, tags, read_state]
+        self.result = [self.script_id, importance, urgency, tags, read_state]
       else:
         self.result = [importance, urgency, tags, read_state]
       self.res_nums = len(self.result)
@@ -400,8 +400,8 @@ class View(object):
     self.search_mode.set(4)
     self.rep_name = ""
     self.rep_path = ""
-    self.paper_nums = 0
-    self.paper_info = []
+    self.script_nums = 0
+    self.script_info = []
     self.malware_report = {}
     self.path = StringVar()
     self.search_mode = tk.StringVar()
@@ -427,11 +427,11 @@ class View(object):
     menubar.add_cascade(label=menubar_data['file']['title'], menu=filemenu)
     # Create the Edit button in the Menu
     editmenu = Menu(menubar, tearoff=0)
-    editmenu.add_command(label= menubar_data['edit']['editInfo'], command=self.editPaper)
-    # editmenu.add_command(label="Open Paper", command=self.open_paper)
+    editmenu.add_command(label= menubar_data['edit']['editInfo'], command=self.editScript)
+    # editmenu.add_command(label="Open Script", command=self.open_script)
     editmenu.add_command(label="Show Tags",command=self.show_tags)
-    editmenu.add_command(label="Show Scripts Path",command=self.show_paper_path)
-    editmenu.add_command(label="Get Rec Papers",command=self.get_recommend_papers)
+    editmenu.add_command(label="Show Scripts Path",command=self.show_script_path)
+    editmenu.add_command(label="Get Rec Scripts",command=self.get_recommend_scripts)
     editmenu.add_command(label="Show All Command Count",command=self.show_all_command_count)
     editmenu.add_command(label="Show Command Count",command=self.show_command_count)
     editmenu.add_command(label="Open Script Code",command=self.open_source_code)
@@ -488,7 +488,7 @@ class View(object):
     self.display_frame.pack_propagate(0)
 
 
-    # # ***** Table For Paper Information *****
+    # # ***** Table For Script Information *****
     tree_columns=("a", "b", "c", "d", "e","g","h")
     self.table_frame = tk.Frame(self.root, width=600)
     self.tree = ttk.Treeview(self.table_frame,show="headings", height=20,
@@ -535,32 +535,32 @@ class View(object):
     self.root.grid_columnconfigure(1, weight=1)
 
   def open_virustotal_detail(self):
-    if len(self.paper_info) == 0:
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
     else:
-      # print(self.paper_info)
-      names = self.paper_info[1]
-      # print(self.paper_info)
+      # print(self.script_info)
+      names = self.script_info[1]
+      # print(self.script_info)
       # print(names)
       self.malware_report = self.controller.get_malware_report(names)
       # print(self.malware_report)
-      self.controller.get_malware_detail(self.paper_info)
+      self.controller.get_malware_detail(self.script_info)
 
-  def editPaper(self):
-    if len(self.paper_info) == 0:
+  def editScript(self):
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
     else:
-      self.controller.change_paper_info(self.paper_info)
+      self.controller.change_script_info(self.script_info)
 
   def treeviewClick(self,event):
     for item in self.tree.selection():
         item_text = self.tree.item(item,"values")
-        self.paper_info = item_text
+        self.script_info = item_text
 
   def treeviewDubClick(self,event):
     for item in self.tree.selection():
         item_text = self.tree.item(item,"values")
-        self.controller.change_paper_info(item_text)
+        self.controller.change_script_info(item_text)
 
   def treeview_sort_column(self, tv, col, reverse):
     l = [(tv.set(k, col), k) for k in tv.get_children('')]
@@ -587,36 +587,36 @@ class View(object):
         return self.controller.query_by_id(id_num)
 
       if search_mode == 4:
-        res_papers = search_by_id(search_string)
+        res_scripts = search_by_id(search_string)
       elif search_mode == 2:
-        res_papers = search_by_tags(search_string)
+        res_scripts = search_by_tags(search_string)
       elif search_mode == 3:
-        res_papers = search_by_nums(search_string)
+        res_scripts = search_by_nums(search_string)
       else:
-        res_papers = search_by_name(search_string)
+        res_scripts = search_by_name(search_string)
 
-      if res_papers:
-        self.update_papers_table(res_papers)
+      if res_scripts:
+        self.update_scripts_table(res_scripts)
       else:
-        self.show_err("Can't find any papers.")
+        self.show_err("Can't find any scripts.")
     else:
       self.update_data()
 
-  def open_paper(self):
-    paper_num = None
-    if len(self.paper_info) == 0:
+  def open_script(self):
+    script_num = None
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
       return False
     else:
-      paper_num = self.paper_info[0]
-      open_res = self.controller.open_paper_by_num(paper_num)
+      script_num = self.script_info[0]
+      open_res = self.controller.open_script_by_num(script_num)
 
-  def get_recommend_papers(self):
-    rec_papers = self.controller.get_recommend_papers()
-    if rec_papers:
-      self.update_papers_table(rec_papers)
+  def get_recommend_scripts(self):
+    rec_scripts = self.controller.get_recommend_scripts()
+    if rec_scripts:
+      self.update_scripts_table(rec_scripts)
     else:
-      self.show_err("No Paper in this repo.")
+      self.show_err("No Script in this repo.")
 
   # ***** Ask Controller *****
   def new_rep(self):
@@ -660,12 +660,12 @@ class View(object):
         self.show_err("Please close this Repository before your delete it.")
 
   def update_data(self):
-    self.controller.refresh_papers()
-    self.controller.update_papers_table()
+    self.controller.refresh_scripts()
+    self.controller.update_scripts_table()
 
   # ***** For Controller to call *****
-  def ask_paper_info(self,paper_name):
-    resDialog = EditPaperDialog(self.root,'Script Details', paper_name,0)
+  def ask_script_info(self,script_name):
+    resDialog = EditScriptDialog(self.root,'Script Details', script_name,0)
     if resDialog.result is None:
       return False
     else:
@@ -688,29 +688,29 @@ class View(object):
     else:
       return resDialog.result
 
-  # def display_script_detail(self,paper_info):
-  #   paper_info = self.view.display_details(paper_info)
-  #   if paper_info is not False:
-  #     paper_id,paper_im, paper_ug, paper_tags, read = paper_info
-  #     self.paper_manager.edit_one_paper(paper_id,paper_im, paper_ug, paper_tags, read)
-  #     self.update_papers_table()
+  # def display_script_detail(self,script_info):
+  #   script_info = self.view.display_details(script_info)
+  #   if script_info is not False:
+  #     script_id,script_im, script_ug, script_tags, read = script_info
+  #     self.script_manager.edit_one_script(script_id,script_im, script_ug, script_tags, read)
+  #     self.update_scripts_table()
 
-  def display_details(self, paper_info=None):
-    resDialog = DisplayDetails(self.root,'Edit Paper Infomation', paper_info, self.malware_report)
+  def display_details(self, script_info=None):
+    resDialog = DisplayDetails(self.root,'Edit Script Infomation', script_info, self.malware_report)
     if resDialog.result is None:
       return False
     else:
       return resDialog.result
 
 
-  def edit_paper_info(self, paper_info=None):
-    resDialog = EditPaperDialog(self.root,'Edit Paper Infomation', paper_info, 1)
+  def edit_script_info(self, script_info=None):
+    resDialog = EditScriptDialog(self.root,'Edit Script Infomation', script_info, 1)
     if resDialog.result is None:
       return False
     else:
       return resDialog.result
 
-  def update_papers_table(self, recs):
+  def update_scripts_table(self, recs):
     def prettify_one(rec):
       one_row = [str(rec[7]),
                 rec[0],
@@ -724,7 +724,7 @@ class View(object):
     recs_t = [prettify_one(rec) for rec in recs]
     for _ in map(self.tree.delete, self.tree.get_children("")):
       pass
-    self.paper_nums = len(recs_t)
+    self.script_nums = len(recs_t)
     for i in range(len(recs_t)):
       self.tree.insert("", "end", values=(recs_t[i][0],
                                           recs_t[i][1],
@@ -745,29 +745,29 @@ class View(object):
       tags
     )
 
-  def show_paper_path(self):
-    paper_num = None
-    if len(self.paper_info) == 0:
+  def show_script_path(self):
+    script_num = None
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
       return False
     else:
-      paper_num = self.paper_info[0]
-      path = self.controller.get_paper_path_by_nums(paper_num)
-      path = "Paper Path: "+ str(path)
+      script_num = self.script_info[0]
+      path = self.controller.get_script_path_by_nums(script_num)
+      path = "Script Path: "+ str(path)
       tkinter.messagebox.showinfo(
         "Path:",
         path
       )
 
   def show_command_count(self):
-    paper_num = None
-    if len(self.paper_info) == 0:
+    script_num = None
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
       return False
     else:
-      paper_num = self.paper_info[0]
+      script_num = self.script_info[0]
       count_dir = os.path.join(os.getcwd(), "0_data/commandCount/")
-      path = self.controller.get_paper_path_by_nums(paper_num)
+      path = self.controller.get_script_path_by_nums(script_num)
       file_name = os.path.basename(os.path.normpath(path))
       count_file_name = file_name[:-3] + ".count"
       count_file_path = os.path.join(count_dir, count_file_name)
@@ -790,14 +790,14 @@ class View(object):
       )
 
   def show_all_command_count(self):
-    paper_num = None
-    if len(self.paper_info) == 0:
+    script_num = None
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
       return False
     else:
-      paper_num = self.paper_info[0]
+      script_num = self.script_info[0]
       count_dir = os.path.join(os.getcwd(), "0_data/")
-      path = self.controller.get_paper_path_by_nums(paper_num)
+      path = self.controller.get_script_path_by_nums(script_num)
       file_name = os.path.basename(os.path.normpath(path))
       count_file_name = "allcommand" + ".count"
       count_file_path = os.path.join(count_dir, count_file_name)
@@ -820,30 +820,30 @@ class View(object):
       )
 
   def open_source_code(self):
-    paper_num = None
-    if len(self.paper_info) == 0:
+    script_num = None
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
       return False
     else:
-      paper_num = self.paper_info[0]
-      path = self.controller.get_paper_path_by_nums(paper_num)
+      script_num = self.script_info[0]
+      path = self.controller.get_script_path_by_nums(script_num)
       subprocess.call("gedit " + str(path),shell=True)
 
   def open_code_graph(self):
-    paper_num = None
-    if len(self.paper_info) == 0:
+    script_num = None
+    if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
       return False
     else:
-      paper_num = self.paper_info[0]
+      script_num = self.script_info[0]
       pdf_dir = os.path.join(os.getcwd(), "0_data/pdfData/")
-      path = self.controller.get_paper_path_by_nums(paper_num)
+      path = self.controller.get_script_path_by_nums(script_num)
       file_name = os.path.basename(os.path.normpath(path))
       pdffile_name = file_name[:-3] + ".pdf"
       pdf_path = os.path.join(pdf_dir, pdffile_name)
       subprocess.call("evince " + str(pdf_path),shell=True)
       # subprocess.call("gedit " + str(path),shell=True)
-      # path = "Paper Path: "+ str(path)
+      # path = "Script Path: "+ str(path)
       # tkinter.messagebox.showinfo(
       #   "Path:",
       #   path
@@ -859,7 +859,7 @@ class View(object):
   def show_about(self):
     tkinter.messagebox.showinfo(
       "About",
-      "Paper Tracker: Version: V1.0"
+      "Script Tracker: Version: V1.0"
     )
 
   # TODO: Finish this function
@@ -867,7 +867,7 @@ class View(object):
     if err_info is None:
       tkinter.messagebox.showinfo(
         "Error",
-        "Paper Tracker: Version: V1.0"
+        "Script Tracker: Version: V1.0"
       )
     else:
       tkinter.messagebox.showinfo(

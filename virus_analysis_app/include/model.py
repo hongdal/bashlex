@@ -10,15 +10,15 @@ from functools import reduce
 import json
 from six.moves import input
 
-class Manager_Paper(object):
+class Manager_Script(object):
   # TODO(Guoze): Create a function to update the view
   def __init__(self):
     self.code_dir = os.path.split(os.path.realpath(__file__))[0]
-    self.db_path = os.path.join(self.code_dir, "paper_manager.db")
+    self.db_path = os.path.join(self.code_dir, "script_manager.db")
     self.user_config_path = os.path.join(self.code_dir, "user_config.json")
     self.test_path = os.path.dirname(self.code_dir)
     self.test_path = os.path.abspath(self.test_path) + "/"+"0_data/bashData/allscripts"+ "/"
-    self.paper_item_list = ['paper_name', 'importance',
+    self.script_item_list = ['script_name', 'importance',
                             'urgency', 'tags', 'path',
                             'read', 'date', 'id']
     self.user_config = self.get_user_config()
@@ -43,8 +43,8 @@ class Manager_Paper(object):
     test_rep = ['BashScript', self.test_path, "[sh, pdf, mobi, doc]"]
     self.add_repository(test_rep)
     self.cur_rep = Repository(test_rep[0], test_rep[1], test_rep[2])
-    new_papers = self.refresh()
-    for paper in new_papers:
+    new_scripts = self.refresh()
+    for script in new_scripts:
       important_num = random.randint(1,3)
       urgeny_num = random.randint(1,3)
       tags = ["None","None","None","None","None","None"]
@@ -53,7 +53,8 @@ class Manager_Paper(object):
         read_flag = 'y'
       else:
         read_flag = 'n'
-      self.insert_one(paper,important_num, urgeny_num, tag, read_flag)
+      self.insert_one(script,important_num, urgeny_num, tag, read_flag)
+
   # *****Repository Functions*****
   def get_user_config(self):
     if os.path.exists(self.user_config_path):
@@ -80,7 +81,7 @@ class Manager_Paper(object):
       return user_config
     script_report = get_json_info(file_report_path)
     return script_report
-  # Create a New repository and refresh the papers in this repsitory
+  # Create a New repository and refresh the scripts in this repsitory
   def add_repository(self, reps):
     rep_name = reps[0]
     rep_path = reps[1]
@@ -93,7 +94,7 @@ class Manager_Paper(object):
     self.refresh()
     self.repo_save()
 
-  # Chenge the cur_rep and refresh the paper infomation
+  # Chenge the cur_rep and refresh the script infomation
   def select_repository(self,rep_name):
     rep_dict = self.user_config.get("all_repositories", {})
     if rep_name in rep_dict:
@@ -114,33 +115,33 @@ class Manager_Paper(object):
       self.repo_save()
     return True
 
-  # *****Paper Functions*****
+  # *****Script Functions*****
   def refresh(self):
-    self.cur_paper_names = {}
-    self.traverse_papers(self.cur_rep.path)
-    # print papers_name_now
-    old_papers = self.cursor.execute("SELECT * FROM  {}".format(self.cur_rep.name)).fetchall()
-    for old_paper in old_papers:
-      old_name = old_paper[self.paper_item_list.index('paper_name')]
-      old_path = old_paper[self.paper_item_list.index('path')]
-      # delete the paper info that was already been deleted in os
-      if old_name not in self.cur_paper_names.keys():
-        self.del_paper_by_names([old_name])
-      # if the paper was moved, update the paper path info
-      elif old_path != self.cur_paper_names[old_name]:
-        self.cursor.execute("UPDATE {} SET path = ? WHERE paper_name = ?".format(self.cur_rep.name)
-                              , (self.cur_paper_names[old_name], old_name))
-    old_paper_names = self.cursor.execute("SELECT paper_name FROM  {}".format(self.cur_rep.name)).fetchall()
-    old_paper_names = [rec[0] for rec in old_paper_names]
-    new_papers = []
-    for now_paper in self.cur_paper_names.keys():
-      # find a new paper, put in infos
-      if now_paper not in old_paper_names:
-        new_papers.append(now_paper)
-    return new_papers
+    self.cur_script_names = {}
+    self.traverse_scripts(self.cur_rep.path)
+    # print scripts_name_now
+    old_scripts = self.cursor.execute("SELECT * FROM  {}".format(self.cur_rep.name)).fetchall()
+    for old_script in old_scripts:
+      old_name = old_script[self.script_item_list.index('script_name')]
+      old_path = old_script[self.script_item_list.index('path')]
+      # delete the script info that was already been deleted in os
+      if old_name not in self.cur_script_names.keys():
+        self.del_script_by_names([old_name])
+      # if the script was moved, update the script path info
+      elif old_path != self.cur_script_names[old_name]:
+        self.cursor.execute("UPDATE {} SET path = ? WHERE script_name = ?".format(self.cur_rep.name)
+                              , (self.cur_script_names[old_name], old_name))
+    old_script_names = self.cursor.execute("SELECT script_name FROM  {}".format(self.cur_rep.name)).fetchall()
+    old_script_names = [rec[0] for rec in old_script_names]
+    new_scripts = []
+    for now_script in self.cur_script_names.keys():
+      # find a new script, put in infos
+      if now_script not in old_script_names:
+        new_scripts.append(now_script)
+    return new_scripts
 
-  def traverse_papers(self, fa_path):
-    # pre-ordered depth-first search for every paper ends with 'supported suffix
+  def traverse_scripts(self, fa_path):
+    # pre-ordered depth-first search for every script ends with 'supported suffix
     try:
       paths = os.listdir(fa_path)
     except FileNotFoundError:
@@ -148,39 +149,39 @@ class Manager_Paper(object):
       return False
     for path in paths:
       if os.path.isdir(os.path.join(fa_path, path)):
-        self.traverse_papers(os.path.join(fa_path, path))
+        self.traverse_scripts(os.path.join(fa_path, path))
       else:
         for one_suffix in self.cur_rep.support_suffix:
           if path.endswith(one_suffix):
-            self.cur_paper_names[path] = os.path.join(fa_path, path)
+            self.cur_script_names[path] = os.path.join(fa_path, path)
     return True
 
-  # Get all papers information form the database by this repo.
-  def get_all_papers(self):
+  # Get all scripts information form the database by this repo.
+  def get_all_scripts(self):
     recs = self.cursor.execute("SELECT * FROM {} ".format(self.cur_rep.name)).fetchall()
     return recs
 
-  # Insert one paper information in the database
-  def insert_one_paper(self, new_paper, id_num, paper_im, paper_ug, paper_tags, read):
-    self.insert_one(new_paper, id_num, paper_im,paper_ug, paper_tags, read)
+  # Insert one script information in the database
+  def insert_one_script(self, new_script, id_num, script_im, script_ug, script_tags, read):
+    self.insert_one(new_script, id_num, script_im,script_ug, script_tags, read)
 
-  def edit_one_paper(self, id_num, paper_im, paper_ug, paper_tags, read):
-    papers = self.query_by_id(id_num)
-    if len(papers) > 0:
-      self.update_one(papers[0][0], paper_im, paper_ug, paper_tags, read)
+  def edit_one_script(self, id_num, script_im, script_ug, script_tags, read):
+    scripts = self.query_by_id(id_num)
+    if len(scripts) > 0:
+      self.update_one(scripts[0][0], script_im, script_ug, script_tags, read)
       return True
     else:
       return False
 
-  def get_recommend_papers(self):
-    # select papers i can read for the sake of importance and urgency
-    rec_papers = self.cursor.execute(
+  def get_recommend_scripts(self):
+    # select scripts i can read for the sake of importance and urgency
+    rec_scripts = self.cursor.execute(
       "SELECT * FROM {} WHERE importance!='' AND urgency!='' AND read='n' ORDER BY urgency DESC , importance DESC LIMIT 5 ".format(
       self.cur_rep.name)).fetchall()
-    if len(rec_papers) > 0:
-      return rec_papers
+    if len(rec_scripts) > 0:
+      return rec_scripts
 
-  # get all tags of my papers
+  # get all tags of my scripts
   def get_all_tags(self):
     tags = self.cursor.execute("SELECT tags FROM {}".format(self.cur_rep.name)).fetchall()
     tags = [tag[0] for tag in tags]
@@ -194,7 +195,7 @@ class Manager_Paper(object):
       tag_s.append(tag)
     return tag_s
 
-  def get_paper_path_by_nums(self, num_s):
+  def get_script_path_by_nums(self, num_s):
     results = self.query_path_by_nums( str(num_s) )
     if len(results) > 0:
       for res in results:
@@ -202,16 +203,16 @@ class Manager_Paper(object):
     else:
       return False
 
-  def open_paper_by_num(self, num_s):
+  def open_script_by_num(self, num_s):
     results = self.query_path_by_nums(num_s)
     if len(results) == 0:
-      print("Find nothing. Open paper failed!")
+      print("Find nothing. Open script failed!")
       return False
     elif len(results) > 1:
       print("Too much nums, please input one id num !")
       return False
     else:
-      # open paper by system default software, only support linux platform now
+      # open script by system default software, only support linux platform now
       if sys.platform.startswith('linux'):
         file_path = '/'.join(results[0])
         os.system("xdg-open {} > log.txt 2>&1 &".format(file_path))
@@ -220,7 +221,7 @@ class Manager_Paper(object):
         print("Error:open file only support linux platform now !")
         return False
 
-  # search papers by tags
+  # search scripts by tags
   def query_by_tags(self, tags_s):
     sets = []
     tags = tags_s.strip().split(' ')
@@ -250,7 +251,7 @@ class Manager_Paper(object):
     if len(names) > 0:
       for name in names:
         recs = self.cursor.execute(
-          "select * from {} where paper_name like '%{}%'".format(self.cur_rep.name, name)).fetchall()
+          "select * from {} where script_name like '%{}%'".format(self.cur_rep.name, name)).fetchall()
         if len(recs) > 0:
           res_set = set()
           for rec in recs:
@@ -278,7 +279,7 @@ class Manager_Paper(object):
             results.append(rec[4])
     return results
 
-  # search papers by id nums
+  # search scripts by id nums
   def query_by_nums(self, num_s):
     results = []
     nums = num_s.strip().split(' ')
@@ -294,41 +295,41 @@ class Manager_Paper(object):
       return False
 
   def query_by_id(self, id_num):
-    papers = self.cursor.execute("SELECT * FROM {} WHERE id=?".format(self.cur_rep.name), (id_num,)).fetchall()
-    if len(papers) == 1:
-      return papers
+    scripts = self.cursor.execute("SELECT * FROM {} WHERE id=?".format(self.cur_rep.name), (id_num,)).fetchall()
+    if len(scripts) == 1:
+      return scripts
     else:
       return False
 
-  # *****Paper Database(SQLite3) Functions*****
+  # *****Script Database(SQLite3) Functions*****
   # create the table if not exist, table name is same as repository name
   def create_a_new_table_for_repository(self, rep_name):
     sql_create = 'create table if not exists {}' \
-                ' ( paper_name varchar(100) , ' \
+                ' ( script_name varchar(100) , ' \
                 'importance integer, urgency integer, ' \
                 'tags varchar(100), path varchar(100), ' \
                 'read varchar(10), date TEXT, ' \
                 'id integer primary key autoincrement)'.format(rep_name)
     self.cursor.execute(sql_create)
 
-  def del_paper_by_names(self, names):
+  def del_script_by_names(self, names):
     for name in names:
-        self.cursor.execute("DELETE FROM {} WHERE paper_name = ?".format(self.cur_rep.name), (name,))
+        self.cursor.execute("DELETE FROM {} WHERE script_name = ?".format(self.cur_rep.name), (name,))
     self.conn.commit()
 
-  def insert_one(self, paper_name, paper_im, paper_ug, paper_tags, read):
-    self.cursor.execute("INSERT INTO {} (paper_name, importance, urgency, tags, path, read, date) "
-                        "VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.cur_rep.name), (paper_name, paper_im,
-                                                                                    paper_ug, paper_tags,
-                                                                                    self.cur_paper_names[paper_name],
+  def insert_one(self, script_name, script_im, script_ug, script_tags, read):
+    self.cursor.execute("INSERT INTO {} (script_name, importance, urgency, tags, path, read, date) "
+                        "VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.cur_rep.name), (script_name, script_im,
+                                                                                    script_ug, script_tags,
+                                                                                    self.cur_script_names[script_name],
                                                                                     read, str(date.today())))
     self.conn.commit()
 
-  def update_one(self, paper_name, paper_im, paper_ug, paper_tags, read):
+  def update_one(self, script_name, script_im, script_ug, script_tags, read):
     self.cursor.execute("UPDATE {} SET importance=?, urgency=?, "
-                        "tags=?, path=?, read=?, date=? WHERE paper_name=?".format(self.cur_rep.name),
-                        (paper_im, paper_ug, paper_tags, self.cur_paper_names[paper_name],
-                          read, str(date.today()), paper_name))
+                        "tags=?, path=?, read=?, date=? WHERE script_name=?".format(self.cur_rep.name),
+                        (script_im, script_ug, script_tags, self.cur_script_names[script_name],
+                          read, str(date.today()), script_name))
     self.conn.commit()
 
   def repo_save(self):
@@ -339,7 +340,7 @@ class Manager_Paper(object):
     self.user_config = self.get_user_config()
     self.rep_dict = self.user_config.get("all_repositories", {})
 
-  def quit_paper_manager(self):
+  def quit_script_manager(self):
     # save user data
     with open(self.user_config_path, 'w') as f:
       json.dump(self.user_config, f)
