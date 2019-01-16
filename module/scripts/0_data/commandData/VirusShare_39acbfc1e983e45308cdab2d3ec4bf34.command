@@ -1,4 +1,0 @@
-chmod
-mv
-echo
-echo

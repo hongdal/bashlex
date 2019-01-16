@@ -1,7 +1,0 @@
-      4 rm
-      4 nohup
-      4 chmod
-      2 wget
-      2 echo
-      2 curl
-      1 mkdir

@@ -1,8 +1,0 @@
-     90 cd
-     18 tftp
-     18 chmod
-     18 cat
-     18 badbox
-      1 ulimit
-      1 rm
-      1 cp
