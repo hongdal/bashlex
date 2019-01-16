@@ -31,7 +31,7 @@ class NodeData(object):
         kind        :   which kind of node, node name. 
         label       :   the string label of the node. 
         level       :   at which nested level. 
-        tails       :   a list of the last commands of this node if its a compound 
+        tails       :   a set of the last commands of this node if its a compound 
                         node (e.g., IfNode, WhileNode). If it's a CommandNode, 
                         this points to itself. When you add a new tail to this node, 
                         if it's from another compound node, then a list of CommandNode
@@ -40,18 +40,21 @@ class NodeData(object):
                         Commands on the left and right of '&&' ('||')
                         should be included in the tails. 
 
-        precursors  :   a list of precursors of this node. When you add a new 
-                        precursor to this node, if it's a compound node, then 
+        precursors  :   a set of precursors of this node. When you add a new 
+                        precursors to this node, if it's a compound node, then 
                         a list of CommandNode will be merged (remove duplications)
                         to this list. 
                         A special case is '&&' and '||'.
                         Commands on the left and right of '&&' ('||')
                         should be included in the precursor.
 
-        simult      :   used to collect the CommandNode right before '&&' and '||'. 
-                        If a compoundNode is right before '&&' ('||'), then the 
-                        simult of all the commands in its tails is merged into 
-                        the simult of current CommandNode. 
+        continues   :   a set of the "continue" commands inside a For node or While node.
+                        If a node is a ForNode or WhileNode, it will not report to its 
+                        parent any information about continue. 
+                        If a node is a normal command node, it will ask its children and 
+                        report to its parent any information about continue. 
+                        If a node is a basic command node, it will be checked whether it's
+                        a "continue" command. 
 
 
         Let me explain how to add tails and precursors. 
@@ -104,16 +107,15 @@ class NodeData(object):
             from it to the leaves. 
 
 
-
-
     '''
 
     def __init__(self, level, kind, label):
         self.kind = kind
         self.label = label
         self.level = level
-        self.tails = []
-        self.precursors = []
+        self.tails = set([])
+        self.precursors = set([])
+        self.continues = set([])
         self.pre = None
 
 
@@ -498,8 +500,6 @@ def read_file(fname):
 class TreeVisitor:
     def __init__(self, tree):
         self.tree = tree
-        self.if_stack = []
-        self.while_stack = []
         self.current_path_to_root = []
         self.level = -1
         self.basic_commands = []
@@ -519,6 +519,408 @@ class TreeVisitor:
                 return True 
         return False
 
+    '''
+        node    : the "Root" node
+    '''
+    def visit_root_node(self, node):
+        is_first_command = True 
+        last_command_child = None 
+        node.data.precursors = set([])
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        for i in range(len(node.children)):
+            if node.children[i].data.kind != "ReservedwordNode" and \
+                node.children[i].data.kind != "ParameterNode" and \
+                node.children[i].data.kind != "OperatorNode" and \
+                node.children[i].data.kind != "RedirectNode" and \
+                node.children[i].data.kind != "PipeNode": 
+                # If it's WordNode or AssignmentNode, may skip
+                if node.children[i].data.kind == "WordNode" or \
+                    node.children[i].data.kind == "AssignmentNode":
+                    # skip if it's not expandable. 
+                    if not self.is_expandable(node.children[i]):
+                        continue
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 4) compute the tails of the node itself 
+                node.data.tails = last_command_child.data.tails
+                # 5) compute the continues of the node itself
+                node.data.continues = node.data.continues.union(last_command_child.data.continues)
+        if last_command_child == None:
+            print("Node:%s does not have command children\n" % node.data.kind)
+            exit(1)
+
+
+    def visit_command_node(self, node):
+        is_first_command = True
+        last_command_child = None
+        # If it's a basic command 
+        if self.is_basic_command(node):
+            # check whether it's "continue"
+            if -1 != node.children[0].data.label.find("continue"):
+                # 4) compute the continues of the node itself
+                node.data.continues.add(node)
+                # 5) compute the tails of the node itself, set it to empty.
+                node.data.tails = set([])
+                return
+        # Otherwise it's not a basic command, let's expand it. 
+        for i in range(len(node.children)):
+            # It's a command node
+            if node.children[i].data.kind != "ReservedwordNode" and \
+                node.children[i].data.kind != "ParameterNode" and \
+                node.children[i].data.kind != "OperatorNode" and \
+                node.children[i].data.kind != "RedirectNode" and \
+                node.children[i].data.kind != "PipeNode": 
+                # If it's WordNode or AssignmentNode, may continue. 
+                if node.children[i].data.kind == "WordNode" or \
+                    node.children[i].data.kind == "AssignmentNode":
+                    if not self.is_expandable(node.children[i]):
+                        continue
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                    node.children[i].data.pre = last_command_child
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 5) compute the continues of the node itself
+                # It's impossible for a CommandNode has a child that contains "continue"
+                # node.data.continues = node.data.continues.union(last_command_child.data.continues)
+
+        # 4) compute the tails of the node itself 
+        if last_command_child == None:
+            # If all its children are not expandable then use its own as its tail. 
+            node.data.tails.add(node)
+        else:
+            node.data.tails = last_command_child.data.tails
+
+    def visit_list_compound_node(self, node):
+        is_first_command = True
+        last_command_child = None
+        for i in range(len(node.children)):
+            # It's a command node
+            if node.children[i].data.kind != "ReservedwordNode" and \
+                node.children[i].data.kind != "ParameterNode" and \
+                node.children[i].data.kind != "OperatorNode" and \
+                node.children[i].data.kind != "RedirectNode" and \
+                node.children[i].data.kind != "PipeNode": 
+                # If it's WordNode or AssignmentNode, may continue. 
+                if node.children[i].data.kind == "WordNode" or \
+                    node.children[i].data.kind == "AssignmentNode":
+                    if not self.is_expandable(node.children[i]):
+                        continue
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                    node.children[i].data.pre = last_command_child
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 4) compute the tails of the node itself 
+                node.data.tails = last_command_child.data.tails
+                # 5) compute the continues of the node itself
+                node.data.continues = node.data.continues.union(last_command_child.data.continues)
+        if last_command_child == None:
+            print("Node:%s does not have command children\n" % node.kind)
+            exit(1)
+        
+
+    def visit_word_assignment_node(self, node):
+        is_first_command = True
+        last_command_child = None
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        for i in range(len(node.children)):
+            # Only when it's substitution, expand it. 
+            if node.children[i].data.kind == "CommandsubstitutionNode":
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                    node.children[i].data.pre = last_command_child
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 4) compute the tails of the node itself 
+                node.data.tails = last_command_child.data.tails
+                # 5) compute the continues of the node itself
+                node.data.continues = node.data.continues.union(last_command_child.data.continues)
+
+    '''
+        if condition; then 
+            command
+        elif condition; then
+            command
+        else
+            command
+        fi
+    '''
+    def visit_if_node(self, node):
+        # Seperate conditions and bodies
+        conditions = []
+        bodies = [] 
+        for i in range(len(node.children)):
+            if node.children[i].data.kind == "ReservedwordNode":
+                if (node.children[i].data.label == "if" or node.children[i].data.label == "elif"):
+                    conditions.append(node.children[i+1])
+                if (node.children[i].data.label == "then" or node.children[i].data.label == "else"):
+                    bodies.append(node.children[i+1])
+        if len(conditions) != len(bodies)-1 and len(conditions) != len(bodies):
+            print("If-else condition and body mismatch\n")
+            exit(1)
+
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        for i in range(len(conditions)):
+            # 1) compute the precursors of all the conditions
+            if 0 == i:
+                conditions[i].data.precursors = node.data.precursors
+            else:
+                conditions[i].data.precursors = conditions[i-1].data.tails
+            # 2) compute tails of all conditions
+            # 3) compute the continues of all conditions
+            self.recursive_visit(conditions[i])
+
+        for i in range(len(conditions)):
+            # 1) compute the precursors of all bodies
+            bodies[i].data.precursors = conditions[i].data.tails 
+            # 2) compute tails of all bodies
+            # 3) compute the continues of all bodies
+            self.recursive_visit(bodies[i])
+            # 5) compute the continues of the node itself
+            node.data.continues = node.data.continues.union(bodies[i].data.continues)
+
+        # One more body, caused by "else"
+        if len(bodies) > len(conditions):
+            # 1) compute the precursors of last body 
+            bodies[-1].data.precursors = conditions[-1].data.tails
+            # 2) compute tails of all last body
+            # 3) compute the continues of last body
+            self.recursive_visit(bodies[-1])
+            # 5) compute the continues of the node itself
+            node.data.continues = node.data.continues.union(bodies[-1].data.continues)
+
+        # 4) compute the tails of the IfNode, 
+        # using all bodies and the last condition. 
+        for i in range(len(bodies)):
+            node.data.tails = node.data.tails.union(bodies[i].data.tails)
+        node.data.tails = node.data.tails.union(conditions[-1].data.tails)
+
+
+    def visit_commandsubstitution_node(self, node):
+        is_first_command = True
+        last_command_child = None
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        for i in range(len(node.children)):
+            # It's a command node
+            if node.children[i].data.kind != "ReservedwordNode" and \
+                node.children[i].data.kind != "ParameterNode" and \
+                node.children[i].data.kind != "OperatorNode" and \
+                node.children[i].data.kind != "RedirectNode" and \
+                node.children[i].data.kind != "PipeNode": 
+                # If it's WordNode or AssignmentNode, may continue. 
+                if node.children[i].data.kind == "WordNode" or \
+                    node.children[i].data.kind == "AssignmentNode":
+                    if not self.is_expandable(node.children[i]):
+                        continue
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                    node.children[i].data.pre = last_command_child
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 4) compute the tails of the node itself 
+                node.data.tails = last_command_child.data.tails
+                # 5) compute the continues of the node itself
+                node.data.continues = node.data.continues.union(last_command_child.data.continues)
+                    
+        if last_command_child == None:
+            print("Node:%s does not have command children\n" % kind)
+            exit(1)
+
+    def visit_pipeline_node(self, node):
+        is_first_command = True
+        last_command_child = None
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        for i in range(len(node.children)):
+            # It's a command node
+            if node.children[i].data.kind != "ReservedwordNode" and \
+                node.children[i].data.kind != "ParameterNode" and \
+                node.children[i].data.kind != "OperatorNode" and \
+                node.children[i].data.kind != "RedirectNode" and \
+                node.children[i].data.kind != "PipeNode": 
+                # If it's WordNode or AssignmentNode, may continue. 
+                if node.children[i].data.kind == "WordNode" or \
+                    node.children[i].data.kind == "AssignmentNode":
+                    if not self.is_expandable(node.children[i]):
+                        continue
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                    node.children[i].data.pre = last_command_child
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 4) compute the tails of the node itself 
+                node.data.tails = last_command_child.data.tails
+                # 5) compute the continues of the node itself
+                node.data.continues = node.data.continues.union(last_command_child.data.continues)
+
+        if last_command_child == None:
+            print("Node:%s does not have command children\n" % node.kind)
+            exit(1)
+
+    '''
+        For word in word; do 
+            command
+        done
+    '''
+    def visit_for_node(self, node):
+        is_first_command = True
+        last_command_child = None
+        first_body = None
+        continues_from_children = set([])
+        node.data.continues = set([])
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        for i in range(len(node.children)):
+            # It's a command node
+            if node.children[i].data.kind != "ReservedwordNode" and \
+                node.children[i].data.kind != "ParameterNode" and \
+                node.children[i].data.kind != "OperatorNode" and \
+                node.children[i].data.kind != "RedirectNode" and \
+                node.children[i].data.kind != "PipeNode": 
+                # If it's WordNode or AssignmentNode, may continue. 
+                if node.children[i].data.kind == "WordNode" or \
+                    node.children[i].data.kind == "AssignmentNode":
+                    if not self.is_expandable(node.children[i]):
+                        continue
+                # 1) compute the precursors of all the children 
+                if True == is_first_command:
+                    is_first_command = False
+                    node.children[i].data.precursors = node.data.precursors
+                else:
+                    node.children[i].data.precursors = last_command_child.data.tails
+                    node.children[i].data.pre = last_command_child
+                # 2) compute tails of all the children
+                # 3) compute the continues of all the children 
+                self.recursive_visit(node.children[i])
+                last_command_child = node.children[i]
+                # 5) compute the continues of the node itself
+                continues_from_children = continues_from_children.union(last_command_child.data.continues)
+            # set the first command of the body
+            if node.children[i].data.kind == "ReservedwordNode" and \
+                node.children[i].data.label == "do":
+                first_body = node.children[i+1]
+
+        # update precursors for the first command of the body, 
+        # 1) adding tails of the body as the precursors of the first command of the body 
+        # 2) adding continues of its children as the precursors of the first command of the body
+        # And update all its children
+        first_body.data.precursors = first_body.data.precursors.union(last_command_child.data.tails)
+        first_body.data.precursors = first_body.data.precursors.union(continues_from_children)
+        self.recursive_visit(first_body)
+
+        # 4) compute the tails of the node itself 
+        if last_command_child == None:
+            print("Node:%s does not have command children\n" % node.kind)
+            exit(1)
+        else:
+            node.data.tails = last_command_child.data.tails.union(continues_from_children)
+
+
+    '''
+        while command; do 
+            command 
+        done
+    '''
+    def visit_while_node(self, node):
+        # Match the while node pattern
+        # while + condition + do + body + done
+        if len(node.children) != 5:
+            print("Bad WhileNode: lenght=%d\n" % len(node.children))
+            exit(1)
+        elif node.children[0].data.kind != "ReservedwordNode" or \
+                node.children[2].data.kind != "ReservedwordNode":
+            print("Bad WhileNode: lenght=%d\n" % len(node.children))
+            exit(1)
+        # 1) compute the precursors of all the children 
+        # 2) compute tails of all the children
+        # 3) compute the continues of all the children 
+        # 4) compute the tails of the node itself 
+        # 5) compute the continues of the node itself
+        # match the while node condition and body. 
+        condition_command_child = node.children[1]
+        body_command_child = node.children[3]
+        # 1) compute the precursors of the condition
+        condition_command_child.data.precursors = node.data.precursors 
+        # 2) compute tails of all the condition
+        self.recursive_visit(condition_command_child)
+        # 1) compute the precursors of the body
+        body_command_child.data.precursors = condition_command_child.data.tails
+        # 2) compute tails of all the body
+        self.recursive_visit(body_command_child)
+        # update precursors for condition, 
+        # 1) adding tails of body to the condition
+        # 2) adding continues in the body to the condition
+        condition_command_child.data.precursors = condition_command_child.data.precursors.union(body_command_child.data.tails)
+        condition_command_child.data.precursors = condition_command_child.data.precursors.union(body_command_child.data.continues)
+        # update all children of condition nodes. 
+        # Update precursors of all the children in the condition. 
+        self.recursive_visit(condition_command_child)
+
+        # 4) compute the tails of the node itself 
+        node.data.tails = condition_command_child.data.tails
+        # 5) compute the continues of the node itself
+        node.data.continues = set([])
 
     """
         Set tails of node and 
@@ -532,375 +934,26 @@ class TreeVisitor:
             node.data.tails = None
             return
         if "Root" == kind:
-            # set precursors of each command children
-            # make tails for each command children
-            is_first_command = True
-            last_command_child = None
-            node.data.precursors = []
-            for i in range(len(node.children)):
-                if node.children[i].data.kind != "ReservedwordNode" and \
-                    node.children[i].data.kind != "ParameterNode" and \
-                    node.children[i].data.kind != "OperatorNode" and \
-                    node.children[i].data.kind != "RedirectNode" and \
-                    node.children[i].data.kind != "PipeNode": 
-                    # If it's WordNode or AssignmentNode, may continue. 
-                    if node.children[i].data.kind == "WordNode" or \
-                       node.children[i].data.kind == "AssignmentNode":
-                        if not self.is_expandable(node.children[i]):
-                            continue
-                    # first command node
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    # other command node
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-
-            # --- make tails for the node itself 
-            if last_command_child == None:
-                print("Node:%s does not have command children\n" % kind)
-                exit(1)
-            else:
-                node.data.tails = last_command_child.data.tails
+            self.visit_root_node(node)
         #
         #   Todo: handle "||" and "&&" operation
         #
         elif "ListNode" == kind or "CompoundNode" == kind:
-            # set precursors of each command children
-            # make tails for each command children
-            is_first_command = True
-            last_command_child = None
-            for i in range(len(node.children)):
-                # It's a command node
-                if node.children[i].data.kind != "ReservedwordNode" and \
-                    node.children[i].data.kind != "ParameterNode" and \
-                    node.children[i].data.kind != "OperatorNode" and \
-                    node.children[i].data.kind != "RedirectNode" and \
-                    node.children[i].data.kind != "PipeNode": 
-                    # If it's WordNode or AssignmentNode, may continue. 
-                    if node.children[i].data.kind == "WordNode" or \
-                       node.children[i].data.kind == "AssignmentNode":
-                        if not self.is_expandable(node.children[i]):
-                            continue
-                    # first command node
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    # other command node
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-
-            # --- make tails for the node itself 
-            if last_command_child == None:
-                print("Node:%s does not have command children\n" % kind)
-                exit(1)
-            else:
-                node.data.tails = last_command_child.data.tails
-
+            self.visit_list_compound_node(node)
         elif "WordNode" == kind or "AssignmentNode" == kind:
-            is_first_command = True
-            last_command_child = None
-            for i in range(len(node.children)):
-                # Only when it's substitution, expand it. 
-                if node.children[i].data.kind == "CommandsubstitutionNode":
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-            # its a leaf, set a safe guard
-            if None == last_command_child:
-                node.data.tails = None
-            else:
-                node.data.tails = last_command_child.data.tails
-
+            self.visit_word_assignment_node(node)
         elif "IfNode" == kind:
-            '''
-                if condition; then 
-                    command
-                elif condition; then
-                    command
-                else
-                    command
-                fi
-            '''
-            conditions = []
-            bodies = [] 
-            for i in range(len(node.children)):
-                if node.children[i].data.kind == "ReservedwordNode":
-                    if (node.children[i].data.label == "if" or node.children[i].data.label == "elif"):
-                        conditions.append(node.children[i+1])
-                    if (node.children[i].data.label == "then" or node.children[i].data.label == "else"):
-                        bodies.append(node.children[i+1])
-            if len(conditions) != len(bodies)-1 and len(conditions) != len(bodies):
-                print("If-else condition and body mismatch\n")
-                exit(1)
-
-            # set precursors for all conditions and 
-            # make tails for all conditions
-            for i in range(len(conditions)):
-                if 0 == i:
-                    conditions[i].data.precursors = node.data.precursors
-                else:
-                    conditions[i].data.precursors = conditions[i-1].data.tails
-                self.current_path_to_root.append(conditions[i])
-                self.recursive_visit(conditions[i])
-                self.current_path_to_root.pop()
-
-            # set precursors for all bodies and 
-            # make tails for all bodies 
-            # Use "conditions" as the iterater. Address the last body seperately
-            for i in range(len(conditions)):
-                bodies[i].data.precursors = conditions[i].data.tails 
-                self.current_path_to_root.append(bodies[i])
-                self.recursive_visit(bodies[i])
-                self.current_path_to_root.pop()
-            # One more body, caused by "else"
-            if len(bodies) > len(conditions):
-                bodies[-1].data.precursors = conditions[-1].data.tails
-                self.current_path_to_root.append(bodies[-1])
-                self.recursive_visit(bodies[-1])
-                self.current_path_to_root.pop()
-            # make tails for the IfNode
-            # all bodies and the last condition. 
-            for i in range(len(bodies)):
-                node.data.tails += bodies[i].data.tails
-            node.data.tails += conditions[-1].data.tails
-
+            self.visit_if_node(node)
         elif "WhileNode" == kind:
-            '''
-                while command; do 
-                    command 
-                done
-            '''
-            # Match the while node pattern
-            # while + condition + do + body + done
-            if len(node.children) != 5:
-                print("Bad WhileNode: lenght=%d\n" % len(node.children))
-                exit(1)
-            elif node.children[0].data.kind != "ReservedwordNode" or \
-                 node.children[2].data.kind != "ReservedwordNode":
-                print("Bad WhileNode: lenght=%d\n" % len(node.children))
-                exit(1)
-            # match the while node condition and body. 
-            condition_command_child = node.children[1]
-            body_command_child = node.children[3]
-            # set precursors for condition. 
-            condition_command_child.data.precursors = node.data.precursors 
-            # make tails for condition_command_child
-            self.current_path_to_root.append(condition_command_child)
-            self.recursive_visit(condition_command_child)
-            self.current_path_to_root.pop()
-            # set precursors for body
-            body_command_child.data.precursors = condition_command_child.data.tails
-            # make tails for body
-            self.current_path_to_root.append(body_command_child)
-            self.recursive_visit(body_command_child)
-            self.current_path_to_root.pop()
-            # update precursors for condition, adding tails of body to the condition
-            condition_command_child.data.precursors += body_command_child.data.tails
-            # update all children of condition nodes. 
-            # Update precursors. Though tails are recomputed, this does not matter.
-            self.current_path_to_root.append(condition_command_child)
-            self.recursive_visit(condition_command_child)
-            self.current_path_to_root.pop()
-
-            # make tails for the WhileNode itself. 
-            node.data.tails = condition_command_child.data.tails
-
+            self.visit_while_node(node)
         elif "ForNode" == kind:
-            '''
-                For word in word; do 
-                    command
-                done
-            '''
-            # set precursors of each command children
-            # make tails for each command children
-            is_first_command = True
-            last_command_child = None
-            first_body = None
-            for i in range(len(node.children)):
-                # It's a command node
-                if node.children[i].data.kind != "ReservedwordNode" and \
-                    node.children[i].data.kind != "ParameterNode" and \
-                    node.children[i].data.kind != "OperatorNode" and \
-                    node.children[i].data.kind != "RedirectNode" and \
-                    node.children[i].data.kind != "PipeNode": 
-                    # If it's WordNode or AssignmentNode, may continue. 
-                    if node.children[i].data.kind == "WordNode" or \
-                       node.children[i].data.kind == "AssignmentNode":
-                        if not self.is_expandable(node.children[i]):
-                            continue
-                    # first command node
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    # other command node
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-                # set the first command of the body
-                if node.children[i].data.kind == "ReservedwordNode" and \
-                   node.children[i].data.label == "do":
-                    first_body = node.children[i+1]
-
-            # update precursors for the first command of the body, 
-            # adding tails of the body.
-            # And update all its children
-            first_body.data.precursors += last_command_child.data.tails
-            self.current_path_to_root.append(first_body)
-            self.recursive_visit(first_body)
-            self.current_path_to_root.pop()
-
-            # --- make tails for the node itself 
-            if last_command_child == None:
-                print("Node:%s does not have command children\n" % kind)
-                exit(1)
-            else:
-                node.data.tails = last_command_child.data.tails
-
+            self.visit_for_node(node)
         elif "CommandNode" == kind:
-            is_first_command = True
-            last_command_child = None
-            for i in range(len(node.children)):
-                # It's a command node
-                if node.children[i].data.kind != "ReservedwordNode" and \
-                    node.children[i].data.kind != "ParameterNode" and \
-                    node.children[i].data.kind != "OperatorNode" and \
-                    node.children[i].data.kind != "RedirectNode" and \
-                    node.children[i].data.kind != "PipeNode": 
-                    # If it's WordNode or AssignmentNode, may continue. 
-                    if node.children[i].data.kind == "WordNode" or \
-                       node.children[i].data.kind == "AssignmentNode":
-                        if not self.is_expandable(node.children[i]):
-                            continue
-                    # first command node
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    # other command node
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-
-            # --- make tails for the node itself 
-            if last_command_child == None:
-                # If all its children are wordnode, then use its own as its tail. 
-                node.data.tails.append(node)
-            else:
-                node.data.tails = last_command_child.data.tails
-
+            self.visit_command_node(node)
         elif "CommandsubstitutionNode" == kind:
-            # set precursors of each command children
-            # make tails for each command children
-            is_first_command = True
-            last_command_child = None
-            for i in range(len(node.children)):
-                # It's a command node
-                if node.children[i].data.kind != "ReservedwordNode" and \
-                    node.children[i].data.kind != "ParameterNode" and \
-                    node.children[i].data.kind != "OperatorNode" and \
-                    node.children[i].data.kind != "RedirectNode" and \
-                    node.children[i].data.kind != "PipeNode": 
-                    # If it's WordNode or AssignmentNode, may continue. 
-                    if node.children[i].data.kind == "WordNode" or \
-                       node.children[i].data.kind == "AssignmentNode":
-                        if not self.is_expandable(node.children[i]):
-                            continue
-                    # first command node
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    # other command node
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-                        
-            # --- make tails for the node itself 
-            if last_command_child == None:
-                print("Node:%s does not have command children\n" % kind)
-                exit(1)
-            else:
-                node.data.tails = last_command_child.data.tails
-
+            self.visit_commandsubstitution_node(node)
         elif "PipelineNode" == kind:
-            # set precursors of each command children
-            # make tails for each command children
-            is_first_command = True
-            last_command_child = None
-            for i in range(len(node.children)):
-                # It's a command node
-                if node.children[i].data.kind != "ReservedwordNode" and \
-                    node.children[i].data.kind != "ParameterNode" and \
-                    node.children[i].data.kind != "OperatorNode" and \
-                    node.children[i].data.kind != "RedirectNode" and \
-                    node.children[i].data.kind != "PipeNode": 
-                    # If it's WordNode or AssignmentNode, may continue. 
-                    if node.children[i].data.kind == "WordNode" or \
-                       node.children[i].data.kind == "AssignmentNode":
-                        if not self.is_expandable(node.children[i]):
-                            continue
-                    # first command node
-                    if True == is_first_command:
-                        is_first_command = False
-                        node.children[i].data.precursors = node.data.precursors
-                    # other command node
-                    else:
-                        node.children[i].data.precursors = last_command_child.data.tails
-                        node.children[i].data.pre = last_command_child
-                    # recursively set tails for this command
-                    # recursively set precursors and tails of its children
-                    self.current_path_to_root.append(node.children[i])
-                    self.recursive_visit(node.children[i])
-                    self.current_path_to_root.pop()
-                    last_command_child = node.children[i]
-
-            # --- make tails for the node itself 
-            if last_command_child == None:
-                print("Node:%s does not have command children\n" % kind)
-                exit(1)
-            else:
-                node.data.tails = last_command_child.data.tails
-
+            self.visit_pipeline_node(node)
         else:
             print("Unknown kind:%s" % kind)
             exit(2)
@@ -1112,10 +1165,10 @@ class TreeVisitor:
 
     (2): For commands within the same IfNode, the rules are as follows.
     
-    1) If a node is in the condition, then its precursor must be the following. 
+    1) If a node is in the condition, then its precursors must be the following. 
         + Condition lists before this condition. 
 
-    2) If a node is in the body, then its precursor must be one of the following. 
+    2) If a node is in the body, then its precursors must be one of the following. 
         + Last commandNode in this body
         + Condition lists before this body
 
