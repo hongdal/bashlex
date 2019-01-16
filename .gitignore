@@ -9,3 +9,10 @@ build/
 dist/
 bashlex.egg-info/
 .vscode/
+
+# Settint for the application
+virus_analysis_app/dev/*
+virus_analysis_app/0_data/*
+virus_analysis_app/dataset/*
+virus_analysis_app/include/*.db
+virus_analysis_app/include/*.json
