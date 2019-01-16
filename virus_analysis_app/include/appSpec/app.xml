@@ -2,29 +2,6 @@
 <AppData title ="Scripts Analyzer">
   <!-- screenTitle is also used to identify you and your animation. 
      So make sure to include your name as part of the screenTitle -->
-
-<maxStringSize>50</maxStringSize>
-<frameCapOn>true</frameCapOn>
-<period>17</period>
-<numOfLife>3</numOfLife>
-<playerHp>3</playerHp>
-<healthPoint>20</healthPoint>
-<noOfDepth>4</noOfDepth>
-<bossHP>100</bossHP>
-<HP>100</HP>
-<slip>0.9</slip>
-<world>
-  <width>3000</width>
-  <height>600</height>
-  <limittop>350</limittop>
-  <limitbotton>595</limitbotton>
-</world>
-<view>
-  <width>1000</width>
-  <height>600</height>
-  <loc x="30" y="30"/>
-</view>
-
 <font>
   <small type="Arial" size="8"/>
   <mid type="Arial" size="10"/>

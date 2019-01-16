@@ -1,2 +1,2 @@
 #!/bin/bash
-git clone git@github.com:guozetang/IoT-Malware-Dataset-App.git 0_data
+git clone git@github.com:guozetang/IoT-Malware-Dataset-App.git dataset

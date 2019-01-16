@@ -17,7 +17,7 @@ class Manager_Script(object):
     self.db_path = os.path.join(self.code_dir, "script_manager.db")
     self.user_config_path = os.path.join(self.code_dir, "user_config.json")
     self.test_path = os.path.dirname(self.code_dir)
-    self.test_path = os.path.abspath(self.test_path) + "/"+"0_data/bashData/allscripts"+ "/"
+    self.test_path = os.path.abspath(self.test_path) + "/"+"dataset/bashData/allscripts"+ "/"
     self.script_item_list = ['script_name', 'importance',
                             'urgency', 'tags', 'path',
                             'read', 'date', 'id']
@@ -68,7 +68,7 @@ class Manager_Script(object):
     return self.user_config
 
   def get_malware_info(self, file_name):
-    outputDir = os.path.join( os.getcwd(), '0_data/virtualtotal')
+    outputDir = os.path.join( os.getcwd(), 'dataset/virtualtotal')
     file_report_name = file_name[:-3]+"_res.json"
     file_report_path = os.path.join(outputDir, file_report_name)
     def get_json_info(file_path):
