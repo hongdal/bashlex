@@ -64,7 +64,7 @@ if __name__ == '__main__':
     # print trees[0]
     for tree in trees:
         # print tree[0]
-        print tree.dump()
+        print(tree.dump())
         visitor = nodevisitor(positions)
         visitor.visit(tree)
 

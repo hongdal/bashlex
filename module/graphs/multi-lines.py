@@ -1,5 +1,9 @@
-import bashlex
+# This file is used to parse the bash script 
+# The input is a bash file. 
 import sys 
+sys.path.append("../bashlex")
+
+import bashlex
 
 
 if len(sys.argv) < 2:
