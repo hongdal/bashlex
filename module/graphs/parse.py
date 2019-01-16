@@ -612,11 +612,13 @@ class TreeVisitor:
     def visit_list_compound_node(self, node):
         is_first_command = True
         last_command_child = None
+        # To handle "||" and "&&" operators
+        local_tails = []
+        local_tails_terminating = False
         for i in range(len(node.children)):
             # It's a command node
             if node.children[i].data.kind != "ReservedwordNode" and \
                 node.children[i].data.kind != "ParameterNode" and \
-                node.children[i].data.kind != "OperatorNode" and \
                 node.children[i].data.kind != "RedirectNode" and \
                 node.children[i].data.kind != "PipeNode": 
                 # If it's WordNode or AssignmentNode, may continue. 
@@ -624,13 +626,31 @@ class TreeVisitor:
                     node.children[i].data.kind == "AssignmentNode":
                     if not self.is_expandable(node.children[i]):
                         continue
+                # Handle "||" and "&&" operators
+                if node.children[i].data.kind == "OperatorNode":
+                    if None == last_command_child:
+                        print("Syntax issue: %s operator at the beginning." % node.children[i].data.label)
+                        exit(1)
+                    if node.children[i].data.label == r"||" or \
+                       node.children[i].data.label == r"&&":
+                        local_tails.append(last_command_child.data.tails)
+                        local_tails_terminating = False
+                    else:
+                        local_tails_terminating = True
+                    continue
                 # 1) compute the precursors of all the children 
                 if True == is_first_command:
                     is_first_command = False
                     node.children[i].data.precursors = node.data.precursors
                 else:
                     node.children[i].data.precursors = last_command_child.data.tails
-                    node.children[i].data.pre = last_command_child
+                    # Handle "||" and "&&" operators
+                    if True == local_tails_terminating and len(local_tails) > 0:
+                        for local_tail in local_tails:
+                            node.children[i].data.precursors = node.children[i].data.precursors.union(local_tail)
+                        local_tails_terminating = False
+                        local_tails = []
+
                 # 2) compute tails of all the children
                 # 3) compute the continues of all the children 
                 self.recursive_visit(node.children[i])
