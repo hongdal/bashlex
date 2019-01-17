@@ -2,6 +2,9 @@
 import os
 import sys
 import subprocess
+import argparse
+from argparse import RawTextHelpFormatter
+from .scriptdata import ScriptData
 from include.repository import Repository
 from include.graph.bashgraph import BashGraph
 import pickle as pkl
@@ -28,6 +31,7 @@ class Manager_Script(object):
     self.rep_dict = self.user_config.get("all_repositories", {})
     self.cursor = self.conn.cursor()
     self.cur_rep = Repository('BashScript', self.test_path, 'bash')
+    self.script_data = ScriptData()
 
     if self.user_config:
       pass
@@ -97,6 +101,7 @@ class Manager_Script(object):
     self.refresh()
     self.repo_save()
 
+
   # Chenge the cur_rep and refresh the script infomation
   def select_repository(self,rep_name):
     rep_dict = self.user_config.get("all_repositories", {})
@@ -164,6 +169,32 @@ class Manager_Script(object):
       # subprocess.call(command,shell=True)
       subprocess.check_call(command)
       return out_file
+
+  def getCommands(self, in_file):
+    # print(in_file)
+    script_commands = self.script_data.getScriptCommands(in_file)
+    return script_commands
+
+      # basename = os.path.basename(in_file)[:-5]
+      # out_dir = out_dir + "/"
+      # tmp_dir = out_dir + "tmp/"
+      # tmp_file = tmp_dir + basename + ".dot"
+      # out_file = out_dir + basename + ".pdf"
+      # if not os.path.exists(tmp_dir):
+      #     os.makedirs(tmp_dir)
+      # orig_stdout = sys.stdout
+      # g = BashGraph()
+      # g.load_file(in_file)
+      # g.make_graph()
+      # sys.stdout = open(tmp_file, "w")
+      # g.print_graph()
+      # sys.stdout = orig_stdout 
+      # command = ['dot', '-Tpdf', tmp_file, '-o', out_file]
+      # subprocess.check_call(command)
+      # command = ['rm', '-rf', tmp_dir]
+      # # subprocess.call(command,shell=True)
+      # subprocess.check_call(command)
+      # return out_file
 
   def traverse_scripts(self, fa_path):
     # pre-ordered depth-first search for every script ends with 'supported suffix

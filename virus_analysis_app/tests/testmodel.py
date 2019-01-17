@@ -4,6 +4,7 @@ import unittest
 import json
 import sqlite3
 import shutil
+sys.path.append("../")
 import include.model as model
 from include.model import Manager_Script
 

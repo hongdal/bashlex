@@ -8,6 +8,8 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
 from tkinter import *
+# import pypdfocr.pypdfocr_gs as pdfImg
+# from PIL import Image, ImageTk
 import tkinter.filedialog
 import tkinter.messagebox
 from tkinter.ttk import *
@@ -106,8 +108,6 @@ class SelectRepDialog(Dialog):
     rep_name = rep_info[0]
     self.result = rep_name
     self.res_nums= len(self.result)
-
-
 
 
 class DisplayDetails(Dialog):
@@ -766,22 +766,30 @@ class View(object):
       return False
     else:
       script_num = self.script_info[0]
-      count_dir = os.path.join(os.getcwd(), "0_data/commandCount/")
       path = self.controller.get_script_path_by_nums(script_num)
+
+      script_out_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
       file_name = os.path.basename(os.path.normpath(path))
-      count_file_name = file_name[:-3] + ".count"
-      count_file_path = os.path.join(count_dir, count_file_name)
-      f = open(count_file_path,'r')
-      result = list()
-      for line in f.readlines():
-        line = line.strip()
-        if not len(line) or line.startswith('#'):      
-          continue                                    
-        result.append(line)
-      # print(result)
+      node_name = file_name[:-3] + ".node"
+      node_path = os.path.join(script_out_dir, node_name)
+      script_commands = self.controller.get_script_commands(node_path)
+      # print("[INFO Commands] ",script_commands)
+
+      # count_dir = os.path.join(os.getcwd(), "0_data/commandCount/")
+      # file_name = os.path.basename(os.path.normpath(path))
+      # count_file_name = file_name[:-3] + ".count"
+      # count_file_path = os.path.join(count_dir, count_file_name)
+      # f = open(count_file_path,'r')
+      # result = list()
+      # for line in f.readlines():
+      #   line = line.strip()
+      #   if not len(line) or line.startswith('#'):      
+      #     continue                                    
+      #   result.append(line)
+      # # print(result)
       result_str = ""
-      for i in result:
-        result_str = result_str+i+chr(13)
+      for i in script_commands:
+        result_str = result_str+i[0]+"\t\t"+str(i[1])+chr(13)
       # path = "Command_Count: "+ str(count_file_path)
 
       tkinter.messagebox.showinfo(

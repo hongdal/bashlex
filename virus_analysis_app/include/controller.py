@@ -71,6 +71,10 @@ class Controller(object):
     script_graph = self.script_manager.getGraph(in_file, out_dir)
     return script_graph
 
+  def get_script_commands(self, in_file):
+    script_commands = self.script_manager.getCommands(in_file)
+    return script_commands
+
   def open_script_by_num(self, num_s):
     res = self.script_manager.open_script_by_num(num_s)
     return res
