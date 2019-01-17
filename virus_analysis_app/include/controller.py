@@ -66,6 +66,11 @@ class Controller(object):
     rec_scripts = self.script_manager.get_recommend_scripts()
     return rec_scripts
 
+  # ***** Script information API  *****
+  def get_scripts_graph(self, in_file, out_dir):
+    script_graph = self.script_manager.getGraph(in_file, out_dir)
+    return script_graph
+
   def open_script_by_num(self, num_s):
     res = self.script_manager.open_script_by_num(num_s)
     return res

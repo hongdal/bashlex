@@ -1,7 +1,9 @@
 #!/usr/bin/python3.5
 import os
 import sys
-from .repository import Repository
+import subprocess
+from include.repository import Repository
+from include.graph.bashgraph import BashGraph
 import pickle as pkl
 import sqlite3
 import random
@@ -82,6 +84,7 @@ class Manager_Script(object):
     script_report = get_json_info(file_report_path)
     return script_report
   # Create a New repository and refresh the scripts in this repsitory
+
   def add_repository(self, reps):
     rep_name = reps[0]
     rep_path = reps[1]
@@ -139,6 +142,28 @@ class Manager_Script(object):
       if now_script not in old_script_names:
         new_scripts.append(now_script)
     return new_scripts
+
+  def getGraph(self, in_file, out_dir):
+      basename = os.path.basename(in_file)[:-5]
+      out_dir = out_dir + "/"
+      tmp_dir = out_dir + "tmp/"
+      tmp_file = tmp_dir + basename + ".dot"
+      out_file = out_dir + basename + ".pdf"
+      if not os.path.exists(tmp_dir):
+          os.makedirs(tmp_dir)
+      orig_stdout = sys.stdout
+      g = BashGraph()
+      g.load_file(in_file)
+      g.make_graph()
+      sys.stdout = open(tmp_file, "w")
+      g.print_graph()
+      sys.stdout = orig_stdout 
+      command = ['dot', '-Tpdf', tmp_file, '-o', out_file]
+      subprocess.check_call(command)
+      command = ['rm', '-rf', tmp_dir]
+      # subprocess.call(command,shell=True)
+      subprocess.check_call(command)
+      return out_file
 
   def traverse_scripts(self, fa_path):
     # pre-ordered depth-first search for every script ends with 'supported suffix

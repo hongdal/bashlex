@@ -836,12 +836,22 @@ class View(object):
       return False
     else:
       script_num = self.script_info[0]
-      pdf_dir = os.path.join(os.getcwd(), "0_data/pdfData/")
-      path = self.controller.get_script_path_by_nums(script_num)
-      file_name = os.path.basename(os.path.normpath(path))
-      pdffile_name = file_name[:-3] + ".pdf"
-      pdf_path = os.path.join(pdf_dir, pdffile_name)
-      subprocess.call("evince " + str(pdf_path),shell=True)
+      
+      script_out_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+      graph_dir = os.path.join(os.getcwd(), ".cache/")
+      script_path = self.controller.get_script_path_by_nums(script_num)
+      file_name = os.path.basename(os.path.normpath(script_path))
+      node_name = file_name[:-3] + ".node"
+      node_path = os.path.join(script_out_dir, node_name)
+      graph_file_path  = self.controller.get_scripts_graph(node_path, graph_dir)
+
+
+      # file_name = os.path.basename(os.path.normpath(path))
+    
+
+     
+      if graph_file_path and os.path.exists(graph_file_path):
+        subprocess.call("evince -w " + str(graph_file_path),shell=True)
       # subprocess.call("gedit " + str(path),shell=True)
       # path = "Script Path: "+ str(path)
       # tkinter.messagebox.showinfo(
