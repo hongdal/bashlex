@@ -4,6 +4,7 @@ import sys
 import subprocess
 import argparse
 from argparse import RawTextHelpFormatter
+from collections import OrderedDict
 from .scriptdata import ScriptData
 from include.repository import Repository
 from include.graph.bashgraph import BashGraph
@@ -23,6 +24,7 @@ class Manager_Script(object):
     self.user_config_path = os.path.join(self.code_dir, "user_config.json")
     self.test_path = os.path.dirname(self.code_dir)
     self.test_path = os.path.abspath(self.test_path) + "/"+"dataset/bashData/allscripts"+ "/"
+    self.json_path = os.path.abspath(self.code_dir) + "/test_command.json"
     self.script_item_list = ['script_name', 'importance',
                             'urgency', 'tags', 'path',
                             'read', 'date', 'id']
@@ -65,7 +67,7 @@ class Manager_Script(object):
   def get_user_config(self):
     if os.path.exists(self.user_config_path):
       with open(self.user_config_path) as f:
-        user_config = json.load(f)
+        user_config = json.load(f,object_pairs_hook=OrderedDict)
     else:
       user_config = {}
     return user_config
@@ -170,13 +172,40 @@ class Manager_Script(object):
       subprocess.check_call(command)
       return out_file
 
+
+
+  def save_json_info(self, file_path, information):
+    # save user data
+    with open(file_path, 'w') as f:
+      json.dump(dict(information), f, indent=2)
+
+  def get_json_info(self,file_path):
+    # print(file_path)
+    if os.path.exists(file_path):
+      with open(file_path) as f:
+        user_config = json.load(f)
+    else:
+      user_config = {}
+    return user_config
+
   def getCommands(self, in_file):
     # print(in_file)
     script_commands = self.script_data.getScriptCommands(in_file)
+    self.save_json_info(self.json_path,script_commands)
+    # temp = self.get_json_info(self.json_path)
+    return script_commands
+ 
+  def getAllCommands(self, dir_path):
+    # print(in_file)
+    script_commands = self.script_data.getAllCommands(dir_path)
+    self.save_json_info(self.json_path,script_commands)
+    # temp = self.get_json_info(self.json_path)
+    # print(script_commands)
     return script_commands
 
       # basename = os.path.basename(in_file)[:-5]
       # out_dir = out_dir + "/"
+
       # tmp_dir = out_dir + "tmp/"
       # tmp_file = tmp_dir + basename + ".dot"
       # out_file = out_dir + basename + ".pdf"

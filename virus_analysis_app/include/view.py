@@ -804,24 +804,25 @@ class View(object):
       return False
     else:
       script_num = self.script_info[0]
-      count_dir = os.path.join(os.getcwd(), "0_data/")
-      path = self.controller.get_script_path_by_nums(script_num)
-      file_name = os.path.basename(os.path.normpath(path))
-      count_file_name = "allcommand" + ".count"
-      count_file_path = os.path.join(count_dir, count_file_name)
-      f = open(count_file_path,'r')
-      result = list()
-      for line in f.readlines():
-        line = line.strip()
-        if not len(line) or line.startswith('#'):      
-          continue                                    
-        result.append(line)
-      # print(result)
-      result_str = ""
-      for i in result:
-        result_str = result_str+i+chr(13)
-      # path = "Command_Count: "+ str(count_file_path)
+      count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
 
+      script_commands = self.controller.get_all_commands(count_dir)
+
+      # f = open(count_file_path,'r')
+      # result = list()
+      # for line in f.readlines():
+      #   line = line.strip()
+      #   if not len(line) or line.startswith('#'):      
+      #     continue                                    
+      #   result.append(line)
+      # # print(result)
+      # result_str = ""
+      # for i in result:
+      #   result_str = result_str+i+chr(13)
+      # # path = "Command_Count: "+ str(count_file_path)
+      result_str = ""
+      for i in script_commands:
+        result_str = result_str+i[0]+"\t\t"+str(i[1])+chr(13)
       tkinter.messagebox.showinfo(
         "Command Count",
         result_str

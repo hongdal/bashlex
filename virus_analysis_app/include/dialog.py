@@ -1,6 +1,7 @@
 from tkinter import *
 import os
 
+
 class Dialog(Toplevel):
   """Tk Dialog for class view to use
 
@@ -10,12 +11,13 @@ class Dialog(Toplevel):
     Attributes:
         result: A data which need to use by other funtions
   """
-  def __init__(self, parent, title = None, argv=None, argv2=None):
+
+  def __init__(self, parent, title=None, argv=None, argv2=None):
     """Inits Dialog Class."""
     Toplevel.__init__(self, parent)
     self.transient(parent)
     if title:
-        self.title(title)
+      self.title(title)
     self.parent = parent
     self.result = None
     self.res_nums = 0
@@ -27,10 +29,10 @@ class Dialog(Toplevel):
     self.buttonbox()
     # self.grab_set()
     if not self.initial_focus:
-        self.initial_focus = self
+      self.initial_focus = self
     self.protocol("WM_DELETE_WINDOW", self.cancel)
-    self.geometry("+%d+%d" % (parent.winfo_rootx()+50,
-                                parent.winfo_rooty()+50))
+    self.geometry(
+        "+%d+%d" % (parent.winfo_rootx() + 50, parent.winfo_rooty() + 50))
     self.initial_focus.focus_set()
     self.wait_window(self)
 
@@ -57,7 +59,7 @@ class Dialog(Toplevel):
   # standard button semantics
   def ok(self, event=None):
     if not self.validate():
-      self.initial_focus.focus_set() # put focus back
+      self.initial_focus.focus_set()  # put focus back
       return
     self.withdraw()
     self.update_idletasks()
@@ -71,10 +73,11 @@ class Dialog(Toplevel):
 
   # command hooks
   def validate(self):
-    return 1 # override
+    return 1  # override
 
   def apply(self):
-    pass # override
+    pass  # override
+
 
 if __name__ == '__main__':
   pass
