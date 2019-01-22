@@ -1,7 +1,6 @@
 from .bash_ast import NodeData, Node, Tree
 from .tree_visitor import TreeVisitor
 import re 
-import scriptdata
 
 regex = r"([a-zA-Z]+)(Node)"
 
