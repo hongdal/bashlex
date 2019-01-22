@@ -137,7 +137,11 @@
     If this command is a while-do command, it's the union of last command 
     of while condition and its body. 
 
-''' 
+'''  
+from scriptdata import ScriptData
+
+NON_COMMAND = ""
+
 class TreeVisitor:
     def __init__(self, tree):
         self.tree = tree
@@ -145,6 +149,7 @@ class TreeVisitor:
         self.level = -1
         self.basic_commands = []
         self.cfg = {}
+        self.command_detector = ScriptData() 
 
 
     def make_cfg(self):
@@ -662,6 +667,9 @@ class TreeVisitor:
         command = command.replace(r'"', r'\"')
         command = command.replace(r'[', r'\[')
         command = command.replace(r']', r'\]')
+        # handle unknow commands 
+        if False == self.command_detector.isLinuxCommand(command):
+            command = NON_COMMAND
         node.data.label = command
 
 

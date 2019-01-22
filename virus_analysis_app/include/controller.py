@@ -75,6 +75,15 @@ class Controller(object):
     script_commands = self.script_manager.getCommands(in_file)
     return script_commands
 
+  def get_script_commands(self, in_file):
+    script_commands = self.script_manager.getCommands(in_file)
+    return script_commands
+
+  def get_all_commands(self, dir_path):
+    all_commands = self.script_manager.getAllCommands(dir_path)
+    return all_commands
+
+
   def open_script_by_num(self, num_s):
     res = self.script_manager.open_script_by_num(num_s)
     return res
