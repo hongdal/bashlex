@@ -16,6 +16,7 @@ from functools import reduce
 import json
 from six.moves import input
 
+
 class Manager_Script(object):
   # TODO(Guoze): Create a function to update the view
   def __init__(self):
@@ -23,11 +24,13 @@ class Manager_Script(object):
     self.db_path = os.path.join(self.code_dir, "script_manager.db")
     self.user_config_path = os.path.join(self.code_dir, "user_config.json")
     self.test_path = os.path.dirname(self.code_dir)
-    self.test_path = os.path.abspath(self.test_path) + "/"+"dataset/bashData/allscripts"+ "/"
+    self.test_path = os.path.abspath(
+        self.test_path) + "/" + "dataset/bashData/allscripts" + "/"
     self.json_path = os.path.abspath(self.code_dir) + "/test_command.json"
-    self.script_item_list = ['script_name', 'importance',
-                            'urgency', 'tags', 'path',
-                            'read', 'date', 'id']
+    self.script_item_list = [
+        'script_name', 'importance', 'urgency', 'tags', 'path', 'read', 'date',
+        'id'
+    ]
     self.user_config = self.get_user_config()
     self.conn = sqlite3.connect(self.db_path)
     self.rep_dict = self.user_config.get("all_repositories", {})
@@ -43,31 +46,26 @@ class Manager_Script(object):
     # self.select_repository()
 
   def create_test_repo(self):
-    # try:
-    #   generator = Generator(self.test_path)
-    #   generator.generate()
-    # except Exception as error:
-    #   print( error )
     test_rep = ['BashScript', self.test_path, "[sh, pdf, mobi, doc]"]
     self.add_repository(test_rep)
     self.cur_rep = Repository(test_rep[0], test_rep[1], test_rep[2])
     new_scripts = self.refresh()
     for script in new_scripts:
-      important_num = random.randint(1,3)
-      urgeny_num = random.randint(1,3)
-      tags = ["None","None","None","None","None","None"]
-      tag = tags[random.randint(0,len(tags)-1)]
-      if random.randint(0,10) > 5:
+      important_num = random.randint(1, 3)
+      urgeny_num = random.randint(1, 3)
+      tags = ["None", "None", "None", "None", "None", "None"]
+      tag = tags[random.randint(0, len(tags) - 1)]
+      if random.randint(0, 10) > 5:
         read_flag = 'y'
       else:
         read_flag = 'n'
-      self.insert_one(script,important_num, urgeny_num, tag, read_flag)
+      self.insert_one(script, important_num, urgeny_num, tag, read_flag)
 
   # *****Repository Functions*****
   def get_user_config(self):
     if os.path.exists(self.user_config_path):
       with open(self.user_config_path) as f:
-        user_config = json.load(f,object_pairs_hook=OrderedDict)
+        user_config = json.load(f, object_pairs_hook=OrderedDict)
     else:
       user_config = {}
     return user_config
@@ -76,9 +74,10 @@ class Manager_Script(object):
     return self.user_config
 
   def get_malware_info(self, file_name):
-    outputDir = os.path.join( os.getcwd(), 'dataset/virtualtotal')
-    file_report_name = file_name[:-3]+"_res.json"
+    outputDir = os.path.join(os.getcwd(), 'dataset/virtualtotal')
+    file_report_name = file_name[:-3] + "_res.json"
     file_report_path = os.path.join(outputDir, file_report_name)
+
     def get_json_info(file_path):
       # print(file_path)
       if os.path.exists(file_path):
@@ -87,8 +86,10 @@ class Manager_Script(object):
       else:
         user_config = {}
       return user_config
+
     script_report = get_json_info(file_report_path)
     return script_report
+
   # Create a New repository and refresh the scripts in this repsitory
 
   def add_repository(self, reps):
@@ -103,17 +104,18 @@ class Manager_Script(object):
     self.refresh()
     self.repo_save()
 
-
   # Chenge the cur_rep and refresh the script infomation
-  def select_repository(self,rep_name):
+  def select_repository(self, rep_name):
     rep_dict = self.user_config.get("all_repositories", {})
     if rep_name in rep_dict:
       rep_path, support_suffix = rep_dict[rep_name]
       self.cur_rep = Repository(rep_name, rep_path, support_suffix)
-      return [self.cur_rep.name, self.cur_rep.path, self.cur_rep.support_suffix]
+      return [
+          self.cur_rep.name, self.cur_rep.path, self.cur_rep.support_suffix
+      ]
     return False
 
-  def delete_repository(self,rep_name):
+  def delete_repository(self, rep_name):
     rep_dict = self.user_config.get("all_repositories", {})
     if rep_name in rep_dict:
       if rep_name == self.cur_rep.name:
@@ -130,7 +132,8 @@ class Manager_Script(object):
     self.cur_script_names = {}
     self.traverse_scripts(self.cur_rep.path)
     # print scripts_name_now
-    old_scripts = self.cursor.execute("SELECT * FROM  {}".format(self.cur_rep.name)).fetchall()
+    old_scripts = self.cursor.execute("SELECT * FROM  {}".format(
+        self.cur_rep.name)).fetchall()
     for old_script in old_scripts:
       old_name = old_script[self.script_item_list.index('script_name')]
       old_path = old_script[self.script_item_list.index('path')]
@@ -139,9 +142,12 @@ class Manager_Script(object):
         self.del_script_by_names([old_name])
       # if the script was moved, update the script path info
       elif old_path != self.cur_script_names[old_name]:
-        self.cursor.execute("UPDATE {} SET path = ? WHERE script_name = ?".format(self.cur_rep.name)
-                              , (self.cur_script_names[old_name], old_name))
-    old_script_names = self.cursor.execute("SELECT script_name FROM  {}".format(self.cur_rep.name)).fetchall()
+        self.cursor.execute(
+            "UPDATE {} SET path = ? WHERE script_name = ?".format(
+                self.cur_rep.name),
+            (self.cur_script_names[old_name], old_name))
+    old_script_names = self.cursor.execute(
+        "SELECT script_name FROM  {}".format(self.cur_rep.name)).fetchall()
     old_script_names = [rec[0] for rec in old_script_names]
     new_scripts = []
     for now_script in self.cur_script_names.keys():
@@ -151,35 +157,33 @@ class Manager_Script(object):
     return new_scripts
 
   def getGraph(self, in_file, out_dir):
-      basename = os.path.basename(in_file)[:-5]
-      out_dir = out_dir + "/"
-      tmp_dir = out_dir + "tmp/"
-      tmp_file = tmp_dir + basename + ".dot"
-      out_file = out_dir + basename + ".pdf"
-      if not os.path.exists(tmp_dir):
-          os.makedirs(tmp_dir)
-      orig_stdout = sys.stdout
-      g = BashGraph()
-      g.load_file(in_file)
-      g.make_graph()
-      sys.stdout = open(tmp_file, "w")
-      g.print_graph()
-      sys.stdout = orig_stdout 
-      command = ['dot', '-Tpdf', tmp_file, '-o', out_file]
-      subprocess.check_call(command)
-      command = ['rm', '-rf', tmp_dir]
-      # subprocess.call(command,shell=True)
-      subprocess.check_call(command)
-      return out_file
-
-
+    basename = os.path.basename(in_file)[:-5]
+    out_dir = out_dir + "/"
+    tmp_dir = out_dir + "tmp/"
+    tmp_file = tmp_dir + basename + ".dot"
+    out_file = out_dir + basename + ".pdf"
+    if not os.path.exists(tmp_dir):
+      os.makedirs(tmp_dir)
+    orig_stdout = sys.stdout
+    g = BashGraph()
+    g.load_file(in_file)
+    g.make_graph()
+    sys.stdout = open(tmp_file, "w")
+    g.print_graph()
+    sys.stdout = orig_stdout
+    command = ['dot', '-Tpdf', tmp_file, '-o', out_file]
+    subprocess.check_call(command)
+    command = ['rm', '-rf', tmp_dir]
+    # subprocess.call(command,shell=True)
+    subprocess.check_call(command)
+    return out_file
 
   def save_json_info(self, file_path, information):
     # save user data
     with open(file_path, 'w') as f:
       json.dump(dict(information), f, indent=2)
 
-  def get_json_info(self,file_path):
+  def get_json_info(self, file_path):
     # print(file_path)
     if os.path.exists(file_path):
       with open(file_path) as f:
@@ -191,39 +195,18 @@ class Manager_Script(object):
   def getCommands(self, in_file):
     # print(in_file)
     script_commands = self.script_data.getScriptCommands(in_file)
-    self.save_json_info(self.json_path,script_commands)
+    self.save_json_info(self.json_path, script_commands)
     # temp = self.get_json_info(self.json_path)
     return script_commands
- 
+
   def getAllCommands(self, dir_path):
     # print(in_file)
     script_commands = self.script_data.getAllCommands(dir_path)
-    self.save_json_info(self.json_path,script_commands)
-    # temp = self.get_json_info(self.json_path)
-    # print(script_commands)
+    self.save_json_info(self.json_path, script_commands)
+    all_linux_commands = self.script_data.getSortedCommandsDict()
+    print(all_linux_commands)
+    self.save_json_info(self.json_path, all_linux_commands)
     return script_commands
-
-      # basename = os.path.basename(in_file)[:-5]
-      # out_dir = out_dir + "/"
-
-      # tmp_dir = out_dir + "tmp/"
-      # tmp_file = tmp_dir + basename + ".dot"
-      # out_file = out_dir + basename + ".pdf"
-      # if not os.path.exists(tmp_dir):
-      #     os.makedirs(tmp_dir)
-      # orig_stdout = sys.stdout
-      # g = BashGraph()
-      # g.load_file(in_file)
-      # g.make_graph()
-      # sys.stdout = open(tmp_file, "w")
-      # g.print_graph()
-      # sys.stdout = orig_stdout 
-      # command = ['dot', '-Tpdf', tmp_file, '-o', out_file]
-      # subprocess.check_call(command)
-      # command = ['rm', '-rf', tmp_dir]
-      # # subprocess.call(command,shell=True)
-      # subprocess.check_call(command)
-      # return out_file
 
   def traverse_scripts(self, fa_path):
     # pre-ordered depth-first search for every script ends with 'supported suffix
@@ -243,12 +226,15 @@ class Manager_Script(object):
 
   # Get all scripts information form the database by this repo.
   def get_all_scripts(self):
-    recs = self.cursor.execute("SELECT * FROM {} ".format(self.cur_rep.name)).fetchall()
+    recs = self.cursor.execute("SELECT * FROM {} ".format(
+        self.cur_rep.name)).fetchall()
     return recs
 
   # Insert one script information in the database
-  def insert_one_script(self, new_script, id_num, script_im, script_ug, script_tags, read):
-    self.insert_one(new_script, id_num, script_im,script_ug, script_tags, read)
+  def insert_one_script(self, new_script, id_num, script_im, script_ug,
+                        script_tags, read):
+    self.insert_one(new_script, id_num, script_im, script_ug, script_tags,
+                    read)
 
   def edit_one_script(self, id_num, script_im, script_ug, script_tags, read):
     scripts = self.query_by_id(id_num)
@@ -261,14 +247,15 @@ class Manager_Script(object):
   def get_recommend_scripts(self):
     # select scripts i can read for the sake of importance and urgency
     rec_scripts = self.cursor.execute(
-      "SELECT * FROM {} WHERE importance!='' AND urgency!='' AND read='n' ORDER BY urgency DESC , importance DESC LIMIT 5 ".format(
-      self.cur_rep.name)).fetchall()
+        "SELECT * FROM {} WHERE importance!='' AND urgency!='' AND read='n' ORDER BY urgency DESC , importance DESC LIMIT 5 "
+        .format(self.cur_rep.name)).fetchall()
     if len(rec_scripts) > 0:
       return rec_scripts
 
   # get all tags of my scripts
   def get_all_tags(self):
-    tags = self.cursor.execute("SELECT tags FROM {}".format(self.cur_rep.name)).fetchall()
+    tags = self.cursor.execute("SELECT tags FROM {}".format(
+        self.cur_rep.name)).fetchall()
     tags = [tag[0] for tag in tags]
     tag_set = set()
     for line in tags:
@@ -281,7 +268,7 @@ class Manager_Script(object):
     return tag_s
 
   def get_script_path_by_nums(self, num_s):
-    results = self.query_path_by_nums( str(num_s) )
+    results = self.query_path_by_nums(str(num_s))
     if len(results) > 0:
       for res in results:
         return res
@@ -313,7 +300,8 @@ class Manager_Script(object):
     if len(tags) > 0:
       for tag in tags:
         recs = self.cursor.execute(
-          "select * from {} where tags like '%{}%'".format(self.cur_rep.name, tag)).fetchall()
+            "select * from {} where tags like '%{}%'".format(
+                self.cur_rep.name, tag)).fetchall()
         if len(recs) > 0:
           res_set = set()
           for rec in recs:
@@ -336,7 +324,8 @@ class Manager_Script(object):
     if len(names) > 0:
       for name in names:
         recs = self.cursor.execute(
-          "select * from {} where script_name like '%{}%'".format(self.cur_rep.name, name)).fetchall()
+            "select * from {} where script_name like '%{}%'".format(
+                self.cur_rep.name, name)).fetchall()
         if len(recs) > 0:
           res_set = set()
           for rec in recs:
@@ -358,7 +347,9 @@ class Manager_Script(object):
     nums = num_s.strip().split(' ')
     if len(nums) > 0:
       for num in nums:
-        recs = self.cursor.execute("SELECT * FROM {} WHERE id=? ".format(self.cur_rep.name), (num,)).fetchall()
+        recs = self.cursor.execute(
+            "SELECT * FROM {} WHERE id=? ".format(self.cur_rep.name),
+            (num, )).fetchall()
         if len(recs) > 0:
           for rec in recs:
             results.append(rec[4])
@@ -370,7 +361,9 @@ class Manager_Script(object):
     nums = num_s.strip().split(' ')
     if len(nums) > 0:
       for num in nums:
-        recs = self.cursor.execute("SELECT * FROM {} WHERE id=? ".format(self.cur_rep.name), (num,)).fetchall()
+        recs = self.cursor.execute(
+            "SELECT * FROM {} WHERE id=? ".format(self.cur_rep.name),
+            (num, )).fetchall()
         if len(recs) > 0:
           for rec in recs:
             results.append(rec)
@@ -380,7 +373,9 @@ class Manager_Script(object):
       return False
 
   def query_by_id(self, id_num):
-    scripts = self.cursor.execute("SELECT * FROM {} WHERE id=?".format(self.cur_rep.name), (id_num,)).fetchall()
+    scripts = self.cursor.execute(
+        "SELECT * FROM {} WHERE id=?".format(self.cur_rep.name),
+        (id_num, )).fetchall()
     if len(scripts) == 1:
       return scripts
     else:
@@ -399,22 +394,26 @@ class Manager_Script(object):
 
   def del_script_by_names(self, names):
     for name in names:
-        self.cursor.execute("DELETE FROM {} WHERE script_name = ?".format(self.cur_rep.name), (name,))
+      self.cursor.execute(
+          "DELETE FROM {} WHERE script_name = ?".format(self.cur_rep.name),
+          (name, ))
     self.conn.commit()
 
   def insert_one(self, script_name, script_im, script_ug, script_tags, read):
-    self.cursor.execute("INSERT INTO {} (script_name, importance, urgency, tags, path, read, date) "
-                        "VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.cur_rep.name), (script_name, script_im,
-                                                                                    script_ug, script_tags,
-                                                                                    self.cur_script_names[script_name],
-                                                                                    read, str(date.today())))
+    self.cursor.execute(
+        "INSERT INTO {} (script_name, importance, urgency, tags, path, read, date) "
+        "VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.cur_rep.name),
+        (script_name, script_im, script_ug, script_tags,
+         self.cur_script_names[script_name], read, str(date.today())))
     self.conn.commit()
 
   def update_one(self, script_name, script_im, script_ug, script_tags, read):
-    self.cursor.execute("UPDATE {} SET importance=?, urgency=?, "
-                        "tags=?, path=?, read=?, date=? WHERE script_name=?".format(self.cur_rep.name),
-                        (script_im, script_ug, script_tags, self.cur_script_names[script_name],
-                          read, str(date.today()), script_name))
+    self.cursor.execute(
+        "UPDATE {} SET importance=?, urgency=?, "
+        "tags=?, path=?, read=?, date=? WHERE script_name=?".format(
+            self.cur_rep.name),
+        (script_im, script_ug, script_tags, self.cur_script_names[script_name],
+         read, str(date.today()), script_name))
     self.conn.commit()
 
   def repo_save(self):
@@ -433,6 +432,7 @@ class Manager_Script(object):
     self.cursor.close()
     self.conn.commit()
     self.conn.close()
+
 
 if __name__ == '__main__':
   pass

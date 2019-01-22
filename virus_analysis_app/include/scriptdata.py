@@ -2,8 +2,6 @@ import xml.etree.ElementTree as ElementTree
 import os, sys
 import re
 from include.bashlex.bashlex import parser, ast
-from .parserxml import XmlListConfig
-from .parserxml import XmlDictConfig
 import subprocess
 from subprocess import PIPE
 import collections
@@ -14,18 +12,37 @@ import json
 class ScriptData(object):
   class __ScriptData(object):
     def __init__(self):
-      self.data_path = os.path.join(os.getcwd(), 'include/appSpec/app.xml')
-      self.datatree = ElementTree.parse(self.data_path)
-      self.dataroot = self.datatree.getroot()
-      self.datadict = XmlDictConfig(self.dataroot)
       self.commands_counter = collections.Counter()
       self.commands_dict = {}
       self.linux_commands_dict = {}
-      self.loaddict()
+
+      #Some Setting for the command pattern for the bash scripts
       self.pattern_command = re.compile(r'CommandNode[^\n]*\n[^\n]*word[^\n]*')
       self.pattern_word = re.compile(r'word=[^\)]*')
       self.pattern_value = re.compile(r'\'[^\']*')
+      self.loaddict()
+    
+    def isLinuxCommand(self, command):
+      temp = command.split('/')[-1]
+      if temp in self.commands_dict:
+        return temp
+      else:
+        return False
 
+    def getCommandsDict(self):
+      return self.linux_commands_dict
+
+    def getSortedCommandsDict(self):
+      items = self.linux_commands_dict.items()
+      backitems=[[v[1],v[0]] for v in items]
+      backitems.sort(reverse=True)
+      res = []
+      for i in range(0,len(backitems)):
+        tup = (backitems[i][1], backitems[i][0])
+        res.append(tup)
+      #temp = sorted(self.linux_commands_dict.items(), lambda x, y: cmp(x[1], y[1]), reverse=True) 
+      return res
+    
     def loaddict(self):
       def get_json_info(file_path):
         # print(file_path)
@@ -39,23 +56,6 @@ class ScriptData(object):
       command_path = os.path.join(os.getcwd(), 'res/commands.json')
       self.commands_dict = get_json_info(command_path)
 
-    def findInText(self, regex, text, linesConf):
-      '''
-        return a list of maps, each map is a match to multilines,
-                in a map, key is the line keyword
-                          and value is the content corresponding to the key
-      '''
-      matched = regex.findall(text)
-      if empty(matched):
-        return []
-
-      allMatched = []
-      linePatternMap = buildLinePatternMap(linesConf)
-      for onematch in matched:
-        oneMatchedMap = buildOneMatchMap(linesConf, onematch, linePatternMap)
-        allMatched.append(oneMatchedMap)
-      return allMatched
-
     def readscript(self, in_file):
       file_obj = open(in_file)
       filetext = ''
@@ -63,36 +63,17 @@ class ScriptData(object):
         filetext += line
       return filetext
 
-    def getCommandsDict(self, in_file):
-      return self.linux_commands_dict
-
     def getScriptCommands(self, in_file):
       total_commands = collections.Counter()
       if os.path.isdir(in_file):
         pass
       else:
-        # command = re.compile(r'Command.*\n.*)
         filetext = self.readscript(in_file)
-        # print(filetext)
-        # pattern = re.compile(r'CommandNode[^\n]*\n[^\n]*word[^\n]*')
-        # allcommands = self.pattern_command.findall(filetext, re.DOTALL)
-        # print(allcommands)
-        allcommands = re.findall(r'CommandNode[^\n]*\n[^\n]*word[^\n]*',
-                                 filetext, re.DOTALL)
+        allcommands = self.pattern_command.findall(filetext)
         for i in range(len(allcommands)):
-          # print(i, "Node: ", allcommands[i])
-          # if len(re.match(r'word=[^\)]*', allcommands[i], re.DOTALL)):
-          #   allcommands[i] = re.findall(r'word=[^\)]*', allcommands[i],
-          #                               re.DOTALL)[0]
-          #   allcommands[i] = re.findall(r'\'[^\']*', allcommands[i],
-          #                               re.DOTALL)[0]
-          #   allcommands[i] = allcommands[i][1:]
-          # else:
-          #   allcommands[i] = " "
-          if len(self.pattern_word.findall(allcommands[i], re.DOTALL)):
+          if len(self.pattern_word.findall(allcommands[i])):
             allcommands[i] = self.pattern_word.findall(allcommands[i])[0]
-            allcommands[i] = self.pattern_value.findall(
-                allcommands[i])[0]
+            allcommands[i] = self.pattern_value.findall(allcommands[i])[0]
             allcommands[i] = allcommands[i][1:]
           else:
             allcommands[i] = " "
@@ -100,41 +81,26 @@ class ScriptData(object):
         total_commands = total_commands + frequency
       self.commands_counter += total_commands
       total_commands = total_commands.most_common()
-      # print(total_commands)
       return total_commands
 
     def buildCommandsDict(self, total_commands):
       for command in total_commands:
         temp = command[0].split('/')[-1]
         if temp in self.commands_dict:
-          print("Catch the key:", command[0])
           if temp not in self.linux_commands_dict:
             self.linux_commands_dict[temp] = command[1]
       print(self.linux_commands_dict)
 
     def getAllCommands(self, dir_path):
       self.commands_counter.clear()
-      # files = os.listdir( dir_path )
       if os.path.isdir(dir_path):
         for dirpath, dirnames, filenames in os.walk(dir_path):
           for x in filenames:
             if fnmatch.fnmatch(x, "VirusShare*"):
               node_file = os.path.join(dirpath, x)
-              # print(i, "Node:", node_file)
               self.getScriptCommands(node_file)
-              # output = x[:-5]+".dot"
-              # output2 = outputDir+"/"+output
-              # retcode = subprocess.call("python3.5 parserDot.py "+malware_file+">"+output2, shell=True)
-              # if retcode != 0:
-              #   print "\tFAILED to parser the bash code.", x
-              #   failed += 1
-              #   os.remove(output2)
-              # else:
-              #   print x," passed"
-              #   passed += 1
-              #   os.remove(malware_file)
       else:
-        self.getScriptCommands(in_file)
+        self.getScriptCommands(dir_path)
 
       total_commands = self.commands_counter.most_common()
       self.buildCommandsDict(total_commands)
