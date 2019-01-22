@@ -23,7 +23,8 @@ class ScriptData(object):
       self.loaddict()
     
     def isLinuxCommand(self, command):
-      temp = command.split('/')[-1]
+      temp = command.split(' ')[0]
+      temp = temp.split('/')[-1]
       if temp in self.commands_dict:
         return temp
       else:
@@ -85,8 +86,10 @@ class ScriptData(object):
 
     def buildCommandsDict(self, total_commands):
       for command in total_commands:
+        # if (self.isLinuxCommand(command))
         temp = command[0].split('/')[-1]
-        if temp in self.commands_dict:
+        if self.isLinuxCommand(temp):
+        # if temp in self.commands_dict:
           if temp not in self.linux_commands_dict:
             self.linux_commands_dict[temp] = command[1]
       print(self.linux_commands_dict)
