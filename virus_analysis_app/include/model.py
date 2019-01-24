@@ -160,7 +160,7 @@ class Manager_Script(object):
     basename = os.path.basename(in_file)[:-5]
     out_dir = out_dir + "/"
     tmp_dir = out_dir + "tmp/"
-    tmp_file = tmp_dir + basename + ".dot"
+    tmp_file = out_dir + basename + ".dot"
     out_file = out_dir + basename + ".pdf"
     if not os.path.exists(tmp_dir):
       os.makedirs(tmp_dir)

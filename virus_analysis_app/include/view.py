@@ -8,8 +8,6 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
 from tkinter import *
-# import pypdfocr.pypdfocr_gs as pdfImg
-# from PIL import Image, ImageTk
 import tkinter.filedialog
 import tkinter.messagebox
 from tkinter.ttk import *
@@ -51,7 +49,6 @@ class RespInfoDialog(Dialog):
     self.e2 = Entry(master, textvariable=path)
     self.e3 = Entry(master)
     self.e1.insert(0, "Example")
-    # self.e2.insert(0, "d:\\01_test\\")
     self.e2.insert(0, "/home/guoze/02_test/")
     self.e3.insert(0, "pdf mobi")
 
@@ -125,10 +122,7 @@ class DisplayDetails(Dialog):
     old_urgency = int(self.script_info[3])
     old_tags = str(self.script_info[4])
     old_read = str(self.script_info[5])
-    # script_name = self.argv
     self.malware_report = self.argv2
-    # self.scan_report = {}
-    # if self.malware_report == []:
     self.scan_report = self.malware_report['scans']
     self.table_data = []
     self.detected_number = 0
@@ -141,34 +135,11 @@ class DisplayDetails(Dialog):
       element_date.append(self.scan_report[key]['update'])
       if str(self.scan_report[key]['detected']) == 'True':
         self.detected_number = self.detected_number + 1
-
       self.table_data.append(element_date)
 
-    # print("In DisplayDetails.",self.table_data )
 
     self.file_info = tk.Frame(master, width=300, height=30)
-    # self.detection = tk.Frame(self.file_info, width=300)
-    # self.search1_frame = tk.Frame(self.search_frame, width=180)
-    # self.search2_frame = tk.Frame(self.search_frame, width=180)
-    # self.button_frame= tk.Frame(self.func_frame, width=120)
-
     self.file_info.pack(side="top", fill="both", expand=True)
-    # Label(file_info, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
-    # Label(file_info, text='Importance(1~5): ').grid(row=1,sticky=E)
-    # Label(file_info, text='Urgency(1~5): ').grid(row=2,sticky=E)
-    # Label(file_info, text='Tags: ').grid(row=3,sticky=E)
-    # Label(file_info, text='Read(y/n): ').grid(row=4,sticky=E)
-    # self.file_info = tk.Frame(master, width=300, height=30)
-    # self.search_frame = tk.Frame(self.func_frame, width=300)
-    # self.search1_frame = tk.Frame(self.search_frame, width=180)
-    # self.search2_frame = tk.Frame(self.search_frame, width=180)
-    # self.button_frame= tk.Frame(self.func_frame, width=120)
-
-    # self.search1_frame.pack(side="top", fill="both",expand=True)
-    # self.search2_frame.pack(side="top", fill="both",expand=True)
-
-    # self.entryBox = tk.Entry(self.search1_frame, width=60, font=LARGEFONT)
-    # self.entryBox.pack(padx=10, pady=10,anchor="s")
 
     Label(
         self.file_info, text=script_name, font=MIDFONT).grid(
@@ -203,8 +174,6 @@ class DisplayDetails(Dialog):
     e2.grid(row=1, column=3)
     e4.grid(row=1, column=5)
     e3.grid(row=2, column=1)
-    # self.display_frame = tk.Frame(master, width=300, height=30)
-    # self.display_frame.pack_propagate(0)
 
     tree_columns = ("a", "b", "c", "d", "e")
     self.table_frame = tk.Frame(master, width=600)
@@ -220,15 +189,11 @@ class DisplayDetails(Dialog):
     self.tree.column("c", width=50, anchor="center")
     self.tree.column("d", width=50, anchor="center")
     self.tree.column("e", width=100, anchor="center")
-    # self.tree.column("g", width=50, anchor="center")
-    # self.tree.column("h", width=50, anchor="center")
     self.tree.heading("a", text="Company")
     self.tree.heading("b", text="Result")
     self.tree.heading("c", text="Detected")
     self.tree.heading("d", text="Version")
     self.tree.heading("e", text="Update")
-    # self.tree.heading("g", text="Read")
-    # self.tree.heading("h", text="Date")
     self.vbar.pack(side="right", fill="y")
     self.tree.pack(side="left", fill="both", expand=True)
     for col in tree_columns:
@@ -237,85 +202,14 @@ class DisplayDetails(Dialog):
           command=
           lambda _col=col: self.treeview_sort_column(self.tree, _col, False))
 
-    # Create the serch mode Button
-    # label_text = tk.Label(self.search2_frame, text="Search Mode: ")
-    # label_text.pack(padx=10,side="left",anchor="n")
-    # radioButton_1 = tk.Radiobutton(self.search2_frame, text ="Name",
-    #                                variable = 1, value = 1)
-    # radioButton_1.pack(side="left",anchor="n")
-    # radioButton_2 = tk.Radiobutton(self.search2_frame, text ="Tags",
-    #                                variable = 2, value = 2)
-    # radioButton_2.pack(side="left",anchor="n")
-    # # radioButton_3 = tk.Radiobutton(self.search2_frame, text ="Nums",
-    # #                                variable = self.search_mode, value = 3)
-    # # radioButton_3.pack(side="left",anchor="n")
-    # radioButton_4 = tk.Radiobutton(self.search2_frame, text ="ID",
-    #                                variable = 3, value = 4)
-    # radioButton_4.pack(side="left",anchor="n")
-    # search_button = tk.Button(self.button_frame, text="Search", width=20)
-    # search_button.pack(padx=10,pady=10,anchor="s")
-
-    # self.display_frame = tk.Frame(master, width=300, height=30)
-    # self.display_frame.pack_propagate(0)
-
-    # self.search_frame.pack(side=LEFT, fill="both")
-    # self.button_frame.pack(side=RIGHT, fill ="both")
     self.update_scripts_table(self.table_data)
     self.file_info.grid(row=0, column=0, rowspan=2, columnspan=2, sticky="ew")
     self.table_frame.grid(row=2, column=0, columnspan=2, sticky="nsew")
     master.grid_rowconfigure(1, weight=1)
     master.grid_columnconfigure(1, weight=1)
     self.update_scripts_table(self.table_data)
-    # return self.script_info
-
-    # Label(master, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
-    # Label(master, text='Importance(1~5): ').grid(row=1,sticky=E)
-    # Label(master, text='Urgency(1~5): ').grid(row=2,sticky=E)
-    # Label(master, text='Tags: ').grid(row=3,sticky=E)
-    # Label(master, text='Read(y/n): ').grid(row=4,sticky=E)
-
-    # self.script_info = self.argv
-    # self.e1 = Entry(master)
-    # self.e2 = Entry(master)
-    # self.e3 = Entry(master)
-    # self.e4 = Entry(master)
-    # if self.argv2 == 1:
-    #   self.e1.insert(0, old_importance)
-    #   self.e2.insert(0, old_urgency)
-    #   self.e3.insert(0, old_tags)
-    #   self.e4.insert(0, old_read)
-
-    # self.e1.grid(row=1, column=1)
-    # self.e2.grid(row=2, column=1)
-    # self.e3.grid(row=3, column=1)
-    # self.e4.grid(row=4, column=1)
-    # return self.e1 # initial focus
-
-  # def validate(self):
-  #   try:
-  #     importance = int(self.e1.get().strip())
-  #     urgency = int(self.e2.get().strip())
-  #     tags = str(self.e3.get().strip())
-  #     read_state = str(self.e4.get().strip())
-  #     if importance < 1 or importance >5:
-  #       raise ValueError("OutOfRange")
-  #     if urgency < 1 or urgency >5:
-  #       raise ValueError("OutOfRange")
-  #     if self.argv2 == 1:
-  #       self.result = [self.script_id, importance, urgency, tags, read_state]
-  #     else:
-  #       self.result = [importance, urgency, tags, read_state]
-  #     self.res_nums = len(self.result)
-  #     return 1
-  #   except ValueError:
-  #     tkinter.messagebox.showwarning(
-  #       "Bad input",
-  #       "Illegal values, please try again"
-  #     )
-  #     return 0
 
   def update_scripts_table(self, recs):
-    # print("In Update Table",recs)
     def prettify_one(rec):
       one_row = [str(rec[0]), str(rec[1]), str(rec[2]), str(rec[3]), rec[4]]
       one_row = [item for item in one_row]
@@ -408,8 +302,6 @@ class EditScriptDialog(Dialog):
 class View(object):
   def __init__(self, controller):
     self.root = tk.Tk()
-    # self.root.iconbitmap(default=".\\task_tracker.ico")
-
     self.controller = controller
     self.root.bind('<Escape>', lambda event: self.controller.quit())
     self.search_mode = tk.StringVar()
@@ -831,9 +723,10 @@ class View(object):
       return False
     else:
       script_num = self.script_info[0]
-
-      script_out_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
-      graph_dir = os.path.join(os.getcwd(), ".cache/")
+      script_out_dir = os.path.join(
+          os.getcwd(), self.appdata['path']['dataset']['nodeinfo'])
+      graph_dir = os.path.join(os.getcwd(),
+                               self.appdata['path']['output']['graphpdf'])
       script_path = self.controller.get_script_path_by_nums(script_num)
       file_name = os.path.basename(os.path.normpath(script_path))
       node_name = file_name[:-3] + ".node"

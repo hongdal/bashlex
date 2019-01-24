@@ -138,7 +138,7 @@
     of while condition and its body. 
 
 '''  
-from scriptdata import ScriptData
+from include.scriptdata import ScriptData
 
 NON_COMMAND = ""
 
@@ -650,7 +650,7 @@ class TreeVisitor:
             elif "ListNode" == child.data.kind or "CompoundNode" == child.data.kind or \
                 "IfNode" == child.data.kind or "WhileNode" == child.data.kind or \
                 "ForNode" == child.data.kind or "CommandNode" == child.data.kind or \
-                "CommandsubstitutionNode" == child.data.kind or "PipelineNode" == child.data.kind:
+                "CommandsubstitutionNode" == child.data.kind or "PipelineNode" == child.data.kiinclude.nd:
                 return False
             else:
                 continue
@@ -667,9 +667,10 @@ class TreeVisitor:
         command = command.replace(r'"', r'\"')
         command = command.replace(r'[', r'\[')
         command = command.replace(r']', r'\]')
-        # handle unknow commands 
+        # handle unknow commands
+        # print(command)
         if False == self.command_detector.isLinuxCommand(command):
-            command = NON_COMMAND
+            command = "BINARY_COMMAND"
         node.data.label = command
 
 

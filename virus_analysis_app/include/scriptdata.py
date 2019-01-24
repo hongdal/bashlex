@@ -21,10 +21,12 @@ class ScriptData(object):
       self.pattern_word = re.compile(r'word=[^\)]*')
       self.pattern_value = re.compile(r'\'[^\']*')
       self.loaddict()
-    
+
     def isLinuxCommand(self, command):
+      command = command.strip()
       temp = command.split(' ')[0]
       temp = temp.split('/')[-1]
+      # print("ISLINUXCOMMAND: ", temp)
       if temp in self.commands_dict:
         return temp
       else:

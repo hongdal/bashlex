@@ -8,6 +8,15 @@
   <large type="Arial" size="12"/>
 </font>
 
+<path>
+  <dataset>
+    <nodeinfo>dataset/nodeData/</nodeinfo>
+  </dataset>
+  <output>
+    <graphdot>.cache/graph_dot</graphdot>
+    <graphpdf>.cache/graph_pdf</graphpdf>
+  </output>
+</path>
 
 <menuBar>
   <file title="File">
