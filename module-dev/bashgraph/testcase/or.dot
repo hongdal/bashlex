@@ -1,6 +1,7 @@
 digraph {
 2 [label=" cd /tmp"];
-2 -> 6;
 6 [label=" cd /root"];
+10 [label=" cd /"];
+2 -> 6;
 6 -> 10;
 }

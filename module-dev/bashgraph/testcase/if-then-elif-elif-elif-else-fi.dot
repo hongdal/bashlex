@@ -1,7 +1,24 @@
 digraph {
 5 [label=" \[ -z $1 \]"];
+13 [label=" ls"];
+17 [label=" \[ $2 -gt 2 \]"];
+26 [label=" assignment=$1"];
+32 [label=" \[ $3 -lt 3 \]"];
+45 [label=" ls"];
+51 [label=" ls"];
+57 [label=" ls"];
+63 [label=" \[ $4 -ne 4 \]"];
+73 [label=" ls"];
+76 [label=" ls"];
+79 [label=" ls"];
+88 [label=" \[ 1 \]"];
+95 [label=" ls"];
+98 [label=" ls"];
+101 [label=" ls"];
+110 [label=" \[ 2 \]"];
+117 [label=" cat"];
+120 [label=" cat"];
 5 -> 13;
 5 -> 17;
-17 [label=" \[ $2 -gt 2 \]"];
 17 -> 26;
 }

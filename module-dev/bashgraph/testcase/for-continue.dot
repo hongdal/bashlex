@@ -1,19 +1,19 @@
 digraph {
-29 [label=" continue"];
-29 -> 20;
 4 [label=" ls"];
-4 -> 20;
+20 [label=" \[ $name != some-file \]"];
+29 [label=" continue"];
+33 [label=" ORIG=$name"];
+41 [label=" echo $name"];
+46 [label=" tr A-Z a-z"];
+51 [label=" mv $ORIG $NEW"];
 58 [label=" echo new name for $ORIG is $NEW"];
 58 -> 20;
-20 [label=" \[ $name != some-file \]"];
+29 -> 20;
+4 -> 20;
 20 -> 29;
 20 -> 33;
-33 [label=" ORIG=$name"];
 33 -> 41;
-41 [label=" echo $name"];
 41 -> 46;
-46 [label=" tr A-Z a-z"];
 46 -> 51;
-51 [label=" mv $ORIG $NEW"];
 51 -> 58;
 }
