@@ -28,7 +28,11 @@ class ScriptData(object):
       temp = temp.split('/')[-1]
       # print("ISLINUXCOMMAND: ", temp)
       if temp in self.commands_dict:
-        return temp
+        if "category" in self.commands_dict[temp]:
+          pass
+          # print("COMMAND: ", temp, "Category: ", self.commands_dict[temp]["category"])
+        else:
+          print("No Category: ", temp)
       else:
         return False
 

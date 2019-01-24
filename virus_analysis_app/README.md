@@ -28,3 +28,18 @@ I like to use VS Code application to write python code when I am working. I writ
 
 I hope you like this application. Please feel free to send Email to me if you have some issues with this application.
 > Email: guoze.work@gmail.com
+No Category:  service
+No Category:  apt-get
+No Category:  declare
+No Category:  as
+No Category:  yum
+No Category:  usermod
+No Category:  chattr
+No Category:  stat
+No Category:  sysctl
+No Category:  userdel
+No Category:  lsb_release
+No Category:  test
+No Category:  man
+No Category:  id
+No Category:  expr

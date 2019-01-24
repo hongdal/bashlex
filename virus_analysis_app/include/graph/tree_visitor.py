@@ -650,7 +650,7 @@ class TreeVisitor:
             elif "ListNode" == child.data.kind or "CompoundNode" == child.data.kind or \
                 "IfNode" == child.data.kind or "WhileNode" == child.data.kind or \
                 "ForNode" == child.data.kind or "CommandNode" == child.data.kind or \
-                "CommandsubstitutionNode" == child.data.kind or "PipelineNode" == child.data.kiinclude.nd:
+                "CommandsubstitutionNode" == child.data.kind or "PipelineNode" == child.data.kind:
                 return False
             else:
                 continue

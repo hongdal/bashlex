@@ -358,6 +358,13 @@ class View(object):
     editmenu.add_command(
         label="Script Detail", command=self.open_virustotal_detail)
     menubar.add_cascade(label="Edit", menu=editmenu)
+  
+    toolsmenu = tk.Menu(menubar, tearoff=0)
+    toolsmenu.add_command(
+        label=menubar_data['tools']['generatepdf'], command=self.generate_all_graph)
+    toolsmenu.add_command(
+        label=menubar_data['tools']['generatedot'], command=self.new_rep)
+    menubar.add_cascade(label=menubar_data['tools']['title'], menu=toolsmenu)
     # Create the help button in the Menu
     helpmenu = Menu(menubar, tearoff=0)
     helpmenu.add_command(label="Introduce...", command=self.show_introduce)
@@ -461,12 +468,8 @@ class View(object):
     if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
     else:
-      # print(self.script_info)
       names = self.script_info[1]
-      # print(self.script_info)
-      # print(names)
       self.malware_report = self.controller.get_malware_report(names)
-      # print(self.malware_report)
       self.controller.get_malware_detail(self.script_info)
 
   def editScript(self):
@@ -735,6 +738,14 @@ class View(object):
 
       if graph_file_path and os.path.exists(graph_file_path):
         subprocess.call("evince -w " + str(graph_file_path), shell=True)
+
+  def generate_all_graph(self):
+    node_dir = os.path.join(
+        os.getcwd(), self.appdata['path']['dataset']['nodeinfo'])
+    graph_dir = os.path.join(os.getcwd(),
+                              self.appdata['path']['output']['graphpdf'])
+    self.controller.generate_allscripts_graph(node_dir,graph_dir)
+
 
   def show_introduce(self):
     tkinter.messagebox.showinfo(

@@ -13,8 +13,8 @@
     <nodeinfo>dataset/nodeData/</nodeinfo>
   </dataset>
   <output>
-    <graphdot>.cache/graph_dot</graphdot>
-    <graphpdf>.cache/graph_pdf</graphpdf>
+    <graphdot>.cache/graph</graphdot>
+    <graphpdf>.cache/graph</graphpdf>
   </output>
 </path>
 
@@ -25,6 +25,11 @@
     <deleteRepo>Delete Repository...</deleteRepo>
     <update>Update Repo Data</update>
   </file>
+  <tools title="Tools">
+    <generatepdf>Generate All Commands Graph</generatepdf>
+    <generatedot>Generate All Commands Dot</generatedot>
+    <updatescripts>Update Scripts Info</updatescripts>
+  </tools>
   <edit>
     <editInfo>Edit Infomation</editInfo>
   </edit>
