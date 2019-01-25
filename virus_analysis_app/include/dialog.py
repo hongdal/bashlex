@@ -8,6 +8,7 @@ LARGEFONT = ('Arial', 12)
 WIDTH = 50
 HEIGHT = 10
 
+
 class Dialog(Toplevel):
   """Tk Dialog for class view to use
 
@@ -165,6 +166,159 @@ class SelectRepDialog(Dialog):
     self.res_nums = len(self.result)
 
 
+class DisplayCommandsCount(Dialog):
+  def body(self, master):
+
+    self.script_info = self.argv
+    self.script_commands = self.argv2
+    size_commands = len(self.script_commands)
+    if self.script_info == None :
+       script_name = "All Bash Scripts Commands Count: " + str(size_commands)
+    else:
+      script_name = "Script Name: " + self.script_info
+
+
+    self.file_info = tk.Frame(master, width=600, height=30)
+    self.file_info.pack(side="top", fill="both", expand=True)
+
+    Label(
+        self.file_info, text=script_name, font=MIDFONT).grid(
+            row=0, columnspan=2, sticky=W)
+
+    tree_columns = ("a", "b")
+    self.table_frame = tk.Frame(master, width=600)
+    self.tree = ttk.Treeview(
+        self.table_frame, show="headings", height=20, columns=tree_columns)
+    self.vbar = tk.Scrollbar(
+        self.table_frame, orient=VERTICAL, command=self.tree.yview)
+    self.tree.configure(yscrollcommand=self.vbar.set)
+    self.vbar.config(command=self.tree.yview)
+    self.tree.configure(yscrollcommand=self.vbar.set)
+    self.tree.column("a", width=200, anchor="center")
+    self.tree.column("b", width=300, anchor="center")
+    self.tree.heading("a", text="Command")
+    self.tree.heading("b", text="Count")
+    self.vbar.pack(side="right", fill="y")
+    self.tree.pack(side="left", fill="both", expand=True)
+    for col in tree_columns:
+      self.tree.heading(
+          col,
+          command=
+          lambda _col=col: self.treeview_sort_column(self.tree, _col, False))
+
+    self.update_scripts_table(self.script_commands)
+    self.file_info.grid(row=0, column=0, columnspan=2, sticky="ew")
+    self.table_frame.grid(row=1, column=0, columnspan=2, sticky="nsew")
+    master.grid_rowconfigure(1, weight=1)
+    master.grid_columnconfigure(1, weight=1)
+    self.update_scripts_table(self.script_commands)
+
+  def update_scripts_table(self, recs):
+    def prettify_one(rec):
+      one_row = [str(rec[0]), rec[1]]
+      one_row = [item for item in one_row]
+      return one_row
+
+    recs_t = [prettify_one(rec) for rec in recs]
+    for _ in map(self.tree.delete, self.tree.get_children("")):
+      pass
+    self.script_nums = len(recs_t)
+    for i in range(len(recs_t)):
+      self.tree.insert(
+          "",
+          "end",
+          values=(recs_t[i][0], recs_t[i][1]))
+
+  def treeview_sort_column(self, tv, col, reverse):
+    l = [(tv.set(k, col), k) for k in tv.get_children('')]
+    l.sort(reverse=reverse)
+    for index, (val, k) in enumerate(l):
+      tv.move(k, '', index)
+    tv.heading(
+        col, command=lambda: self.treeview_sort_column(tv, col, not reverse))
+
+  def apply(self):
+    return False
+
+
+
+class DisplayCommandsClass(Dialog):
+  def body(self, master):
+
+    self.script_info = self.argv
+    self.script_commands = self.argv2
+    # print(self.script_commands)
+    size_commands = len(self.script_commands)
+    if self.script_info == None :
+       script_name = "All Bash Scripts Commands Count: " + str(size_commands)
+    else:
+      script_name = "Script Name: " + self.script_info
+
+
+    self.file_info = tk.Frame(master, width=600, height=30)
+    self.file_info.pack(side="top", fill="both", expand=True)
+
+    Label(
+        self.file_info, text=script_name, font=MIDFONT).grid(
+            row=0, columnspan=2, sticky=W)
+
+    tree_columns = ("a", "b", "c")
+    self.table_frame = tk.Frame(master, width=600)
+    self.tree = ttk.Treeview(
+        self.table_frame, show="headings", height=20, columns=tree_columns)
+    self.vbar = tk.Scrollbar(
+        self.table_frame, orient=VERTICAL, command=self.tree.yview)
+    self.tree.configure(yscrollcommand=self.vbar.set)
+    self.vbar.config(command=self.tree.yview)
+    self.tree.configure(yscrollcommand=self.vbar.set)
+    self.tree.column("a", width=150, anchor="center")
+    self.tree.column("b", width=200, anchor="center")
+    self.tree.column("c", width=150, anchor="center")
+    self.tree.heading("a", text="Command")
+    self.tree.heading("b", text="Count")
+    self.tree.heading("c", text="Category")
+    self.vbar.pack(side="right", fill="y")
+    self.tree.pack(side="left", fill="both", expand=True)
+    for col in tree_columns:
+      self.tree.heading(
+          col,
+          command=
+          lambda _col=col: self.treeview_sort_column(self.tree, _col, False))
+
+    self.update_scripts_table(self.script_commands)
+    self.file_info.grid(row=0, column=0, columnspan=2, sticky="ew")
+    self.table_frame.grid(row=1, column=0, columnspan=2, sticky="nsew")
+    master.grid_rowconfigure(1, weight=1)
+    master.grid_columnconfigure(1, weight=1)
+    self.update_scripts_table(self.script_commands)
+
+  def update_scripts_table(self, recs):
+    def prettify_one(rec):
+      one_row = [str(rec[0]), str(rec[1]), str(rec[2])]
+      one_row = [item for item in one_row]
+      return one_row
+
+    recs_t = [prettify_one(rec) for rec in recs]
+    for _ in map(self.tree.delete, self.tree.get_children("")):
+      pass
+    self.script_nums = len(recs_t)
+    for i in range(len(recs_t)):
+      self.tree.insert(
+          "",
+          "end",
+          values=(recs_t[i][0], recs_t[i][1], recs_t[i][2]))
+
+  def treeview_sort_column(self, tv, col, reverse):
+    l = [(tv.set(k, col), k) for k in tv.get_children('')]
+    l.sort(reverse=reverse)
+    for index, (val, k) in enumerate(l):
+      tv.move(k, '', index)
+    tv.heading(
+        col, command=lambda: self.treeview_sort_column(tv, col, not reverse))
+
+  def apply(self):
+    return False
+
 class DisplayDetails(Dialog):
   def body(self, master):
 
@@ -189,7 +343,6 @@ class DisplayDetails(Dialog):
       if str(self.scan_report[key]['detected']) == 'True':
         self.detected_number = self.detected_number + 1
       self.table_data.append(element_date)
-
 
     self.file_info = tk.Frame(master, width=300, height=30)
     self.file_info.pack(side="top", fill="both", expand=True)
@@ -350,7 +503,6 @@ class EditScriptDialog(Dialog):
 
   def apply(self):
     pass
-
 
 
 if __name__ == '__main__':

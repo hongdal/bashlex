@@ -207,11 +207,24 @@ class Manager_Script(object):
   def getAllCommands(self, dir_path):
     # print(in_file)
     script_commands = self.script_data.getAllCommands(dir_path)
-    self.save_json_info(self.json_path, script_commands)
-    all_linux_commands = self.script_data.getSortedCommandsDict()
-    print(all_linux_commands)
-    self.save_json_info(self.json_path, all_linux_commands)
+    # self.save_json_info(self.json_path, script_commands)
+    # all_linux_commands = self.script_data.getSortedCommandsDict()
+    # print(all_linux_commands)
+    # self.save_json_info(self.json_path, all_linux_commands)
     return script_commands
+
+  def getAllLinuxCommands(self, dir_path):
+    # print(in_file)
+    script_commands = self.script_data.getAllCommands(dir_path)
+    # self.save_json_info(self.json_path, script_commands)
+    all_linux_commands = self.script_data.getSortedCommandsDict()
+    # print(all_linux_commands)
+    # for command in all_linux_commands:
+    #   command_class = self.script_data.getCommandsClass(command[0])
+    #   command.add(command_class)
+    # print(all_linux_commands)
+    # self.save_json_info(self.json_path, all_linux_commands)
+    return all_linux_commands
 
   def traverse_scripts(self, fa_path):
     # pre-ordered depth-first search for every script ends with 'supported suffix

@@ -82,6 +82,8 @@ class View(object):
     editmenu.add_command(
         label="Show All Command Count", command=self.show_all_command_count)
     editmenu.add_command(
+        label="Show All Linux Command Count", command=self.show_all_linux_command_count)
+    editmenu.add_command(
         label="Show Command Count", command=self.show_command_count)
     editmenu.add_command(
         label="Open Script Code", command=self.open_source_code)
@@ -101,6 +103,7 @@ class View(object):
     # Create the help button in the Menu
     helpmenu = Menu(menubar, tearoff=0)
     helpmenu.add_command(label="Introduce...", command=self.show_introduce)
+    helpmenu.add_command(label="Linux Command Classify", command=self.show_introduce)
     helpmenu.add_separator()
     helpmenu.add_command(label="About", command=self.show_about)
     menubar.add_cascade(label="Help", menu=helpmenu)
@@ -424,23 +427,44 @@ class View(object):
       result_str = ""
       for i in script_commands:
         result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+      self.display_commands_count(script_commands, file_name)
 
-      tkinter.messagebox.showinfo("Command Count", result_str)
-
-  def show_all_command_count(self):
-    script_num = None
-    if len(self.script_info) == 0:
-      self.show_err("Please Choose one script firstly.")
+      # tkinter.messagebox.showinfo("Command Count", result_str)
+  
+  def display_commands_count(self, script_commands, script_name = None):
+    resDialog = DisplayCommandsCount(self.root, 'Commands Count',
+                               script_name, script_commands)
+    if resDialog.result is None:
       return False
     else:
-      script_num = self.script_info[0]
-      count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
-      script_commands = self.controller.get_all_commands(count_dir)
+      return resDialog.result
+  def display_commands_count_class(self, script_commands, script_name = None):
+    resDialog = DisplayCommandsClass(self.root, 'Commands Count',
+                               script_name, script_commands)
+    if resDialog.result is None:
+      return False
+    else:
+      return resDialog.result
 
-      result_str = ""
-      for i in script_commands:
-        result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
-      tkinter.messagebox.showinfo("Command Count", result_str)
+
+  def show_all_command_count(self):
+    count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    script_commands = self.controller.get_all_commands(count_dir)
+
+    result_str = ""
+    for i in script_commands:
+      result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    self.display_commands_count(script_commands)
+      # tkinter.messagebox.showinfo("Command Count", result_str)
+
+  def show_all_linux_command_count(self):
+    count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    script_commands = self.controller.get_all_linux_commands(count_dir)
+
+    result_str = ""
+    for i in script_commands:
+      result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    self.display_commands_count_class(script_commands)
 
   def open_source_code(self):
     script_num = None

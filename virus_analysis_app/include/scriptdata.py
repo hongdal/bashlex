@@ -22,17 +22,39 @@ class ScriptData(object):
       self.pattern_value = re.compile(r'\'[^\']*')
       self.loaddict()
 
-    def isLinuxCommand(self, command):
+    def getCommandsClass(self, command):
       command = command.strip()
       temp = command.split(' ')[0]
       temp = temp.split('/')[-1]
       # print("ISLINUXCOMMAND: ", temp)
       if temp in self.commands_dict:
         if "category" in self.commands_dict[temp]:
-          pass
-          # print("COMMAND: ", temp, "Category: ", self.commands_dict[temp]["category"])
+          return self.commands_dict[temp]["category"]
         else:
-          print("No Category: ", temp)
+          return "Others"
+  
+        # if "category" in self.commands_dict[temp]:
+        #   pass
+        #   # print("COMMAND: ", temp, "Category: ", self.commands_dict[temp]["category"])
+        # else:
+        #   print("No Category: ", temp)
+      
+      else:
+        return False
+
+    def isLinuxCommand(self, command):
+      command = command.strip()
+      temp = command.split(' ')[0]
+      temp = temp.split('/')[-1]
+      # print("ISLINUXCOMMAND: ", temp)
+      if temp in self.commands_dict:
+        return self.commands_dict[temp]
+        # if "category" in self.commands_dict[temp]:
+        #   pass
+        #   # print("COMMAND: ", temp, "Category: ", self.commands_dict[temp]["category"])
+        # else:
+        #   print("No Category: ", temp)
+      
       else:
         return False
 
@@ -45,7 +67,8 @@ class ScriptData(object):
       backitems.sort(reverse=True)
       res = []
       for i in range(0,len(backitems)):
-        tup = (backitems[i][1], backitems[i][0])
+        command_class = self.getCommandsClass(backitems[i][1])
+        tup = (backitems[i][1], backitems[i][0], command_class)
         res.append(tup)
       #temp = sorted(self.linux_commands_dict.items(), lambda x, y: cmp(x[1], y[1]), reverse=True) 
       return res
@@ -94,11 +117,11 @@ class ScriptData(object):
       for command in total_commands:
         # if (self.isLinuxCommand(command))
         temp = command[0].split('/')[-1]
+        # print(temp)
         if self.isLinuxCommand(temp):
-        # if temp in self.commands_dict:
-          if temp not in self.linux_commands_dict:
-            self.linux_commands_dict[temp] = command[1]
-      print(self.linux_commands_dict)
+          # if temp not in self.linux_commands_dict:
+          self.linux_commands_dict[temp] = command[1]
+      return self.linux_commands_dict
 
     def getAllCommands(self, dir_path):
       self.commands_counter.clear()
@@ -113,7 +136,7 @@ class ScriptData(object):
 
       total_commands = self.commands_counter.most_common()
       self.buildCommandsDict(total_commands)
-      print(len(self.linux_commands_dict))
+      # print(len(self.linux_commands_dict))
       return total_commands
 
   instance = None
