@@ -140,7 +140,7 @@
   "basename": {
     "n": "basename",
     "p": "/basename",
-    "category": "Filesystem",
+    "category": "filesystem",
     "d": "打印目录或者文件的基本名称"
   },
   "batch": {
@@ -503,7 +503,7 @@
   "dirname": {
     "n": "dirname",
     "p": "/dirname",
-    "category": "Filesystem",
+    "category": "filesystem",
     "d": "去除文件名中的非目录部分"
   },
   "dirs": {
@@ -1398,7 +1398,7 @@
   "lsof": {
     "n": "lsof",
     "p": "/lsof",
-    "category": "Filesystem",
+    "category": "filesystem",
     "d": "显示Linux系统当前已打开的所有文件列表 `lsof -p pid`"
   },
   "lspci": {
@@ -1543,7 +1543,7 @@
   "mktemp": {
     "n": "mktemp",
     "p": "/mktemp",
-    "category": "Filesystem",
+    "category": "filesystem",
     "d": "创建临时文件供shell脚本使用"
   },
   "modprobe": {

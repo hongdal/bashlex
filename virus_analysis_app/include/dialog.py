@@ -303,6 +303,7 @@ class DisplayCommandsClass(Dialog):
       pass
     self.script_nums = len(recs_t)
     for i in range(len(recs_t)):
+      # print(i, " | ", recs_t[i][0], " | ", recs_t[i][1], " | ", recs_t[i][2])
       self.tree.insert(
           "",
           "end",

@@ -669,7 +669,7 @@ class TreeVisitor:
         command = command.replace(r']', r'\]')
         # handle unknow commands
         # print(command)
-        if False == self.command_detector.isLinuxCommand(command):
+        if False == self.command_detector.inquiryCommandInfo(command):
             command = "BINARY_COMMAND"
         node.data.label = command
 
