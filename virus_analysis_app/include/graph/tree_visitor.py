@@ -153,7 +153,8 @@ class TreeVisitor:
         self.cfg = {}
         self.command_detector = ScriptData() 
         self.downloaded_set = set([])
-        self.complexity_set = set([])
+        self.tag_set = set([])
+        self.bad_graph = False
 
 
     def make_cfg(self):
@@ -364,7 +365,7 @@ class TreeVisitor:
             print("If-else condition and body mismatch\n")
             exit(1)
 
-        self.complexity_set.add("if")
+        self.tag_set.add("if")
 
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
@@ -498,7 +499,7 @@ class TreeVisitor:
         first_body = None
         continues_from_children = set([])
         node.data.continues = set([])
-        self.complexity_set.add("for")
+        self.tag_set.add("for")
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
         # 3) compute the continues of all the children 
@@ -566,7 +567,7 @@ class TreeVisitor:
             print("Bad WhileNode: lenght=%d\n" % len(node.children))
             exit(1) 
 
-        self.complexity_set.add("while")
+        self.tag_set.add("while")
 
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
@@ -632,7 +633,11 @@ class TreeVisitor:
             self.visit_pipeline_node(node)
         else:
             print("Unknown kind:%s" % kind)
-            exit(2)
+            self.bad_graph = True
+            if "FunctionNode" == kind:
+                self.tag_set.add("function")
+            elif "CaseNode" == kind:
+                self.tag_set.add("case")
 
 
     def dump_tree(self):

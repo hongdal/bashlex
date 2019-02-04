@@ -172,16 +172,17 @@ class Manager_Script(object):
     orig_stdout = sys.stdout
     g = BashGraph()
     g.load_file(in_file)
-    g.make_graph()
-    sys.stdout = open(dot_tmp_file, "w")
-    g.print_graph()
-    sys.stdout = orig_stdout
-    command = ['dot', '-Tpdf', dot_tmp_file, '-o', pdf_tmp_file]
-    subprocess.check_call(command)
+    if g.make_graph():
+      sys.stdout = open(dot_tmp_file, "w")
+      g.print_graph()
+      sys.stdout = orig_stdout
+      command = ['dot', '-Tpdf', dot_tmp_file, '-o', pdf_tmp_file]
+      subprocess.check_call(command)
     # command = ['rm', '-rf', tmp_dir]
     # subprocess.call(command,shell=True)
     # subprocess.check_call(command)
-    return pdf_tmp_file
+      return pdf_tmp_file
+    return False
 
   def save_json_info(self, file_path, information):
     # save user data
