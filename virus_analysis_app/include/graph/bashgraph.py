@@ -148,8 +148,9 @@ class BashGraph:
     def print_graph(self):
         if None == self.visitor:
             print("AST is not retrieved, use make_graph() first.")
-            return
+            return False
         self.visitor.print_cfg()
+        return True
 
 
     def get_graph(self):
