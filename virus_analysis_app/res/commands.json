@@ -17,6 +17,7 @@
   "alias": {
     "n": "alias",
     "p": "/alias",
+    "category": "basic shell",
     "d": "用来设置指令的别名"
   },
   "apachectl": {
@@ -72,6 +73,7 @@
   "arp": {
     "n": "arp",
     "p": "/arp",
+    "category": "network",
     "d": "显示和修改IP到MAC转换表"
   },
   "arpd": {
@@ -122,6 +124,7 @@
   "awk": {
     "n": "awk",
     "p": "/awk",
+    "category": "Text processing",
     "d": "文本和数据进行处理的编程语言"
   },
   "axel": {
@@ -137,6 +140,7 @@
   "basename": {
     "n": "basename",
     "p": "/basename",
+    "category": "filesystem",
     "d": "打印目录或者文件的基本名称"
   },
   "batch": {
@@ -152,6 +156,7 @@
   "bg": {
     "n": "bg",
     "p": "/bg",
+    "category": "process management",
     "d": "用于将作业放到后台运行"
   },
   "bind": {
@@ -182,6 +187,7 @@
   "bunzip2": {
     "n": "bunzip2",
     "p": "/bunzip2",
+    "category": "compression",
     "d": "创一个bz2文件压缩包"
   },
   "bye": {
@@ -212,6 +218,7 @@
   "bzip2": {
     "n": "bzip2",
     "p": "/bzip2",
+    "category": "compression",
     "d": "将文件压缩成bz2格式"
   },
   "bzip2recover": {
@@ -232,6 +239,7 @@
   "cal": {
     "n": "cal",
     "p": "/cal",
+    "category": "system information",
     "d": "显示当前日历或指定日期的日历"
   },
   "cancel": {
@@ -242,11 +250,13 @@
   "cat": {
     "n": "cat",
     "p": "/cat",
+    "category": "file examination",
     "d": "连接文件并打印到标准输出设备上"
   },
   "cd": {
     "n": "cd",
     "p": "/cd",
+    "category": "directories",
     "d": "切换用户当前工作目录"
   },
   "cdrecord": {
@@ -277,6 +287,7 @@
   "chgrp": {
     "n": "chgrp",
     "p": "/chgrp",
+    "category": "file permissions",
     "d": "用来变更文件或目录的所属群组"
   },
   "chkconfig": {
@@ -287,11 +298,13 @@
   "chmod": {
     "n": "chmod",
     "p": "/chmod",
+    "category": "file permissions",
     "d": "用来变更文件或目录的权限"
   },
   "chown": {
     "n": "chown",
     "p": "/chown",
+    "category": "file permissions",
     "d": "用来变更文件或目录的拥有者或所属群组"
   },
   "chpasswd": {
@@ -317,7 +330,9 @@
   "clear": {
     "n": "clear",
     "p": "/clear",
-    "d": "清除当前屏幕终端上的任何信息"
+    "d": "清除当前屏幕终端上的任何信息",
+    "category": "basic shell",
+    "description": "clear all previous commands' output text from the terminal"
   },
   "clock": {
     "n": "clock",
@@ -372,6 +387,7 @@
   "cp": {
     "n": "cp",
     "p": "/cp",
+    "category": "file operations",
     "d": "将源文件或目录复制到目标文件或目录中"
   },
   "cpio": {
@@ -382,6 +398,7 @@
   "crontab": {
     "n": "crontab",
     "p": "/crontab",
+    "category": "miscellaneous",
     "d": "提交和管理用户的需要周期性执行的任务"
   },
   "csplit": {
@@ -407,16 +424,19 @@
   "curl": {
     "n": "curl",
     "p": "/curl",
+    "category": "network",
     "d": "利用URL规则在命令行下工作的文件传输工具"
   },
   "cut": {
     "n": "cut",
     "p": "/cut",
+    "category": "Shell Programming",
     "d": "连接文件并打印到标准输出设备上"
   },
   "date": {
     "n": "date",
     "p": "/date",
+    "category": "system information",
     "d": "显示或设置系统时间与日期"
   },
   "dd": {
@@ -457,6 +477,7 @@
   "diff": {
     "n": "diff",
     "p": "/diff",
+    "category": "file examination",
     "d": "比较给定的两个文件的不同"
   },
   "diff3": {
@@ -482,6 +503,7 @@
   "dirname": {
     "n": "dirname",
     "p": "/dirname",
+    "category": "filesystem",
     "d": "去除文件名中的非目录部分"
   },
   "dirs": {
@@ -577,6 +599,7 @@
   "du": {
     "n": "du",
     "p": "/du",
+    "category": "file examination",
     "d": "显示每个文件和目录的磁盘使用空间"
   },
   "dump": {
@@ -597,6 +620,7 @@
   "echo": {
     "n": "echo",
     "p": "/echo",
+    "category": "shell scripting",
     "d": "输出指定的字符串或者变量"
   },
   "ed": {
@@ -612,6 +636,7 @@
   "egrep": {
     "n": "egrep",
     "p": "/egrep",
+    "category": "regular expressions",
     "d": "在文件内查找指定的字符串"
   },
   "eject": {
@@ -632,6 +657,7 @@
   "emacs": {
     "n": "emacs",
     "p": "/emacs",
+    "category": "text editors",
     "d": "功能强大的全屏文本编辑器"
   },
   "enable": {
@@ -662,7 +688,10 @@
   "exit": {
     "n": "exit",
     "p": "/exit",
-    "d": "退出当前的shell"
+    "d": "退出当前的shell",
+    "category": "basic shell",
+    "description": "quits the shell"
+
   },
   "expand": {
     "n": "expand",
@@ -672,6 +701,7 @@
   "export": {
     "n": "export",
     "p": "/export",
+    "category": "shell scripting",
     "d": "设置或显示系统环境变量"
   },
   "exportfs": {
@@ -697,6 +727,7 @@
   "fg": {
     "n": "fg",
     "p": "/fg",
+    "category": "process management",
     "d": "将后台作业放到前台终端运行"
   },
   "fgrep": {
@@ -712,6 +743,7 @@
   "find": {
     "n": "find",
     "p": "/find",
+    "category": "searching and sorting",
     "d": "在指定目录下查找文件"
   },
   "findfs": {
@@ -722,6 +754,7 @@
   "finger": {
     "n": "finger",
     "p": "/finger",
+    "category": "multi-user environments",
     "d": "用于查找并显示用户信息"
   },
   "firewall-cmd": {
@@ -757,6 +790,7 @@
   "ftp": {
     "n": "ftp",
     "p": "/ftp",
+    "category": "network",
     "d": "用来设置文件系统相关功能"
   },
   "ftpcount": {
@@ -817,6 +851,7 @@
   "git": {
     "n": "git",
     "p": "/git",
+    "category": "build management",
     "d": "是目前世界上最先进的分布式版本控制系统"
   },
   "gpasswd": {
@@ -832,6 +867,7 @@
   "grep": {
     "n": "grep",
     "p": "/grep",
+    "category": "searching and sorting",
     "d": "强大的文本搜索工具"
   },
   "groupadd": {
@@ -852,6 +888,7 @@
   "groups": {
     "n": "groups",
     "p": "/groups",
+    "category": "users and groups",
     "d": "用来打印指定用户所属的工作组"
   },
   "grpck": {
@@ -877,6 +914,7 @@
   "gunzip": {
     "n": "gunzip",
     "p": "/gunzip",
+    "category": "compression",
     "d": "用来解压缩文件"
   },
   "gzexe": {
@@ -887,6 +925,7 @@
   "gzip": {
     "n": "gzip",
     "p": "/gzip",
+    "category": "compression",
     "d": "用来压缩文件"
   },
   "halt": {
@@ -902,6 +941,7 @@
   "head": {
     "n": "head",
     "p": "/head",
+    "category": "file examination",
     "d": "在屏幕上显示指定文件的开头若干行"
   },
   "help": {
@@ -917,6 +957,7 @@
   "history": {
     "n": "history",
     "p": "/history",
+    "category": "basic shell",
     "d": "用于显示历史命令"
   },
   "host": {
@@ -932,6 +973,7 @@
   "hostname": {
     "n": "hostname",
     "p": "/hostname",
+    "category": "multi-user environments",
     "d": "显示和设置系统的主机名"
   },
   "hping3": {
@@ -977,6 +1019,7 @@
   "ifconfig": {
     "n": "ifconfig",
     "p": "/ifconfig",
+    "category": "network",
     "d": "配置和显示Linux系统网卡的网络参数"
   },
   "ifdown": {
@@ -1042,6 +1085,7 @@
   "ip": {
     "n": "ip",
     "p": "/ip",
+    "category": "network",
     "d": "网络配置工具"
   },
   "ip6tables-restore": {
@@ -1082,21 +1126,25 @@
   "iptables-restore": {
     "n": "iptables-restore",
     "p": "/iptables-restore",
+    "category": "network",
     "d": "还原iptables表的配置"
   },
   "iptables-save": {
     "n": "iptables-save",
     "p": "/iptables-save",
+    "category": "network",
     "d": "备份iptables的表配置"
   },
   "iptables": {
     "n": "iptables",
     "p": "/iptables",
+    "category": "network",
     "d": "Linux上常用的防火墙软件"
   },
   "iptraf": {
     "n": "iptraf",
     "p": "/iptraf",
+    "category": "network",
     "d": "实时地监视网卡流量"
   },
   "iptstate": {
@@ -1117,6 +1165,7 @@
   "jobs": {
     "n": "jobs",
     "p": "/jobs",
+    "category": "process management",
     "d": "显示Linux中的任务列表及任务状态"
   },
   "joe": {
@@ -1147,11 +1196,13 @@
   "kill": {
     "n": "kill",
     "p": "/kill",
+    "category": "process management",
     "d": "删除执行中的程序或工作"
   },
   "killall": {
     "n": "killall",
     "p": "/killall",
+    "category": "process management",
     "d": "使用进程的名称来杀死一组进程"
   },
   "last": {
@@ -1187,11 +1238,13 @@
   "less": {
     "n": "less",
     "p": "/less",
+    "category": "file examination",
     "d": "分屏上下翻页浏览文件内容"
   },
   "let": {
     "n": "let",
     "p": "/let",
+    "category": "shell scripting",
     "d": "简单的计算器"
   },
   "lftp": {
@@ -1227,6 +1280,7 @@
   "locate": {
     "n": "locate",
     "p": "/locate",
+    "category": "searching and sorting",
     "d": "比 find 好用的文件查找工具"
   },
   "logger": {
@@ -1247,6 +1301,7 @@
   "logout": {
     "n": "logout",
     "p": "/logout",
+    "category": "basic shell",
     "d": "退出当前登录的Shell"
   },
   "logrotate": {
@@ -1312,6 +1367,7 @@
   "ls": {
     "n": "ls",
     "p": "/ls",
+    "category": "directories",
     "d": "显示目录内容列表"
   },
   "lsattr": {
@@ -1342,6 +1398,7 @@
   "lsof": {
     "n": "lsof",
     "p": "/lsof",
+    "category": "filesystem",
     "d": "显示Linux系统当前已打开的所有文件列表 `lsof -p pid`"
   },
   "lspci": {
@@ -1397,11 +1454,13 @@
   "lynx": {
     "n": "lynx",
     "p": "/lynx",
+    "category": "network",
     "d": "纯文本模式的网页浏览器"
   },
   "mail": {
     "n": "mail",
     "p": "/mail",
+    "category": "network",
     "d": "命令行下发送和接收电子邮件"
   },
   "mailq": {
@@ -1417,6 +1476,7 @@
   "make": {
     "n": "make",
     "p": "/make",
+    "category": "build management",
     "d": "GNU的工程化编译工具"
   },
   "man": {
@@ -1447,6 +1507,7 @@
   "mkdir": {
     "n": "mkdir",
     "p": "/mkdir",
+    "category": "directories",
     "d": "用来创建目录"
   },
   "mke2fs": {
@@ -1482,6 +1543,7 @@
   "mktemp": {
     "n": "mktemp",
     "p": "/mktemp",
+    "category": "filesystem",
     "d": "创建临时文件供shell脚本使用"
   },
   "modprobe": {
@@ -1492,6 +1554,7 @@
   "more": {
     "n": "more",
     "p": "/more",
+    "category": "file examination",
     "d": "显示文件内容，每次显示一屏"
   },
   "mount": {
@@ -1512,6 +1575,7 @@
   "mv": {
     "n": "mv",
     "p": "/mv",
+    "category": "file operations",
     "d": "用来对文件或目录重新命名"
   },
   "mysql": {
@@ -1547,11 +1611,13 @@
   "nano": {
     "n": "nano",
     "p": "/nano",
+    "category": "text editors",
     "d": "字符终端文本编辑器"
   },
   "nc": {
     "n": "nc",
     "p": "/nc",
+    "category": "network",
     "d": "命令用于设置路由器。"
   },
   "ncftp": {
@@ -1562,11 +1628,13 @@
   "nethogs": {
     "n": "nethogs",
     "p": "/nethogs",
+    "category": "network",
     "d": "终端下的网络流量监控工具"
   },
   "netstat": {
     "n": "netstat",
     "p": "/netstat",
+    "category": "network",
     "d": "查看Linux中网络系统状态信息"
   },
   "newusers": {
@@ -1617,6 +1685,7 @@
   "nohup": {
     "n": "nohup",
     "p": "/nohup",
+    "category": "process management",
     "d": "将程序以忽略挂起信号的方式运行起来"
   },
   "nologin": {
@@ -1667,6 +1736,7 @@
   "passwd": {
     "n": "passwd",
     "p": "/passwd",
+    "category": "users and groups",
     "d": "用于让用户可以更改自己的密码"
   },
   "paste": {
@@ -1687,6 +1757,7 @@
   "perl": {
     "n": "perl",
     "p": "/perl",
+    "category": "programming",
     "d": "perl语言解释器"
   },
   "pfctl": {
@@ -1702,11 +1773,13 @@
   "php": {
     "n": "php",
     "p": "/php",
+    "category": "programming",
     "d": "PHP语言的命令行接口"
   },
   "pico": {
     "n": "pico",
     "p": "/pico",
+    "category": "text editors",
     "d": "功能强大全屏幕的文本编辑器"
   },
   "pidof": {
@@ -1722,11 +1795,13 @@
   "ping": {
     "n": "ping",
     "p": "/ping",
+    "category": "network",
     "d": "测试主机之间网络的连通性"
   },
   "pkill": {
     "n": "pkill",
     "p": "/pkill",
+    "category": "process management",
     "d": "可以按照进程名杀死进程"
   },
   "pmap": {
@@ -1757,6 +1832,7 @@
   "printf": {
     "n": "printf",
     "p": "/printf",
+    "category": "shell scripting",
     "d": "格式化并输出结果"
   },
   "protoize": {
@@ -1767,6 +1843,7 @@
   "ps": {
     "n": "ps",
     "p": "/ps",
+    "category": "process management",
     "d": "报告当前系统的进程状态"
   },
   "pssh": {
@@ -1777,11 +1854,13 @@
   "pstack": {
     "n": "pstack",
     "p": "/pstack",
+    "category": "process management",
     "d": "显示每个进程的栈跟踪"
   },
   "pstree": {
     "n": "pstree",
     "p": "/pstree",
+    "category": "process management",
     "d": "以树状图的方式展现进程之间的派生关系"
   },
   "pushd": {
@@ -1842,6 +1921,7 @@
   "pwd": {
     "n": "pwd",
     "p": "/pwd",
+    "category": "directories",
     "d": "绝对路径方式显示用户当前工作目录"
   },
   "pwunconv": {
@@ -1882,6 +1962,7 @@
   "read": {
     "n": "read",
     "p": "/read",
+    "category": "shell scripting",
     "d": "从键盘读取变量值"
   },
   "readelf": {
@@ -1952,11 +2033,13 @@
   "rm": {
     "n": "rm",
     "p": "/rm",
+    "category": "file operations",
     "d": "用于删除给定的文件和目录"
   },
   "rmdir": {
     "n": "rmdir",
     "p": "/rmdir",
+    "category": "directories",
     "d": "用来删除空目录"
   },
   "rmmod": {
@@ -2027,6 +2110,7 @@
   "scp": {
     "n": "scp",
     "p": "/scp",
+    "category": "network",
     "d": "加密的方式在本地主机和远程主机之间复制文件"
   },
   "screen": {
@@ -2037,6 +2121,7 @@
   "sed": {
     "n": "sed",
     "p": "/sed",
+    "category": "regular expressions",
     "d": "功能强大的流式文本编辑器"
   },
   "seinfo": {
@@ -2057,6 +2142,7 @@
   "seq": {
     "n": "seq",
     "p": "/seq",
+    "category": "shell scripting",
     "d": "以指定增量从首数开始打印数字到尾数"
   },
   "service": {
@@ -2072,6 +2158,7 @@
   "set": {
     "n": "set",
     "p": "/set",
+    "category": "shell scripting",
     "d": "显示或设置shell特性及shell变量"
   },
   "setfacl": {
@@ -2097,16 +2184,19 @@
   "sftp-server": {
     "n": "sftp-server",
     "p": "/sftp-server",
+    "category": "network",
     "d": "sftp协议的服务器端程序"
   },
   "sftp": {
     "n": "sftp",
     "p": "/sftp",
+    "category": "network",
     "d": "交互式的文件传输程序"
   },
   "sh": {
     "n": "sh",
     "p": "/sh",
+    "category": "Shell programming",
     "d": "shell命令解释器"
   },
   "shopt": {
@@ -2137,6 +2227,7 @@
   "sleep": {
     "n": "sleep",
     "p": "/sleep",
+    "category": "miscellaneous",
     "d": "将目前动作延迟一段时间"
   },
   "slocate": {
@@ -2157,11 +2248,13 @@
   "sort": {
     "n": "sort",
     "p": "/sort",
+    "category": "searching and sorting",
     "d": "将文件进行排序并输出"
   },
   "source": {
     "n": "source",
     "p": "/source",
+    "category": "shell scripting",
     "d": "在当前Shell环境中从指定文件读取和执行命令，命令返回退出状态。"
   },
   "speedtest-cli": {
@@ -2222,11 +2315,13 @@
   "ssh": {
     "n": "ssh",
     "p": "/ssh",
+    "category": "network",
     "d": "openssh套件中的客户端连接工具"
   },
   "sshd": {
     "n": "sshd",
     "p": "/sshd",
+    "category": "network",
     "d": "openssh软件套件中的服务器守护进程"
   },
   "startx": {
@@ -2257,11 +2352,13 @@
   "su": {
     "n": "su",
     "p": "/su",
+    "category": "users and groups",
     "d": "用于切换当前用户身份到其他用户身份"
   },
   "sudo": {
     "n": "sudo",
     "p": "/sudo",
+    "category": "users and groups",
     "d": "以其他身份来执行命令"
   },
   "sum": {
@@ -2317,6 +2414,7 @@
   "tail": {
     "n": "tail",
     "p": "/tail",
+    "category": "file examination",
     "d": "在屏幕上显示指定文件的末尾若干行"
   },
   "tailf": {
@@ -2332,6 +2430,7 @@
   "tar": {
     "n": "tar",
     "p": "/tar",
+    "category": "compression",
     "d": "Linux下的归档使用工具，用来打包和备份。"
   },
   "tcpdump": {
@@ -2372,11 +2471,13 @@
   "tftp": {
     "n": "tftp",
     "p": "/tftp",
+    "category": "network",
     "d": "在本机和tftp服务器之间使用TFTP协议传输文件"
   },
   "time": {
     "n": "time",
     "p": "/time",
+    "category": "system information",
     "d": "统计给定命令所花费的总时间"
   },
   "tload": {
@@ -2392,11 +2493,13 @@
   "top": {
     "n": "top",
     "p": "/top",
+    "category": "process management",
     "d": "显示或管理执行中的程序"
   },
   "touch": {
     "n": "touch",
     "p": "/touch",
+    "category": "file operations",
     "d": "创建新的空文件"
   },
   "tput": {
@@ -2407,6 +2510,7 @@
   "tr": {
     "n": "tr",
     "p": "/tr",
+    "category": "Text processing",
     "d": "将字符进行替换压缩和删除"
   },
   "tracepath": {
@@ -2422,6 +2526,7 @@
   "trap": {
     "n": "trap",
     "p": "/trap",
+    "category": "process management",
     "d": "指定在接收到信号后将要采取的动作"
   },
   "tree": {
@@ -2442,11 +2547,13 @@
   "ulimit": {
     "n": "ulimit",
     "p": "/ulimit",
+    "category": "miscellaneous",
     "d": "控制shell程序的资源"
   },
   "umask": {
     "n": "umask",
     "p": "/umask",
+    "category": "file permissions",
     "d": "用来设置限制新建文件权限的掩码"
   },
   "umount": {
@@ -2457,11 +2564,13 @@
   "unalias": {
     "n": "unalias",
     "p": "/unalias",
+    "category": "basic shell",
     "d": "删除由alias设置的别名"
   },
   "uname": {
     "n": "uname",
     "p": "/uname",
+    "category": "system information",
     "d": "显示Linux系统信息"
   },
   "unarj": {
@@ -2482,6 +2591,7 @@
   "uniq": {
     "n": "uniq",
     "p": "/uniq",
+    "category": "searching and sorting",
     "d": "报告或忽略文件中的重复行"
   },
   "unlink": {
@@ -2497,11 +2607,13 @@
   "unset": {
     "n": "unset",
     "p": "/unset",
+    "category": "shell scripting",
     "d": "删除指定的shell变量或函数"
   },
   "unzip": {
     "n": "unzip",
     "p": "/unzip",
+    "category": "compression",
     "d": "用于解压缩由zip命令压缩的压缩包"
   },
   "updatedb": {
@@ -2602,6 +2714,7 @@
   "vi": {
     "n": "vi",
     "p": "/vi",
+    "category": "text editors",
     "d": "功能强大的纯文本编辑器"
   },
   "vmstat": {
@@ -2617,6 +2730,7 @@
   "w": {
     "n": "w",
     "p": "/w",
+    "category": "multi-user environments",
     "d": "显示目前登入系统的用户信息"
   },
   "wait": {
@@ -2627,6 +2741,7 @@
   "wall": {
     "n": "wall",
     "p": "/wall",
+    "category": "multi-user environments",
     "d": "向系统当前所有打开的终端上输出信息"
   },
   "watch": {
@@ -2637,11 +2752,13 @@
   "wc": {
     "n": "wc",
     "p": "/wc",
+    "category": "file examination",
     "d": "统计文件的字节数、字数、行数"
   },
   "wget": {
     "n": "wget",
     "p": "/wget",
+    "category": "network",
     "d": "Linux系统下载文件工具"
   },
   "whatis": {
@@ -2657,6 +2774,7 @@
   "which": {
     "n": "which",
     "p": "/which",
+    "category": "searching and sorting",
     "d": "查找并显示给定命令的绝对路径"
   },
   "who": {
@@ -2667,16 +2785,19 @@
   "whoami": {
     "n": "whoami",
     "p": "/whoami",
+    "category": "users and groups",
     "d": "打印当前有效的用户名称"
   },
   "write": {
     "n": "write",
     "p": "/write",
+    "category": "multi-user environments",
     "d": "向指定登录用户终端上发送信息"
   },
   "xargs": {
     "n": "xargs",
     "p": "/xargs",
+    "category": "searching and sorting",
     "d": "给其他命令传递参数的一个过滤器"
   },
   "xauth": {
@@ -2752,6 +2873,7 @@
   "zip": {
     "n": "zip",
     "p": "/zip",
+    "category": "compression",
     "d": "可以用来解压缩文件"
   },
   "zipinfo": {

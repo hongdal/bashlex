@@ -158,25 +158,30 @@ class Manager_Script(object):
 
   def getGraph(self, in_file, out_dir):
     basename = os.path.basename(in_file)[:-5]
-    out_dir = out_dir + "/"
-    tmp_dir = out_dir + "tmp/"
-    tmp_file = tmp_dir + basename + ".dot"
-    out_file = out_dir + basename + ".pdf"
-    if not os.path.exists(tmp_dir):
-      os.makedirs(tmp_dir)
+    pdf_out_dir = out_dir + "/pdf/"
+    dot_out_dir = out_dir + "/dot/"
+
+    pdf_tmp_file = pdf_out_dir + basename + ".pdf"
+    dot_tmp_file = dot_out_dir + basename + ".dot"
+    
+    if not os.path.exists(pdf_out_dir):
+      os.makedirs(pdf_out_dir)
+    if not os.path.exists(dot_out_dir):
+      os.makedirs(dot_out_dir)
+  
     orig_stdout = sys.stdout
     g = BashGraph()
     g.load_file(in_file)
     g.make_graph()
-    sys.stdout = open(tmp_file, "w")
+    sys.stdout = open(dot_tmp_file, "w")
     g.print_graph()
     sys.stdout = orig_stdout
-    command = ['dot', '-Tpdf', tmp_file, '-o', out_file]
+    command = ['dot', '-Tpdf', dot_tmp_file, '-o', pdf_tmp_file]
     subprocess.check_call(command)
-    command = ['rm', '-rf', tmp_dir]
+    # command = ['rm', '-rf', tmp_dir]
     # subprocess.call(command,shell=True)
-    subprocess.check_call(command)
-    return out_file
+    # subprocess.check_call(command)
+    return pdf_tmp_file
 
   def save_json_info(self, file_path, information):
     # save user data
@@ -202,11 +207,24 @@ class Manager_Script(object):
   def getAllCommands(self, dir_path):
     # print(in_file)
     script_commands = self.script_data.getAllCommands(dir_path)
-    self.save_json_info(self.json_path, script_commands)
-    all_linux_commands = self.script_data.getSortedCommandsDict()
-    print(all_linux_commands)
-    self.save_json_info(self.json_path, all_linux_commands)
+    # self.save_json_info(self.json_path, script_commands)
+    # all_linux_commands = self.script_data.getSortedCommandsDict()
+    # print(all_linux_commands)
+    # self.save_json_info(self.json_path, all_linux_commands)
     return script_commands
+
+  def getAllLinuxCommands(self, dir_path):
+    # print(in_file)
+    script_commands = self.script_data.getAllCommands(dir_path)
+    # self.save_json_info(self.json_path, script_commands)
+    all_linux_commands = self.script_data.getSortedCommandsDict()
+    # print(all_linux_commands)
+    # for command in all_linux_commands:
+    #   command_class = self.script_data.getCommandsClass(command[0])
+    #   command.add(command_class)
+    # print(all_linux_commands)
+    # self.save_json_info(self.json_path, all_linux_commands)
+    return all_linux_commands
 
   def traverse_scripts(self, fa_path):
     # pre-ordered depth-first search for every script ends with 'supported suffix

@@ -8,13 +8,11 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
 from tkinter import *
-# import pypdfocr.pypdfocr_gs as pdfImg
-# from PIL import Image, ImageTk
 import tkinter.filedialog
 import tkinter.messagebox
 from tkinter.ttk import *
 from . import dialog
-from .dialog import Dialog
+from .dialog import *
 from tkinter.filedialog import askdirectory
 from functools import partial
 from .appdata import AppData
@@ -33,383 +31,9 @@ class Controller(object):
   def __init__(self):
     pass
 
-
-class RespInfoDialog(Dialog):
-  def body(self, master):
-    Label(master, text='New repository Name: ').grid(row=0, sticky=E)
-    Label(master, text='Path of this repository: ').grid(row=1, sticky=E)
-    Label(master, text='Support Suffix: ').grid(row=2, sticky=E)
-
-    def selectPath():
-      path_ = askdirectory()
-      path.set(path_)
-
-    path = StringVar()
-    Button(master, text="Browse...", command=selectPath).grid(row=1, column=2)
-
-    self.e1 = Entry(master)
-    self.e2 = Entry(master, textvariable=path)
-    self.e3 = Entry(master)
-    self.e1.insert(0, "Example")
-    # self.e2.insert(0, "d:\\01_test\\")
-    self.e2.insert(0, "/home/guoze/02_test/")
-    self.e3.insert(0, "pdf mobi")
-
-    self.e1.grid(row=0, column=1)
-    self.e2.grid(row=1, column=1)
-    self.e3.grid(row=2, column=1)
-    return self.e1  # initial focus
-
-  def validate(self):
-    try:
-      rep_name = str(self.e1.get().strip())
-      rep_path = str(self.e2.get().strip())
-      support_suffix = str(self.e3.get().strip())
-      support_suffix = support_suffix.split()
-      self.result = [rep_name, rep_path, support_suffix]
-      self.res_nums = len(self.result)
-      return 1
-    except (FileNotFoundError, ValueError):
-      tkinter.messagebox.showwarning("Bad input",
-                                     "Illegal values, please try again")
-      return 0
-
-
-class SelectRepDialog(Dialog):
-  def body(self, master):
-    self.rep_list = tk.Listbox(master)
-    self.rep_list.config(fg='black', bg='#F5F5F5', bd=0.2, font=MIDFONT)
-    self.rep_list.config(width=WIDTH, height=HEIGHT)
-
-    scrollbar = tk.Scrollbar(
-        master, orient=VERTICAL, command=self.rep_list.yview)
-    scrollbar.grid(row=0, column=1, sticky='ns')
-    self.rep_list.configure(yscrollcommand=scrollbar.set)
-
-    self.rep_list.grid(row=0)
-    self.rep_list.bind("<Double-Button-1>", self.ok)
-    self.rep_list.bind("<<ListboxSelect>>", self.selected)
-    self.update_list()
-
-  def selected(self, event):
-    widget = event.widget
-    selection = widget.curselection()
-    value = widget.get(selection[0])
-    self.selected_value = value
-
-  def update_list(self):
-    rep_dict = self.argv.get("all_repositories", {})
-    if len(list(rep_dict.keys())) != 0:
-      for i, one_rep in enumerate(rep_dict):
-        rep_name = one_rep
-        rep_path = rep_dict[one_rep][0]
-        rep_suffix = ' '.join(str(e) for e in rep_dict[one_rep][1])
-        rep_information = str(rep_name) + " (" + str(rep_path) + ") " + str(
-            rep_suffix)
-        self.rep_list.insert(tk.END, rep_information)
-
-  def apply(self):
-    rep_info = self.selected_value.split()
-    rep_name = rep_info[0]
-    self.result = rep_name
-    self.res_nums = len(self.result)
-
-
-class DisplayDetails(Dialog):
-  def body(self, master):
-
-    self.script_info = self.argv
-    self.script_id = int(self.script_info[0])
-    script_name = "Script Name: " + str(self.script_info[1])
-    old_importance = int(self.script_info[2])
-    old_urgency = int(self.script_info[3])
-    old_tags = str(self.script_info[4])
-    old_read = str(self.script_info[5])
-    # script_name = self.argv
-    self.malware_report = self.argv2
-    # self.scan_report = {}
-    # if self.malware_report == []:
-    self.scan_report = self.malware_report['scans']
-    self.table_data = []
-    self.detected_number = 0
-    for key in self.scan_report:
-      element_date = []
-      element_date.append(key)
-      element_date.append(self.scan_report[key]['result'])
-      element_date.append(self.scan_report[key]['detected'])
-      element_date.append(self.scan_report[key]['version'])
-      element_date.append(self.scan_report[key]['update'])
-      if str(self.scan_report[key]['detected']) == 'True':
-        self.detected_number = self.detected_number + 1
-
-      self.table_data.append(element_date)
-
-    # print("In DisplayDetails.",self.table_data )
-
-    self.file_info = tk.Frame(master, width=300, height=30)
-    # self.detection = tk.Frame(self.file_info, width=300)
-    # self.search1_frame = tk.Frame(self.search_frame, width=180)
-    # self.search2_frame = tk.Frame(self.search_frame, width=180)
-    # self.button_frame= tk.Frame(self.func_frame, width=120)
-
-    self.file_info.pack(side="top", fill="both", expand=True)
-    # Label(file_info, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
-    # Label(file_info, text='Importance(1~5): ').grid(row=1,sticky=E)
-    # Label(file_info, text='Urgency(1~5): ').grid(row=2,sticky=E)
-    # Label(file_info, text='Tags: ').grid(row=3,sticky=E)
-    # Label(file_info, text='Read(y/n): ').grid(row=4,sticky=E)
-    # self.file_info = tk.Frame(master, width=300, height=30)
-    # self.search_frame = tk.Frame(self.func_frame, width=300)
-    # self.search1_frame = tk.Frame(self.search_frame, width=180)
-    # self.search2_frame = tk.Frame(self.search_frame, width=180)
-    # self.button_frame= tk.Frame(self.func_frame, width=120)
-
-    # self.search1_frame.pack(side="top", fill="both",expand=True)
-    # self.search2_frame.pack(side="top", fill="both",expand=True)
-
-    # self.entryBox = tk.Entry(self.search1_frame, width=60, font=LARGEFONT)
-    # self.entryBox.pack(padx=10, pady=10,anchor="s")
-
-    Label(
-        self.file_info, text=script_name, font=MIDFONT).grid(
-            row=0, columnspan=2, sticky=W)
-    Label(
-        self.file_info, text='Importance(1~5): ').grid(
-            row=1, column=0, sticky=E)
-    Label(
-        self.file_info, text='Urgency(1~5): ').grid(
-            row=1, column=2, sticky=E)
-    Label(self.file_info, text='Read(y/n): ').grid(row=1, column=4, sticky=E)
-    Label(self.file_info, text='Tags: ').grid(row=2, column=0, sticky=E)
-    Label(
-        self.file_info, text='Detection ratio: ').grid(
-            row=2, column=3, sticky=E)
-    Label(
-        self.file_info, text=self.detected_number).grid(
-            row=2, column=4, sticky=E)
-
-    script_info = self.argv
-    e1 = Entry(self.file_info)
-    e2 = Entry(self.file_info)
-    e3 = Entry(self.file_info)
-    e4 = Entry(self.file_info)
-    # if self.argv2 == 1:
-    e1.insert(0, old_importance)
-    e2.insert(0, old_urgency)
-    e3.insert(0, old_tags)
-    e4.insert(0, old_read)
-
-    e1.grid(row=1, column=1)
-    e2.grid(row=1, column=3)
-    e4.grid(row=1, column=5)
-    e3.grid(row=2, column=1)
-    # self.display_frame = tk.Frame(master, width=300, height=30)
-    # self.display_frame.pack_propagate(0)
-
-    tree_columns = ("a", "b", "c", "d", "e")
-    self.table_frame = tk.Frame(master, width=600)
-    self.tree = ttk.Treeview(
-        self.table_frame, show="headings", height=20, columns=tree_columns)
-    self.vbar = tk.Scrollbar(
-        self.table_frame, orient=VERTICAL, command=self.tree.yview)
-    self.tree.configure(yscrollcommand=self.vbar.set)
-    self.vbar.config(command=self.tree.yview)
-    self.tree.configure(yscrollcommand=self.vbar.set)
-    self.tree.column("a", width=50, anchor="center")
-    self.tree.column("b", width=300, anchor="center")
-    self.tree.column("c", width=50, anchor="center")
-    self.tree.column("d", width=50, anchor="center")
-    self.tree.column("e", width=100, anchor="center")
-    # self.tree.column("g", width=50, anchor="center")
-    # self.tree.column("h", width=50, anchor="center")
-    self.tree.heading("a", text="Company")
-    self.tree.heading("b", text="Result")
-    self.tree.heading("c", text="Detected")
-    self.tree.heading("d", text="Version")
-    self.tree.heading("e", text="Update")
-    # self.tree.heading("g", text="Read")
-    # self.tree.heading("h", text="Date")
-    self.vbar.pack(side="right", fill="y")
-    self.tree.pack(side="left", fill="both", expand=True)
-    for col in tree_columns:
-      self.tree.heading(
-          col,
-          command=
-          lambda _col=col: self.treeview_sort_column(self.tree, _col, False))
-
-    # Create the serch mode Button
-    # label_text = tk.Label(self.search2_frame, text="Search Mode: ")
-    # label_text.pack(padx=10,side="left",anchor="n")
-    # radioButton_1 = tk.Radiobutton(self.search2_frame, text ="Name",
-    #                                variable = 1, value = 1)
-    # radioButton_1.pack(side="left",anchor="n")
-    # radioButton_2 = tk.Radiobutton(self.search2_frame, text ="Tags",
-    #                                variable = 2, value = 2)
-    # radioButton_2.pack(side="left",anchor="n")
-    # # radioButton_3 = tk.Radiobutton(self.search2_frame, text ="Nums",
-    # #                                variable = self.search_mode, value = 3)
-    # # radioButton_3.pack(side="left",anchor="n")
-    # radioButton_4 = tk.Radiobutton(self.search2_frame, text ="ID",
-    #                                variable = 3, value = 4)
-    # radioButton_4.pack(side="left",anchor="n")
-    # search_button = tk.Button(self.button_frame, text="Search", width=20)
-    # search_button.pack(padx=10,pady=10,anchor="s")
-
-    # self.display_frame = tk.Frame(master, width=300, height=30)
-    # self.display_frame.pack_propagate(0)
-
-    # self.search_frame.pack(side=LEFT, fill="both")
-    # self.button_frame.pack(side=RIGHT, fill ="both")
-    self.update_scripts_table(self.table_data)
-    self.file_info.grid(row=0, column=0, rowspan=2, columnspan=2, sticky="ew")
-    self.table_frame.grid(row=2, column=0, columnspan=2, sticky="nsew")
-    master.grid_rowconfigure(1, weight=1)
-    master.grid_columnconfigure(1, weight=1)
-    self.update_scripts_table(self.table_data)
-    # return self.script_info
-
-    # Label(master, text=script_name,font=MIDFONT).grid(row=0,columnspan=2, sticky=W)
-    # Label(master, text='Importance(1~5): ').grid(row=1,sticky=E)
-    # Label(master, text='Urgency(1~5): ').grid(row=2,sticky=E)
-    # Label(master, text='Tags: ').grid(row=3,sticky=E)
-    # Label(master, text='Read(y/n): ').grid(row=4,sticky=E)
-
-    # self.script_info = self.argv
-    # self.e1 = Entry(master)
-    # self.e2 = Entry(master)
-    # self.e3 = Entry(master)
-    # self.e4 = Entry(master)
-    # if self.argv2 == 1:
-    #   self.e1.insert(0, old_importance)
-    #   self.e2.insert(0, old_urgency)
-    #   self.e3.insert(0, old_tags)
-    #   self.e4.insert(0, old_read)
-
-    # self.e1.grid(row=1, column=1)
-    # self.e2.grid(row=2, column=1)
-    # self.e3.grid(row=3, column=1)
-    # self.e4.grid(row=4, column=1)
-    # return self.e1 # initial focus
-
-  # def validate(self):
-  #   try:
-  #     importance = int(self.e1.get().strip())
-  #     urgency = int(self.e2.get().strip())
-  #     tags = str(self.e3.get().strip())
-  #     read_state = str(self.e4.get().strip())
-  #     if importance < 1 or importance >5:
-  #       raise ValueError("OutOfRange")
-  #     if urgency < 1 or urgency >5:
-  #       raise ValueError("OutOfRange")
-  #     if self.argv2 == 1:
-  #       self.result = [self.script_id, importance, urgency, tags, read_state]
-  #     else:
-  #       self.result = [importance, urgency, tags, read_state]
-  #     self.res_nums = len(self.result)
-  #     return 1
-  #   except ValueError:
-  #     tkinter.messagebox.showwarning(
-  #       "Bad input",
-  #       "Illegal values, please try again"
-  #     )
-  #     return 0
-
-  def update_scripts_table(self, recs):
-    # print("In Update Table",recs)
-    def prettify_one(rec):
-      one_row = [str(rec[0]), str(rec[1]), str(rec[2]), str(rec[3]), rec[4]]
-      one_row = [item for item in one_row]
-      return one_row
-
-    recs_t = [prettify_one(rec) for rec in recs]
-    for _ in map(self.tree.delete, self.tree.get_children("")):
-      pass
-    self.script_nums = len(recs_t)
-    for i in range(len(recs_t)):
-      self.tree.insert(
-          "",
-          "end",
-          values=(recs_t[i][0], recs_t[i][1], recs_t[i][2], recs_t[i][3],
-                  recs_t[i][4]))
-
-  def treeview_sort_column(self, tv, col, reverse):
-    l = [(tv.set(k, col), k) for k in tv.get_children('')]
-    l.sort(reverse=reverse)
-    for index, (val, k) in enumerate(l):
-      tv.move(k, '', index)
-    tv.heading(
-        col, command=lambda: self.treeview_sort_column(tv, col, not reverse))
-
-  def apply(self):
-    return False
-
-
-class EditScriptDialog(Dialog):
-  def body(self, master):
-    if self.argv2 == 1:
-      self.script_info = self.argv
-      self.script_id = int(self.script_info[0])
-      script_name = "Script: " + str(self.script_info[1])
-      old_importance = int(self.script_info[2])
-      old_urgency = int(self.script_info[3])
-      old_tags = str(self.script_info[4])
-      old_read = str(self.script_info[5])
-    else:
-      script_name = self.argv
-    Label(
-        master, text=script_name, font=MIDFONT).grid(
-            row=0, columnspan=2, sticky=W)
-    Label(master, text='Importance(1~5): ').grid(row=1, sticky=E)
-    Label(master, text='Urgency(1~5): ').grid(row=2, sticky=E)
-    Label(master, text='Tags: ').grid(row=3, sticky=E)
-    Label(master, text='Read(y/n): ').grid(row=4, sticky=E)
-    self.script_info = self.argv
-    self.e1 = Entry(master)
-    self.e2 = Entry(master)
-    self.e3 = Entry(master)
-    self.e4 = Entry(master)
-    if self.argv2 == 1:
-      self.e1.insert(0, old_importance)
-      self.e2.insert(0, old_urgency)
-      self.e3.insert(0, old_tags)
-      self.e4.insert(0, old_read)
-
-    self.e1.grid(row=1, column=1)
-    self.e2.grid(row=2, column=1)
-    self.e3.grid(row=3, column=1)
-    self.e4.grid(row=4, column=1)
-    return self.e1  # initial focus
-
-  def validate(self):
-    try:
-      importance = int(self.e1.get().strip())
-      urgency = int(self.e2.get().strip())
-      tags = str(self.e3.get().strip())
-      read_state = str(self.e4.get().strip())
-      if importance < 1 or importance > 5:
-        raise ValueError("OutOfRange")
-      if urgency < 1 or urgency > 5:
-        raise ValueError("OutOfRange")
-      if self.argv2 == 1:
-        self.result = [self.script_id, importance, urgency, tags, read_state]
-      else:
-        self.result = [importance, urgency, tags, read_state]
-      self.res_nums = len(self.result)
-      return 1
-    except ValueError:
-      tkinter.messagebox.showwarning("Bad input",
-                                     "Illegal values, please try again")
-      return 0
-
-  def apply(self):
-    pass
-
-
 class View(object):
   def __init__(self, controller):
     self.root = tk.Tk()
-    # self.root.iconbitmap(default=".\\task_tracker.ico")
-
     self.controller = controller
     self.root.bind('<Escape>', lambda event: self.controller.quit())
     self.search_mode = tk.StringVar()
@@ -458,6 +82,8 @@ class View(object):
     editmenu.add_command(
         label="Show All Command Count", command=self.show_all_command_count)
     editmenu.add_command(
+        label="Show All Linux Command Count", command=self.show_all_linux_command_count)
+    editmenu.add_command(
         label="Show Command Count", command=self.show_command_count)
     editmenu.add_command(
         label="Open Script Code", command=self.open_source_code)
@@ -466,9 +92,18 @@ class View(object):
     editmenu.add_command(
         label="Script Detail", command=self.open_virustotal_detail)
     menubar.add_cascade(label="Edit", menu=editmenu)
+
+    toolsmenu = tk.Menu(menubar, tearoff=0)
+    toolsmenu.add_command(
+        label=menubar_data['tools']['generatepdf'],
+        command=self.generate_all_graph)
+    toolsmenu.add_command(
+        label=menubar_data['tools']['generatedot'], command=self.new_rep)
+    menubar.add_cascade(label=menubar_data['tools']['title'], menu=toolsmenu)
     # Create the help button in the Menu
     helpmenu = Menu(menubar, tearoff=0)
     helpmenu.add_command(label="Introduce...", command=self.show_introduce)
+    helpmenu.add_command(label="Linux Command Classify", command=self.show_introduce)
     helpmenu.add_separator()
     helpmenu.add_command(label="About", command=self.show_about)
     menubar.add_cascade(label="Help", menu=helpmenu)
@@ -569,12 +204,8 @@ class View(object):
     if len(self.script_info) == 0:
       self.show_err("Please Choose one script firstly.")
     else:
-      # print(self.script_info)
       names = self.script_info[1]
-      # print(self.script_info)
-      # print(names)
       self.malware_report = self.controller.get_malware_report(names)
-      # print(self.malware_report)
       self.controller.get_malware_detail(self.script_info)
 
   def editScript(self):
@@ -796,23 +427,44 @@ class View(object):
       result_str = ""
       for i in script_commands:
         result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+      self.display_commands_count(script_commands, file_name)
 
-      tkinter.messagebox.showinfo("Command Count", result_str)
-
-  def show_all_command_count(self):
-    script_num = None
-    if len(self.script_info) == 0:
-      self.show_err("Please Choose one script firstly.")
+      # tkinter.messagebox.showinfo("Command Count", result_str)
+  
+  def display_commands_count(self, script_commands, script_name = None):
+    resDialog = DisplayCommandsCount(self.root, 'Commands Count',
+                               script_name, script_commands)
+    if resDialog.result is None:
       return False
     else:
-      script_num = self.script_info[0]
-      count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
-      script_commands = self.controller.get_all_commands(count_dir)
+      return resDialog.result
+  def display_commands_count_class(self, script_commands, script_name = None):
+    resDialog = DisplayCommandsClass(self.root, 'Commands Count',
+                               script_name, script_commands)
+    if resDialog.result is None:
+      return False
+    else:
+      return resDialog.result
 
-      result_str = ""
-      for i in script_commands:
-        result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
-      tkinter.messagebox.showinfo("Command Count", result_str)
+
+  def show_all_command_count(self):
+    count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    script_commands = self.controller.get_all_commands(count_dir)
+
+    result_str = ""
+    for i in script_commands:
+      result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    self.display_commands_count(script_commands)
+      # tkinter.messagebox.showinfo("Command Count", result_str)
+
+  def show_all_linux_command_count(self):
+    count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    script_commands = self.controller.get_all_linux_commands(count_dir)
+
+    result_str = ""
+    for i in script_commands:
+      result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    self.display_commands_count_class(script_commands)
 
   def open_source_code(self):
     script_num = None
@@ -831,9 +483,10 @@ class View(object):
       return False
     else:
       script_num = self.script_info[0]
-
-      script_out_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
-      graph_dir = os.path.join(os.getcwd(), ".cache/")
+      script_out_dir = os.path.join(
+          os.getcwd(), self.appdata['path']['dataset']['nodeinfo'])
+      graph_dir = os.path.join(os.getcwd(),
+                               self.appdata['path']['output']['graphpdf'])
       script_path = self.controller.get_script_path_by_nums(script_num)
       file_name = os.path.basename(os.path.normpath(script_path))
       node_name = file_name[:-3] + ".node"
@@ -842,6 +495,13 @@ class View(object):
 
       if graph_file_path and os.path.exists(graph_file_path):
         subprocess.call("evince -w " + str(graph_file_path), shell=True)
+
+  def generate_all_graph(self):
+    node_dir = os.path.join(os.getcwd(),
+                            self.appdata['path']['dataset']['nodeinfo'])
+    graph_dir = os.path.join(os.getcwd(),
+                             self.appdata['path']['output']['graphpdf'])
+    self.controller.generate_allscripts_graph(node_dir, graph_dir)
 
   def show_introduce(self):
     tkinter.messagebox.showinfo(

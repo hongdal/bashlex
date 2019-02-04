@@ -20,13 +20,97 @@ class ScriptData(object):
       self.pattern_command = re.compile(r'CommandNode[^\n]*\n[^\n]*word[^\n]*')
       self.pattern_word = re.compile(r'word=[^\)]*')
       self.pattern_value = re.compile(r'\'[^\']*')
+      self.down_commands_list = ["wget", "ftp", "tftp", "curl"]
       self.loaddict()
-    
-    def isLinuxCommand(self, command):
+
+    def getCommandsClass(self, command):
+      command = command.strip()
       temp = command.split(' ')[0]
       temp = temp.split('/')[-1]
+      # print("ISLINUXCOMMAND: ", temp)
       if temp in self.commands_dict:
-        return temp
+        if "category" in self.commands_dict[temp]:
+          return self.commands_dict[temp]["category"]
+        else:
+          return "Others"
+  
+        # if "category" in self.commands_dict[temp]:
+        #   pass
+        #   # print("COMMAND: ", temp, "Category: ", self.commands_dict[temp]["category"])
+        # else:
+        #   print("No Category: ", temp)
+      
+      else:
+        return False
+    
+    def dealDownloadCommand(self, ans):
+      command = ans["name"]
+      text = ans["text"]
+      filename = text.split('/')[-1]
+      if command == "wget":
+        searchObj = re.search(r'-O[ ]*[\/\.]*[^ ]*', text)
+        if searchObj:
+          temp = str(searchObj.group())
+          filename = text.split('/')[-1]
+        ans["filename"] = filename
+      elif command == "ftp":
+        pass
+      elif command == "curl":
+        pass
+      elif command == "tftp":
+        pass
+      
+      if filename:
+        ans["filename"] = filename
+
+      return ans;
+
+    def isBinaryFile(self, ans):
+      text = ans["text"]
+      command = text.lstrip() 
+      if command[0:2] == "./":
+        return True
+      return False
+ 
+    def inquiryCommandInfo(self, commandtext):
+      # 1) Detect whether this is a Linux Command in the dictionary
+        # a) Detect whether this is a network command, if this is a network command,
+        # add the filename part in the dictionary.
+        # b) If this is not a network command, then return it
+      ans = {}
+      command = commandtext.strip()
+      temp = command.split(' ')[0]
+      temp = temp.split('/')[-1]
+      ans["text"] = commandtext
+      ans["name"] = temp
+      ans["filename"] = ""
+      if self.isBinaryFile(ans):
+        ans["category"] = "binaryfile"
+        ans["text"] = "RUN BinaryFile"
+        return ans
+
+      if temp in self.commands_dict:
+        if "category" in self.commands_dict[temp]:
+          ans["category"] = self.commands_dict[temp]["category" ]
+          if self.commands_dict[temp]["category" ] == "network":
+            if temp in self.down_commands_list: 
+              ans["downloaded"] = True
+            else:
+              ans["downloaded"] = False
+            ans = self.dealDownloadCommand(ans)
+        else:
+          ans["category"] = "others"
+      else:
+        ans["category"] = "unknown"
+      return ans
+
+    def isLinuxCommand(self, command):
+      command = command.strip()
+      temp = command.split(' ')[0]
+      temp = temp.split('/')[-1]
+      # print("ISLINUXCOMMAND: ", temp)
+      if temp in self.commands_dict:
+        return self.commands_dict[temp]
       else:
         return False
 
@@ -39,7 +123,8 @@ class ScriptData(object):
       backitems.sort(reverse=True)
       res = []
       for i in range(0,len(backitems)):
-        tup = (backitems[i][1], backitems[i][0])
+        command_class = self.getCommandsClass(backitems[i][1])
+        tup = (backitems[i][1], backitems[i][0], command_class)
         res.append(tup)
       #temp = sorted(self.linux_commands_dict.items(), lambda x, y: cmp(x[1], y[1]), reverse=True) 
       return res
@@ -88,11 +173,11 @@ class ScriptData(object):
       for command in total_commands:
         # if (self.isLinuxCommand(command))
         temp = command[0].split('/')[-1]
+        # print(temp)
         if self.isLinuxCommand(temp):
-        # if temp in self.commands_dict:
-          if temp not in self.linux_commands_dict:
-            self.linux_commands_dict[temp] = command[1]
-      print(self.linux_commands_dict)
+          # if temp not in self.linux_commands_dict:
+          self.linux_commands_dict[temp] = command[1]
+      return self.linux_commands_dict
 
     def getAllCommands(self, dir_path):
       self.commands_counter.clear()
@@ -107,7 +192,7 @@ class ScriptData(object):
 
       total_commands = self.commands_counter.most_common()
       self.buildCommandsDict(total_commands)
-      print(len(self.linux_commands_dict))
+      # print(len(self.linux_commands_dict))
       return total_commands
 
   instance = None

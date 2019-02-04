@@ -8,6 +8,15 @@
   <large type="Arial" size="12"/>
 </font>
 
+<path>
+  <dataset>
+    <nodeinfo>dataset/nodeData/</nodeinfo>
+  </dataset>
+  <output>
+    <graphdot>.cache/graph</graphdot>
+    <graphpdf>.cache/graph</graphpdf>
+  </output>
+</path>
 
 <menuBar>
   <file title="File">
@@ -16,6 +25,11 @@
     <deleteRepo>Delete Repository...</deleteRepo>
     <update>Update Repo Data</update>
   </file>
+  <tools title="Tools">
+    <generatepdf>Generate All Commands Graph</generatepdf>
+    <generatedot>Generate All Commands Dot</generatedot>
+    <updatescripts>Update Scripts Info</updatescripts>
+  </tools>
   <edit>
     <editInfo>Edit Infomation</editInfo>
   </edit>
