@@ -693,14 +693,16 @@ class TreeVisitor:
 
     def print_cfg(self):
         print("digraph {")
-        # Print all the nodes that are followed by other nodes. 
-        for key in self.cfg.keys():
-            labeling_node = str(key.uid) + ' [label="' + key.data.label + '"];'
+        # Print labels for all nodes. 
+        for node in self.basic_commands:
+            labeling_node = str(node.uid) + ' [label="' + node.data.label + '"];'
             print(labeling_node)
+        # Print all the connections.
+        for key in self.cfg.keys():
+            #labeling_node = str(key.uid) + ' [label="' + key.data.label + '"];'
+            #print(labeling_node)
             for node in self.cfg[key]:
                 connection = str(key.uid) + ' -> ' + str(node.uid) + ';'
                 print(connection)
         print("}")
-
-
 

@@ -138,9 +138,11 @@
     of while condition and its body. 
 
 '''  
-from scriptdata import ScriptData
+from include.scriptdata import ScriptData
 
 NON_COMMAND = ""
+BINARY_COMMAND = "BINARY_COMMAND"
+
 
 class TreeVisitor:
     def __init__(self, tree):
@@ -150,6 +152,8 @@ class TreeVisitor:
         self.basic_commands = []
         self.cfg = {}
         self.command_detector = ScriptData() 
+        self.downloaded_set = set([])
+        self.complexity_set = set([])
 
 
     def make_cfg(self):
@@ -360,6 +364,8 @@ class TreeVisitor:
             print("If-else condition and body mismatch\n")
             exit(1)
 
+        self.complexity_set.add("if")
+
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
         # 3) compute the continues of all the children 
@@ -492,6 +498,7 @@ class TreeVisitor:
         first_body = None
         continues_from_children = set([])
         node.data.continues = set([])
+        self.complexity_set.add("for")
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
         # 3) compute the continues of all the children 
@@ -557,7 +564,10 @@ class TreeVisitor:
         elif node.children[0].data.kind != "ReservedwordNode" or \
                 node.children[2].data.kind != "ReservedwordNode":
             print("Bad WhileNode: lenght=%d\n" % len(node.children))
-            exit(1)
+            exit(1) 
+
+        self.complexity_set.add("while")
+
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
         # 3) compute the continues of all the children 
@@ -667,9 +677,13 @@ class TreeVisitor:
         command = command.replace(r'"', r'\"')
         command = command.replace(r'[', r'\[')
         command = command.replace(r']', r'\]')
-        # handle unknow commands 
-        if False == self.command_detector.isLinuxCommand(command):
-            command = NON_COMMAND
+        # handle unknow commands
+        namedic = self.command_detector.inquiryCommandInfo(command)
+        if namedic["category"] == "binaryfile":
+            if namedic["name"] in self.downloaded_set:
+                command = BINARY_COMMAND
+        elif namedic["category"] == "network" and namedic["downloaded"] == True:
+            self.downloaded_set.add(namedic["filename"])            
         node.data.label = command
 
 
@@ -701,10 +715,14 @@ class TreeVisitor:
 
     def print_cfg(self):
         print("digraph {")
-        # Print all the nodes that are followed by other nodes. 
-        for key in self.cfg.keys():
-            labeling_node = str(key.uid) + ' [label="' + key.data.label + '"];'
+        # Print labels for all nodes. 
+        for node in self.basic_commands:
+            labeling_node = str(node.uid) + ' [label="' + node.data.label + '"];'
             print(labeling_node)
+        # Print all the connections.
+        for key in self.cfg.keys():
+            #labeling_node = str(key.uid) + ' [label="' + key.data.label + '"];'
+            #print(labeling_node)
             for node in self.cfg[key]:
                 connection = str(key.uid) + ' -> ' + str(node.uid) + ';'
                 print(connection)

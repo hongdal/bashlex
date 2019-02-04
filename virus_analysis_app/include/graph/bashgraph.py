@@ -107,6 +107,9 @@ class BashGraph:
         self.fname = ""
         self.tree = None
         self.visitor = None
+        self.graph_attributes = {
+            "complexity_tag"    :   "None"
+        }
 
     def load_file(self, fname):
         self.fname = fname
@@ -145,6 +148,21 @@ class BashGraph:
     def get_graph(self):
         if None == self.visitor:
             print("AST is not retrieved, use make_graph() first.")
-            return
+            return False
         return self.visitor.cfg
 
+    def get_complexity_tag(self):
+        if None == self.visitor:
+            print("AST is not retrieved, use make_graph() first.")
+            return False 
+        complexity_set = self.visitor.complexity_set
+        if len(complexity_set) > 0:
+            self.graph_attributes["complexity_tag"] = ""
+            if "if" in complexity_set:
+                self.graph_attributes["complexity_tag"] += "if-"
+            if "for" in complexity_set:
+                self.graph_attributes["complexity_tag"] += "for-"
+            if "while" in complexity_set:
+                self.graph_attributes["complexity_tag"] += "while-"
+            self.graph_attributes["complexity_tag"] = self.graph_attributes["complexity_tag"][:-1]
+        return self.graph_attributes["complexity_tag"]
