@@ -10,6 +10,9 @@ dist/
 bashlex.egg-info/
 .vscode/
 
+# Test case
+module-dev/subgraph/testcase/*
+
 # Settint for the application
 virus_analysis_app/dev/*
 virus_analysis_app/0_data/*
