@@ -106,7 +106,7 @@ class Graph:
         subprocess.Popen(command.split()).wait()
 
         self.pydotgraph = pydotplus.graphviz.graph_from_dot_file(Graph.tmp_dot_file)
-        os.remove(Graph.tmp_dot_file)
+        # os.remove(Graph.tmp_dot_file)
 
         return self.pydotgraph
 

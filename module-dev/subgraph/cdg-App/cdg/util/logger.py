@@ -54,7 +54,7 @@ def set_filelog_level(level, name=None):
     global _logging_session
     global _filelog_level
     if name is not None:
-        _logging_session = './tmp/log/cdg_' + name + '.log'
+        _logging_session = '/tmp/log/cdg_' + name + '.log'
     _filelog_level = level
     return _logging_session
 

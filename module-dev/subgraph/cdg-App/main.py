@@ -28,8 +28,8 @@ import cdg.simulation.parameters
 import cdg.graph.graph
 import datetime
 import networkx as nx
-
 import numpy as np
+from PatternExtractor import PatternGraph
 
 from cdg.util.function import plot_graph, get_common_subgraph, hierarchy_pos
 ###############################################################################
@@ -106,7 +106,7 @@ parser = argparse.ArgumentParser(description='')
 parser.add_argument('-d', '--dataset', type=str, default='Script',
                     choices=available_datasets.keys(),
                     help='dataset name')
-parser.add_argument('-p', '--data-path', type=str, default='../testcase',
+parser.add_argument('-p', '--data-path', type=str, default='../smallset',
                     help='path of the dataset')
 parser.add_argument('-t', '--tmp-path', type=str, default='/tmp/bash',
                     help='path of the dataset')
@@ -154,6 +154,7 @@ def main(argv):
     graph_list = []
     for i in range(len(dataset.get_all_elements())):
         gxl_path = dataset.path + "/" + dataset.get_name_and_class(i)[1]
+        print(gxl_path)
         graph = cdg.graph.graph.Graph(filename=gxl_path)
         graph.load()
         nx_graph = nx.drawing.nx_pydot.from_pydot(graph.pydot())
@@ -165,8 +166,13 @@ def main(argv):
 
 
     # each item in graph_list is networkx.classes.multidigraph.MultiDiGraph object
-    print(graph_list)
+    print(graph_list[0])
+    plot_graph(graph_list[0], "dd")
 
+
+#    pg = PatternGraph.PatternGraph(graph_list[0], graph_list[0].graph['name'])
+#    print(pg.get_edges())
+#    print(pg.get_nodes())
 
 
 
