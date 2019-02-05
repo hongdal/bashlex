@@ -107,9 +107,7 @@ class BashGraph:
         self.fname = ""
         self.tree = None
         self.visitor = None
-        self.graph_attributes = {
-            "complexity_tag"    :   "None"
-        }
+        self.graph_attributes = {}
 
     def load_file(self, fname):
         self.fname = fname
