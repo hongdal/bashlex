@@ -674,8 +674,10 @@ class TreeVisitor:
 
     '''
         node must be a basic command, i.e., not expandable any more
+        node    :   must be a basic command node. 
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
     '''
-    def label_basic_command(self, node):
+    def label_basic_command(self, node, arg = False):
         command = ''
         for child in node.children:
             command += " " + child.data.label
@@ -684,30 +686,49 @@ class TreeVisitor:
         command = command.replace(r']', r'\]')
         # handle unknow commands
         namedic = self.command_detector.inquiryCommandInfo(command)
+        # binary file must be external
         if namedic["category"] == "binaryfile":
             if namedic["name"] in self.downloaded_set:
                 command = BINARY_COMMAND
-        elif namedic["category"] == "network" and namedic["downloaded"] == True:
-            self.downloaded_set.add(namedic["filename"])            
+                self.tag_set.add("has_external")
+        # label unknown command
+        elif namedic["category"] == "unknown":
+                command = "UNKNOWN"
+                self.tag_set.add("has_unknown")
+        # all other commands
+        else:
+            # If it's a network command, record the downloaed file. 
+            if namedic["category"] == "network" and namedic["downloaded"] == True:
+                self.downloaded_set.add(namedic["filename"])            
+            # If we don't need arguments, just use the name. 
+            if False == arg:
+                command = namedic["name"]
+
         node.data.label = command
 
 
-    def build_basic_commands(self, node):
+    '''
+        node    :   a node that you want to label. Not necessary to be a commandnode. 
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
+    '''
+    def build_basic_commands(self, node, arg = False):
         # determine whether it's a basic command. 
         if node.data.kind == "CommandNode":
             # Add a new record to the hash table if it's a basic command. 
             if self.is_basic_command(node):
                 self.basic_commands.append(node)
                 # update the label of node - This must be the basic command
-                self.label_basic_command(node)
+                self.label_basic_command(node, arg)
                 return
         for child in node.children:
-            self.build_basic_commands(child)
-                
+            self.build_basic_commands(child, arg)
 
-    def build_cfg(self):
+    '''            
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
+    '''
+    def build_cfg(self, arg = False):
         self.basic_commands = []
-        self.build_basic_commands(self.tree.root)
+        self.build_basic_commands(self.tree.root, arg)
         self.cfg = {}
         # traverse the basic command list
         for basic_command in self.basic_commands:

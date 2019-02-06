@@ -129,8 +129,9 @@ class BashGraph:
 
     '''
         Return False if failed, True if successful
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
     '''
-    def make_graph(self):
+    def make_graph(self, arg = False):
         if None == self.tree:
             print(".out file is not loaded, use load_file() first.")
             return False
@@ -139,7 +140,7 @@ class BashGraph:
         if True == self.visitor.bad_graph:
             return False
         else:
-            self.visitor.build_cfg()
+            self.visitor.build_cfg(arg)
         return True
 
 
@@ -182,5 +183,11 @@ class BashGraph:
                 self.graph_attributes["error_tag"].add("function")
             if "case" in tag_set:
                 self.graph_attributes["error_tag"].add("case")
+            # node type tag 
+            self.graph_attributes["node_type"] = set([])
+            if "has_external" in tag_set:
+                self.graph_attributes["node_type"].add("external")
+            if "has_unknown" in tag_set:
+                self.graph_attributes["node_type"].add("unknown_cmd")
             # More tags here ... 
         return self.graph_attributes
