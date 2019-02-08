@@ -507,10 +507,11 @@ class View(object):
   def show_all_linux_command_count(self):
     count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
     script_commands = self.controller.get_all_linux_commands(count_dir)
-
-    result_str = ""
-    for i in script_commands:
-      result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    # script_commands = res[0]
+    # commands_to_file = res[1]
+    # result_str = ""
+    # for i in script_commands:
+    #   result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
     self.display_commands_count_class(script_commands)
 
   def open_source_code(self):

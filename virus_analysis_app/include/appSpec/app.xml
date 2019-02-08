@@ -17,6 +17,7 @@
     <graphpdf>.cache/graph</graphpdf>
     <export>.cache/</export>
     <database>.cache/</database>
+    <cmapf>.cache/command_to_file.json</cmapf>
   </output>
 </path>
 

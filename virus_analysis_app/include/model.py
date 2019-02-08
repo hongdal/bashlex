@@ -232,7 +232,7 @@ class Manager_Script(object):
   def getCommands(self, in_file):
     # print(in_file)
     script_commands = self.script_data.getScriptCommands(in_file)
-    self.save_json_info(self.json_path, script_commands)
+    # self.save_json_info(self.json_path, script_commands)
     # temp = self.get_json_info(self.json_path)
     return script_commands
 
@@ -248,7 +248,19 @@ class Manager_Script(object):
   def getAllLinuxCommands(self, dir_path):
     script_commands = self.script_data.getAllCommands(dir_path)
     all_linux_commands = self.script_data.getSortedCommandsDict()
-    return all_linux_commands
+    commands_to_file = self.getcommandsToFile()
+    return [all_linux_commands, commands_to_file] 
+
+  def getcommandsToFile(self):
+    def save_json_info(file_path, information):
+      # save user data
+      with open(file_path, 'w') as f:
+        json.dump(information, f, indent=2)
+    commands_to_file = self.script_data.getcommand_to_file_dict()
+    commands_to_file_path = os.path.join(
+        os.path.dirname(self.code_dir), self.appdata['path']["output"]["cmapf"])
+    save_json_info(commands_to_file_path, commands_to_file)
+    return commands_to_file
 
   def traverse_scripts(self, fa_path):
     try:
@@ -370,7 +382,7 @@ class Manager_Script(object):
       return results
     else:
       return False
-  
+
   def query_by_property(self, s_property):
     sets = []
     tags = s_property.strip().split(',')
