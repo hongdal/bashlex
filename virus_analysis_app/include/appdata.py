@@ -6,7 +6,7 @@ from .parserxml import XmlDictConfig
 class AppData(object):
   class __AppData(object):
     def __init__(self):
-      self.data_path = os.path.join( os.getcwd(), 'include/appSpec/app.xml' )
+      self.data_path = os.path.join(os.getcwd(), 'include/appSpec/app.xml')
       self.datatree = ElementTree.parse(self.data_path)
       self.dataroot = self.datatree.getroot()
       self.datadict = XmlDictConfig(self.dataroot)

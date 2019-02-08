@@ -10,6 +10,7 @@ from tkinter import ttk
 from tkinter import *
 import tkinter.filedialog
 import tkinter.messagebox
+import json
 from tkinter.ttk import *
 from . import dialog
 from .dialog import *
@@ -25,11 +26,13 @@ HEIGHT = 10
 SMALLFONT = ('Arial', 8)
 MIDFONT = ('Arial', 10)
 LARGEFONT = ('Arial', 12)
+DEBUG = True
 
 
 class Controller(object):
   def __init__(self):
     pass
+
 
 class View(object):
   def __init__(self, controller):
@@ -65,6 +68,8 @@ class View(object):
         label=menubar_data['file']['deleteRepo'], command=self.delete_rep)
     filemenu.add_command(
         label=menubar_data['file']['update'], command=self.update_data)
+    filemenu.add_command(
+        label=menubar_data['file']['export'], command=self.save_to_json)
     filemenu.add_separator()
     filemenu.add_command(
         label="Exit", command=lambda event: self.controller.quit())
@@ -82,7 +87,8 @@ class View(object):
     editmenu.add_command(
         label="Show All Command Count", command=self.show_all_command_count)
     editmenu.add_command(
-        label="Show All Linux Command Count", command=self.show_all_linux_command_count)
+        label="Show All Linux Command Count",
+        command=self.show_all_linux_command_count)
     editmenu.add_command(
         label="Show Command Count", command=self.show_command_count)
     editmenu.add_command(
@@ -98,12 +104,16 @@ class View(object):
         label=menubar_data['tools']['generatepdf'],
         command=self.generate_all_graph)
     toolsmenu.add_command(
+        label=menubar_data['tools']['updatescriptstags'],
+        command=self.update_scripts_property)
+    toolsmenu.add_command(
         label=menubar_data['tools']['generatedot'], command=self.new_rep)
     menubar.add_cascade(label=menubar_data['tools']['title'], menu=toolsmenu)
     # Create the help button in the Menu
     helpmenu = Menu(menubar, tearoff=0)
     helpmenu.add_command(label="Introduce...", command=self.show_introduce)
-    helpmenu.add_command(label="Linux Command Classify", command=self.show_introduce)
+    helpmenu.add_command(
+        label="Linux Command Classify", command=self.show_introduce)
     helpmenu.add_separator()
     helpmenu.add_command(label="About", command=self.show_about)
     menubar.add_cascade(label="Help", menu=helpmenu)
@@ -133,9 +143,9 @@ class View(object):
     radioButton_2 = tk.Radiobutton(
         self.search2_frame, text="Tags", variable=self.search_mode, value=2)
     radioButton_2.pack(side="left", anchor="n")
-    # radioButton_3 = tk.Radiobutton(self.search2_frame, text ="Nums",
-    #                                variable = self.search_mode, value = 3)
-    # radioButton_3.pack(side="left",anchor="n")
+    radioButton_3 = tk.Radiobutton(self.search2_frame, text ="Property",
+                                   variable = self.search_mode, value = 3)
+    radioButton_3.pack(side="left",anchor="n")
     radioButton_4 = tk.Radiobutton(
         self.search2_frame, text="ID", variable=self.search_mode, value=4)
     radioButton_4.pack(side="left", anchor="n")
@@ -151,7 +161,7 @@ class View(object):
     self.display_frame.pack_propagate(0)
 
     # # ***** Table For Script Information *****
-    tree_columns = ("a", "b", "c", "d", "e", "g", "h")
+    tree_columns = ("a", "b", "c", "d", 'f', "e", "g", "h")
     self.table_frame = tk.Frame(self.root, width=600)
     self.tree = ttk.Treeview(
         self.table_frame, show="headings", height=20, columns=tree_columns)
@@ -160,10 +170,11 @@ class View(object):
     self.tree.configure(yscrollcommand=self.vbar.set)
     self.vbar.config(command=self.tree.yview)
     self.tree.configure(yscrollcommand=self.vbar.set)
-    self.tree.column("a", width=50, anchor="center")
-    self.tree.column("b", width=300, anchor="center")
-    self.tree.column("c", width=50, anchor="center")
-    self.tree.column("d", width=50, anchor="center")
+    self.tree.column("a", width=30, anchor="center")
+    self.tree.column("b", width=250, anchor="center")
+    self.tree.column("c", width=30, anchor="center")
+    self.tree.column("d", width=30, anchor="center")
+    self.tree.column("f", width=100, anchor="center")
     self.tree.column("e", width=100, anchor="center")
     self.tree.column("g", width=50, anchor="center")
     self.tree.column("h", width=50, anchor="center")
@@ -171,6 +182,7 @@ class View(object):
     self.tree.heading("b", text="Name")
     self.tree.heading("c", text="Importance")
     self.tree.heading("d", text="Urgency")
+    self.tree.heading("f", text="Property")
     self.tree.heading("e", text="Tags")
     self.tree.heading("g", text="Read")
     self.tree.heading("h", text="Date")
@@ -249,13 +261,16 @@ class View(object):
 
       def search_by_id(id_num):
         return self.controller.query_by_id(id_num)
-
+      
+      def search_by_property(s_property):
+        return self.controller.query_by_property(s_property)
+  
       if search_mode == 4:
         res_scripts = search_by_id(search_string)
       elif search_mode == 2:
         res_scripts = search_by_tags(search_string)
       elif search_mode == 3:
-        res_scripts = search_by_nums(search_string)
+        res_scripts = search_by_property(search_string)
       else:
         res_scripts = search_by_name(search_string)
 
@@ -304,8 +319,11 @@ class View(object):
   def open_rep(self):
     rep_dict = self.controller.get_all_repository()
     if len(list(rep_dict.keys())) != 0:
-      rep_name = self.reps_dialog(rep_dict, 1)
-      res = self.controller.select_rep(rep_name)
+      if DEBUG:
+        res = self.controller.select_rep(self.appdata['testrepo']['name'])
+      else:
+        rep_name = self.reps_dialog(rep_dict, 1)
+        res = self.controller.select_rep(rep_name)
       if res:
         self.rep_name = res[0]
         rep_info = "Rep: " + str(self.rep_name)
@@ -326,6 +344,35 @@ class View(object):
   def update_data(self):
     self.controller.refresh_scripts()
     self.controller.update_scripts_table()
+
+  def save_to_json(self):
+    def save_json_info(file_path, information):
+      # save user data
+      with open(file_path, 'w') as f:
+        json.dump(information, f, indent=2)
+    script_item_list = [
+        'id', 'script_name', 'importance', 'urgency', 'property', 'tags', 'read', 'date']
+
+    count = 0
+    save_list = []
+    for item in self.tree.get_children():
+      item_text = self.tree.item(item, "values")
+      if len(item_text) == len(script_item_list):
+        temp_dict = {}
+        for i in range(len(item_text)):
+          temp_dict[script_item_list[i]] = item_text[i]
+        save_list.append(temp_dict)
+
+    export_json_path = os.path.join(os.getcwd(), str(self.appdata['path']['output']['export']))
+    export_json_path = os.path.join(export_json_path, "output.json")
+    save_json_info(export_json_path, save_list)
+    tkinter.messagebox.showinfo("Export scripts", "Successful! Export scripts information to "+export_json_path)
+
+  def update_scripts_property(self):
+    if self.controller.update_scripts_property():
+      tkinter.messagebox.showinfo("Update Scripts Property", "Update Scripts Property Done")
+    else:
+      self.show_err("Update_scripts_property Error")
 
   # ***** For Controller to call *****
   def ask_script_info(self, script_name):
@@ -373,7 +420,7 @@ class View(object):
       one_row = [
           str(rec[7]), rec[0],
           str(rec[1]),
-          str(rec[2]), rec[3],
+          str(rec[2]), rec[8], rec[3],
           str(rec[5]), rec[6]
       ]
       one_row = [item for item in one_row]
@@ -388,7 +435,7 @@ class View(object):
           "",
           "end",
           values=(recs_t[i][0], recs_t[i][1], recs_t[i][2], recs_t[i][3],
-                  recs_t[i][4], recs_t[i][5], recs_t[i][6]))
+                  recs_t[i][4], recs_t[i][5], recs_t[i][6], recs_t[i][7]))
       # TODO: Find a function to update the data by the application
       # self.tree.after(10000, self.update_data)
 
@@ -430,22 +477,22 @@ class View(object):
       self.display_commands_count(script_commands, file_name)
 
       # tkinter.messagebox.showinfo("Command Count", result_str)
-  
-  def display_commands_count(self, script_commands, script_name = None):
-    resDialog = DisplayCommandsCount(self.root, 'Commands Count',
-                               script_name, script_commands)
-    if resDialog.result is None:
-      return False
-    else:
-      return resDialog.result
-  def display_commands_count_class(self, script_commands, script_name = None):
-    resDialog = DisplayCommandsClass(self.root, 'Commands Count',
-                               script_name, script_commands)
+
+  def display_commands_count(self, script_commands, script_name=None):
+    resDialog = DisplayCommandsCount(self.root, 'Commands Count', script_name,
+                                     script_commands)
     if resDialog.result is None:
       return False
     else:
       return resDialog.result
 
+  def display_commands_count_class(self, script_commands, script_name=None):
+    resDialog = DisplayCommandsClass(self.root, 'Commands Count', script_name,
+                                     script_commands)
+    if resDialog.result is None:
+      return False
+    else:
+      return resDialog.result
 
   def show_all_command_count(self):
     count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
@@ -455,7 +502,7 @@ class View(object):
     for i in script_commands:
       result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
     self.display_commands_count(script_commands)
-      # tkinter.messagebox.showinfo("Command Count", result_str)
+    # tkinter.messagebox.showinfo("Command Count", result_str)
 
   def show_all_linux_command_count(self):
     count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")

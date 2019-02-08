@@ -328,8 +328,8 @@ class DisplayDetails(Dialog):
     script_name = "Script Name: " + str(self.script_info[1])
     old_importance = int(self.script_info[2])
     old_urgency = int(self.script_info[3])
-    old_tags = str(self.script_info[4])
-    old_read = str(self.script_info[5])
+    old_tags = str(self.script_info[5])
+    old_read = str(self.script_info[6])
     self.malware_report = self.argv2
     self.scan_report = self.malware_report['scans']
     self.table_data = []
@@ -453,8 +453,8 @@ class EditScriptDialog(Dialog):
       script_name = "Script: " + str(self.script_info[1])
       old_importance = int(self.script_info[2])
       old_urgency = int(self.script_info[3])
-      old_tags = str(self.script_info[4])
-      old_read = str(self.script_info[5])
+      old_tags = str(self.script_info[5])
+      old_read = str(self.script_info[6])
     else:
       script_name = self.argv
     Label(

@@ -86,7 +86,7 @@ class ScriptData(object):
       ans["filename"] = ""
       if self.isBinaryFile(ans):
         ans["category"] = "binaryfile"
-        ans["text"] = "RUN BinaryFile"
+        ans["text"] = "Run BinaryFile"
         return ans
 
       if temp in self.commands_dict:

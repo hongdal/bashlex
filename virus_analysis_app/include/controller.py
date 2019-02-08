@@ -14,9 +14,8 @@ class Controller(object):
   def __init__(self):
     self.script_manager = model.Manager_Script()
     self.view = view.View(self)
-    # self.view.open_rep()
-    self.select_rep("BashScript")
-    # self.script_manager.refresh()
+    self.view.open_rep()
+    self.script_manager.refresh()
 
   # *****Repository API *****
   def get_all_repository(self):
@@ -121,9 +120,39 @@ class Controller(object):
     else:
       return False
 
-  def open_script_by_num(self, num_s):
-    self.script_manager.open_script_by_num(num_s)
-    return True
+  def update_allscripts_tags(self, node_dir):
+    if os.path.isdir(node_dir):
+      for dirpath, dirnames, filenames in os.walk(node_dir):
+        for x in filenames:
+          if fnmatch.fnmatch(x, "VirusShare*"):
+            node_file = os.path.join(node_dir, x)
+            self.script_manager.getScriptTags(node_file)
+      return True
+    else:
+      return False
+
+  def update_scripts_property(self):
+    scripts = self.script_manager.get_all_scripts()
+    res = True
+    for script in scripts:
+      name = script[0]
+      properties_set = self.script_manager.getScriptProperty(name)
+      properties = ""
+      if properties_set:
+        for p in properties_set:
+          properties += p
+          properties += ", "
+        properties = properties[:-2]
+        res = self.script_manager.update_script_property(name, properties)
+    if res:
+      self.update_scripts_table()
+      return True
+    else:
+      return False
+
+  # def open_script_by_num(self, num_s):
+  #   self.script_manager.open_script_by_num(num_s)
+  #   return True
 
   def del_script_by_name(self, names):
     self.script_manager.del_script_by_name(names)
@@ -141,6 +170,10 @@ class Controller(object):
 
   def query_by_tags(self, tags_s):
     res_scripts = self.script_manager.query_by_tags(tags_s)
+    return res_scripts
+
+  def query_by_property(self, s_property):
+    res_scripts = self.script_manager.query_by_property(s_property)
     return res_scripts
 
   def query_by_nums(self, num_s):

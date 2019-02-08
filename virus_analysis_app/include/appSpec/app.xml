@@ -15,8 +15,21 @@
   <output>
     <graphdot>.cache/graph</graphdot>
     <graphpdf>.cache/graph</graphpdf>
+    <export>.cache/</export>
+    <database>.cache/</database>
   </output>
 </path>
+
+<userconfig>
+  <databasepath>script_manager.db</databasepath>
+  <repoinfo>user_config.json</repoinfo>
+</userconfig>
+
+<testrepo>
+  <name>BashScript</name>
+  <path>dataset/bashData/allscripts/</path>
+  <repoinfo>user_config.json</repoinfo>
+</testrepo>
 
 <menuBar>
   <file title="File">
@@ -24,10 +37,12 @@
     <openRepo>Open Repository...</openRepo>
     <deleteRepo>Delete Repository...</deleteRepo>
     <update>Update Repo Data</update>
+    <export>Save as JSON</export>
   </file>
   <tools title="Tools">
     <generatepdf>Generate All Commands Graph</generatepdf>
     <generatedot>Generate All Commands Dot</generatedot>
+    <updatescriptstags>Update Scripts Tags</updatescriptstags>
     <updatescripts>Update Scripts Info</updatescripts>
   </tools>
   <edit>
