@@ -38,12 +38,12 @@
     <openRepo>Open Repository...</openRepo>
     <deleteRepo>Delete Repository...</deleteRepo>
     <update>Update Repo Data</update>
-    <export>Save as JSON</export>
+    <export>Export to JSON</export>
   </file>
   <tools title="Tools">
     <generatepdf>Generate All Commands Graph</generatepdf>
     <generatedot>Generate All Commands Dot</generatedot>
-    <updatescriptstags>Update Scripts Tags</updatescriptstags>
+    <updatescriptstags>Update Scripts Property</updatescriptstags>
     <updatescripts>Update Scripts Info</updatescripts>
   </tools>
   <edit>
