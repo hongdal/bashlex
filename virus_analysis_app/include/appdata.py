@@ -1,7 +1,8 @@
-import xml.etree.ElementTree as ElementTree
 import os, sys
+import xml.etree.ElementTree as ElementTree
 from .parserxml import XmlListConfig
 from .parserxml import XmlDictConfig
+
 
 class AppData(object):
   class __AppData(object):
@@ -12,6 +13,7 @@ class AppData(object):
       self.datadict = XmlDictConfig(self.dataroot)
 
   instance = None
+
   def __new__(self):
     if not AppData.instance:
       AppData.instance = AppData.__AppData()

@@ -249,16 +249,18 @@ class Manager_Script(object):
     script_commands = self.script_data.getAllCommands(dir_path)
     all_linux_commands = self.script_data.getSortedCommandsDict()
     commands_to_file = self.getcommandsToFile()
-    return [all_linux_commands, commands_to_file] 
+    return [all_linux_commands, commands_to_file]
 
   def getcommandsToFile(self):
     def save_json_info(file_path, information):
       # save user data
       with open(file_path, 'w') as f:
         json.dump(information, f, indent=2)
+
     commands_to_file = self.script_data.getcommand_to_file_dict()
     commands_to_file_path = os.path.join(
-        os.path.dirname(self.code_dir), self.appdata['path']["output"]["cmapf"])
+        os.path.dirname(self.code_dir),
+        self.appdata['path']["output"]["cmapf"])
     save_json_info(commands_to_file_path, commands_to_file)
     return commands_to_file
 
@@ -302,8 +304,7 @@ class Manager_Script(object):
     if len(scripts) > 0:
       self.cursor.execute(
           "UPDATE {} SET property=? WHERE script_name=?".format(
-              self.cur_rep.name),
-          (s_property, script_name))
+              self.cur_rep.name), (s_property, script_name))
       self.conn.commit()
       return True
     else:

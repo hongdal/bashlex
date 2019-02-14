@@ -57,7 +57,7 @@ class View(object):
     # ***** Main Menu *****
     menubar = tk.Menu(self.root, bg="lightgrey", fg="black", font=MIDFONT)
     menubar_data = self.appdata['menuBar']
-    # print(menubar_data)
+
     # Create the Menu button in the Menu
     filemenu = tk.Menu(menubar, tearoff=0)
     filemenu.add_command(
@@ -74,11 +74,12 @@ class View(object):
     filemenu.add_command(
         label="Exit", command=lambda event: self.controller.quit())
     menubar.add_cascade(label=menubar_data['file']['title'], menu=filemenu)
+
     # Create the Edit button in the Menu
     editmenu = Menu(menubar, tearoff=0)
     editmenu.add_command(
         label=menubar_data['edit']['editInfo'], command=self.editScript)
-    # editmenu.add_command(label="Open Script", command=self.open_script)
+
     editmenu.add_command(label="Show Tags", command=self.show_tags)
     editmenu.add_command(
         label="Show Scripts Path", command=self.show_script_path)
@@ -186,7 +187,6 @@ class View(object):
     self.tree.heading("e", text="Tags")
     self.tree.heading("g", text="Read")
     self.tree.heading("h", text="Date")
-    # self.update_table()
     self.tree.pack(side="left", fill="both", expand=True)
     self.tree.bind('<ButtonRelease-1>', self.treeviewClick)
     self.tree.bind('<Double-Button-1>', self.treeviewDubClick)
@@ -201,8 +201,6 @@ class View(object):
     self.status_frame = tk.Frame(self.root)
     self.status = tk.Label(self.status_frame, text=str(self.rep_name))
     self.status.pack(side="left")
-    # label_text = tk.Label(self.search2_frame, text="Search Mode: ")
-    # label_text.pack(padx=10,side="left",anchor="n")
 
     self.func_frame.grid(row=0, column=0, rowspan=2, columnspan=2, sticky="ew")
     self.display_frame.grid(row=0, column=2, rowspan=2, sticky="ew")
@@ -436,8 +434,6 @@ class View(object):
           "end",
           values=(recs_t[i][0], recs_t[i][1], recs_t[i][2], recs_t[i][3],
                   recs_t[i][4], recs_t[i][5], recs_t[i][6], recs_t[i][7]))
-      # TODO: Find a function to update the data by the application
-      # self.tree.after(10000, self.update_data)
 
   # ***** Show some Information *****
   def show_tags(self):
@@ -476,8 +472,6 @@ class View(object):
         result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
       self.display_commands_count(script_commands, file_name)
 
-      # tkinter.messagebox.showinfo("Command Count", result_str)
-
   def display_commands_count(self, script_commands, script_name=None):
     resDialog = DisplayCommandsCount(self.root, 'Commands Count', script_name,
                                      script_commands)
@@ -502,16 +496,10 @@ class View(object):
     for i in script_commands:
       result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
     self.display_commands_count(script_commands)
-    # tkinter.messagebox.showinfo("Command Count", result_str)
 
   def show_all_linux_command_count(self):
     count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
     script_commands = self.controller.get_all_linux_commands(count_dir)
-    # script_commands = res[0]
-    # commands_to_file = res[1]
-    # result_str = ""
-    # for i in script_commands:
-    #   result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
     self.display_commands_count_class(script_commands)
 
   def open_source_code(self):

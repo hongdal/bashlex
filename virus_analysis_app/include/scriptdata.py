@@ -21,7 +21,7 @@ class ScriptData(object):
       self.pattern_word = re.compile(r'word=[^\)]*')
       self.pattern_value = re.compile(r'\'[^\']*')
       self.down_commands_list = ["wget", "ftp", "tftp", "curl"]
-      self.command_to_file_dict={}
+      self.command_to_file_dict = {}
       self.loaddict()
 
     def getcommand_to_file_dict(self):
@@ -36,19 +36,11 @@ class ScriptData(object):
       command = command.strip()
       temp = command.split(' ')[0]
       temp = temp.split('/')[-1]
-      # print("ISLINUXCOMMAND: ", temp)
       if temp in self.commands_dict:
         if "category" in self.commands_dict[temp]:
           return self.commands_dict[temp]["category"]
         else:
           return "Others"
-
-        # if "category" in self.commands_dict[temp]:
-        #   pass
-        #   # print("COMMAND: ", temp, "Category: ", self.commands_dict[temp]["category"])
-        # else:
-        #   print("No Category: ", temp)
-
       else:
         return False
 
@@ -98,6 +90,12 @@ class ScriptData(object):
         ans["category"] = "binaryfile"
         ans["text"] = "Run BinaryFile"
         return ans
+
+      if command[:2] == '\[' and command[-2:] == '\]':
+        ans["category"] = "condition"
+        ans["text"] = commandtext
+        return ans
+    
       if "=" in command:
         ans["category"] = "assignment"
         ans["text"] = commandtext
@@ -122,7 +120,6 @@ class ScriptData(object):
       command = command.strip()
       temp = command.split(' ')[0]
       temp = temp.split('/')[-1]
-      # print("ISLINUXCOMMAND: ", temp)
       if temp in self.commands_dict:
         return self.commands_dict[temp]
       else:
@@ -199,7 +196,8 @@ class ScriptData(object):
         # print(temp)
         res = self.inquiryCommandInfo(temp)
         if res:
-          if temp[0] == '/' or res["category"] == 'unknown' or res["category"] == 'binaryfile' or res["category"] == "assignment":
+          if temp[0] == '/' or res["category"] == 'unknown' or res[
+              "category"] == 'binaryfile' or res["category"] == "assignment":
             pass
           else:
             self.linux_commands_dict[temp] = command[1]
