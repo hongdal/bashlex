@@ -500,6 +500,7 @@ class View(object):
   def show_all_linux_command_count(self):
     count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
     script_commands = self.controller.get_all_linux_commands(count_dir)
+    # print(script_commands)
     self.display_commands_count_class(script_commands)
 
   def open_source_code(self):
