@@ -13,8 +13,8 @@
     <nodeinfo>dataset/nodeData/</nodeinfo>
   </dataset>
   <output>
-    <graphdot>.cache/graph</graphdot>
-    <graphpdf>.cache/graph</graphpdf>
+    <graphdot>../../../../../../tmp/dotdata/</graphdot>
+    <graphpdf>../../../../../../tmp/pdfdata/</graphpdf>
   </output>
 </path>
 
