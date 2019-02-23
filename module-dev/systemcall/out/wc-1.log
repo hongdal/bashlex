@@ -1,0 +1,342 @@
+18635 1550185133.410840 execve("/bin/ls", ["ls", "-al"], [/* 43 vars */]) = 0 <0.002699>
+18635 1550185133.413818 brk(NULL)       = 0x1bf0000 <0.000020>
+18635 1550185133.413945 uname({sysname="Linux", nodename="raspberrypi", ...}) = 0 <0.000019>
+18635 1550185133.414029 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000029>
+18635 1550185133.414123 mmap2(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f76000 <0.000024>
+18635 1550185133.414227 access("/etc/ld.so.preload", R_OK) = 0 <0.000025>
+18635 1550185133.414301 open("/etc/ld.so.preload", O_RDONLY|O_CLOEXEC) = 3 <0.000025>
+18635 1550185133.414378 fstat64(3, {st_mode=S_IFREG|0644, st_size=42, ...}) = 0 <0.000022>
+18635 1550185133.414453 mmap2(NULL, 42, PROT_READ|PROT_WRITE, MAP_PRIVATE, 3, 0) = 0x76f75000 <0.000022>
+18635 1550185133.414520 close(3)        = 0 <0.000025>
+18635 1550185133.414641 open("/usr/lib/arm-linux-gnueabihf/libarmmem.so", O_RDONLY|O_CLOEXEC) = 3 <0.002759>
+18635 1550185133.417481 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\210\5\0\0004\0\0\0"..., 512) = 512 <0.000027>
+18635 1550185133.417564 lseek(3, 20868, SEEK_SET) = 20868 <0.000021>
+18635 1550185133.417628 read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1000) = 1000 <0.000022>
+18635 1550185133.417752 lseek(3, 20540, SEEK_SET) = 20540 <0.000016>
+18635 1550185133.417808 read(3, "A,\0\0\0aeabi\0\1\"\0\0\0\0056\0\6\6\10\1\t\1\n\3\f\1\22\4\24"..., 45) = 45 <0.000018>
+18635 1550185133.417873 fstat64(3, {st_mode=S_IFREG|0644, st_size=21868, ...}) = 0 <0.000017>
+18635 1550185133.417945 mmap2(NULL, 86080, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76f33000 <0.000024>
+18635 1550185133.418014 mprotect(0x76f38000, 61440, PROT_NONE) = 0 <0.000219>
+18635 1550185133.418278 mmap2(0x76f47000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x76f47000 <0.000041>
+18635 1550185133.418403 close(3)        = 0 <0.000021>
+18635 1550185133.418514 munmap(0x76f75000, 42) = 0 <0.000051>
+18635 1550185133.418626 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000041>
+18635 1550185133.418895 fstat64(3, {st_mode=S_IFREG|0644, st_size=86404, ...}) = 0 <0.000055>
+18635 1550185133.419050 mmap2(NULL, 86404, PROT_READ, MAP_PRIVATE, 3, 0) = 0x76f1d000 <0.000115>
+18635 1550185133.419240 close(3)        = 0 <0.000036>
+18635 1550185133.419341 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000044>
+18635 1550185133.419490 open("/lib/arm-linux-gnueabihf/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3 <0.001423>
+18635 1550185133.421029 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0hN\0\0004\0\0\0"..., 512) = 512 <0.000062>
+18635 1550185133.421210 lseek(3, 136448, SEEK_SET) = 136448 <0.000060>
+18635 1550185133.421359 read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1160) = 1160 <0.000067>
+18635 1550185133.421502 lseek(3, 136088, SEEK_SET) = 136088 <0.000038>
+18635 1550185133.421671 read(3, "A,\0\0\0aeabi\0\1\"\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\24\1\25"..., 45) = 45 <0.000046>
+18635 1550185133.421794 fstat64(3, {st_mode=S_IFREG|0644, st_size=137608, ...}) = 0 <0.000033>
+18635 1550185133.421974 mmap2(NULL, 208496, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76eea000 <0.000126>
+18635 1550185133.422193 mprotect(0x76f0a000, 65536, PROT_NONE) = 0 <0.000086>
+18635 1550185133.422481 mmap2(0x76f1a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x20000) = 0x76f1a000 <0.000119>
+18635 1550185133.422808 mmap2(0x76f1c000, 3696, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76f1c000 <0.000102>
+18635 1550185133.422995 close(3)        = 0 <0.000078>
+18635 1550185133.423186 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000073>
+18635 1550185133.423355 open("/lib/arm-linux-gnueabihf/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000071>
+18635 1550185133.423523 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0@h\1\0004\0\0\0"..., 512) = 512 <0.000090>
+18635 1550185133.423694 lseek(3, 1231820, SEEK_SET) = 1231820 <0.000042>
+18635 1550185133.423863 read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 2880) = 2880 <0.000043>
+18635 1550185133.423980 lseek(3, 1228284, SEEK_SET) = 1228284 <0.000050>
+18635 1550185133.424109 read(3, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.000040>
+18635 1550185133.424247 fstat64(3, {st_mode=S_IFREG|0755, st_size=1234700, ...}) = 0 <0.000047>
+18635 1550185133.424388 mmap2(NULL, 1303872, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76dab000 <0.000051>
+18635 1550185133.424516 mprotect(0x76ed4000, 65536, PROT_NONE) = 0 <0.000066>
+18635 1550185133.424642 mmap2(0x76ee4000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x129000) = 0x76ee4000 <0.000073>
+18635 1550185133.424819 mmap2(0x76ee7000, 9536, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76ee7000 <0.000050>
+18635 1550185133.424945 close(3)        = 0 <0.000037>
+18635 1550185133.425147 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000065>
+18635 1550185133.425297 open("/lib/arm-linux-gnueabihf/libpcre.so.3", O_RDONLY|O_CLOEXEC) = 3 <0.000044>
+18635 1550185133.425438 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0004\20\0\0004\0\0\0"..., 512) = 512 <0.000044>
+18635 1550185133.425552 lseek(3, 426320, SEEK_SET) = 426320 <0.000040>
+18635 1550185133.425653 read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1040) = 1040 <0.000051>
+18635 1550185133.425773 lseek(3, 426012, SEEK_SET) = 426012 <0.006577>
+18635 1550185133.432920 read(3, "A,\0\0\0aeabi\0\1\"\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\24\1\25"..., 45) = 45 <0.000054>
+18635 1550185133.433268 fstat64(3, {st_mode=S_IFREG|0644, st_size=427360, ...}) = 0 <0.000069>
+18635 1550185133.433564 mmap2(NULL, 491604, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76d32000 <0.000062>
+18635 1550185133.433697 mprotect(0x76d9a000, 61440, PROT_NONE) = 0 <0.000068>
+18635 1550185133.433842 mmap2(0x76da9000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x67000) = 0x76da9000 <0.000128>
+18635 1550185133.434092 close(3)        = 0 <0.000053>
+18635 1550185133.434253 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000100>
+18635 1550185133.434474 open("/lib/arm-linux-gnueabihf/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3 <0.000050>
+18635 1550185133.434603 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0P\t\0\0004\0\0\0"..., 512) = 512 <0.000072>
+18635 1550185133.434785 lseek(3, 8680, SEEK_SET) = 8680 <0.000081>
+18635 1550185133.434944 read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1120) = 1120 <0.000053>
+18635 1550185133.435192 lseek(3, 8328, SEEK_SET) = 8328 <0.000077>
+18635 1550185133.435333 read(3, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.002520>
+18635 1550185133.437981 fstat64(3, {st_mode=S_IFREG|0644, st_size=9800, ...}) = 0 <0.000067>
+18635 1550185133.438191 mmap2(NULL, 73912, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76d1f000 <0.000086>
+18635 1550185133.438382 mprotect(0x76d21000, 61440, PROT_NONE) = 0 <0.000048>
+18635 1550185133.438498 mmap2(0x76d30000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x76d30000 <0.000054>
+18635 1550185133.438665 close(3)        = 0 <0.000076>
+18635 1550185133.438845 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000064>
+18635 1550185133.438999 open("/lib/arm-linux-gnueabihf/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3 <0.000047>
+18635 1550185133.439157 read(3, "\177ELF\1\1\1\3\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0dI\0\0004\0\0\0"..., 512) = 512 <0.000069>
+18635 1550185133.439316 lseek(3, 125740, SEEK_SET) = 125740 <0.000044>
+18635 1550185133.439440 read(3, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1560) = 1560 <0.000040>
+18635 1550185133.439554 lseek(3, 90536, SEEK_SET) = 90536 <0.000076>
+18635 1550185133.439703 read(3, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.000050>
+18635 1550185133.439905 fstat64(3, {st_mode=S_IFREG|0755, st_size=127300, ...}) = 0 <0.000036>
+18635 1550185133.440015 mmap2(NULL, 164432, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x76cf6000 <0.000062>
+18635 1550185133.440177 mprotect(0x76d0c000, 61440, PROT_NONE) = 0 <0.000153>
+18635 1550185133.440406 mmap2(0x76d1b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x15000) = 0x76d1b000 <0.000147>
+18635 1550185133.440638 mmap2(0x76d1d000, 4688, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76d1d000 <0.000035>
+18635 1550185133.440806 close(3)        = 0 <0.000126>
+18635 1550185133.441071 mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x76f74000 <0.000072>
+18635 1550185133.441349 set_tls(0x76f749f0, 0x76f75148, 0x76f7a050, 0x76f749f0, 0x76f7a050) = 0 <0.000055>
+18635 1550185133.441624 mprotect(0x76ee4000, 8192, PROT_READ) = 0 <0.000144>
+18635 1550185133.441891 mprotect(0x76d1b000, 4096, PROT_READ) = 0 <0.000064>
+18635 1550185133.442083 mprotect(0x76d30000, 4096, PROT_READ) = 0 <0.000037>
+18635 1550185133.442254 mprotect(0x76da9000, 4096, PROT_READ) = 0 <0.000069>
+18635 1550185133.442470 mprotect(0x76f1a000, 4096, PROT_READ) = 0 <0.000106>
+18635 1550185133.442640 mprotect(0x76f33000, 20480, PROT_READ|PROT_WRITE) = 0 <0.000270>
+18635 1550185133.443012 mprotect(0x76f33000, 20480, PROT_READ|PROT_EXEC) = 0 <0.000061>
+18635 1550185133.443154 cacheflush(0x76f33000, 0x76f38000, 0, 0x15, 0) = 0 <0.000050>
+18635 1550185133.443276 mprotect(0x76f47000, 4096, PROT_READ) = 0 <0.000060>
+18635 1550185133.443429 mprotect(0x39000, 4096, PROT_READ) = 0 <0.000037>
+18635 1550185133.443538 mprotect(0x76f79000, 4096, PROT_READ) = 0 <0.000035>
+18635 1550185133.443682 munmap(0x76f1d000, 86404) = 0 <0.000076>
+18635 1550185133.443838 set_tid_address(0x76f74598) = 18635 <0.000068>
+18635 1550185133.443972 set_robust_list(0x76f745a0, 12) = 0 <0.000045>
+18635 1550185133.444103 rt_sigaction(SIGRTMIN, {sa_handler=0x76cfa2b0, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x76dd76c0}, NULL, 8) = 0 <0.000116>
+18635 1550185133.444312 rt_sigaction(SIGRT_1, {sa_handler=0x76cfa390, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x76dd76c0}, NULL, 8) = 0 <0.000038>
+18635 1550185133.444463 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0 <0.000036>
+18635 1550185133.445684 ugetrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0 <0.000064>
+18635 1550185133.446024 statfs("/sys/fs/selinux", 0x7ea501dc) = -1 ENOENT (No such file or directory) <0.000099>
+18635 1550185133.446257 statfs("/selinux", 0x7ea501dc) = -1 ENOENT (No such file or directory) <0.000052>
+18635 1550185133.446526 brk(NULL)       = 0x1bf0000 <0.000045>
+18635 1550185133.446650 brk(0x1c11000)  = 0x1c11000 <0.000038>
+18635 1550185133.446755 open("/proc/filesystems", O_RDONLY) = 3 <0.000076>
+18635 1550185133.446901 fstat64(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0 <0.000035>
+18635 1550185133.447026 read(3, "nodev\tsysfs\nnodev\trootfs\nnodev\tr"..., 1024) = 343 <0.000066>
+18635 1550185133.447177 read(3, "", 1024) = 0 <0.000054>
+18635 1550185133.447304 close(3)        = 0 <0.000038>
+18635 1550185133.447408 access("/etc/selinux/config", F_OK) = -1 ENOENT (No such file or directory) <0.000044>
+18635 1550185133.447624 open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3 <0.000064>
+18635 1550185133.447773 fstat64(3, {st_mode=S_IFREG|0644, st_size=1679776, ...}) = 0 <0.000042>
+18635 1550185133.447902 mmap2(NULL, 1679776, PROT_READ, MAP_PRIVATE, 3, 0) = 0x76b5b000 <0.000047>
+18635 1550185133.448015 close(3)        = 0 <0.000035>
+18635 1550185133.448149 open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3 <0.000054>
+18635 1550185133.448301 fstat64(3, {st_mode=S_IFREG|0644, st_size=1679776, ...}) = 0 <0.000077>
+18635 1550185133.448456 mmap2(NULL, 4096, PROT_READ, MAP_PRIVATE, 3, 0x19a000) = 0x76f73000 <0.000045>
+18635 1550185133.448577 close(3)        = 0 <0.000062>
+18635 1550185133.448966 ioctl(1, TCGETS, 0x7ea500bc) = -1 ENOTTY (Inappropriate ioctl for device) <0.000078>
+18635 1550185133.450774 ioctl(1, TIOCGWINSZ, 0x7ea50170) = -1 ENOTTY (Inappropriate ioctl for device) <0.000167>
+18635 1550185133.451154 open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 3 <0.000223>
+18635 1550185133.451530 fstat64(3, {st_mode=S_IFREG|0644, st_size=2995, ...}) = 0 <0.000073>
+18635 1550185133.451730 read(3, "# Locale name alias data base.\n#"..., 4096) = 2995 <0.002742>
+18635 1550185133.454749 read(3, "", 4096) = 0 <0.000067>
+18635 1550185133.454960 close(3)        = 0 <0.000905>
+18635 1550185133.459413 open("/usr/share/locale/en_US.UTF-8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000112>
+18635 1550185133.459626 open("/usr/share/locale/en_US.utf8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000043>
+18635 1550185133.459743 open("/usr/share/locale/en_US/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000112>
+18635 1550185133.459955 open("/usr/share/locale/en.UTF-8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000060>
+18635 1550185133.460158 open("/usr/share/locale/en.utf8/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000093>
+18635 1550185133.460329 open("/usr/share/locale/en/LC_TIME/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000046>
+18635 1550185133.460536 open("/usr/lib/arm-linux-gnueabihf/gconv/gconv-modules.cache", O_RDONLY) = 3 <0.000063>
+18635 1550185133.460715 fstat64(3, {st_mode=S_IFREG|0644, st_size=26262, ...}) = 0 <0.000063>
+18635 1550185133.460901 mmap2(NULL, 26262, PROT_READ, MAP_SHARED, 3, 0) = 0x76f6c000 <0.000069>
+18635 1550185133.461035 close(3)        = 0 <0.000221>
+18635 1550185133.461316 futex(0x76ee6ed8, FUTEX_WAKE_PRIVATE, 2147483647) = 0 <0.000064>
+18635 1550185133.461613 open(".", O_RDONLY|O_NONBLOCK|O_LARGEFILE|O_DIRECTORY|O_CLOEXEC) = 3 <0.000098>
+18635 1550185133.461782 fstat64(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000035>
+18635 1550185133.461913 getdents64(3, /* 23 entries */, 32768) = 752 <0.000115>
+18635 1550185133.462162 lstat64("filename.iso", {st_mode=S_IFREG|0644, st_size=19157, ...}) = 0 <0.000063>
+18635 1550185133.462394 lgetxattr("filename.iso", "security.selinux", 0x1bf0dd0, 255) = -1 ENODATA (No data available) <0.000073>
+18635 1550185133.462549 getxattr("filename.iso", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000042>
+18635 1550185133.462921 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4 <0.000082>
+18635 1550185133.463077 connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory) <0.000176>
+18635 1550185133.463350 close(4)        = 0 <0.000175>
+18635 1550185133.463609 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4 <0.000067>
+18635 1550185133.463761 connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory) <0.000062>
+18635 1550185133.464005 close(4)        = 0 <0.000191>
+18635 1550185133.464321 open("/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 4 <0.000038>
+18635 1550185133.464438 fstat64(4, {st_mode=S_IFREG|0644, st_size=529, ...}) = 0 <0.000048>
+18635 1550185133.464759 read(4, "# /etc/nsswitch.conf\n#\n# Example"..., 4096) = 529 <0.000047>
+18635 1550185133.464910 read(4, "", 4096) = 0 <0.000118>
+18635 1550185133.465089 close(4)        = 0 <0.000038>
+18635 1550185133.465208 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4 <0.000040>
+18635 1550185133.465330 fstat64(4, {st_mode=S_IFREG|0644, st_size=86404, ...}) = 0 <0.000037>
+18635 1550185133.465437 mmap2(NULL, 86404, PROT_READ, MAP_PRIVATE, 4, 0) = 0x76f1d000 <0.000035>
+18635 1550185133.465534 close(4)        = 0 <0.000034>
+18635 1550185133.465628 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000040>
+18635 1550185133.465755 open("/lib/arm-linux-gnueabihf/libnss_compat.so.2", O_RDONLY|O_CLOEXEC) = 4 <0.000036>
+18635 1550185133.465880 read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\r\0\0004\0\0\0"..., 512) = 512 <0.000047>
+18635 1550185133.465993 lseek(4, 25336, SEEK_SET) = 25336 <0.000042>
+18635 1550185133.466096 read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1120) = 1120 <0.000045>
+18635 1550185133.466216 lseek(4, 24984, SEEK_SET) = 24984 <0.000710>
+18635 1550185133.466995 read(4, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.000065>
+18635 1550185133.467163 fstat64(4, {st_mode=S_IFREG|0644, st_size=26456, ...}) = 0 <0.000068>
+18635 1550185133.467312 mmap2(NULL, 90716, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x76b44000 <0.000274>
+18635 1550185133.467698 mprotect(0x76b4a000, 61440, PROT_NONE) = 0 <0.000042>
+18635 1550185133.467812 mmap2(0x76b59000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x5000) = 0x76b59000 <0.000050>
+18635 1550185133.467965 close(4)        = 0 <0.000146>
+18635 1550185133.468252 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000173>
+18635 1550185133.468505 open("/lib/arm-linux-gnueabihf/libnsl.so.1", O_RDONLY|O_CLOEXEC) = 4 <0.000048>
+18635 1550185133.468662 read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\320.\0\0004\0\0\0"..., 512) = 512 <0.000038>
+18635 1550185133.468772 lseek(4, 70484, SEEK_SET) = 70484 <0.000046>
+18635 1550185133.468908 read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1120) = 1120 <0.000072>
+18635 1550185133.469093 lseek(4, 70132, SEEK_SET) = 70132 <0.000066>
+18635 1550185133.469281 read(4, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.000070>
+18635 1550185133.469476 fstat64(4, {st_mode=S_IFREG|0644, st_size=71604, ...}) = 0 <0.000115>
+18635 1550185133.472315 mmap2(NULL, 145148, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x76b20000 <0.000239>
+18635 1550185133.472699 mprotect(0x76b31000, 61440, PROT_NONE) = 0 <0.000363>
+18635 1550185133.473255 mmap2(0x76b40000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x10000) = 0x76b40000 <0.000177>
+18635 1550185133.473668 mmap2(0x76b42000, 5884, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76b42000 <0.000098>
+18635 1550185133.473874 close(4)        = 0 <0.000282>
+18635 1550185133.474337 mprotect(0x76b40000, 4096, PROT_READ) = 0 <0.000122>
+18635 1550185133.474599 mprotect(0x76b59000, 4096, PROT_READ) = 0 <0.000096>
+18635 1550185133.474768 munmap(0x76f1d000, 86404) = 0 <0.000123>
+18635 1550185133.475000 open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 4 <0.000131>
+18635 1550185133.475233 fstat64(4, {st_mode=S_IFREG|0644, st_size=86404, ...}) = 0 <0.000096>
+18635 1550185133.475502 mmap2(NULL, 86404, PROT_READ, MAP_PRIVATE, 4, 0) = 0x76f1d000 <0.000118>
+18635 1550185133.475773 close(4)        = 0 <0.000070>
+18635 1550185133.475977 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000164>
+18635 1550185133.476262 open("/lib/arm-linux-gnueabihf/libnss_nis.so.2", O_RDONLY|O_CLOEXEC) = 4 <0.000149>
+18635 1550185133.476587 read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0p\30\0\0004\0\0\0"..., 512) = 512 <0.000086>
+18635 1550185133.476854 lseek(4, 37468, SEEK_SET) = 37468 <0.000152>
+18635 1550185133.477262 read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1120) = 1120 <0.000275>
+18635 1550185133.477648 lseek(4, 37116, SEEK_SET) = 37116 <0.000094>
+18635 1550185133.477847 read(4, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.000096>
+18635 1550185133.478088 fstat64(4, {st_mode=S_IFREG|0644, st_size=38588, ...}) = 0 <0.000115>
+18635 1550185133.478357 mmap2(NULL, 103012, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x76b06000 <0.000164>
+18635 1550185133.478620 mprotect(0x76b0f000, 61440, PROT_NONE) = 0 <0.000103>
+18635 1550185133.478866 mmap2(0x76b1e000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x8000) = 0x76b1e000 <0.000140>
+18635 1550185133.479200 close(4)        = 0 <0.000162>
+18635 1550185133.479544 access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory) <0.000214>
+18635 1550185133.479942 open("/lib/arm-linux-gnueabihf/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 4 <0.000205>
+18635 1550185133.480263 read(4, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0(\0\1\0\0\0\240\31\0\0004\0\0\0"..., 512) = 512 <0.000201>
+18635 1550185133.480687 lseek(4, 37440, SEEK_SET) = 37440 <0.000108>
+18635 1550185133.481021 read(4, "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1120) = 1120 <0.000114>
+18635 1550185133.481283 lseek(4, 37088, SEEK_SET) = 37088 <0.000077>
+18635 1550185133.481495 read(4, "A.\0\0\0aeabi\0\1$\0\0\0\0056\0\6\6\10\1\t\1\n\2\22\4\23\1\24"..., 47) = 47 <0.000104>
+18635 1550185133.481747 fstat64(4, {st_mode=S_IFREG|0644, st_size=38560, ...}) = 0 <0.000097>
+18635 1550185133.481976 mmap2(NULL, 127744, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 4, 0) = 0x76ae6000 <0.000137>
+18635 1550185133.482322 mprotect(0x76aef000, 61440, PROT_NONE) = 0 <0.000082>
+18635 1550185133.482568 mmap2(0x76afe000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 4, 0x8000) = 0x76afe000 <0.000413>
+18635 1550185133.483160 mmap2(0x76b00000, 21248, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x76b00000 <0.000131>
+18635 1550185133.483378 close(4)        = 0 <0.000098>
+18635 1550185133.483680 mprotect(0x76afe000, 4096, PROT_READ) = 0 <0.000074>
+18635 1550185133.484019 mprotect(0x76b1e000, 4096, PROT_READ) = 0 <0.000150>
+18635 1550185133.484638 munmap(0x76f1d000, 86404) = 0 <0.000090>
+18635 1550185133.484877 open("/etc/passwd", O_RDONLY|O_CLOEXEC) = 4 <0.000403>
+18635 1550185133.485394 _llseek(4, 0, [0], SEEK_CUR) = 0 <0.000060>
+18635 1550185133.485569 fstat64(4, {st_mode=S_IFREG|0644, st_size=1592, ...}) = 0 <0.000084>
+18635 1550185133.485772 mmap2(NULL, 1592, PROT_READ, MAP_SHARED, 4, 0) = 0x76f6b000 <0.000048>
+18635 1550185133.485910 _llseek(4, 1592, [1592], SEEK_SET) = 0 <0.000081>
+18635 1550185133.486148 munmap(0x76f6b000, 1592) = 0 <0.000173>
+18635 1550185133.486427 close(4)        = 0 <0.000072>
+18635 1550185133.486634 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4 <0.000100>
+18635 1550185133.486918 connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory) <0.000227>
+18635 1550185133.487277 close(4)        = 0 <0.000382>
+18635 1550185133.487775 socket(AF_UNIX, SOCK_STREAM|SOCK_CLOEXEC|SOCK_NONBLOCK, 0) = 4 <0.000337>
+18635 1550185133.488221 connect(4, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory) <0.000355>
+18635 1550185133.488763 close(4)        = 0 <0.000240>
+18635 1550185133.489650 open("/etc/group", O_RDONLY|O_CLOEXEC) = 4 <0.000123>
+18635 1550185133.489984 _llseek(4, 0, [0], SEEK_CUR) = 0 <0.000069>
+18635 1550185133.490504 fstat64(4, {st_mode=S_IFREG|0644, st_size=765, ...}) = 0 <0.000130>
+18635 1550185133.490934 mmap2(NULL, 765, PROT_READ, MAP_SHARED, 4, 0) = 0x76f6b000 <0.000325>
+18635 1550185133.491391 _llseek(4, 765, [765], SEEK_SET) = 0 <0.000582>
+18635 1550185133.492323 munmap(0x76f6b000, 765) = 0 <0.000085>
+18635 1550185133.493570 close(4)        = 0 <0.000348>
+18635 1550185133.494756 lstat64("2019-01-29-Application-API.html", {st_mode=S_IFREG|0644, st_size=19157, ...}) = 0 <0.001162>
+18635 1550185133.496064 lgetxattr("2019-01-29-Application-API.html", "security.selinux", 0x1bfed98, 255) = -1 ENODATA (No data available) <0.000107>
+18635 1550185133.496374 getxattr("2019-01-29-Application-API.html", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000214>
+18635 1550185133.499623 lstat64(".git", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000170>
+18635 1550185133.500365 lgetxattr(".git", "security.selinux", 0x1bfedc0, 255) = -1 ENODATA (No data available) <0.000063>
+18635 1550185133.500842 getxattr(".git", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000065>
+18635 1550185133.501067 getxattr(".git", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.001554>
+18635 1550185133.502892 lstat64("test.log", {st_mode=S_IFREG|0644, st_size=9276, ...}) = 0 <0.000359>
+18635 1550185133.503445 lgetxattr("test.log", "security.selinux", 0x1bfedd0, 255) = -1 ENODATA (No data available) <0.000183>
+18635 1550185133.503869 getxattr("test.log", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000136>
+18635 1550185133.504510 lstat64(".", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000085>
+18635 1550185133.504815 lgetxattr(".", "security.selinux", 0x1bfede0, 255) = -1 ENODATA (No data available) <0.000060>
+18635 1550185133.505469 getxattr(".", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000523>
+18635 1550185133.507509 getxattr(".", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000232>
+18635 1550185133.508057 lstat64("td_server.log", {st_mode=S_IFREG|0644, st_size=893, ...}) = 0 <0.000114>
+18635 1550185133.508281 lgetxattr("td_server.log", "security.selinux", 0x1bfedf0, 255) = -1 ENODATA (No data available) <0.000172>
+18635 1550185133.508535 getxattr("td_server.log", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000161>
+18635 1550185133.508912 lstat64("out", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000172>
+18635 1550185133.509184 lgetxattr("out", "security.selinux", 0x1bfee08, 255) = -1 ENODATA (No data available) <0.000079>
+18635 1550185133.509353 getxattr("out", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000065>
+18635 1550185133.509494 getxattr("out", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000426>
+18635 1550185133.510031 lstat64("..", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000056>
+18635 1550185133.510179 lgetxattr("..", "security.selinux", 0x1bfee18, 255) = -1 ENODATA (No data available) <0.000467>
+18635 1550185133.510734 getxattr("..", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000302>
+18635 1550185133.511285 getxattr("..", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000032>
+18635 1550185133.511727 lstat64("2019-01-29-Application-API.html.1", {st_mode=S_IFREG|0644, st_size=19157, ...}) = 0 <0.000040>
+18635 1550185133.511856 lgetxattr("2019-01-29-Application-API.html.1", "security.selinux", 0x1bfee28, 255) = -1 ENODATA (No data available) <0.000202>
+18635 1550185133.512128 getxattr("2019-01-29-Application-API.html.1", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000121>
+18635 1550185133.512401 lstat64("onryo.arm4", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0 <0.000052>
+18635 1550185133.512532 lgetxattr("onryo.arm4", "security.selinux", 0x1bfee50, 255) = -1 ENODATA (No data available) <0.000117>
+18635 1550185133.512792 getxattr("onryo.arm4", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000026>
+18635 1550185133.512981 lstat64("strace-ls.log", {st_mode=S_IFREG|0644, st_size=9897, ...}) = 0 <0.000137>
+18635 1550185133.513187 lgetxattr("strace-ls.log", "security.selinux", 0x1bfee60, 255) = -1 ENODATA (No data available) <0.000080>
+18635 1550185133.513355 getxattr("strace-ls.log", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000047>
+18635 1550185133.513602 lstat64("notest", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000091>
+18635 1550185133.513754 lgetxattr("notest", "security.selinux", 0x1bfee78, 255) = -1 ENODATA (No data available) <0.000412>
+18635 1550185133.514265 getxattr("notest", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000090>
+18635 1550185133.514519 getxattr("notest", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000050>
+18635 1550185133.514709 lstat64("text.iso", {st_mode=S_IFREG|0644, st_size=3619, ...}) = 0 <0.000111>
+18635 1550185133.514948 lgetxattr("text.iso", "security.selinux", 0x1bfee88, 255) = -1 ENODATA (No data available) <0.000043>
+18635 1550185133.515132 getxattr("text.iso", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000090>
+18635 1550185133.515359 lstat64("onryo.sh4", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0 <0.000095>
+18635 1550185133.515708 lgetxattr("onryo.sh4", "security.selinux", 0x1bfee98, 255) = -1 ENODATA (No data available) <0.000173>
+18635 1550185133.515961 getxattr("onryo.sh4", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000056>
+18635 1550185133.516332 lstat64("test.sh", {st_mode=S_IFREG|0755, st_size=25, ...}) = 0 <0.000111>
+18635 1550185133.516552 lgetxattr("test.sh", "security.selinux", 0x1bfeea8, 255) = -1 ENODATA (No data available) <0.000037>
+18635 1550185133.516668 getxattr("test.sh", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000052>
+18635 1550185133.516857 lstat64("strace2elastic", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000079>
+18635 1550185133.517148 lgetxattr("strace2elastic", "security.selinux", 0x1bfeeb8, 255) = -1 ENODATA (No data available) <0.000066>
+18635 1550185133.517286 getxattr("strace2elastic", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000066>
+18635 1550185133.517419 getxattr("strace2elastic", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000053>
+18635 1550185133.517566 lstat64("onryo.x86", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0 <0.000067>
+18635 1550185133.517712 lgetxattr("onryo.x86", "security.selinux", 0x1bfeed0, 255) = -1 ENODATA (No data available) <0.000039>
+18635 1550185133.517844 getxattr("onryo.x86", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000057>
+18635 1550185133.518109 lstat64("README.md", {st_mode=S_IFREG|0644, st_size=6710, ...}) = 0 <0.000079>
+18635 1550185133.518260 lgetxattr("README.md", "security.selinux", 0x1bfeee0, 255) = -1 ENODATA (No data available) <0.000055>
+18635 1550185133.518379 getxattr("README.md", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000102>
+18635 1550185133.518633 lstat64("res", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000082>
+18635 1550185133.518807 lgetxattr("res", "security.selinux", 0x1bfeef0, 255) = -1 ENODATA (No data available) <0.000121>
+18635 1550185133.519016 getxattr("res", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000068>
+18635 1550185133.519197 getxattr("res", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000054>
+18635 1550185133.519382 lstat64("test", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000052>
+18635 1550185133.519514 lgetxattr("test", "security.selinux", 0x1bfef00, 255) = -1 ENODATA (No data available) <0.000058>
+18635 1550185133.519690 getxattr("test", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000050>
+18635 1550185133.519821 getxattr("test", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000061>
+18635 1550185133.520147 lstat64("strace.py", {st_mode=S_IFREG|0644, st_size=3844, ...}) = 0 <0.000069>
+18635 1550185133.520338 lgetxattr("strace.py", "security.selinux", 0x1bfef10, 255) = -1 ENODATA (No data available) <0.000080>
+18635 1550185133.520508 getxattr("strace.py", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000040>
+18635 1550185133.520652 lstat64("ls.log", {st_mode=S_IFREG|0644, st_size=9262, ...}) = 0 <0.000089>
+18635 1550185133.520832 lgetxattr("ls.log", "security.selinux", 0x1bfef20, 255) = -1 ENODATA (No data available) <0.000060>
+18635 1550185133.521231 getxattr("ls.log", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000046>
+18635 1550185133.521403 lstat64("tmp", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0 <0.000068>
+18635 1550185133.521544 lgetxattr("tmp", "security.selinux", 0x1bfef30, 255) = -1 ENODATA (No data available) <0.000048>
+18635 1550185133.521689 getxattr("tmp", "system.posix_acl_access", NULL, 0) = -1 ENODATA (No data available) <0.000053>
+18635 1550185133.521828 getxattr("tmp", "system.posix_acl_default", NULL, 0) = -1 ENODATA (No data available) <0.000052>
+18635 1550185133.522001 getdents64(3, /* 0 entries */, 32768) = 0 <0.000053>
+18635 1550185133.522148 close(3)        = 0 <0.000080>
+18635 1550185133.522607 open("/usr/share/locale/en_US.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000055>
+18635 1550185133.522836 open("/usr/share/locale/en_US.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000048>
+18635 1550185133.522990 open("/usr/share/locale/en_US/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000050>
+18635 1550185133.523174 open("/usr/share/locale/en.UTF-8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000080>
+18635 1550185133.523312 open("/usr/share/locale/en.utf8/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000054>
+18635 1550185133.523427 open("/usr/share/locale/en/LC_MESSAGES/coreutils.mo", O_RDONLY) = -1 ENOENT (No such file or directory) <0.000060>
+18635 1550185133.523562 fstat64(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0 <0.000064>
+18635 1550185133.525203 open("/etc/localtime", O_RDONLY|O_CLOEXEC) = 3 <0.002228>
+18635 1550185133.527590 fstat64(3, {st_mode=S_IFREG|0644, st_size=3545, ...}) = 0 <0.000088>
+18635 1550185133.527772 fstat64(3, {st_mode=S_IFREG|0644, st_size=3545, ...}) = 0 <0.000023>
+18635 1550185133.527888 read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\5\0\0\0\5\0\0\0\0"..., 4096) = 3545 <0.000037>
+18635 1550185133.528039 _llseek(3, -24, [3521], SEEK_CUR) = 0 <0.000113>
+18635 1550185133.528245 read(3, "\nEST5EDT,M3.2.0,M11.1.0\n", 4096) = 24 <0.000062>
+18635 1550185133.528426 close(3)        = 0 <0.000090>
+18635 1550185133.528871 write(1, "total 156\ndrwxr-xr-x 9 pi pi  40"..., 1124) = 1124 <0.000084>
+18635 1550185133.529062 close(1)        = 0 <0.000065>
+18635 1550185133.529208 close(2)        = 0 <0.000033>
+18635 1550185133.529402 exit_group(0)   = ?
+18635 1550185133.530430 +++ exited with 0 +++

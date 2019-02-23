@@ -9,7 +9,31 @@ word = ''
 display = ''
 
 test_dir = "res/"
+temp_dir = "test/"
 out_dir = "out/"
+work_path = os.getcwd()
+
+test_files = ["a.txt", "b.txt", "c.txt", "d.cpp", "e.cpp"]
+test_dirs = ["rm_test"]
+test_text = "This files just for test!!!!"
+
+
+def set_environment():
+  test_path = os.path.join(work_path, temp_dir)
+  folder = os.path.exists(test_path)
+  if not folder:
+    os.makedirs(test_path)
+  else:
+    for file in test_files:
+      test_file_path = os.path.join(test_path, file)
+      file = open(test_file_path, 'w')
+      file.write(test_text)
+      file.close()
+  
+    for dir_name in test_dirs:
+      test_dir_path = os.path.join(test_path, dir_name)
+      if not test_dir_path:
+        os.makedirs(test_dir_path)
 
 def trace(linux_command, out_file):
   linux_command = linux_command.strip()
@@ -36,7 +60,7 @@ def visitTestDir(dir_path, out_path):
           file = open(command_file)
           basename = os.path.basename(command_file)[:-4]
           test_command = "type " + basename
-          
+
           sp = subprocess.Popen(
               test_command,
               shell=True,
@@ -49,14 +73,15 @@ def visitTestDir(dir_path, out_path):
           if out_data.find("builtin") >= 0:
             builtin = True
           while 1:
-            lines = file.readlines(50)
+            lines = file.readlines(30000)
             count = 0
             if not lines:
               break
             for line in lines:
-              count += 1
+              count = count + 1
               basename = os.path.basename(command_file)[:-4]
               out_file = out_path + basename + "-" + str(count) + ".log"
+              print(line, out_file)
               if builtin:
                 tracebuiltin(line, out_file)
               else:
@@ -107,6 +132,7 @@ def visitTestDir(dir_path, out_path):
 
 def main():
   pwd_path = os.getcwd()
+  set_environment()
   test_path = os.path.join(pwd_path, test_dir)
   out_path = os.path.join(pwd_path, out_dir)
   visitTestDir(test_path, out_path)
