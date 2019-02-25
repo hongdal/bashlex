@@ -189,5 +189,9 @@ class BashGraph:
                 self.graph_attributes["node_type"].add("external")
             if "has_unknown" in tag_set:
                 self.graph_attributes["node_type"].add("unknown_cmd")
+            if "has_assignment" in tag_set:
+                self.graph_attributes["node_type"].add("assignment")
+            if "has_condition" in tag_set:
+                self.graph_attributes["node_type"].add("condition")
             # More tags here ... 
         return self.graph_attributes

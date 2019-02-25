@@ -688,13 +688,19 @@ class TreeVisitor:
         namedic = self.command_detector.inquiryCommandInfo(command)
         # binary file must be external
         if namedic["category"] == "binaryfile":
-            if namedic["name"] in self.downloaded_set:
+            # if namedic["name"] in self.downloaded_set:
                 command = BINARY_COMMAND
                 self.tag_set.add("has_external")
         # label unknown command
         elif namedic["category"] == "unknown":
                 command = "UNKNOWN"
                 self.tag_set.add("has_unknown")
+        elif namedic["category"] == "assignment":
+            command = "ASSIGNMENT"
+            self.tag_set.add("has_assignment")
+        elif namedic["category"] == "condition":
+            command = "CONDITION"
+            self.tag_set.add("has_condition")
         # all other commands
         else:
             # If it's a network command, record the downloaed file. 
