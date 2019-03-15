@@ -51,6 +51,7 @@ class View(object):
     self.search_mode.set(1)
     self.appdata = AppData().datadict
     self.root.title(self.appdata['title'])
+    self.debug = True
     self.init()
 
   def init(self):
@@ -144,9 +145,12 @@ class View(object):
     radioButton_2 = tk.Radiobutton(
         self.search2_frame, text="Tags", variable=self.search_mode, value=2)
     radioButton_2.pack(side="left", anchor="n")
-    radioButton_3 = tk.Radiobutton(self.search2_frame, text ="Property",
-                                   variable = self.search_mode, value = 3)
-    radioButton_3.pack(side="left",anchor="n")
+    radioButton_3 = tk.Radiobutton(
+        self.search2_frame,
+        text="Property",
+        variable=self.search_mode,
+        value=3)
+    radioButton_3.pack(side="left", anchor="n")
     radioButton_4 = tk.Radiobutton(
         self.search2_frame, text="ID", variable=self.search_mode, value=4)
     radioButton_4.pack(side="left", anchor="n")
@@ -259,10 +263,10 @@ class View(object):
 
       def search_by_id(id_num):
         return self.controller.query_by_id(id_num)
-      
+
       def search_by_property(s_property):
         return self.controller.query_by_property(s_property)
-  
+
       if search_mode == 4:
         res_scripts = search_by_id(search_string)
       elif search_mode == 2:
@@ -317,8 +321,9 @@ class View(object):
   def open_rep(self):
     rep_dict = self.controller.get_all_repository()
     if len(list(rep_dict.keys())) != 0:
-      if DEBUG:
-        res = self.controller.select_rep(self.appdata['testrepo']['name'])
+      if self.debug:
+        res = self.controller.select_rep(self.appdata['default']['repo'])
+        self.debug = False
       else:
         rep_name = self.reps_dialog(rep_dict, 1)
         res = self.controller.select_rep(rep_name)
@@ -348,8 +353,11 @@ class View(object):
       # save user data
       with open(file_path, 'w') as f:
         json.dump(information, f, indent=2)
+
     script_item_list = [
-        'id', 'script_name', 'importance', 'urgency', 'property', 'tags', 'read', 'date']
+        'id', 'script_name', 'importance', 'urgency', 'property', 'tags',
+        'read', 'date'
+    ]
 
     count = 0
     save_list = []
@@ -361,14 +369,18 @@ class View(object):
           temp_dict[script_item_list[i]] = item_text[i]
         save_list.append(temp_dict)
 
-    export_json_path = os.path.join(os.getcwd(), str(self.appdata['path']['output']['export']))
+    export_json_path = os.path.join(
+        os.getcwd(), str(self.appdata['path']['output']['export']))
     export_json_path = os.path.join(export_json_path, "output.json")
     save_json_info(export_json_path, save_list)
-    tkinter.messagebox.showinfo("Export scripts", "Successful! Export scripts information to "+export_json_path)
+    tkinter.messagebox.showinfo(
+        "Export scripts",
+        "Successful! Export scripts information to " + export_json_path)
 
   def update_scripts_property(self):
     if self.controller.update_scripts_property():
-      tkinter.messagebox.showinfo("Update Scripts Property", "Update Scripts Property Done")
+      tkinter.messagebox.showinfo("Update Scripts Property",
+                                  "Update Scripts Property Done")
     else:
       self.show_err("Update_scripts_property Error")
 
@@ -461,7 +473,10 @@ class View(object):
       script_num = self.script_info[0]
       path = self.controller.get_script_path_by_nums(script_num)
 
-      script_out_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+      # script_out_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+      script_out_dir = os.path.join(
+          os.path.abspath(os.path.join(path, "../../..")),
+          self.appdata['path']['dataset']['nodeinfo'])
       file_name = os.path.basename(os.path.normpath(path))
       node_name = file_name[:-3] + ".node"
       node_path = os.path.join(script_out_dir, node_name)
@@ -489,7 +504,10 @@ class View(object):
       return resDialog.result
 
   def show_all_command_count(self):
-    count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    # count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    count_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(self.rep_path))),
+        self.appdata['path']['dataset']['nodeinfo'])
     script_commands = self.controller.get_all_commands(count_dir)
 
     result_str = ""
@@ -498,7 +516,12 @@ class View(object):
     self.display_commands_count(script_commands)
 
   def show_all_linux_command_count(self):
-    count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    # count_dir = os.path.join(os.getcwd(), "dataset/nodeData/")
+    # print()
+
+    count_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(self.rep_path))),
+        self.appdata['path']['dataset']['nodeinfo'])
     script_commands = self.controller.get_all_linux_commands(count_dir)
     # print(script_commands)
     self.display_commands_count_class(script_commands)
@@ -520,12 +543,17 @@ class View(object):
       return False
     else:
       script_num = self.script_info[0]
-      script_out_dir = os.path.join(
-          os.getcwd(), self.appdata['path']['dataset']['nodeinfo'])
+
       graph_dir = os.path.join(os.getcwd(),
                                self.appdata['path']['output']['graphpdf'])
       script_path = self.controller.get_script_path_by_nums(script_num)
+
+      # TODO: You need to fix this part, don't use the relative path
+      # print(os.path.abspath(os.path.join(script_path, "../../..")))
       file_name = os.path.basename(os.path.normpath(script_path))
+      script_out_dir = os.path.join(
+          os.path.abspath(os.path.join(script_path, "../../..")),
+          self.appdata['path']['dataset']['nodeinfo'])
       node_name = file_name[:-3] + ".node"
       node_path = os.path.join(script_out_dir, node_name)
       graph_file_path = self.controller.get_scripts_graph(node_path, graph_dir)

@@ -15,6 +15,7 @@ dochub
 virus_analysis_app/dev/*
 virus_analysis_app/0_data/*
 virus_analysis_app/dataset
+virus_analysis_app/normal-dataset
 virus_analysis_app/include/*.db
 virus_analysis_app/include/*.json
 virus_analysis_app/.cache

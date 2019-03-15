@@ -41,29 +41,33 @@ class Manager_Script(object):
     if self.user_config:
       pass
     else:
-      self.create_test_repo()
+      self.create_test_repo(self.appdata['testrepo'])
+      self.create_test_repo(self.appdata['normalscriptrepo'])
 
-  def create_test_repo(self):
+  def init_repo(self):
+    new_scripts = self.refresh()
+    important_num = 1
+    urgency_num = 1
+    tag = "None"
+    read_flag = 'n'
+    for script in new_scripts:
+      # important_num = random.randint(1, 3)
+      # urgeny_num = random.randint(1, 3)
+      # tags = ["None", "None", "None", "None", "None", "None"]
+
+      # if random.randint(0, 10) > 5:
+      #   read_flag = 'y'
+      # else:
+      #   read_flag = 'n'
+      self.insert_one(script, important_num, urgency_num, tag, read_flag)
+
+  def create_test_repo(self, new_repo):
     test_repo_path = os.path.join(
-        os.path.dirname(self.code_dir), self.appdata['testrepo']["path"])
-    print(test_repo_path)
-    test_rep = [
-        self.appdata['testrepo']["name"], test_repo_path,
-        "[sh, pdf, mobi, doc]"
-    ]
+        os.path.dirname(self.code_dir), new_repo["path"])
+    test_rep = [new_repo["name"], test_repo_path, "[sh]"]
     self.add_repository(test_rep)
     self.cur_rep = Repository(test_rep[0], test_rep[1], test_rep[2])
-    new_scripts = self.refresh()
-    for script in new_scripts:
-      important_num = random.randint(1, 3)
-      urgeny_num = random.randint(1, 3)
-      tags = ["None", "None", "None", "None", "None", "None"]
-      tag = tags[random.randint(0, len(tags) - 1)]
-      if random.randint(0, 10) > 5:
-        read_flag = 'y'
-      else:
-        read_flag = 'n'
-      self.insert_one(script, important_num, urgeny_num, tag, read_flag)
+    self.init_repo()
 
   # *****Repository Functions*****
   def get_user_config(self):
@@ -93,10 +97,10 @@ class Manager_Script(object):
     script_report = get_json_info(file_report_path)
     return script_report
 
-  #Create a New repository and refresh the scripts in this repsitory
+  # Create a New repository and refresh the scripts in this repsitory
   def add_repository(self, reps):
     rep_name = reps[0]
-    rep_path = reps[1]
+    rep_path = os.path.join(os.path.dirname(self.code_dir), reps[1])
     support_suffix = reps[2]
     rep_dict = self.user_config.get("all_repositories", {})
     rep_dict[rep_name] = [rep_path, support_suffix]
@@ -184,18 +188,27 @@ class Manager_Script(object):
       # subprocess.call(command,shell=True)
       # subprocess.check_call(command)
       return pdf_tmp_file
+
+    print("[Error] Can not generate graph because of ", self.graph.get_tags())
     return False
 
   def getScriptProperty(self, file_name):
-    script_out_dir = os.path.join(os.getcwd(),
-                                  self.appdata['path']['dataset']['nodeinfo'])
+    print(file_name)
+    repo_path = self.cur_rep.path
+    script_out_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(repo_path))),
+        self.appdata['path']['dataset']['nodeinfo'])
+    # script_out_dir = os.path.join(os.getcwd(),
+    #                               self.appdata['path']['dataset']['nodeinfo'])
     node_name = file_name[:-3] + ".node"
     node_path = os.path.join(script_out_dir, node_name)
     if os.path.exists(node_path):
       self.graph.load_file(node_path)
-      if self.graph.make_graph():
-        temp = {}
-        temp = self.graph.get_tags()
+      graph_flag = self.graph.make_graph()
+
+      temp = {}
+      temp = self.graph.get_tags()
+      if temp:
         # print(temp)
         tags = set()
         if "complexity_tag" in temp:
@@ -508,10 +521,11 @@ class Manager_Script(object):
     self.conn.commit()
 
   def repo_save(self):
-    # save user data
-    with open(self.user_config_path, 'w') as f:
-      json.dump(self.user_config, f)
+    # # save user data
+    # with open(self.user_config_path, 'w') as f:
+    #   json.dump(self.user_config, f)
 
+    self.save_json_info(self.user_config_path, self.user_config)
     self.user_config = self.get_user_config()
     self.rep_dict = self.user_config.get("all_repositories", {})
 
