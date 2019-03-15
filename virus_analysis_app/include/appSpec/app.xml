@@ -10,7 +10,7 @@
 
 <path>
   <dataset>
-    <nodeinfo>dataset/nodeData/</nodeinfo>
+    <nodeinfo>nodeData/</nodeinfo>
   </dataset>
   <output>
     <graphdot>.cache/graph</graphdot>
@@ -26,11 +26,25 @@
   <repoinfo>user_config.json</repoinfo>
 </userconfig>
 
+<default>
+  <repo>NormalBashScript</repo>
+  <path>dataset/bashData/allscripts/</path>
+  <repoinfo>user_config.json</repoinfo>
+</default>
+
 <testrepo>
   <name>BashScript</name>
   <path>dataset/bashData/allscripts/</path>
+  <nodeinfo>dataset/nodeData/</nodeinfo>
   <repoinfo>user_config.json</repoinfo>
 </testrepo>
+
+<normalscriptrepo>
+  <name>NormalBashScript</name>
+  <path>normal-dataset/bashData/allscripts/</path>
+  <nodeinfo>normal-dataset/nodeData/</nodeinfo>
+  <repoinfo>user_config.json</repoinfo>
+</normalscriptrepo>
 
 <menuBar>
   <file title="File">

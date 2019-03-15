@@ -25,12 +25,13 @@ class ScriptData(object):
       self.loaddict()
 
     def getcommand_to_file_dict(self):
+      command_to_file_dict = {}
       for v in self.command_to_file_dict:
         temp_list = []
         for item in self.command_to_file_dict[v]:
           temp_list.append(item)
-        self.command_to_file_dict[v] = temp_list
-      return self.command_to_file_dict
+        command_to_file_dict[v] = temp_list
+      return command_to_file_dict
 
     def getCommandsClass(self, command):
       command = command.strip()
@@ -95,7 +96,7 @@ class ScriptData(object):
         ans["category"] = "condition"
         ans["text"] = commandtext
         return ans
-    
+
       if "=" in command:
         ans["category"] = "assignment"
         ans["text"] = commandtext
@@ -196,11 +197,12 @@ class ScriptData(object):
         # print(temp)
         res = self.inquiryCommandInfo(temp)
         if res:
-          if temp[0] == '/' or res["category"] == 'unknown' or res[
-              "category"] == 'binaryfile' or res["category"] == "assignment":
-            pass
-          else:
-            self.linux_commands_dict[temp] = command[1]
+          if len(temp) > 0:
+            if temp[0] == '/' or res["category"] == 'unknown' or res[
+                "category"] == 'binaryfile' or res["category"] == "assignment":
+              pass
+            else:
+              self.linux_commands_dict[temp] = command[1]
       return self.linux_commands_dict
 
     def getAllCommands(self, dir_path):
@@ -208,7 +210,7 @@ class ScriptData(object):
       if os.path.isdir(dir_path):
         for dirpath, dirnames, filenames in os.walk(dir_path):
           for x in filenames:
-            if fnmatch.fnmatch(x, "VirusShare*"):
+            if fnmatch.fnmatch(x, "*.node"):
               node_file = os.path.join(dirpath, x)
               self.getScriptCommands(node_file)
       else:
