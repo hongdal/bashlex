@@ -244,6 +244,23 @@ class Manager_Script(object):
       user_config = {}
     return user_config
 
+  def import_json_to_database(self, file_path):
+    bak_info = self.get_json_info(file_path)
+
+    for script in bak_info:
+      name = script["script_name"]
+      old_script = self.query_by_name(name)
+      if old_script:
+        if len(script) > 0:
+          script_im = script["importance"]
+          script_ug = script["urgency"]
+          script_tags = script["tags"]
+          read = script["read"]
+          self.update_one(name, script_im, script_ug, script_tags, read)
+
+    return True
+
+
   def getCommands(self, in_file):
     # print(in_file)
     script_commands = self.script_data.getScriptCommands(in_file)

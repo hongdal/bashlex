@@ -53,6 +53,7 @@
     <deleteRepo>Delete Repository...</deleteRepo>
     <update>Update Repo Data</update>
     <export>Export to JSON</export>
+    <import>Import From JSON</import>
   </file>
   <tools title="Tools">
     <generatepdf>Generate All Commands Graph</generatepdf>

@@ -17,6 +17,7 @@ from .dialog import *
 from tkinter.filedialog import askdirectory
 from functools import partial
 from .appdata import AppData
+import time
 
 # TODO: display the repo and its path
 # For example: Clemson - /users/Guoze/20_test --Script Tracker V1.0
@@ -71,6 +72,8 @@ class View(object):
         label=menubar_data['file']['update'], command=self.update_data)
     filemenu.add_command(
         label=menubar_data['file']['export'], command=self.save_to_json)
+    filemenu.add_command(
+        label=menubar_data['file']['import'], command=self.import_from_json)
     filemenu.add_separator()
     filemenu.add_command(
         label="Exit", command=lambda event: self.controller.quit())
@@ -371,11 +374,20 @@ class View(object):
 
     export_json_path = os.path.join(
         os.getcwd(), str(self.appdata['path']['output']['export']))
-    export_json_path = os.path.join(export_json_path, "output.json")
+    now_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
+    output_file_name = "output-"+ str(now_time) +".json"
+    export_json_path = os.path.join(export_json_path, output_file_name)
     save_json_info(export_json_path, save_list)
     tkinter.messagebox.showinfo(
         "Export scripts",
         "Successful! Export scripts information to " + export_json_path)
+
+  def import_from_json(self):
+    filepath = tkinter.filedialog.askopenfilename()
+    if filepath:
+      self.controller.import_json_to_database(filepath)
+    return True
+
 
   def update_scripts_property(self):
     res = self.controller.update_scripts_property()

@@ -43,6 +43,14 @@ class Controller(object):
     else:
       return False
 
+  def import_json_to_database(self, file_path):
+    res = self.script_manager.import_json_to_database(file_path)
+    if res:
+      self.refresh_scripts
+      self.update_scripts_table()
+      return True
+    return False
+
   def delete_rep(self, rep_name):
     res = self.script_manager.delete_repository(rep_name)
     if res:
