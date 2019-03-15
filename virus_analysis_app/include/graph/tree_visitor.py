@@ -210,7 +210,9 @@ class TreeVisitor:
                 node.data.continues = node.data.continues.union(last_command_child.data.continues)
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.data.kind)
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
 
 
     def visit_command_node(self, node):
@@ -281,7 +283,9 @@ class TreeVisitor:
                 if node.children[i].data.kind == "OperatorNode":
                     if None == last_command_child:
                         print("Syntax issue: %s operator at the beginning." % node.children[i].data.label)
-                        exit(1)
+                        #exit(1)
+                        self.bad_graph = True
+                        return
                     if node.children[i].data.label == r"||" or \
                        node.children[i].data.label == r"&&":
                         local_tails.append(last_command_child.data.tails)
@@ -312,7 +316,9 @@ class TreeVisitor:
                 node.data.continues = node.data.continues.union(last_command_child.data.continues)
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.kind)
-            exit(1)
+            #exit(1)
+            self.bad_graph = True
+            return
         
 
     def visit_word_assignment_node(self, node):
@@ -363,7 +369,9 @@ class TreeVisitor:
                     bodies.append(node.children[i+1])
         if len(conditions) != len(bodies)-1 and len(conditions) != len(bodies):
             print("If-else condition and body mismatch\n")
-            exit(1)
+            #exit(1)
+            self.bad_graph = True
+            return
 
         self.tag_set.add("if")
 
@@ -446,7 +454,9 @@ class TreeVisitor:
                     
         if last_command_child == None:
             print("Node:%s does not have command children\n" % kind)
-            exit(1)
+            #exit(1)
+            self.bad_graph = True
+            return
 
     def visit_pipeline_node(self, node):
         is_first_command = True
@@ -486,7 +496,9 @@ class TreeVisitor:
 
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.kind)
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
 
     '''
         For word in word; do 
@@ -546,7 +558,9 @@ class TreeVisitor:
         # 4) compute the tails of the node itself 
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.kind)
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
         else:
             node.data.tails = last_command_child.data.tails.union(continues_from_children)
 
@@ -561,11 +575,15 @@ class TreeVisitor:
         # while + condition + do + body + done
         if len(node.children) != 5:
             print("Bad WhileNode: lenght=%d\n" % len(node.children))
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
         elif node.children[0].data.kind != "ReservedwordNode" or \
                 node.children[2].data.kind != "ReservedwordNode":
             print("Bad WhileNode: lenght=%d\n" % len(node.children))
-            exit(1) 
+            #exit(1) 
+            self.bad_graph = True
+            return
 
         self.tag_set.add("while")
 
