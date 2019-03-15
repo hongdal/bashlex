@@ -378,9 +378,11 @@ class View(object):
         "Successful! Export scripts information to " + export_json_path)
 
   def update_scripts_property(self):
-    if self.controller.update_scripts_property():
+    res = self.controller.update_scripts_property()
+    if res:
+      info = "Total: " + str(res["total"]) + " Passed: " + str(res["passed"]) + " Failed: " + str(res["failed"])
       tkinter.messagebox.showinfo("Update Scripts Property",
-                                  "Update Scripts Property Done")
+                                  info )
     else:
       self.show_err("Update_scripts_property Error")
 

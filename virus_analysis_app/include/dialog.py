@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from tkinter.filedialog import askdirectory
 import os
 
 SMALLFONT = ('Arial', 8)

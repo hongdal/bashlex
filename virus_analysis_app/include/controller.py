@@ -22,13 +22,20 @@ class Controller(object):
     rep_dict = self.script_manager.get_all_repository()
     return rep_dict
 
-  def add_repository(self, rep_info):
-    self.script_manager.add_repository(rep_info)
-    self.refresh_scripts()
-    self.update_scripts_table()
+  def add_repository(self, rep_info, test=True):
+    if test:
+      rep = {}
+      rep["name"] = rep_info[0]
+      rep["path"] = rep_info[1]
+      self.script_manager.create_test_repo(rep)
+    else:
+      self.script_manager.add_repository(rep_info)
+      self.refresh_scripts()
+      self.update_scripts_table()
 
   def select_rep(self, rep_name):
     res = self.script_manager.select_repository(rep_name)
+
     if res:
       self.refresh_scripts
       self.update_scripts_table()
@@ -130,19 +137,44 @@ class Controller(object):
   def update_scripts_property(self):
     scripts = self.script_manager.get_all_scripts()
     res = True
+    cnt = {}
+    cnt["total"] = 0
+    cnt["passed"] = 0
+    cnt["failed"] = 0
+    fail_record = {}
+    fail_dict = {}
+    fail_dict["GraphFail"] = 0
     for script in scripts:
       name = script[0]
       properties_set = self.script_manager.getScriptProperty(name)
       properties = ""
       if properties_set:
-        for p in properties_set:
-          properties += p
-          properties += ", "
-        properties = properties[:-2]
-        res = self.script_manager.update_script_property(name, properties)
+        graph_successful = properties_set[0]
+        properties_info = properties_set[1]
+
+        if graph_successful:
+          cnt["passed"] += 1
+          for p in properties_info:
+            properties += p
+            properties += ", "
+          properties = properties[:-2]
+          res = self.script_manager.update_script_property(name, properties)
+        else:
+          cnt["failed"] += 1
+          fail_dict["GraphFail"] += 1
+          fail_record[name] = properties_info
+          for p in properties_info:
+            if p in fail_dict:
+              fail_dict[p] += 1
+            else:
+              fail_dict[p] = 0
+      else:
+        cnt["failed"] += 1
+    cnt["total"] = cnt["passed"] + cnt["failed"]
+    print("Size: ", len(fail_dict), fail_dict)
     if res:
       self.update_scripts_table()
-      return True
+      return cnt
     else:
       return False
 

@@ -193,7 +193,7 @@ class Manager_Script(object):
     return False
 
   def getScriptProperty(self, file_name):
-    print(file_name)
+    # print(file_name)
     repo_path = self.cur_rep.path
     script_out_dir = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(repo_path))),
@@ -205,7 +205,8 @@ class Manager_Script(object):
     if os.path.exists(node_path):
       self.graph.load_file(node_path)
       graph_flag = self.graph.make_graph()
-
+      res = [0, 0]
+      res[0] = graph_flag
       temp = {}
       temp = self.graph.get_tags()
       if temp:
@@ -221,10 +222,11 @@ class Manager_Script(object):
           for tag in temp["node_type"]:
             tags.add(tag)
 
+        res[1] = tags
         if tags:
-          return tags
+          return res
         else:
-          return False
+          return res
 
     return False
 

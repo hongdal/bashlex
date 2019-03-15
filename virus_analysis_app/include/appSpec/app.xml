@@ -27,7 +27,7 @@
 </userconfig>
 
 <default>
-  <repo>NormalBashScript</repo>
+  <repo>BashScript</repo>
   <path>dataset/bashData/allscripts/</path>
   <repoinfo>user_config.json</repoinfo>
 </default>
