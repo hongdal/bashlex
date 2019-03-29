@@ -3,10 +3,10 @@ digraph {
 17 [label=" \[ $number -ne 0 \]"];
 26 [label=" echo $number$file"];
 33 [label=" exit 0"];
-26 -> 17;
-26 -> 33;
 17 -> 17;
 17 -> 26;
 17 -> 33;
+26 -> 17;
+26 -> 33;
 8 -> 17;
 }

