@@ -95,6 +95,24 @@ class netnodex:
         return self.all_paths
 
 
+    def get_start_to_end_paths(self):
+        sources = set([])
+        targets = set([])
+        for node in self.graph.nodes:
+            if self.graph.in_degree(node) < 1:
+                sources.add(node)
+            if self.graph.out_degree(node) < 1:
+                targets.add(node)
+        for src in sources:
+            for dst in targets:
+                paths = nx.all_simple_paths(self.graph, src, dst)
+                for path in list(paths):
+                    path = tuple(path)
+                    self.all_paths.add(path)
+        return self.all_paths
+
+
+
     def condense_all_paths(self):
         self.condensed_paths = set()
         for path in self.all_paths:
@@ -108,7 +126,7 @@ class netnodex:
     def get_path_with_length(self, shortest, longest):
         ret = set()
         for path in self.condensed_paths:
-            if len(path) < shortest or len(path) > longest:
+            if len(path) >= shortest and len(path) <= longest:
                 ret.add(path) 
         return ret
 
@@ -156,15 +174,17 @@ class netnodex:
 
 
 
-infname = "../smallset/VirusShare_aaab8847a7c407b504d80dfc30b8f221.dot"
-outfname = "../smallset/VirusShare_aaab8847a7c407b504d80dfc30b8f221-2.dot"
+#infname = "../smallset/VirusShare_aaab8847a7c407b504d80dfc30b8f221.dot"
+infname = "../smallset/VirusShare_aaab8847a7c407b504d80dfc30b8f221.small.dot"
+#outfname = "../smallset/VirusShare_aaab8847a7c407b504d80dfc30b8f221-2.dot"
 
 def test(shortest, longest):
     nd = netnodex()
     nd.read_from_dot(infname)
     nd.load_node_names()
     print("waiting...")
-    all_paths = nd.compute_all_paths()
+    # all_paths = nd.compute_all_paths()
+    all_paths = nd.get_start_to_end_paths()
     nd.condense_all_paths()
     sp = nd.get_path_with_length(shortest,longest)
     nd.print_paths(sp)
