@@ -14,28 +14,42 @@ class Controller(object):
   def __init__(self):
     self.script_manager = model.Manager_Script()
     self.view = view.View(self)
-    # self.view.open_rep()
-    self.select_rep("BashScript")
-    # self.script_manager.refresh()
+    self.view.open_rep()
+    self.script_manager.refresh()
 
   # *****Repository API *****
   def get_all_repository(self):
     rep_dict = self.script_manager.get_all_repository()
     return rep_dict
 
-  def add_repository(self, rep_info):
-    self.script_manager.add_repository(rep_info)
-    self.refresh_scripts()
-    self.update_scripts_table()
+  def add_repository(self, rep_info, test=True):
+    if test:
+      rep = {}
+      rep["name"] = rep_info[0]
+      rep["path"] = rep_info[1]
+      self.script_manager.create_test_repo(rep)
+    else:
+      self.script_manager.add_repository(rep_info)
+      self.refresh_scripts()
+      self.update_scripts_table()
 
   def select_rep(self, rep_name):
     res = self.script_manager.select_repository(rep_name)
+
     if res:
       self.refresh_scripts
       self.update_scripts_table()
       return res
     else:
       return False
+
+  def import_json_to_database(self, file_path):
+    res = self.script_manager.import_json_to_database(file_path)
+    if res:
+      self.refresh_scripts
+      self.update_scripts_table()
+      return True
+    return False
 
   def delete_rep(self, rep_name):
     res = self.script_manager.delete_repository(rep_name)
@@ -72,10 +86,6 @@ class Controller(object):
   def get_scripts_graph(self, in_file, out_dir):
     script_graph = self.script_manager.getGraph(in_file, out_dir)
     return script_graph
-
-  def get_script_commands(self, in_file):
-    script_commands = self.script_manager.getCommands(in_file)
-    return script_commands
 
   def get_script_commands(self, in_file):
     script_commands = self.script_manager.getCommands(in_file)
@@ -121,9 +131,64 @@ class Controller(object):
     else:
       return False
 
-  def open_script_by_num(self, num_s):
-    self.script_manager.open_script_by_num(num_s)
-    return True
+  def update_allscripts_tags(self, node_dir):
+    if os.path.isdir(node_dir):
+      for dirpath, dirnames, filenames in os.walk(node_dir):
+        for x in filenames:
+          if fnmatch.fnmatch(x, "VirusShare*"):
+            node_file = os.path.join(node_dir, x)
+            self.script_manager.getScriptTags(node_file)
+      return True
+    else:
+      return False
+
+  def update_scripts_property(self):
+    scripts = self.script_manager.get_all_scripts()
+    res = True
+    cnt = {}
+    cnt["total"] = 0
+    cnt["passed"] = 0
+    cnt["failed"] = 0
+    fail_record = {}
+    fail_dict = {}
+    fail_dict["GraphFail"] = 0
+    for script in scripts:
+      name = script[0]
+      properties_set = self.script_manager.getScriptProperty(name)
+      properties = ""
+      if properties_set:
+        graph_successful = properties_set[0]
+        properties_info = properties_set[1]
+
+        if graph_successful:
+          cnt["passed"] += 1
+          for p in properties_info:
+            properties += p
+            properties += ", "
+          properties = properties[:-2]
+          res = self.script_manager.update_script_property(name, properties)
+        else:
+          cnt["failed"] += 1
+          fail_dict["GraphFail"] += 1
+          fail_record[name] = properties_info
+          for p in properties_info:
+            if p in fail_dict:
+              fail_dict[p] += 1
+            else:
+              fail_dict[p] = 0
+      else:
+        cnt["failed"] += 1
+    cnt["total"] = cnt["passed"] + cnt["failed"]
+    print("Size: ", len(fail_dict), fail_dict)
+    if res:
+      self.update_scripts_table()
+      return cnt
+    else:
+      return False
+
+  # def open_script_by_num(self, num_s):
+  #   self.script_manager.open_script_by_num(num_s)
+  #   return True
 
   def del_script_by_name(self, names):
     self.script_manager.del_script_by_name(names)
@@ -141,6 +206,10 @@ class Controller(object):
 
   def query_by_tags(self, tags_s):
     res_scripts = self.script_manager.query_by_tags(tags_s)
+    return res_scripts
+
+  def query_by_property(self, s_property):
+    res_scripts = self.script_manager.query_by_property(s_property)
     return res_scripts
 
   def query_by_nums(self, num_s):

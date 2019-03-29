@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter as tk
+from tkinter.filedialog import askdirectory
 import os
 
 SMALLFONT = ('Arial', 8)
@@ -246,7 +247,8 @@ class DisplayCommandsClass(Dialog):
   def body(self, master):
 
     self.script_info = self.argv
-    self.script_commands = self.argv2
+    self.script_commands = self.argv2[0]
+    self.command_to_file = self.argv2[1]
     # print(self.script_commands)
     size_commands = len(self.script_commands)
     if self.script_info == None :
@@ -262,7 +264,7 @@ class DisplayCommandsClass(Dialog):
         self.file_info, text=script_name, font=MIDFONT).grid(
             row=0, columnspan=2, sticky=W)
 
-    tree_columns = ("a", "b", "c")
+    tree_columns = ("a", "b", "c", 'd')
     self.table_frame = tk.Frame(master, width=600)
     self.tree = ttk.Treeview(
         self.table_frame, show="headings", height=20, columns=tree_columns)
@@ -274,9 +276,11 @@ class DisplayCommandsClass(Dialog):
     self.tree.column("a", width=150, anchor="center")
     self.tree.column("b", width=200, anchor="center")
     self.tree.column("c", width=150, anchor="center")
+    self.tree.column("d", width=150, anchor="center")
     self.tree.heading("a", text="Command")
     self.tree.heading("b", text="Count")
     self.tree.heading("c", text="Category")
+    self.tree.heading("d", text="Numbers of files")
     self.vbar.pack(side="right", fill="y")
     self.tree.pack(side="left", fill="both", expand=True)
     for col in tree_columns:
@@ -294,7 +298,10 @@ class DisplayCommandsClass(Dialog):
 
   def update_scripts_table(self, recs):
     def prettify_one(rec):
-      one_row = [str(rec[0]), str(rec[1]), str(rec[2])]
+      temp = 0
+      if rec[0] in self.command_to_file:
+        temp = len(self.command_to_file[rec[0]])
+      one_row = [str(rec[0]), str(rec[1]), str(rec[2]), str(temp)]
       one_row = [item for item in one_row]
       return one_row
 
@@ -303,11 +310,11 @@ class DisplayCommandsClass(Dialog):
       pass
     self.script_nums = len(recs_t)
     for i in range(len(recs_t)):
-      # print(i, " | ", recs_t[i][0], " | ", recs_t[i][1], " | ", recs_t[i][2])
+      # print(i+1, " | ", recs_t[i][0], " | ", recs_t[i][1], " | ", recs_t[i][2], " | ", recs_t[i][3])
       self.tree.insert(
           "",
           "end",
-          values=(recs_t[i][0], recs_t[i][1], recs_t[i][2]))
+          values=(recs_t[i][0], recs_t[i][1], recs_t[i][2], recs_t[i][3]))
 
   def treeview_sort_column(self, tv, col, reverse):
     l = [(tv.set(k, col), k) for k in tv.get_children('')]
@@ -328,8 +335,8 @@ class DisplayDetails(Dialog):
     script_name = "Script Name: " + str(self.script_info[1])
     old_importance = int(self.script_info[2])
     old_urgency = int(self.script_info[3])
-    old_tags = str(self.script_info[4])
-    old_read = str(self.script_info[5])
+    old_tags = str(self.script_info[5])
+    old_read = str(self.script_info[6])
     self.malware_report = self.argv2
     self.scan_report = self.malware_report['scans']
     self.table_data = []
@@ -453,8 +460,8 @@ class EditScriptDialog(Dialog):
       script_name = "Script: " + str(self.script_info[1])
       old_importance = int(self.script_info[2])
       old_urgency = int(self.script_info[3])
-      old_tags = str(self.script_info[4])
-      old_read = str(self.script_info[5])
+      old_tags = str(self.script_info[5])
+      old_read = str(self.script_info[6])
     else:
       script_name = self.argv
     Label(

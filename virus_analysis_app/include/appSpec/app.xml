@@ -10,13 +10,41 @@
 
 <path>
   <dataset>
-    <nodeinfo>dataset/nodeData/</nodeinfo>
+    <nodeinfo>nodeData/</nodeinfo>
   </dataset>
   <output>
-    <graphdot>../../../../../../tmp/dotdata/</graphdot>
-    <graphpdf>../../../../../../tmp/pdfdata/</graphpdf>
+    <graphdot>.cache/graph</graphdot>
+    <graphpdf>.cache/graph</graphpdf>
+    <export>.cache/</export>
+    <database>.cache/</database>
+    <cmapf>.cache/command_to_file.json</cmapf>
   </output>
 </path>
+
+<userconfig>
+  <databasepath>script_manager.db</databasepath>
+  <repoinfo>user_config.json</repoinfo>
+</userconfig>
+
+<default>
+  <repo>BashScript</repo>
+  <path>dataset/bashData/allscripts/</path>
+  <repoinfo>user_config.json</repoinfo>
+</default>
+
+<testrepo>
+  <name>BashScript</name>
+  <path>dataset/bashData/allscripts/</path>
+  <nodeinfo>dataset/nodeData/</nodeinfo>
+  <repoinfo>user_config.json</repoinfo>
+</testrepo>
+
+<normalscriptrepo>
+  <name>NormalBashScript</name>
+  <path>normal-dataset/bashData/allscripts/</path>
+  <nodeinfo>normal-dataset/nodeData/</nodeinfo>
+  <repoinfo>user_config.json</repoinfo>
+</normalscriptrepo>
 
 <menuBar>
   <file title="File">
@@ -24,10 +52,13 @@
     <openRepo>Open Repository...</openRepo>
     <deleteRepo>Delete Repository...</deleteRepo>
     <update>Update Repo Data</update>
+    <export>Export to JSON</export>
+    <import>Import From JSON</import>
   </file>
   <tools title="Tools">
     <generatepdf>Generate All Commands Graph</generatepdf>
     <generatedot>Generate All Commands Dot</generatedot>
+    <updatescriptstags>Update Scripts Property</updatescriptstags>
     <updatescripts>Update Scripts Info</updatescripts>
   </tools>
   <edit>

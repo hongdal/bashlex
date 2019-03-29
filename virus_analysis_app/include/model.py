@@ -2,64 +2,72 @@
 import os
 import sys
 import subprocess
-import argparse
-from argparse import RawTextHelpFormatter
-from collections import OrderedDict
-from .scriptdata import ScriptData
-from include.repository import Repository
-from include.graph.bashgraph import BashGraph
 import pickle as pkl
 import sqlite3
 import random
 from datetime import date
-from functools import reduce
+from collections import OrderedDict
 import json
-from six.moves import input
+from .scriptdata import ScriptData
+from include.repository import Repository
+from include.graph.bashgraph import BashGraph
+from .appdata import AppData
 
 
 class Manager_Script(object):
-  # TODO(Guoze): Create a function to update the view
   def __init__(self):
     self.code_dir = os.path.split(os.path.realpath(__file__))[0]
-    self.db_path = os.path.join(self.code_dir, "script_manager.db")
-    self.user_config_path = os.path.join(self.code_dir, "user_config.json")
-    self.test_path = os.path.dirname(self.code_dir)
-    self.test_path = os.path.abspath(
-        self.test_path) + "/" + "dataset/bashData/allscripts" + "/"
+    self.appdata = AppData().datadict
+    self.db_path = os.path.join(self.code_dir,
+                                self.appdata['userconfig']['databasepath'])
+    self.user_config_path = os.path.join(
+        self.code_dir, self.appdata['userconfig']["repoinfo"])
+
     self.json_path = os.path.abspath(self.code_dir) + "/test_command.json"
     self.script_item_list = [
         'script_name', 'importance', 'urgency', 'tags', 'path', 'read', 'date',
-        'id'
+        'id', 'property'
     ]
     self.user_config = self.get_user_config()
     self.conn = sqlite3.connect(self.db_path)
     self.rep_dict = self.user_config.get("all_repositories", {})
     self.cursor = self.conn.cursor()
-    self.cur_rep = Repository('BashScript', self.test_path, 'bash')
+    self.cur_rep = []
     self.script_data = ScriptData()
+    self.graph = BashGraph()
+    self.init()
 
+  def init(self):
     if self.user_config:
       pass
     else:
-      self.create_test_repo()
-    # get repository and path
-    # self.select_repository()
+      self.create_test_repo(self.appdata['testrepo'])
+      self.create_test_repo(self.appdata['normalscriptrepo'])
 
-  def create_test_repo(self):
-    test_rep = ['BashScript', self.test_path, "[sh, pdf, mobi, doc]"]
+  def init_repo(self):
+    new_scripts = self.refresh()
+    important_num = 1
+    urgency_num = 1
+    tag = "None"
+    read_flag = 'n'
+    for script in new_scripts:
+      # important_num = random.randint(1, 3)
+      # urgeny_num = random.randint(1, 3)
+      # tags = ["None", "None", "None", "None", "None", "None"]
+
+      # if random.randint(0, 10) > 5:
+      #   read_flag = 'y'
+      # else:
+      #   read_flag = 'n'
+      self.insert_one(script, important_num, urgency_num, tag, read_flag)
+
+  def create_test_repo(self, new_repo):
+    test_repo_path = os.path.join(
+        os.path.dirname(self.code_dir), new_repo["path"])
+    test_rep = [new_repo["name"], test_repo_path, "[sh]"]
     self.add_repository(test_rep)
     self.cur_rep = Repository(test_rep[0], test_rep[1], test_rep[2])
-    new_scripts = self.refresh()
-    for script in new_scripts:
-      important_num = random.randint(1, 3)
-      urgeny_num = random.randint(1, 3)
-      tags = ["None", "None", "None", "None", "None", "None"]
-      tag = tags[random.randint(0, len(tags) - 1)]
-      if random.randint(0, 10) > 5:
-        read_flag = 'y'
-      else:
-        read_flag = 'n'
-      self.insert_one(script, important_num, urgeny_num, tag, read_flag)
+    self.init_repo()
 
   # *****Repository Functions*****
   def get_user_config(self):
@@ -79,7 +87,6 @@ class Manager_Script(object):
     file_report_path = os.path.join(outputDir, file_report_name)
 
     def get_json_info(file_path):
-      # print(file_path)
       if os.path.exists(file_path):
         with open(file_path) as f:
           user_config = json.load(f)
@@ -91,10 +98,9 @@ class Manager_Script(object):
     return script_report
 
   # Create a New repository and refresh the scripts in this repsitory
-
   def add_repository(self, reps):
     rep_name = reps[0]
-    rep_path = reps[1]
+    rep_path = os.path.join(os.path.dirname(self.code_dir), reps[1])
     support_suffix = reps[2]
     rep_dict = self.user_config.get("all_repositories", {})
     rep_dict[rep_name] = [rep_path, support_suffix]
@@ -163,25 +169,66 @@ class Manager_Script(object):
 
     pdf_tmp_file = pdf_out_dir + basename + ".pdf"
     dot_tmp_file = dot_out_dir + basename + ".dot"
-    
+
     if not os.path.exists(pdf_out_dir):
       os.makedirs(pdf_out_dir)
     if not os.path.exists(dot_out_dir):
       os.makedirs(dot_out_dir)
-  
+
     orig_stdout = sys.stdout
-    g = BashGraph()
+    g = self.graph
     g.load_file(in_file)
-    g.make_graph()
-    sys.stdout = open(dot_tmp_file, "w")
-    g.print_graph()
-    sys.stdout = orig_stdout
-    command = ['dot', '-Tpdf', dot_tmp_file, '-o', pdf_tmp_file]
-    subprocess.check_call(command)
-    # command = ['rm', '-rf', tmp_dir]
-    # subprocess.call(command,shell=True)
-    # subprocess.check_call(command)
-    return pdf_tmp_file
+    if g.make_graph():
+      sys.stdout = open(dot_tmp_file, "w")
+      g.print_graph()
+      sys.stdout = orig_stdout
+      command = ['dot', '-Tpdf', dot_tmp_file, '-o', pdf_tmp_file]
+      subprocess.check_call(command)
+      # command = ['rm', '-rf', tmp_dir]
+      # subprocess.call(command,shell=True)
+      # subprocess.check_call(command)
+      return pdf_tmp_file
+
+    print("[Error] Can not generate graph because of ", self.graph.get_tags())
+    return False
+
+  def getScriptProperty(self, file_name):
+    # print(file_name)
+    repo_path = self.cur_rep.path
+    script_out_dir = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(repo_path))),
+        self.appdata['path']['dataset']['nodeinfo'])
+    # script_out_dir = os.path.join(os.getcwd(),
+    #                               self.appdata['path']['dataset']['nodeinfo'])
+    node_name = file_name[:-3] + ".node"
+    node_path = os.path.join(script_out_dir, node_name)
+    if os.path.exists(node_path):
+      self.graph.load_file(node_path)
+      graph_flag = self.graph.make_graph()
+      res = [0, 0]
+      res[0] = graph_flag
+      temp = {}
+      temp = self.graph.get_tags()
+      if temp:
+        # print(temp)
+        tags = set()
+        if "complexity_tag" in temp:
+          for tag in temp["complexity_tag"]:
+            tags.add(tag)
+        if "error_tag" in temp:
+          for tag in temp["error_tag"]:
+            tags.add(tag)
+        if "node_type" in temp:
+          for tag in temp["node_type"]:
+            tags.add(tag)
+
+        res[1] = tags
+        if tags:
+          return res
+        else:
+          return res
+
+    return False
 
   def save_json_info(self, file_path, information):
     # save user data
@@ -197,10 +244,27 @@ class Manager_Script(object):
       user_config = {}
     return user_config
 
+  def import_json_to_database(self, file_path):
+    bak_info = self.get_json_info(file_path)
+
+    for script in bak_info:
+      name = script["script_name"]
+      old_script = self.query_by_name(name)
+      if old_script:
+        if len(script) > 0:
+          script_im = script["importance"]
+          script_ug = script["urgency"]
+          script_tags = script["tags"]
+          read = script["read"]
+          self.update_one(name, script_im, script_ug, script_tags, read)
+
+    return True
+
+
   def getCommands(self, in_file):
     # print(in_file)
     script_commands = self.script_data.getScriptCommands(in_file)
-    self.save_json_info(self.json_path, script_commands)
+    # self.save_json_info(self.json_path, script_commands)
     # temp = self.get_json_info(self.json_path)
     return script_commands
 
@@ -214,20 +278,25 @@ class Manager_Script(object):
     return script_commands
 
   def getAllLinuxCommands(self, dir_path):
-    # print(in_file)
     script_commands = self.script_data.getAllCommands(dir_path)
-    # self.save_json_info(self.json_path, script_commands)
     all_linux_commands = self.script_data.getSortedCommandsDict()
-    # print(all_linux_commands)
-    # for command in all_linux_commands:
-    #   command_class = self.script_data.getCommandsClass(command[0])
-    #   command.add(command_class)
-    # print(all_linux_commands)
-    # self.save_json_info(self.json_path, all_linux_commands)
-    return all_linux_commands
+    commands_to_file = self.getcommandsToFile()
+    return [all_linux_commands, commands_to_file]
+
+  def getcommandsToFile(self):
+    def save_json_info(file_path, information):
+      # save user data
+      with open(file_path, 'w') as f:
+        json.dump(information, f, indent=2)
+
+    commands_to_file = self.script_data.getcommand_to_file_dict()
+    commands_to_file_path = os.path.join(
+        os.path.dirname(self.code_dir),
+        self.appdata['path']["output"]["cmapf"])
+    save_json_info(commands_to_file_path, commands_to_file)
+    return commands_to_file
 
   def traverse_scripts(self, fa_path):
-    # pre-ordered depth-first search for every script ends with 'supported suffix
     try:
       paths = os.listdir(fa_path)
     except FileNotFoundError:
@@ -258,6 +327,17 @@ class Manager_Script(object):
     scripts = self.query_by_id(id_num)
     if len(scripts) > 0:
       self.update_one(scripts[0][0], script_im, script_ug, script_tags, read)
+      return True
+    else:
+      return False
+
+  def update_script_property(self, script_name, s_property):
+    scripts = self.query_by_name(script_name)
+    if len(scripts) > 0:
+      self.cursor.execute(
+          "UPDATE {} SET property=? WHERE script_name=?".format(
+              self.cur_rep.name), (s_property, script_name))
+      self.conn.commit()
       return True
     else:
       return False
@@ -319,6 +399,30 @@ class Manager_Script(object):
       for tag in tags:
         recs = self.cursor.execute(
             "select * from {} where tags like '%{}%'".format(
+                self.cur_rep.name, tag)).fetchall()
+        if len(recs) > 0:
+          res_set = set()
+          for rec in recs:
+            res_set.add(rec)
+          sets.append(res_set)
+    results = set()
+    if len(sets) > 0:
+      results = sets[0]
+      if len(sets) > 1:
+        for one_set in sets[1:]:
+          results = results & one_set
+    if len(results) > 0:
+      return results
+    else:
+      return False
+
+  def query_by_property(self, s_property):
+    sets = []
+    tags = s_property.strip().split(',')
+    if len(tags) > 0:
+      for tag in tags:
+        recs = self.cursor.execute(
+            "select * from {} where property like '%{}%'".format(
                 self.cur_rep.name, tag)).fetchall()
         if len(recs) > 0:
           res_set = set()
@@ -403,11 +507,12 @@ class Manager_Script(object):
   # create the table if not exist, table name is same as repository name
   def create_a_new_table_for_repository(self, rep_name):
     sql_create = 'create table if not exists {}' \
-                ' ( script_name varchar(100) , ' \
+                '(script_name varchar(100) , ' \
                 'importance integer, urgency integer, ' \
                 'tags varchar(100), path varchar(100), ' \
                 'read varchar(10), date TEXT, ' \
-                'id integer primary key autoincrement)'.format(rep_name)
+                'id integer primary key autoincrement, property varchar(100))'.format(rep_name)
+
     self.cursor.execute(sql_create)
 
   def del_script_by_names(self, names):
@@ -435,10 +540,11 @@ class Manager_Script(object):
     self.conn.commit()
 
   def repo_save(self):
-    # save user data
-    with open(self.user_config_path, 'w') as f:
-      json.dump(self.user_config, f)
+    # # save user data
+    # with open(self.user_config_path, 'w') as f:
+    #   json.dump(self.user_config, f)
 
+    self.save_json_info(self.user_config_path, self.user_config)
     self.user_config = self.get_user_config()
     self.rep_dict = self.user_config.get("all_repositories", {})
 
