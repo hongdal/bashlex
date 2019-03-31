@@ -7,9 +7,9 @@ digraph {
 46 [label=" tr A-Z a-z"];
 51 [label=" mv $ORIG $NEW"];
 58 [label=" echo new name for $ORIG is $NEW"];
+4 -> 20;
 29 -> 20;
 58 -> 20;
-4 -> 20;
 20 -> 29;
 20 -> 33;
 33 -> 41;

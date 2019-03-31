@@ -131,42 +131,6 @@ class netnodex:
         return ret
 
 
-    """
-        node_num    :   the number of nodes in each subgraph. 
-        return      :   a list of MultiDiGraph objects
-    """
-    # def generate_subgrphs_from_paths(self, paths):
-    #     subgraphs = {}
-    #     for path in paths:
-    #         subgraphs[path] = self.generate_subgraph_from_path(path) 
-    #     return subgraphs
-
-
-    # def generate_subgraph_from_path(self, path):
-    #     SG = self.graph.__class__()
-    #     SG.add_nodes_from((n, self.graph.nodes[n]) for n in path)
-    #     if SG.is_multigraph:
-    #         SG.add_edges_from((n, nbr, key, d)
-    #             for n, nbrs in self.graph.adj.items() if n in path
-    #             for nbr, keydic in nbrs.items() if nbr in path
-    #             for key, d in keydic.items())
-    #     else:
-    #         SG.add_edges_from((n, nbr, d)
-    #             for n, nbrs in self.graph.adj.items() if n in path
-    #             for nbr, d  in nbrs.items() if nbr in path)
-    #     # This line ensures the subgraph is consistent with the original graph. 
-    #     # If you need more speed, disable this line. 
-    #     SG.graph.update(self.graph.graph)
-    #     return SG
-
-
-    def print_subgraphs(self, file_path):
-        fname = file_path + self.fname
-        index = 0
-        for k, v in self.subgraphs:
-            self.write_subgraph_to_dot(v, fname + str(index) + ".xxoo")
-            index += 1
-
     def print_paths(self, paths):
         for path in paths:
             print(path)
