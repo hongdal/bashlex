@@ -47,6 +47,7 @@ class netnodex:
         self.node_hash = {}
         self.all_paths = set()
 
+
     def read_from_dot(self, fname):
         self.fname = fname
         self.graph = nx_pydot.read_dot(fname)
@@ -61,7 +62,6 @@ class netnodex:
         nx_pydot.write_dot(subgraph, fname)
 
 
-    
     def load_node_names(self):
         for node, v in self.graph.nodes(data='label'): 
             self.node_hash[node] = v
@@ -81,6 +81,7 @@ class netnodex:
 
     def get_node_view(self):
         return self.graph.nodes
+
 
     def compute_all_paths(self):
         for source in self.graph.nodes:
@@ -112,7 +113,6 @@ class netnodex:
         return self.all_paths
 
 
-
     def condense_all_paths(self):
         self.condensed_paths = set()
         for path in self.all_paths:
@@ -134,7 +134,6 @@ class netnodex:
     def print_paths(self, paths):
         for path in paths:
             print(path)
-
 
 
 
