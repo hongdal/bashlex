@@ -1,0 +1,1 @@
+grep -E "^cd" all-in-one.sh | grep -v "&$" > cd_pattern_Li.sh
