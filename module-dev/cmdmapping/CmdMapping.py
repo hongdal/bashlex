@@ -15,11 +15,12 @@ class CmdMapping:
         self.path_generator_status = "none"
 
 
+    # Input: the path of the folder containing the files of mapping table. 
     def load_mapping_table(self, fpath):
         self.mapping_table.load_map(fpath)
 
 
-    # Each time we want to load a new bash graph, we need 
+    # Each time we want to load a new bash graph (.dot file), we need 
     # a new path_generator
     def refresh_path_generator(self, fname):
         self.path_generator = nn.netnodex()
@@ -32,37 +33,57 @@ class CmdMapping:
         self.path_generator_status = "refreshed"
 
 
+    # shortest  :   the shortest length of path want to return 
+    # longest   :   the longest length of the path want to return.
+    # return    :   a list of list of string
     def get_cmd_paths(self, shortest, longest):
         if self.path_generator_status != "refreshed":
             print("Please run refresh_path_generator() first.")        
             return False 
-        return self.path_generator.get_path_with_length(shortest, longest)
+        # This gives back a set of tuple, each tuple is a path. 
+        set_tuple_paths = self.path_generator.get_path_with_length(shortest, longest)
+        ret = []
+        for path in set_tuple_paths:
+            list_path = []
+            for cmd in path:
+                cmd = cmd.replace(r'"', r'')
+                cmd = cmd.replace(r'', r'')
+                list_path.append(cmd)
+            ret.append(list_path)
+        return ret
+    
+    
+    # path     :   A list of string
+    # Returh a single path in system call level. 
+    # It's a list of list. 
+    # E.g., [['open', 'write'], ['open', 'read']...]
+    def get_syscall_path(self, path):
+        # ret is a list of list of string
+        ret = []
+        # for each element in the tuple
+        for cmd in path:
+            # syscalls is a list of string. 
+            syscalls = self.mapping_table.get_syscall(cmd)
+            if False != syscalls:
+                ret.append(syscalls)
+            else:
+                if 'BINARY_COMMAND' != cmd:
+                    print('Unknwon command: ' + cmd)
+        return ret
 
 
+    # The same as get_cmd_paths except that it returns the paths in 
+    # system call level. 
     def get_syscall_paths(self, shortest, longest):
         if self.path_generator_status != "refreshed":
             print("Please run refresh_path_generator() first.")        
             return False 
+        # Gives back a list of list of string
         paths = self.get_cmd_paths(shortest, longest)
-        # this is a list of list of list
-        # Most inner list: a list of syscall for a single command. 
-        # second inner list: a list of command for a path. 
-        # Most outter list: a list of path
         syscall_paths = []
+        # path is a list of string
         for path in paths:
-            # syscall_path is a list of list
+            # syscall_path is a list of list of string
             syscall_path = self.get_syscall_path(path)
             syscall_paths.append(syscall_path)
         return syscall_paths
-
-
-    def get_syscall_path(self, path):
-        # ret is a list of list. 
-        ret = []
-        for cmd in path:
-            # syscalls is a list of string. 
-            syscalls = self.mapping_table.get_syscall(cmd)
-            ret.append(syscalls)
-        return ret
-
-

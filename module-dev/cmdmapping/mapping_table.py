@@ -23,4 +23,6 @@ class mappting_table:
     # cmd   :   the command. 
     # return:   a list of string, each string is a name of syscall. 
     def get_syscall(self, cmd):
+        if cmd not in self.cmd2syscall:
+            return False
         return self.cmd2syscall[cmd]

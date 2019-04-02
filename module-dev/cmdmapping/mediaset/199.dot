@@ -1,0 +1,23 @@
+digraph {
+2 [label="cd"];
+6 [label="cd"];
+10 [label="cd"];
+14 [label="cd"];
+18 [label="cd"];
+22 [label="tftp"];
+29 [label="cat"];
+35 [label="chmod"];
+40 [label="BINARY_COMMAND"];
+2 -> 6;
+2 -> 22;
+6 -> 10;
+6 -> 22;
+10 -> 14;
+10 -> 22;
+14 -> 18;
+14 -> 22;
+18 -> 22;
+22 -> 29;
+29 -> 35;
+35 -> 40;
+}

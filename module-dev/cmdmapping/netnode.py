@@ -83,27 +83,37 @@ class netnodex:
         return self.graph.nodes
 
 
+    # Generate all possible paths between every two nodes
+    # This function returns a set of tuple. 
+    # Each tuple is a path. 
+    # Attention: This is very very time consuming. 
+    # It may takes you 1000 years for 100s of nodes. 
     def compute_all_paths(self):
+        self.all_paths = set()
         for source in self.graph.nodes:
-            #sys.stderr.write("source:" + source)
-            #print("source:%s" % source)
             for target in self.graph.nodes:
                 paths = nx.all_simple_paths(self.graph, source, target, cutoff=15)
                 for path in list(paths):
                     path = tuple(path)
                     self.all_paths.add(path)
-        #print("nodes: %d" % len(self.graph.nodes))
         return self.all_paths
 
 
+    # This function returns a set of tuple. 
+    # Each tuple in the set is a path. 
+    # Attention, this is very time consuming. 
+    # It may cause crash on a complex graph with 100s of nodes. 
     def get_start_to_end_paths(self):
         sources = set([])
         targets = set([])
+        self.all_paths = set()
+        # make all sources and targets. 
         for node in self.graph.nodes:
             if self.graph.in_degree(node) < 1:
                 sources.add(node)
             if self.graph.out_degree(node) < 1:
                 targets.add(node)
+        # make all from-source-to-targets paths.
         for src in sources:
             for dst in targets:
                 paths = nx.all_simple_paths(self.graph, src, dst)
@@ -113,6 +123,9 @@ class netnodex:
         return self.all_paths
 
 
+    # Always call this function to get the paths.  
+    # This function returns a set of tuple. 
+    # Each tuple is a path (with human redable labels).
     def condense_all_paths(self):
         self.condensed_paths = set()
         for path in self.all_paths:

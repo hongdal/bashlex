@@ -2,10 +2,11 @@ import glob
 import sys
 import os 
 sys.path.append("../bashlex")
-import bashlex 
+import bashlex
 sys.path.append("../bashgraph")
 from bashgraph import BashGraph
-
+sys.path.append("../commands")
+from scriptdata import ScriptData
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
