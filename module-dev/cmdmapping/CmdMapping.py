@@ -1,5 +1,6 @@
 import netnode as nn 
 import mapping_table as mt 
+import sys
 
 
 path_generator_status = [
@@ -26,10 +27,10 @@ class CmdMapping:
         self.path_generator = nn.netnodex()
         self.path_generator.read_from_dot(fname)
         self.path_generator.load_node_names()
-        print("May take a while ... ")
+        sys.stderr.write("May take a while ...\n")
         self.path_generator.get_start_to_end_paths()
         self.path_generator.condense_all_paths()
-        print("Paths generated!!")
+        sys.stderr.write("Paths generated!!\n")
         self.path_generator_status = "refreshed"
 
 
@@ -38,7 +39,7 @@ class CmdMapping:
     # return    :   a list of list of string
     def get_cmd_paths(self, shortest, longest):
         if self.path_generator_status != "refreshed":
-            print("Please run refresh_path_generator() first.")        
+            sys.stderr.write("Please run refresh_path_generator() first.\n")        
             return False 
         # This gives back a set of tuple, each tuple is a path. 
         set_tuple_paths = self.path_generator.get_path_with_length(shortest, longest)
@@ -68,7 +69,7 @@ class CmdMapping:
                 ret.append(syscalls)
             else:
                 if 'BINARY_COMMAND' != cmd:
-                    print('Unknwon command: ' + cmd)
+                    sys.stderr.write('Unknwon command: ' + cmd + '\n')
         return ret
 
 
@@ -76,7 +77,7 @@ class CmdMapping:
     # system call level. 
     def get_syscall_paths(self, shortest, longest):
         if self.path_generator_status != "refreshed":
-            print("Please run refresh_path_generator() first.")        
+            sys.stderr.write("Please run refresh_path_generator() first.\n")        
             return False 
         # Gives back a list of list of string
         paths = self.get_cmd_paths(shortest, longest)
@@ -87,3 +88,10 @@ class CmdMapping:
             syscall_path = self.get_syscall_path(path)
             syscall_paths.append(syscall_path)
         return syscall_paths
+
+    # path  :   the path to dump, a list of string
+    # encode:   print number if True, print raw string if False. 
+    def dump_path(self, path, encode=True):
+        if encode:
+            path = self.mapping_table.encode_path(path)
+        self.mapping_table.dump_path(path)
