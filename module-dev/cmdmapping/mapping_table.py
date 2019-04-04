@@ -107,3 +107,15 @@ class mappting_table:
             outstring += str(element) + ","
         outstring = outstring[:-1]
         print(outstring)
+
+    
+    # Print some statistics 
+    def print_statistics(self):
+        cmd_num = len(self.cmd2syscall)
+        syscalls = set()
+        for cmd in self.cmd2syscall:
+            syscalls.update(self.cmd2syscall[cmd])
+        syscall_num = len(syscalls)
+        print("#cmd: %d, #syscall: %d\n" % (cmd_num, syscall_num))
+
+

@@ -94,4 +94,8 @@ class CmdMapping:
     def dump_path(self, path, encode=True):
         if encode:
             path = self.mapping_table.encode_path(path)
-        self.mapping_table.dump_path(path)
+        self.mapping_table.dump_path(path) 
+
+    # print statistics of the commands and system calls.     
+    def print_statistics(self):
+        self.mapping_table.print_statistics()

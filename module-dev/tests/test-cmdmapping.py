@@ -1,13 +1,16 @@
+import sys
+sys.path.append("../cmdmapping")
 import CmdMapping as cm  
 import os
-import sys
 
 #fpath="/home/hongda/Dropbox/Github/virus_analysis/module-dev/cmdmapping/mediaset/"
 fpath="/home/hongda/GitHub-offbox/virus_analysis/module-dev/all-cd-commands/"
 
 if __name__ == "__main__":
     mapper = cm.CmdMapping()
-    mapper.load_mapping_table("cmd2syscall/")
+    mapper.load_mapping_table("../cmdmapping/cmd2syscall/")
+    mapper.print_statistics()
+    exit(0)
     for filename in os.listdir(fpath):
         sys.stderr.write(filename + fpath + '\n')
         mapper.refresh_path_generator(fpath + filename)
