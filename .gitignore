@@ -5,6 +5,8 @@
 bashlex/parser.out
 bashlex/parsetab.py
 
+module-dev/ghmm/single_line.txt
+
 build/
 dist/
 bashlex.egg-info/
