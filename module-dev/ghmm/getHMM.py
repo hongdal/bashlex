@@ -1,23 +1,24 @@
 from ghmm import * 
+import sys
 
+if len(sys.argv) < 2:
+    print "Usage: getHmm.py single_line-5000.txt"
+    exit(1)
 
-# Number of characters, 1 to 103
+# Number of characters, 1 to 104
 alph = IntegerRange(1,105)
 
-'''
+
 # Training sequence O
-with open("./single_line.txt") as infile:
+with open(sys.argv[1]) as infile:
     line = infile.readline()
     line = line.rstrip("\r\n")
     mylist = line.split(',')
     train_set = [ int(i) for i in mylist ]
 
-''' 
-train_set = [1,2,3]
 print "dataset size: " + str(len(train_set))
 train_seq = EmissionSequence(alph, train_set)
-
-
+print "Start to prepare initial parameter for HMM"
 
 # Matrix A 
 A = [
@@ -39,31 +40,38 @@ B = [FP, DW, CP, CH, RM]
 # Initial state distribution 
 PI = [1.0, 0, 0, 0, 0]
 
+
 # Create a model
 m=HMMFromMatrices(alph,DiscreteDistribution(alph),A,B,PI)
 
+
+print "Start to train the HMM"
 # Train a model 
 m.baumWelch(train_seq)
 
+
+print "model successfully trained, now writing to ghmm.xml"
+# Store a model in the file
 m.write("ghmm.xml")
 m = HMMOpen("ghmm.xml")
 
 
+'''
 # print observation sequence. 
-obs_seq = m.sampleSingle(200)
+obs_seq = m.sampleSingle(1000)
 sequence_set = obs_seq.sequenceSet()
 sequence = sequence_set.getSequence(0)
-#print sequence 
+print sequence 
+'''
+
 
 # predict the internal states of this sequence
-v = m.viterbi(obs_seq)
+v = m.viterbi(train_seq)
 print v
 
 
-
+# Unused ...
 # Testing sequence O
 test_set = [1,2,3]
 test_seq = EmissionSequence(alph, test_set) 
-
-
 test_vit = []
