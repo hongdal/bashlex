@@ -195,6 +195,8 @@ class Manager_Script(object):
   def getScriptProperty(self, file_name):
     # print(file_name)
     repo_path = self.cur_rep.path
+    script_path = os.path.join(repo_path, file_name)
+    detect_flags = self.detectScript(script_path)
     script_out_dir = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(repo_path))),
         self.appdata['path']['dataset']['nodeinfo'])
@@ -221,6 +223,12 @@ class Manager_Script(object):
         if "node_type" in temp:
           for tag in temp["node_type"]:
             tags.add(tag)
+
+        if len(detect_flags):
+          # print(detect_flags)
+          for flag in detect_flags:
+            # print(detect_flags[i])
+            tags.add(flag)
 
         res[1] = tags
         if tags:
@@ -261,12 +269,21 @@ class Manager_Script(object):
     return True
 
 
-  def getCommands(self, in_file):
+  def getCommands(self, in_file, script_path=None):
     # print(in_file)
     script_commands = self.script_data.getScriptCommands(in_file)
+    self.script_data.detectScript(script_path)
     # self.save_json_info(self.json_path, script_commands)
     # temp = self.get_json_info(self.json_path)
     return script_commands
+
+
+  def detectScript(self, in_file):
+    # print(in_file)
+    detect_property = self.script_data.detectScript(in_file)
+    # self.save_json_info(self.json_path, script_commands)
+    # temp = self.get_json_info(self.json_path)
+    return detect_property
 
   def getAllCommands(self, dir_path):
     # print(in_file)

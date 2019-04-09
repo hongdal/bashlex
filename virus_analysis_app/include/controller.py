@@ -87,8 +87,8 @@ class Controller(object):
     script_graph = self.script_manager.getGraph(in_file, out_dir)
     return script_graph
 
-  def get_script_commands(self, in_file):
-    script_commands = self.script_manager.getCommands(in_file)
+  def get_script_commands(self, in_file, script_path=None):
+    script_commands = self.script_manager.getCommands(in_file, script_path)
     return script_commands
 
   def get_all_commands(self, dir_path):
@@ -155,6 +155,7 @@ class Controller(object):
     for script in scripts:
       name = script[0]
       properties_set = self.script_manager.getScriptProperty(name)
+      # detectScript = self.script_manager.getScriptProperty(name)
       properties = ""
       if properties_set:
         graph_successful = properties_set[0]

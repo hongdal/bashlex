@@ -494,7 +494,7 @@ class View(object):
       file_name = os.path.basename(os.path.normpath(path))
       node_name = file_name[:-3] + ".node"
       node_path = os.path.join(script_out_dir, node_name)
-      script_commands = self.controller.get_script_commands(node_path)
+      script_commands = self.controller.get_script_commands(node_path, path)
 
       result_str = ""
       for i in script_commands:

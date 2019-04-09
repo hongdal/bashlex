@@ -20,6 +20,7 @@ class ScriptData(object):
       self.pattern_command = re.compile(r'CommandNode[^\n]*\n[^\n]*word[^\n]*')
       self.pattern_word = re.compile(r'word=[^\)]*')
       self.pattern_value = re.compile(r'\'[^\']*')
+      self.cd_pattern_value = re.compile(r'cd')
       self.down_commands_list = ["wget", "ftp", "tftp", "curl"]
       self.command_to_file_dict = {}
       self.loaddict()
@@ -188,6 +189,24 @@ class ScriptData(object):
       self.commands_counter += total_commands
       total_commands = total_commands.most_common()
       return total_commands
+
+    def detectScript(self, in_file):
+      # cd_pattern_value
+      # total_commands = collections.Counter()
+      detect_flags = []
+      if os.path.isdir(in_file):
+        pass
+      else:
+        filetext = self.readscript(in_file)
+        # print(filetext)
+        allcommands = self.cd_pattern_value.findall(filetext)
+        if len(allcommands) > 20:
+          detect_flags.append("CD_PATTERN")
+        else:
+          detect_flags.append("NOT_CD")
+
+      return detect_flags
+
 
     def buildCommandsDict(self, total_commands):
       for command in total_commands:
