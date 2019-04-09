@@ -527,6 +527,11 @@ class View(object):
     result_str = ""
     for i in script_commands:
       result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    for command in script_commands:
+      temp = command[0]
+      temp = temp.strip()
+      if temp[0] == '.':
+        print(temp[2:])
     self.display_commands_count(script_commands)
 
   def show_all_linux_command_count(self):
@@ -548,7 +553,7 @@ class View(object):
     else:
       script_num = self.script_info[0]
       path = self.controller.get_script_path_by_nums(script_num)
-      subprocess.call("gedit " + str(path), shell=True)
+      subprocess.call("code " + str(path), shell=True)
 
   def open_code_graph(self):
     script_num = None

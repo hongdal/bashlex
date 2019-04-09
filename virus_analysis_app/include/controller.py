@@ -233,7 +233,11 @@ class Controller(object):
 
     for script in new_scripts:
       # TODO(Guoze): Create a Script class to manager this
-      script_im, script_ug, script_tags, read = add_script_info(script)
+      # script_im, script_ug, script_tags, read = add_script_info(script)
+      script_im = 1
+      script_ug = 1
+      script_tags = "None"
+      read = "y"
       self.script_manager.insert_one(script, script_im, script_ug, script_tags,
                                      read)
 
