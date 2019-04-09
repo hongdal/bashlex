@@ -524,14 +524,14 @@ class View(object):
         self.appdata['path']['dataset']['nodeinfo'])
     script_commands = self.controller.get_all_commands(count_dir)
 
-    result_str = ""
-    for i in script_commands:
-      result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
-    for command in script_commands:
-      temp = command[0]
-      temp = temp.strip()
-      if temp[0] == '.':
-        print(temp[2:])
+    # result_str = ""
+    # for i in script_commands:
+    #   result_str = result_str + i[0] + "\t\t" + str(i[1]) + chr(13)
+    # for command in script_commands:
+    #   temp = command[0]
+    #   temp = temp.strip()
+    #   if temp[0] == '.':
+    #     print(temp[2:])
     self.display_commands_count(script_commands)
 
   def show_all_linux_command_count(self):
