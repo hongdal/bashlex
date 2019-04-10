@@ -156,14 +156,14 @@ class ScriptData(object):
       self.commands_dict = get_json_info(command_path)
 
     def readscript(self, in_file):
-      file_obj = open(in_file)
+      file_obj = open(in_file, encoding="ISO-8859-1")
       filetext = ''
       for line in file_obj:
         filetext += line
       return filetext
 
     def readscriptSpace(self, in_file):
-      file_obj = open(in_file)
+      file_obj = open(in_file, encoding="ISO-8859-1")
       filetext = ''
       for line in file_obj:
         filetext += "\n" + line
