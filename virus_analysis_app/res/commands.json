@@ -2,2893 +2,3465 @@
   "ab": {
     "n": "ab",
     "p": "/ab",
-    "d": "Apache服务器的性能测试工具"
+    "d": "Apache\u670d\u52a1\u5668\u7684\u6027\u80fd\u6d4b\u8bd5\u5de5\u5177"
   },
   "accept": {
     "n": "accept",
     "p": "/accept",
-    "d": "指示打印系统接受发往指定目标打印机的打印任务"
+    "d": "\u6307\u793a\u6253\u5370\u7cfb\u7edf\u63a5\u53d7\u53d1\u5f80\u6307\u5b9a\u76ee\u6807\u6253\u5370\u673a\u7684\u6253\u5370\u4efb\u52a1"
   },
   "ack": {
     "n": "ack",
     "p": "/ack",
-    "d": "比grep好用的文本搜索工具"
+    "d": "\u6bd4grep\u597d\u7528\u7684\u6587\u672c\u641c\u7d22\u5de5\u5177"
   },
   "alias": {
     "n": "alias",
     "p": "/alias",
     "category": "basic shell",
-    "d": "用来设置指令的别名"
+    "d": "\u7528\u6765\u8bbe\u7f6e\u6307\u4ee4\u7684\u522b\u540d"
   },
   "apachectl": {
     "n": "apachectl",
     "p": "/apachectl",
-    "d": "Apache服务器前端控制工具"
+    "d": "Apache\u670d\u52a1\u5668\u524d\u7aef\u63a7\u5236\u5de5\u5177"
   },
   "apk": {
     "n": "apk",
     "p": "/apk",
-    "d": "Alpine Linux 下的包管理工具"
+    "d": "Alpine Linux \u4e0b\u7684\u5305\u7ba1\u7406\u5de5\u5177"
   },
   "apropos": {
     "n": "apropos",
     "p": "/apropos",
-    "d": "在 whatis 数据库中查找字符串"
+    "d": "\u5728 whatis \u6570\u636e\u5e93\u4e2d\u67e5\u627e\u5b57\u7b26\u4e32"
   },
   "apt-get": {
     "n": "apt-get",
     "p": "/apt-get",
-    "d": "Debian Linux发行版中的APT软件包管理工具"
+    "d": "Debian Linux\u53d1\u884c\u7248\u4e2d\u7684APT\u8f6f\u4ef6\u5305\u7ba1\u7406\u5de5\u5177"
   },
   "apt-key": {
     "n": "apt-key",
     "p": "/apt-key",
-    "d": "管理Debian Linux系统中的软件包密钥"
+    "d": "\u7ba1\u7406Debian Linux\u7cfb\u7edf\u4e2d\u7684\u8f6f\u4ef6\u5305\u5bc6\u94a5"
   },
   "apt-sortpkgs": {
     "n": "apt-sortpkgs",
     "p": "/apt-sortpkgs",
-    "d": "Debian Linux下对软件包索引文件进行排序的工具"
+    "d": "Debian Linux\u4e0b\u5bf9\u8f6f\u4ef6\u5305\u7d22\u5f15\u6587\u4ef6\u8fdb\u884c\u6392\u5e8f\u7684\u5de5\u5177"
   },
   "aptitude": {
     "n": "aptitude",
     "p": "/aptitude",
-    "d": "Debian Linux系统中软件包管理工具"
+    "d": "Debian Linux\u7cfb\u7edf\u4e2d\u8f6f\u4ef6\u5305\u7ba1\u7406\u5de5\u5177"
   },
   "ar": {
     "n": "ar",
     "p": "/ar",
-    "d": "建立或修改备存文件，或是从备存文件中抽取文件"
+    "d": "\u5efa\u7acb\u6216\u4fee\u6539\u5907\u5b58\u6587\u4ef6\uff0c\u6216\u662f\u4ece\u5907\u5b58\u6587\u4ef6\u4e2d\u62bd\u53d6\u6587\u4ef6"
   },
   "arch": {
     "n": "arch",
     "p": "/arch",
-    "d": "显示当前主机的硬件架构类型"
+    "d": "\u663e\u793a\u5f53\u524d\u4e3b\u673a\u7684\u786c\u4ef6\u67b6\u6784\u7c7b\u578b"
   },
   "arj": {
     "n": "arj",
     "p": "/arj",
-    "d": "用于创建和管理.arj压缩包"
+    "d": "\u7528\u4e8e\u521b\u5efa\u548c\u7ba1\u7406.arj\u538b\u7f29\u5305"
   },
   "arp": {
     "n": "arp",
     "p": "/arp",
     "category": "network",
-    "d": "显示和修改IP到MAC转换表"
+    "d": "\u663e\u793a\u548c\u4fee\u6539IP\u5230MAC\u8f6c\u6362\u8868"
   },
   "arpd": {
     "n": "arpd",
     "p": "/arpd",
-    "d": "收集免费ARP信息"
+    "d": "\u6536\u96c6\u514d\u8d39ARP\u4fe1\u606f"
   },
   "arping": {
     "n": "arping",
     "p": "/arping",
-    "d": "通过发送ARP协议报文测试网络"
+    "d": "\u901a\u8fc7\u53d1\u9001ARP\u534f\u8bae\u62a5\u6587\u6d4b\u8bd5\u7f51\u7edc"
   },
   "arptables": {
     "n": "arptables",
     "p": "/arptables",
-    "d": "管理ARP包过滤规则表"
+    "d": "\u7ba1\u7406ARP\u5305\u8fc7\u6ee4\u89c4\u5219\u8868"
   },
   "arpwatch": {
     "n": "arpwatch",
     "p": "/arpwatch",
-    "d": "监听网络上ARP的记录"
+    "d": "\u76d1\u542c\u7f51\u7edc\u4e0aARP\u7684\u8bb0\u5f55"
   },
   "as": {
     "n": "as",
     "p": "/as",
-    "d": "汇编语言编译器"
+    "d": "\u6c47\u7f16\u8bed\u8a00\u7f16\u8bd1\u5668"
   },
   "at": {
     "n": "at",
     "p": "/at",
-    "d": "在指定时间执行一个任务"
+    "d": "\u5728\u6307\u5b9a\u65f6\u95f4\u6267\u884c\u4e00\u4e2a\u4efb\u52a1"
   },
   "atop": {
     "n": "atop",
     "p": "/atop",
-    "d": "监控Linux系统资源与进程的工具"
+    "d": "\u76d1\u63a7Linux\u7cfb\u7edf\u8d44\u6e90\u4e0e\u8fdb\u7a0b\u7684\u5de5\u5177"
   },
   "atq": {
     "n": "atq",
     "p": "/atq",
-    "d": "列出当前用户的at任务列表"
+    "d": "\u5217\u51fa\u5f53\u524d\u7528\u6237\u7684at\u4efb\u52a1\u5217\u8868"
   },
   "atrm": {
     "n": "atrm",
     "p": "/atrm",
-    "d": "删除待执行任务队列中的指定任务"
+    "d": "\u5220\u9664\u5f85\u6267\u884c\u4efb\u52a1\u961f\u5217\u4e2d\u7684\u6307\u5b9a\u4efb\u52a1"
   },
   "awk": {
     "n": "awk",
     "p": "/awk",
     "category": "Text processing",
-    "d": "文本和数据进行处理的编程语言"
+    "d": "\u6587\u672c\u548c\u6570\u636e\u8fdb\u884c\u5904\u7406\u7684\u7f16\u7a0b\u8bed\u8a00"
   },
   "axel": {
     "n": "axel",
     "p": "/axel",
-    "d": "多线程下载工具"
+    "d": "\u591a\u7ebf\u7a0b\u4e0b\u8f7d\u5de5\u5177"
   },
   "badblocks": {
     "n": "badblocks",
     "p": "/badblocks",
-    "d": "查找磁盘中损坏的区块"
+    "d": "\u67e5\u627e\u78c1\u76d8\u4e2d\u635f\u574f\u7684\u533a\u5757"
   },
   "basename": {
     "n": "basename",
     "p": "/basename",
     "category": "filesystem",
-    "d": "打印目录或者文件的基本名称"
+    "d": "\u6253\u5370\u76ee\u5f55\u6216\u8005\u6587\u4ef6\u7684\u57fa\u672c\u540d\u79f0"
   },
   "batch": {
     "n": "batch",
     "p": "/batch",
-    "d": "在系统不繁忙的时候执行定时任务"
+    "d": "\u5728\u7cfb\u7edf\u4e0d\u7e41\u5fd9\u7684\u65f6\u5019\u6267\u884c\u5b9a\u65f6\u4efb\u52a1"
   },
   "bc": {
     "n": "bc",
     "p": "/bc",
-    "d": "算术操作精密运算工具"
+    "d": "\u7b97\u672f\u64cd\u4f5c\u7cbe\u5bc6\u8fd0\u7b97\u5de5\u5177"
   },
   "bg": {
     "n": "bg",
     "p": "/bg",
     "category": "process management",
-    "d": "用于将作业放到后台运行"
+    "d": "\u7528\u4e8e\u5c06\u4f5c\u4e1a\u653e\u5230\u540e\u53f0\u8fd0\u884c"
   },
   "bind": {
     "n": "bind",
     "p": "/bind",
-    "d": "显示或设置键盘按键与其相关的功能"
+    "d": "\u663e\u793a\u6216\u8bbe\u7f6e\u952e\u76d8\u6309\u952e\u4e0e\u5176\u76f8\u5173\u7684\u529f\u80fd"
   },
   "blkid": {
     "n": "blkid",
     "p": "/blkid",
-    "d": "查看块设备的文件系统类型、LABEL、UUID等信息"
+    "d": "\u67e5\u770b\u5757\u8bbe\u5907\u7684\u6587\u4ef6\u7cfb\u7edf\u7c7b\u578b\u3001LABEL\u3001UUID\u7b49\u4fe1\u606f"
   },
   "blockdev": {
     "n": "blockdev",
     "p": "/blockdev",
-    "d": "从命令行调用区块设备控制程序"
+    "d": "\u4ece\u547d\u4ee4\u884c\u8c03\u7528\u533a\u5757\u8bbe\u5907\u63a7\u5236\u7a0b\u5e8f"
   },
   "bmodinfo": {
     "n": "bmodinfo",
     "p": "/bmodinfo",
-    "d": "显示给定模块的详细信息"
+    "d": "\u663e\u793a\u7ed9\u5b9a\u6a21\u5757\u7684\u8be6\u7ec6\u4fe1\u606f"
   },
   "builtin": {
     "n": "builtin",
     "p": "/builtin",
-    "d": "执行shell内部命令"
+    "d": "\u6267\u884cshell\u5185\u90e8\u547d\u4ee4"
   },
   "bunzip2": {
     "n": "bunzip2",
     "p": "/bunzip2",
     "category": "compression",
-    "d": "创一个bz2文件压缩包"
+    "d": "\u521b\u4e00\u4e2abz2\u6587\u4ef6\u538b\u7f29\u5305"
   },
   "bye": {
     "n": "bye",
     "p": "/bye",
-    "d": "命令用于中断FTP连线并结束程序。。"
+    "d": "\u547d\u4ee4\u7528\u4e8e\u4e2d\u65adFTP\u8fde\u7ebf\u5e76\u7ed3\u675f\u7a0b\u5e8f\u3002\u3002"
   },
   "bzcat": {
     "n": "bzcat",
     "p": "/bzcat",
-    "d": "解压缩指定的.bz2文件"
+    "d": "\u89e3\u538b\u7f29\u6307\u5b9a\u7684.bz2\u6587\u4ef6"
   },
   "bzcmp": {
     "n": "bzcmp",
     "p": "/bzcmp",
-    "d": "比较两个压缩包中的文件"
+    "d": "\u6bd4\u8f83\u4e24\u4e2a\u538b\u7f29\u5305\u4e2d\u7684\u6587\u4ef6"
   },
   "bzdiff": {
     "n": "bzdiff",
     "p": "/bzdiff",
-    "d": "直接比较两个.bz2压缩包中文件的不同"
+    "d": "\u76f4\u63a5\u6bd4\u8f83\u4e24\u4e2a.bz2\u538b\u7f29\u5305\u4e2d\u6587\u4ef6\u7684\u4e0d\u540c"
   },
   "bzgrep": {
     "n": "bzgrep",
     "p": "/bzgrep",
-    "d": "使用正则表达式搜索.bz2压缩包中文件"
+    "d": "\u4f7f\u7528\u6b63\u5219\u8868\u8fbe\u5f0f\u641c\u7d22.bz2\u538b\u7f29\u5305\u4e2d\u6587\u4ef6"
   },
   "bzip2": {
     "n": "bzip2",
     "p": "/bzip2",
     "category": "compression",
-    "d": "将文件压缩成bz2格式"
+    "d": "\u5c06\u6587\u4ef6\u538b\u7f29\u6210bz2\u683c\u5f0f"
   },
   "bzip2recover": {
     "n": "bzip2recover",
     "p": "/bzip2recover",
-    "d": "恢复被破坏的.bz2压缩包中的文件"
+    "d": "\u6062\u590d\u88ab\u7834\u574f\u7684.bz2\u538b\u7f29\u5305\u4e2d\u7684\u6587\u4ef6"
   },
   "bzless": {
     "n": "bzless",
     "p": "/bzless",
-    "d": "增强.bz2压缩包查看器"
+    "d": "\u589e\u5f3a.bz2\u538b\u7f29\u5305\u67e5\u770b\u5668"
   },
   "bzmore": {
     "n": "bzmore",
     "p": "/bzmore",
-    "d": "查看bzip2压缩过的文本文件的内容"
+    "d": "\u67e5\u770bbzip2\u538b\u7f29\u8fc7\u7684\u6587\u672c\u6587\u4ef6\u7684\u5185\u5bb9"
   },
   "cal": {
     "n": "cal",
     "p": "/cal",
     "category": "system information",
-    "d": "显示当前日历或指定日期的日历"
+    "d": "\u663e\u793a\u5f53\u524d\u65e5\u5386\u6216\u6307\u5b9a\u65e5\u671f\u7684\u65e5\u5386"
   },
   "cancel": {
     "n": "cancel",
     "p": "/cancel",
-    "d": "取消已存在的打印任务"
+    "d": "\u53d6\u6d88\u5df2\u5b58\u5728\u7684\u6253\u5370\u4efb\u52a1"
   },
   "cat": {
     "n": "cat",
     "p": "/cat",
     "category": "file examination",
-    "d": "连接文件并打印到标准输出设备上"
+    "d": "\u8fde\u63a5\u6587\u4ef6\u5e76\u6253\u5370\u5230\u6807\u51c6\u8f93\u51fa\u8bbe\u5907\u4e0a"
   },
   "cd": {
     "n": "cd",
     "p": "/cd",
     "category": "directories",
-    "d": "切换用户当前工作目录"
+    "d": "\u5207\u6362\u7528\u6237\u5f53\u524d\u5de5\u4f5c\u76ee\u5f55"
   },
   "cdrecord": {
     "n": "cdrecord",
     "p": "/cdrecord",
-    "d": "Linux系统下光盘刻录功能命令"
+    "d": "Linux\u7cfb\u7edf\u4e0b\u5149\u76d8\u523b\u5f55\u529f\u80fd\u547d\u4ee4"
   },
   "chage": {
     "n": "chage",
     "p": "/chage",
-    "d": "修改帐号和密码的有效期限"
+    "d": "\u4fee\u6539\u5e10\u53f7\u548c\u5bc6\u7801\u7684\u6709\u6548\u671f\u9650"
   },
   "chattr": {
     "n": "chattr",
     "p": "/chattr",
-    "d": "用来改变文件属性"
+    "d": "\u7528\u6765\u6539\u53d8\u6587\u4ef6\u5c5e\u6027"
   },
   "chcon": {
     "n": "chcon",
     "p": "/chcon",
-    "d": "修改对象（文件）的安全上下文"
+    "d": "\u4fee\u6539\u5bf9\u8c61\uff08\u6587\u4ef6\uff09\u7684\u5b89\u5168\u4e0a\u4e0b\u6587"
   },
   "chfn": {
     "n": "chfn",
     "p": "/chfn",
-    "d": "用来改变finger命令显示的信息"
+    "d": "\u7528\u6765\u6539\u53d8finger\u547d\u4ee4\u663e\u793a\u7684\u4fe1\u606f"
   },
   "chgrp": {
     "n": "chgrp",
     "p": "/chgrp",
     "category": "file permissions",
-    "d": "用来变更文件或目录的所属群组"
+    "d": "\u7528\u6765\u53d8\u66f4\u6587\u4ef6\u6216\u76ee\u5f55\u7684\u6240\u5c5e\u7fa4\u7ec4"
   },
   "chkconfig": {
     "n": "chkconfig",
     "p": "/chkconfig",
-    "d": "检查或设置系统的各种服务"
+    "d": "\u68c0\u67e5\u6216\u8bbe\u7f6e\u7cfb\u7edf\u7684\u5404\u79cd\u670d\u52a1"
   },
   "chmod": {
     "n": "chmod",
     "p": "/chmod",
     "category": "file permissions",
-    "d": "用来变更文件或目录的权限"
+    "d": "\u7528\u6765\u53d8\u66f4\u6587\u4ef6\u6216\u76ee\u5f55\u7684\u6743\u9650"
   },
   "chown": {
     "n": "chown",
     "p": "/chown",
     "category": "file permissions",
-    "d": "用来变更文件或目录的拥有者或所属群组"
+    "d": "\u7528\u6765\u53d8\u66f4\u6587\u4ef6\u6216\u76ee\u5f55\u7684\u62e5\u6709\u8005\u6216\u6240\u5c5e\u7fa4\u7ec4"
   },
   "chpasswd": {
     "n": "chpasswd",
     "p": "/chpasswd",
-    "d": "批量更新用户口令的工具"
+    "d": "\u6279\u91cf\u66f4\u65b0\u7528\u6237\u53e3\u4ee4\u7684\u5de5\u5177"
   },
   "chroot": {
     "n": "chroot",
     "p": "/chroot",
-    "d": "把根目录换成指定的目的目录"
+    "d": "\u628a\u6839\u76ee\u5f55\u6362\u6210\u6307\u5b9a\u7684\u76ee\u7684\u76ee\u5f55"
   },
   "chsh": {
     "n": "chsh",
     "p": "/chsh",
-    "d": "用来更换登录系统时使用的shell"
+    "d": "\u7528\u6765\u66f4\u6362\u767b\u5f55\u7cfb\u7edf\u65f6\u4f7f\u7528\u7684shell"
   },
   "cksum": {
     "n": "cksum",
     "p": "/cksum",
-    "d": "检查文件的CRC是否正确"
+    "d": "\u68c0\u67e5\u6587\u4ef6\u7684CRC\u662f\u5426\u6b63\u786e"
   },
   "clear": {
     "n": "clear",
     "p": "/clear",
-    "d": "清除当前屏幕终端上的任何信息",
+    "d": "\u6e05\u9664\u5f53\u524d\u5c4f\u5e55\u7ec8\u7aef\u4e0a\u7684\u4efb\u4f55\u4fe1\u606f",
     "category": "basic shell",
     "description": "clear all previous commands' output text from the terminal"
   },
   "clock": {
     "n": "clock",
     "p": "/clock",
-    "d": "用于调整 RTC 时间。"
+    "d": "\u7528\u4e8e\u8c03\u6574 RTC \u65f6\u95f4\u3002"
   },
   "clockdiff": {
     "n": "clockdiff",
     "p": "/clockdiff",
-    "d": "检测两台linux主机的时间差"
+    "d": "\u68c0\u6d4b\u4e24\u53f0linux\u4e3b\u673a\u7684\u65f6\u95f4\u5dee"
   },
   "cmp": {
     "n": "cmp",
     "p": "/cmp",
-    "d": "比较两个文件是否有差异"
+    "d": "\u6bd4\u8f83\u4e24\u4e2a\u6587\u4ef6\u662f\u5426\u6709\u5dee\u5f02"
   },
   "col": {
     "n": "col",
     "p": "/col",
-    "d": "过滤控制字符"
+    "d": "\u8fc7\u6ee4\u63a7\u5236\u5b57\u7b26"
   },
   "colrm": {
     "n": "colrm",
     "p": "/colrm",
-    "d": "删除文件中的指定列"
+    "d": "\u5220\u9664\u6587\u4ef6\u4e2d\u7684\u6307\u5b9a\u5217"
   },
   "comm": {
     "n": "comm",
     "p": "/comm",
-    "d": "两个文件之间的比较"
+    "d": "\u4e24\u4e2a\u6587\u4ef6\u4e4b\u95f4\u7684\u6bd4\u8f83"
   },
   "command": {
     "n": "command",
     "p": "/command",
-    "d": "调用并执行指定的命令"
+    "d": "\u8c03\u7528\u5e76\u6267\u884c\u6307\u5b9a\u7684\u547d\u4ee4"
   },
   "compress": {
     "n": "compress",
     "p": "/compress",
-    "d": "使用Lempress-Ziv编码压缩数据文件"
+    "d": "\u4f7f\u7528Lempress-Ziv\u7f16\u7801\u538b\u7f29\u6570\u636e\u6587\u4ef6"
   },
   "consoletype": {
     "n": "consoletype",
     "p": "/consoletype",
-    "d": "输出已连接的终端类型"
+    "d": "\u8f93\u51fa\u5df2\u8fde\u63a5\u7684\u7ec8\u7aef\u7c7b\u578b"
   },
   "convertquota": {
     "n": "convertquota",
     "p": "/convertquota",
-    "d": "把老的配额文件转换为新的格式"
+    "d": "\u628a\u8001\u7684\u914d\u989d\u6587\u4ef6\u8f6c\u6362\u4e3a\u65b0\u7684\u683c\u5f0f"
   },
   "cp": {
     "n": "cp",
     "p": "/cp",
     "category": "file operations",
-    "d": "将源文件或目录复制到目标文件或目录中"
+    "d": "\u5c06\u6e90\u6587\u4ef6\u6216\u76ee\u5f55\u590d\u5236\u5230\u76ee\u6807\u6587\u4ef6\u6216\u76ee\u5f55\u4e2d"
   },
   "cpio": {
     "n": "cpio",
     "p": "/cpio",
-    "d": "用来建立、还原备份档的工具程序"
+    "d": "\u7528\u6765\u5efa\u7acb\u3001\u8fd8\u539f\u5907\u4efd\u6863\u7684\u5de5\u5177\u7a0b\u5e8f"
   },
   "crontab": {
     "n": "crontab",
     "p": "/crontab",
     "category": "miscellaneous",
-    "d": "提交和管理用户的需要周期性执行的任务"
+    "d": "\u63d0\u4ea4\u548c\u7ba1\u7406\u7528\u6237\u7684\u9700\u8981\u5468\u671f\u6027\u6267\u884c\u7684\u4efb\u52a1"
   },
   "csplit": {
     "n": "csplit",
     "p": "/csplit",
-    "d": "将一个大文件分割成小的碎片文件"
+    "d": "\u5c06\u4e00\u4e2a\u5927\u6587\u4ef6\u5206\u5272\u6210\u5c0f\u7684\u788e\u7247\u6587\u4ef6"
   },
   "cu": {
     "n": "cu",
     "p": "/cu",
-    "d": "用于连接另一个系统主机。"
+    "d": "\u7528\u4e8e\u8fde\u63a5\u53e6\u4e00\u4e2a\u7cfb\u7edf\u4e3b\u673a\u3002"
   },
   "cupsdisable": {
     "n": "cupsdisable",
     "p": "/cupsdisable",
-    "d": "停止指定的打印机"
+    "d": "\u505c\u6b62\u6307\u5b9a\u7684\u6253\u5370\u673a"
   },
   "cupsenable": {
     "n": "cupsenable",
     "p": "/cupsenable",
-    "d": "启动指定的打印机"
+    "d": "\u542f\u52a8\u6307\u5b9a\u7684\u6253\u5370\u673a"
   },
   "curl": {
     "n": "curl",
     "p": "/curl",
     "category": "network",
-    "d": "利用URL规则在命令行下工作的文件传输工具"
+    "d": "\u5229\u7528URL\u89c4\u5219\u5728\u547d\u4ee4\u884c\u4e0b\u5de5\u4f5c\u7684\u6587\u4ef6\u4f20\u8f93\u5de5\u5177"
   },
   "cut": {
     "n": "cut",
     "p": "/cut",
     "category": "Shell Programming",
-    "d": "连接文件并打印到标准输出设备上"
+    "d": "\u8fde\u63a5\u6587\u4ef6\u5e76\u6253\u5370\u5230\u6807\u51c6\u8f93\u51fa\u8bbe\u5907\u4e0a"
   },
   "date": {
     "n": "date",
     "p": "/date",
     "category": "system information",
-    "d": "显示或设置系统时间与日期"
+    "d": "\u663e\u793a\u6216\u8bbe\u7f6e\u7cfb\u7edf\u65f6\u95f4\u4e0e\u65e5\u671f"
   },
   "dd": {
     "n": "dd",
     "p": "/dd",
-    "d": "复制文件并对原文件的内容进行转换和格式化处理"
+    "d": "\u590d\u5236\u6587\u4ef6\u5e76\u5bf9\u539f\u6587\u4ef6\u7684\u5185\u5bb9\u8fdb\u884c\u8f6c\u6362\u548c\u683c\u5f0f\u5316\u5904\u7406"
   },
   "declare": {
     "n": "declare",
     "p": "/declare",
-    "d": "声明或显示shell变量"
+    "d": "\u58f0\u660e\u6216\u663e\u793ashell\u53d8\u91cf"
   },
   "depmod": {
     "n": "depmod",
     "p": "/depmod",
-    "d": "分析可载入模块的相依性"
+    "d": "\u5206\u6790\u53ef\u8f7d\u5165\u6a21\u5757\u7684\u76f8\u4f9d\u6027"
   },
   "df": {
     "n": "df",
     "p": "/df",
-    "d": "显示磁盘的相关信息"
+    "d": "\u663e\u793a\u78c1\u76d8\u7684\u76f8\u5173\u4fe1\u606f"
   },
   "dhclient": {
     "n": "dhclient",
     "p": "/dhclient",
-    "d": "动态获取或释放IP地址"
+    "d": "\u52a8\u6001\u83b7\u53d6\u6216\u91ca\u653eIP\u5730\u5740"
   },
   "dhcpd": {
     "n": "dhcpd",
     "p": "/dhcpd",
-    "d": "运行DHCP服务器。"
+    "d": "\u8fd0\u884cDHCP\u670d\u52a1\u5668\u3002"
   },
   "dhcrelay": {
     "n": "dhcrelay",
     "p": "/dhcrelay",
-    "d": "使用dhcrelay命令可以提供中继DHCP和BOOTP请求"
+    "d": "\u4f7f\u7528dhcrelay\u547d\u4ee4\u53ef\u4ee5\u63d0\u4f9b\u4e2d\u7ee7DHCP\u548cBOOTP\u8bf7\u6c42"
   },
   "diff": {
     "n": "diff",
     "p": "/diff",
     "category": "file examination",
-    "d": "比较给定的两个文件的不同"
+    "d": "\u6bd4\u8f83\u7ed9\u5b9a\u7684\u4e24\u4e2a\u6587\u4ef6\u7684\u4e0d\u540c"
   },
   "diff3": {
     "n": "diff3",
     "p": "/diff3",
-    "d": "比较3个文件不同的地方"
+    "d": "\u6bd4\u8f833\u4e2a\u6587\u4ef6\u4e0d\u540c\u7684\u5730\u65b9"
   },
   "diffstat": {
     "n": "diffstat",
     "p": "/diffstat",
-    "d": "显示diff命令输出信息的柱状图"
+    "d": "\u663e\u793adiff\u547d\u4ee4\u8f93\u51fa\u4fe1\u606f\u7684\u67f1\u72b6\u56fe"
   },
   "dig": {
     "n": "dig",
     "p": "/dig",
-    "d": "域名查询工具"
+    "d": "\u57df\u540d\u67e5\u8be2\u5de5\u5177"
   },
   "dircolors": {
     "n": "dircolors",
     "p": "/dircolors",
-    "d": "置ls命令在显示目录或文件时所用的色彩"
+    "d": "\u7f6els\u547d\u4ee4\u5728\u663e\u793a\u76ee\u5f55\u6216\u6587\u4ef6\u65f6\u6240\u7528\u7684\u8272\u5f69"
   },
   "dirname": {
     "n": "dirname",
     "p": "/dirname",
     "category": "filesystem",
-    "d": "去除文件名中的非目录部分"
+    "d": "\u53bb\u9664\u6587\u4ef6\u540d\u4e2d\u7684\u975e\u76ee\u5f55\u90e8\u5206"
   },
   "dirs": {
     "n": "dirs",
     "p": "/dirs",
-    "d": "显示目录记录"
+    "d": "\u663e\u793a\u76ee\u5f55\u8bb0\u5f55"
   },
   "dmesg": {
     "n": "dmesg",
     "p": "/dmesg",
-    "d": "显示Linux系统启动信息"
+    "d": "\u663e\u793aLinux\u7cfb\u7edf\u542f\u52a8\u4fe1\u606f"
   },
   "dmidecode": {
     "n": "dmidecode",
     "p": "/dmidecode",
-    "d": "在Linux系统下获取有关硬件方面的信息"
+    "d": "\u5728Linux\u7cfb\u7edf\u4e0b\u83b7\u53d6\u6709\u5173\u786c\u4ef6\u65b9\u9762\u7684\u4fe1\u606f"
   },
   "dnf": {
     "n": "dnf",
     "p": "/dnf",
-    "d": "新一代的RPM软件包管理器"
+    "d": "\u65b0\u4e00\u4ee3\u7684RPM\u8f6f\u4ef6\u5305\u7ba1\u7406\u5668"
   },
   "dnsdomainname": {
     "n": "dnsdomainname",
     "p": "/dnsdomainname",
-    "d": "定义DNS系统中FQDN名称的域名"
+    "d": "\u5b9a\u4e49DNS\u7cfb\u7edf\u4e2dFQDN\u540d\u79f0\u7684\u57df\u540d"
   },
   "domainname": {
     "n": "domainname",
     "p": "/domainname",
-    "d": "显示和设置系统的NIS域名"
+    "d": "\u663e\u793a\u548c\u8bbe\u7f6e\u7cfb\u7edf\u7684NIS\u57df\u540d"
   },
   "dos2unix": {
     "n": "dos2unix",
     "p": "/dos2unix",
-    "d": "将DOS格式文本文件转换成Unix格式"
+    "d": "\u5c06DOS\u683c\u5f0f\u6587\u672c\u6587\u4ef6\u8f6c\u6362\u6210Unix\u683c\u5f0f"
   },
   "dpkg-deb": {
     "n": "dpkg-deb",
     "p": "/dpkg-deb",
-    "d": "Debian Linux下的软件包管理工具"
+    "d": "Debian Linux\u4e0b\u7684\u8f6f\u4ef6\u5305\u7ba1\u7406\u5de5\u5177"
   },
   "dpkg-divert": {
     "n": "dpkg-divert",
     "p": "/dpkg-divert",
-    "d": "Debian Linux中创建并管理一个转向列表"
+    "d": "Debian Linux\u4e2d\u521b\u5efa\u5e76\u7ba1\u7406\u4e00\u4e2a\u8f6c\u5411\u5217\u8868"
   },
   "dpkg-preconfigure": {
     "n": "dpkg-preconfigure",
     "p": "/dpkg-preconfigure",
-    "d": "Debian Linux中软件包安装之前询问问题"
+    "d": "Debian Linux\u4e2d\u8f6f\u4ef6\u5305\u5b89\u88c5\u4e4b\u524d\u8be2\u95ee\u95ee\u9898"
   },
   "dpkg-query": {
     "n": "dpkg-query",
     "p": "/dpkg-query",
-    "d": "Debian Linux中软件包的查询工具"
+    "d": "Debian Linux\u4e2d\u8f6f\u4ef6\u5305\u7684\u67e5\u8be2\u5de5\u5177"
   },
   "dpkg-reconfigure": {
     "n": "dpkg-reconfigure",
     "p": "/dpkg-reconfigure",
-    "d": "Debian Linux中重新配制一个已经安装的软件包"
+    "d": "Debian Linux\u4e2d\u91cd\u65b0\u914d\u5236\u4e00\u4e2a\u5df2\u7ecf\u5b89\u88c5\u7684\u8f6f\u4ef6\u5305"
   },
   "dpkg-split": {
     "n": "dpkg-split",
     "p": "/dpkg-split",
-    "d": "Debian Linux中将大软件包分割成小包"
+    "d": "Debian Linux\u4e2d\u5c06\u5927\u8f6f\u4ef6\u5305\u5206\u5272\u6210\u5c0f\u5305"
   },
   "dpkg-statoverride": {
     "n": "dpkg-statoverride",
     "p": "/dpkg-statoverride",
-    "d": "Debian Linux中覆盖文件的所有权和模式"
+    "d": "Debian Linux\u4e2d\u8986\u76d6\u6587\u4ef6\u7684\u6240\u6709\u6743\u548c\u6a21\u5f0f"
   },
   "dpkg-trigger": {
     "n": "dpkg-trigger",
     "p": "/dpkg-trigger",
-    "d": "Debian Linux下的软件包触发器"
+    "d": "Debian Linux\u4e0b\u7684\u8f6f\u4ef6\u5305\u89e6\u53d1\u5668"
   },
   "dpkg": {
     "n": "dpkg",
     "p": "/dpkg",
-    "d": "Debian Linux系统上安装、创建和管理软件包"
+    "d": "Debian Linux\u7cfb\u7edf\u4e0a\u5b89\u88c5\u3001\u521b\u5efa\u548c\u7ba1\u7406\u8f6f\u4ef6\u5305"
   },
   "dris": {
     "n": "dris",
     "p": "/dris",
-    "d": "显示和清空目录堆栈中的内容"
+    "d": "\u663e\u793a\u548c\u6e05\u7a7a\u76ee\u5f55\u5806\u6808\u4e2d\u7684\u5185\u5bb9"
   },
   "dstat": {
     "n": "dstat",
     "p": "/dstat",
-    "d": "通用的系统资源统计工具"
+    "d": "\u901a\u7528\u7684\u7cfb\u7edf\u8d44\u6e90\u7edf\u8ba1\u5de5\u5177"
   },
   "du": {
     "n": "du",
     "p": "/du",
     "category": "file examination",
-    "d": "显示每个文件和目录的磁盘使用空间"
+    "d": "\u663e\u793a\u6bcf\u4e2a\u6587\u4ef6\u548c\u76ee\u5f55\u7684\u78c1\u76d8\u4f7f\u7528\u7a7a\u95f4"
   },
   "dump": {
     "n": "dump",
     "p": "/dump",
-    "d": "用于备份ext2或者ext3文件系统"
+    "d": "\u7528\u4e8e\u5907\u4efdext2\u6216\u8005ext3\u6587\u4ef6\u7cfb\u7edf"
   },
   "e2fsck": {
     "n": "e2fsck",
     "p": "/e2fsck",
-    "d": "用于检查第二扩展文件系统的完整性"
+    "d": "\u7528\u4e8e\u68c0\u67e5\u7b2c\u4e8c\u6269\u5c55\u6587\u4ef6\u7cfb\u7edf\u7684\u5b8c\u6574\u6027"
   },
   "e2label": {
     "n": "e2label",
     "p": "/e2label",
-    "d": "设置第二扩展文件系统的卷标"
+    "d": "\u8bbe\u7f6e\u7b2c\u4e8c\u6269\u5c55\u6587\u4ef6\u7cfb\u7edf\u7684\u5377\u6807"
   },
   "echo": {
     "n": "echo",
     "p": "/echo",
     "category": "shell scripting",
-    "d": "输出指定的字符串或者变量"
+    "d": "\u8f93\u51fa\u6307\u5b9a\u7684\u5b57\u7b26\u4e32\u6216\u8005\u53d8\u91cf"
   },
   "ed": {
     "n": "ed",
     "p": "/ed",
-    "d": "单行纯文本编辑器"
+    "d": "\u5355\u884c\u7eaf\u6587\u672c\u7f16\u8f91\u5668"
   },
   "edquota": {
     "n": "edquota",
     "p": "/edquota",
-    "d": "用于编辑指定用户或工作组磁盘配额"
+    "d": "\u7528\u4e8e\u7f16\u8f91\u6307\u5b9a\u7528\u6237\u6216\u5de5\u4f5c\u7ec4\u78c1\u76d8\u914d\u989d"
   },
   "egrep": {
     "n": "egrep",
     "p": "/egrep",
     "category": "regular expressions",
-    "d": "在文件内查找指定的字符串"
+    "d": "\u5728\u6587\u4ef6\u5185\u67e5\u627e\u6307\u5b9a\u7684\u5b57\u7b26\u4e32"
   },
   "eject": {
     "n": "eject",
     "p": "/eject",
-    "d": "用来退出抽取式设备"
+    "d": "\u7528\u6765\u9000\u51fa\u62bd\u53d6\u5f0f\u8bbe\u5907"
   },
   "elinks": {
     "n": "elinks",
     "p": "/elinks",
-    "d": "纯文本界面的WWW浏览器"
+    "d": "\u7eaf\u6587\u672c\u754c\u9762\u7684WWW\u6d4f\u89c8\u5668"
   },
   "elm": {
     "n": "elm",
     "p": "/elm",
-    "d": "纯文本邮件客户端程序"
+    "d": "\u7eaf\u6587\u672c\u90ae\u4ef6\u5ba2\u6237\u7aef\u7a0b\u5e8f"
   },
   "emacs": {
     "n": "emacs",
     "p": "/emacs",
     "category": "text editors",
-    "d": "功能强大的全屏文本编辑器"
+    "d": "\u529f\u80fd\u5f3a\u5927\u7684\u5168\u5c4f\u6587\u672c\u7f16\u8f91\u5668"
   },
   "enable": {
     "n": "enable",
     "p": "/enable",
-    "d": "启动或关闭shell内建命令"
+    "d": "\u542f\u52a8\u6216\u5173\u95edshell\u5185\u5efa\u547d\u4ee4"
   },
   "env": {
     "n": "env",
     "p": "/env",
-    "d": "显示系统中已存在的环境变量"
+    "d": "\u663e\u793a\u7cfb\u7edf\u4e2d\u5df2\u5b58\u5728\u7684\u73af\u5883\u53d8\u91cf"
   },
   "ethtool": {
     "n": "ethtool",
     "p": "/ethtool",
-    "d": "显示或修改以太网卡的配置信息"
+    "d": "\u663e\u793a\u6216\u4fee\u6539\u4ee5\u592a\u7f51\u5361\u7684\u914d\u7f6e\u4fe1\u606f"
   },
   "ex": {
     "n": "ex",
     "p": "/ex",
-    "d": "启动vim编辑器的ex编辑模式"
+    "d": "\u542f\u52a8vim\u7f16\u8f91\u5668\u7684ex\u7f16\u8f91\u6a21\u5f0f"
   },
   "exec": {
     "n": "exec",
     "p": "/exec",
-    "d": "调用并执行指定的命令"
+    "d": "\u8c03\u7528\u5e76\u6267\u884c\u6307\u5b9a\u7684\u547d\u4ee4"
   },
   "exit": {
     "n": "exit",
     "p": "/exit",
-    "d": "退出当前的shell",
+    "d": "\u9000\u51fa\u5f53\u524d\u7684shell",
     "category": "basic shell",
     "description": "quits the shell"
-
   },
   "expand": {
     "n": "expand",
     "p": "/expand",
-    "d": "将文件的制表符转换为空白字符"
+    "d": "\u5c06\u6587\u4ef6\u7684\u5236\u8868\u7b26\u8f6c\u6362\u4e3a\u7a7a\u767d\u5b57\u7b26"
   },
   "export": {
     "n": "export",
     "p": "/export",
     "category": "shell scripting",
-    "d": "设置或显示系统环境变量"
+    "d": "\u8bbe\u7f6e\u6216\u663e\u793a\u7cfb\u7edf\u73af\u5883\u53d8\u91cf"
   },
   "exportfs": {
     "n": "exportfs",
     "p": "/exportfs",
-    "d": "管理NFS共享文件系统列表"
+    "d": "\u7ba1\u7406NFS\u5171\u4eab\u6587\u4ef6\u7cfb\u7edf\u5217\u8868"
   },
   "expr": {
     "n": "expr",
     "p": "/expr",
-    "d": "一款表达式计算工具"
+    "d": "\u4e00\u6b3e\u8868\u8fbe\u5f0f\u8ba1\u7b97\u5de5\u5177"
   },
   "fc": {
     "n": "fc",
     "p": "/fc",
-    "d": "修改历史命令并执行"
+    "d": "\u4fee\u6539\u5386\u53f2\u547d\u4ee4\u5e76\u6267\u884c"
   },
   "fdisk": {
     "n": "fdisk",
     "p": "/fdisk",
-    "d": "查看磁盘使用情况和磁盘分区"
+    "d": "\u67e5\u770b\u78c1\u76d8\u4f7f\u7528\u60c5\u51b5\u548c\u78c1\u76d8\u5206\u533a"
   },
   "fg": {
     "n": "fg",
     "p": "/fg",
     "category": "process management",
-    "d": "将后台作业放到前台终端运行"
+    "d": "\u5c06\u540e\u53f0\u4f5c\u4e1a\u653e\u5230\u524d\u53f0\u7ec8\u7aef\u8fd0\u884c"
   },
   "fgrep": {
     "n": "fgrep",
     "p": "/fgrep",
-    "d": "为文件搜索文字字符串"
+    "d": "\u4e3a\u6587\u4ef6\u641c\u7d22\u6587\u5b57\u5b57\u7b26\u4e32"
   },
   "file": {
     "n": "file",
     "p": "/file",
-    "d": "用来探测给定文件的类型。"
+    "d": "\u7528\u6765\u63a2\u6d4b\u7ed9\u5b9a\u6587\u4ef6\u7684\u7c7b\u578b\u3002"
   },
   "find": {
     "n": "find",
     "p": "/find",
     "category": "searching and sorting",
-    "d": "在指定目录下查找文件"
+    "d": "\u5728\u6307\u5b9a\u76ee\u5f55\u4e0b\u67e5\u627e\u6587\u4ef6"
   },
   "findfs": {
     "n": "findfs",
     "p": "/findfs",
-    "d": "标签或UUID查找文件系统"
+    "d": "\u6807\u7b7e\u6216UUID\u67e5\u627e\u6587\u4ef6\u7cfb\u7edf"
   },
   "finger": {
     "n": "finger",
     "p": "/finger",
     "category": "multi-user environments",
-    "d": "用于查找并显示用户信息"
+    "d": "\u7528\u4e8e\u67e5\u627e\u5e76\u663e\u793a\u7528\u6237\u4fe1\u606f"
   },
   "firewall-cmd": {
     "n": "firewall-cmd",
     "p": "/firewall-cmd",
-    "d": "Linux上新用的防火墙软件，跟iptables差不多的工具。"
+    "d": "Linux\u4e0a\u65b0\u7528\u7684\u9632\u706b\u5899\u8f6f\u4ef6\uff0c\u8ddfiptables\u5dee\u4e0d\u591a\u7684\u5de5\u5177\u3002"
   },
   "fishshell": {
     "n": "fishshell",
     "p": "/fishshell",
-    "d": "比 bash 更好用的 shell"
+    "d": "\u6bd4 bash \u66f4\u597d\u7528\u7684 shell"
   },
   "fmt": {
     "n": "fmt",
     "p": "/fmt",
-    "d": "读取文件后优化处理并输出"
+    "d": "\u8bfb\u53d6\u6587\u4ef6\u540e\u4f18\u5316\u5904\u7406\u5e76\u8f93\u51fa"
   },
   "fold": {
     "n": "fold",
     "p": "/fold",
-    "d": "控制文件内容输出时所占用的屏幕宽度"
+    "d": "\u63a7\u5236\u6587\u4ef6\u5185\u5bb9\u8f93\u51fa\u65f6\u6240\u5360\u7528\u7684\u5c4f\u5e55\u5bbd\u5ea6"
   },
   "free": {
     "n": "free",
     "p": "/free",
-    "d": "显示内存的使用情况"
+    "d": "\u663e\u793a\u5185\u5b58\u7684\u4f7f\u7528\u60c5\u51b5"
   },
   "fsck": {
     "n": "fsck",
     "p": "/fsck",
-    "d": "检查并且试图修复文件系统中的错误"
+    "d": "\u68c0\u67e5\u5e76\u4e14\u8bd5\u56fe\u4fee\u590d\u6587\u4ef6\u7cfb\u7edf\u4e2d\u7684\u9519\u8bef"
   },
   "ftp": {
     "n": "ftp",
     "p": "/ftp",
     "category": "network",
-    "d": "用来设置文件系统相关功能"
+    "d": "\u7528\u6765\u8bbe\u7f6e\u6587\u4ef6\u7cfb\u7edf\u76f8\u5173\u529f\u80fd"
   },
   "ftpcount": {
     "n": "ftpcount",
     "p": "/ftpcount",
-    "d": "显示目前已FTP登入的用户人数"
+    "d": "\u663e\u793a\u76ee\u524d\u5df2FTP\u767b\u5165\u7684\u7528\u6237\u4eba\u6570"
   },
   "ftpshut": {
     "n": "ftpshut",
     "p": "/ftpshut",
-    "d": "在指定的时间关闭FTP服务器"
+    "d": "\u5728\u6307\u5b9a\u7684\u65f6\u95f4\u5173\u95edFTP\u670d\u52a1\u5668"
   },
   "ftptop": {
     "n": "ftptop",
     "p": "/ftptop",
-    "d": "proftpd服务器的连接状态"
+    "d": "proftpd\u670d\u52a1\u5668\u7684\u8fde\u63a5\u72b6\u6001"
   },
   "ftpwho": {
     "n": "ftpwho",
     "p": "/ftpwho",
-    "d": "显示当前每个ftp会话信息"
+    "d": "\u663e\u793a\u5f53\u524d\u6bcf\u4e2aftp\u4f1a\u8bdd\u4fe1\u606f"
   },
   "fuser": {
     "n": "fuser",
     "p": "/fuser",
-    "d": "使用文件或文件结构识别进程"
+    "d": "\u4f7f\u7528\u6587\u4ef6\u6216\u6587\u4ef6\u7ed3\u6784\u8bc6\u522b\u8fdb\u7a0b"
   },
   "gcc": {
     "n": "gcc",
     "p": "/gcc",
-    "d": "基于C/C++的编译器"
+    "d": "\u57fa\u4e8eC/C++\u7684\u7f16\u8bd1\u5668"
   },
   "gcov": {
     "n": "gcov",
     "p": "/gcov",
-    "d": "测试程序的代码覆盖率的工具"
+    "d": "\u6d4b\u8bd5\u7a0b\u5e8f\u7684\u4ee3\u7801\u8986\u76d6\u7387\u7684\u5de5\u5177"
   },
   "gdb": {
     "n": "gdb",
     "p": "/gdb",
-    "d": "功能强大的程序调试器"
+    "d": "\u529f\u80fd\u5f3a\u5927\u7684\u7a0b\u5e8f\u8c03\u8bd5\u5668"
   },
   "get_module": {
     "n": "get_module",
     "p": "/get_module",
-    "d": "获取Linux内核模块的详细信息"
+    "d": "\u83b7\u53d6Linux\u5185\u6838\u6a21\u5757\u7684\u8be6\u7ec6\u4fe1\u606f"
   },
   "getenforce": {
     "n": "getenforce",
     "p": "/getenforce",
-    "d": "显示当前SELinux的应用模式，是强制、执行还是停用。"
+    "d": "\u663e\u793a\u5f53\u524dSELinux\u7684\u5e94\u7528\u6a21\u5f0f\uff0c\u662f\u5f3a\u5236\u3001\u6267\u884c\u8fd8\u662f\u505c\u7528\u3002"
   },
   "getsebool": {
     "n": "getsebool",
     "p": "/getsebool",
-    "d": "查询SElinux策略内各项规则的布尔值"
+    "d": "\u67e5\u8be2SElinux\u7b56\u7565\u5185\u5404\u9879\u89c4\u5219\u7684\u5e03\u5c14\u503c"
   },
   "git": {
     "n": "git",
     "p": "/git",
     "category": "build management",
-    "d": "是目前世界上最先进的分布式版本控制系统"
+    "d": "\u662f\u76ee\u524d\u4e16\u754c\u4e0a\u6700\u5148\u8fdb\u7684\u5206\u5e03\u5f0f\u7248\u672c\u63a7\u5236\u7cfb\u7edf"
   },
   "gpasswd": {
     "n": "gpasswd",
     "p": "/gpasswd",
-    "d": "Linux下工作组文件的管理工具"
+    "d": "Linux\u4e0b\u5de5\u4f5c\u7ec4\u6587\u4ef6\u7684\u7ba1\u7406\u5de5\u5177"
   },
   "gpm": {
     "n": "gpm",
     "p": "/gpm",
-    "d": "提供文字模式下的滑鼠事件处理"
+    "d": "\u63d0\u4f9b\u6587\u5b57\u6a21\u5f0f\u4e0b\u7684\u6ed1\u9f20\u4e8b\u4ef6\u5904\u7406"
   },
   "grep": {
     "n": "grep",
     "p": "/grep",
     "category": "searching and sorting",
-    "d": "强大的文本搜索工具"
+    "d": "\u5f3a\u5927\u7684\u6587\u672c\u641c\u7d22\u5de5\u5177"
   },
   "groupadd": {
     "n": "groupadd",
     "p": "/groupadd",
-    "d": "用于创建一个新的工作组"
+    "d": "\u7528\u4e8e\u521b\u5efa\u4e00\u4e2a\u65b0\u7684\u5de5\u4f5c\u7ec4"
   },
   "groupdel": {
     "n": "groupdel",
     "p": "/groupdel",
-    "d": "用于删除指定的工作组"
+    "d": "\u7528\u4e8e\u5220\u9664\u6307\u5b9a\u7684\u5de5\u4f5c\u7ec4"
   },
   "groupmod": {
     "n": "groupmod",
     "p": "/groupmod",
-    "d": "更改群组识别码或名称"
+    "d": "\u66f4\u6539\u7fa4\u7ec4\u8bc6\u522b\u7801\u6216\u540d\u79f0"
   },
   "groups": {
     "n": "groups",
     "p": "/groups",
     "category": "users and groups",
-    "d": "用来打印指定用户所属的工作组"
+    "d": "\u7528\u6765\u6253\u5370\u6307\u5b9a\u7528\u6237\u6240\u5c5e\u7684\u5de5\u4f5c\u7ec4"
   },
   "grpck": {
     "n": "grpck",
     "p": "/grpck",
-    "d": "用于验证组文件的完整性"
+    "d": "\u7528\u4e8e\u9a8c\u8bc1\u7ec4\u6587\u4ef6\u7684\u5b8c\u6574\u6027"
   },
   "grpconv": {
     "n": "grpconv",
     "p": "/grpconv",
-    "d": "用来开启群组的投影密码"
+    "d": "\u7528\u6765\u5f00\u542f\u7fa4\u7ec4\u7684\u6295\u5f71\u5bc6\u7801"
   },
   "grpunconv": {
     "n": "grpunconv",
     "p": "/grpunconv",
-    "d": "用来关闭群组的投影密码"
+    "d": "\u7528\u6765\u5173\u95ed\u7fa4\u7ec4\u7684\u6295\u5f71\u5bc6\u7801"
   },
   "grub": {
     "n": "grub",
     "p": "/grub",
-    "d": "多重引导程序grub的命令行shell工具"
+    "d": "\u591a\u91cd\u5f15\u5bfc\u7a0b\u5e8fgrub\u7684\u547d\u4ee4\u884cshell\u5de5\u5177"
   },
   "gunzip": {
     "n": "gunzip",
     "p": "/gunzip",
     "category": "compression",
-    "d": "用来解压缩文件"
+    "d": "\u7528\u6765\u89e3\u538b\u7f29\u6587\u4ef6"
   },
   "gzexe": {
     "n": "gzexe",
     "p": "/gzexe",
-    "d": "用来压缩可执行文件"
+    "d": "\u7528\u6765\u538b\u7f29\u53ef\u6267\u884c\u6587\u4ef6"
   },
   "gzip": {
     "n": "gzip",
     "p": "/gzip",
     "category": "compression",
-    "d": "用来压缩文件"
+    "d": "\u7528\u6765\u538b\u7f29\u6587\u4ef6"
   },
   "halt": {
     "n": "halt",
     "p": "/halt",
-    "d": "关闭正在运行的Linux操作系统"
+    "d": "\u5173\u95ed\u6b63\u5728\u8fd0\u884c\u7684Linux\u64cd\u4f5c\u7cfb\u7edf"
   },
   "hdparm": {
     "n": "hdparm",
     "p": "/hdparm",
-    "d": "显示与设定硬盘的参数"
+    "d": "\u663e\u793a\u4e0e\u8bbe\u5b9a\u786c\u76d8\u7684\u53c2\u6570"
   },
   "head": {
     "n": "head",
     "p": "/head",
     "category": "file examination",
-    "d": "在屏幕上显示指定文件的开头若干行"
+    "d": "\u5728\u5c4f\u5e55\u4e0a\u663e\u793a\u6307\u5b9a\u6587\u4ef6\u7684\u5f00\u5934\u82e5\u5e72\u884c"
   },
   "help": {
     "n": "help",
     "p": "/help",
-    "d": "显示帮助信息"
+    "d": "\u663e\u793a\u5e2e\u52a9\u4fe1\u606f"
   },
   "hexdump": {
     "n": "hexdump",
     "p": "/hexdump",
-    "d": "显示文件十六进制格式"
+    "d": "\u663e\u793a\u6587\u4ef6\u5341\u516d\u8fdb\u5236\u683c\u5f0f"
   },
   "history": {
     "n": "history",
     "p": "/history",
     "category": "basic shell",
-    "d": "用于显示历史命令"
+    "d": "\u7528\u4e8e\u663e\u793a\u5386\u53f2\u547d\u4ee4"
   },
   "host": {
     "n": "host",
     "p": "/host",
-    "d": "常用的分析域名查询工具"
+    "d": "\u5e38\u7528\u7684\u5206\u6790\u57df\u540d\u67e5\u8be2\u5de5\u5177"
   },
   "hostid": {
     "n": "hostid",
     "p": "/hostid",
-    "d": "用来打印当前主机的数字化标识"
+    "d": "\u7528\u6765\u6253\u5370\u5f53\u524d\u4e3b\u673a\u7684\u6570\u5b57\u5316\u6807\u8bc6"
   },
   "hostname": {
     "n": "hostname",
     "p": "/hostname",
     "category": "multi-user environments",
-    "d": "显示和设置系统的主机名"
+    "d": "\u663e\u793a\u548c\u8bbe\u7f6e\u7cfb\u7edf\u7684\u4e3b\u673a\u540d"
   },
   "hping3": {
     "n": "hping3",
     "p": "/hping3",
-    "d": "测试网络及主机的安全"
+    "d": "\u6d4b\u8bd5\u7f51\u7edc\u53ca\u4e3b\u673a\u7684\u5b89\u5168"
   },
   "htdigest": {
     "n": "htdigest",
     "p": "/htdigest",
-    "d": "Apache服务器内置工具"
+    "d": "Apache\u670d\u52a1\u5668\u5185\u7f6e\u5de5\u5177"
   },
   "htop": {
     "n": "htop",
     "p": "/htop",
-    "d": "[非内部命令]一个互动的进程查看器，可以动态观察系统进程状况。"
+    "d": "[\u975e\u5185\u90e8\u547d\u4ee4]\u4e00\u4e2a\u4e92\u52a8\u7684\u8fdb\u7a0b\u67e5\u770b\u5668\uff0c\u53ef\u4ee5\u52a8\u6001\u89c2\u5bdf\u7cfb\u7edf\u8fdb\u7a0b\u72b6\u51b5\u3002"
   },
   "htpasswd": {
     "n": "htpasswd",
     "p": "/htpasswd",
-    "d": "apache服务器创建密码认证文件"
+    "d": "apache\u670d\u52a1\u5668\u521b\u5efa\u5bc6\u7801\u8ba4\u8bc1\u6587\u4ef6"
   },
   "hwclock": {
     "n": "hwclock",
     "p": "/hwclock",
-    "d": "显示与设定硬件时钟"
+    "d": "\u663e\u793a\u4e0e\u8bbe\u5b9a\u786c\u4ef6\u65f6\u949f"
   },
   "iconv": {
     "n": "iconv",
     "p": "/iconv",
-    "d": "转换文件的编码方式"
+    "d": "\u8f6c\u6362\u6587\u4ef6\u7684\u7f16\u7801\u65b9\u5f0f"
   },
   "id": {
     "n": "id",
     "p": "/id",
-    "d": "显示用户的ID以及所属群组的ID"
+    "d": "\u663e\u793a\u7528\u6237\u7684ID\u4ee5\u53ca\u6240\u5c5e\u7fa4\u7ec4\u7684ID"
   },
   "ifcfg": {
     "n": "ifcfg",
     "p": "/ifcfg",
-    "d": "置Linux中的网络接口参数"
+    "d": "\u7f6eLinux\u4e2d\u7684\u7f51\u7edc\u63a5\u53e3\u53c2\u6570"
   },
   "ifconfig": {
     "n": "ifconfig",
     "p": "/ifconfig",
     "category": "network",
-    "d": "配置和显示Linux系统网卡的网络参数"
+    "d": "\u914d\u7f6e\u548c\u663e\u793aLinux\u7cfb\u7edf\u7f51\u5361\u7684\u7f51\u7edc\u53c2\u6570"
   },
   "ifdown": {
     "n": "ifdown",
     "p": "/ifdown",
-    "d": "禁用指定的网络接口"
+    "d": "\u7981\u7528\u6307\u5b9a\u7684\u7f51\u7edc\u63a5\u53e3"
   },
   "ifstat": {
     "n": "ifstat",
     "p": "/ifstat",
-    "d": "统计网络接口流量状态"
+    "d": "\u7edf\u8ba1\u7f51\u7edc\u63a5\u53e3\u6d41\u91cf\u72b6\u6001"
   },
   "iftop": {
     "n": "iftop",
     "p": "/iftop",
-    "d": "一款实时流量监控工具"
+    "d": "\u4e00\u6b3e\u5b9e\u65f6\u6d41\u91cf\u76d1\u63a7\u5de5\u5177"
   },
   "ifup": {
     "n": "ifup",
     "p": "/ifup",
-    "d": "激活指定的网络接口"
+    "d": "\u6fc0\u6d3b\u6307\u5b9a\u7684\u7f51\u7edc\u63a5\u53e3"
   },
   "indent": {
     "n": "indent",
     "p": "/indent",
-    "d": "格式化C语言的源文件"
+    "d": "\u683c\u5f0f\u5316C\u8bed\u8a00\u7684\u6e90\u6587\u4ef6"
   },
   "info": {
     "n": "info",
     "p": "/info",
-    "d": "Linux下info格式的帮助指令"
+    "d": "Linux\u4e0binfo\u683c\u5f0f\u7684\u5e2e\u52a9\u6307\u4ee4"
   },
   "init": {
     "n": "init",
     "p": "/init",
-    "d": "init进程是所有Linux进程的父进程"
+    "d": "init\u8fdb\u7a0b\u662f\u6240\u6709Linux\u8fdb\u7a0b\u7684\u7236\u8fdb\u7a0b"
   },
   "inotifywait": {
     "n": "inotifywait",
     "p": "/inotifywait",
-    "d": "异步文件系统监控机制"
+    "d": "\u5f02\u6b65\u6587\u4ef6\u7cfb\u7edf\u76d1\u63a7\u673a\u5236"
   },
   "insmod": {
     "n": "insmod",
     "p": "/insmod",
-    "d": "将给定的模块加载到内核中"
+    "d": "\u5c06\u7ed9\u5b9a\u7684\u6a21\u5757\u52a0\u8f7d\u5230\u5185\u6838\u4e2d"
   },
   "install": {
     "n": "install",
     "p": "/install",
-    "d": "安装或升级软件或备份数据"
+    "d": "\u5b89\u88c5\u6216\u5347\u7ea7\u8f6f\u4ef6\u6216\u5907\u4efd\u6570\u636e"
   },
   "iostat": {
     "n": "iostat",
     "p": "/iostat",
-    "d": "监视系统输入输出设备和CPU的使用情况"
+    "d": "\u76d1\u89c6\u7cfb\u7edf\u8f93\u5165\u8f93\u51fa\u8bbe\u5907\u548cCPU\u7684\u4f7f\u7528\u60c5\u51b5"
   },
   "iotop": {
     "n": "iotop",
     "p": "/iotop",
-    "d": "用来监视磁盘I/O使用状况的工具"
+    "d": "\u7528\u6765\u76d1\u89c6\u78c1\u76d8I/O\u4f7f\u7528\u72b6\u51b5\u7684\u5de5\u5177"
   },
   "ip": {
     "n": "ip",
     "p": "/ip",
     "category": "network",
-    "d": "网络配置工具"
+    "d": "\u7f51\u7edc\u914d\u7f6e\u5de5\u5177"
   },
   "ip6tables-restore": {
     "n": "ip6tables-restore",
     "p": "/ip6tables-restore",
-    "d": "还原ip6tables表"
+    "d": "\u8fd8\u539fip6tables\u8868"
   },
   "ip6tables-save": {
     "n": "ip6tables-save",
     "p": "/ip6tables-save",
-    "d": "保存ip6tables表配置"
+    "d": "\u4fdd\u5b58ip6tables\u8868\u914d\u7f6e"
   },
   "ip6tables": {
     "n": "ip6tables",
     "p": "/ip6tables",
-    "d": "linux中防火墙软件"
+    "d": "linux\u4e2d\u9632\u706b\u5899\u8f6f\u4ef6"
   },
   "ipcalc": {
     "n": "ipcalc",
     "p": "/ipcalc",
-    "d": "简单的IP地址计算器"
+    "d": "\u7b80\u5355\u7684IP\u5730\u5740\u8ba1\u7b97\u5668"
   },
   "ipcrm": {
     "n": "ipcrm",
     "p": "/ipcrm",
-    "d": "删除消息队列、信号集、或者共享内存标识"
+    "d": "\u5220\u9664\u6d88\u606f\u961f\u5217\u3001\u4fe1\u53f7\u96c6\u3001\u6216\u8005\u5171\u4eab\u5185\u5b58\u6807\u8bc6"
   },
   "ipcs": {
     "n": "ipcs",
     "p": "/ipcs",
-    "d": "分析消息队列共享内存和信号量 "
+    "d": "\u5206\u6790\u6d88\u606f\u961f\u5217\u5171\u4eab\u5185\u5b58\u548c\u4fe1\u53f7\u91cf "
   },
   "iperf": {
     "n": "iperf",
     "p": "/iperf",
-    "d": "网络性能测试工具"
+    "d": "\u7f51\u7edc\u6027\u80fd\u6d4b\u8bd5\u5de5\u5177"
   },
   "iptables-restore": {
     "n": "iptables-restore",
     "p": "/iptables-restore",
     "category": "network",
-    "d": "还原iptables表的配置"
+    "d": "\u8fd8\u539fiptables\u8868\u7684\u914d\u7f6e"
   },
   "iptables-save": {
     "n": "iptables-save",
     "p": "/iptables-save",
     "category": "network",
-    "d": "备份iptables的表配置"
+    "d": "\u5907\u4efdiptables\u7684\u8868\u914d\u7f6e"
   },
   "iptables": {
     "n": "iptables",
     "p": "/iptables",
     "category": "network",
-    "d": "Linux上常用的防火墙软件"
+    "d": "Linux\u4e0a\u5e38\u7528\u7684\u9632\u706b\u5899\u8f6f\u4ef6"
   },
   "iptraf": {
     "n": "iptraf",
     "p": "/iptraf",
     "category": "network",
-    "d": "实时地监视网卡流量"
+    "d": "\u5b9e\u65f6\u5730\u76d1\u89c6\u7f51\u5361\u6d41\u91cf"
   },
   "iptstate": {
     "n": "iptstate",
     "p": "/iptstate",
-    "d": "显示iptables的工作状态"
+    "d": "\u663e\u793aiptables\u7684\u5de5\u4f5c\u72b6\u6001"
   },
   "ispell": {
     "n": "ispell",
     "p": "/ispell",
-    "d": "检查文件中出现的拼写错误"
+    "d": "\u68c0\u67e5\u6587\u4ef6\u4e2d\u51fa\u73b0\u7684\u62fc\u5199\u9519\u8bef"
   },
   "jed": {
     "n": "jed",
     "p": "/jed",
-    "d": "主要用于编辑代码的编辑器"
+    "d": "\u4e3b\u8981\u7528\u4e8e\u7f16\u8f91\u4ee3\u7801\u7684\u7f16\u8f91\u5668"
   },
   "jobs": {
     "n": "jobs",
     "p": "/jobs",
     "category": "process management",
-    "d": "显示Linux中的任务列表及任务状态"
+    "d": "\u663e\u793aLinux\u4e2d\u7684\u4efb\u52a1\u5217\u8868\u53ca\u4efb\u52a1\u72b6\u6001"
   },
   "joe": {
     "n": "joe",
     "p": "/joe",
-    "d": "强大的纯文本编辑器"
+    "d": "\u5f3a\u5927\u7684\u7eaf\u6587\u672c\u7f16\u8f91\u5668"
   },
   "join": {
     "n": "join",
     "p": "/join",
-    "d": "两个文件中指定栏位内容相同的行连接起来"
+    "d": "\u4e24\u4e2a\u6587\u4ef6\u4e2d\u6307\u5b9a\u680f\u4f4d\u5185\u5bb9\u76f8\u540c\u7684\u884c\u8fde\u63a5\u8d77\u6765"
   },
   "jwhois": {
     "n": "jwhois",
     "p": "/jwhois",
-    "d": "whois 客户端服务"
+    "d": "whois \u5ba2\u6237\u7aef\u670d\u52a1"
   },
   "kernelversion": {
     "n": "kernelversion",
     "p": "/kernelversion",
-    "d": "打印当前内核的主版本号"
+    "d": "\u6253\u5370\u5f53\u524d\u5185\u6838\u7684\u4e3b\u7248\u672c\u53f7"
   },
   "kexec": {
     "n": "kexec",
     "p": "/kexec",
-    "d": "从当前正在运行的内核引导到一个新内核"
+    "d": "\u4ece\u5f53\u524d\u6b63\u5728\u8fd0\u884c\u7684\u5185\u6838\u5f15\u5bfc\u5230\u4e00\u4e2a\u65b0\u5185\u6838"
   },
   "kill": {
     "n": "kill",
     "p": "/kill",
     "category": "process management",
-    "d": "删除执行中的程序或工作"
+    "d": "\u5220\u9664\u6267\u884c\u4e2d\u7684\u7a0b\u5e8f\u6216\u5de5\u4f5c"
   },
   "killall": {
     "n": "killall",
     "p": "/killall",
     "category": "process management",
-    "d": "使用进程的名称来杀死一组进程"
+    "d": "\u4f7f\u7528\u8fdb\u7a0b\u7684\u540d\u79f0\u6765\u6740\u6b7b\u4e00\u7ec4\u8fdb\u7a0b"
   },
   "last": {
     "n": "last",
     "p": "/last",
-    "d": "列出目前与过去登入系统的用户相关信息"
+    "d": "\u5217\u51fa\u76ee\u524d\u4e0e\u8fc7\u53bb\u767b\u5165\u7cfb\u7edf\u7684\u7528\u6237\u76f8\u5173\u4fe1\u606f"
   },
   "lastb": {
     "n": "lastb",
     "p": "/lastb",
-    "d": "列出登入系统失败的用户相关信息"
+    "d": "\u5217\u51fa\u767b\u5165\u7cfb\u7edf\u5931\u8d25\u7684\u7528\u6237\u76f8\u5173\u4fe1\u606f"
   },
   "lastlog": {
     "n": "lastlog",
     "p": "/lastlog",
-    "d": "显示系统中所有用户最近一次登录信息"
+    "d": "\u663e\u793a\u7cfb\u7edf\u4e2d\u6240\u6709\u7528\u6237\u6700\u8fd1\u4e00\u6b21\u767b\u5f55\u4fe1\u606f"
   },
   "ld": {
     "n": "ld",
     "p": "/ld",
-    "d": "将目标文件连接为可执行程序"
+    "d": "\u5c06\u76ee\u6807\u6587\u4ef6\u8fde\u63a5\u4e3a\u53ef\u6267\u884c\u7a0b\u5e8f"
   },
   "ldconfig": {
     "n": "ldconfig",
     "p": "/ldconfig",
-    "d": "动态链接库管理命令"
+    "d": "\u52a8\u6001\u94fe\u63a5\u5e93\u7ba1\u7406\u547d\u4ee4"
   },
   "ldd": {
     "n": "ldd",
     "p": "/ldd",
-    "d": "打印程序或者库文件所依赖的共享库列表"
+    "d": "\u6253\u5370\u7a0b\u5e8f\u6216\u8005\u5e93\u6587\u4ef6\u6240\u4f9d\u8d56\u7684\u5171\u4eab\u5e93\u5217\u8868"
   },
   "less": {
     "n": "less",
     "p": "/less",
     "category": "file examination",
-    "d": "分屏上下翻页浏览文件内容"
+    "d": "\u5206\u5c4f\u4e0a\u4e0b\u7ffb\u9875\u6d4f\u89c8\u6587\u4ef6\u5185\u5bb9"
   },
   "let": {
     "n": "let",
     "p": "/let",
     "category": "shell scripting",
-    "d": "简单的计算器"
+    "d": "\u7b80\u5355\u7684\u8ba1\u7b97\u5668"
   },
   "lftp": {
     "n": "lftp",
     "p": "/lftp",
-    "d": "优秀的文件客户端程序"
+    "d": "\u4f18\u79c0\u7684\u6587\u4ef6\u5ba2\u6237\u7aef\u7a0b\u5e8f"
   },
   "lftpget": {
     "n": "lftpget",
     "p": "/lftpget",
-    "d": "调用lftp指令下载指定的文件"
+    "d": "\u8c03\u7528lftp\u6307\u4ee4\u4e0b\u8f7d\u6307\u5b9a\u7684\u6587\u4ef6"
   },
   "lha": {
     "n": "lha",
     "p": "/lha",
-    "d": "压缩或解压缩lzh格式文件"
+    "d": "\u538b\u7f29\u6216\u89e3\u538b\u7f29lzh\u683c\u5f0f\u6587\u4ef6"
   },
   "lilo": {
     "n": "lilo",
     "p": "/lilo",
-    "d": "安装核心载入开机管理程序"
+    "d": "\u5b89\u88c5\u6838\u5fc3\u8f7d\u5165\u5f00\u673a\u7ba1\u7406\u7a0b\u5e8f"
   },
   "ln": {
     "n": "ln",
     "p": "/ln",
-    "d": "用来为文件创件连接"
+    "d": "\u7528\u6765\u4e3a\u6587\u4ef6\u521b\u4ef6\u8fde\u63a5"
   },
   "lnstat": {
     "n": "lnstat",
     "p": "/lnstat",
-    "d": "显示Linux系统的网路状态"
+    "d": "\u663e\u793aLinux\u7cfb\u7edf\u7684\u7f51\u8def\u72b6\u6001"
   },
   "locate": {
     "n": "locate",
     "p": "/locate",
     "category": "searching and sorting",
-    "d": "比 find 好用的文件查找工具"
+    "d": "\u6bd4 find \u597d\u7528\u7684\u6587\u4ef6\u67e5\u627e\u5de5\u5177"
   },
   "logger": {
     "n": "logger",
     "p": "/logger",
-    "d": "在系统日志中记录相应条目"
+    "d": "\u5728\u7cfb\u7edf\u65e5\u5fd7\u4e2d\u8bb0\u5f55\u76f8\u5e94\u6761\u76ee"
   },
   "login": {
     "n": "login",
     "p": "/login",
-    "d": "登录系统或切换用户身份"
+    "d": "\u767b\u5f55\u7cfb\u7edf\u6216\u5207\u6362\u7528\u6237\u8eab\u4efd"
   },
   "logname": {
     "n": "logname",
     "p": "/logname",
-    "d": "用来显示用户名称"
+    "d": "\u7528\u6765\u663e\u793a\u7528\u6237\u540d\u79f0"
   },
   "logout": {
     "n": "logout",
     "p": "/logout",
     "category": "basic shell",
-    "d": "退出当前登录的Shell"
+    "d": "\u9000\u51fa\u5f53\u524d\u767b\u5f55\u7684Shell"
   },
   "logrotate": {
     "n": "logrotate",
     "p": "/logrotate",
-    "d": "统日志进行轮转、压缩和删除"
+    "d": "\u7edf\u65e5\u5fd7\u8fdb\u884c\u8f6e\u8f6c\u3001\u538b\u7f29\u548c\u5220\u9664"
   },
   "logsave": {
     "n": "logsave",
     "p": "/logsave",
-    "d": "将命令的输出信息保存到指定的日志文件"
+    "d": "\u5c06\u547d\u4ee4\u7684\u8f93\u51fa\u4fe1\u606f\u4fdd\u5b58\u5230\u6307\u5b9a\u7684\u65e5\u5fd7\u6587\u4ef6"
   },
   "logwatch": {
     "n": "logwatch",
     "p": "/logwatch",
-    "d": "可定制和可插入式的日志监视系统"
+    "d": "\u53ef\u5b9a\u5236\u548c\u53ef\u63d2\u5165\u5f0f\u7684\u65e5\u5fd7\u76d1\u89c6\u7cfb\u7edf"
   },
   "look": {
     "n": "look",
     "p": "/look",
-    "d": "显示文件中以指定字符串开头的任意行"
+    "d": "\u663e\u793a\u6587\u4ef6\u4e2d\u4ee5\u6307\u5b9a\u5b57\u7b26\u4e32\u5f00\u5934\u7684\u4efb\u610f\u884c"
   },
   "losetup": {
     "n": "losetup",
     "p": "/losetup",
-    "d": "设定与控制循环（loop）设备"
+    "d": "\u8bbe\u5b9a\u4e0e\u63a7\u5236\u5faa\u73af\uff08loop\uff09\u8bbe\u5907"
   },
   "lp": {
     "n": "lp",
     "p": "/lp",
-    "d": "打印文件或修改排队的打印任务"
+    "d": "\u6253\u5370\u6587\u4ef6\u6216\u4fee\u6539\u6392\u961f\u7684\u6253\u5370\u4efb\u52a1"
   },
   "lpadmin": {
     "n": "lpadmin",
     "p": "/lpadmin",
-    "d": "配置CUPS套件中的打印机和类"
+    "d": "\u914d\u7f6eCUPS\u5957\u4ef6\u4e2d\u7684\u6253\u5370\u673a\u548c\u7c7b"
   },
   "lpc": {
     "n": "lpc",
     "p": "/lpc",
-    "d": "命令行方式打印机控制程序"
+    "d": "\u547d\u4ee4\u884c\u65b9\u5f0f\u6253\u5370\u673a\u63a7\u5236\u7a0b\u5e8f"
   },
   "lpq": {
     "n": "lpq",
     "p": "/lpq",
-    "d": "显示打印队列中的打印任务的状态信息"
+    "d": "\u663e\u793a\u6253\u5370\u961f\u5217\u4e2d\u7684\u6253\u5370\u4efb\u52a1\u7684\u72b6\u6001\u4fe1\u606f"
   },
   "lpr": {
     "n": "lpr",
     "p": "/lpr",
-    "d": "将文件发送给指定打印机进行打印"
+    "d": "\u5c06\u6587\u4ef6\u53d1\u9001\u7ed9\u6307\u5b9a\u6253\u5370\u673a\u8fdb\u884c\u6253\u5370"
   },
   "lprm": {
     "n": "lprm",
     "p": "/lprm",
-    "d": "删除打印队列中的打印任务"
+    "d": "\u5220\u9664\u6253\u5370\u961f\u5217\u4e2d\u7684\u6253\u5370\u4efb\u52a1"
   },
   "lpstat": {
     "n": "lpstat",
     "p": "/lpstat",
-    "d": "显示CUPS中打印机的状态信息"
+    "d": "\u663e\u793aCUPS\u4e2d\u6253\u5370\u673a\u7684\u72b6\u6001\u4fe1\u606f"
   },
   "ls": {
     "n": "ls",
     "p": "/ls",
     "category": "directories",
-    "d": "显示目录内容列表"
+    "d": "\u663e\u793a\u76ee\u5f55\u5185\u5bb9\u5217\u8868"
   },
   "lsattr": {
     "n": "lsattr",
     "p": "/lsattr",
-    "d": "查看文件的第二扩展文件系统属性"
+    "d": "\u67e5\u770b\u6587\u4ef6\u7684\u7b2c\u4e8c\u6269\u5c55\u6587\u4ef6\u7cfb\u7edf\u5c5e\u6027"
   },
   "lsb_release": {
     "n": "lsb_release",
     "p": "/lsb_release",
-    "d": "显示发行版本信息"
+    "d": "\u663e\u793a\u53d1\u884c\u7248\u672c\u4fe1\u606f"
   },
   "lsblk": {
     "n": "lsblk",
     "p": "/lsblk",
-    "d": "列出块设备信息"
+    "d": "\u5217\u51fa\u5757\u8bbe\u5907\u4fe1\u606f"
   },
   "lscpu": {
     "n": "lscpu",
     "p": "/lscpu",
-    "d": "显示有关CPU架构的信息"
+    "d": "\u663e\u793a\u6709\u5173CPU\u67b6\u6784\u7684\u4fe1\u606f"
   },
   "lsmod": {
     "n": "lsmod",
     "p": "/lsmod",
-    "d": "显示已载入系统的模块"
+    "d": "\u663e\u793a\u5df2\u8f7d\u5165\u7cfb\u7edf\u7684\u6a21\u5757"
   },
   "lsof": {
     "n": "lsof",
     "p": "/lsof",
     "category": "filesystem",
-    "d": "显示Linux系统当前已打开的所有文件列表 `lsof -p pid`"
+    "d": "\u663e\u793aLinux\u7cfb\u7edf\u5f53\u524d\u5df2\u6253\u5f00\u7684\u6240\u6709\u6587\u4ef6\u5217\u8868 `lsof -p pid`"
   },
   "lspci": {
     "n": "lspci",
     "p": "/lspci",
-    "d": "显示当前主机的所有PCI总线信息"
+    "d": "\u663e\u793a\u5f53\u524d\u4e3b\u673a\u7684\u6240\u6709PCI\u603b\u7ebf\u4fe1\u606f"
   },
   "lsusb": {
     "n": "lsusb",
     "p": "/lsusb",
-    "d": "显示本机的USB设备列表信息"
+    "d": "\u663e\u793a\u672c\u673a\u7684USB\u8bbe\u5907\u5217\u8868\u4fe1\u606f"
   },
   "ltrace": {
     "n": "ltrace",
     "p": "/ltrace",
-    "d": "用来跟踪进程调用库函数的情况"
+    "d": "\u7528\u6765\u8ddf\u8e2a\u8fdb\u7a0b\u8c03\u7528\u5e93\u51fd\u6570\u7684\u60c5\u51b5"
   },
   "lvcreate": {
     "n": "lvcreate",
     "p": "/lvcreate",
-    "d": "用于创建LVM的逻辑卷"
+    "d": "\u7528\u4e8e\u521b\u5efaLVM\u7684\u903b\u8f91\u5377"
   },
   "lvdisplay": {
     "n": "lvdisplay",
     "p": "/lvdisplay",
-    "d": "显示逻辑卷属性"
+    "d": "\u663e\u793a\u903b\u8f91\u5377\u5c5e\u6027"
   },
   "lvextend": {
     "n": "lvextend",
     "p": "/lvextend",
-    "d": "扩展逻辑卷空间"
+    "d": "\u6269\u5c55\u903b\u8f91\u5377\u7a7a\u95f4"
   },
   "lvreduce": {
     "n": "lvreduce",
     "p": "/lvreduce",
-    "d": "收缩逻辑卷空间"
+    "d": "\u6536\u7f29\u903b\u8f91\u5377\u7a7a\u95f4"
   },
   "lvremove": {
     "n": "lvremove",
     "p": "/lvremove",
-    "d": "删除指定LVM逻辑卷"
+    "d": "\u5220\u9664\u6307\u5b9aLVM\u903b\u8f91\u5377"
   },
   "lvresize": {
     "n": "lvresize",
     "p": "/lvresize",
-    "d": "调整逻辑卷空间大小"
+    "d": "\u8c03\u6574\u903b\u8f91\u5377\u7a7a\u95f4\u5927\u5c0f"
   },
   "lvscan": {
     "n": "lvscan",
     "p": "/lvscan",
-    "d": "扫描逻辑卷"
+    "d": "\u626b\u63cf\u903b\u8f91\u5377"
   },
   "lynx": {
     "n": "lynx",
     "p": "/lynx",
     "category": "network",
-    "d": "纯文本模式的网页浏览器"
+    "d": "\u7eaf\u6587\u672c\u6a21\u5f0f\u7684\u7f51\u9875\u6d4f\u89c8\u5668"
   },
   "mail": {
     "n": "mail",
     "p": "/mail",
     "category": "network",
-    "d": "命令行下发送和接收电子邮件"
+    "d": "\u547d\u4ee4\u884c\u4e0b\u53d1\u9001\u548c\u63a5\u6536\u7535\u5b50\u90ae\u4ef6"
   },
   "mailq": {
     "n": "mailq",
     "p": "/mailq",
-    "d": "显示待发送的邮件队列"
+    "d": "\u663e\u793a\u5f85\u53d1\u9001\u7684\u90ae\u4ef6\u961f\u5217"
   },
   "mailstat": {
     "n": "mailstat",
     "p": "/mailstat",
-    "d": "显示到达的邮件状态"
+    "d": "\u663e\u793a\u5230\u8fbe\u7684\u90ae\u4ef6\u72b6\u6001"
   },
   "make": {
     "n": "make",
     "p": "/make",
     "category": "build management",
-    "d": "GNU的工程化编译工具"
+    "d": "GNU\u7684\u5de5\u7a0b\u5316\u7f16\u8bd1\u5de5\u5177"
   },
   "man": {
     "n": "man",
     "p": "/man",
-    "d": "查看Linux中的指令帮助"
+    "d": "\u67e5\u770bLinux\u4e2d\u7684\u6307\u4ee4\u5e2e\u52a9"
   },
   "md5sum": {
     "n": "md5sum",
     "p": "/md5sum",
-    "d": "计算和校验文件报文摘要的工具程序"
+    "d": "\u8ba1\u7b97\u548c\u6821\u9a8c\u6587\u4ef6\u62a5\u6587\u6458\u8981\u7684\u5de5\u5177\u7a0b\u5e8f"
   },
   "mesg": {
     "n": "mesg",
     "p": "/mesg",
-    "d": "设置当前终端的写权限"
+    "d": "\u8bbe\u7f6e\u5f53\u524d\u7ec8\u7aef\u7684\u5199\u6743\u9650"
   },
   "mii-tool": {
     "n": "mii-tool",
     "p": "/mii-tool",
-    "d": "配置网络设备协商方式的工具"
+    "d": "\u914d\u7f6e\u7f51\u7edc\u8bbe\u5907\u534f\u5546\u65b9\u5f0f\u7684\u5de5\u5177"
   },
   "mkbootdisk": {
     "n": "mkbootdisk",
     "p": "/mkbootdisk",
-    "d": "可建立目前系统的启动盘"
+    "d": "\u53ef\u5efa\u7acb\u76ee\u524d\u7cfb\u7edf\u7684\u542f\u52a8\u76d8"
   },
   "mkdir": {
     "n": "mkdir",
     "p": "/mkdir",
     "category": "directories",
-    "d": "用来创建目录"
+    "d": "\u7528\u6765\u521b\u5efa\u76ee\u5f55"
   },
   "mke2fs": {
     "n": "mke2fs",
     "p": "/mke2fs",
-    "d": "创建磁盘分区上的“etc2/etc3”文件系统"
+    "d": "\u521b\u5efa\u78c1\u76d8\u5206\u533a\u4e0a\u7684\u201cetc2/etc3\u201d\u6587\u4ef6\u7cfb\u7edf"
   },
   "mkfs": {
     "n": "mkfs",
     "p": "/mkfs",
-    "d": "用于在设备上创建Linux文件系统"
+    "d": "\u7528\u4e8e\u5728\u8bbe\u5907\u4e0a\u521b\u5efaLinux\u6587\u4ef6\u7cfb\u7edf"
   },
   "mkinitrd": {
     "n": "mkinitrd",
     "p": "/mkinitrd",
-    "d": "建立要载入ramdisk的映像文件"
+    "d": "\u5efa\u7acb\u8981\u8f7d\u5165ramdisk\u7684\u6620\u50cf\u6587\u4ef6"
   },
   "mkisofs": {
     "n": "mkisofs",
     "p": "/mkisofs",
-    "d": "建立ISO 9660映像文件"
+    "d": "\u5efa\u7acbISO 9660\u6620\u50cf\u6587\u4ef6"
   },
   "mknod": {
     "n": "mknod",
     "p": "/mknod",
-    "d": "创建字符设备文件和块设备文件"
+    "d": "\u521b\u5efa\u5b57\u7b26\u8bbe\u5907\u6587\u4ef6\u548c\u5757\u8bbe\u5907\u6587\u4ef6"
   },
   "mkswap": {
     "n": "mkswap",
     "p": "/mkswap",
-    "d": "建立和设置SWAP交换分区"
+    "d": "\u5efa\u7acb\u548c\u8bbe\u7f6eSWAP\u4ea4\u6362\u5206\u533a"
   },
   "mktemp": {
     "n": "mktemp",
     "p": "/mktemp",
     "category": "filesystem",
-    "d": "创建临时文件供shell脚本使用"
+    "d": "\u521b\u5efa\u4e34\u65f6\u6587\u4ef6\u4f9bshell\u811a\u672c\u4f7f\u7528"
   },
   "modprobe": {
     "n": "modprobe",
     "p": "/modprobe",
-    "d": "自动处理可载入模块"
+    "d": "\u81ea\u52a8\u5904\u7406\u53ef\u8f7d\u5165\u6a21\u5757"
   },
   "more": {
     "n": "more",
     "p": "/more",
     "category": "file examination",
-    "d": "显示文件内容，每次显示一屏"
+    "d": "\u663e\u793a\u6587\u4ef6\u5185\u5bb9\uff0c\u6bcf\u6b21\u663e\u793a\u4e00\u5c4f"
   },
   "mount": {
     "n": "mount",
     "p": "/mount",
-    "d": "用于挂载Linux系统外的文件。"
+    "d": "\u7528\u4e8e\u6302\u8f7dLinux\u7cfb\u7edf\u5916\u7684\u6587\u4ef6\u3002"
   },
   "mpstat": {
     "n": "mpstat",
     "p": "/mpstat",
-    "d": "显示各个可用CPU的状态"
+    "d": "\u663e\u793a\u5404\u4e2a\u53ef\u7528CPU\u7684\u72b6\u6001"
   },
   "mtools": {
     "n": "mtools",
     "p": "/mtools",
-    "d": "显示mtools支持的指令"
+    "d": "\u663e\u793amtools\u652f\u6301\u7684\u6307\u4ee4"
   },
   "mv": {
     "n": "mv",
     "p": "/mv",
     "category": "file operations",
-    "d": "用来对文件或目录重新命名"
+    "d": "\u7528\u6765\u5bf9\u6587\u4ef6\u6216\u76ee\u5f55\u91cd\u65b0\u547d\u540d"
   },
   "mysql": {
     "n": "mysql",
     "p": "/mysql",
-    "d": "MySQL服务器客户端工具"
+    "d": "MySQL\u670d\u52a1\u5668\u5ba2\u6237\u7aef\u5de5\u5177"
   },
   "mysqladmin": {
     "n": "mysqladmin",
     "p": "/mysqladmin",
-    "d": "MySQL服务器管理客户端"
+    "d": "MySQL\u670d\u52a1\u5668\u7ba1\u7406\u5ba2\u6237\u7aef"
   },
   "mysqldump": {
     "n": "mysqldump",
     "p": "/mysqldump",
-    "d": "MySQL数据库中备份工具"
+    "d": "MySQL\u6570\u636e\u5e93\u4e2d\u5907\u4efd\u5de5\u5177"
   },
   "mysqlimport": {
     "n": "mysqlimport",
     "p": "/mysqlimport",
-    "d": "为MySQL服务器用命令行方式导入数据"
+    "d": "\u4e3aMySQL\u670d\u52a1\u5668\u7528\u547d\u4ee4\u884c\u65b9\u5f0f\u5bfc\u5165\u6570\u636e"
   },
   "mysqlshow": {
     "n": "mysqlshow",
     "p": "/mysqlshow",
-    "d": "显示MySQL中数据库相关信息"
+    "d": "\u663e\u793aMySQL\u4e2d\u6570\u636e\u5e93\u76f8\u5173\u4fe1\u606f"
   },
   "named-checkzone": {
     "n": "named-checkzone",
     "p": "/named-checkzone",
-    "d": "使用named-checkzone命令可以进行区域文件有效性检查和转换，必须指定区域名称和区域文件名称。"
+    "d": "\u4f7f\u7528named-checkzone\u547d\u4ee4\u53ef\u4ee5\u8fdb\u884c\u533a\u57df\u6587\u4ef6\u6709\u6548\u6027\u68c0\u67e5\u548c\u8f6c\u6362\uff0c\u5fc5\u987b\u6307\u5b9a\u533a\u57df\u540d\u79f0\u548c\u533a\u57df\u6587\u4ef6\u540d\u79f0\u3002"
   },
   "nano": {
     "n": "nano",
     "p": "/nano",
     "category": "text editors",
-    "d": "字符终端文本编辑器"
+    "d": "\u5b57\u7b26\u7ec8\u7aef\u6587\u672c\u7f16\u8f91\u5668"
   },
   "nc": {
     "n": "nc",
     "p": "/nc",
     "category": "network",
-    "d": "命令用于设置路由器。"
+    "d": "\u547d\u4ee4\u7528\u4e8e\u8bbe\u7f6e\u8def\u7531\u5668\u3002"
   },
   "ncftp": {
     "n": "ncftp",
     "p": "/ncftp",
-    "d": "是增强的的FTP工具"
+    "d": "\u662f\u589e\u5f3a\u7684\u7684FTP\u5de5\u5177"
   },
   "nethogs": {
     "n": "nethogs",
     "p": "/nethogs",
     "category": "network",
-    "d": "终端下的网络流量监控工具"
+    "d": "\u7ec8\u7aef\u4e0b\u7684\u7f51\u7edc\u6d41\u91cf\u76d1\u63a7\u5de5\u5177"
   },
   "netstat": {
     "n": "netstat",
     "p": "/netstat",
     "category": "network",
-    "d": "查看Linux中网络系统状态信息"
+    "d": "\u67e5\u770bLinux\u4e2d\u7f51\u7edc\u7cfb\u7edf\u72b6\u6001\u4fe1\u606f"
   },
   "newusers": {
     "n": "newusers",
     "p": "/newusers",
-    "d": "用于批处理的方式一次创建多个命令"
+    "d": "\u7528\u4e8e\u6279\u5904\u7406\u7684\u65b9\u5f0f\u4e00\u6b21\u521b\u5efa\u591a\u4e2a\u547d\u4ee4"
   },
   "nfsstat": {
     "n": "nfsstat",
     "p": "/nfsstat",
-    "d": "列出NFS客户端和服务器的工作状态"
+    "d": "\u5217\u51faNFS\u5ba2\u6237\u7aef\u548c\u670d\u52a1\u5668\u7684\u5de5\u4f5c\u72b6\u6001"
   },
   "ngrep": {
     "n": "ngrep",
     "p": "/ngrep",
-    "d": "方便的数据包匹配和显示工具"
+    "d": "\u65b9\u4fbf\u7684\u6570\u636e\u5305\u5339\u914d\u548c\u663e\u793a\u5de5\u5177"
   },
   "nice": {
     "n": "nice",
     "p": "/nice",
-    "d": "改变程序执行的优先权等级"
+    "d": "\u6539\u53d8\u7a0b\u5e8f\u6267\u884c\u7684\u4f18\u5148\u6743\u7b49\u7ea7"
   },
   "nisdomainname": {
     "n": "nisdomainname",
     "p": "/nisdomainname",
-    "d": "显示主机NIS的域名"
+    "d": "\u663e\u793a\u4e3b\u673aNIS\u7684\u57df\u540d"
   },
   "nl": {
     "n": "nl",
     "p": "/nl",
-    "d": "在Linux系统中计算文件内容行号"
+    "d": "\u5728Linux\u7cfb\u7edf\u4e2d\u8ba1\u7b97\u6587\u4ef6\u5185\u5bb9\u884c\u53f7"
   },
   "nm": {
     "n": "nm",
     "p": "/nm",
-    "d": "显示二进制目标文件的符号表"
+    "d": "\u663e\u793a\u4e8c\u8fdb\u5236\u76ee\u6807\u6587\u4ef6\u7684\u7b26\u53f7\u8868"
   },
   "nmap": {
     "n": "nmap",
     "p": "/nmap",
-    "d": "网络探测和安全审核"
+    "d": "\u7f51\u7edc\u63a2\u6d4b\u548c\u5b89\u5168\u5ba1\u6838"
   },
   "nmcli": {
     "n": "nmcli",
     "p": "/nmcli",
-    "d": "地址配置工具"
+    "d": "\u5730\u5740\u914d\u7f6e\u5de5\u5177"
   },
   "nohup": {
     "n": "nohup",
     "p": "/nohup",
     "category": "process management",
-    "d": "将程序以忽略挂起信号的方式运行起来"
+    "d": "\u5c06\u7a0b\u5e8f\u4ee5\u5ffd\u7565\u6302\u8d77\u4fe1\u53f7\u7684\u65b9\u5f0f\u8fd0\u884c\u8d77\u6765"
   },
   "nologin": {
     "n": "nologin",
     "p": "/nologin",
-    "d": "拒绝用户登录系统"
+    "d": "\u62d2\u7edd\u7528\u6237\u767b\u5f55\u7cfb\u7edf"
   },
   "nslookup": {
     "n": "nslookup",
     "p": "/nslookup",
-    "d": "查询域名DNS信息的工具"
+    "d": "\u67e5\u8be2\u57df\u540dDNS\u4fe1\u606f\u7684\u5de5\u5177"
   },
   "ntpdate": {
     "n": "ntpdate",
     "p": "/ntpdate",
-    "d": "使用网络计时协议（NTP）设置日期和时间"
+    "d": "\u4f7f\u7528\u7f51\u7edc\u8ba1\u65f6\u534f\u8bae\uff08NTP\uff09\u8bbe\u7f6e\u65e5\u671f\u548c\u65f6\u95f4"
   },
   "ntsysv": {
     "n": "ntsysv",
     "p": "/ntsysv",
-    "d": "集中管理系统的各种服务"
+    "d": "\u96c6\u4e2d\u7ba1\u7406\u7cfb\u7edf\u7684\u5404\u79cd\u670d\u52a1"
   },
   "objdump": {
     "n": "objdump",
     "p": "/objdump",
-    "d": "显示二进制文件信息"
+    "d": "\u663e\u793a\u4e8c\u8fdb\u5236\u6587\u4ef6\u4fe1\u606f"
   },
   "od": {
     "n": "od",
     "p": "/od",
-    "d": "输出文件的八进制、十六进制等格式编码的字节"
+    "d": "\u8f93\u51fa\u6587\u4ef6\u7684\u516b\u8fdb\u5236\u3001\u5341\u516d\u8fdb\u5236\u7b49\u683c\u5f0f\u7f16\u7801\u7684\u5b57\u8282"
   },
   "openssl": {
     "n": "openssl",
     "p": "/openssl",
-    "d": "强大的安全套接字层密码库"
+    "d": "\u5f3a\u5927\u7684\u5b89\u5168\u5957\u63a5\u5b57\u5c42\u5bc6\u7801\u5e93"
   },
   "parted": {
     "n": "parted",
     "p": "/parted",
-    "d": "磁盘分区和分区大小调整工具"
+    "d": "\u78c1\u76d8\u5206\u533a\u548c\u5206\u533a\u5927\u5c0f\u8c03\u6574\u5de5\u5177"
   },
   "partprobe": {
     "n": "partprobe",
     "p": "/partprobe",
-    "d": "不重启的情况下重读分区"
+    "d": "\u4e0d\u91cd\u542f\u7684\u60c5\u51b5\u4e0b\u91cd\u8bfb\u5206\u533a"
   },
   "passwd": {
     "n": "passwd",
     "p": "/passwd",
     "category": "users and groups",
-    "d": "用于让用户可以更改自己的密码"
+    "d": "\u7528\u4e8e\u8ba9\u7528\u6237\u53ef\u4ee5\u66f4\u6539\u81ea\u5df1\u7684\u5bc6\u7801"
   },
   "paste": {
     "n": "paste",
     "p": "/paste",
-    "d": "将多个文件按列队列合并"
+    "d": "\u5c06\u591a\u4e2a\u6587\u4ef6\u6309\u5217\u961f\u5217\u5408\u5e76"
   },
   "patch": {
     "n": "patch",
     "p": "/patch",
-    "d": "为开放源代码软件安装补丁程序"
+    "d": "\u4e3a\u5f00\u653e\u6e90\u4ee3\u7801\u8f6f\u4ef6\u5b89\u88c5\u8865\u4e01\u7a0b\u5e8f"
   },
   "pathchk": {
     "n": "pathchk",
     "p": "/pathchk",
-    "d": "检查文件中不可移植的部分"
+    "d": "\u68c0\u67e5\u6587\u4ef6\u4e2d\u4e0d\u53ef\u79fb\u690d\u7684\u90e8\u5206"
   },
   "perl": {
     "n": "perl",
     "p": "/perl",
     "category": "programming",
-    "d": "perl语言解释器"
+    "d": "perl\u8bed\u8a00\u89e3\u91ca\u5668"
   },
   "pfctl": {
     "n": "pfctl",
     "p": "/pfctl",
-    "d": "PF防火墙的配置命令"
+    "d": "PF\u9632\u706b\u5899\u7684\u914d\u7f6e\u547d\u4ee4"
   },
   "pgrep": {
     "n": "pgrep",
     "p": "/pgrep",
-    "d": "设置用户的认证信息，包括用户密码、密码过期时间等"
+    "d": "\u8bbe\u7f6e\u7528\u6237\u7684\u8ba4\u8bc1\u4fe1\u606f\uff0c\u5305\u62ec\u7528\u6237\u5bc6\u7801\u3001\u5bc6\u7801\u8fc7\u671f\u65f6\u95f4\u7b49"
   },
   "php": {
     "n": "php",
     "p": "/php",
     "category": "programming",
-    "d": "PHP语言的命令行接口"
+    "d": "PHP\u8bed\u8a00\u7684\u547d\u4ee4\u884c\u63a5\u53e3"
   },
   "pico": {
     "n": "pico",
     "p": "/pico",
     "category": "text editors",
-    "d": "功能强大全屏幕的文本编辑器"
+    "d": "\u529f\u80fd\u5f3a\u5927\u5168\u5c4f\u5e55\u7684\u6587\u672c\u7f16\u8f91\u5668"
   },
   "pidof": {
     "n": "pidof",
     "p": "/pidof",
-    "d": "查找指定名称的进程的进程号ID号"
+    "d": "\u67e5\u627e\u6307\u5b9a\u540d\u79f0\u7684\u8fdb\u7a0b\u7684\u8fdb\u7a0b\u53f7ID\u53f7"
   },
   "pigz": {
     "n": "pigz",
     "p": "/pigz",
-    "d": "可以用来解压缩文件，gzip的并行实现升级版。"
+    "d": "\u53ef\u4ee5\u7528\u6765\u89e3\u538b\u7f29\u6587\u4ef6\uff0cgzip\u7684\u5e76\u884c\u5b9e\u73b0\u5347\u7ea7\u7248\u3002"
   },
   "ping": {
     "n": "ping",
     "p": "/ping",
     "category": "network",
-    "d": "测试主机之间网络的连通性"
+    "d": "\u6d4b\u8bd5\u4e3b\u673a\u4e4b\u95f4\u7f51\u7edc\u7684\u8fde\u901a\u6027"
   },
   "pkill": {
     "n": "pkill",
     "p": "/pkill",
     "category": "process management",
-    "d": "可以按照进程名杀死进程"
+    "d": "\u53ef\u4ee5\u6309\u7167\u8fdb\u7a0b\u540d\u6740\u6b7b\u8fdb\u7a0b"
   },
   "pmap": {
     "n": "pmap",
     "p": "/pmap",
-    "d": "报告进程的内存映射关系"
+    "d": "\u62a5\u544a\u8fdb\u7a0b\u7684\u5185\u5b58\u6620\u5c04\u5173\u7cfb"
   },
   "popd": {
     "n": "popd",
     "p": "/popd",
-    "d": "用于删除目录栈中的记录"
+    "d": "\u7528\u4e8e\u5220\u9664\u76ee\u5f55\u6808\u4e2d\u7684\u8bb0\u5f55"
   },
   "poweroff": {
     "n": "poweroff",
     "p": "/poweroff",
-    "d": "关闭Linux系统，关闭记录会被写入到/var/log/wtmp日志文件中。"
+    "d": "\u5173\u95edLinux\u7cfb\u7edf\uff0c\u5173\u95ed\u8bb0\u5f55\u4f1a\u88ab\u5199\u5165\u5230/var/log/wtmp\u65e5\u5fd7\u6587\u4ef6\u4e2d\u3002"
   },
   "ppp-off": {
     "n": "ppp-off",
     "p": "/ppp-off",
-    "d": "关闭ppp连线"
+    "d": "\u5173\u95edppp\u8fde\u7ebf"
   },
   "pr": {
     "n": "pr",
     "p": "/pr",
-    "d": "将文本文件转换成适合打印的格式"
+    "d": "\u5c06\u6587\u672c\u6587\u4ef6\u8f6c\u6362\u6210\u9002\u5408\u6253\u5370\u7684\u683c\u5f0f"
   },
   "printf": {
     "n": "printf",
     "p": "/printf",
     "category": "shell scripting",
-    "d": "格式化并输出结果"
+    "d": "\u683c\u5f0f\u5316\u5e76\u8f93\u51fa\u7ed3\u679c"
   },
   "protoize": {
     "n": "protoize",
     "p": "/protoize",
-    "d": "GNU-C代码转换为ANSI-C代码"
+    "d": "GNU-C\u4ee3\u7801\u8f6c\u6362\u4e3aANSI-C\u4ee3\u7801"
   },
   "ps": {
     "n": "ps",
     "p": "/ps",
     "category": "process management",
-    "d": "报告当前系统的进程状态"
+    "d": "\u62a5\u544a\u5f53\u524d\u7cfb\u7edf\u7684\u8fdb\u7a0b\u72b6\u6001"
   },
   "pssh": {
     "n": "pssh",
     "p": "/pssh",
-    "d": "批量管理执行"
+    "d": "\u6279\u91cf\u7ba1\u7406\u6267\u884c"
   },
   "pstack": {
     "n": "pstack",
     "p": "/pstack",
     "category": "process management",
-    "d": "显示每个进程的栈跟踪"
+    "d": "\u663e\u793a\u6bcf\u4e2a\u8fdb\u7a0b\u7684\u6808\u8ddf\u8e2a"
   },
   "pstree": {
     "n": "pstree",
     "p": "/pstree",
     "category": "process management",
-    "d": "以树状图的方式展现进程之间的派生关系"
+    "d": "\u4ee5\u6811\u72b6\u56fe\u7684\u65b9\u5f0f\u5c55\u73b0\u8fdb\u7a0b\u4e4b\u95f4\u7684\u6d3e\u751f\u5173\u7cfb"
   },
   "pushd": {
     "n": "pushd",
     "p": "/pushd",
-    "d": "将目录加入命令堆叠中"
+    "d": "\u5c06\u76ee\u5f55\u52a0\u5165\u547d\u4ee4\u5806\u53e0\u4e2d"
   },
   "pv": {
     "n": "pv",
     "p": "/pv",
-    "d": "显示当前在命令行执行的命令的进度信息，管道查看器。"
+    "d": "\u663e\u793a\u5f53\u524d\u5728\u547d\u4ee4\u884c\u6267\u884c\u7684\u547d\u4ee4\u7684\u8fdb\u5ea6\u4fe1\u606f\uff0c\u7ba1\u9053\u67e5\u770b\u5668\u3002"
   },
   "pvchange": {
     "n": "pvchange",
     "p": "/pvchange",
-    "d": "修改物理卷属性"
+    "d": "\u4fee\u6539\u7269\u7406\u5377\u5c5e\u6027"
   },
   "pvck": {
     "n": "pvck",
     "p": "/pvck",
-    "d": "检测物理卷的LVM元数据的一致性"
+    "d": "\u68c0\u6d4b\u7269\u7406\u5377\u7684LVM\u5143\u6570\u636e\u7684\u4e00\u81f4\u6027"
   },
   "pvcreate": {
     "n": "pvcreate",
     "p": "/pvcreate",
-    "d": "将物理硬盘分区初始化为物理卷"
+    "d": "\u5c06\u7269\u7406\u786c\u76d8\u5206\u533a\u521d\u59cb\u5316\u4e3a\u7269\u7406\u5377"
   },
   "pvdisplay": {
     "n": "pvdisplay",
     "p": "/pvdisplay",
-    "d": "显示物理卷的属性"
+    "d": "\u663e\u793a\u7269\u7406\u5377\u7684\u5c5e\u6027"
   },
   "pvremove": {
     "n": "pvremove",
     "p": "/pvremove",
-    "d": "删除一个存在的物理卷"
+    "d": "\u5220\u9664\u4e00\u4e2a\u5b58\u5728\u7684\u7269\u7406\u5377"
   },
   "pvs": {
     "n": "pvs",
     "p": "/pvs",
-    "d": "输出物理卷信息报表"
+    "d": "\u8f93\u51fa\u7269\u7406\u5377\u4fe1\u606f\u62a5\u8868"
   },
   "pvscan": {
     "n": "pvscan",
     "p": "/pvscan",
-    "d": "扫描系统中所有硬盘的物理卷列表"
+    "d": "\u626b\u63cf\u7cfb\u7edf\u4e2d\u6240\u6709\u786c\u76d8\u7684\u7269\u7406\u5377\u5217\u8868"
   },
   "pwck": {
     "n": "pwck",
     "p": "/pwck",
-    "d": "用来验证系统认证文件内容和格式的完整性"
+    "d": "\u7528\u6765\u9a8c\u8bc1\u7cfb\u7edf\u8ba4\u8bc1\u6587\u4ef6\u5185\u5bb9\u548c\u683c\u5f0f\u7684\u5b8c\u6574\u6027"
   },
   "pwconv": {
     "n": "pwconv",
     "p": "/pwconv",
-    "d": "用来开启用户的投影密码"
+    "d": "\u7528\u6765\u5f00\u542f\u7528\u6237\u7684\u6295\u5f71\u5bc6\u7801"
   },
   "pwd": {
     "n": "pwd",
     "p": "/pwd",
     "category": "directories",
-    "d": "绝对路径方式显示用户当前工作目录"
+    "d": "\u7edd\u5bf9\u8def\u5f84\u65b9\u5f0f\u663e\u793a\u7528\u6237\u5f53\u524d\u5de5\u4f5c\u76ee\u5f55"
   },
   "pwunconv": {
     "n": "pwunconv",
     "p": "/pwunconv",
-    "d": "用来关闭用户的投影密码"
+    "d": "\u7528\u6765\u5173\u95ed\u7528\u6237\u7684\u6295\u5f71\u5bc6\u7801"
   },
   "quota": {
     "n": "quota",
     "p": "/quota",
-    "d": "显示磁盘已使用的空间与限制"
+    "d": "\u663e\u793a\u78c1\u76d8\u5df2\u4f7f\u7528\u7684\u7a7a\u95f4\u4e0e\u9650\u5236"
   },
   "quotacheck": {
     "n": "quotacheck",
     "p": "/quotacheck",
-    "d": "检查磁盘的使用空间与限制"
+    "d": "\u68c0\u67e5\u78c1\u76d8\u7684\u4f7f\u7528\u7a7a\u95f4\u4e0e\u9650\u5236"
   },
   "quotaoff": {
     "n": "quotaoff",
     "p": "/quotaoff",
-    "d": "关闭Linux内核中指定文件系统的磁盘配额功能"
+    "d": "\u5173\u95edLinux\u5185\u6838\u4e2d\u6307\u5b9a\u6587\u4ef6\u7cfb\u7edf\u7684\u78c1\u76d8\u914d\u989d\u529f\u80fd"
   },
   "quotaon": {
     "n": "quotaon",
     "p": "/quotaon",
-    "d": "激活Linux内核中指定文件系统的磁盘配额功能"
+    "d": "\u6fc0\u6d3bLinux\u5185\u6838\u4e2d\u6307\u5b9a\u6587\u4ef6\u7cfb\u7edf\u7684\u78c1\u76d8\u914d\u989d\u529f\u80fd"
   },
   "rcconf": {
     "n": "rcconf",
     "p": "/rcconf",
-    "d": "Debian Linux下的运行等级服务配置工具"
+    "d": "Debian Linux\u4e0b\u7684\u8fd0\u884c\u7b49\u7ea7\u670d\u52a1\u914d\u7f6e\u5de5\u5177"
   },
   "rcp": {
     "n": "rcp",
     "p": "/rcp",
-    "d": "使在两台Linux主机之间的文件复制操作更简单"
+    "d": "\u4f7f\u5728\u4e24\u53f0Linux\u4e3b\u673a\u4e4b\u95f4\u7684\u6587\u4ef6\u590d\u5236\u64cd\u4f5c\u66f4\u7b80\u5355"
   },
   "read": {
     "n": "read",
     "p": "/read",
     "category": "shell scripting",
-    "d": "从键盘读取变量值"
+    "d": "\u4ece\u952e\u76d8\u8bfb\u53d6\u53d8\u91cf\u503c"
   },
   "readelf": {
     "n": "readelf",
     "p": "/readelf",
-    "d": "用于显示elf格式文件的信息"
+    "d": "\u7528\u4e8e\u663e\u793aelf\u683c\u5f0f\u6587\u4ef6\u7684\u4fe1\u606f"
   },
   "readonly": {
     "n": "readonly",
     "p": "/readonly",
-    "d": "定义只读shell变量或函数"
+    "d": "\u5b9a\u4e49\u53ea\u8bfbshell\u53d8\u91cf\u6216\u51fd\u6570"
   },
   "reboot": {
     "n": "reboot",
     "p": "/reboot",
-    "d": "重新启动正在运行的Linux操作系统"
+    "d": "\u91cd\u65b0\u542f\u52a8\u6b63\u5728\u8fd0\u884c\u7684Linux\u64cd\u4f5c\u7cfb\u7edf"
   },
   "reject": {
     "n": "reject",
     "p": "/reject",
-    "d": "指示打印系统拒绝发往指定目标打印机的打印任务"
+    "d": "\u6307\u793a\u6253\u5370\u7cfb\u7edf\u62d2\u7edd\u53d1\u5f80\u6307\u5b9a\u76ee\u6807\u6253\u5370\u673a\u7684\u6253\u5370\u4efb\u52a1"
   },
   "rename": {
     "n": "rename",
     "p": "/rename",
-    "d": "用字符串替换的方式批量改变文件名"
+    "d": "\u7528\u5b57\u7b26\u4e32\u66ff\u6362\u7684\u65b9\u5f0f\u6279\u91cf\u6539\u53d8\u6587\u4ef6\u540d"
   },
   "renice": {
     "n": "renice",
     "p": "/renice",
-    "d": "修改正在运行的进程的调度优先级"
+    "d": "\u4fee\u6539\u6b63\u5728\u8fd0\u884c\u7684\u8fdb\u7a0b\u7684\u8c03\u5ea6\u4f18\u5148\u7ea7"
   },
   "repquota": {
     "n": "repquota",
     "p": "/repquota",
-    "d": "报表的格式输出磁盘空间限制的状态"
+    "d": "\u62a5\u8868\u7684\u683c\u5f0f\u8f93\u51fa\u78c1\u76d8\u7a7a\u95f4\u9650\u5236\u7684\u72b6\u6001"
   },
   "resize": {
     "n": "resize",
     "p": "/resize",
-    "d": "命令设置终端机视窗的大小。"
+    "d": "\u547d\u4ee4\u8bbe\u7f6e\u7ec8\u7aef\u673a\u89c6\u7a97\u7684\u5927\u5c0f\u3002"
   },
   "restore": {
     "n": "restore",
     "p": "/restore",
-    "d": "所进行的操作和dump指令相反"
+    "d": "\u6240\u8fdb\u884c\u7684\u64cd\u4f5c\u548cdump\u6307\u4ee4\u76f8\u53cd"
   },
   "restorecon": {
     "n": "restorecon",
     "p": "/restorecon",
-    "d": "恢复文件的安全上下文"
+    "d": "\u6062\u590d\u6587\u4ef6\u7684\u5b89\u5168\u4e0a\u4e0b\u6587"
   },
   "rev": {
     "n": "rev",
     "p": "/rev",
-    "d": "将文件内容以字符为单位反序输出"
+    "d": "\u5c06\u6587\u4ef6\u5185\u5bb9\u4ee5\u5b57\u7b26\u4e3a\u5355\u4f4d\u53cd\u5e8f\u8f93\u51fa"
   },
   "rexec": {
     "n": "rexec",
     "p": "/rexec",
-    "d": "运程执行Linux系统下命令 "
+    "d": "\u8fd0\u7a0b\u6267\u884cLinux\u7cfb\u7edf\u4e0b\u547d\u4ee4 "
   },
   "rlogin": {
     "n": "rlogin",
     "p": "/rlogin",
-    "d": "从当前终端登录到远程Linux主机"
+    "d": "\u4ece\u5f53\u524d\u7ec8\u7aef\u767b\u5f55\u5230\u8fdc\u7a0bLinux\u4e3b\u673a"
   },
   "rm": {
     "n": "rm",
     "p": "/rm",
     "category": "file operations",
-    "d": "用于删除给定的文件和目录"
+    "d": "\u7528\u4e8e\u5220\u9664\u7ed9\u5b9a\u7684\u6587\u4ef6\u548c\u76ee\u5f55"
   },
   "rmdir": {
     "n": "rmdir",
     "p": "/rmdir",
     "category": "directories",
-    "d": "用来删除空目录"
+    "d": "\u7528\u6765\u5220\u9664\u7a7a\u76ee\u5f55"
   },
   "rmmod": {
     "n": "rmmod",
     "p": "/rmmod",
-    "d": "从运行的内核中移除指定的内核模块"
+    "d": "\u4ece\u8fd0\u884c\u7684\u5185\u6838\u4e2d\u79fb\u9664\u6307\u5b9a\u7684\u5185\u6838\u6a21\u5757"
   },
   "route": {
     "n": "route",
     "p": "/route",
-    "d": "显示并设置Linux中静态路由表"
+    "d": "\u663e\u793a\u5e76\u8bbe\u7f6eLinux\u4e2d\u9759\u6001\u8def\u7531\u8868"
   },
   "rpm": {
     "n": "rpm",
     "p": "/rpm",
-    "d": "RPM软件包的管理工具"
+    "d": "RPM\u8f6f\u4ef6\u5305\u7684\u7ba1\u7406\u5de5\u5177"
   },
   "rpm2cpio": {
     "n": "rpm2cpio",
     "p": "/rpm2cpio",
-    "d": "将RPM软件包转换为cpio格式的文件"
+    "d": "\u5c06RPM\u8f6f\u4ef6\u5305\u8f6c\u6362\u4e3acpio\u683c\u5f0f\u7684\u6587\u4ef6"
   },
   "rpmbuild": {
     "n": "rpmbuild",
     "p": "/rpmbuild",
-    "d": "创建RPM的二进制软件包和源码软件包"
+    "d": "\u521b\u5efaRPM\u7684\u4e8c\u8fdb\u5236\u8f6f\u4ef6\u5305\u548c\u6e90\u7801\u8f6f\u4ef6\u5305"
   },
   "rpmdb": {
     "n": "rpmdb",
     "p": "/rpmdb",
-    "d": "初始化和重建RPM数据库"
+    "d": "\u521d\u59cb\u5316\u548c\u91cd\u5efaRPM\u6570\u636e\u5e93"
   },
   "rpmquery": {
     "n": "rpmquery",
     "p": "/rpmquery",
-    "d": "从RPM数据库中查询软件包信息"
+    "d": "\u4eceRPM\u6570\u636e\u5e93\u4e2d\u67e5\u8be2\u8f6f\u4ef6\u5305\u4fe1\u606f"
   },
   "rpmsign": {
     "n": "rpmsign",
     "p": "/rpmsign",
-    "d": "使用RPM软件包的签名管理工具"
+    "d": "\u4f7f\u7528RPM\u8f6f\u4ef6\u5305\u7684\u7b7e\u540d\u7ba1\u7406\u5de5\u5177"
   },
   "rpmverify": {
     "n": "rpmverify",
     "p": "/rpmverify",
-    "d": "验证已安装的RPM软件包的正确性"
+    "d": "\u9a8c\u8bc1\u5df2\u5b89\u88c5\u7684RPM\u8f6f\u4ef6\u5305\u7684\u6b63\u786e\u6027"
   },
   "rsh": {
     "n": "rsh",
     "p": "/rsh",
-    "d": "连接远程主机并执行命令"
+    "d": "\u8fde\u63a5\u8fdc\u7a0b\u4e3b\u673a\u5e76\u6267\u884c\u547d\u4ee4"
   },
   "rsync": {
     "n": "rsync",
     "p": "/rsync",
-    "d": "远程数据同步工具"
+    "d": "\u8fdc\u7a0b\u6570\u636e\u540c\u6b65\u5de5\u5177"
   },
   "runlevel": {
     "n": "runlevel",
     "p": "/runlevel",
-    "d": "打印当前Linux系统的运行等级"
+    "d": "\u6253\u5370\u5f53\u524dLinux\u7cfb\u7edf\u7684\u8fd0\u884c\u7b49\u7ea7"
   },
   "sar": {
     "n": "sar",
     "p": "/sar",
-    "d": "系统运行状态统计工具"
+    "d": "\u7cfb\u7edf\u8fd0\u884c\u72b6\u6001\u7edf\u8ba1\u5de5\u5177"
   },
   "scp": {
     "n": "scp",
     "p": "/scp",
     "category": "network",
-    "d": "加密的方式在本地主机和远程主机之间复制文件"
+    "d": "\u52a0\u5bc6\u7684\u65b9\u5f0f\u5728\u672c\u5730\u4e3b\u673a\u548c\u8fdc\u7a0b\u4e3b\u673a\u4e4b\u95f4\u590d\u5236\u6587\u4ef6"
   },
   "screen": {
     "n": "screen",
     "p": "/screen",
-    "d": "用于命令行终端切换"
+    "d": "\u7528\u4e8e\u547d\u4ee4\u884c\u7ec8\u7aef\u5207\u6362"
   },
   "sed": {
     "n": "sed",
     "p": "/sed",
     "category": "regular expressions",
-    "d": "功能强大的流式文本编辑器"
+    "d": "\u529f\u80fd\u5f3a\u5927\u7684\u6d41\u5f0f\u6587\u672c\u7f16\u8f91\u5668"
   },
   "seinfo": {
     "n": "seinfo",
     "p": "/seinfo",
-    "d": "查询SELinux的策略提供多少相关规则"
+    "d": "\u67e5\u8be2SELinux\u7684\u7b56\u7565\u63d0\u4f9b\u591a\u5c11\u76f8\u5173\u89c4\u5219"
   },
   "semanage": {
     "n": "semanage",
     "p": "/semanage",
-    "d": "默认目录的安全上下文查询与修改"
+    "d": "\u9ed8\u8ba4\u76ee\u5f55\u7684\u5b89\u5168\u4e0a\u4e0b\u6587\u67e5\u8be2\u4e0e\u4fee\u6539"
   },
   "sendmail": {
     "n": "sendmail",
     "p": "/sendmail",
-    "d": "著名电子邮件服务器"
+    "d": "\u8457\u540d\u7535\u5b50\u90ae\u4ef6\u670d\u52a1\u5668"
   },
   "seq": {
     "n": "seq",
     "p": "/seq",
     "category": "shell scripting",
-    "d": "以指定增量从首数开始打印数字到尾数"
+    "d": "\u4ee5\u6307\u5b9a\u589e\u91cf\u4ece\u9996\u6570\u5f00\u59cb\u6253\u5370\u6570\u5b57\u5230\u5c3e\u6570"
   },
   "service": {
     "n": "service",
     "p": "/service",
-    "d": "控制系统服务的实用工具"
+    "d": "\u63a7\u5236\u7cfb\u7edf\u670d\u52a1\u7684\u5b9e\u7528\u5de5\u5177"
   },
   "sesearch": {
     "n": "sesearch",
     "p": "/sesearch",
-    "d": "查询SELinux策略的规则详情"
+    "d": "\u67e5\u8be2SELinux\u7b56\u7565\u7684\u89c4\u5219\u8be6\u60c5"
   },
   "set": {
     "n": "set",
     "p": "/set",
     "category": "shell scripting",
-    "d": "显示或设置shell特性及shell变量"
+    "d": "\u663e\u793a\u6216\u8bbe\u7f6eshell\u7279\u6027\u53cashell\u53d8\u91cf"
   },
   "setfacl": {
     "n": "setfacl",
     "p": "/setfacl",
-    "d": "设置文件访问控制列表"
+    "d": "\u8bbe\u7f6e\u6587\u4ef6\u8bbf\u95ee\u63a7\u5236\u5217\u8868"
   },
   "setpci": {
     "n": "setpci",
     "p": "/setpci",
-    "d": "查询和配置PCI设备的使用工具"
+    "d": "\u67e5\u8be2\u548c\u914d\u7f6ePCI\u8bbe\u5907\u7684\u4f7f\u7528\u5de5\u5177"
   },
   "setsebool": {
     "n": "setsebool",
     "p": "/setsebool",
-    "d": "修改SElinux策略内各项规则的布尔值"
+    "d": "\u4fee\u6539SElinux\u7b56\u7565\u5185\u5404\u9879\u89c4\u5219\u7684\u5e03\u5c14\u503c"
   },
   "setsid": {
     "n": "setsid",
     "p": "/setsid",
-    "d": "在新的会话中运行程序。"
+    "d": "\u5728\u65b0\u7684\u4f1a\u8bdd\u4e2d\u8fd0\u884c\u7a0b\u5e8f\u3002"
   },
   "sftp-server": {
     "n": "sftp-server",
     "p": "/sftp-server",
     "category": "network",
-    "d": "sftp协议的服务器端程序"
+    "d": "sftp\u534f\u8bae\u7684\u670d\u52a1\u5668\u7aef\u7a0b\u5e8f"
   },
   "sftp": {
     "n": "sftp",
     "p": "/sftp",
     "category": "network",
-    "d": "交互式的文件传输程序"
+    "d": "\u4ea4\u4e92\u5f0f\u7684\u6587\u4ef6\u4f20\u8f93\u7a0b\u5e8f"
   },
   "sh": {
     "n": "sh",
     "p": "/sh",
     "category": "Shell programming",
-    "d": "shell命令解释器"
+    "d": "shell\u547d\u4ee4\u89e3\u91ca\u5668"
   },
   "shopt": {
     "n": "shopt",
     "p": "/shopt",
-    "d": "显示和设置shell操作选项"
+    "d": "\u663e\u793a\u548c\u8bbe\u7f6eshell\u64cd\u4f5c\u9009\u9879"
   },
   "showmount": {
     "n": "showmount",
     "p": "/showmount",
-    "d": "显示NFS服务器加载的信息"
+    "d": "\u663e\u793aNFS\u670d\u52a1\u5668\u52a0\u8f7d\u7684\u4fe1\u606f"
   },
   "shutdown": {
     "n": "shutdown",
     "p": "/shutdown",
-    "d": "用来执行系统关机的命令"
+    "d": "\u7528\u6765\u6267\u884c\u7cfb\u7edf\u5173\u673a\u7684\u547d\u4ee4"
   },
   "skill": {
     "n": "skill",
     "p": "/skill",
-    "d": "向选定的进程发送信号冻结进程"
+    "d": "\u5411\u9009\u5b9a\u7684\u8fdb\u7a0b\u53d1\u9001\u4fe1\u53f7\u51bb\u7ed3\u8fdb\u7a0b"
   },
   "slabtop": {
     "n": "slabtop",
     "p": "/slabtop",
-    "d": "实时显示内核slab内存缓存信息"
+    "d": "\u5b9e\u65f6\u663e\u793a\u5185\u6838slab\u5185\u5b58\u7f13\u5b58\u4fe1\u606f"
   },
   "sleep": {
     "n": "sleep",
     "p": "/sleep",
     "category": "miscellaneous",
-    "d": "将目前动作延迟一段时间"
+    "d": "\u5c06\u76ee\u524d\u52a8\u4f5c\u5ef6\u8fdf\u4e00\u6bb5\u65f6\u95f4"
   },
   "slocate": {
     "n": "slocate",
     "p": "/slocate",
-    "d": "命令查找文件或目录"
+    "d": "\u547d\u4ee4\u67e5\u627e\u6587\u4ef6\u6216\u76ee\u5f55"
   },
   "smbclient": {
     "n": "smbclient",
     "p": "/smbclient",
-    "d": "交互方式访问samba服务器"
+    "d": "\u4ea4\u4e92\u65b9\u5f0f\u8bbf\u95eesamba\u670d\u52a1\u5668"
   },
   "smbpasswd": {
     "n": "smbpasswd",
     "p": "/smbpasswd",
-    "d": "samba用户和密码管理工具"
+    "d": "samba\u7528\u6237\u548c\u5bc6\u7801\u7ba1\u7406\u5de5\u5177"
   },
   "sort": {
     "n": "sort",
     "p": "/sort",
     "category": "searching and sorting",
-    "d": "将文件进行排序并输出"
+    "d": "\u5c06\u6587\u4ef6\u8fdb\u884c\u6392\u5e8f\u5e76\u8f93\u51fa"
   },
   "source": {
     "n": "source",
     "p": "/source",
     "category": "shell scripting",
-    "d": "在当前Shell环境中从指定文件读取和执行命令，命令返回退出状态。"
+    "d": "\u5728\u5f53\u524dShell\u73af\u5883\u4e2d\u4ece\u6307\u5b9a\u6587\u4ef6\u8bfb\u53d6\u548c\u6267\u884c\u547d\u4ee4\uff0c\u547d\u4ee4\u8fd4\u56de\u9000\u51fa\u72b6\u6001\u3002"
   },
   "speedtest-cli": {
     "n": "speedtest-cli",
     "p": "/speedtest-cli",
-    "d": "命令行下测试服务器外网速度"
+    "d": "\u547d\u4ee4\u884c\u4e0b\u6d4b\u8bd5\u670d\u52a1\u5668\u5916\u7f51\u901f\u5ea6"
   },
   "spell": {
     "n": "spell",
     "p": "/spell",
-    "d": "对文件进行拼写检查"
+    "d": "\u5bf9\u6587\u4ef6\u8fdb\u884c\u62fc\u5199\u68c0\u67e5"
   },
   "split": {
     "n": "split",
     "p": "/split",
-    "d": "分割任意大小的文件"
+    "d": "\u5206\u5272\u4efb\u610f\u5927\u5c0f\u7684\u6587\u4ef6"
   },
   "squid": {
     "n": "squid",
     "p": "/squid",
-    "d": "squid服务器守护进程"
+    "d": "squid\u670d\u52a1\u5668\u5b88\u62a4\u8fdb\u7a0b"
   },
   "squidclient": {
     "n": "squidclient",
     "p": "/squidclient",
-    "d": "squid服务器的客户端管理工具"
+    "d": "squid\u670d\u52a1\u5668\u7684\u5ba2\u6237\u7aef\u7ba1\u7406\u5de5\u5177"
   },
   "ss": {
     "n": "ss",
     "p": "/ss",
-    "d": "比 netstat 好用的socket统计信息，iproute2 包附带的另一个工具，允许你查询 socket 的有关统计信息。"
+    "d": "\u6bd4 netstat \u597d\u7528\u7684socket\u7edf\u8ba1\u4fe1\u606f\uff0ciproute2 \u5305\u9644\u5e26\u7684\u53e6\u4e00\u4e2a\u5de5\u5177\uff0c\u5141\u8bb8\u4f60\u67e5\u8be2 socket \u7684\u6709\u5173\u7edf\u8ba1\u4fe1\u606f\u3002"
   },
   "ssh-add": {
     "n": "ssh-add",
     "p": "/ssh-add",
-    "d": "把专用密钥添加到ssh-agent的高速缓存中"
+    "d": "\u628a\u4e13\u7528\u5bc6\u94a5\u6dfb\u52a0\u5230ssh-agent\u7684\u9ad8\u901f\u7f13\u5b58\u4e2d"
   },
   "ssh-agent": {
     "n": "ssh-agent",
     "p": "/ssh-agent",
-    "d": "ssh密钥管理器"
+    "d": "ssh\u5bc6\u94a5\u7ba1\u7406\u5668"
   },
   "ssh-copy-id": {
     "n": "ssh-copy-id",
     "p": "/ssh-copy-id",
-    "d": "把本地的ssh公钥文件安装到远程主机对应的账户下"
+    "d": "\u628a\u672c\u5730\u7684ssh\u516c\u94a5\u6587\u4ef6\u5b89\u88c5\u5230\u8fdc\u7a0b\u4e3b\u673a\u5bf9\u5e94\u7684\u8d26\u6237\u4e0b"
   },
   "ssh-keygen": {
     "n": "ssh-keygen",
     "p": "/ssh-keygen",
-    "d": "为ssh生成、管理和转换认证密钥"
+    "d": "\u4e3assh\u751f\u6210\u3001\u7ba1\u7406\u548c\u8f6c\u6362\u8ba4\u8bc1\u5bc6\u94a5"
   },
   "ssh-keyscan": {
     "n": "ssh-keyscan",
     "p": "/ssh-keyscan",
-    "d": "收集主机公钥的使用工具"
+    "d": "\u6536\u96c6\u4e3b\u673a\u516c\u94a5\u7684\u4f7f\u7528\u5de5\u5177"
   },
   "ssh": {
     "n": "ssh",
     "p": "/ssh",
     "category": "network",
-    "d": "openssh套件中的客户端连接工具"
+    "d": "openssh\u5957\u4ef6\u4e2d\u7684\u5ba2\u6237\u7aef\u8fde\u63a5\u5de5\u5177"
   },
   "sshd": {
     "n": "sshd",
     "p": "/sshd",
     "category": "network",
-    "d": "openssh软件套件中的服务器守护进程"
+    "d": "openssh\u8f6f\u4ef6\u5957\u4ef6\u4e2d\u7684\u670d\u52a1\u5668\u5b88\u62a4\u8fdb\u7a0b"
   },
   "startx": {
     "n": "startx",
     "p": "/startx",
-    "d": "用来启动X Window"
+    "d": "\u7528\u6765\u542f\u52a8X Window"
   },
   "stat": {
     "n": "stat",
     "p": "/stat",
-    "d": "用于显示文件的状态信息"
+    "d": "\u7528\u4e8e\u663e\u793a\u6587\u4ef6\u7684\u72b6\u6001\u4fe1\u606f"
   },
   "strace": {
     "n": "strace",
     "p": "/strace",
-    "d": "跟踪系统调用和信号"
+    "d": "\u8ddf\u8e2a\u7cfb\u7edf\u8c03\u7528\u548c\u4fe1\u53f7"
   },
   "strings": {
     "n": "strings",
     "p": "/strings",
-    "d": "在对象文件或二进制文件中查找可打印的字符串"
+    "d": "\u5728\u5bf9\u8c61\u6587\u4ef6\u6216\u4e8c\u8fdb\u5236\u6587\u4ef6\u4e2d\u67e5\u627e\u53ef\u6253\u5370\u7684\u5b57\u7b26\u4e32"
   },
   "stty": {
     "n": "stty",
     "p": "/stty",
-    "d": "修改终端命令行的相关设置"
+    "d": "\u4fee\u6539\u7ec8\u7aef\u547d\u4ee4\u884c\u7684\u76f8\u5173\u8bbe\u7f6e"
   },
   "su": {
     "n": "su",
     "p": "/su",
     "category": "users and groups",
-    "d": "用于切换当前用户身份到其他用户身份"
+    "d": "\u7528\u4e8e\u5207\u6362\u5f53\u524d\u7528\u6237\u8eab\u4efd\u5230\u5176\u4ed6\u7528\u6237\u8eab\u4efd"
   },
   "sudo": {
     "n": "sudo",
     "p": "/sudo",
     "category": "users and groups",
-    "d": "以其他身份来执行命令"
+    "d": "\u4ee5\u5176\u4ed6\u8eab\u4efd\u6765\u6267\u884c\u547d\u4ee4"
   },
   "sum": {
     "n": "sum",
     "p": "/sum",
-    "d": "计算文件的校验码和显示块数"
+    "d": "\u8ba1\u7b97\u6587\u4ef6\u7684\u6821\u9a8c\u7801\u548c\u663e\u793a\u5757\u6570"
   },
   "supervisord": {
     "n": "supervisord",
     "p": "/supervisord",
-    "d": "配置后台服务/常驻进程的进程管家工具"
+    "d": "\u914d\u7f6e\u540e\u53f0\u670d\u52a1/\u5e38\u9a7b\u8fdb\u7a0b\u7684\u8fdb\u7a0b\u7ba1\u5bb6\u5de5\u5177"
   },
   "swapoff": {
     "n": "swapoff",
     "p": "/swapoff",
-    "d": "关闭指定的交换空间"
+    "d": "\u5173\u95ed\u6307\u5b9a\u7684\u4ea4\u6362\u7a7a\u95f4"
   },
   "swapon": {
     "n": "swapon",
     "p": "/swapon",
-    "d": "激活Linux系统中交换空间"
+    "d": "\u6fc0\u6d3bLinux\u7cfb\u7edf\u4e2d\u4ea4\u6362\u7a7a\u95f4"
   },
   "sync": {
     "n": "sync",
     "p": "/sync",
-    "d": "用于强制被改变的内容立刻写入磁盘"
+    "d": "\u7528\u4e8e\u5f3a\u5236\u88ab\u6539\u53d8\u7684\u5185\u5bb9\u7acb\u523b\u5199\u5165\u78c1\u76d8"
   },
   "sysctl": {
     "n": "sysctl",
     "p": "/sysctl",
-    "d": "时动态地修改内核的运行参数"
+    "d": "\u65f6\u52a8\u6001\u5730\u4fee\u6539\u5185\u6838\u7684\u8fd0\u884c\u53c2\u6570"
   },
   "syslog": {
     "n": "syslog",
     "p": "/syslog",
-    "d": "系统默认的日志守护进程"
+    "d": "\u7cfb\u7edf\u9ed8\u8ba4\u7684\u65e5\u5fd7\u5b88\u62a4\u8fdb\u7a0b"
   },
   "systemctl": {
     "n": "systemctl",
     "p": "/systemctl",
-    "d": "系统服务管理器指令"
+    "d": "\u7cfb\u7edf\u670d\u52a1\u7ba1\u7406\u5668\u6307\u4ee4"
   },
   "systool": {
     "n": "systool",
     "p": "/systool",
-    "d": "显示基于总线、类和拓扑显示系统中设备的信息"
+    "d": "\u663e\u793a\u57fa\u4e8e\u603b\u7ebf\u3001\u7c7b\u548c\u62d3\u6251\u663e\u793a\u7cfb\u7edf\u4e2d\u8bbe\u5907\u7684\u4fe1\u606f"
   },
   "tac": {
     "n": "tac",
     "p": "/tac",
-    "d": "将文件已行为单位的反序输出"
+    "d": "\u5c06\u6587\u4ef6\u5df2\u884c\u4e3a\u5355\u4f4d\u7684\u53cd\u5e8f\u8f93\u51fa"
   },
   "tail": {
     "n": "tail",
     "p": "/tail",
     "category": "file examination",
-    "d": "在屏幕上显示指定文件的末尾若干行"
+    "d": "\u5728\u5c4f\u5e55\u4e0a\u663e\u793a\u6307\u5b9a\u6587\u4ef6\u7684\u672b\u5c3e\u82e5\u5e72\u884c"
   },
   "tailf": {
     "n": "tailf",
     "p": "/tailf",
-    "d": "在屏幕上显示指定文件的末尾若干行内容，通常用于日志文件的跟踪输出。"
+    "d": "\u5728\u5c4f\u5e55\u4e0a\u663e\u793a\u6307\u5b9a\u6587\u4ef6\u7684\u672b\u5c3e\u82e5\u5e72\u884c\u5185\u5bb9\uff0c\u901a\u5e38\u7528\u4e8e\u65e5\u5fd7\u6587\u4ef6\u7684\u8ddf\u8e2a\u8f93\u51fa\u3002"
   },
   "talk": {
     "n": "talk",
     "p": "/talk",
-    "d": "让用户和其他用户聊天"
+    "d": "\u8ba9\u7528\u6237\u548c\u5176\u4ed6\u7528\u6237\u804a\u5929"
   },
   "tar": {
     "n": "tar",
     "p": "/tar",
     "category": "compression",
-    "d": "Linux下的归档使用工具，用来打包和备份。"
+    "d": "Linux\u4e0b\u7684\u5f52\u6863\u4f7f\u7528\u5de5\u5177\uff0c\u7528\u6765\u6253\u5305\u548c\u5907\u4efd\u3002"
   },
   "tcpdump": {
     "n": "tcpdump",
     "p": "/tcpdump",
-    "d": "一款sniffer工具，是Linux上的抓包工具，嗅探器。"
+    "d": "\u4e00\u6b3esniffer\u5de5\u5177\uff0c\u662fLinux\u4e0a\u7684\u6293\u5305\u5de5\u5177\uff0c\u55c5\u63a2\u5668\u3002"
   },
   "tcpreplay": {
     "n": "tcpreplay",
     "p": "/tcpreplay",
-    "d": "将PCAP包重新发送，用于性能或者功能测试"
+    "d": "\u5c06PCAP\u5305\u91cd\u65b0\u53d1\u9001\uff0c\u7528\u4e8e\u6027\u80fd\u6216\u8005\u529f\u80fd\u6d4b\u8bd5"
   },
   "tee": {
     "n": "tee",
     "p": "/tee",
-    "d": "把数据重定向到给定文件和屏幕上"
+    "d": "\u628a\u6570\u636e\u91cd\u5b9a\u5411\u5230\u7ed9\u5b9a\u6587\u4ef6\u548c\u5c4f\u5e55\u4e0a"
   },
   "telint": {
     "n": "telint",
     "p": "/telint",
-    "d": "切换当前正在运行系统的运行等级"
+    "d": "\u5207\u6362\u5f53\u524d\u6b63\u5728\u8fd0\u884c\u7cfb\u7edf\u7684\u8fd0\u884c\u7b49\u7ea7"
   },
   "telnet": {
     "n": "telnet",
     "p": "/telnet",
-    "d": "登录远程主机和管理(测试ip端口是否连通)"
+    "d": "\u767b\u5f55\u8fdc\u7a0b\u4e3b\u673a\u548c\u7ba1\u7406(\u6d4b\u8bd5ip\u7aef\u53e3\u662f\u5426\u8fde\u901a)"
   },
   "tempfile": {
     "n": "tempfile",
     "p": "/tempfile",
-    "d": "shell中给临时文件命名"
+    "d": "shell\u4e2d\u7ed9\u4e34\u65f6\u6587\u4ef6\u547d\u540d"
   },
   "test": {
     "n": "test",
     "p": "/test",
-    "d": "shell环境中测试条件表达式工具"
+    "d": "shell\u73af\u5883\u4e2d\u6d4b\u8bd5\u6761\u4ef6\u8868\u8fbe\u5f0f\u5de5\u5177"
   },
   "tftp": {
     "n": "tftp",
     "p": "/tftp",
     "category": "network",
-    "d": "在本机和tftp服务器之间使用TFTP协议传输文件"
+    "d": "\u5728\u672c\u673a\u548ctftp\u670d\u52a1\u5668\u4e4b\u95f4\u4f7f\u7528TFTP\u534f\u8bae\u4f20\u8f93\u6587\u4ef6"
   },
   "time": {
     "n": "time",
     "p": "/time",
     "category": "system information",
-    "d": "统计给定命令所花费的总时间"
+    "d": "\u7edf\u8ba1\u7ed9\u5b9a\u547d\u4ee4\u6240\u82b1\u8d39\u7684\u603b\u65f6\u95f4"
   },
   "tload": {
     "n": "tload",
     "p": "/tload",
-    "d": "显示系统负载状况"
+    "d": "\u663e\u793a\u7cfb\u7edf\u8d1f\u8f7d\u72b6\u51b5"
   },
   "tmux": {
     "n": "tmux",
     "p": "/tmux",
-    "d": "Tmux是一个优秀的终端复用软件，类似GNU Screen，但来自于OpenBSD，采用BSD授权。"
+    "d": "Tmux\u662f\u4e00\u4e2a\u4f18\u79c0\u7684\u7ec8\u7aef\u590d\u7528\u8f6f\u4ef6\uff0c\u7c7b\u4f3cGNU Screen\uff0c\u4f46\u6765\u81ea\u4e8eOpenBSD\uff0c\u91c7\u7528BSD\u6388\u6743\u3002"
   },
   "top": {
     "n": "top",
     "p": "/top",
     "category": "process management",
-    "d": "显示或管理执行中的程序"
+    "d": "\u663e\u793a\u6216\u7ba1\u7406\u6267\u884c\u4e2d\u7684\u7a0b\u5e8f"
   },
   "touch": {
     "n": "touch",
     "p": "/touch",
     "category": "file operations",
-    "d": "创建新的空文件"
+    "d": "\u521b\u5efa\u65b0\u7684\u7a7a\u6587\u4ef6"
   },
   "tput": {
     "n": "tput",
     "p": "/tput",
-    "d": "通过terminfo数据库对终端会话进行初始化和操作"
+    "d": "\u901a\u8fc7terminfo\u6570\u636e\u5e93\u5bf9\u7ec8\u7aef\u4f1a\u8bdd\u8fdb\u884c\u521d\u59cb\u5316\u548c\u64cd\u4f5c"
   },
   "tr": {
     "n": "tr",
     "p": "/tr",
     "category": "Text processing",
-    "d": "将字符进行替换压缩和删除"
+    "d": "\u5c06\u5b57\u7b26\u8fdb\u884c\u66ff\u6362\u538b\u7f29\u548c\u5220\u9664"
   },
   "tracepath": {
     "n": "tracepath",
     "p": "/tracepath",
-    "d": "追踪目的主机经过的路由信息"
+    "d": "\u8ffd\u8e2a\u76ee\u7684\u4e3b\u673a\u7ecf\u8fc7\u7684\u8def\u7531\u4fe1\u606f"
   },
   "traceroute": {
     "n": "traceroute",
     "p": "/traceroute",
-    "d": "显示数据包到主机间的路径"
+    "d": "\u663e\u793a\u6570\u636e\u5305\u5230\u4e3b\u673a\u95f4\u7684\u8def\u5f84"
   },
   "trap": {
     "n": "trap",
     "p": "/trap",
     "category": "process management",
-    "d": "指定在接收到信号后将要采取的动作"
+    "d": "\u6307\u5b9a\u5728\u63a5\u6536\u5230\u4fe1\u53f7\u540e\u5c06\u8981\u91c7\u53d6\u7684\u52a8\u4f5c"
   },
   "tree": {
     "n": "tree",
     "p": "/tree",
-    "d": "树状图列出目录的内容"
+    "d": "\u6811\u72b6\u56fe\u5217\u51fa\u76ee\u5f55\u7684\u5185\u5bb9"
   },
   "tty": {
     "n": "tty",
     "p": "/tty",
-    "d": "显示连接到当前标准输入的终端设备文件名。"
+    "d": "\u663e\u793a\u8fde\u63a5\u5230\u5f53\u524d\u6807\u51c6\u8f93\u5165\u7684\u7ec8\u7aef\u8bbe\u5907\u6587\u4ef6\u540d\u3002"
   },
   "type": {
     "n": "type",
     "p": "/type",
-    "d": "显示指定命令的类型"
+    "d": "\u663e\u793a\u6307\u5b9a\u547d\u4ee4\u7684\u7c7b\u578b"
   },
   "ulimit": {
     "n": "ulimit",
     "p": "/ulimit",
     "category": "miscellaneous",
-    "d": "控制shell程序的资源"
+    "d": "\u63a7\u5236shell\u7a0b\u5e8f\u7684\u8d44\u6e90"
   },
   "umask": {
     "n": "umask",
     "p": "/umask",
     "category": "file permissions",
-    "d": "用来设置限制新建文件权限的掩码"
+    "d": "\u7528\u6765\u8bbe\u7f6e\u9650\u5236\u65b0\u5efa\u6587\u4ef6\u6743\u9650\u7684\u63a9\u7801"
   },
   "umount": {
     "n": "umount",
     "p": "/umount",
-    "d": "用于卸载已经加载的文件系统"
+    "d": "\u7528\u4e8e\u5378\u8f7d\u5df2\u7ecf\u52a0\u8f7d\u7684\u6587\u4ef6\u7cfb\u7edf"
   },
   "unalias": {
     "n": "unalias",
     "p": "/unalias",
     "category": "basic shell",
-    "d": "删除由alias设置的别名"
+    "d": "\u5220\u9664\u7531alias\u8bbe\u7f6e\u7684\u522b\u540d"
   },
   "uname": {
     "n": "uname",
     "p": "/uname",
     "category": "system information",
-    "d": "显示Linux系统信息"
+    "d": "\u663e\u793aLinux\u7cfb\u7edf\u4fe1\u606f"
   },
   "unarj": {
     "n": "unarj",
     "p": "/unarj",
-    "d": "解压缩由arj命令创建的压缩包"
+    "d": "\u89e3\u538b\u7f29\u7531arj\u547d\u4ee4\u521b\u5efa\u7684\u538b\u7f29\u5305"
   },
   "uncompress": {
     "n": "uncompress",
     "p": "/uncompress",
-    "d": "用来解压.Z文件"
+    "d": "\u7528\u6765\u89e3\u538b.Z\u6587\u4ef6"
   },
   "unexpand": {
     "n": "unexpand",
     "p": "/unexpand",
-    "d": "将文件的空白字符转换为制表符"
+    "d": "\u5c06\u6587\u4ef6\u7684\u7a7a\u767d\u5b57\u7b26\u8f6c\u6362\u4e3a\u5236\u8868\u7b26"
   },
   "uniq": {
     "n": "uniq",
     "p": "/uniq",
     "category": "searching and sorting",
-    "d": "报告或忽略文件中的重复行"
+    "d": "\u62a5\u544a\u6216\u5ffd\u7565\u6587\u4ef6\u4e2d\u7684\u91cd\u590d\u884c"
   },
   "unlink": {
     "n": "unlink",
     "p": "/unlink",
-    "d": "系统调用函数unlink去删除指定的文件"
+    "d": "\u7cfb\u7edf\u8c03\u7528\u51fd\u6570unlink\u53bb\u5220\u9664\u6307\u5b9a\u7684\u6587\u4ef6"
   },
   "unprotoize": {
     "n": "unprotoize",
     "p": "/unprotoize",
-    "d": "删除C语言源代码文件中的函数原型"
+    "d": "\u5220\u9664C\u8bed\u8a00\u6e90\u4ee3\u7801\u6587\u4ef6\u4e2d\u7684\u51fd\u6570\u539f\u578b"
   },
   "unset": {
     "n": "unset",
     "p": "/unset",
     "category": "shell scripting",
-    "d": "删除指定的shell变量或函数"
+    "d": "\u5220\u9664\u6307\u5b9a\u7684shell\u53d8\u91cf\u6216\u51fd\u6570"
   },
   "unzip": {
     "n": "unzip",
     "p": "/unzip",
     "category": "compression",
-    "d": "用于解压缩由zip命令压缩的压缩包"
+    "d": "\u7528\u4e8e\u89e3\u538b\u7f29\u7531zip\u547d\u4ee4\u538b\u7f29\u7684\u538b\u7f29\u5305"
   },
   "updatedb": {
     "n": "updatedb",
     "p": "/updatedb",
-    "d": "创建或更新slocate命令所必需的数据库文件"
+    "d": "\u521b\u5efa\u6216\u66f4\u65b0slocate\u547d\u4ee4\u6240\u5fc5\u9700\u7684\u6570\u636e\u5e93\u6587\u4ef6"
   },
   "uptime": {
     "n": "uptime",
     "p": "/uptime",
-    "d": "查看Linux系统负载信息"
+    "d": "\u67e5\u770bLinux\u7cfb\u7edf\u8d1f\u8f7d\u4fe1\u606f"
   },
   "useradd": {
     "n": "useradd",
     "p": "/useradd",
-    "d": "创建的新的系统用户"
+    "d": "\u521b\u5efa\u7684\u65b0\u7684\u7cfb\u7edf\u7528\u6237"
   },
   "userdel": {
     "n": "userdel",
     "p": "/userdel",
-    "d": "用于删除给定的用户以及与用户相关的文件"
+    "d": "\u7528\u4e8e\u5220\u9664\u7ed9\u5b9a\u7684\u7528\u6237\u4ee5\u53ca\u4e0e\u7528\u6237\u76f8\u5173\u7684\u6587\u4ef6"
   },
   "usermod": {
     "n": "usermod",
     "p": "/usermod",
-    "d": "用于修改用户的基本信息"
+    "d": "\u7528\u4e8e\u4fee\u6539\u7528\u6237\u7684\u57fa\u672c\u4fe1\u606f"
   },
   "usernetctl": {
     "n": "usernetctl",
     "p": "/usernetctl",
-    "d": "被允许时操作指定的网络接口"
+    "d": "\u88ab\u5141\u8bb8\u65f6\u64cd\u4f5c\u6307\u5b9a\u7684\u7f51\u7edc\u63a5\u53e3"
   },
   "users": {
     "n": "users",
     "p": "/users",
-    "d": "显示当前登录系统的所有用户"
+    "d": "\u663e\u793a\u5f53\u524d\u767b\u5f55\u7cfb\u7edf\u7684\u6240\u6709\u7528\u6237"
   },
   "uucico": {
     "n": "uucico",
     "p": "/uucico",
-    "d": "UUCP文件传输服务程序。"
+    "d": "UUCP\u6587\u4ef6\u4f20\u8f93\u670d\u52a1\u7a0b\u5e8f\u3002"
   },
   "uupick": {
     "n": "uupick",
     "p": "/uupick",
-    "d": "命令处理传送进来的文件。"
+    "d": "\u547d\u4ee4\u5904\u7406\u4f20\u9001\u8fdb\u6765\u7684\u6587\u4ef6\u3002"
   },
   "vdfuse": {
     "n": "vdfuse",
     "p": "/vdfuse",
-    "d": "VirtualBox软件挂载VDI分区文件工具"
+    "d": "VirtualBox\u8f6f\u4ef6\u6302\u8f7dVDI\u5206\u533a\u6587\u4ef6\u5de5\u5177"
   },
   "vgchange": {
     "n": "vgchange",
     "p": "/vgchange",
-    "d": "修改卷组属性"
+    "d": "\u4fee\u6539\u5377\u7ec4\u5c5e\u6027"
   },
   "vgconvert": {
     "n": "vgconvert",
     "p": "/vgconvert",
-    "d": "转换卷组元数据格式"
+    "d": "\u8f6c\u6362\u5377\u7ec4\u5143\u6570\u636e\u683c\u5f0f"
   },
   "vgcreate": {
     "n": "vgcreate",
     "p": "/vgcreate",
-    "d": "用于创建LVM卷组"
+    "d": "\u7528\u4e8e\u521b\u5efaLVM\u5377\u7ec4"
   },
   "vgdisplay": {
     "n": "vgdisplay",
     "p": "/vgdisplay",
-    "d": "显示LVM卷组的信息"
+    "d": "\u663e\u793aLVM\u5377\u7ec4\u7684\u4fe1\u606f"
   },
   "vgextend": {
     "n": "vgextend",
     "p": "/vgextend",
-    "d": "向卷组中添加物理卷"
+    "d": "\u5411\u5377\u7ec4\u4e2d\u6dfb\u52a0\u7269\u7406\u5377"
   },
   "vgreduce": {
     "n": "vgreduce",
     "p": "/vgreduce",
-    "d": "从卷组中删除物理卷"
+    "d": "\u4ece\u5377\u7ec4\u4e2d\u5220\u9664\u7269\u7406\u5377"
   },
   "vgremove": {
     "n": "vgremove",
     "p": "/vgremove",
-    "d": "用于用户删除LVM卷组"
+    "d": "\u7528\u4e8e\u7528\u6237\u5220\u9664LVM\u5377\u7ec4"
   },
   "vgrename": {
     "n": "vgrename",
     "p": "/vgrename",
-    "d": "使用vgrename命令可以重命名卷组的名称。"
+    "d": "\u4f7f\u7528vgrename\u547d\u4ee4\u53ef\u4ee5\u91cd\u547d\u540d\u5377\u7ec4\u7684\u540d\u79f0\u3002"
   },
   "vgscan": {
     "n": "vgscan",
     "p": "/vgscan",
-    "d": "扫描并显示系统中的卷组"
+    "d": "\u626b\u63cf\u5e76\u663e\u793a\u7cfb\u7edf\u4e2d\u7684\u5377\u7ec4"
   },
   "vi": {
     "n": "vi",
     "p": "/vi",
     "category": "text editors",
-    "d": "功能强大的纯文本编辑器"
+    "d": "\u529f\u80fd\u5f3a\u5927\u7684\u7eaf\u6587\u672c\u7f16\u8f91\u5668"
   },
   "vmstat": {
     "n": "vmstat",
     "p": "/vmstat",
-    "d": "显示虚拟内存状态"
+    "d": "\u663e\u793a\u865a\u62df\u5185\u5b58\u72b6\u6001"
   },
   "volname": {
     "n": "volname",
     "p": "/volname",
-    "d": "显示指定的ISO-9660格式的设备的卷名称"
+    "d": "\u663e\u793a\u6307\u5b9a\u7684ISO-9660\u683c\u5f0f\u7684\u8bbe\u5907\u7684\u5377\u540d\u79f0"
   },
   "w": {
     "n": "w",
     "p": "/w",
     "category": "multi-user environments",
-    "d": "显示目前登入系统的用户信息"
+    "d": "\u663e\u793a\u76ee\u524d\u767b\u5165\u7cfb\u7edf\u7684\u7528\u6237\u4fe1\u606f"
   },
   "wait": {
     "n": "wait",
     "p": "/wait",
-    "d": "等待进程执行完后返回"
+    "d": "\u7b49\u5f85\u8fdb\u7a0b\u6267\u884c\u5b8c\u540e\u8fd4\u56de"
   },
   "wall": {
     "n": "wall",
     "p": "/wall",
     "category": "multi-user environments",
-    "d": "向系统当前所有打开的终端上输出信息"
+    "d": "\u5411\u7cfb\u7edf\u5f53\u524d\u6240\u6709\u6253\u5f00\u7684\u7ec8\u7aef\u4e0a\u8f93\u51fa\u4fe1\u606f"
   },
   "watch": {
     "n": "watch",
     "p": "/watch",
-    "d": "可以将命令的输出结果输出到标准输出设备，多用于周期性执行命令/定时执行命令"
+    "d": "\u53ef\u4ee5\u5c06\u547d\u4ee4\u7684\u8f93\u51fa\u7ed3\u679c\u8f93\u51fa\u5230\u6807\u51c6\u8f93\u51fa\u8bbe\u5907\uff0c\u591a\u7528\u4e8e\u5468\u671f\u6027\u6267\u884c\u547d\u4ee4/\u5b9a\u65f6\u6267\u884c\u547d\u4ee4"
   },
   "wc": {
     "n": "wc",
     "p": "/wc",
     "category": "file examination",
-    "d": "统计文件的字节数、字数、行数"
+    "d": "\u7edf\u8ba1\u6587\u4ef6\u7684\u5b57\u8282\u6570\u3001\u5b57\u6570\u3001\u884c\u6570"
   },
   "wget": {
     "n": "wget",
     "p": "/wget",
     "category": "network",
-    "d": "Linux系统下载文件工具"
+    "d": "Linux\u7cfb\u7edf\u4e0b\u8f7d\u6587\u4ef6\u5de5\u5177"
   },
   "whatis": {
     "n": "whatis",
     "p": "/whatis",
-    "d": "查询一个命令执行什么功能"
+    "d": "\u67e5\u8be2\u4e00\u4e2a\u547d\u4ee4\u6267\u884c\u4ec0\u4e48\u529f\u80fd"
   },
   "whereis": {
     "n": "whereis",
     "p": "/whereis",
-    "d": "查找二进制程序、代码等相关文件路径"
+    "d": "\u67e5\u627e\u4e8c\u8fdb\u5236\u7a0b\u5e8f\u3001\u4ee3\u7801\u7b49\u76f8\u5173\u6587\u4ef6\u8def\u5f84"
   },
   "which": {
     "n": "which",
     "p": "/which",
     "category": "searching and sorting",
-    "d": "查找并显示给定命令的绝对路径"
+    "d": "\u67e5\u627e\u5e76\u663e\u793a\u7ed9\u5b9a\u547d\u4ee4\u7684\u7edd\u5bf9\u8def\u5f84"
   },
   "who": {
     "n": "who",
     "p": "/who",
-    "d": "显示目前登录系统的用户信息"
+    "d": "\u663e\u793a\u76ee\u524d\u767b\u5f55\u7cfb\u7edf\u7684\u7528\u6237\u4fe1\u606f"
   },
   "whoami": {
     "n": "whoami",
     "p": "/whoami",
     "category": "users and groups",
-    "d": "打印当前有效的用户名称"
+    "d": "\u6253\u5370\u5f53\u524d\u6709\u6548\u7684\u7528\u6237\u540d\u79f0"
   },
   "write": {
     "n": "write",
     "p": "/write",
     "category": "multi-user environments",
-    "d": "向指定登录用户终端上发送信息"
+    "d": "\u5411\u6307\u5b9a\u767b\u5f55\u7528\u6237\u7ec8\u7aef\u4e0a\u53d1\u9001\u4fe1\u606f"
   },
   "xargs": {
     "n": "xargs",
     "p": "/xargs",
     "category": "searching and sorting",
-    "d": "给其他命令传递参数的一个过滤器"
+    "d": "\u7ed9\u5176\u4ed6\u547d\u4ee4\u4f20\u9012\u53c2\u6570\u7684\u4e00\u4e2a\u8fc7\u6ee4\u5668"
   },
   "xauth": {
     "n": "xauth",
     "p": "/xauth",
-    "d": "显示和编辑被用于连接X服务器的认证信息"
+    "d": "\u663e\u793a\u548c\u7f16\u8f91\u88ab\u7528\u4e8e\u8fde\u63a5X\u670d\u52a1\u5668\u7684\u8ba4\u8bc1\u4fe1\u606f"
   },
   "xclip": {
     "n": "xclip",
     "p": "/xclip",
-    "d": "管理 X 粘贴板"
+    "d": "\u7ba1\u7406 X \u7c98\u8d34\u677f"
   },
   "xhost": {
     "n": "xhost",
     "p": "/xhost",
-    "d": "制哪些X客户端能够在X服务器上显示"
+    "d": "\u5236\u54ea\u4e9bX\u5ba2\u6237\u7aef\u80fd\u591f\u5728X\u670d\u52a1\u5668\u4e0a\u663e\u793a"
   },
   "xinit": {
     "n": "xinit",
     "p": "/xinit",
-    "d": "是Linux下X-Window系统的初始化程序"
+    "d": "\u662fLinux\u4e0bX-Window\u7cfb\u7edf\u7684\u521d\u59cb\u5316\u7a0b\u5e8f"
   },
   "xlsatoms": {
     "n": "xlsatoms",
     "p": "/xlsatoms",
-    "d": "列出X服务器内部所有定义的原子成分"
+    "d": "\u5217\u51faX\u670d\u52a1\u5668\u5185\u90e8\u6240\u6709\u5b9a\u4e49\u7684\u539f\u5b50\u6210\u5206"
   },
   "xlsclients": {
     "n": "xlsclients",
     "p": "/xlsclients",
-    "d": "列出显示器中的客户端应用程序"
+    "d": "\u5217\u51fa\u663e\u793a\u5668\u4e2d\u7684\u5ba2\u6237\u7aef\u5e94\u7528\u7a0b\u5e8f"
   },
   "xlsfonts": {
     "n": "xlsfonts",
     "p": "/xlsfonts",
-    "d": "列出X Server使用的字体"
+    "d": "\u5217\u51faX Server\u4f7f\u7528\u7684\u5b57\u4f53"
   },
   "xset": {
     "n": "xset",
     "p": "/xset",
-    "d": "设置X-Window系统中的用户爱好的实用工具"
+    "d": "\u8bbe\u7f6eX-Window\u7cfb\u7edf\u4e2d\u7684\u7528\u6237\u7231\u597d\u7684\u5b9e\u7528\u5de5\u5177"
   },
   "xz": {
     "n": "xz",
     "p": "/xz",
-    "d": "POSIX 平台开发具有高压缩率的工具。"
+    "d": "POSIX \u5e73\u53f0\u5f00\u53d1\u5177\u6709\u9ad8\u538b\u7f29\u7387\u7684\u5de5\u5177\u3002"
   },
   "yes": {
     "n": "yes",
     "p": "/yes",
-    "d": "重复打印指定字符串"
+    "d": "\u91cd\u590d\u6253\u5370\u6307\u5b9a\u5b57\u7b26\u4e32"
   },
   "ypdomainname": {
     "n": "ypdomainname",
     "p": "/ypdomainname",
-    "d": "显示主机的NIS的域名"
+    "d": "\u663e\u793a\u4e3b\u673a\u7684NIS\u7684\u57df\u540d"
   },
   "yum": {
     "n": "yum",
     "p": "/yum",
-    "d": "基于RPM的软件包管理器"
+    "d": "\u57fa\u4e8eRPM\u7684\u8f6f\u4ef6\u5305\u7ba1\u7406\u5668"
   },
   "zcat": {
     "n": "zcat",
     "p": "/zcat",
-    "d": "显示压缩包中文件的内容"
+    "d": "\u663e\u793a\u538b\u7f29\u5305\u4e2d\u6587\u4ef6\u7684\u5185\u5bb9"
   },
   "zfore": {
     "n": "zfore",
     "p": "/zfore",
-    "d": "强制为gzip格式的压缩文件添加.gz后缀"
+    "d": "\u5f3a\u5236\u4e3agzip\u683c\u5f0f\u7684\u538b\u7f29\u6587\u4ef6\u6dfb\u52a0.gz\u540e\u7f00"
   },
   "zip": {
     "n": "zip",
     "p": "/zip",
     "category": "compression",
-    "d": "可以用来解压缩文件"
+    "d": "\u53ef\u4ee5\u7528\u6765\u89e3\u538b\u7f29\u6587\u4ef6"
   },
   "zipinfo": {
     "n": "zipinfo",
     "p": "/zipinfo",
-    "d": "用来列出压缩文件信息"
+    "d": "\u7528\u6765\u5217\u51fa\u538b\u7f29\u6587\u4ef6\u4fe1\u606f"
   },
   "zipsplit": {
     "n": "zipsplit",
     "p": "/zipsplit",
-    "d": "将较大的zip压缩包分割成各个较小的压缩包"
+    "d": "\u5c06\u8f83\u5927\u7684zip\u538b\u7f29\u5305\u5206\u5272\u6210\u5404\u4e2a\u8f83\u5c0f\u7684\u538b\u7f29\u5305"
   },
   "znew": {
     "n": "znew",
     "p": "/znew",
-    "d": "将.Z压缩包重新转化为gzip命令压缩的.gz压缩包"
+    "d": "\u5c06.Z\u538b\u7f29\u5305\u91cd\u65b0\u8f6c\u5316\u4e3agzip\u547d\u4ee4\u538b\u7f29\u7684.gz\u538b\u7f29\u5305"
+  },
+  "doslinux": {
+    "n": "doslinux"
+  },
+  "synk": {
+    "n": "synk"
+  },
+  "AppleFileServer": {
+    "n": "AppleFileServer"
+  },
+  "tesoiis": {
+    "n": "tesoiis"
+  },
+  "hestra": {
+    "n": "hestra"
+  },
+  "mmsudos": {
+    "n": "mmsudos"
+  },
+  "dosfrontpage": {
+    "n": "dosfrontpage"
+  },
+  "GET": {
+    "n": "GET"
+  },
+  "stealth": {
+    "n": "stealth"
+  },
+  "bonk": {
+    "n": "bonk"
+  },
+  "latierra": {
+    "n": "latierra"
+  },
+  "FullAttack": {
+    "n": "FullAttack"
+  },
+  "fetch": {
+    "n": "fetch"
+  },
+  "downloadIfNeed": {
+    "n": "downloadIfNeed"
+  },
+  "misfrag": {
+    "n": "misfrag"
+  },
+  "kox": {
+    "n": "kox"
+  },
+  "kkill": {
+    "n": "kkill"
+  },
+  "dopasswd": {
+    "n": "dopasswd"
+  },
+  "opentear": {
+    "n": "opentear"
+  },
+  "overdrop": {
+    "n": "overdrop"
+  },
+  "pingtest": {
+    "n": "pingtest"
+  },
+  "ruc": {
+    "n": "ruc"
+  },
+  "jolt": {
+    "n": "jolt"
+  },
+  "open": {
+    "n": "open"
+  },
+  "winnuke": {
+    "n": "winnuke"
+  },
+  "pimp": {
+    "n": "pimp"
+  },
+  "rpk": {
+    "n": "rpk"
+  },
+  "portchg": {
+    "n": "portchg"
+  },
+  "sshpass": {
+    "n": "sshpass"
+  },
+  "cc": {
+    "n": "cc"
+  },
+  "raped": {
+    "n": "raped"
+  },
+  "sw_vers": {
+    "n": "sw_vers"
+  },
+  "md": {
+    "n": "md"
+  },
+  "locktcp": {
+    "n": "locktcp"
+  },
+  "udpdata": {
+    "n": "udpdata"
+  },
+  "busybox": {
+    "n": "busybox"
+  },
+  "ca": {
+    "n": "ca"
+  },
+  "comatose": {
+    "n": "comatose"
+  },
+  "nestea": {
+    "n": "nestea"
+  },
+  "mutilate": {
+    "n": "mutilate"
+  },
+  "dosprox": {
+    "n": "dosprox"
+  },
+  "synful": {
+    "n": "synful"
+  },
+  "errx": {
+    "n": "errx"
+  },
+  "WinAttack": {
+    "n": "WinAttack"
+  },
+  "chflags": {
+    "n": "chflags"
+  },
+  "run_proc": {
+    "n": "run_proc"
+  },
+  "rootit": {
+    "n": "rootit"
+  },
+  "rcon": {
+    "n": "rcon"
+  },
+  "downloadyam": {
+    "n": "downloadyam"
+  },
+  "tp": {
+    "n": "tp"
+  },
+  "niutil": {
+    "n": "niutil"
+  },
+  "flushot": {
+    "n": "flushot"
+  },
+  "socklist": {
+    "n": "socklist"
+  },
+  "syndropnone": {
+    "n": "syndropnone"
+  },
+  "stuffit": {
+    "n": "stuffit"
+  },
+  "dobin": {
+    "n": "dobin"
+  },
+  "optionlist": {
+    "n": "optionlist"
+  },
+  "udpflood": {
+    "n": "udpflood"
+  },
+  "orgasm": {
+    "n": "orgasm"
+  },
+  "readlink": {
+    "n": "readlink"
+  },
+  "duy": {
+    "n": "duy"
+  },
+  "smack": {
+    "n": "smack"
+  },
+  "enable_ssh": {
+    "n": "enable_ssh"
+  },
+  "dropcheck": {
+    "n": "dropcheck"
+  },
+  "runPnscan": {
+    "n": "runPnscan"
+  },
+  "wtmp": {
+    "n": "wtmp"
+  },
+  "hell": {
+    "n": "hell"
+  },
+  "kills": {
+    "n": "kills"
+  },
+  "ircdkill": {
+    "n": "ircdkill"
+  },
+  "flatline": {
+    "n": "flatline"
+  },
+  "DONTSTOPPER": {
+    "n": "DONTSTOPPER"
+  },
+  "dickdripchk": {
+    "n": "dickdripchk"
+  },
+  "Set": {
+    "n": "Set"
+  },
+  "getconf": {
+    "n": "getconf"
+  },
+  "laser": {
+    "n": "laser"
+  },
+  "zmap": {
+    "n": "zmap"
+  },
+  "jaypee": {
+    "n": "jaypee"
+  },
+  "nidump": {
+    "n": "nidump"
+  },
+  "mailer": {
+    "n": "mailer"
+  },
+  "local": {
+    "n": "local"
+  },
+  "test_sudo": {
+    "n": "test_sudo"
+  },
+  "busyboxchmod": {
+    "n": "busyboxchmod"
+  },
+  "jot": {
+    "n": "jot"
+  },
+  "linuxicmp": {
+    "n": "linuxicmp"
+  },
+  "onetwothreefour": {
+    "n": "onetwothreefour"
+  },
+  "land": {
+    "n": "land"
+  },
+  "judge": {
+    "n": "judge"
+  },
+  "dscl": {
+    "n": "dscl"
+  },
+  "hdiutil": {
+    "n": "hdiutil"
+  },
+  "srcipgen": {
+    "n": "srcipgen"
+  },
+  "doeject": {
+    "n": "doeject"
+  },
+  "fawx": {
+    "n": "fawx"
+  },
+  "dofdformat": {
+    "n": "dofdformat"
+  },
+  "binds": {
+    "n": "binds"
+  },
+  "twinge": {
+    "n": "twinge"
+  },
+  "httpd": {
+    "n": "httpd"
+  },
+  "doxlock": {
+    "n": "doxlock"
+  },
+  "python": {
+    "n": "python"
+  },
+  "spender": {
+    "n": "spender"
+  },
+  "trash": {
+    "n": "trash"
+  },
+  "doffbconfig": {
+    "n": "doffbconfig"
+  },
+  "biffit": {
+    "n": "biffit"
+  },
+  "bash": {
+    "n": "bash"
+  },
+  "foqerc": {
+    "n": "foqerc"
+  },
+  "nireport": {
+    "n": "nireport"
+  },
+  "break": {
+    "n": "break"
+  },
+  "check_proc": {
+    "n": "check_proc"
+  },
+  "targa": {
+    "n": "targa"
+  },
+  "realpath": {
+    "n": "realpath"
+  },
+  "disktool": {
+    "n": "disktool"
+  },
+  "getopts": {
+    "n": "getopts"
+  },
+  "display_array": {
+    "n": "display_array"
+  },
+  "nfo": {
+    "n": "nfo"
+  },
+  "kdialog": {
+    "n": "kdialog"
+  },
+  "create_module": {
+    "n": "create_module"
+  },
+  "output": {
+    "n": "output"
+  },
+  "ntdns": {
+    "n": "ntdns"
+  },
+  "synfulnone": {
+    "n": "synfulnone"
+  },
+  "gin": {
+    "n": "gin"
+  },
+  "true": {
+    "n": "true"
+  },
+  "unlock": {
+    "n": "unlock"
+  },
+  "scanner": {
+    "n": "scanner"
+  },
+  "kod": {
+    "n": "kod"
+  },
+  "stream": {
+    "n": "stream"
+  },
+  "osascript": {
+    "n": "osascript"
+  },
+  "coke": {
+    "n": "coke"
+  },
+  "download": {
+    "n": "download"
+  },
+  "killinetd": {
+    "n": "killinetd"
+  },
+  "imagemount": {
+    "n": "imagemount"
+  },
+  "test_password": {
+    "n": "test_password"
+  },
+  "octopus": {
+    "n": "octopus"
+  },
+  "bloop": {
+    "n": "bloop"
+  },
+  "notfound": {
+    "n": "notfound"
+  },
+  "mkfifo": {
+    "n": "mkfifo"
+  },
+  "request_password": {
+    "n": "request_password"
+  },
+  "isPnscanOn": {
+    "n": "isPnscanOn"
+  },
+  "boink": {
+    "n": "boink"
+  },
+  "cleaner": {
+    "n": "cleaner"
+  },
+  "pirchslap": {
+    "n": "pirchslap"
+  },
+  "utmp": {
+    "n": "utmp"
+  },
+  "syndrop": {
+    "n": "syndrop"
+  },
+  "bncex": {
+    "n": "bncex"
+  },
+  "conseal": {
+    "n": "conseal"
+  },
+  "XXXXXXXX": {
+    "n": "XXXXXXXX"
+  },
+  "nicl": {
+    "n": "nicl"
+  },
+  "dorlogin": {
+    "n": "dorlogin"
+  },
+  "defaults": {
+    "n": "defaults"
+  },
+  "rwhokill": {
+    "n": "rwhokill"
+  },
+  "header": {
+    "n": "header"
+  },
+  "ssping": {
+    "n": "ssping"
+  },
+  "LinuxAttack": {
+    "n": "LinuxAttack"
+  },
+  "teardrop": {
+    "n": "teardrop"
+  },
+  "pong": {
+    "n": "pong"
+  },
+  "nvram": {
+    "n": "nvram"
+  },
+  "softwareupdate": {
+    "n": "softwareupdate"
+  },
+  "galt_gin": {
+    "n": "galt_gin"
+  },
+  "pepsi": {
+    "n": "pepsi"
+  },
+  "wingatecrash": {
+    "n": "wingatecrash"
+  },
+  "newtear": {
+    "n": "newtear"
+  },
+  "rape": {
+    "n": "rape"
+  },
+  "ADMdnsfuckr": {
+    "n": "ADMdnsfuckr"
+  },
+  "hanson": {
+    "n": "hanson"
+  },
+  "gewse": {
+    "n": "gewse"
+  },
+  "NoPorts": {
+    "n": "NoPorts"
+  },
+  "footer": {
+    "n": "footer"
+  },
+  "synhose": {
+    "n": "synhose"
+  },
+  "sprite": {
+    "n": "sprite"
+  },
+  "nproc": {
+    "n": "nproc"
+  },
+  "usage": {
+    "n": "usage"
+  },
+  "cocksuck": {
+    "n": "cocksuck"
+  },
+  "ascendfoo": {
+    "n": "ascendfoo"
+  },
+  "main": {
+    "n": "main"
+  },
+  "ton": {
+    "n": "ton"
+  },
+  "sexy": {
+    "n": "sexy"
+  },
+  "beer": {
+    "n": "beer"
+  },
+  "return": {
+    "n": "return"
+  },
+  "continue": {
+    "n": "continue"
+  },
+  "accton": {
+    "n": "accton"
+  },
+  "koc": {
+    "n": "koc"
+  },
+  "winfreez": {
+    "n": "winfreez"
+  },
+  "system_profiler": {
+    "n": "system_profiler"
+  },
+  "BSDAttack": {
+    "n": "BSDAttack"
+  },
+  "echok": {
+    "n": "echok"
+  },
+  "killwin": {
+    "n": "killwin"
+  },
+  "simping": {
+    "n": "simping"
+  },
+  "nmapcheck": {
+    "n": "nmapcheck"
+  },
+  "oshare": {
+    "n": "oshare"
+  },
+  "ftpget": {
+    "n": "ftpget"
+  },
+  "inetddos": {
+    "n": "inetddos"
+  },
+  "oudsbvodbvodbvsdbvoubdovbdbvdbvpbdsvpdsvb": {
+    "n": "oudsbvodbvodbvsdbvoubdovbdbvdbvpbdsvpdsvb"
+  },
+  "spiffit": {
+    "n": "spiffit"
   }
 }
