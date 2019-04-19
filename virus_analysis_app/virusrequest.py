@@ -92,8 +92,6 @@ def get_query(script_file_path):
     print("We have this file: ", re_output2)
     return True
 
-  print("This is a New file we need to paser.")
-
   res_request = request_scan(script_file_path)
   save_json_info(re_output2, res_request)
   resource_code = res_request["resource"]
@@ -134,7 +132,7 @@ def main():
         malware_file = os.path.join(dirpath, x)
         cnt = cnt + 1
         # Test Info
-        print(malware_file)
+        # print(malware_file)
         # mlwarefile_path = os.path.join( os.getcwd(), 'VirusShare_0a03b61f1f885a402eff7224a9798048.sh')
         retcode = get_query(malware_file)
 
