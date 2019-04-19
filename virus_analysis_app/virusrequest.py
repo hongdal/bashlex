@@ -11,9 +11,9 @@ import ast
 import time
 
 api_key = 'fa7637acf76e8dde829003893c7d3589e2232f0e909bd589413cea9c6948b81a'
-dataDir = os.path.join(os.getcwd(), '0_data/allscripts_virustotal')
+dataDir = os.path.join(os.getcwd(), 'dataset/bashData/allscripts')
 # dataDir = os.path.join( os.getcwd(), '0_data/test_data_bash')
-outputDir = os.path.join(os.getcwd(), '0_data/virtualtotal')
+outputDir = os.path.join(os.getcwd(), 'dataset/virtualtotal')
 request_file_path = os.path.join(os.getcwd(), "request.json")
 report_file_path = os.path.join(os.getcwd(), "report.json")
 request_file_test_path = os.path.join(os.getcwd(), "request_test.json")
