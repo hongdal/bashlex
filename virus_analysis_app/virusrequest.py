@@ -89,6 +89,7 @@ def get_query(script_file_path):
   re_output = file_name[:-3] + "_que.json"
   re_output2 = outputDir + "/" + re_output
   if os.path.exists(re_output2):
+    print("We have this file: ", re_output2)
     return True
 
   res_request = request_scan(script_file_path)
