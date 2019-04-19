@@ -123,11 +123,12 @@ def main():
   files = os.listdir(dataDir)
   passed = 0
   failed = 0
-
+  cnt = 0
   for dirpath, dirnames, filenames in os.walk(dataDir):
     for x in files:
       if fnmatch.fnmatch(x, "VirusShare*"):
         malware_file = os.path.join(dirpath, x)
+        cnt = cnt + 1
         # Test Info
         print(malware_file)
         # mlwarefile_path = os.path.join( os.getcwd(), 'VirusShare_0a03b61f1f885a402eff7224a9798048.sh')
@@ -138,7 +139,7 @@ def main():
           failed += 1
           os.remove(output2)
         else:
-          print(x, " passed ", format(time.strftime("%H:%M:%S")))
+          print(cnt, ": ", x, " passed ", format(time.strftime("%H:%M:%S")))
           passed += 1
           # os.remove(malware_file)
   print(passed, " bash scripts passed")
