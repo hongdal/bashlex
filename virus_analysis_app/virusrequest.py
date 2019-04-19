@@ -84,7 +84,7 @@ def re_scan(md5_num):
 
 
 def get_query(script_file_path):
-  time.sleep(16)
+  # time.sleep(16)
   file_name = os.path.basename(os.path.normpath(script_file_path))
   re_output = file_name[:-3] + "_que.json"
   re_output2 = outputDir + "/" + re_output
@@ -108,6 +108,7 @@ def get_query(script_file_path):
 
   json_test_request = get_json_info(re_output2)
   json_test_respond = get_json_info(re_output2)
+  time.sleep(16)
 
   if json_test_request["resource"] == json_test_respond["resource"]:
     return True
