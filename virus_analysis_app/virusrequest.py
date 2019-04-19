@@ -92,6 +92,8 @@ def get_query(script_file_path):
     print("We have this file: ", re_output2)
     return True
 
+  print("This is a New file we need to paser.")
+
   res_request = request_scan(script_file_path)
   save_json_info(re_output2, res_request)
   resource_code = res_request["resource"]
