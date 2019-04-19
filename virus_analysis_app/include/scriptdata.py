@@ -194,18 +194,49 @@ class ScriptData(object):
 
 
         allcommands = self.pattern_command.findall(filetext)
-        special_command = self.pattern_special_command.findall(filetext)
+        # print(allcommands)
+
+        except_symbols = ["[", "]"]
         for i in range(len(allcommands)):
           if len(self.pattern_word.findall(allcommands[i])):
             allcommands[i] = self.pattern_word.findall(allcommands[i])[0]
             allcommands[i] = self.pattern_value.findall(allcommands[i])[0]
             allcommands[i] = allcommands[i][1:]
+            if allcommands[i] in except_symbols:
+              allcommands[i] = ""
           else:
-            allcommands[i] = " "
+            allcommands[i] = ""
 
+        special_list = ["sudo", "busybox"]
+        special_command = self.pattern_special_command.findall(filetext)
+        special_command_list = []
+        for i in range(len(special_command)):
+          all_special_word = self.pattern_word.findall(special_command[i])
+          # print(all_special_word)
+          if len(all_special_word) > 1:
+            temp = self.pattern_value.findall(all_special_word[0])
+            if temp[0][1:] in special_list:
+              temp = self.pattern_value.findall(all_special_word[1])
+              special_command[i] = temp[0][1:]
+              special_command_list.append(special_command[i])
+              # print("Next Command: ", special_command[i])
+            else:
+              special_command[i] = ""
 
+          else:
+            special_command[i] = ""
+
+        
+        for command in special_command:
+          if command == "":
+            special_command.remove(command)
+        # print(special_command_list)
+        allcommands += special_command_list
+        # print(allcommands)
         for command in allcommands:
           if command in except_set:
+            allcommands.remove(command)
+          elif command == "":
             allcommands.remove(command)
 
         basename = os.path.basename(in_file)[:-5]
