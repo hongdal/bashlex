@@ -16,8 +16,14 @@ class ScriptData(object):
       self.commands_dict = {}
       self.linux_commands_dict = {}
 
-      #Some Setting for the command pattern for the bash scripts
+
+# FunctionNode(lineno=69, pos=(1823, 2914), parts=[
+#   ReservedwordNode(lineno=49, pos=(1823, 1831), word='function'),
+#   WordNode(lineno=49, pos=(1832, 1842), word='enable_ssh'),
+      # Some Setting for the command pattern for the bash scripts
       self.pattern_command = re.compile(r'CommandNode[^\n]*\n[^\n]*word[^\n]*')
+      self.pattern_special_command = re.compile(r'CommandNode[^\n]*\n[^\n]*\n[^\n]*word[^\n]*')
+      self.pattern_function = re.compile(r'FunctionNode[^\n]*\n[^\n]*\n[^\n]*word[^\n]*')
       self.pattern_word = re.compile(r'word=[^\)]*')
       self.pattern_value = re.compile(r'\'[^\']*')
       self.cd_pattern_value = re.compile(r'\ncd')
@@ -175,7 +181,20 @@ class ScriptData(object):
         pass
       else:
         filetext = self.readscript(in_file)
+        func_commands = self.pattern_function.findall(filetext)
+
+        for i in range(len(func_commands)):
+          if len(self.pattern_word.findall(func_commands[i])):
+            func_commands[i] = self.pattern_word.findall(func_commands[i])[1]
+            func_commands[i] = self.pattern_value.findall(func_commands[i])[0]
+            func_commands[i] = func_commands[i][1:]
+          else:
+            func_commands[i] = " "
+        except_set = set(func_commands)
+
+
         allcommands = self.pattern_command.findall(filetext)
+        special_command = self.pattern_special_command.findall(filetext)
         for i in range(len(allcommands)):
           if len(self.pattern_word.findall(allcommands[i])):
             allcommands[i] = self.pattern_word.findall(allcommands[i])[0]
@@ -183,6 +202,12 @@ class ScriptData(object):
             allcommands[i] = allcommands[i][1:]
           else:
             allcommands[i] = " "
+
+
+        for command in allcommands:
+          if command in except_set:
+            allcommands.remove(command)
+
         basename = os.path.basename(in_file)[:-5]
         for command in allcommands:
           if command not in self.command_to_file_dict:

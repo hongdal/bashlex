@@ -309,12 +309,26 @@ class DisplayCommandsClass(Dialog):
     for _ in map(self.tree.delete, self.tree.get_children("")):
       pass
     self.script_nums = len(recs_t)
+    classify_dic = {}
     for i in range(len(recs_t)):
-      # print(i+1, " | ", recs_t[i][0], " | ", recs_t[i][1], " | ", recs_t[i][2], " | ", recs_t[i][3])
+      print(i + 1, " | ", recs_t[i][0], " | ", recs_t[i][1], " | ", recs_t[i][2], " | ", recs_t[i][3])
+      if recs_t[i][2] not in classify_dic:
+         classify_dic[recs_t[i][2]] = []
+      classify_dic[recs_t[i][2]].append(recs_t[i][0])
       self.tree.insert(
           "",
           "end",
           values=(recs_t[i][0], recs_t[i][1], recs_t[i][2], recs_t[i][3]))
+    
+    cnt = 1
+    for item in classify_dic:
+      print(cnt, " | ", item, end =" | ")
+      cnt = cnt + 1
+      for it in classify_dic[item]:
+        print(it, end=", ")
+      print()
+        
+    # print(classify_dic)
 
   def treeview_sort_column(self, tv, col, reverse):
     l = [(tv.set(k, col), k) for k in tv.get_children('')]
