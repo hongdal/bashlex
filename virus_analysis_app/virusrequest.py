@@ -88,9 +88,9 @@ def get_query(script_file_path):
   file_name = os.path.basename(os.path.normpath(script_file_path))
   re_output = file_name[:-3] + "_que.json"
   re_output2 = outputDir + "/" + re_output
-  if os.path.exists(re_output2):
-    print("We have this file: ", re_output2)
-    return True
+  # if os.path.exists(re_output2):
+  #   print("We have this file: ", re_output2)
+  #   return True
 
   res_request = request_scan(script_file_path)
   save_json_info(re_output2, res_request)
@@ -106,7 +106,7 @@ def get_query(script_file_path):
 
   json_test_request = get_json_info(re_output2)
   json_test_respond = get_json_info(re_output2)
-  time.sleep(16)
+  # time.sleep(16)
 
   if json_test_request["resource"] == json_test_respond["resource"]:
     return True
@@ -134,6 +134,13 @@ def main():
         # Test Info
         # print(malware_file)
         # mlwarefile_path = os.path.join( os.getcwd(), 'VirusShare_0a03b61f1f885a402eff7224a9798048.sh')
+        file_basename = os.path.basename(os.path.normpath(malware_file))
+        output_path = file_basename[:-3] + "_que.json"
+        output_path = outputDir + "/" + output_path
+        if os.path.exists(output_path):
+          print(cnt, " Passed: ", output_path)
+          continue
+
         retcode = get_query(malware_file)
 
         if retcode == False:
