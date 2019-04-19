@@ -86,9 +86,12 @@ def re_scan(md5_num):
 def get_query(script_file_path):
   time.sleep(16)
   file_name = os.path.basename(os.path.normpath(script_file_path))
-  res_request = request_scan(script_file_path)
   re_output = file_name[:-3] + "_que.json"
   re_output2 = outputDir + "/" + re_output
+  if os.path.exists(re_output2):
+    return True
+
+  res_request = request_scan(script_file_path)
   save_json_info(re_output2, res_request)
   resource_code = res_request["resource"]
 
@@ -135,9 +138,9 @@ def main():
           failed += 1
           os.remove(output2)
         else:
-          print(x, " passed   [", format(time.strftime("%H:%M:%S")), "]")
+          print(x, " passed ", format(time.strftime("%H:%M:%S")))
           passed += 1
-          os.remove(malware_file)
+          # os.remove(malware_file)
   print(passed, " bash scripts passed")
   print(failed, " bash scripts failed")
 
