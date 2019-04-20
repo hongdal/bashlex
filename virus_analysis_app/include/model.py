@@ -294,6 +294,22 @@ class Manager_Script(object):
     # self.save_json_info(self.json_path, all_linux_commands)
     return script_commands
 
+  def generate_virussummary(self, dir_path):
+    # print(in_file)
+    all_script_dict = {}
+    for dirpath, dirnames, filenames in os.walk(dir_path):
+      for x in files:
+        if fnmatch.fnmatch(x, "VirusShare*"):
+          malware_file = os.path.join(dirpath, x)
+          file_basename = os.path.basename(os.path.normpath(malware_file))
+          script_commands = self.get_malware_info(x)
+          all_script_dict[file_basename] = {}
+    # self.save_json_info(self.json_path, script_commands)
+    # all_linux_commands = self.script_data.getSortedCommandsDict()
+    # print(all_linux_commands)
+    # self.save_json_info(self.json_path, all_linux_commands)
+    return script_commands
+
   def getAllLinuxCommands(self, dir_path):
     script_commands = self.script_data.getAllCommands(dir_path)
     all_linux_commands = self.script_data.getSortedCommandsDict()

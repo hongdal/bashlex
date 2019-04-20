@@ -103,6 +103,10 @@ class Controller(object):
     res = self.script_manager.open_script_by_num(num_s)
     return res
 
+  def generate_virussummary(self, dir_path):
+    res = self.script_manager.generate_virussummary(dir_path)
+    return res
+
   def get_malware_detail(self, script_info):
     script_info = self.view.display_details(script_info)
     if script_info is not False:

@@ -4,6 +4,8 @@ import sys
 import subprocess
 import re
 import xml.sax
+import heapq
+from queue import PriorityQueue as PQueue
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
@@ -509,9 +511,52 @@ class View(object):
     else:
       return resDialog.result
 
+
+
   def display_commands_count_class(self, script_commands, script_name=None):
     resDialog = DisplayCommandsClass(self.root, 'Commands Count', script_name,
                                      script_commands)
+
+    script_record = script_commands[0]
+    command_to_file = script_commands[1]
+    def prettify_one(rec):
+      temp = 0
+      if rec[0] in command_to_file:
+        temp = len(command_to_file[rec[0]])
+      one_row = [str(rec[0]), str(rec[1]), str(rec[2]), str(temp)]
+      one_row = [item for item in one_row]
+      return one_row
+
+    recs_t = [prettify_one(rec) for rec in script_record]
+
+    self.script_nums = len(recs_t)
+    # print(recs_t)
+    export_path = os.path.join(
+        os.getcwd(), str(self.appdata['path']['output']['export']))
+    now_time = time.strftime("%Y-%m-%d-%H-%M-%S", time.localtime())
+    output_file_name = "output-classify-"+ str(now_time) +".md"
+    output_file_path = os.path.join(export_path, output_file_name)
+    heap = []
+    with open(output_file_path, 'w') as f:
+      print("## Sort By Frequency",file=f)
+      print("No. | Linux Command | Frequency | Classification | Number of Files", file=f)
+      print("----|-------|-----------|-------|------", file=f)
+      
+      for i in range(len(recs_t)):
+        heapq.heappush(heap, (int(recs_t[i][3]), recs_t[i]))
+        print(i + 1, " | ", recs_t[i][0], " | ", recs_t[i][1], " | ", recs_t[i][2], " | ", recs_t[i][3], file=f)
+
+      print("\n\n",file=f)
+      print("## Sort By Number of Files",file=f)
+      print("\n\n",file=f)
+      print("No. | Linux Command | Frequency | Classification | Number of Files", file=f)
+      print("----|-------|-----------|-------|------", file=f)
+      cnt  = 1
+      for item in heapq.nlargest(len(heap),heap):
+        print(cnt, " | ", item[1][0], " | ", item[1][1], " | ", item[1][2], " | ", item[1][3], file=f)
+        cnt += 1
+
+  
     if resDialog.result is None:
       return False
     else:
