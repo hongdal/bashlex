@@ -82,16 +82,29 @@ class Manager_Script(object):
     return self.user_config
 
   def get_malware_info(self, file_name):
+    # repo_path = self.cur_rep.path
+    # script_path = os.path.join(repo_path, file_name)
+    # detect_flags = self.detectScript(script_path)
+    
+    # properties_set = self.script_manager.getScriptProperty(name)
+
     outputDir = os.path.join(os.getcwd(), 'dataset/virtualtotal')
     file_report_name = file_name[:-3] + "_res.json"
     file_report_path = os.path.join(outputDir, file_report_name)
 
     def get_json_info(file_path):
+      user_config = {}
       if os.path.exists(file_path):
         with open(file_path) as f:
-          user_config = json.load(f)
-      else:
-        user_config = {}
+          try:
+            user_config = json.load(f)
+
+          except json.decoder.JSONDecodeError:
+            print("Error Load JSON File: ", f)
+          except:
+            print("Other Mistake in this file:", f)
+
+        
       return user_config
 
     script_report = get_json_info(file_report_path)
@@ -304,6 +317,7 @@ class Manager_Script(object):
           file_basename = os.path.basename(os.path.normpath(malware_file))
           script_commands = self.get_malware_info(x)
           all_script_dict[file_basename] = {}
+          
     # self.save_json_info(self.json_path, script_commands)
     # all_linux_commands = self.script_data.getSortedCommandsDict()
     # print(all_linux_commands)
@@ -452,6 +466,7 @@ class Manager_Script(object):
   def query_by_property(self, s_property):
     sets = []
     tags = s_property.strip().split(',')
+    
     if len(tags) > 0:
       for tag in tags:
         recs = self.cursor.execute(

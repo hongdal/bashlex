@@ -146,7 +146,7 @@ class Controller(object):
     else:
       return False
 
-  def update_scripts_property(self):
+  def update_scripts_property(self, low_bound=0):
     scripts = self.script_manager.get_all_scripts()
     res = True
     cnt = {}
@@ -159,19 +159,28 @@ class Controller(object):
     for script in scripts:
       name = script[0]
       properties_set = self.script_manager.getScriptProperty(name)
-      # detectScript = self.script_manager.getScriptProperty(name)
+      script_report = self.script_manager.get_malware_info(name)
       properties = ""
+      if "positives" in script_report:
+        if(script_report["positives"] >= low_bound):
+          properties += "P#"
+        else:
+          properties += "N#"
+        properties += str(script_report["positives"]) + "#" + str(script_report["total"])
+        # print(script_report["positives"], " : ", script_report["total"])
+      else:
+        properties += "N#0#0"
+      
+      properties += ", "
+      
       if properties_set:
         graph_successful = properties_set[0]
         properties_info = properties_set[1]
-
         if graph_successful:
           cnt["passed"] += 1
           for p in properties_info:
             properties += p
             properties += ", "
-          properties = properties[:-2]
-          res = self.script_manager.update_script_property(name, properties)
         else:
           cnt["failed"] += 1
           fail_dict["GraphFail"] += 1
@@ -183,6 +192,8 @@ class Controller(object):
               fail_dict[p] = 0
       else:
         cnt["failed"] += 1
+      properties = properties[:-2]
+      res = self.script_manager.update_script_property(name, properties)
     cnt["total"] = cnt["passed"] + cnt["failed"]
     print("Size: ", len(fail_dict), fail_dict)
     if res:

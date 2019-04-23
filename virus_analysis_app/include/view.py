@@ -392,7 +392,7 @@ class View(object):
 
 
   def update_scripts_property(self):
-    res = self.controller.update_scripts_property()
+    res = self.controller.update_scripts_property(5)
     if res:
       info = "Total: " + str(res["total"]) + " Passed: " + str(res["passed"]) + " Failed: " + str(res["failed"])
       tkinter.messagebox.showinfo("Update Scripts Property",
