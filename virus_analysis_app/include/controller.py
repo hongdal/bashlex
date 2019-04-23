@@ -146,7 +146,8 @@ class Controller(object):
     else:
       return False
 
-  def update_scripts_property(self, low_bound=0):
+  def update_scripts_property(self, low_bound = 0):
+    print("Low Bound Value: ", low_bound)
     scripts = self.script_manager.get_all_scripts()
     res = True
     cnt = {}

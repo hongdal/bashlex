@@ -392,7 +392,8 @@ class View(object):
 
 
   def update_scripts_property(self):
-    res = self.controller.update_scripts_property(5)
+    low_bound = self.appdata['virustotal']['low_bound']
+    res = self.controller.update_scripts_property(int(low_bound))
     if res:
       info = "Total: " + str(res["total"]) + " Passed: " + str(res["passed"]) + " Failed: " + str(res["failed"])
       tkinter.messagebox.showinfo("Update Scripts Property",

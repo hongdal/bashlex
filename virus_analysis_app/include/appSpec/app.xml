@@ -2,6 +2,10 @@
 <AppData title ="Scripts Analyzer">
   <!-- screenTitle is also used to identify you and your animation. 
      So make sure to include your name as part of the screenTitle -->
+<virustotal>
+  <low_bound>5</low_bound>
+</virustotal>
+
 <font>
   <small type="Arial" size="8"/>
   <mid type="Arial" size="10"/>
