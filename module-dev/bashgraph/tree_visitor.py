@@ -137,7 +137,15 @@
     If this command is a while-do command, it's the union of last command 
     of while condition and its body. 
 
-''' 
+'''  
+import sys
+sys.path.append("../commands")
+from scriptdata import ScriptData
+
+NON_COMMAND = ""
+BINARY_COMMAND = "BINARY_COMMAND"
+
+
 class TreeVisitor:
     def __init__(self, tree):
         self.tree = tree
@@ -145,6 +153,10 @@ class TreeVisitor:
         self.level = -1
         self.basic_commands = []
         self.cfg = {}
+        self.command_detector = ScriptData() 
+        self.downloaded_set = set([])
+        self.tag_set = set([])
+        self.bad_graph = False
 
 
     def make_cfg(self):
@@ -200,7 +212,9 @@ class TreeVisitor:
                 node.data.continues = node.data.continues.union(last_command_child.data.continues)
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.data.kind)
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
 
 
     def visit_command_node(self, node):
@@ -271,7 +285,9 @@ class TreeVisitor:
                 if node.children[i].data.kind == "OperatorNode":
                     if None == last_command_child:
                         print("Syntax issue: %s operator at the beginning." % node.children[i].data.label)
-                        exit(1)
+                        #exit(1)
+                        self.bad_graph = True
+                        return
                     if node.children[i].data.label == r"||" or \
                        node.children[i].data.label == r"&&":
                         local_tails.append(last_command_child.data.tails)
@@ -302,7 +318,9 @@ class TreeVisitor:
                 node.data.continues = node.data.continues.union(last_command_child.data.continues)
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.kind)
-            exit(1)
+            #exit(1)
+            self.bad_graph = True
+            return
         
 
     def visit_word_assignment_node(self, node):
@@ -353,7 +371,11 @@ class TreeVisitor:
                     bodies.append(node.children[i+1])
         if len(conditions) != len(bodies)-1 and len(conditions) != len(bodies):
             print("If-else condition and body mismatch\n")
-            exit(1)
+            #exit(1)
+            self.bad_graph = True
+            return
+
+        self.tag_set.add("if")
 
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
@@ -434,7 +456,9 @@ class TreeVisitor:
                     
         if last_command_child == None:
             print("Node:%s does not have command children\n" % kind)
-            exit(1)
+            #exit(1)
+            self.bad_graph = True
+            return
 
     def visit_pipeline_node(self, node):
         is_first_command = True
@@ -474,7 +498,9 @@ class TreeVisitor:
 
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.kind)
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
 
     '''
         For word in word; do 
@@ -487,6 +513,7 @@ class TreeVisitor:
         first_body = None
         continues_from_children = set([])
         node.data.continues = set([])
+        self.tag_set.add("for")
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
         # 3) compute the continues of all the children 
@@ -533,7 +560,9 @@ class TreeVisitor:
         # 4) compute the tails of the node itself 
         if last_command_child == None:
             print("Node:%s does not have command children\n" % node.kind)
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
         else:
             node.data.tails = last_command_child.data.tails.union(continues_from_children)
 
@@ -548,11 +577,18 @@ class TreeVisitor:
         # while + condition + do + body + done
         if len(node.children) != 5:
             print("Bad WhileNode: lenght=%d\n" % len(node.children))
-            exit(1)
+            # exit(1)
+            self.bad_graph = True
+            return
         elif node.children[0].data.kind != "ReservedwordNode" or \
                 node.children[2].data.kind != "ReservedwordNode":
             print("Bad WhileNode: lenght=%d\n" % len(node.children))
-            exit(1)
+            #exit(1) 
+            self.bad_graph = True
+            return
+
+        self.tag_set.add("while")
+
         # 1) compute the precursors of all the children 
         # 2) compute tails of all the children
         # 3) compute the continues of all the children 
@@ -617,7 +653,11 @@ class TreeVisitor:
             self.visit_pipeline_node(node)
         else:
             print("Unknown kind:%s" % kind)
-            exit(2)
+            self.bad_graph = True
+            if "FunctionNode" == kind:
+                self.tag_set.add("function")
+            elif "CaseNode" == kind:
+                self.tag_set.add("case")
 
 
     def dump_tree(self):
@@ -654,33 +694,67 @@ class TreeVisitor:
 
     '''
         node must be a basic command, i.e., not expandable any more
+        node    :   must be a basic command node. 
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
     '''
-    def label_basic_command(self, node):
+    def label_basic_command(self, node, arg = False):
         command = ''
         for child in node.children:
             command += " " + child.data.label
         command = command.replace(r'"', r'\"')
         command = command.replace(r'[', r'\[')
         command = command.replace(r']', r'\]')
+        # handle unknow commands
+        namedic = self.command_detector.inquiryCommandInfo(command)
+        # binary file must be external
+        if namedic["category"] == "binaryfile":
+            # if namedic["name"] in self.downloaded_set:
+                command = BINARY_COMMAND
+                self.tag_set.add("has_external")
+        # label unknown command
+        elif namedic["category"] == "unknown":
+                command = "UNKNOWN"
+                self.tag_set.add("has_unknown")
+        elif namedic["category"] == "assignment":
+            command = "ASSIGNMENT"
+            self.tag_set.add("has_assignment")
+        elif namedic["category"] == "condition":
+            command = "CONDITION"
+            self.tag_set.add("has_condition")
+        # all other commands
+        else:
+            # If it's a network command, record the downloaed file. 
+            if namedic["category"] == "network" and namedic["downloaded"] == True:
+                self.downloaded_set.add(namedic["filename"])            
+            # If we don't need arguments, just use the name. 
+            if False == arg:
+                command = namedic["name"]
+
         node.data.label = command
 
 
-    def build_basic_commands(self, node):
+    '''
+        node    :   a node that you want to label. Not necessary to be a commandnode. 
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
+    '''
+    def build_basic_commands(self, node, arg = False):
         # determine whether it's a basic command. 
         if node.data.kind == "CommandNode":
             # Add a new record to the hash table if it's a basic command. 
             if self.is_basic_command(node):
                 self.basic_commands.append(node)
                 # update the label of node - This must be the basic command
-                self.label_basic_command(node)
+                self.label_basic_command(node, arg)
                 return
         for child in node.children:
-            self.build_basic_commands(child)
-                
+            self.build_basic_commands(child, arg)
 
-    def build_cfg(self):
+    '''            
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
+    '''
+    def build_cfg(self, arg = False):
         self.basic_commands = []
-        self.build_basic_commands(self.tree.root)
+        self.build_basic_commands(self.tree.root, arg)
         self.cfg = {}
         # traverse the basic command list
         for basic_command in self.basic_commands:
@@ -705,4 +779,6 @@ class TreeVisitor:
                 connection = str(key.uid) + ' -> ' + str(node.uid) + ';'
                 print(connection)
         print("}")
+
+
 

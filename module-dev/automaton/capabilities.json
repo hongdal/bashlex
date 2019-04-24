@@ -1,0 +1,22 @@
+{
+    "CH"    :   ["chmod", "usermod", "chattr", "umask", "chown"],
+    "RM"    :   ["rm", "history"],
+    "DW"    :   ["wget", "tftp", "curl", "ftp", "apt-get", "lynx", "git"],
+    "FP"    :   ["cd"],
+    "CP"    :   ["cp", "tail", "head", "mv", "cat", "read", "scp"],
+    "CW"    :   ["cat", "read", "echo"],
+    "DC"    :   ["tar", "gunzip", "gzip"],
+    "DE"    :   ["base64"],
+    "CC"    :   ["make", "gcc"],
+    "TP"    :   ["grep", "awk", "sed", "cut", "tr", "sort", "egrep", "uniq", "wc"],
+    "KILL"  :   ["pkill", "killall", "kill", "service", "ps", "netstat"],
+    "EXE"   :   ["BINARY_COMMAND", "nohup", "xargs", "crontab", "perl", "sh", "service", "nc", "sshpass"],
+    "SELFID":   ["basename", "dirname", "realpath", "readlink"],
+    "CI"    :   ["uname", "which", "ls", "ifconfig", "lsof", "arp", "stat", "id", "whoami", "netstat", "lsb_release", "ping"],
+    "SysM"  :   ["sysctl", "iptables", "userdel", "su"],
+    "SoftM" :   ["mktemp", "mkdir", "export"],
+    "RES"   :   ["ulimit"],
+    "TIME"  :   ["date"],
+    "CT"    :   ["touch"],
+    "MATH"  :   ["expr", "test"]
+}

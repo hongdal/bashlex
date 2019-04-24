@@ -107,6 +107,7 @@ class BashGraph:
         self.fname = ""
         self.tree = None
         self.visitor = None
+        self.graph_attributes = {}
 
     def load_file(self, fname):
         self.fname = fname
@@ -126,25 +127,71 @@ class BashGraph:
                 line = fp.readline() 
 
 
-    def make_graph(self):
+    '''
+        Return False if failed, True if successful
+        arg     :   a boolean indicating whether to include the the arguments of the command. 
+    '''
+    def make_graph(self, arg = False):
         if None == self.tree:
             print(".out file is not loaded, use load_file() first.")
-            return
+            return False
         self.visitor = TreeVisitor(self.tree)
         self.visitor.make_cfg()
-        self.visitor.build_cfg()
+        if True == self.visitor.bad_graph:
+            return False
+        else:
+            self.visitor.build_cfg(arg)
+        return True
 
 
     def print_graph(self):
         if None == self.visitor:
             print("AST is not retrieved, use make_graph() first.")
-            return
+            return False
         self.visitor.print_cfg()
+        return True
 
 
     def get_graph(self):
         if None == self.visitor:
             print("AST is not retrieved, use make_graph() first.")
-            return
+            return False
         return self.visitor.cfg
 
+    ''' 
+        returns a dictionary of set. 
+        Each key of the dic is a type of tag. 
+        Each record of the dic is a set of tags. 
+    '''
+    def get_tags(self):
+        if None == self.visitor:
+            print("AST is not retrieved, use make_graph() first.")
+            return False 
+        tag_set = self.visitor.tag_set
+        if len(tag_set) > 0:
+            # complexity tag 
+            self.graph_attributes["complexity_tag"] = set([])
+            if "if" in tag_set:
+                self.graph_attributes["complexity_tag"].add("if")
+            if "for" in tag_set:
+                self.graph_attributes["complexity_tag"].add("for")
+            if "while" in tag_set:
+                self.graph_attributes["complexity_tag"].add("while")
+            # error type tag 
+            self.graph_attributes["error_tag"] = set([])
+            if "function" in tag_set:
+                self.graph_attributes["error_tag"].add("function")
+            if "case" in tag_set:
+                self.graph_attributes["error_tag"].add("case")
+            # node type tag 
+            self.graph_attributes["node_type"] = set([])
+            if "has_external" in tag_set:
+                self.graph_attributes["node_type"].add("external")
+            if "has_unknown" in tag_set:
+                self.graph_attributes["node_type"].add("unknown_cmd")
+            if "has_assignment" in tag_set:
+                self.graph_attributes["node_type"].add("assignment")
+            if "has_condition" in tag_set:
+                self.graph_attributes["node_type"].add("condition")
+            # More tags here ... 
+        return self.graph_attributes
