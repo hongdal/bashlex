@@ -237,3 +237,7 @@ class Automaton:
                     connection = source + ' -> ' + dst + ' ' + edge_label + ';'
                     print(connection)
         print("}")
+
+    def print_edges(self):
+        for key in self.edges:
+            print(key)

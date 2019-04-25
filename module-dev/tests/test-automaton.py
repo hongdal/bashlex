@@ -27,6 +27,7 @@ if __name__ == "__main__":
     automaton.update_with_cfg(cfg)
 
     automaton.print_automaton()
+    automaton.print_edges()
     exit(0)
 
     json = json.dumps(automaton.automaton)
