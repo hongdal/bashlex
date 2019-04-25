@@ -178,11 +178,13 @@ class Controller(object):
         graph_successful = properties_set[0]
         properties_info = properties_set[1]
         if graph_successful:
+          properties += "G#S, "
           cnt["passed"] += 1
           for p in properties_info:
             properties += p
             properties += ", "
         else:
+          properties += "G#F, "
           cnt["failed"] += 1
           fail_dict["GraphFail"] += 1
           fail_record[name] = properties_info
