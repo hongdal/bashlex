@@ -1,4 +1,5 @@
 import pprint
+import glob
 import json
 import sys
 import os 
@@ -12,20 +13,20 @@ from automaton import Automaton
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: " + sys.argv[0] + " <path-to-infile.out> <path-to-capability.json>")
+        print("Usage: " + sys.argv[0] + " <testcase_dir> <path-to-capability.json>")
         exit(1)
 
-    infile = sys.argv[1]
+    test_dir = sys.argv[1]
     cfile = sys.argv[2]
-    graph = BashGraph()
-    graph.load_file(infile)
-    graph.make_graph()
-    cfg = graph.get_graph()
-
+    in_files = glob.glob(test_dir + "/*.node")
     automaton = Automaton()
     automaton.load_capabilities(cfile)
-    automaton.update_with_cfg(cfg)
-
+    for in_file in in_files:
+        graph = BashGraph()
+        graph.load_file(in_file)
+        graph.make_graph()
+        cfg = graph.get_graph()
+        automaton.update_with_cfg(cfg)
     automaton.print_automaton()
     automaton.print_edges()
     exit(0)
