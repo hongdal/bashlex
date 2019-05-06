@@ -1,3 +1,8 @@
+# This class is used to extract paths from a .dot file. 
+# Now it can extract all paths (very very time consuming, you probabliy can't wait).
+# now it can extract paths from the starting to the ending nodes. (quite time consuming if there are lots of paths)
+
+
 import networkx as nx 
 from networkx.drawing import nx_pydot
 import time 
