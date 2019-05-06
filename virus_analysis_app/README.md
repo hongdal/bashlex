@@ -1,26 +1,24 @@
-# TODO:
 
-1. Remove the command with sodu and buybox
-2. Add the parser code to application, from generate the parser output.
-3. Get all the command information
-4. Add the text editor in the code.
+# Instruction Manual
 
-# Some Linux-Commands No catagory
+**Run Application**
 
-No Category:  service
-No Category:  apt-get
-No Category:  declare
-No Category:  as
-No Category:  yum
-No Category:  usermod
-No Category:  chattr
-No Category:  stat
-No Category:  sysctl
-No Category:  userdel
-No Category:  lsb_release
-No Category:  test
-No Category:  man
-No Category:  id
-No Category:  expr
+When you first time to run this application in your computer, you need to download this application and set up the data set in the project root folder.
+
+**Setup Environment(Only First time)**
+
+```bash
+git clone git@github.com:nsslabcuus/virus_analysis.git
+cd virus_analysis/virus_analysis_app
+./setdataset.sh
+```
 
 
+> When you run the `./setdataset.sh` bash script, this script will download the dataset from the GitHub repository if you have the permission to access this data set repository.
+Please use python version > 3.5
+
+```bash
+python3.5 main.py
+```
+
+**More information:** Please access to this linke: [Application Introduction](https://nsslabcuus.github.io/dochub/virus_analyze/2019-02-08-Introduce-Application.html)
