@@ -139,7 +139,7 @@ class Controller(object):
     if os.path.isdir(node_dir):
       for dirpath, dirnames, filenames in os.walk(node_dir):
         for x in filenames:
-          if fnmatch.fnmatch(x, "VirusShare*"):
+          if fnmatch.fnmatch(x, "*.sh"):
             node_file = os.path.join(node_dir, x)
             self.script_manager.getScriptTags(node_file)
       return True

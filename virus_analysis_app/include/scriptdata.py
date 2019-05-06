@@ -171,9 +171,11 @@ class ScriptData(object):
     def readscriptSpace(self, in_file):
       file_obj = open(in_file, encoding="ISO-8859-1")
       filetext = ''
+      n_line = 0
       for line in file_obj:
+        n_line += 1
         filetext += "\n" + line
-      return filetext
+      return [filetext, n_line]
 
     def getScriptCommands(self, in_file):
       total_commands = collections.Counter()
@@ -226,7 +228,6 @@ class ScriptData(object):
           else:
             special_command[i] = ""
 
-        
         for command in special_command:
           if command == "":
             special_command.remove(command)
@@ -260,11 +261,11 @@ class ScriptData(object):
       if os.path.isdir(in_file):
         pass
       else:
-        filetext = self.readscriptSpace(in_file)
-        # print(filetext)
+        filetext, n_line = self.readscriptSpace(in_file)
+
         allcommands = self.cd_pattern_value.findall(filetext)
-        # print(allcommands)
-        if len(allcommands) > 4:
+
+        if len(allcommands) / n_line > 0.7:
           detect_flags.append("CD_PATTERN")
         else:
           detect_flags.append("NOT_CD")
