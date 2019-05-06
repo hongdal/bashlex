@@ -29,8 +29,6 @@ class PatternGraph:
     def get_nodes(self):
         return self.graph.nodes
 
-    def get_nodes(self)
-
 
 
 fname = "../testcase/VirusShare_aa91a02e32e0aa714d0832f4ef86fba6.dot"

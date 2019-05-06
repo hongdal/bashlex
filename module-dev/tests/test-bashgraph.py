@@ -1,3 +1,8 @@
+# This is a magic script!! 
+# Input :   a directory containing .sh files. 
+# Output:   .node files and .dot files at the same directory. 
+
+
 import glob
 import sys
 import os 
@@ -5,6 +10,7 @@ sys.path.append("../bashlex")
 import bashlex 
 sys.path.append("../bashgraph")
 from bashgraph import BashGraph
+
 
 
 if __name__ == "__main__":
@@ -15,7 +21,7 @@ if __name__ == "__main__":
     test_dir = sys.argv[1]
     
     # 
-    # Generate .out files. 
+    # Generate .node files. 
     # Comment out if you don't want. 
     #
     bash_files = glob.glob(test_dir + "/*.sh")
@@ -29,7 +35,7 @@ if __name__ == "__main__":
             for line in lines:
                 cmd += line 
         parts = bashlex.parse(cmd)
-        sys.stdout = open(basename + ".out", "w")
+        sys.stdout = open(basename + ".node", "w")
         for ast in parts:
             print(ast.dump())
         sys.stdout = orig_std
@@ -37,7 +43,7 @@ if __name__ == "__main__":
     # 
     # Compute graph 
     # 
-    out_files = glob.glob(test_dir + "/*.out")
+    out_files = glob.glob(test_dir + "/*.node")
     orig_std = sys.stdout 
     for out_file in out_files:
         print("Printing %s ..." % out_file)

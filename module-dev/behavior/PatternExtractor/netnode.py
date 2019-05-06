@@ -47,6 +47,7 @@ class netnodex:
         self.node_hash = {}
         self.all_paths = set()
 
+
     def read_from_dot(self, fname):
         self.fname = fname
         self.graph = nx_pydot.read_dot(fname)
@@ -59,7 +60,6 @@ class netnodex:
 
     def write_subgraph_to_dot(self, subgraph, fname):
         nx_pydot.write_dot(subgraph, fname)
-
 
     
     def load_node_names(self):
@@ -82,19 +82,27 @@ class netnodex:
     def get_node_view(self):
         return self.graph.nodes
 
+    '''
+        This computes all paths. 
+        This function is mutex with get_start_to_end_paths
+    '''
     def compute_all_paths(self):
         for source in self.graph.nodes:
             #sys.stderr.write("source:" + source)
             #print("source:%s" % source)
             for target in self.graph.nodes:
                 paths = nx.all_simple_paths(self.graph, source, target, cutoff=15)
+                # This is time consuming
                 for path in list(paths):
                     path = tuple(path)
                     self.all_paths.add(path)
         #print("nodes: %d" % len(self.graph.nodes))
         return self.all_paths
 
-
+    ''' 
+        This computes all paths from the starting points to the ending points. 
+        This function is mutex with compute_all_paths
+    '''
     def get_start_to_end_paths(self):
         sources = set([])
         targets = set([])
@@ -106,13 +114,19 @@ class netnodex:
         for src in sources:
             for dst in targets:
                 paths = nx.all_simple_paths(self.graph, src, dst)
+                # this is time consuming. 
                 for path in list(paths):
                     path = tuple(path)
                     self.all_paths.add(path)
         return self.all_paths
 
 
+    '''
+        This condenses self.all_paths, regardless its generated from compute_all_path()
+        or get_start_to_end_paths()
 
+        This will update self.condensed_paths. 
+    '''
     def condense_all_paths(self):
         self.condensed_paths = set()
         for path in self.all_paths:
@@ -121,8 +135,12 @@ class netnodex:
                 list_path[i] = self.node_hash[list_path[i]]
             tuple_path = tuple(list_path)
             self.condensed_paths.add(tuple_path)                
-        
 
+
+    ''' 
+        This returns all paths whose length is within the range (shortest, longest)
+        Returns a set of paths satisfy the condition. 
+    '''
     def get_path_with_length(self, shortest, longest):
         ret = set()
         for path in self.condensed_paths:

@@ -1,5 +1,6 @@
 # This file is used to parse the bash script 
 # The input is a bash file. 
+# The output is a .node file. 
 import sys 
 sys.path.append("../bashlex")
 
